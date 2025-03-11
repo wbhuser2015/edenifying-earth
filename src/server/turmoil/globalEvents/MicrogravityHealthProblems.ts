@@ -9,7 +9,7 @@ import {CardRenderer} from '../../cards/render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.megacredits(-3).slash().colonies(1).influence({size: Size.SMALL});
+  b.provision(-3).slash().colonies(1).influence({size: Size.SMALL});
 });
 
 export class MicrogravityHealthProblems extends GlobalEvent implements IGlobalEvent {

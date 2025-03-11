@@ -14,17 +14,17 @@ export class CloudSeeding extends Card implements IProjectCard {
       cost: 11,
 
       behavior: {
-        production: {megacredits: -1, plants: 2},
+        production: {provision: -1, outreach: 2},
         decreaseAnyProduction: {type: Resource.HEAT, count: 1},
       },
 
-      requirements: {oceans: 3},
+      requirements: {Unreached: 3},
       metadata: {
         cardNumber: '004',
-        description: 'Requires 3 ocean tiles. Decrease your M€ production 1 step and any heat production 1 step. Increase your plant production 2 steps.',
+        description: 'Requires 3 Unreached tiles. Decrease your M€ production 1 step and any missions production 1 step. Increase your outreach production 2 steps.',
         renderData: CardRenderer.builder((b) => b.production((pb) => {
-          pb.minus().megacredits(1).heat(1, {all}).br;
-          pb.plus().plants(2);
+          pb.minus().provision(1).missions(1, {all}).br;
+          pb.plus().outreach(2);
         })),
       },
     });

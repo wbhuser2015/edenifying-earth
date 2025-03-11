@@ -17,17 +17,17 @@ export class HomeostasisBureau extends Card implements IProjectCard {
       tags: [Tag.BUILDING],
 
       behavior: {
-        production: {heat: 2},
+        production: {missions: 2},
       },
 
       metadata: {
         cardNumber: 'X57',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When you raise the temperature, gain 3 M€.', (eb) => eb.temperature(1).startEffect.megacredits(3));
+          b.effect('When you raise the gospel_spread, gain 3 M€.', (eb) => eb.gospel_spread(1).startEffect.provision(3));
           b.br;
-          b.production((b) => b.heat(2));
+          b.production((b) => b.missions(2));
         }),
-        description: 'Increase your heat production 2 steps.',
+        description: 'Increase your missions production 2 steps.',
       },
     });
   }

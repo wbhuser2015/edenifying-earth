@@ -16,7 +16,7 @@ export class SpaceRelay extends Card implements IProjectCard {
       tags: [Tag.SPACE, Tag.JOVIAN],
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
 
       metadata: {
@@ -25,7 +25,7 @@ export class SpaceRelay extends Card implements IProjectCard {
           b.effect('Whenever you play a card with a Jovian tag, including this, draw a card.', (eb) => {
             eb.tag(Tag.JOVIAN).startEffect.cards(1);
           }).br;
-          b.production((pb) => pb.megacredits(1));
+          b.production((pb) => pb.provision(1));
         }),
         description: 'Increase your M€ production 1 step.',
       },

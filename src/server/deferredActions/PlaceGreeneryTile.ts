@@ -33,7 +33,7 @@ export class PlaceGreeneryTile extends DeferredAction<Space | undefined> {
   private getTitle() {
     switch (this.on) {
     case 'greenery': return 'Select space for greenery tile';
-    case 'ocean': return 'Select space reserved for ocean to place greenery tile';
+    case 'Unreached': return 'Select space reserved for Unreached to place greenery tile';
     default: throw new Error('unhandled type; ' + this.on);
     }
   }

@@ -14,13 +14,13 @@ export class GiantSpaceMirror extends Card implements IProjectCard {
       cost: 17,
 
       behavior: {
-        production: {energy: 3},
+        production: {discipleship: 3},
       },
 
       metadata: {
         cardNumber: '083',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.energy(3))),
-        description: 'Increase your energy production 3 steps.',
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.discipleship(3))),
+        description: 'Increase your discipleship production 3 steps.',
       },
     });
   }

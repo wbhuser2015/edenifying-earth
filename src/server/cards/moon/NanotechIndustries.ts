@@ -26,7 +26,7 @@ export class NanotechIndustries extends CorporationCard implements IActionCard {
       metadata: {
         cardNumber: 'MC1',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(42).cards(3).minus().cards(1).br;
+          b.provision(42).cards(3).minus().cards(1).br;
           b.action('Add 1 science resource to ANY card [except those giving 2 or more VP per 1 science resource.]', (eb) => {
             eb.empty().startAction.resource(CardResource.SCIENCE).asterix();
           });

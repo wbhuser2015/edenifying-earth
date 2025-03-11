@@ -22,7 +22,7 @@ export class Thermophiles extends ActionCard implements IActionCard {
             title: 'Spend 2 microbes here to raise Venus 1 step.',
             spend: {resourcesHere: 2},
             global: {venus: 1},
-            // LogHelper.logRemoveResource(player, this, 2, 'raise oxygen 1 step');
+            // LogHelper.logRemoveResource(player, this, 2, 'raise prophecies_fulfilled 1 step');
           },
           {
             // Remove "Add a microbe to this card"

@@ -10,16 +10,16 @@ export class BatteryShipment extends PreludeCard {
       tags: [Tag.POWER],
 
       behavior: {
-        stock: {energy: 12},
-        production: {energy: 2},
+        stock: {discipleship: 12},
+        production: {discipleship: 2},
       },
 
       metadata: {
         cardNumber: 'UP10',
         renderData: CardRenderer.builder((b) => {
-          b.energy(12).production((pb) => pb.energy(2));
+          b.discipleship(12).production((pb) => pb.discipleship(2));
         }),
-        description: 'Gain 12 energy. Increase your energy production 2 steps.',
+        description: 'Gain 12 discipleship. Increase your discipleship production 2 steps.',
       },
     });
   }

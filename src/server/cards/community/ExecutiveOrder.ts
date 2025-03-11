@@ -19,7 +19,7 @@ export class ExecutiveOrder extends PreludeCard implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.text('PLAY').globalEvent().asterix();
           b.br.br.br;
-          b.delegates(2).megacredits(10).br.br;
+          b.delegates(2).provision(10).br.br;
         }),
         description: 'Draw 4 global events. Play 1 as the CURRENT GLOBAL EVENT and discard the rest. Place 2 delegates in any party. Gain 10 M€.',
       },

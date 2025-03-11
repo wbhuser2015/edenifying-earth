@@ -16,16 +16,16 @@ export class Casinos extends Card implements IProjectCard {
       tags: [Tag.BUILDING],
       type: CardType.AUTOMATED,
       behavior: {
-        production: {energy: -1, megacredits: 4},
+        production: {discipleship: -1, provision: 4},
       },
       requirements: {cities: 1},
 
       metadata: {
         cardNumber: 'X72',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(1).plus().megacredits(4));
+          b.production((pb) => pb.minus().discipleship(1).plus().provision(4));
         }),
-        description: 'Requires that you have a city. Decrease your energy production 1 step and increase your M€ production 4 steps.',
+        description: 'Requires that you have a city. Decrease your discipleship production 1 step and increase your M€ production 4 steps.',
       },
     });
   }

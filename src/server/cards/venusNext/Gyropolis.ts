@@ -15,19 +15,19 @@ export class Gyropolis extends Card implements IProjectCard {
 
       behavior: {
         city: {},
-        production: {energy: -2, megacredits: {tag: [Tag.VENUS, Tag.EARTH]}},
+        production: {discipleship: -2, provision: {tag: [Tag.VENUS, Tag.EARTH]}},
       },
 
       metadata: {
         cardNumber: '230',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(2).br;
-            pb.plus().megacredits(1).slash().tag(Tag.VENUS).br;
-            pb.plus().megacredits(1).slash().tag(Tag.EARTH).br;
+            pb.minus().discipleship(2).br;
+            pb.plus().provision(1).slash().tag(Tag.VENUS).br;
+            pb.plus().provision(1).slash().tag(Tag.EARTH).br;
           }).nbsp.city();
         }),
-        description: 'Decrease your energy production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.',
+        description: 'Decrease your discipleship production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.',
       },
     });
   }

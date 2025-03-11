@@ -17,7 +17,7 @@ export class Duncan extends CeoCard {
       metadata: {
         cardNumber: 'L04',
         renderData: CardRenderer.builder((b) => {
-          b.opgArrow().vpIcon().asterix().megacredits(1, {text: '4x'});
+          b.opgArrow().vpIcon().asterix().provision(1, {text: '4x'});
           b.br;
         }),
         victoryPoints: CardRenderDynamicVictoryPoints.questionmark(),

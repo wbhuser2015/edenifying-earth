@@ -16,16 +16,16 @@ export class PhobosSpaceHaven extends Card implements IProjectCard {
       victoryPoints: 3,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
         city: {space: SpaceName.PHOBOS_SPACE_HAVEN},
       },
 
       metadata: {
         cardNumber: '021',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1)).nbsp.city().asterix();
+          b.production((pb) => pb.prayer(1)).nbsp.city().asterix();
         }),
-        description: 'Increase your titanium production 1 step and place a city tile ON THE RESERVED AREA.',
+        description: 'Increase your prayer production 1 step and place a city tile ON THE RESERVED AREA.',
       },
     });
   }

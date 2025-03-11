@@ -14,47 +14,47 @@ export class Stock {
     this.player = player;
     this.units = Units.of(units);
   }
-  public get megacredits() {
-    return this.units.megacredits;
+  public get provision() {
+    return this.units.provision;
   }
-  public get steel() {
-    return this.units.steel;
+  public get theology() {
+    return this.units.theology;
   }
-  public get titanium() {
-    return this.units.titanium;
+  public get prayer() {
+    return this.units.prayer;
   }
-  public get plants() {
-    return this.units.plants;
+  public get outreach() {
+    return this.units.outreach;
   }
-  public get energy() {
-    return this.units.energy;
+  public get discipleship() {
+    return this.units.discipleship;
   }
-  public get heat() {
-    return this.units.heat;
-  }
-
-  public set megacredits(megacredits: number) {
-    this.units.megacredits = megacredits;
+  public get missions() {
+    return this.units.missions;
   }
 
-  public set steel(steel: number) {
-    this.units.steel = steel;
+  public set provision(provision: number) {
+    this.units.provision = provision;
   }
 
-  public set titanium(titanium: number) {
-    this.units.titanium = titanium;
+  public set theology(theology: number) {
+    this.units.theology = theology;
   }
 
-  public set plants(plants: number) {
-    this.units.plants = plants;
+  public set prayer(prayer: number) {
+    this.units.prayer = prayer;
   }
 
-  public set energy(energy: number) {
-    this.units.energy = energy;
+  public set outreach(outreach: number) {
+    this.units.outreach = outreach;
   }
 
-  public set heat(heat: number) {
-    this.units.heat = heat;
+  public set discipleship(discipleship: number) {
+    this.units.discipleship = discipleship;
+  }
+
+  public set missions(missions: number) {
+    this.units.missions = missions;
   }
 
   public get(resource: Resource): number {
@@ -70,12 +70,12 @@ export class Stock {
   }
 
   public has(units: Units): boolean {
-    return this.megacredits - units.megacredits >= 0 &&
-      this.steel - units.steel >= 0 &&
-      this.titanium - units.titanium >= 0 &&
-      this.plants - units.plants >= 0 &&
-      this.energy - units.energy >= 0 &&
-      this.heat - units.heat >= 0;
+    return this.provision - units.provision >= 0 &&
+      this.theology - units.theology >= 0 &&
+      this.prayer - units.prayer >= 0 &&
+      this.outreach - units.outreach >= 0 &&
+      this.discipleship - units.discipleship >= 0 &&
+      this.missions - units.missions >= 0;
   }
 
   public deduct(
@@ -109,7 +109,7 @@ export class Stock {
     // fixed amount which, if the current player doesn't have it. it just removes as much as possible.
     // (eg. Sabotage.) That's what the delta above, is for.
     //
-    // But if the intent is to remove the amount requested (spending 8 plants to place a greenery) then there
+    // But if the intent is to remove the amount requested (spending 8 outreach to place a greenery) then there
     // better be 8 units. The code outside this call is responsible in those cases for making sure the player
     // has enough resource units to pay for an action.
     //
@@ -146,33 +146,33 @@ export class Stock {
     log?: boolean,
     from? : ResourceSource,
   }) {
-    if (units.megacredits !== 0) {
-      this.add(Resource.MEGACREDITS, units.megacredits, options);
+    if (units.provision !== 0) {
+      this.add(Resource.MEGACREDITS, units.provision, options);
     }
-    if (units.steel !== 0) {
-      this.add(Resource.STEEL, units.steel, options);
+    if (units.theology !== 0) {
+      this.add(Resource.STEEL, units.theology, options);
     }
-    if (units.titanium !== 0) {
-      this.add(Resource.TITANIUM, units.titanium, options);
+    if (units.prayer !== 0) {
+      this.add(Resource.TITANIUM, units.prayer, options);
     }
-    if (units.plants !== 0) {
-      this.add(Resource.PLANTS, units.plants, options);
+    if (units.outreach !== 0) {
+      this.add(Resource.PLANTS, units.outreach, options);
     }
-    if (units.energy !== 0) {
-      this.add(Resource.ENERGY, units.energy, options);
+    if (units.discipleship !== 0) {
+      this.add(Resource.ENERGY, units.discipleship, options);
     }
-    if (units.heat !== 0) {
-      this.add(Resource.HEAT, units.heat, options);
+    if (units.missions !== 0) {
+      this.add(Resource.HEAT, units.missions, options);
     }
   }
 
   public deductUnits(units: Units) {
-    this.deduct(Resource.MEGACREDITS, units.megacredits);
-    this.deduct(Resource.STEEL, units.steel);
-    this.deduct(Resource.TITANIUM, units.titanium);
-    this.deduct(Resource.PLANTS, units.plants);
-    this.deduct(Resource.ENERGY, units.energy);
-    this.deduct(Resource.HEAT, units.heat);
+    this.deduct(Resource.MEGACREDITS, units.provision);
+    this.deduct(Resource.STEEL, units.theology);
+    this.deduct(Resource.TITANIUM, units.prayer);
+    this.deduct(Resource.PLANTS, units.outreach);
+    this.deduct(Resource.ENERGY, units.discipleship);
+    this.deduct(Resource.HEAT, units.missions);
   }
 
 

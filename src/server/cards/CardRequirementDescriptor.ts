@@ -1,7 +1,7 @@
 const COUNTABLE_REQUIREMENTS = [
-  'oxygen',
-  'temperature',
-  'oceans',
+  'Prophecies Fulfilled',
+  'Gospel Spread',
+  'Unreached',
   'habitatRate',
   'miningRate',
   'logisticRate',

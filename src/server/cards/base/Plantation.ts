@@ -23,7 +23,7 @@ export class Plantation extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.greenery();
         }),
-        description: 'Requires 2 science tags. Place a greenery tile and raise oxygen 1 step.',
+        description: 'Requires 2 science tags. Place a greenery tile and raise prophecies_fulfilled 1 step.',
       },
     });
   }

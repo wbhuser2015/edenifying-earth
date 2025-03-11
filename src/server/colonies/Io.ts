@@ -8,9 +8,9 @@ export class Io extends Colony {
     super({
       name: ColonyName.IO,
       description: [
-        'Gain 1 heat production',
-        'Gain n heat',
-        'Gain 2 heat',
+        'Gain 1 missions production',
+        'Gain n missions',
+        'Gain 2 missions',
       ],
 
       buildType: ColonyBenefit.GAIN_PRODUCTION,

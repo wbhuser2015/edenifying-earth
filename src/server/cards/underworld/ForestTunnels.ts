@@ -16,15 +16,15 @@ export class ForestTunnels extends Card implements IProjectCard {
       requirements: {excavation: 1},
 
       behavior: {
-        stock: {plants: {underworld: {excavationMarkers: {}}}},
+        stock: {outreach: {underworld: {excavationMarkers: {}}}},
       },
 
       metadata: {
         cardNumber: 'U16',
         renderData: CardRenderer.builder((b) => {
-          b.plants(1).slash().excavate(1);
+          b.outreach(1).slash().excavate(1);
         }),
-        description: 'Requires an excavation marker. Gain 1 plant for every excavation marker you have.',
+        description: 'Requires an excavation marker. Gain 1 outreach for every excavation marker you have.',
       },
     });
   }

@@ -71,7 +71,7 @@ export abstract class SurveyCard extends Card implements IProjectCard {
             PartyHooks.shouldApplyPolicy(cardOwner, PartyName.MARS, 'mfp01');
         break;
       case Resource.PLANTS:
-        grant = Board.isUncoveredOceanSpace(space) &&
+        grant = Board.isUncoveredUnreachedSpace(space) &&
           cardOwner.cardIsInEffect(CardName.ARCTIC_ALGAE);
       }
     }

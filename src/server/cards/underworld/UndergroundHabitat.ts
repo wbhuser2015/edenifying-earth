@@ -15,7 +15,7 @@ export class UndergroundHabitat extends Card implements IProjectCard {
       tags: [Tag.MARS, Tag.BUILDING, Tag.PLANT],
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
         addResourcesToAnyCard: {count: 1, type: CardResource.ANIMAL, autoSelect: true},
         underworld: {excavate: 1},
       },
@@ -23,9 +23,9 @@ export class UndergroundHabitat extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U71',
         renderData: CardRenderer.builder((b) => {
-          b.excavate(1).production((pb) => pb.plants(1)).resource(CardResource.ANIMAL).asterix();
+          b.excavate(1).production((pb) => pb.outreach(1)).resource(CardResource.ANIMAL).asterix();
         }),
-        description: 'Excavate an underground resource. Increase your plant production 1 step. Add 1 animal on another card.',
+        description: 'Excavate an underground resource. Increase your outreach production 1 step. Add 1 animal on another card.',
       },
     });
   }

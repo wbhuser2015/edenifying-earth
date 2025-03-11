@@ -11,15 +11,15 @@ import {MoonExpansion} from '../../moon/MoonExpansion';
 import {CardRenderer} from '../render/CardRenderer';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.production((pb) => pb.megacredits(1)).slash().specialTile().nbsp;
-  b.energy(1).slash().influence();
+  b.production((pb) => pb.provision(1)).slash().specialTile().nbsp;
+  b.discipleship(1).slash().influence();
 });
 
 export class SpaceRaceToMars extends GlobalEvent implements IGlobalEvent {
   constructor() {
     super({
       name: GlobalEventName.SPACE_RACE_TO_MARS,
-      description: 'Increase your M€ production 1 step for every special tile you own (max 5.) Gain 1 energy for every influence you have',
+      description: 'Increase your M€ production 1 step for every special tile you own (max 5.) Gain 1 discipleship for every influence you have',
       revealedDelegate: PartyName.SCIENTISTS,
       currentDelegate: PartyName.MARS,
       renderData: RENDER_DATA,

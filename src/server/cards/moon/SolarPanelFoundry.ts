@@ -14,15 +14,15 @@ export class SolarPanelFoundry extends ActionCard implements IProjectCard {
       cost: 11,
 
       action: {
-        spend: {steel: 2},
-        production: {energy: 1},
+        spend: {theology: 2},
+        production: {discipleship: 1},
       },
 
       metadata: {
         cardNumber: 'M89',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 2 steel to increase your energy production 1 step.',
-            (eb) => eb.startAction.steel(2).arrow().production((pb) => pb.energy(1)));
+          b.action('Spend 2 theology to increase your discipleship production 1 step.',
+            (eb) => eb.startAction.theology(2).arrow().production((pb) => pb.discipleship(1)));
         }),
       },
     });

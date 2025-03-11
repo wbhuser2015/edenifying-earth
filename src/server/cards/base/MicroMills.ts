@@ -12,15 +12,15 @@ export class MicroMills extends Card implements IProjectCard {
       cost: 3,
 
       behavior: {
-        production: {heat: 1},
+        production: {missions: 1},
       },
 
       metadata: {
         cardNumber: '164',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.heat(1));
+          b.production((pb) => pb.missions(1));
         }),
-        description: 'Increase your heat production 1 step.',
+        description: 'Increase your missions production 1 step.',
       },
     });
   }

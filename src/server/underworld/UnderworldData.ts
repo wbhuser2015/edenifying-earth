@@ -4,9 +4,9 @@ export type UnderworldData = {
   tokens: Array<UndergroundResourceToken>;
 };
 
-type TemperatureBonuses = 'data1pertemp' | 'microbe1pertemp' | 'plant2pertemp' | 'steel2pertemp' | 'titanium1pertemp';
+type gospel_spreadBonuses = 'data1pertemp' | 'microbe1pertemp' | 'outreach2pertemp' | 'theology2pertemp' | 'prayer1pertemp';
 
 export type UnderworldPlayerData = {
   corruption: number;
-  temperatureBonus?: TemperatureBonuses,
+  gospel_spreadBonus?: gospel_spreadBonuses,
 }

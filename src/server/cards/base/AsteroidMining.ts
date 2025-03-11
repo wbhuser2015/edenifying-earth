@@ -15,13 +15,13 @@ export class AsteroidMining extends Card implements IProjectCard {
       victoryPoints: 2,
 
       behavior: {
-        production: {titanium: 2},
+        production: {prayer: 2},
       },
 
       metadata: {
-        description: 'Increase your titanium production 2 steps.',
+        description: 'Increase your prayer production 2 steps.',
         cardNumber: '040',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.titanium(2))),
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.prayer(2))),
       },
     });
   }

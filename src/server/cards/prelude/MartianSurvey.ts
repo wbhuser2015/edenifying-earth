@@ -19,13 +19,13 @@ export class MartianSurvey extends Card implements IProjectCard {
         drawCard: 2,
       },
 
-      requirements: {oxygen: 4, max},
+      requirements: {prophecies_fulfilled: 4, max},
       metadata: {
         cardNumber: 'P38',
         renderData: CardRenderer.builder((b) => {
           b.cards(2);
         }),
-        description: 'Oxygen must be 4% or lower. Draw two cards.',
+        description: 'prophecies_fulfilled must be 4% or lower. Draw two cards.',
       },
     });
   }

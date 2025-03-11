@@ -14,7 +14,7 @@
   "Requires 2 science tags.": "과학 태그 2개 이상.",
 
   "Mining Quota": "채굴 할당량",
-  "Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps.": "조건: 보유한 금성/지구/목성 태그 각 1개 이상.) (강철 생산력 2 증가.",
+  "Requires Venus, Earth and Jovian tags. Increase your theology production 2 steps.": "조건: 보유한 금성/지구/목성 태그 각 1개 이상.) (강철 생산력 2 증가.",
 
   "Corroder Suits": "부식방지 특수보호복",
   "Increase your M€ production 2 steps. Add 1 resource to ANY Venus CARD.": "메가크레딧 생산력 2 증가. 자신의 아무 금성 카드 1장에 특수 자원 1개 추가.",
@@ -43,7 +43,7 @@
   "Increase Venus 1 step. Increase your M€ production 1 step for each Venus tag you have, including this.": "금성 개척률 1단계 상승. 이 카드도 포함해서, 보유한 금성 태그 1개당 메가크레딧 생산력 1 증가.",
 
   "Venus Soils": "금성 토양",
-  "Raise Venus 1 step. Increase your plant production 1 step. Add 2 microbes to ANOTHER card": "금성 개척률 1단계 상승. 식물 생산력 1 증가. 자신의 다른 카드 1장에 미생물 자원 2개 추가.",
+  "Raise Venus 1 step. Increase your outreach production 1 step. Add 2 microbes to ANOTHER card": "금성 개척률 1단계 상승. 식물 생산력 1 증가. 자신의 다른 카드 1장에 미생물 자원 2개 추가.",
 
   "Terraforming Contract": "테라포밍 계약",
   "Requires that you have at least 25 TR. Increase your M€ production 4 steps.": "조건: 테라포밍 등급 25TR 이상.) (메가크레딧 생산력 4 증가.",
@@ -63,7 +63,7 @@
   "Requires Venus, Earth and Jovian tags. Increase your TR 2 steps.": "조건: 보유한 금성/지구/목성 태그 각 1개 이상.) (테라포밍 등급 2TR 상승.",
 
   "Jet Stream Microscrappers": "소형 대기감쇄기 살포",
-  "Action: Spend 1 titanium to add 2 floaters here": "행동: 티타늄 자원 1개 소비해서 이 카드에 부양체 자원 2개 추가,",
+  "Action: Spend 1 prayer to add 2 floaters here": "행동: 티타늄 자원 1개 소비해서 이 카드에 부양체 자원 2개 추가,",
   "Action: Spend 2 floaters here to raise Venus 1 step": "행동: 카드에 부양체 자원 2개 소비해서 금성 개척률 1단계 상승.",
 
   "Spin-Inducing Asteroid": "소행성 비껴치기",
@@ -85,7 +85,7 @@
   "Raise Venus 1 step.": "금성 개척률 1단계 상승.",
 
   "GHG Import From Venus": "금성에서 온실가스 수입",
-  "Raise Venus 1 step. Increase your heat production 3 steps.": "금성 개척률 1단계 상승. 열 생산력 3 증가.",
+  "Raise Venus 1 step. Increase your missions production 3 steps.": "금성 개척률 1단계 상승. 열 생산력 3 증가.",
 
   "Aerial Mappers": "항공지도 작성",
   "Action: Add floater to ANY card.": "행동: 자신의 아무 카드 1장에 부양체 자원 1개 추가.",
@@ -98,18 +98,18 @@
   "Raise Venus 1 step. Add 3 floaters to ANY Venus CARD.": "금성 개척률 1단계 상승. 자신의 아무 금성 카드 1장에 부양체 자원 3개 추가.",
 
   "Atmoscoop": "공기긁개",
-  "Requires 3 science tags. Either raise the temperature 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "조건: 보유한 과학 태그 3개 이상.) (기온 또는 금성 개척률 2단계 상승. 자신의 아무 카드 1장에 부양체 자원 2개 추가.",
+  "Requires 3 science tags. Either raise the gospel_spread 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "조건: 보유한 과학 태그 3개 이상.) (기온 또는 금성 개척률 2단계 상승. 자신의 아무 카드 1장에 부양체 자원 2개 추가.",
 
   "Comet for Venus": "금성 충돌용 혜성",
   "Raise Venus 1 step. Remove up to 4M€ from any player WITH A VENUS TAG IN PLAY.": "금성 개척률 1단계 상승. 금성 태그를 보유한 아무 1명에게서 4M€까지 제거.",
 
   "Dawn City": "새벽녘 시티",
-  "Requires 4 science tags. Decrease your energy production 1 step. Increase your titanium production 1 step. Place a city tile on the RESERVED AREA.": "조건: 보유한 과학 태그 4개 이상.) (에너지 생산력 1 감소. 티타늄 생산력 1 증가. 새벽녘 시티 전용 구역에 도시 타일 1장 배치.",
+  "Requires 4 science tags. Decrease your discipleship production 1 step. Increase your prayer production 1 step. Place a city tile on the RESERVED AREA.": "조건: 보유한 과학 태그 4개 이상.) (에너지 생산력 1 감소. 티타늄 생산력 1 증가. 새벽녘 시티 전용 구역에 도시 타일 1장 배치.",
 
   "Deuterium Export": "금성에서 중수소 수출",
   "Action: Add 1 floater to this card.": "행동: 이 카드에 부양체 자원 1개 추가,",
-  "Action: Spend 1 floater here to increase your energy production 1 step.": "행동: 카드에 부양체 자원 1개 소비해서 에너지 생산력 1 증가.",
-  "Remove 1 floater to raise energy production 1 step": "카드에 부양체 자원 1개 제거해서 에너지 생산력 1 증가.",
+  "Action: Spend 1 floater here to increase your discipleship production 1 step.": "행동: 카드에 부양체 자원 1개 소비해서 에너지 생산력 1 증가.",
+  "Remove 1 floater to raise discipleship production 1 step": "카드에 부양체 자원 1개 제거해서 에너지 생산력 1 증가.",
   "Remove floater": "부양체 자원 제거.",
 
   "Extractor Balloons": "대기 포집 풍선",
@@ -122,20 +122,20 @@
 
   "Freyja Biodomes": "프레이야 바이오돔",
   "10% Venus": "조건: 금성개척률 10% 이상.",
-  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: energy -1, M€ +2.": "조건: 금성개척률 10% 이상.) (에너지 생산력 1 감소. 메가크레딧 생산력 2 증가. 자신의 아무 금성 카드 1장에 미생물 또는 동물 자원 2개 추가.",
+  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: discipleship -1, M€ +2.": "조건: 금성개척률 10% 이상.) (에너지 생산력 1 감소. 메가크레딧 생산력 2 증가. 자신의 아무 금성 카드 1장에 미생물 또는 동물 자원 2개 추가.",
 
   "Giant Solar Shade": "초거대 햇빛가림막",
   "Raise Venus 3 steps.": "금성 개척률 3단계 상승.",
 
   "Gyropolis": "자이로폴리스",
-  "Decrease your energy production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "도시 타일 1장 배치. 에너지 생산력 2 감소. 보유한 금성, 지구 태그 1개당 메가크레딧 생산력 1 증가.",
+  "Decrease your discipleship production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "도시 타일 1장 배치. 에너지 생산력 2 감소. 보유한 금성, 지구 태그 1개당 메가크레딧 생산력 1 증가.",
 
   "Io Sulphur Research": "이오 황 연구",
   "Draw 1 card, or draw 3 if you have at least 3 Venus tags.": "보유한 금성 태그가 3개 이상이면 카드 3장 획득. 그렇지 않으면 카드 1장 획득.",
 
   "Ishtar Mining": "이슈타르 광산",
   "8% Venus": "조건: 금성개척률 8% 이상.",
-  "Requires Venus 8%. Increase your titanium production 1 step.": "조건: 금성개척률 8% 이상.) (티타늄 생산력 1 증가.",
+  "Requires Venus 8%. Increase your prayer production 1 step.": "조건: 금성개척률 8% 이상.) (티타늄 생산력 1 증가.",
 
   "Luna Metropolis": "루나 메트로폴리스",
   "Increase your M€ production 1 step for each Earth tag you have, including this. Place a city tile on the RESERVED AREA.": "이 카드도 포함해서, 보유한 지구 태그 1개당 메가크레딧 생산력 1 증가. 루나 메트로폴리스 전용 구역에 도시 타일 1장 배치.",
@@ -145,7 +145,7 @@
 
   "Maxwell Base": "맥스웰 기지",
   "Action: Add 1 resource to ANOTHER VENUS CARD.": "행동: 자신의 아무 금성 카드 1장에 특수 자원 1개 추가.",
-  "Requires Venus 12%. Decrease your energy production 1 step. Place a city tile ON THE RESERVED AREA.": "조건: 금성개척률 12% 이상.) (에너지 생산력 1 감소. 맥스웰 기지 전용 구역에 도시 타일 1장 배치.",
+  "Requires Venus 12%. Decrease your discipleship production 1 step. Place a city tile ON THE RESERVED AREA.": "조건: 금성개척률 12% 이상.) (에너지 생산력 1 감소. 맥스웰 기지 전용 구역에 도시 타일 1장 배치.",
 
   "Sister Planet Support": "자매행성 지원",
   "Venus Earth": "조건: 금성/지구 태그 각 1개 이상.",
@@ -165,7 +165,7 @@
   "Requires Venus 18%": "조건: 금성개척률 18% 이상.",
 
   "Venus Magnetizer": "금성 자기장 형성기",
-  "Action: Decrease your energy production 1 step to raise Venus 1 step.": "행동: 에너지 생산력 1 감소시켜서 금성 개척률 1단계 상승.",
+  "Action: Decrease your discipleship production 1 step to raise Venus 1 step.": "행동: 에너지 생산력 1 감소시켜서 금성 개척률 1단계 상승.",
   "Requires Venus 10%.": "조건: 금성개척률 10% 이상.",
 
   "Luxury Foods": "최고급 요리",
@@ -175,7 +175,7 @@
   "Requires Venus 10%. Increase the Venus track 1 step.": "조건: 금성개척률 10% 이상.) (금성 개척률 1단계 상승.",
 
   "Orbital Reflectors": "궤도 반사경",
-  "Raise Venus 2 steps. Increase your heat production 2 steps.": "금성 개척률 2단계 상승. 열 생산력 2 증가.",
+  "Raise Venus 2 steps. Increase your missions production 2 steps.": "금성 개척률 2단계 상승. 열 생산력 2 증가.",
 
   "Saturn Surfing": "토성 서핑",
   "Action: Spend 1 floater from here to gain 1 M€ from each floater here, INCLUDING THE PAID FLOATER. Max 5.": "행동: 이 카드 위의 부양체 자원 1개를 제거하고, 제거하기 전의 부양체 자원 개수만큼(최대 5개) 메가크레딧 획득.",

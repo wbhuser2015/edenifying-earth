@@ -15,7 +15,7 @@ export class QuantumExtractor extends Card implements IProjectCard {
       cost: 13,
 
       behavior: {
-        production: {energy: 4},
+        production: {discipleship: 4},
       },
 
       requirements: {tag: Tag.SCIENCE, count: 4},
@@ -24,11 +24,11 @@ export class QuantumExtractor extends Card implements IProjectCard {
         cardNumber: '079',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play a space card, you pay 2 M€ less for it.', (eb) => {
-            eb.tag(Tag.SPACE).startEffect.megacredits(-2);
+            eb.tag(Tag.SPACE).startEffect.provision(-2);
           }).br;
-          b.production((pb) => pb.energy(4, {digit}));
+          b.production((pb) => pb.discipleship(4, {digit}));
         }),
-        description: 'Requires 4 science tags. Increase your energy production 4 steps.',
+        description: 'Requires 4 science tags. Increase your discipleship production 4 steps.',
       },
     });
   }

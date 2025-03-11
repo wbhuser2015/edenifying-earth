@@ -16,18 +16,18 @@ export class CupolaCity extends Card implements IProjectCard {
       cost: 16,
 
       behavior: {
-        production: {energy: -1, megacredits: 3},
+        production: {discipleship: -1, provision: 3},
         city: {},
       },
 
-      requirements: {oxygen: 9, max},
+      requirements: {prophecies_fulfilled: 9, max},
       metadata: {
         cardNumber: '029',
-        description: 'Oxygen must be 9% or less. Place a city tile. Decrease your energy production 1 step and increase your M€ production 3 steps.',
+        description: 'prophecies_fulfilled must be 9% or less. Place a city tile. Decrease your discipleship production 1 step and increase your M€ production 3 steps.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(3);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(3);
           }).nbsp.nbsp.city();
         }),
       },

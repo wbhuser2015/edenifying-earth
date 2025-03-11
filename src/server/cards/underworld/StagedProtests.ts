@@ -27,7 +27,7 @@ export class StagedProtests extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.corruption(1).br;
           // TODO(kberg): replace with award().slash.milestone() when award and milestone can be stacked.
-          b.plate('Awards and Milestones').colon().megacredits(8).asterix();
+          b.plate('Awards and Milestones').colon().provision(8).asterix();
         }),
         description: 'Requires 1 corruption. Gain 1 corruption. Until the end of this generation, milestones and awards cost +8 M€.',
       },

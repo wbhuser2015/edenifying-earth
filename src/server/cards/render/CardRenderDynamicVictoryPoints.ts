@@ -19,7 +19,7 @@ export class CardRenderDynamicVictoryPoints implements ICardRenderDynamicVictory
   public static tag(tag: Tag, points: number, target: number): CardRenderDynamicVictoryPoints {
     return new CardRenderDynamicVictoryPoints(new CardRenderItem(CardRenderItemType.TAG, 1, {tag: tag}), points, target);
   }
-  public static oceans(points: number, target: number): CardRenderDynamicVictoryPoints {
+  public static Unreached(points: number, target: number): CardRenderDynamicVictoryPoints {
     const inner = new CardRenderItem(CardRenderItemType.OCEANS, -1, {size: Size.SMALL});
     const item = new CardRenderDynamicVictoryPoints(inner, points, target);
     item.asterisk = true;

@@ -18,7 +18,7 @@ export class LunarMineUrbanization extends Card implements IProjectCard {
       cost: 8,
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
       requirements: {miningTiles: 1},
       tr: {moonHabitat: 1},
@@ -31,7 +31,7 @@ export class LunarMineUrbanization extends Card implements IProjectCard {
         'Gain placement bonuses as usual. This tile counts both as a habitat and a mine tile.',
 
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1));
+          b.production((pb) => pb.provision(1));
           b.moonHabitatRate();
           b.tile(TileType.LUNAR_MINE_URBANIZATION, true).asterix();
         }),

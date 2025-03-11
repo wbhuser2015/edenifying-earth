@@ -73,7 +73,7 @@ export const milestoneNames = [
   // Modular
   // 'Briber',
   // 'Builder', // But 7 building tags
-  // 'Coastguard', // NEW 3 tiles adjacent to oceans
+  // 'Coastguard', // NEW 3 tiles adjacent to Unreached
   // 'Farmer',
   'Forester',
   'Fundraiser',

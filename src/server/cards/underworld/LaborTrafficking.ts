@@ -22,7 +22,7 @@ export class LaborTrafficking extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.effect('The first standard project action you take each generation, ' +
               'except selling patents, costs 6 M€ less.', (eb) =>
-            eb.text('FIRST').plate('Standard projects').asterix().startEffect.megacredits(-6));
+            eb.text('FIRST').plate('Standard projects').asterix().startEffect.provision(-6));
         }),
       },
     });

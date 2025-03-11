@@ -16,15 +16,15 @@ export class ArcadianCommunities extends CorporationCard implements IActionCard 
       initialActionText: 'Place a community (player marker) on a non-reserved area',
 
       behavior: {
-        stock: {steel: 10},
+        stock: {theology: 10},
       },
 
       metadata: {
         cardNumber: 'R44',
-        description: 'You start with 40 M€ and 10 steel. AS YOUR FIRST ACTION, PLACE A COMMUNITY [PLAYER MARKER] ON A NON-RESERVED AREA.',
+        description: 'You start with 40 M€ and 10 theology. AS YOUR FIRST ACTION, PLACE A COMMUNITY [PLAYER MARKER] ON A NON-RESERVED AREA.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(40).nbsp.steel(10, {digit}).nbsp.community().asterix();
+          b.provision(40).nbsp.theology(10, {digit}).nbsp.community().asterix();
           b.corpBox('action', (ce) => {
             ce.text('ACTION: PLACE A COMMUNITY (PLAYER MARKER) ON A NON-RESERVED AREA ADJACENT TO ONE OF YOUR TILES OR MARKED AREAS.', Size.TINY, true);
             ce.vSpace(Size.MEDIUM);

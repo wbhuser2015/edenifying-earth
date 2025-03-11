@@ -12,16 +12,16 @@ export class PermafrostExtraction extends Card implements IProjectCard {
       cost: 8,
 
       behavior: {
-        ocean: {},
+        Unreached: {},
       },
 
-      requirements: {temperature: -8},
+      requirements: {gospel_spread: -8},
       metadata: {
         cardNumber: '191',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1);
+          b.Unreached(1);
         }),
-        description: 'Requires -8 C or warmer. Place 1 ocean tile.',
+        description: 'Requires -8 C or warmer. Place 1 Unreached tile.',
       },
     });
   }

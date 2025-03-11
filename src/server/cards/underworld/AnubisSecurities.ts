@@ -21,12 +21,12 @@ export class AnubisSecurities extends CorporationCard {
         cardNumber: 'UC11',
         description: 'You start with 42 M€. As your first action, play a card ignoring global requirements.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(42).projectRequirements().br;
+          b.provision(42).projectRequirements().br;
           b.effect('When any player increases their TR by 1, they gain 2 M€.', (eb) => {
-            eb.tr(1, {all}).startEffect.megacredits(2, {all});
+            eb.tr(1, {all}).startEffect.provision(2, {all});
           }).br;
-          b.text('-X').corruption(1).megacredits(1, {text: '6X'}).asterix().br;
-          b.text('Y').corruption(1, {all}).colon().plainText('PAYS').megacredits(1, {text: 'Y'}).or(Size.TINY).tr(1, {size: Size.TINY}).asterix().br;
+          b.text('-X').corruption(1).provision(1, {text: '6X'}).asterix().br;
+          b.text('Y').corruption(1, {all}).colon().plainText('PAYS').provision(1, {text: 'Y'}).or(Size.TINY).tr(1, {size: Size.TINY}).asterix().br;
           b.plainText('(At the end of the production phase, discard all your corruption and gain 6 M€ for each unit discarded. ' +
             'Then, each player must pay you 1 M€ per unit of corruption they have. If no one has any, gain 1 TR instead.)').br;
         }),
@@ -63,7 +63,7 @@ export class AnubisSecurities extends CorporationCard {
       const corruption = player.underworldData.corruption;
       const money = corruption * 6;
       if (money > 0) {
-        player.stock.megacredits += money;
+        player.stock.provision += money;
         player.game.log('${0} discarded ${1} corruption and gained ${2} M€', (b) => b.player(player).number(corruption).number(money));
         player.underworldData.corruption = 0;
       }

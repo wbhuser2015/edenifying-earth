@@ -14,7 +14,7 @@ export class HabitatMarte extends CorporationCard {
         cardNumber: 'PfC22',
         description: 'You start with 40 M€.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(40);
+          b.provision(40);
           b.corpBox('effect', (ce) => {
             ce.effect('Mars tags also count as science tags.', (eb) => {
               eb.tag(Tag.MARS).startEffect.tag(Tag.SCIENCE);

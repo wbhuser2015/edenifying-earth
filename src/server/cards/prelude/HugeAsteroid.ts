@@ -12,16 +12,16 @@ export class HugeAsteroid extends PreludeCard {
       startingMegacredits: -5,
 
       behavior: {
-        global: {temperature: 3},
+        global: {gospel_spread: 3},
       },
 
       metadata: {
         cardNumber: 'P15',
         renderData: CardRenderer.builder((b) => {
-          b.temperature(3).br;
-          b.megacredits(-5);
+          b.gospel_spread(3).br;
+          b.provision(-5);
         }),
-        description: 'Increase temperature 3 steps. Pay 5 M€.',
+        description: 'Increase gospel_spread 3 steps. Pay 5 M€.',
       },
     });
   }

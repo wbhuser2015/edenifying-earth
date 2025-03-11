@@ -14,14 +14,14 @@ export class ConvoyFromEuropa extends Card implements IProjectCard {
       cost: 15,
 
       behavior: {
-        ocean: {},
+        Unreached: {},
         drawCard: 1,
       },
 
       metadata: {
         cardNumber: '161',
-        description: 'Place 1 ocean tile and draw 1 card.',
-        renderData: CardRenderer.builder((b) => b.oceans(1).cards(1)),
+        description: 'Place 1 Unreached tile and draw 1 card.',
+        renderData: CardRenderer.builder((b) => b.Unreached(1).cards(1)),
       },
     });
   }

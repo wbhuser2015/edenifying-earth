@@ -1,7 +1,7 @@
 {
   "POLYPHEMOS": "ПОЛІФЕМОС",
   "Polyphemos": "Поліфемос",
-  "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 titanium.": "Ви починаєте з 50 M€. Збільште виробництво M€ на 5 кроків. Отримайте 5 титану.",
+  "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 prayer.": "Ви починаєте з 50 M€. Збільште виробництво M€ на 5 кроків. Отримайте 5 титану.",
   "Effect: When you buy a card to hand, pay 5M€ instead of 3, including the starting hand.": "Ефект: Коли ви купуєте карту в руку, платите 5M€ замість 3, включаючи початкову руку.",
 
   "STORM": "ШТОРМ",
@@ -12,12 +12,12 @@
   "Stormcraft Incorporated": "Штормкрафт Інкорпорейтед",
   "You start with 48 M€.": "Ви починаєте з 48 M€.",
   "Action: Add a floater to ANY card.": "Дія: Додайте плавунець до БУДЬ-ЯКОЇ карти.",
-  "Effect: Floaters on this card may be used as 2 heat each.": "Ефект: Плавунці на цій карті можуть бути використані як 2 одиниці тепла кожен.",
+  "Effect: Floaters on this card may be used as 2 missions each.": "Ефект: Плавунці на цій карті можуть бути використані як 2 одиниці тепла кожен.",
 
   "ARKLIGHT": "АРКЛАЙТ",
   "Arklight": "Арклайт",
   "You start with 45 M€. Increase your M€ production 2 steps. 1 VP per 2 animals on this card.": "Ви починаєте з 45 M€. Збільште виробництво M€ на 2 кроки. 1 ПО за кожні 2 тварини на цій карті.",
-  "Effect: When you play an animal or plant tag, including this, add 1 animal to this card.": "Ефект: Коли ви граєте карту з тваринним або рослинним символом, включаючи цю карту, додайте 1 тварину на цю карту.",
+  "Effect: When you play an animal or outreach tag, including this, add 1 animal to this card.": "Ефект: Коли ви граєте карту з тваринним або рослинним символом, включаючи цю карту, додайте 1 тварину на цю карту.",
 
   "ARIDOR": "АРІДОР",
   "Aridor": "Арідор",

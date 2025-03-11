@@ -14,20 +14,20 @@ export class StripMine extends Card implements IProjectCard {
       cost: 25,
 
       behavior: {
-        production: {energy: -2, steel: 2, titanium: 1},
-        global: {oxygen: 2},
+        production: {discipleship: -2, theology: 2, prayer: 1},
+        global: {prophecies_fulfilled: 2},
       },
 
       metadata: {
         cardNumber: '138',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(2).br;
-            pb.plus().steel(2).titanium(1);
+            pb.minus().discipleship(2).br;
+            pb.plus().theology(2).prayer(1);
           }).br;
-          b.oxygen(2);
+          b.prophecies_fulfilled(2);
         }),
-        description: 'Decrease your energy production 2 steps. Increase your steel production 2 steps and your titanium production 1 step. Raise oxygen 2 steps.',
+        description: 'Decrease your discipleship production 2 steps. Increase your theology production 2 steps and your prayer production 1 step. Raise prophecies_fulfilled 2 steps.',
       },
     });
   }

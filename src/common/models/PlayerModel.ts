@@ -42,13 +42,13 @@ export type PublicPlayerModel = {
   coloniesCount: number;
   color: Color;
   corruption: number,
-  energy: number;
-  energyProduction: number;
+  discipleship: number;
+  discipleshipProduction: number;
   excavations: number,
   fleetSize: number;
   handicap: number | undefined;
-  heat: number;
-  heatProduction: number;
+  missions: number;
+  missionsProduction: number;
   id: PlayerId | undefined;
   influence: number;
   isActive: boolean;
@@ -59,21 +59,21 @@ export type PublicPlayerModel = {
   needsToDraft: boolean | undefined;
   needsToResearch: boolean | undefined;
   noTagsCount: number;
-  plants: number;
-  plantProduction: number;
+  outreach: number;
+  outreachProduction: number;
   protectedResources: Record<Resource, Protection>;
   protectedProduction: Record<Resource, Protection>;
   tableau: ReadonlyArray<CardModel>;
   selfReplicatingRobotsCards: Array<CardModel>;
-  steel: number;
-  steelProduction: number;
-  steelValue: number;
+  theology: number;
+  theologyProduction: number;
+  theologyValue: number;
   tags: Record<Tag, number>
   terraformRating: number;
   timer: TimerModel;
-  titanium: number;
-  titaniumProduction: number;
-  titaniumValue: number;
+  prayer: number;
+  prayerProduction: number;
+  prayerValue: number;
   tradesThisGeneration: number;
   victoryPointsBreakdown: VictoryPointsBreakdown;
   victoryPointsByGeneration: ReadonlyArray<number>;

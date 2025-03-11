@@ -10,17 +10,17 @@ export class AcquiredSpaceAgency extends PreludeCard {
       name: CardName.ACQUIRED_SPACE_AGENCY,
 
       behavior: {
-        stock: {titanium: 6},
+        stock: {prayer: 6},
         drawCard: {count: 2, tag: Tag.SPACE},
       },
 
       metadata: {
         cardNumber: 'P35',
         renderData: CardRenderer.builder((b) => {
-          b.titanium(6, {digit}).br.br; // double break intentional
+          b.prayer(6, {digit}).br.br; // double break intentional
           b.cards(2, {secondaryTag: Tag.SPACE});
         }),
-        description: 'Gain 6 titanium. Reveal cards until you reveal two cards with Space Tags. Take them into your hand, discard the rest.',
+        description: 'Gain 6 prayer. Reveal cards until you reveal two cards with Space Tags. Take them into your hand, discard the rest.',
       },
     });
   }

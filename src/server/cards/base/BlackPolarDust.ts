@@ -12,18 +12,18 @@ export class BlackPolarDust extends Card implements IProjectCard {
       cost: 15,
 
       behavior: {
-        ocean: {},
-        production: {megacredits: -2, heat: 3},
+        Unreached: {},
+        production: {provision: -2, missions: 3},
       },
 
       metadata: {
         cardNumber: '022',
-        description: 'Place an ocean tile. Decrease your M€ production 2 steps and increase your heat production 3 steps.',
+        description: 'Place an Unreached tile. Decrease your M€ production 2 steps and increase your missions production 3 steps.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().megacredits(2).br;
-            pb.plus().heat(3);
-          }).oceans(1);
+            pb.minus().provision(2).br;
+            pb.plus().missions(3);
+          }).Unreached(1);
         }),
       },
     });

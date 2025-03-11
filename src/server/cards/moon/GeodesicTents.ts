@@ -12,22 +12,22 @@ export class GeodesicTents extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.PLANT, Tag.CITY, Tag.MOON],
       cost: 13,
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       behavior: {
-        production: {energy: -1, plants: 1},
+        production: {discipleship: -1, outreach: 1},
         moon: {habitatTile: {}},
       },
 
       metadata: {
-        description: 'Decrease your energy production 1 step and increase your plant production 1 step. ' +
-        'Spend 1 titanium. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
+        description: 'Decrease your discipleship production 1 step and increase your outreach production 1 step. ' +
+        'Spend 1 prayer. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
         cardNumber: 'M06',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).nbsp.plus().plants(1);
+            pb.minus().discipleship(1).nbsp.plus().outreach(1);
           }).br;
-          b.minus().titanium(1).br;
+          b.minus().prayer(1).br;
           b.moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE});
         }),
       },

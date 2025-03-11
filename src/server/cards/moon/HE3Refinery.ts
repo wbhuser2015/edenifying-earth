@@ -14,7 +14,7 @@ export class HE3Refinery extends ActionCard implements IProjectCard {
       tags: [Tag.MOON],
 
       action: {
-        stock: {megacredits: {moon: {miningRate: {}}}},
+        stock: {provision: {moon: {miningRate: {}}}},
       },
 
       metadata: {
@@ -22,7 +22,7 @@ export class HE3Refinery extends ActionCard implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.action('Gain 1 M€ for each level of mining rate.', (eb) => {
             eb.empty().startAction;
-            eb.megacredits(1).slash().moonMiningRate();
+            eb.provision(1).slash().moonMiningRate();
           });
         }),
       },

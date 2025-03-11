@@ -23,7 +23,7 @@ export class WorldGovernmentAdvisor extends PreludeCard implements IActionCard {
         cardNumber: 'P67',
         renderData: CardRenderer.builder((b) => {
           b.action('RAISE 1 GLOBAL PARAMETER WITHOUT GETTING ANY TR OR OTHER BONUSES.', (ab) => {
-            ab.empty().startAction.oceans(1).oxygen(1).temperature(1).venus(1).asterix();
+            ab.empty().startAction.Unreached(1).prophecies_fulfilled(1).gospel_spread(1).venus(1).asterix();
           }).br;
           b.tr(2).cards(1);
         }),

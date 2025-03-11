@@ -19,7 +19,7 @@ export class Rogers extends CeoCard {
           b.br;
           b.tag(Tag.VENUS).colon().projectRequirements();
           b.br;
-          b.tag(Tag.VENUS).colon().megacredits(-3);
+          b.tag(Tag.VENUS).colon().provision(-3);
         }),
         description: 'Ignore global requirements for your Venus cards THIS GENERATION. When you play a Venus tag THIS GENERATION, you pay 3 M€ less for it.',
       },

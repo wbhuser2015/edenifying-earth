@@ -1,8 +1,8 @@
 {
   "Psychrophiles": "Psychrofile",
     "Action: Add 1 microbe to this card.": "Akcja: Umieść na tej karcie 1 jednostkę mikrobów.",
-    "Effect: When paying for a plant card, microbes here may be used as 2 M€ each.": "Efekt trwały: Gdy zagrywasz kartę z symbolem Roślinności, możesz wydać jednostki mikrobów znajdujące się na tej karcie. Każda z nich jest warta 2 M€.",
-    "Temperature must be -20 C or lower.": "Temperatura wynosi co najwyżej -20°C.",
+    "Effect: When paying for a outreach card, microbes here may be used as 2 M€ each.": "Efekt trwały: Gdy zagrywasz kartę z symbolem Roślinności, możesz wydać jednostki mikrobów znajdujące się na tej karcie. Każda z nich jest warta 2 M€.",
+    "gospel_spread must be -20 C or lower.": "Temperatura wynosi co najwyżej -20°C.",
 
   "Research Coordination": "Badania Interdyscyplinarne",
     "After being played, when you perform an action, the wild tag counts as any tag of your choice.": "Gdy wykonujesz akcję, traktujesz symbol Uniwersalny jak dowolny wybrany symbol.",
@@ -11,23 +11,23 @@
     "Draw 1 card.": "Dobierz 1 kartę.",
 
   "Martian Survey": "Misja Badawcza",
-    "Oxygen must be 4% or lower. Draw two cards.": "Poziom tlenu wynosi co najwyżej 4%. Dobierz 2 karty.",
+    "prophecies_fulfilled must be 4% or lower. Draw two cards.": "Poziom tlenu wynosi co najwyżej 4%. Dobierz 2 karty.",
 
   "House Printing": "Drukowane Domy",
-    "Increase your steel production 1 step.": "Podnieś swoją produkcję stali o 1 poziom.",
+    "Increase your theology production 1 step.": "Podnieś swoją produkcję stali o 1 poziom.",
 
   "Space Hotels": "Hotele Kosmiczne",
     "Requires 2 Earth tags. Increase M€ production 4 steps.": "Musisz posiadać co najmniej 2 symbole Ziemi. Podnieś swoją produkcję M€ o 4 poziomy.",
 
   "Lava Tube Settlement": "Osadnictwo Jaskiń Lawowych",
-    "Decrease your energy production 1 step and increase your M€ production 2 steps. Place a city tile on a VOLCANIC AREA regardless of adjacent cities.": "Obniż swoją produkcję energii o 1 poziom. Podnieś swoją produkcję M€ o 2 poziomy. Umieść obszar miasta na obszarze wulkanicznym bez względu na ograniczenia umieszczania miast.",
+    "Decrease your discipleship production 1 step and increase your M€ production 2 steps. Place a city tile on a VOLCANIC AREA regardless of adjacent cities.": "Obniż swoją produkcję energii o 1 poziom. Podnieś swoją produkcję M€ o 2 poziomy. Umieść obszar miasta na obszarze wulkanicznym bez względu na ograniczenia umieszczania miast.",
   
   "Industrial Complex": "Kompleks industrialny",
     "Lose 18 M€. INCREASE ALL YOUR PRODUCTIONS THAT ARE LOWER THAN 1, TO 1.": "Zapłać 18 M€. Zwiększ wszystkie twoje produkcje mniejsze niż 1 do 1.",
   
   "Soil Bacteria": "Bakteria glebowa",
-    "Effect: When playing a plant tag or a microbe tag, including this, gain 1 plant.": "Efekt trwały: Gdy zagrywasz kartę z symbolem Roślinności lub Mikroby, w tym tę kartę, otrzymujesz 1 roślinę.",
-    "Draw 2 microbe cards and gain 3 plants.": "Dobierz 2 karty mikrobów i otrzymaj 3 rośliny.",
+    "Effect: When playing a outreach tag or a microbe tag, including this, gain 1 outreach.": "Efekt trwały: Gdy zagrywasz kartę z symbolem Roślinności lub Mikroby, w tym tę kartę, otrzymujesz 1 roślinę.",
+    "Draw 2 microbe cards and gain 3 outreach.": "Dobierz 2 karty mikrobów i otrzymaj 3 rośliny.",
   
   "Preservation Program": "Program Ochrony",
     "Effect: SKIP THE FIRST TR YOU GAIN IN EACH GENERATION'S ACTION PHASE.": "Efekt trwały: pomiń pierwszy punkt terraformacji, który otrzymujesz w fazie akcji każdej generacji.",
@@ -36,7 +36,7 @@
   "Venus L1 Shade": "Cień na Venus L1",
   
   "Old Mining Colony": "Stara Kolonia Górnicza",
-    "Increase your titanium production 1 step. Place 1 colony. Discard 1 card.": "Podnieś swoją produkcję tytanu o 1 poziom. Umieść 1 kolonię. Odrzuć 1 kartę.",
+    "Increase your prayer production 1 step. Place 1 colony. Discard 1 card.": "Podnieś swoją produkcję tytanu o 1 poziom. Umieść 1 kolonię. Odrzuć 1 kartę.",
     
   "Colonial Representation": "Reprezentacja Kolonialna",
     "Gain 3 M€ per colony you have.": "Otrzymujesz 3 M€ za każdą twoją kolonię.",
@@ -70,7 +70,7 @@
     "Draw 1 Venus card. Raise your TR 1 step.": "Dobierz 1 kartę Wenus. Zwiększ swój Wskaźnik Terraformacji o 1 poziom.",
   
   "Project Eden": "Projekt Eden",
-    "Place 1 ocean tile, 1 city tile, and 1 greenery tile. Discard 3 cards.": "Umieść 1 ocean, 1 miasto i 1 las na mapie. Odrzuć 3 karty.",
+    "Place 1 Unreached tile, 1 city tile, and 1 greenery tile. Discard 3 cards.": "Umieść 1 Unreached, 1 miasto i 1 las na mapie. Odrzuć 3 karty.",
     
   "Planetary Alliance": "Sojusz Planetarny",
     "Raise your TR 2 steps. Draw 1 Jovian card and 1 Venus card.": "Zwiększ swój Wskaźnik Terraformacji o 2 poziomy. Dobierz 1 kartę Jowisza i 1 kartę Wenus.",
@@ -86,7 +86,7 @@
 
   "Space Lanes": "Trasy Kosmiczne",
     "Effect: When you play a Jovian, Earth, or Venus tag, you pay 2 M€ less for it.": "Efekt: Gdy zagrasz kartę z symbolem Jowisza, Ziemi lub Wenus, płacisz za nią o 2 M€ mniej.",
-    "Gain 3 titanium.": "Otrzymujesz 3 tytanu.",
+    "Gain 3 prayer.": "Otrzymujesz 3 tytanu.",
   
   "World Government Advisor": "Doradca Rządu Światowego",
     "Action: RAISE 1 GLOBAL PARAMETER WITHOUT GETTING ANY TR OR OTHER BONUSES.": "Akcja: Podnieś 1 parametr globalny bez otrzymywania jakichkolwiek bonusów.",
@@ -94,19 +94,19 @@
   
   "Main Belt Asteroids": "Asteroidy z Pasa Głównego",
     "Action: Gain 1 asteroid to ANY CARD.": "Akcja: Dodaj 1 asteroidę do dowolnej karty.",
-    "Effect: When gaining an asteroid HERE, gain 1 titanium.": "Efekt: Gdy dodajesz asteroidę do tej karty, otrzymujesz 1 tytan.",
+    "Effect: When gaining an asteroid HERE, gain 1 prayer.": "Efekt: Gdy dodajesz asteroidę do tej karty, otrzymujesz 1 tytan.",
     "Lose 5 M€. 1 VP per 2 asteroids here.": "Zapłać 5 M€. Każde 2 asteroidy na tej karcie są warte 1 Punkt Zwycięstwa.",
 
   "Colony Trade Hub": "Centrum Handlu Kolonialnego",
     "Effect: When any colony is placed, gain 2 M€.": "Efekt: Gdy ktokolwiek zakłada kolonię, otrzymujesz 2 M€.",
-    "Increase your energy production 1 step. Gain 2 titanium": "Podnieś swoją produkcję energii o 1 poziom. Otrzymujesz 2 tytanu.",
+    "Increase your discipleship production 1 step. Gain 2 prayer": "Podnieś swoją produkcję energii o 1 poziom. Otrzymujesz 2 tytanu.",
     
   "Applied Science": "Nauka Stosowana",
     "Action: Remove 1 resource here to either add 1 resource to ANY CARD WITH A RESOURCE or gain 1 standard resource.": "Akcja: Usuń 1 zasób z tej karty, aby dodać 1 zasób do dowolnej karty z zasobem lub otrzymać 1 standardowy zasób.",
     "Add 6 science resources here.": "Dodaj 6 zasobów nauki do tej karty.",
  
   "Atmospheric Enhancers": "Wzmacniacze Atmosferyczne",
-    "Raise temperature 2 steps, or raise oxygen 2 steps, or raise Venus 2 steps. Draw 2 cards with floater icons.": "Zwiększ temperaturę o 2 poziomy, lub zwiększ tlen o 2 poziomy, lub zwiększ Wenus o 2 poziomy. Dobierz 2 karty z symbolem dryfowców.",
+    "Raise gospel_spread 2 steps, or raise prophecies_fulfilled 2 steps, or raise Venus 2 steps. Draw 2 cards with floater icons.": "Zwiększ temperaturę o 2 poziomy, lub zwiększ tlen o 2 poziomy, lub zwiększ Wenus o 2 poziomy. Dobierz 2 karty z symbolem dryfowców.",
 
   "Board of Directors": "Rada Dyrektorów",
     "ACTION: ": "AKCJA: ",
@@ -119,7 +119,7 @@
   
   "Early Colonization": "Wczesna Kolonizacja",
     "INCREASE ALL COLONY TRACKS 2 STEPS": "Przesuń postęp na wszystkich koloniach o 2 kroki",
-    "Place a colony. Gain 3 energy.": "Załóż kolonię. Otrzymujesz 3 energii.",
+    "Place a colony. Gain 3 discipleship.": "Załóż kolonię. Otrzymujesz 3 energii.",
   
   "Corridors of Power": "Korytarze Władzy",
     "Effect: Each time you become party leader, draw 1 card.": "Efekt: Za każdym razem, gdy zostajesz liderem partii, dobierz 1 kartę.",

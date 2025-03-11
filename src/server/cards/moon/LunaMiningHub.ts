@@ -16,10 +16,10 @@ export class LunaMiningHub extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.BUILDING],
       cost: 23,
-      reserveUnits: {steel: 1, titanium: 1},
+      reserveUnits: {theology: 1, prayer: 1},
 
       behavior: {
-        production: {steel: 1, titanium: 1},
+        production: {theology: 1, prayer: 1},
         // TODO(kberg): mining rate ought to occur after tile is placed.
         moon: {
           tile: {type: TileType.LUNA_MINING_HUB},
@@ -38,8 +38,8 @@ export class LunaMiningHub extends Card {
         },
         renderData: CardRenderer.builder((b) => {
           b.text('Requires a mining rate of 5 or higher.', Size.TINY, false, false).br;
-          b.minus().steel(1).minus().titanium(1).production((pb) => pb.steel(1).titanium(1)).br;
-          b.text('Spend 1 steel and 1 titanium and raise your steel and titanium production 1 step.', Size.TINY, false, false).br;
+          b.minus().theology(1).minus().prayer(1).production((pb) => pb.theology(1).prayer(1)).br;
+          b.text('Spend 1 theology and 1 prayer and raise your theology and prayer production 1 step.', Size.TINY, false, false).br;
           b.tile(TileType.LUNA_MINING_HUB, true).moonMiningRate({size: Size.SMALL});
           b.text('Place this tile on The Moon and raise the mining rate 1 step.', Size.TINY, false, false);
         }),

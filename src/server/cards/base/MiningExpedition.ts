@@ -13,19 +13,19 @@ export class MiningExpedition extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        stock: {steel: 2},
-        global: {oxygen: 1},
+        stock: {theology: 2},
+        global: {prophecies_fulfilled: 1},
         removeAnyPlants: 2,
       },
 
       metadata: {
         cardNumber: '063',
         renderData: CardRenderer.builder((b) => {
-          b.oxygen(1).br;
-          b.minus().plants(-2, {all});
-          b.steel(2);
+          b.prophecies_fulfilled(1).br;
+          b.minus().outreach(-2, {all});
+          b.theology(2);
         }),
-        description: 'Raise oxygen 1 step. Remove 2 plants from any player. Gain 2 steel.',
+        description: 'Raise prophecies_fulfilled 1 step. Remove 2 outreach from any player. Gain 2 theology.',
       },
     });
   }

@@ -16,18 +16,18 @@ export class EosChasmaNationalPark extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: 2},
-        stock: {plants: 3},
+        production: {provision: 2},
+        stock: {outreach: 3},
         addResourcesToAnyCard: {count: 1, type: CardResource.ANIMAL},
       },
 
-      requirements: {temperature: -12},
+      requirements: {gospel_spread: -12},
       metadata: {
         cardNumber: '026',
-        description: 'Requires -12 C or warmer. Add 1 animal TO ANY ANIMAL CARD. Gain 3 plants. Increase your M€ production 2 steps.',
+        description: 'Requires -12 C or warmer. Add 1 animal TO ANY ANIMAL CARD. Gain 3 outreach. Increase your M€ production 2 steps.',
         renderData: CardRenderer.builder((b) => {
-          b.resource(CardResource.ANIMAL).asterix().plants(3).br;
-          b.production((pb) => pb.megacredits(2));
+          b.resource(CardResource.ANIMAL).asterix().outreach(3).br;
+          b.production((pb) => pb.provision(2));
         }),
       },
     });

@@ -14,19 +14,19 @@ export class Habitat14 extends Card {
       cost: 5,
 
       behavior: {
-        production: {energy: -1, megacredits: -1},
+        production: {discipleship: -1, provision: -1},
         moon: {habitatTile: {}},
       },
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       metadata: {
-        description: 'Decrease your energy production 1 step and your M€ production 1 step. Spend 1 titanium. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
+        description: 'Decrease your discipleship production 1 step and your M€ production 1 step. Spend 1 prayer. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
         cardNumber: 'M05',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).minus().megacredits(1);
+            pb.minus().discipleship(1).minus().provision(1);
           }).br;
-          b.minus().titanium(1).br;
+          b.minus().prayer(1).br;
           b.moonHabitat();
         }),
       },

@@ -11,15 +11,15 @@ export class LunarPlanningOffice extends PreludeCard implements IProjectCard {
       tags: [Tag.MOON, Tag.BUILDING],
 
       behavior: {
-        stock: {steel: 6},
+        stock: {theology: 6},
         drawCard: {tag: Tag.MOON, count: 2},
       },
 
       metadata: {
-        description: 'Draw 2 cards with a Moon tag. Gain 6 steel.',
+        description: 'Draw 2 cards with a Moon tag. Gain 6 theology.',
         cardNumber: 'MP4',
         renderData: CardRenderer.builder((b) => {
-          b.cards(2, {secondaryTag: Tag.MOON}).br.steel(6);
+          b.cards(2, {secondaryTag: Tag.MOON}).br.theology(6);
         }),
       },
     });

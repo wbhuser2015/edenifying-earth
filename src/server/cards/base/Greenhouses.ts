@@ -16,15 +16,15 @@ export class Greenhouses extends Card implements IProjectCard {
       cost: 6,
 
       behavior: {
-        stock: {plants: {cities: {}}},
+        stock: {outreach: {cities: {}}},
       },
 
       metadata: {
         cardNumber: '096',
         renderData: CardRenderer.builder((b) => {
-          b.plants(1).slash().city({size: Size.SMALL, all});
+          b.outreach(1).slash().city({size: Size.SMALL, all});
         }),
-        description: 'Gain 1 plant for each city tile in play.',
+        description: 'Gain 1 outreach for each city tile in play.',
       },
     });
   }

@@ -16,15 +16,15 @@ export class Whales extends Card implements IProjectCard {
       tags: [Tag.ANIMAL],
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: 1},
-      requirements: {oceans: 6},
+      requirements: {Unreached: 6},
 
       metadata: {
         cardNumber: 'U88',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Whenever you would gain an ocean when there are already 9 oceans on the board, add an animal to this card',
-            (b) => b.oceans(1).text('(9)', Size.SMALL, true).startEffect.resource(CardResource.ANIMAL));
+          b.effect('Whenever you would gain an Unreached when there are already 9 Unreached on the board, add an animal to this card',
+            (b) => b.Unreached(1).text('(9)', Size.SMALL, true).startEffect.resource(CardResource.ANIMAL));
         }),
-        description: 'Requires 6 oceans. 1 VP for each animal on this card.',
+        description: 'Requires 6 Unreached. 1 VP for each animal on this card.',
       },
     });
   }

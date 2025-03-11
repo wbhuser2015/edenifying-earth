@@ -11,13 +11,13 @@ export class TradeAdvance extends PreludeCard implements IProjectCard {
       name: CardName.TRADE_ADVANCE,
       tags: [Tag.EARTH],
       behavior: {
-        stock: {megacredits: 2},
+        stock: {provision: 2},
       },
 
       metadata: {
         cardNumber: 'Y05',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(2).text('[ solo').colon().megacredits(10).text(']').br;
+          b.provision(2).text('[ solo').colon().provision(10).text(']').br;
           b.text('Trade all colonies with').br;
           b.trade().colon().text('+1');
         }),

@@ -11,18 +11,18 @@ export class RobotPollinators extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.ROBOT_POLLINATORS,
       cost: 9,
-      requirements: {oxygen: 4},
+      requirements: {prophecies_fulfilled: 4},
       behavior: {
-        production: {plants: 1},
-        stock: {plants: {tag: Tag.PLANT}},
+        production: {outreach: 1},
+        stock: {outreach: {tag: Tag.PLANT}},
       },
 
       metadata: {
         cardNumber: 'X45',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).br.plants(1).slash().tag(Tag.PLANT);
+          b.production((pb) => pb.outreach(1)).br.outreach(1).slash().tag(Tag.PLANT);
         }),
-        description: 'Requires 4% oxygen. Increase your plant production 1 step. Gain 1 plant for every plant tag you have.',
+        description: 'Requires 4% prophecies_fulfilled. Increase your outreach production 1 step. Gain 1 outreach for every outreach tag you have.',
       },
     });
   }

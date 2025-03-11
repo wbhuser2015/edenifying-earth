@@ -9,7 +9,7 @@ export class ExperiencedMartians extends PreludeCard {
       name: CardName.EXPERIENCED_MARTIANS,
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
         drawCard: {count: 2, tag: Tag.MARS},
         turmoil: {sendDelegates: {count: 1}},
       },
@@ -17,7 +17,7 @@ export class ExperiencedMartians extends PreludeCard {
       metadata: {
         cardNumber: 'PfP13',
         renderData: CardRenderer.builder((b) => {
-          b.delegates(1).cards(1, {secondaryTag: Tag.MARS}).cards(1, {secondaryTag: Tag.MARS}).production((pb) => pb.megacredits(2));
+          b.delegates(1).cards(1, {secondaryTag: Tag.MARS}).cards(1, {secondaryTag: Tag.MARS}).production((pb) => pb.provision(2));
         }),
         description: 'Place 1 delegate in any party. Draw 2 cards with a Mars tag. Increase your M€ production 2 steps.',
       },

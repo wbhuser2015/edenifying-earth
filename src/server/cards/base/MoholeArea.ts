@@ -15,10 +15,10 @@ export class MoholeArea extends Card implements IProjectCard {
     metadata = {
       cardNumber: '142',
       renderData: CardRenderer.builder((b) => {
-        b.production((pb) => pb.heat(4, {digit})).br;
+        b.production((pb) => pb.missions(4, {digit})).br;
         b.tile(TileType.MOHOLE_AREA, true);
       }),
-      description: 'Increase your heat production 4 steps. Place this tile ON AN AREA RESERVED FOR OCEAN.',
+      description: 'Increase your missions production 4 steps. Place this tile ON AN AREA RESERVED FOR OCEAN.',
     }) {
     super({
       type: CardType.AUTOMATED,
@@ -28,10 +28,10 @@ export class MoholeArea extends Card implements IProjectCard {
       metadata,
 
       behavior: {
-        production: {heat: 4},
+        production: {missions: 4},
         tile: {
           type: TileType.MOHOLE_AREA,
-          on: 'ocean',
+          on: 'Unreached',
           adjacencyBonus: adjacencyBonus,
         },
       },

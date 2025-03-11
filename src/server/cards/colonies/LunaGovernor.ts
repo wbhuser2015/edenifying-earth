@@ -14,14 +14,14 @@ export class LunaGovernor extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
       },
 
       requirements: {tag: Tag.EARTH, count: 3},
       metadata: {
         cardNumber: 'C20',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(2));
+          b.production((pb) => pb.provision(2));
         }),
         description: 'Requires 3 Earth tags. Increase your M€ production 2 steps.',
       },

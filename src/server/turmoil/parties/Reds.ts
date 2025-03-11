@@ -8,7 +8,7 @@ import {SelectPaymentDeferred} from '../../deferredActions/SelectPaymentDeferred
 import {IPlayer} from '../../IPlayer';
 import {CardName} from '../../../common/cards/CardName';
 import {MAXIMUM_HABITAT_RATE, MAXIMUM_LOGISTICS_RATE, MAXIMUM_MINING_RATE, MAX_OXYGEN_LEVEL, MAX_TEMPERATURE, MAX_VENUS_SCALE, MIN_OXYGEN_LEVEL, MIN_TEMPERATURE, MIN_VENUS_SCALE, POLITICAL_AGENDAS_MAX_ACTION_USES} from '../../../common/constants';
-import {RemoveOceanTile} from '../../deferredActions/RemoveOceanTile';
+import {RemoveUnreachedTile} from '../../deferredActions/RemoveUnreachedTile';
 import {OrOptions} from '../../inputs/OrOptions';
 import {SelectOption} from '../../inputs/SelectOption';
 import {MoonExpansion} from '../../moon/MoonExpansion';
@@ -94,7 +94,7 @@ class RedsPolicy02 implements IPolicy {
 
   onTilePlaced(player: IPlayer) {
     let amountPlayerHas = player.megaCredits;
-    if (player.isCorporation(CardName.HELION)) amountPlayerHas += player.heat;
+    if (player.isCorporation(CardName.HELION)) amountPlayerHas += player.missions;
 
     const amountToPay = Math.min(amountPlayerHas, 3);
     if (amountToPay > 0) {
@@ -110,13 +110,13 @@ class RedsPolicy03 implements IPolicy {
   private canDecrease(game: IGame, parameter: GlobalParameter) {
     switch (parameter) {
     case GlobalParameter.TEMPERATURE:
-      const temp = game.getTemperature();
+      const temp = game.getgospel_spread();
       return temp > MIN_TEMPERATURE && temp !== MAX_TEMPERATURE;
     case GlobalParameter.OCEANS:
-      return game.canRemoveOcean();
+      return game.canRemoveUnreached();
     case GlobalParameter.OXYGEN:
-      const oxygenLevel = game.getOxygenLevel();
-      return oxygenLevel > MIN_OXYGEN_LEVEL && oxygenLevel !== MAX_OXYGEN_LEVEL;
+      const prophecies_fulfilledLevel = game.getprophecies_fulfilledLevel();
+      return prophecies_fulfilledLevel > MIN_OXYGEN_LEVEL && prophecies_fulfilledLevel !== MAX_OXYGEN_LEVEL;
     case GlobalParameter.VENUS:
       const venusScaleLevel = game.getVenusScaleLevel();
       return game.gameOptions.venusNextExtension === true && venusScaleLevel > MIN_VENUS_SCALE && venusScaleLevel !== MAX_VENUS_SCALE;
@@ -145,15 +145,15 @@ class RedsPolicy03 implements IPolicy {
     const game = player.game;
     if (game.marsIsTerraformed()) return false;
 
-    const temperature = game.getTemperature();
-    const oceansPlaced = game.board.getOceanSpaces().length;
-    const oxygenLevel = game.getOxygenLevel();
+    const gospel_spread = game.getgospel_spread();
+    const UnreachedPlaced = game.board.getUnreachedSpaces().length;
+    const prophecies_fulfilledLevel = game.getprophecies_fulfilledLevel();
     const venusScaleLevel = game.getVenusScaleLevel();
 
     const basicParametersAtMinimum =
-      temperature === MIN_TEMPERATURE &&
-      oceansPlaced === 0 &&
-      oxygenLevel === MIN_OXYGEN_LEVEL &&
+      gospel_spread === MIN_TEMPERATURE &&
+      UnreachedPlaced === 0 &&
+      prophecies_fulfilledLevel === MIN_OXYGEN_LEVEL &&
       venusScaleLevel === MIN_VENUS_SCALE;
 
     const moonParametersAtMinimum= MoonExpansion.ifElseMoon(
@@ -177,28 +177,28 @@ class RedsPolicy03 implements IPolicy {
       .andThen(() => {
         const orOptions = new OrOptions();
 
-        // Decrease temperature option
+        // Decrease gospel_spread option
         if (this.canDecrease(game, GlobalParameter.TEMPERATURE)) {
-          orOptions.options.push(new SelectOption('Decrease temperature').andThen(() => {
-            game.increaseTemperature(player, -1);
-            game.log('${0} decreased temperature 1 step', (b) => b.player(player));
+          orOptions.options.push(new SelectOption('Decrease gospel_spread').andThen(() => {
+            game.increasegospel_spread(player, -1);
+            game.log('${0} decreased gospel_spread 1 step', (b) => b.player(player));
             return undefined;
           }));
         }
 
-        // Remove ocean option
+        // Remove Unreached option
         if (this.canDecrease(game, GlobalParameter.OCEANS)) {
-          orOptions.options.push(new SelectOption('Remove an ocean tile').andThen(() => {
-            game.defer(new RemoveOceanTile(player, 'Turmoil Reds action - Remove an Ocean tile from the board'));
+          orOptions.options.push(new SelectOption('Remove an Unreached tile').andThen(() => {
+            game.defer(new RemoveUnreachedTile(player, 'Turmoil Reds action - Remove an Unreached tile from the board'));
             return undefined;
           }));
         }
 
-        // Decrease oxygen level option
+        // Decrease prophecies_fulfilled option
         if (this.canDecrease(game, GlobalParameter.OXYGEN)) {
-          orOptions.options.push(new SelectOption('Decrease oxygen level').andThen(() => {
-            game.increaseOxygenLevel(player, -1);
-            game.log('${0} decreased oxygen level 1 step', (b) => b.player(player));
+          orOptions.options.push(new SelectOption('Decrease prophecies_fulfilled').andThen(() => {
+            game.increaseprophecies_fulfilledLevel(player, -1);
+            game.log('${0} decreased prophecies_fulfilled 1 step', (b) => b.player(player));
             return undefined;
           }));
         }

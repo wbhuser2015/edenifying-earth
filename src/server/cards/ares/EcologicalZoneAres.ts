@@ -19,7 +19,7 @@ export class EcologicalZoneAres extends EcologicalZone {
         },
         cardNumber: 'A08',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When you play an animal or plant tag INCLUDING THESE, add an animal to this card.', (eb) => {
+          b.effect('When you play an animal or outreach tag INCLUDING THESE, add an animal to this card.', (eb) => {
             eb.tag(Tag.ANIMAL).slash().tag(Tag.PLANT).startEffect;
             eb.resource(CardResource.ANIMAL).tile(TileType.ECOLOGICAL_ZONE, false, true);
           }).br;

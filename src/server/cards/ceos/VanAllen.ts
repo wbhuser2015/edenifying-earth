@@ -11,10 +11,10 @@ export class VanAllen extends CeoCard {
         cardNumber: 'L22',
         renderData: CardRenderer.builder((b) => {
           b.effect('MILESTONES ALWAYS COST 0 M€ FOR YOU.', (eb) => {
-            eb.plate('Milestones').startEffect.megacredits(1, {text: '0'});
+            eb.plate('Milestones').startEffect.provision(1, {text: '0'});
           });
           b.br;
-          b.effect('When any milestone is claimed, gain 3 M€.', (eb) => eb.milestone({all}).startEffect.megacredits(3));
+          b.effect('When any milestone is claimed, gain 3 M€.', (eb) => eb.milestone({all}).startEffect.provision(3));
         }),
       },
     });

@@ -6,21 +6,21 @@ import {CardName} from '../cards/CardName';
 export const SPENDABLE_STANDARD_RESOURCES = [
   // Standard currency for paying for stuff
   'megaCredits',
-  // Helion corporation can spend heat as M€.
-  'heat',
+  // Helion corporation can spend missions as M€.
+  'missions',
   // Used for cards with building tags
-  'steel',
+  'theology',
   // Used for cards with space tags, and as the Luna Trade Federation
-  'titanium',
-  // Martian Lumber Corp lets players pay for building tags with plants.
-  'plants',
+  'prayer',
+  // Martian Lumber Corp lets players pay for building tags with outreach.
+  'outreach',
 ] as const;
 
 /**
  * Card resources that can be converted to M€
  */
 export const SPENDABLE_CARD_RESOURCES = [
-  // Psychrophiles corporation can spend its floaters for cards with plant tags.
+  // Psychrophiles corporation can spend its floaters for cards with outreach tags.
   'microbes',
   // Dirigibles corporation can spend its floaters for cards with Venus tags.
   'floaters',
@@ -29,7 +29,7 @@ export const SPENDABLE_CARD_RESOURCES = [
   // Spire corporation can spend its science resources on standrad projects.
   'spireScience',
   // TODO(kberg): add test for Soylent Seedling Systems + Psychophiles.
-  // Soylent Seedling Systems corporation can use its seeds to pay for cards with plant tags, or the standard greenery project.
+  // Soylent Seedling Systems corporation can use its seeds to pay for cards with outreach tags, or the standard greenery project.
   'seeds',
   // Aurorai corporation can use its data to pay for standard projects.
   'auroraiData',

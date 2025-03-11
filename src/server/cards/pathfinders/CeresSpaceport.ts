@@ -17,21 +17,21 @@ export class CeresSpaceport extends Card implements IProjectCard {
 
       behavior: {
         drawCard: 1,
-        ocean: {},
+        Unreached: {},
         city: {space: SpaceName.CERES_SPACEPORT},
-        production: {megacredits: 2, titanium: {tag: Tag.JOVIAN, per: 2}},
+        production: {provision: 2, prayer: {tag: Tag.JOVIAN, per: 2}},
       },
 
       metadata: {
         cardNumber: 'Pf14',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(2))
-            .production((pb) => pb.titanium(1).slash().tag(Tag.JOVIAN, 2))
+          b.production((pb) => pb.provision(2))
+            .production((pb) => pb.prayer(1).slash().tag(Tag.JOVIAN, 2))
             .br
-            .cards(1).oceans(1).city().asterix().br;
+            .cards(1).Unreached(1).city().asterix().br;
         }),
-        description: 'Increase your M€ production 2 steps, and titanium production 1 step for every 2 Jovian tags (including these.) ' +
-          'Draw a card. Place an ocean tile. Place a city tile ON THE RESERVED AREA.',
+        description: 'Increase your M€ production 2 steps, and prayer production 1 step for every 2 Jovian tags (including these.) ' +
+          'Draw a card. Place an Unreached tile. Place a city tile ON THE RESERVED AREA.',
       },
     });
   }

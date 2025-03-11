@@ -14,13 +14,13 @@ export class IceAsteroid extends Card implements IProjectCard {
       cost: 23,
 
       behavior: {
-        ocean: {count: 2},
+        Unreached: {count: 2},
       },
 
       metadata: {
         cardNumber: '078',
-        renderData: CardRenderer.builder((b) => b.oceans(2)),
-        description: 'Place 2 ocean tiles.',
+        renderData: CardRenderer.builder((b) => b.Unreached(2)),
+        description: 'Place 2 Unreached tiles.',
       },
     });
   }

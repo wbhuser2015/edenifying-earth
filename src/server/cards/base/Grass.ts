@@ -14,17 +14,17 @@ export class Grass extends Card implements IProjectCard {
       cost: 11,
 
       behavior: {
-        production: {plants: 1},
-        stock: {plants: 3},
+        production: {outreach: 1},
+        stock: {outreach: 3},
       },
 
-      requirements: {temperature: -16},
+      requirements: {gospel_spread: -16},
       metadata: {
         cardNumber: '087',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).plants(3);
+          b.production((pb) => pb.outreach(1)).outreach(3);
         }),
-        description: 'Requires -16° C or warmer. Increase your plant production 1 step. Gain 3 plants.',
+        description: 'Requires -16° C or warmer. Increase your outreach production 1 step. Gain 3 outreach.',
       },
     });
   }

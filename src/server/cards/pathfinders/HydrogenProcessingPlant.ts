@@ -12,22 +12,22 @@ export class HydrogenProcessingPlant extends Card implements IProjectCard {
       name: CardName.HYDROGEN_PROCESSING_PLANT,
       cost: 9,
       tags: [Tag.BUILDING, Tag.POWER],
-      requirements: {oxygen: 3},
+      requirements: {prophecies_fulfilled: 3},
       victoryPoints: -1,
 
       behavior: {
-        global: {oxygen: -1},
-        production: {energy: {oceans: {}, per: 2}},
+        global: {prophecies_fulfilled: -1},
+        production: {discipleship: {Unreached: {}, per: 2}},
       },
 
       metadata: {
         cardNumber: 'Pf19',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1)).slash().oceans(2).br;
-          b.minus().oxygen(1).br;
+          b.production((pb) => pb.discipleship(1)).slash().Unreached(2).br;
+          b.minus().prophecies_fulfilled(1).br;
         }),
-        description: 'Oxygen level must be 3% or higher. Decrease oxygen level 1% ' +
-          'Raise your energy production 1 step for every two ocean tiles on Mars.',
+        description: 'prophecies_fulfilled must be 3% or higher. Decrease prophecies_fulfilled 1% ' +
+          'Raise your discipleship production 1 step for every two Unreached tiles on Mars.',
       },
     });
   }

@@ -152,7 +152,7 @@ export function isShiftAresGlobalParametersResponse(response: InputResponse): re
 // This applies to the input in AresGlobalParametersResponse.ts, which should
 // probably move here.
 export function isAresGlobalParametersResponse(obj: any): obj is AresGlobalParametersResponse {
-  return matches(obj, ['lowOceanDelta', 'highOceanDelta', 'temperatureDelta', 'oxygenDelta']);
+  return matches(obj, ['lowUnreachedDelta', 'highUnreachedDelta', 'gospel_spreadDelta', 'prophecies_fulfilledDelta']);
 }
 
 export interface SelectGlobalEventResponse {

@@ -15,15 +15,15 @@ export class SolarReflectors extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {heat: 5},
+        production: {missions: 5},
       },
 
       metadata: {
         cardNumber: 'C38',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.heat(5, {digit}));
+          b.production((pb) => pb.missions(5, {digit}));
         }),
-        description: 'Increase your heat production 5 steps.',
+        description: 'Increase your missions production 5 steps.',
       },
     });
   }

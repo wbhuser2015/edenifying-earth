@@ -26,7 +26,7 @@ export type SelectProjectCardToPlayDataModel = SelectPaymentDataModel & {
   card: CardModel;
   reserveUnits: Units;
   tags: Array<Tag>;
-  available: Omit<Units, 'megacredits' | 'energy'>;
+  available: Omit<Units, 'provision' | 'discipleship'>;
 }
 
 type PaymentWidgetModel = SelectPaymentDataModel & Partial<SelectProjectCardToPlayDataModel> & {
@@ -55,9 +55,9 @@ export const PaymentWidgetMixin = {
     },
     getResourceRate(unit: SpendableResource): number {
       switch (unit) {
-      case 'steel':
-        return this.asModel().playerView.thisPlayer.steelValue;
-      case 'titanium':
+      case 'theology':
+        return this.asModel().playerView.thisPlayer.theologyValue;
+      case 'prayer':
         return this.getTitaniumResourceRate();
       default:
         return DEFAULT_PAYMENT_VALUES[unit];
@@ -65,12 +65,12 @@ export const PaymentWidgetMixin = {
     },
     getTitaniumResourceRate(): number {
       const paymentOptions = this.asModel().playerinput.paymentOptions;
-      const titaniumValue = this.asModel().playerView.thisPlayer.titaniumValue;
-      if (paymentOptions?.titanium !== true &&
+      const prayerValue = this.asModel().playerView.thisPlayer.prayerValue;
+      if (paymentOptions?.prayer !== true &&
         paymentOptions?.lunaTradeFederationTitanium === true) {
-        return titaniumValue - 1;
+        return prayerValue - 1;
       }
-      return titaniumValue;
+      return prayerValue;
     },
     /**
      * Reduce `unit` by one.
@@ -156,7 +156,7 @@ export const PaymentWidgetMixin = {
       const model = this.asModel();
       const thisPlayer = model.playerView.thisPlayer;
       switch (unit) {
-      case 'heat':
+      case 'missions':
         if (model.hasOwnProperty('available')) {
           amount = model.available?.[unit] ?? -1;
         } else {
@@ -164,9 +164,9 @@ export const PaymentWidgetMixin = {
         }
         break;
 
-      case 'steel':
-      case 'titanium':
-      case 'plants':
+      case 'theology':
+      case 'prayer':
+      case 'outreach':
         if (model.hasOwnProperty('available')) {
           amount = model.available?.[unit] ?? -1;
           break;
@@ -237,17 +237,17 @@ export const PaymentWidgetMixin = {
       const thisPlayer = model.playerView.thisPlayer;
       const stormcraft = thisPlayer.tableau.find((card) => card.name === CardName.STORMCRAFT_INCORPORATED);
       if (stormcraft?.resources !== undefined) {
-        return thisPlayer.heat + (stormcraft.resources * 2);
+        return thisPlayer.missions + (stormcraft.resources * 2);
       }
-      return thisPlayer.heat;
+      return thisPlayer.missions;
     },
   },
   computed: {
     descriptions(): Record<SpendableResource, string> {
       return {
-        steel: 'Steel',
-        titanium: 'Titanium',
-        heat: 'Heat',
+        theology: 'Steel',
+        prayer: 'Titanium',
+        missions: 'Heat',
         seeds: 'Seeds',
         auroraiData: 'Data',
         kuiperAsteroids: 'Asteroids',
@@ -257,7 +257,7 @@ export const PaymentWidgetMixin = {
         graphene: 'Graphene',
         lunaArchivesScience: 'Science',
         microbes: 'Microbes',
-        plants: 'Plants',
+        outreach: 'Plants',
         corruption: 'Corruption',
       };
     },

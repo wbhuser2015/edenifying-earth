@@ -15,16 +15,16 @@ export class SponsoredMohole extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {heat: 2},
+        production: {missions: 2},
       },
 
       requirements: {party: PartyName.KELVINISTS},
       metadata: {
         cardNumber: 'T13',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.heat(2));
+          b.production((pb) => pb.missions(2));
         }),
-        description: 'Requires that Kelvinists are ruling or that you have 2 delegates there. Increase your heat production 2 steps.',
+        description: 'Requires that Kelvinists are ruling or that you have 2 delegates there. Increase your missions production 2 steps.',
       },
     });
   }

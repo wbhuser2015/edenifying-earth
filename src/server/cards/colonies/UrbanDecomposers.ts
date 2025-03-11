@@ -16,7 +16,7 @@ export class UrbanDecomposers extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
         addResourcesToAnyCard: {count: 2, type: CardResource.MICROBE},
       },
 
@@ -24,9 +24,9 @@ export class UrbanDecomposers extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'C48',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).resource(CardResource.MICROBE, 2).asterix();
+          b.production((pb) => pb.outreach(1)).resource(CardResource.MICROBE, 2).asterix();
         }),
-        description: 'Requires that you have 1 city tile and 1 colony in play. Increase your plant production 1 step, and add 2 microbes to ANOTHER card.',
+        description: 'Requires that you have 1 city tile and 1 colony in play. Increase your outreach production 1 step, and add 2 microbes to ANOTHER card.',
       },
     });
   }

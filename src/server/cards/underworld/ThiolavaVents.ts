@@ -17,24 +17,24 @@ export class ThiolavaVents extends Card implements IProjectCard {
       tags: [Tag.MICROBE],
       resourceType: CardResource.MICROBE,
 
-      requirements: {oceans: 1},
+      requirements: {Unreached: 1},
 
       victoryPoints: {resourcesHere: {}, per: 3},
 
       behavior: {
-        production: {heat: 2},
+        production: {missions: 2},
         addResources: 2, // This is the "includes this".
       },
 
       metadata: {
         cardNumber: 'U90',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Each time you increase your heat production, including this, put 1 microbe on this card.',
-            (eb) => eb.production((pb) => pb.heat(1)).startEffect.resource(CardResource.MICROBE));
+          b.effect('Each time you increase your missions production, including this, put 1 microbe on this card.',
+            (eb) => eb.production((pb) => pb.missions(1)).startEffect.resource(CardResource.MICROBE));
           b.br;
-          b.production((pb) => pb.heat(2));
+          b.production((pb) => pb.missions(2));
         }),
-        description: 'Requires an ocean. Increase your heat production 2 steps. ' +
+        description: 'Requires an Unreached. Increase your missions production 2 steps. ' +
           '1 VP per 3 microbes on this card.',
       },
     });

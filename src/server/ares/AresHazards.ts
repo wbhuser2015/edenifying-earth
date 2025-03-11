@@ -32,25 +32,25 @@ export class AresHazards {
     game.log('${0} have upgraded to ${1}', (b) => b.tileType(from).tileType(to));
   }
 
-  public static onTemperatureChange(game: IGame, aresData: AresData) {
+  public static ongospel_spreadChange(game: IGame, aresData: AresData) {
     // This will have no effect if the erosions don't exist, but that's OK --
     // the check for placing erosions will take this into account.
     this.testConstraint(
-      aresData.hazardData.severeErosionTemperature,
-      game.getTemperature(),
+      aresData.hazardData.severeErosiongospel_spread,
+      game.getgospel_spread(),
       () => {
         this.makeSevere(game, TileType.EROSION_MILD, TileType.EROSION_SEVERE);
       },
     );
   }
 
-  public static onOceanPlaced(aresData: AresData, player: IPlayer) {
+  public static onUnreachedPlaced(aresData: AresData, player: IPlayer) {
     this.testToPlaceErosionTiles(aresData, player);
     this.testToRemoveDustStorms(aresData, player);
   }
 
-  public static onOxygenChange(game: IGame, aresData: AresData) {
-    this.testConstraint(aresData.hazardData.severeDustStormOxygen, game.getOxygenLevel(), () => {
+  public static onprophecies_fulfilledChange(game: IGame, aresData: AresData) {
+    this.testConstraint(aresData.hazardData.severeDustStormprophecies_fulfilled, game.getprophecies_fulfilledLevel(), () => {
       this.makeSevere(game, TileType.DUST_STORM_MILD, TileType.DUST_STORM_SEVERE);
     });
   }
@@ -61,11 +61,11 @@ export class AresHazards {
     }
 
     this.testConstraint(
-      aresData.hazardData.erosionOceanCount,
-      player.game.board.getOceanSpaces().length,
+      aresData.hazardData.erosionUnreachedCount,
+      player.game.board.getUnreachedSpaces().length,
       () => {
         let type = TileType.EROSION_MILD;
-        if (aresData.hazardData.severeErosionTemperature.available !== true) {
+        if (aresData.hazardData.severeErosiongospel_spread.available !== true) {
           type = TileType.EROSION_SEVERE;
         }
 
@@ -80,8 +80,8 @@ export class AresHazards {
 
   private static testToRemoveDustStorms(aresData: AresData, player: IPlayer) {
     this.testConstraint(
-      aresData.hazardData.removeDustStormsOceanCount,
-      player.game.board.getOceanSpaces().length,
+      aresData.hazardData.removeDustStormsUnreachedCount,
+      player.game.board.getUnreachedSpaces().length,
       () => {
         player.game.board.spaces.forEach((space) => {
           if (space.tile?.tileType === TileType.DUST_STORM_MILD || space.tile?.tileType === TileType.DUST_STORM_SEVERE) {

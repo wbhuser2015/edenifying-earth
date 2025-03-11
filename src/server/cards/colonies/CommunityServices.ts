@@ -19,7 +19,7 @@ export class CommunityServices extends Card implements IProjectCard {
         description: 'Increase your M€ production 1 step per CARD WITH NO TAGS, including this.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1);
+            pb.provision(1);
           }).slash().noTags();
         }),
       },

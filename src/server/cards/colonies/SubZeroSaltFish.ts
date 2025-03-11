@@ -18,7 +18,7 @@ export class SubZeroSaltFish extends ActionCard implements IProjectCard {
 
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: {}, per: 2},
-      requirements: {temperature: -6},
+      requirements: {gospel_spread: -6},
 
       behavior: {
         decreaseAnyProduction: {type: Resource.PLANTS, count: 1},
@@ -34,11 +34,11 @@ export class SubZeroSaltFish extends ActionCard implements IProjectCard {
           b.action('Add 1 animal to this card.', (eb) => {
             eb.empty().startAction.resource(CardResource.ANIMAL);
           }).br;
-          b.production((pb) => pb.minus().plants(1, {all})).br;
+          b.production((pb) => pb.minus().outreach(1, {all})).br;
           b.vpText('1 VP per 2 animals on this card.');
         }),
         description: {
-          text: 'Requires -6 C. Decrease any plant production 1 step.',
+          text: 'Requires -6 C. Decrease any outreach production 1 step.',
           align: 'left',
         },
       },

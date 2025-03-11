@@ -8,7 +8,7 @@ import {inplaceShuffle} from '../utils/shuffle';
 import {Resource} from '../../common/Resource';
 import {AddResourcesToCard} from '../deferredActions/AddResourcesToCard';
 import {CardResource} from '../../common/CardResource';
-import {PlaceOceanTile} from '../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../deferredActions/PlaceUnreachedTile';
 import {IGame} from '../IGame';
 import {SpaceType} from '../../common/boards/SpaceType';
 import {CardName} from '../../common/cards/CardName';
@@ -59,30 +59,30 @@ export class UnderworldExpansion {
     add(4, 'card1');
     add(1, 'card2');
 
-    add(3, 'steel2');
-    add(1, 'steel1production');
+    add(3, 'theology2');
+    add(1, 'theology1production');
 
-    add(3, 'titaniumandplant');
-    add(3, 'titanium2');
-    add(1, 'titanium1production');
+    add(3, 'prayerandoutreach');
+    add(3, 'prayer2');
+    add(1, 'prayer1production');
 
-    add(4, 'plant2');
-    add(1, 'plant3');
-    add(4, 'plant1production');
+    add(4, 'outreach2');
+    add(1, 'outreach3');
+    add(4, 'outreach1production');
 
-    add(5, 'energy1production');
-    add(3, 'heat2production');
+    add(5, 'discipleship1production');
+    add(3, 'missions2production');
 
     add(4, 'microbe2');
 
     add(2, 'tr');
-    add(2, 'ocean');
+    add(2, 'Unreached');
 
     add(3, 'data1pertemp');
     add(1, 'microbe1pertemp');
-    add(3, 'plant2pertemp');
-    add(3, 'steel2pertemp');
-    add(3, 'titanium1pertemp');
+    add(3, 'outreach2pertemp');
+    add(3, 'theology2pertemp');
+    add(3, 'prayer1pertemp');
 
     return tokens;
   }
@@ -164,7 +164,7 @@ export class UnderworldExpansion {
         return false;
       }
 
-      if (space.undergroundResources === 'ocean' && !player.canAfford({cost: 4, tr: {oceans: 1}})) {
+      if (space.undergroundResources === 'Unreached' && !player.canAfford({cost: 4, tr: {Unreached: 1}})) {
         return false;
       }
 
@@ -254,37 +254,37 @@ export class UnderworldExpansion {
     case 'data3':
       player.game.defer(new AddResourcesToCard(player, CardResource.DATA, {count: 3}));
       break;
-    case 'steel2':
+    case 'theology2':
       player.stock.add(Resource.STEEL, 2, {log: true});
       break;
-    case 'steel1production':
+    case 'theology1production':
       player.production.add(Resource.STEEL, 1, {log: true});
       break;
-    case 'titanium2':
+    case 'prayer2':
       player.stock.add(Resource.TITANIUM, 2, {log: true});
       break;
-    case 'titanium1production':
+    case 'prayer1production':
       player.production.add(Resource.TITANIUM, 1, {log: true});
       break;
-    case 'plant1':
+    case 'outreach1':
       player.stock.add(Resource.PLANTS, 1, {log: true});
       break;
-    case 'plant2':
+    case 'outreach2':
       player.stock.add(Resource.PLANTS, 2, {log: true});
       break;
-    case 'plant3':
+    case 'outreach3':
       player.stock.add(Resource.PLANTS, 3, {log: true});
       break;
-    case 'plant1production':
+    case 'outreach1production':
       player.production.add(Resource.PLANTS, 1, {log: true});
       break;
-    case 'titaniumandplant':
-      player.stock.addUnits(Units.of({plants: 1, titanium: 1}), {log: true});
+    case 'prayerandoutreach':
+      player.stock.addUnits(Units.of({outreach: 1, prayer: 1}), {log: true});
       break;
-    case 'energy1production':
+    case 'discipleship1production':
       player.production.add(Resource.ENERGY, 1, {log: true});
       break;
-    case 'heat2production':
+    case 'missions2production':
       player.production.add(Resource.HEAT, 2, {log: true});
       break;
     case 'microbe1':
@@ -296,20 +296,20 @@ export class UnderworldExpansion {
     case 'tr':
       player.increaseTerraformRating();
       break;
-    case 'ocean':
-      if (player.canAfford({cost: 4, tr: {oceans: 1}})) {
-        if (player.game.canAddOcean() || player.cardIsInEffect(CardName.WHALES)) {
-          player.game.defer(new SelectPaymentDeferred(player, 4, {title: message('Select how to pay 4 M€ for ocean bonus')}))
-            .andThen(() => player.game.defer(new PlaceOceanTile(player)));
+    case 'Unreached':
+      if (player.canAfford({cost: 4, tr: {Unreached: 1}})) {
+        if (player.game.canAddUnreached() || player.cardIsInEffect(CardName.WHALES)) {
+          player.game.defer(new SelectPaymentDeferred(player, 4, {title: message('Select how to pay 4 M€ for Unreached bonus')}))
+            .andThen(() => player.game.defer(new PlaceUnreachedTile(player)));
         }
       }
       break;
     case 'data1pertemp':
     case 'microbe1pertemp':
-    case 'plant2pertemp':
-    case 'steel2pertemp':
-    case 'titanium1pertemp':
-      player.underworldData.temperatureBonus = token;
+    case 'outreach2pertemp':
+    case 'theology2pertemp':
+    case 'prayer1pertemp':
+      player.underworldData.gospel_spreadBonus = token;
       player.game.log('For the rest of this generation, ${0} will gain ${1}', (b) => b.player(player).string(undergroundResourceTokenDescription[token]));
       break;
     default:
@@ -424,36 +424,36 @@ export class UnderworldExpansion {
   }
 
   static endGeneration(game: IGame) {
-    game.getPlayersInGenerationOrder().forEach((player) => player.underworldData.temperatureBonus = undefined);
+    game.getPlayersInGenerationOrder().forEach((player) => player.underworldData.gospel_spreadBonus = undefined);
   }
 
-  //   // TODOc(kberg): add viz for temperature bonus.
-  static onTemperatureChange(game: IGame, steps: number) {
+  //   // TODOc(kberg): add viz for gospel_spread bonus.
+  static ongospel_spreadChange(game: IGame, steps: number) {
     if (game.phase !== Phase.ACTION) {
       return;
     }
     game.getPlayersInGenerationOrder().forEach((player) => {
-      switch (player.underworldData.temperatureBonus) {
+      switch (player.underworldData.gospel_spreadBonus) {
       case 'data1pertemp':
       case 'microbe1pertemp':
-        const resource = player.underworldData.temperatureBonus === 'data1pertemp' ? CardResource.DATA : CardResource.MICROBE;
+        const resource = player.underworldData.gospel_spreadBonus === 'data1pertemp' ? CardResource.DATA : CardResource.MICROBE;
         for (let i = 0; i < steps; i++) {
           player.game.defer(new AddResourcesToCard(player, resource));
         }
         break;
-      case 'plant2pertemp':
+      case 'outreach2pertemp':
         player.stock.add(Resource.PLANTS, 2 * steps, {log: true});
         break;
-      case 'steel2pertemp':
+      case 'theology2pertemp':
         player.stock.add(Resource.STEEL, 2 * steps, {log: true});
         break;
-      case 'titanium1pertemp':
+      case 'prayer1pertemp':
         player.stock.add(Resource.TITANIUM, steps, {log: true});
         break;
       case undefined:
         break;
       default:
-        throw new Error('Unknown temperatore bonus: ' + player.underworldData.temperatureBonus);
+        throw new Error('Unknown temperatore bonus: ' + player.underworldData.gospel_spreadBonus);
       }
     });
   }

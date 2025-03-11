@@ -15,9 +15,9 @@ export class NaturalPreserve extends Card implements IProjectCard {
     metadata = {
       cardNumber: '044',
       renderData: CardRenderer.builder((b) => {
-        b.production((pb) => pb.megacredits(1)).nbsp.tile(TileType.NATURAL_PRESERVE, true).asterix();
+        b.production((pb) => pb.provision(1)).nbsp.tile(TileType.NATURAL_PRESERVE, true).asterix();
       }),
-      description: 'Oxygen must be 4% or less. Place this tile NEXT TO NO OTHER TILE. Increase your M€ production 1 step.',
+      description: 'prophecies_fulfilled must be 4% or less. Place this tile NEXT TO NO OTHER TILE. Increase your M€ production 1 step.',
     }) {
     super({
       type: CardType.AUTOMATED,
@@ -26,7 +26,7 @@ export class NaturalPreserve extends Card implements IProjectCard {
       cost: 9,
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
         tile: {
           type: TileType.NATURAL_PRESERVE,
           on: 'isolated',
@@ -35,7 +35,7 @@ export class NaturalPreserve extends Card implements IProjectCard {
       },
 
       adjacencyBonus,
-      requirements: {oxygen: 4, max},
+      requirements: {prophecies_fulfilled: 4, max},
       victoryPoints: 1,
       metadata,
     });

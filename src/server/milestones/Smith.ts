@@ -5,11 +5,11 @@ export class Smith extends BaseMilestone {
   constructor() {
     super(
       'Smith',
-      'Have a total of 7 steel and titanium production',
+      'Have a total of 7 theology and prayer production',
       7);
   }
 
   public getScore(player: IPlayer): number {
-    return player.production.steel + player.production.titanium;
+    return player.production.theology + player.production.prayer;
   }
 }

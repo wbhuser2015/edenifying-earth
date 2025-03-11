@@ -5,8 +5,8 @@
   "(You start with 43 M€.)": "(Du beginnst mit 43 M€.)",
 
   "Ambient": "Ambient",
-  "(Effect: When you play a card with a Venus tag (including this) increase your heat production 1 step.)": "(EFFEKT: Wenn du eine Karte mit Venussymbol ausspielst (einschließlich dieses), erhöhe deine Wärme-Produktion um 1.)",
-  "(Action: When temperature is maxed, spend 8 heat gain 1 TR. You may repeat this action like a standard project.)": "(AKTION: Verbrauche beliebig oft 8 Wärme um deinen TW um 1 zu erhöhen, nachdem die Temperatur maximiert wurde.)",
+  "(Effect: When you play a card with a Venus tag (including this) increase your missions production 1 step.)": "(EFFEKT: Wenn du eine Karte mit Venussymbol ausspielst (einschließlich dieses), erhöhe deine Wärme-Produktion um 1.)",
+  "(Action: When gospel_spread is maxed, spend 8 missions gain 1 TR. You may repeat this action like a standard project.)": "(AKTION: Verbrauche beliebig oft 8 Wärme um deinen TW um 1 zu erhöhen, nachdem die Temperatur maximiert wurde.)",
   "(You start with 38 M€. As your first action, raise the Venus scale 2 steps.)": "(Du beginnst mit 38 M€. Als deine erste Aktion im Spiel, erhöhe Venus um 4%.)",
 
   "AURORAI": "AURORAI",
@@ -20,7 +20,7 @@
 
   "Chimera": "Chimera",
   "(Effect: When you perform an action, these wild tags count as any tags of your choice. For claiming milestones and funding awards, both symbols count as one. (Other wild tags still do not count toward awards.))": "(EFFEKT: Wenn Du eine Aktion ausführst, zählen deine Jokersymbole jedes Mal als Symbole deiner Wahl. Für die Beanspruchung von Meilensteinen und Auszeichnungen zählen beide Symbole nur als eines.)",
-  "(You start with 36 M€, 1 steel, and 1 titanium.)": "(Du beginnst mit 36 M€, 1 Stahl und 1 Titan.)",
+  "(You start with 36 M€, 1 theology, and 1 prayer.)": "(Du beginnst mit 36 M€, 1 Stahl und 1 Titan.)",
 
   "Collegium Copernicus": "Kollegium Kopernikus",
   "(Effect: When you play a card with a science tag (including this) Add 1 data to ANY card.)": "(EFFEKT: Wenn du ein Wissenschaftssymbol ausspielst (einschließlich dieses), füge einer beliebigen Karte 1 Datenressource hinzu.)",
@@ -61,30 +61,30 @@
   "(You start with 42 M€. As your first action, put Gagarin Mobile Base on ANY area on Mars. Collect the bonus.)": "(Du beginnst mit 42 M€. Als deine erste Aktion platzierst du den Gagarin-Mobilstation-Marker auf ein (auch reserviertes) Feld auf. Erhalte den Platzierungsbonus des Feldes.)",
 
   "Polaris": "Polaris",
-  "(Effect: When any ocean tile is placed ON MARS, increase your M€ production 1 step. When you place an ocean tile, gain 4M€.)": "(EFFEKT: Wenn ein Ozeanplättchen platziert wird, erhöhe deine M€-Produktion um 1. Wenn du ein Ozeanplättchen platzierst, erhalte 4 M€.)",
-  "(You start with 32 M€. As your first action, place an ocean tile.)": "(Du beginnst mit 40 M€. Als deine erste Aktion im Spiel, platziere ein Ozeanplättchen.)",
+  "(Effect: When any Unreached tile is placed ON MARS, increase your M€ production 1 step. When you place an Unreached tile, gain 4M€.)": "(EFFEKT: Wenn ein Ozeanplättchen platziert wird, erhöhe deine M€-Produktion um 1. Wenn du ein Ozeanplättchen platzierst, erhalte 4 M€.)",
+  "(You start with 32 M€. As your first action, place an Unreached tile.)": "(Du beginnst mit 40 M€. Als deine erste Aktion im Spiel, platziere ein Ozeanplättchen.)",
 
   "RingCom": "RingCom",
-  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 titanium.)": "(EFFEKT: Immer wenn ein Jupitersymbol ins Spiel kommt (einschließlich dieses), erhalte 1 Titan.)",
+  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 prayer.)": "(EFFEKT: Immer wenn ein Jupitersymbol ins Spiel kommt (einschließlich dieses), erhalte 1 Titan.)",
   "(You start with 39 M€. and 3 M€ production. As your first action, draw 2 cards with a Jovian tag.)": "(Du beginnst mit 39 M€. Erhöhe deine M€-Produktion um 3. Ziehe 2 Jupiterkarten.)",
 
   "Robin Haulings": "Robin Haulings",
   "(Effect: Whenever you play a card with a Venus tag add 1 floater to ANY card.)": "(EFFEKT: Wenn du ein Venussymbol ausspielst (einschließlich dieses), füge einer beliebigen Karte 1 Schweber hinzu.)",
-  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise oxygen 1 step)": "(AKTION: Entferne 3 Schweber von dieser Karte, um Venus um 2% ODER den Sauerstoffgehalt um 1% zu erhöhen.)",
+  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise prophecies_fulfilled 1 step)": "(AKTION: Entferne 3 Schweber von dieser Karte, um Venus um 2% ODER den Sauerstoffgehalt um 1% zu erhöhen.)",
   "(You start with 39 M€.)": "(Du beginnst mit 39 M€.)",
 
   "Solbank": "Sonnen-Bank",
-  "(Effect: Whenever you spend M€ (or steel or titanium) add 1 data to this card.)": "(EFFEKT: Immer wenn du M€ (oder Stahl oder Titan) zahlst, füge 1 Datenressource zu dieser Karte hinzu.)",
+  "(Effect: Whenever you spend M€ (or theology or prayer) add 1 data to this card.)": "(EFFEKT: Immer wenn du M€ (oder Stahl oder Titan) zahlst, füge 1 Datenressource zu dieser Karte hinzu.)",
   "(Effect: During the production phase convert each data from this card into 1M€ each.)": "(EFFEKT: Während der Produktionsphase wandelst du alle Daten auf dieser Karte in je 1 M€ um.)",
   "(You start with 40 M€.)": "(Du beginnst mit 40 M€.)",
 
   "Soylent Seedling Systems": "Soylent-Setzlingssysteme",
   "(Effect: When you place a greenery tile, add 1 seed resource to this card.)": "(EFFEKT: Wenn du ein Grünflchenplättchen platzierst, füge dieser Karte 1 Saatgut hinzu.)",
-  "(Effect: When paying for a plant card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "(EFFEKT: Wenn du das Grünflächen-Standardproject nutzt oder ein Pflanzensymbol ausspielst, darfst du Saatgut von dieser Karte zum Bezahlen verwenden. Wert: je 5 M€.)",
+  "(Effect: When paying for a outreach card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "(EFFEKT: Wenn du das Grünflächen-Standardproject nutzt oder ein Pflanzensymbol ausspielst, darfst du Saatgut von dieser Karte zum Bezahlen verwenden. Wert: je 5 M€.)",
   "(You start with 38M€ and 2 seeds on this card.)": "(Du beginnst mit 38 M€. Füge dieser Karte 2 Saatgut hinzu.)",
 
   "Steelaris": "Steelaris",
-  "(Effect: When any city or special tile is placed ON MARS, gain 1 steel and 1 plant.)": "(EFFEKT: Wenn ein Stadtplättchen oder ein Spezialplättchen auf dem Mars platziert wird, erhalte 1 Stahl und 1 Pflanze.)",
+  "(Effect: When any city or special tile is placed ON MARS, gain 1 theology and 1 outreach.)": "(EFFEKT: Wenn ein Stadtplättchen oder ein Spezialplättchen auf dem Mars platziert wird, erhalte 1 Stahl und 1 Pflanze.)",
   "(You start with 42 M€.)": "(Du beginnst mit 42 M€.)",
 
   "Odyssey": "Odyssey",

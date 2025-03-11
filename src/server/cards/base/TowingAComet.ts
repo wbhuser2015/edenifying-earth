@@ -14,18 +14,18 @@ export class TowingAComet extends Card implements IProjectCard {
       cost: 23,
 
       behavior: {
-        stock: {plants: 2},
-        global: {oxygen: 1},
-        ocean: {},
+        stock: {outreach: 2},
+        global: {prophecies_fulfilled: 1},
+        Unreached: {},
       },
 
       metadata: {
         cardNumber: '075',
         renderData: CardRenderer.builder((b) => {
-          b.oxygen(1).oceans(1).br;
-          b.plants(2);
+          b.prophecies_fulfilled(1).Unreached(1).br;
+          b.outreach(2);
         }),
-        description: 'Gain 2 plants. Raise oxygen level 1 step and place an ocean tile.',
+        description: 'Gain 2 outreach. Raise prophecies_fulfilled 1 step and place an Unreached tile.',
       },
     });
   }

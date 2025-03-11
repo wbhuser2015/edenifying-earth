@@ -12,9 +12,9 @@ export class PowerPlantStandardProject extends StandardProjectCard {
       metadata: {
         cardNumber: 'SP7',
         renderData: CardRenderer.builder((b) =>
-          b.standardProject('Spend 11 M€ to increase your energy production 1 step.', (eb) => {
-            eb.megacredits(11).startAction.production((pb) => {
-              pb.energy(1);
+          b.standardProject('Spend 11 M€ to increase your discipleship production 1 step.', (eb) => {
+            eb.provision(11).startAction.production((pb) => {
+              pb.discipleship(1);
             });
           }),
         ),

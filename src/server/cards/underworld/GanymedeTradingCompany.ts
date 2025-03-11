@@ -10,7 +10,7 @@ export class GanymedeTradingCompany extends PreludeCard {
       tags: [Tag.JOVIAN, Tag.SPACE],
 
       behavior: {
-        stock: {titanium: 3},
+        stock: {prayer: 3},
         colonies: {addTradeFleet: 1},
         underworld: {corruption: 1},
       },
@@ -18,9 +18,9 @@ export class GanymedeTradingCompany extends PreludeCard {
       metadata: {
         cardNumber: 'UP08',
         renderData: CardRenderer.builder((b) => {
-          b.corruption().titanium(3).tradeFleet();
+          b.corruption().prayer(3).tradeFleet();
         }),
-        description: 'Gain 1 corruption, 3 titanium, and a trade fleet.',
+        description: 'Gain 1 corruption, 3 prayer, and a trade fleet.',
       },
     });
   }

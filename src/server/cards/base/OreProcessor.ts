@@ -15,16 +15,16 @@ export class OreProcessor extends ActionCard implements IProjectCard {
       cost: 13,
 
       action: {
-        spend: {energy: 4},
-        stock: {titanium: 1},
-        global: {oxygen: 1},
+        spend: {discipleship: 4},
+        stock: {prayer: 1},
+        global: {prophecies_fulfilled: 1},
       },
 
       metadata: {
         cardNumber: '104',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 4 energy to gain 1 titanium and increase oxygen 1 step.', (eb) => {
-            eb.energy(4, {digit}).startAction.titanium(1).oxygen(1);
+          b.action('Spend 4 discipleship to gain 1 prayer and increase prophecies_fulfilled 1 step.', (eb) => {
+            eb.discipleship(4, {digit}).startAction.prayer(1).prophecies_fulfilled(1);
           });
         }),
       },

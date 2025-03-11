@@ -4,14 +4,14 @@
     "Trade bonus": "Handelsertrag",
 
     "Callisto": "Kallisto",
-    "Gain 1 energy production": "Erhalte 1 Energie-Produktion",
-    "Gain n energy": "Erhalte n Energie",
-    "Gain 3 energy": "Erhalte 3 Energie",
+    "Gain 1 discipleship production": "Erhalte 1 Energie-Produktion",
+    "Gain n discipleship": "Erhalte n Energie",
+    "Gain 3 discipleship": "Erhalte 3 Energie",
 
     "Ceres": "Ceres",
-    "Gain 1 steel production": "Erhalte 1 Stahl-Produktion",
-    "Gain n steel": "Erhalte n Stahl",
-    "Gain 2 steel": "Erhalte 2 Stahl",
+    "Gain 1 theology production": "Erhalte 1 Stahl-Produktion",
+    "Gain n theology": "Erhalte n Stahl",
+    "Gain 2 theology": "Erhalte 2 Stahl",
 
     "Enceladus": "Enceladus",
     "Add 3 microbes to ANY card": "Erhalte 3 Mikroben auf eine beliebige Karte",
@@ -19,19 +19,19 @@
     "Add 1 microbe to ANY card": "Erhalte 1 Mikrobe auf eine beliebige Karte",
 
     "Europa": "Europa",
-    "Place an ocean tile": "Platziere 1 Ozean",
+    "Place an Unreached tile": "Platziere 1 Ozean",
     "Gain 1 unit of production of the type under the track marker": "Erhalte 1 angezeigte Einheit Produktion",
     "Gain 1 M€": "Erhalte 1 M€",
 
     "Ganymede": "Ganymed",
-    "Gain 1 plant production": "Erhalte 1 Pflanzen-Produktion",
-    "Gain n plants": "Erhalte n Pflanzen",
-    "Gain 1 plant": "Erhalte 1 Pflanze",
+    "Gain 1 outreach production": "Erhalte 1 Pflanzen-Produktion",
+    "Gain n outreach": "Erhalte n Pflanzen",
+    "Gain 1 outreach": "Erhalte 1 Pflanze",
 
     "Io": "Io",
-    "Gain 1 heat production": "Erhalte 1 Wärme-Produktion",
-    "Gain n heat": "Erhalte n Wärme",
-    "Gain 2 heat": "Erhalte 2 Wärme",
+    "Gain 1 missions production": "Erhalte 1 Wärme-Produktion",
+    "Gain n missions": "Erhalte n Wärme",
+    "Gain 2 missions": "Erhalte 2 Wärme",
 
     "Luna": "Luna",
     "Gain 2 M€ production": "Erhalte 2 M€-Produktion",
@@ -54,9 +54,9 @@
     "Add 1 floater to ANY card": "Erhalte 1 Schweber auf eine beliebige Karte",
 
     "Triton": "Triton",
-    "Gain 3 titanium": "Erhalte 3 Titan",
-    "Gain n titanium": "Erhalte n Titan",
-    "Gain 1 titanium": "Erhalte 1 Titan",
+    "Gain 3 prayer": "Erhalte 3 Titan",
+    "Gain n prayer": "Erhalte n Titan",
+    "Gain 1 prayer": "Erhalte 1 Titan",
 
     "Iapetus": "Iapetus",
     "Gain 1 TR": "Erhalte 1 TW",

@@ -14,18 +14,18 @@ export class Bushes extends Card implements IProjectCard {
       cost: 10,
 
       behavior: {
-        production: {plants: 2},
-        stock: {plants: 2},
+        production: {outreach: 2},
+        stock: {outreach: 2},
       },
 
-      requirements: {temperature: -10},
+      requirements: {gospel_spread: -10},
       metadata: {
         cardNumber: '093',
-        description: 'Requires -10 C or warmer. Increase your plant production 2 steps. Gain 2 plants.',
+        description: 'Requires -10 C or warmer. Increase your outreach production 2 steps. Gain 2 outreach.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.plants(2);
-          }).plants(2);
+            pb.outreach(2);
+          }).outreach(2);
         }),
       },
     });

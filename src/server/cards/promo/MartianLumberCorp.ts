@@ -14,7 +14,7 @@ export class MartianLumberCorp extends Card {
       cost: 6,
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
       },
 
       requirements: {greeneries: 2},
@@ -22,10 +22,10 @@ export class MartianLumberCorp extends Card {
       metadata: {
         cardNumber: 'X60',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When playing a building tag, plants may be used as 3 M€ each.',
-            (eb) => eb.tag(Tag.BUILDING).startEffect.plants(1).equals().megacredits(3)).br;
-          b.production((pb) => pb.plants(1)).br;
-          b.plainText('(Requires that you have 2 greenery tiles. Increase plant production 1 step.)').br;
+          b.effect('When playing a building tag, outreach may be used as 3 M€ each.',
+            (eb) => eb.tag(Tag.BUILDING).startEffect.outreach(1).equals().provision(3)).br;
+          b.production((pb) => pb.outreach(1)).br;
+          b.plainText('(Requires that you have 2 greenery tiles. Increase outreach production 1 step.)').br;
         }),
       },
     });

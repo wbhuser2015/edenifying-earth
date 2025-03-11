@@ -1,14 +1,14 @@
 export enum RequirementType {
     OXYGEN = 'O2',
     TEMPERATURE = 'C',
-    OCEANS = 'Ocean',
+    OCEANS = 'Unreached',
     TR = 'TR',
     RESOURCE_TYPES = 'Resource type',
     GREENERIES = 'Greenery',
     CITIES = 'City',
     TAG = 'tag',
     PRODUCTION = 'production',
-    REMOVED_PLANTS = 'Removed plants',
+    REMOVED_PLANTS = 'Removed outreach',
 
     // Venus/Colonies
     VENUS = 'Venus',

@@ -23,9 +23,9 @@ export class ViralEnhancers extends Card implements IProjectCard {
         cardNumber: '074',
         renderData: CardRenderer.builder((b) => {
           b.tag(Tag.PLANT).slash().tag(Tag.MICROBE).slash().tag(Tag.ANIMAL).br;
-          b.effect('When you play a plant, microbe, or an animal tag, including this, gain 1 plant or add 1 resource to THAT CARD.', (eb) => {
+          b.effect('When you play a outreach, microbe, or an animal tag, including this, gain 1 outreach or add 1 resource to THAT CARD.', (eb) => {
             eb.empty().startEffect;
-            eb.plants(1).slash().resource(CardResource.MICROBE).asterix().slash().resource(CardResource.ANIMAL).asterix();
+            eb.outreach(1).slash().resource(CardResource.MICROBE).asterix().slash().resource(CardResource.ANIMAL).asterix();
           });
         }),
       },
@@ -38,7 +38,7 @@ export class ViralEnhancers extends Card implements IProjectCard {
     }
 
     if (card.resourceType !== CardResource.ANIMAL && card.resourceType !== CardResource.MICROBE) {
-      player.plants += resourceCount;
+      player.outreach += resourceCount;
       return undefined;
     }
 
@@ -49,8 +49,8 @@ export class ViralEnhancers extends Card implements IProjectCard {
             player.addResourceTo(card);
             return undefined;
           }),
-          new SelectOption('Gain plant').andThen(() => {
-            player.plants++;
+          new SelectOption('Gain outreach').andThen(() => {
+            player.outreach++;
             return undefined;
           }),
         ),

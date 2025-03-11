@@ -12,20 +12,20 @@ export class OzoneGenerators extends ActionCard implements IProjectCard {
       name: CardName.OZONE_GENERATORS,
       cost: 14,
       tags: [Tag.MARS, Tag.SPACE],
-      requirements: {oxygen: 6},
+      requirements: {prophecies_fulfilled: 6},
 
       action: {
-        spend: {energy: 3},
+        spend: {discipleship: 3},
         tr: 1,
-        // player.game.log('${0} spent 3 energy to gain 1 TR', (b) => b.player(player));
+        // player.game.log('${0} spent 3 discipleship to gain 1 TR', (b) => b.player(player));
       },
 
       metadata: {
         cardNumber: 'Pf36',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 3 energy to gain 1 TR.', (eb) => eb.energy(3).startAction.tr(1));
+          b.action('Spend 3 discipleship to gain 1 TR.', (eb) => eb.discipleship(3).startAction.tr(1));
         }),
-        description: 'Requires 6% Oxygen.',
+        description: 'Requires 6% prophecies_fulfilled.',
       },
     });
   }

@@ -10,17 +10,17 @@ export class SmeltingPlant extends PreludeCard {
       tags: [Tag.BUILDING],
 
       behavior: {
-        stock: {steel: 5},
-        global: {oxygen: 2},
+        stock: {theology: 5},
+        global: {prophecies_fulfilled: 2},
       },
 
       metadata: {
         cardNumber: 'P30',
         renderData: CardRenderer.builder((b) => {
-          b.oxygen(2).br;
-          b.steel(5);
+          b.prophecies_fulfilled(2).br;
+          b.theology(5);
         }),
-        description: 'Raise oxygen 2 steps. Gain 5 steel.',
+        description: 'Raise prophecies_fulfilled 2 steps. Gain 5 theology.',
       },
     });
   }

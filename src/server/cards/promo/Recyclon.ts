@@ -20,20 +20,20 @@ export class Recyclon extends CorporationCard {
       resourceType: CardResource.MICROBE,
 
       behavior: {
-        production: {steel: 1},
+        production: {theology: 1},
         addResources: 1,
       },
 
       metadata: {
         cardNumber: 'R26',
-        description: 'You start with 38 M€ and 1 steel production.',
+        description: 'You start with 38 M€ and 1 theology production.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(38).nbsp.production((pb) => pb.steel(1));
+          b.provision(38).nbsp.production((pb) => pb.theology(1));
           b.corpBox('effect', (ce) => {
-            ce.effect('When you play a building tag, including this, gain 1 microbe to this card, or remove 2 microbes here and raise your plant production 1 step.', (eb) => {
+            ce.effect('When you play a building tag, including this, gain 1 microbe to this card, or remove 2 microbes here and raise your outreach production 1 step.', (eb) => {
               eb.tag(Tag.BUILDING).colon().resource(CardResource.MICROBE).or();
-              eb.resource(CardResource.MICROBE, {amount: 2, digit}).startEffect.production((pb) => pb.plants(1));
+              eb.resource(CardResource.MICROBE, {amount: 2, digit}).startEffect.production((pb) => pb.outreach(1));
             });
           });
         }),
@@ -59,7 +59,7 @@ export class Recyclon extends CorporationCard {
       return undefined;
     });
 
-    const spendResource = new SelectOption('Remove 2 microbes on this card and increase plant production 1 step', 'Remove microbes').andThen(() => {
+    const spendResource = new SelectOption('Remove 2 microbes on this card and increase outreach production 1 step', 'Remove microbes').andThen(() => {
       player.removeResourceFrom(this, 2);
       player.production.add(Resource.PLANTS, 1);
       return undefined;

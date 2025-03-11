@@ -1,7 +1,7 @@
 export enum GlobalParameter {
-  OCEANS = 'oceans',
-  OXYGEN = 'oxygen',
-  TEMPERATURE = 'temperature',
+  OCEANS = 'Unreached',
+  OXYGEN = 'Prophecies Fulfilled',
+  TEMPERATURE = 'Gospel Spread',
   VENUS = 'venus',
   MOON_HABITAT_RATE = 'moon-habitat',
   MOON_MINING_RATE = 'moon-mining',

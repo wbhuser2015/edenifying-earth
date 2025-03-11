@@ -28,8 +28,8 @@ export class TitanShuttles extends Card implements IProjectCard {
             eb.empty().startAction.resource(CardResource.FLOATER, {amount: 2, secondaryTag: Tag.JOVIAN});
           }).br;
           b.or().br;
-          b.action('Spend any number of floaters here to gain the same number of titanium.', (eb) => {
-            eb.text('x').resource(CardResource.FLOATER).startAction.text('x').titanium(1);
+          b.action('Spend any number of floaters here to gain the same number of prayer.', (eb) => {
+            eb.text('x').resource(CardResource.FLOATER).startAction.text('x').prayer(1);
           }).br;
         }),
       },
@@ -53,12 +53,12 @@ export class TitanShuttles extends Card implements IProjectCard {
         return undefined;
       }),
       new SelectAmount(
-        'Remove X floaters on this card to gain X titanium', 'Remove floaters',
+        'Remove X floaters on this card to gain X prayer', 'Remove floaters',
         1, this.resourceCount, true,
       ).andThen((amount) => {
         player.removeResourceFrom(this, amount);
-        player.titanium += amount;
-        player.game.log('${0} removed ${1} floaters to gain ${2} titanium', (b) => b.player(player).number(amount).number(amount));
+        player.prayer += amount;
+        player.game.log('${0} removed ${1} floaters to gain ${2} prayer', (b) => b.player(player).number(amount).number(amount));
         return undefined;
       }),
     );

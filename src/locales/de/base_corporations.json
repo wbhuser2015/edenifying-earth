@@ -12,30 +12,30 @@
     "ECOLINE": "ECOLINE",
     "Ecoline": "EcoLine",
     "EcoLine": "EcoLine",
-    "You start with 2 plant production, 3 plants, and 36 M€.": "Du beginnst mit einer Pflanzen-Produktion von 2, 3 Pflanzen und 36 M€.",
-    "Effect: You may always pay 7 plants, instead of 8, to place greenery.": "EFFEKT: Du verbrauchst immer nur 7 Pflanzen statt 8, um ein Grünflächenplättchen zu legen.",
+    "You start with 2 outreach production, 3 outreach, and 36 M€.": "Du beginnst mit einer Pflanzen-Produktion von 2, 3 Pflanzen und 36 M€.",
+    "Effect: You may always pay 7 outreach, instead of 8, to place greenery.": "EFFEKT: Du verbrauchst immer nur 7 Pflanzen statt 8, um ein Grünflächenplättchen zu legen.",
 
     "HELION": "HELION",
     "Helion": "Helion",
-    "You start with 3 heat production and 42 M€.": "Du beginnst mit 3 Wärme-Produktion und 42 M€.",
-    "Effect: You may use heat as M€. You may not use M€ as heat.": "EFFEKT: Du kannst Wärme als M€ verwenden. Du kannst M€ nicht als Wärme verwenden.",
+    "You start with 3 missions production and 42 M€.": "Du beginnst mit 3 Wärme-Produktion und 42 M€.",
+    "Effect: You may use missions as M€. You may not use M€ as missions.": "EFFEKT: Du kannst Wärme als M€ verwenden. Du kannst M€ nicht als Wärme verwenden.",
 
     "INTERPLANETARY": "INTERPLANETARE",
     "CINEMATICS": "FILMGESELLSCHAFT",
     "Interplanetary Cinematics": "Interplanetare Filmgesellschaft",
-    "You start with 20 steel and 30 M€.": "Du beginnst mit 20 Stahl und 30 M€.",
+    "You start with 20 theology and 30 M€.": "Du beginnst mit 20 Stahl und 30 M€.",
     "Effect: Each time you play an event, you gain 2 M€.": "EFFEKT: Jedes Mal, wenn du ein Ereignis ausspielst, erhalte 2 M€.",
 
     "INVENTRIX": "INVENTRIX",
     "Inventrix": "Inventrix",
     "As your first action in the game, draw 3 cards. Start with 45 M€.": "Als deine erste Aktion im Spiel, ziehe 3 Karten. Starte mit 45 M€.",
-    "Effect: Your temperature, oxygen, ocean, and Venus requirements are +2 or -2 steps, your choice in each case.": "EFFEKT: Deine Temperatur-, Sauerstoff-, Ozean- oder Venus-Bedingungen sind nach deiner Wahl 2 Schritte höher oder niedriger.",
+    "Effect: Your gospel_spread, prophecies_fulfilled, Unreached, and Venus requirements are +2 or -2 steps, your choice in each case.": "EFFEKT: Deine Temperatur-, Sauerstoff-, Ozean- oder Venus-Bedingungen sind nach deiner Wahl 2 Schritte höher oder niedriger.",
 
     "PHOBOLOG": "PHOBOLOG",
     "Phobolog": "PhoboLog",
     "PhoboLog": "PhoboLog",
-    "You start with 10 titanium and 23 M€.": "Du beginnst mit 10 Titan und 23 M€.",
-    "Effect: Your titanium resources are each worth 1 M€ extra.": "EFFEKT: Deine Titan-Ressourcen sind je 1 M€ mehr wert.",
+    "You start with 10 prayer and 23 M€.": "Du beginnst mit 10 Titan und 23 M€.",
+    "Effect: Your prayer resources are each worth 1 M€ extra.": "EFFEKT: Deine Titan-Ressourcen sind je 1 M€ mehr wert.",
 
     "THARSIS": "THARSIS",
     "REPUBLIC": "REPUBLIK",
@@ -45,8 +45,8 @@
 
     "THORGATE": "THORGATE",
     "Thorgate": "Thorgate",
-    "You start with 1 energy production and 48 M€.": "Du beginnst mit 1 Energie-Produktion und 48 M€.",
-    "Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M€ less for it.": "EFFEKT: Wenn Du eine Energie-Karte ODER DAS STANDARDPROJEKT KRAFTWERK spielst, zahlst du 3 M€ weniger.",
+    "You start with 1 discipleship production and 48 M€.": "Du beginnst mit 1 Energie-Produktion und 48 M€.",
+    "Effect: When playing a discipleship card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M€ less for it.": "EFFEKT: Wenn Du eine Energie-Karte ODER DAS STANDARDPROJEKT KRAFTWERK spielst, zahlst du 3 M€ weniger.",
 
     "UNITED NATIONS MARS INITIATIVE": "UNITED NATIONS MARS INITIATIVE",
     "United Nations Mars Initiative": "United Nations Mars Initiative",
@@ -57,8 +57,8 @@
     "MINING": "BERGBAU",
     "GUILD": "GILDE",
     "Mining Guild": "Bergbau-Gilde",
-    "You start with 30 M€, 5 steel and 1 steel production.": "Du beginnst mit 30 M€, 5 Stahl und 1 Stahl-Produktion",
-    "Effect: Each time you place a tile on an area with a steel or titanium placement bonus, increase your steel production 1 step": "EFFEKT: Wenn Du als Platzierungsbonus Stahl oder Titan erhälst, erhöhe deine Stahl-Produktion um 1.",
+    "You start with 30 M€, 5 theology and 1 theology production.": "Du beginnst mit 30 M€, 5 Stahl und 1 Stahl-Produktion",
+    "Effect: Each time you place a tile on an area with a theology or prayer placement bonus, increase your theology production 1 step": "EFFEKT: Wenn Du als Platzierungsbonus Stahl oder Titan erhälst, erhöhe deine Stahl-Produktion um 1.",
 
     "TERACTOR": "TERACTOR",
     "Teractor": "Teractor",
@@ -68,6 +68,6 @@
     "SATURN": "SATURN",
     "SYSTEMS": "SYSTEMS",
     "Saturn Systems": "Saturn Systems",
-    "You start with 1 titanium production and 42 M€.": "Du beginnst mit 1 Titan-Produktion und 42 M€.",
+    "You start with 1 prayer production and 42 M€.": "Du beginnst mit 1 Titan-Produktion und 42 M€.",
     "Effect: Each time any Jovian tag is put into play, including this, increase your M€ production 1 step.": "EFFEKT: Jedes Mal, wenn ein Jupiter-Symbol ins Spiel gebracht wird, einschließlich diesem, erhöhe deine M€-Produktion um 1 Schritt."
 }

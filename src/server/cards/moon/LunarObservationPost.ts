@@ -15,21 +15,21 @@ export class LunarObservationPost extends ActionCard {
 
       resourceType: CardResource.DATA,
       victoryPoints: {resourcesHere: {}, per: 3},
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       action: {
         addResourcesToAnyCard: {type: CardResource.DATA, count: 1},
       },
 
       metadata: {
-        description: 'Spend 1 titanium. 1 VP for every 3 data resources here.',
+        description: 'Spend 1 prayer. 1 VP for every 3 data resources here.',
         cardNumber: 'M22',
         renderData: CardRenderer.builder((b) => {
           b.action('Add 1 data resource to ANY card', (ab) => {
             ab.empty().startAction.resource(CardResource.DATA).asterix();
           });
           b.br;
-          b.minus().titanium(1);
+          b.minus().prayer(1);
         }),
       },
     });

@@ -6,7 +6,7 @@ export class VElectrician extends BaseMilestone {
   constructor() {
     super(
       'V. Electrician',
-      'Have 4 power tags in play',
+      'Have 4 discipleship tags in play',
       4);
   }
 

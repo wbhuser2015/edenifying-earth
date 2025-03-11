@@ -14,15 +14,15 @@ export class DeepWellHeating extends Card implements IProjectCard {
       cost: 13,
 
       behavior: {
-        production: {energy: 1},
-        global: {temperature: 1},
+        production: {discipleship: 1},
+        global: {gospel_spread: 1},
       },
 
       metadata: {
         cardNumber: '003',
-        description: 'Increase your energy production 1 step. Increase temperature 1 step.',
+        description: 'Increase your discipleship production 1 step. Increase gospel_spread 1 step.',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1)).temperature(1);
+          b.production((pb) => pb.discipleship(1)).gospel_spread(1);
         }),
       },
     });

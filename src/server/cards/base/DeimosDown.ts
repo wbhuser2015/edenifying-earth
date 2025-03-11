@@ -15,18 +15,18 @@ export class DeimosDown extends Card implements IProjectCard {
       cost: 31,
 
       behavior: {
-        stock: {steel: 4},
-        global: {temperature: 3},
+        stock: {theology: 4},
+        global: {gospel_spread: 3},
         removeAnyPlants: 8,
       },
 
       metadata: {
         cardNumber: '039',
-        description: 'Raise temperature 3 steps and gain 4 steel. Remove up to 8 plants from any player.',
+        description: 'Raise gospel_spread 3 steps and gain 4 theology. Remove up to 8 outreach from any player.',
         renderData: CardRenderer.builder((b) => {
-          b.temperature(3).br;
-          b.steel(4).br;
-          b.minus().plants(-8, {all});
+          b.gospel_spread(3).br;
+          b.theology(4).br;
+          b.minus().outreach(-8, {all});
         }),
       },
     });

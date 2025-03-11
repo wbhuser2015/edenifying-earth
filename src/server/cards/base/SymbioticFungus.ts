@@ -19,7 +19,7 @@ export class SymbioticFungus extends ActionCard implements IProjectCard {
         // return new SelectCard('Select card to add microbe', 'Add microbe', availableCards, ([card]) => {
       },
 
-      requirements: {temperature: -14},
+      requirements: {gospel_spread: -14},
       metadata: {
         cardNumber: '133',
         renderData: CardRenderer.builder((b) => {

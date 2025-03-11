@@ -21,10 +21,9 @@ import {MiningRightsAres} from './MiningRightsAres';
 import {MoholeAreaAres} from './MoholeAreaAres';
 import {NaturalPreserveAres} from './NaturalPreserveAres';
 import {NuclearZoneAres} from './NuclearZoneAres';
-import {OceanCity} from './OceanCity';
-import {OceanFarm} from './OceanFarm';
-import {OceanSanctuary} from './OceanSanctuary';
-import {RestrictedAreaAres} from './RestrictedAreaAres';
+import {UnreachedCity} from './UnreachedCity';
+import {UnreachedFarm} from './UnreachedFarm';
+import {UnreachedSanctuary} from './UnreachedSanctuary';
 import {SolarFarm} from './SolarFarm';
 
 export const ARES_CARD_MANIFEST = new ModuleManifest({
@@ -51,10 +50,9 @@ export const ARES_CARD_MANIFEST = new ModuleManifest({
     [CardName.MOHOLE_AREA_ARES]: {Factory: MoholeAreaAres},
     [CardName.NATURAL_PRESERVE_ARES]: {Factory: NaturalPreserveAres},
     [CardName.NUCLEAR_ZONE_ARES]: {Factory: NuclearZoneAres},
-    [CardName.OCEAN_CITY]: {Factory: OceanCity},
-    [CardName.OCEAN_FARM]: {Factory: OceanFarm},
-    [CardName.OCEAN_SANCTUARY]: {Factory: OceanSanctuary},
-    [CardName.RESTRICTED_AREA_ARES]: {Factory: RestrictedAreaAres},
+    [CardName.OCEAN_CITY]: {Factory: UnreachedCity},
+    [CardName.OCEAN_FARM]: {Factory: UnreachedFarm},
+    [CardName.OCEAN_SANCTUARY]: {Factory: UnreachedSanctuary},
     [CardName.SOLAR_FARM]: {Factory: SolarFarm},
   },
   cardsToRemove: [
@@ -74,6 +72,5 @@ export const ARES_CARD_MANIFEST = new ModuleManifest({
     CardName.MOHOLE_AREA,
     CardName.NATURAL_PRESERVE,
     CardName.NUCLEAR_ZONE,
-    CardName.RESTRICTED_AREA,
   ],
 });

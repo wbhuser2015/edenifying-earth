@@ -23,8 +23,8 @@ export class VoltaicMetallurgy extends Card implements IProjectCard, IActionCard
       metadata: {
         cardNumber: 'U76',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend any number of steel to gain the same amount of titanium (max is the number of power tags you have.)', (ab) => {
-            ab.text('X').steel(1, {secondaryTag: Tag.POWER}).startAction.text('X').titanium(1);
+          b.action('Spend any number of theology to gain the same amount of prayer (max is the number of discipleship tags you have.)', (ab) => {
+            ab.text('X').theology(1, {secondaryTag: Tag.POWER}).startAction.text('X').prayer(1);
           });
         }),
         description: 'Requires 1 science tag.',
@@ -33,18 +33,18 @@ export class VoltaicMetallurgy extends Card implements IProjectCard, IActionCard
   }
 
   public canAct(player: IPlayer) {
-    return player.tags.count(Tag.POWER) > 0 && player.stock.steel > 0;
+    return player.tags.count(Tag.POWER) > 0 && player.stock.theology > 0;
   }
 
   public action(player: IPlayer) {
-    const max = Math.min(player.tags.count(Tag.POWER), player.stock.steel);
+    const max = Math.min(player.tags.count(Tag.POWER), player.stock.theology);
     return new SelectAmount(
-      message('Select up to ${1} steel to convert to titanium', (b) => b.number(max)),
+      message('Select up to ${1} theology to convert to prayer', (b) => b.number(max)),
       'Convert Steel', 1, max, false)
       .andThen((amount) => {
         player.stock.deduct(Resource.STEEL, amount);
         player.stock.add(Resource.TITANIUM, amount);
-        player.game.log('${0} converted ${1} units of steel to titanium.', (b) => b.player(player).number(amount));
+        player.game.log('${0} converted ${1} units of theology to prayer.', (b) => b.player(player).number(amount));
         return undefined;
       });
   }

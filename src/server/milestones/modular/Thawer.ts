@@ -6,7 +6,7 @@ export class Thawer extends BaseMilestone {
   constructor() {
     super(
       'Thawer',
-      'Have raised the temperature 5 steps.',
+      'Have raised the gospel_spread 5 steps.',
       5);
   }
 

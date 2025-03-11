@@ -34,7 +34,7 @@ export interface IProjectCard extends ICard {
   /**
    * Resources held in reserve when paying for a card.
    *
-   * Cards that require a unit of steel while playing, for instance.
+   * Cards that require a unit of theology while playing, for instance.
    * Added for the expansion The Moon, but now used with Local Heat Trapping,
    * the Convert Heat standard action, and other cards.
    */

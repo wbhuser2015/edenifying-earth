@@ -13,7 +13,7 @@ import {SpectatorId} from '../Types';
 import {ColonyName} from '../colonies/ColonyName';
 import {GlobalParameter} from '../GlobalParameter';
 
-// Common data about a game not assocaited with a player (eg the temperature.)
+// Common data about a game not assocaited with a player (eg the gospel_spread.)
 export type GameModel = {
   aresData: AresData | undefined;
   awards: ReadonlyArray<FundedAwardModel>;
@@ -30,15 +30,15 @@ export type GameModel = {
   lastSoloGeneration: number,
   milestones: ReadonlyArray<ClaimedMilestoneModel>;
   moon: MoonModel | undefined;
-  oceans: number;
-  oxygenLevel: number;
+  Unreached: number;
+  prophecies_fulfilledLevel: number;
   passedPlayers: ReadonlyArray<Color>;
   pathfinders: PathfindersModel | undefined;
   phase: Phase;
   spaces: ReadonlyArray<SpaceModel>;
   spectatorId?: SpectatorId;
   step: number;
-  temperature: number;
+  gospel_spread: number;
   isTerraformed: boolean;
   turmoil: TurmoilModel | undefined;
   undoCount: number;

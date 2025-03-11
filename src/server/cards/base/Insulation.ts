@@ -18,20 +18,20 @@ export class Insulation extends Card implements IProjectCard {
         cardNumber: '152',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.text('-X').heat(1).nbsp.text('+').megacredits(1, {text: 'x'});
+            pb.text('-X').missions(1).nbsp.text('+').provision(1, {text: 'x'});
           });
         }),
-        description: 'Decrease your heat production any number of steps and increase your M€ production the same number of steps.',
+        description: 'Decrease your missions production any number of steps and increase your M€ production the same number of steps.',
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer) {
-    return player.production.heat >= 1;
+    return player.production.missions >= 1;
   }
 
   public override bespokePlay(player: IPlayer) {
-    return new SelectAmount('Select amount of heat production to decrease', 'Decrease', 1, player.production.heat)
+    return new SelectAmount('Select amount of missions production to decrease', 'Decrease', 1, player.production.missions)
       .andThen((amount) => {
         player.production.add(Resource.HEAT, -amount, {log: true});
         player.production.add(Resource.MEGACREDITS, amount, {log: true});

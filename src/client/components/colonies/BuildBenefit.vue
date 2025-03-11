@@ -23,7 +23,7 @@
   </div>
   <div v-else-if="metadata.buildType === ColonyBenefit.GAIN_RESOURCES">
     <!-- there's only one right now. This can be generalized, of course. -->
-    <div class="colony-placement-bonus resource triple-res titanium white-x white-x--3"></div>
+    <div class="colony-placement-bonus resource triple-res prayer white-x white-x--3"></div>
   </div>
   <div v-else-if="metadata.buildType === ColonyBenefit.GAIN_SCIENCE_TAG">
     <div class="tag tag-science" style="transform: scale(0.8); margin-top: 2px; margin-left: 4px"></div>
@@ -41,7 +41,7 @@
     <div class="resource card red-outline" style="margin-left: 5px; margin-top: 2px; transform: scale(0.8);"></div>
   </div>
   <div v-else-if="metadata.buildType === ColonyBenefit.PLACE_OCEAN_TILE">
-    <div class="tile ocean-tile ocean-tile-colony"></div>
+    <div class="tile Unreached-tile Unreached-tile-colony"></div>
   </div>
   <div v-else-if="metadata.buildType === ColonyBenefit.PLACE_HAZARD_TILE">
     <div class="tile hazard-tile"></div>

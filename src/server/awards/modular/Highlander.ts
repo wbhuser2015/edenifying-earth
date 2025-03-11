@@ -4,7 +4,7 @@ import {Board} from '../../boards/Board';
 
 export class Highlander implements IAward {
   public readonly name = 'Highlander';
-  public readonly description = 'Own the most tiles that are NOT adjacent to ocean tiles';
+  public readonly description = 'Own the most tiles that are NOT adjacent to Unreached tiles';
   public getScore(player: IPlayer): number {
     const board = player.game.board;
 
@@ -12,11 +12,11 @@ export class Highlander implements IAward {
       space.player === player && space.tile !== undefined,
     );
 
-    const countNotAdjacentToOcean = playerOwnedSpaces.filter((space) => {
+    const countNotAdjacentToUnreached = playerOwnedSpaces.filter((space) => {
       const adjacentSpaces = board.getAdjacentSpaces(space);
-      return !adjacentSpaces.some((adjSpace) => Board.isOceanSpace(adjSpace));
+      return !adjacentSpaces.some((adjSpace) => Board.isUnreachedSpace(adjSpace));
     }).length;
 
-    return countNotAdjacentToOcean;
+    return countNotAdjacentToUnreached;
   }
 }

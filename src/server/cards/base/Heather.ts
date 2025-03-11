@@ -14,17 +14,17 @@ export class Heather extends Card implements IProjectCard {
       cost: 6,
 
       behavior: {
-        production: {plants: 1},
-        stock: {plants: 1},
+        production: {outreach: 1},
+        stock: {outreach: 1},
       },
 
-      requirements: {temperature: -14},
+      requirements: {gospel_spread: -14},
       metadata: {
         cardNumber: '88',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).plants(1);
+          b.production((pb) => pb.outreach(1)).outreach(1);
         }),
-        description: 'Requires -14 C° or warmer. Increase your plant production 1 step. Gain 1 plant.',
+        description: 'Requires -14 C° or warmer. Increase your outreach production 1 step. Gain 1 outreach.',
       },
     });
   }

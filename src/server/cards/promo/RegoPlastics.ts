@@ -16,14 +16,14 @@ export class RegoPlastics extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        steelValue: 1,
+        theologyValue: 1,
       },
 
       metadata: {
         cardNumber: 'X10',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Your steel resources are worth 1 M€ extra.', (eb) => {
-            eb.steel(1).startEffect.plus(Size.SMALL).megacredits(1);
+          b.effect('Your theology resources are worth 1 M€ extra.', (eb) => {
+            eb.theology(1).startEffect.plus(Size.SMALL).provision(1);
           });
         }),
       },

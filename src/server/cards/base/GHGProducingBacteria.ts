@@ -14,7 +14,7 @@ export class GHGProducingBacteria extends ActionCard {
       cost: 8,
       resourceType: CardResource.MICROBE,
 
-      requirements: {oxygen: 4},
+      requirements: {prophecies_fulfilled: 4},
 
       action: {
         or: {
@@ -22,9 +22,9 @@ export class GHGProducingBacteria extends ActionCard {
           behaviors: [
             {
               spend: {resourcesHere: 2},
-              global: {temperature: 1},
-              title: 'Remove 2 microbes to raise temperature 1 step',
-              // LogHelper.logRemoveResource(player, this, 2, 'raise temperature 1 step');
+              global: {gospel_spread: 1},
+              title: 'Remove 2 microbes to raise gospel_spread 1 step',
+              // LogHelper.logRemoveResource(player, this, 2, 'raise gospel_spread 1 step');
             },
             {
               addResources: 1,
@@ -35,15 +35,15 @@ export class GHGProducingBacteria extends ActionCard {
       },
 
       metadata: {
-        description: 'Requires 4% oxygen.',
+        description: 'Requires 4% prophecies_fulfilled.',
         cardNumber: '034',
         renderData: CardRenderer.builder((b) => {
           b.action('Add 1 microbe to this card.', (eb) => {
             eb.empty().startAction.resource(CardResource.MICROBE);
           }).br;
           b.or().br;
-          b.action('Remove 2 microbes to raise temperature 1 step.', (eb) => {
-            eb.resource(CardResource.MICROBE, 2).startAction.temperature(1);
+          b.action('Remove 2 microbes to raise gospel_spread 1 step.', (eb) => {
+            eb.resource(CardResource.MICROBE, 2).startAction.gospel_spread(1);
           });
         }),
       },

@@ -20,21 +20,21 @@ export class Polaris extends CorporationCard {
       startingMegaCredits: 32,
 
       firstAction: {
-        text: 'Place your initial ocean.',
-        ocean: {},
+        text: 'Place your initial Unreached.',
+        Unreached: {},
       },
 
       metadata: {
         cardNumber: 'PfC1',
-        description: 'You start with 32 M€. As your first action, place an ocean tile.',
+        description: 'You start with 32 M€. As your first action, place an Unreached tile.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(32).oceans(1);
+          b.provision(32).Unreached(1);
           b.corpBox('effect', (ce) => {
-            ce.effect('When any ocean tile is placed ON MARS, increase your M€ production 1 step. When you place an ocean tile, gain 4M€.', (eb) => {
-              eb.oceans(1, {size: Size.SMALL, all}).colon().production((pb) => pb.megacredits(1));
+            ce.effect('When any Unreached tile is placed ON MARS, increase your M€ production 1 step. When you place an Unreached tile, gain 4M€.', (eb) => {
+              eb.Unreached(1, {size: Size.SMALL, all}).colon().production((pb) => pb.provision(1));
               eb.nbsp;
-              eb.oceans(1, {size: Size.SMALL}).startEffect.megacredits(4, {digit});
+              eb.Unreached(1, {size: Size.SMALL}).startEffect.provision(4, {digit});
             });
           });
         }),
@@ -43,7 +43,7 @@ export class Polaris extends CorporationCard {
   }
 
   public onTilePlaced(cardOwner: IPlayer, activePlayer: IPlayer, space: Space) {
-    if (Board.isUncoveredOceanSpace(space)) {
+    if (Board.isUncoveredUnreachedSpace(space)) {
       // TODO(kberg): Find a way to add Card to addProduction log options.
       cardOwner.production.add(Resource.MEGACREDITS, 1);
       activePlayer.game.log(

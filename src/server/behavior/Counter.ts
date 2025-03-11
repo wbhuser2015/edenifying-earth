@@ -65,8 +65,8 @@ export class Counter {
       }
     }
 
-    if (countable.oceans !== undefined) {
-      sum += game.board.getOceanSpaces({upgradedOceans: true, wetlands: true}).length;
+    if (countable.Unreached !== undefined) {
+      sum += game.board.getUnreachedSpaces({upgradedUnreached: true, wetlands: true}).length;
     }
 
     if (countable.floaters !== undefined) {

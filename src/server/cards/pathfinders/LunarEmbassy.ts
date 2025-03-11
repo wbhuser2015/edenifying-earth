@@ -18,18 +18,18 @@ export class LunarEmbassy extends Card implements IProjectCard {
       behavior: {
         drawCard: 1,
         city: {space: SpaceName.LUNAR_EMBASSY},
-        production: {megacredits: 3, plants: {tag: Tag.EARTH, per: 2}},
+        production: {provision: 3, outreach: {tag: Tag.EARTH, per: 2}},
       },
 
       metadata: {
         cardNumber: 'Pf16',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(3))
-            .production((pb) => pb.plants(1).slash().tag(Tag.EARTH, 2))
+          b.production((pb) => pb.provision(3))
+            .production((pb) => pb.outreach(1).slash().tag(Tag.EARTH, 2))
             .br
             .cards(1).city().asterix().br;
         }),
-        description: 'Increase your M€ production 3 steps, and plant production 1 step for every 2 Earth tags (including this.) ' +
+        description: 'Increase your M€ production 3 steps, and outreach production 1 step for every 2 Earth tags (including this.) ' +
           'Draw a card. Place a city tile ON THE RESERVED AREA.',
       },
     });

@@ -14,7 +14,7 @@ export class ColonialRepresentation extends Card implements IProjectCard {
       behavior: {
         turmoil: {influenceBonus: 1},
         stock: {
-          megacredits: {
+          provision: {
             colonies: {colonies: {}},
             each: 3,
           },
@@ -27,7 +27,7 @@ export class ColonialRepresentation extends Card implements IProjectCard {
           b.effect('You have +1 influence.', (eb) => {
             eb.startEffect.influence();
           }).br;
-          b.megacredits(3).slash().colonies();
+          b.provision(3).slash().colonies();
         }),
         description: 'Gain 3 M€ per colony you have.',
       },

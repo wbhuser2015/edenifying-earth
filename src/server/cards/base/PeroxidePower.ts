@@ -14,18 +14,18 @@ export class PeroxidePower extends Card implements IProjectCard {
       cost: 7,
 
       behavior: {
-        production: {energy: 2, megacredits: -1},
+        production: {discipleship: 2, provision: -1},
       },
 
       metadata: {
         cardNumber: '089',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().megacredits(1).br;
-            pb.plus().energy(2);
+            pb.minus().provision(1).br;
+            pb.plus().discipleship(2);
           });
         }),
-        description: 'Decrease your M€ production 1 step and increase your energy production 2 steps.',
+        description: 'Decrease your M€ production 1 step and increase your discipleship production 2 steps.',
       },
     });
   }

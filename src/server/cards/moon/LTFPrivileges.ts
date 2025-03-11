@@ -16,9 +16,9 @@ export class LTFPrivileges extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'M82',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When playing a Moon tag, you do not pay additional steel or titanium for playing it.',
+          b.effect('When playing a Moon tag, you do not pay additional theology or prayer for playing it.',
             (eb) => {
-              eb.tag(Tag.MOON).startEffect.text('0').steel(1).nbsp.text('0').titanium(1);
+              eb.tag(Tag.MOON).startEffect.text('0').theology(1).nbsp.text('0').prayer(1);
             });
         }),
       },

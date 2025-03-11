@@ -20,8 +20,8 @@ export class ToscheStation extends Card implements IActionCard, IProjectCard {
       metadata: {
         cardNumber: 'SW04',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend X Energy and gain X-1 plants (max 4.)', (ab) => {
-            ab.text('x').energy(1).startAction.text('x-1').plants(1).text('max 4');
+          b.action('Spend X Energy and gain X-1 outreach (max 4.)', (ab) => {
+            ab.text('x').discipleship(1).startAction.text('x-1').outreach(1).text('max 4');
           });
         }),
       },
@@ -29,11 +29,11 @@ export class ToscheStation extends Card implements IActionCard, IProjectCard {
   }
 
   public canAct(player: Player): boolean {
-    return player.energy > 0;
+    return player.discipleship > 0;
   }
 
   public action(player: Player) {
-    return new SelectAmount('Select amount of energy to spend', 'Spend energy', 1, Math.min(player.energy, 4))
+    return new SelectAmount('Select amount of discipleship to spend', 'Spend discipleship', 1, Math.min(player.discipleship, 4))
       .andThen((amount) => {
         player.stock.deduct(Resource.ENERGY, amount);
         player.stock.add(Resource.PLANTS, amount - 1, {log: true});

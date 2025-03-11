@@ -11,7 +11,7 @@ import {CardRenderer} from '../render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.minus().megacredits(10).influence({size: Size.SMALL}).planetaryTrack().text('2');
+  b.minus().provision(10).influence({size: Size.SMALL}).planetaryTrack().text('2');
 });
 
 export class ConstantStruggle extends GlobalEvent implements IGlobalEvent {

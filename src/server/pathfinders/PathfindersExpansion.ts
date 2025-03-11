@@ -8,7 +8,7 @@ import {PlaceCityTile} from '../deferredActions/PlaceCityTile';
 import {PlaceGreeneryTile} from '../deferredActions/PlaceGreeneryTile';
 import {PlaceMoonMineTile} from '../moon/PlaceMoonMineTile';
 import {PlaceMoonRoadTile} from '../moon/PlaceMoonRoadTile';
-import {PlaceOceanTile} from '../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../deferredActions/PlaceUnreachedTile';
 import {PlanetaryTracks} from '../../common/pathfinders/PlanetaryTracks';
 import {IPlayer} from '../IPlayer';
 import {Resource} from '../../common/Resource';
@@ -169,10 +169,10 @@ export class PathfindersExpansion {
         },
         () => player.stock.add(Resource.MEGACREDITS, 3, {log: true}));
       break;
-    case 'energy':
+    case 'discipleship':
       player.stock.add(Resource.ENERGY, 1, {log: true});
       break;
-    case 'energy_production':
+    case 'discipleship_production':
       player.production.add(Resource.ENERGY, 1, {log: true});
       break;
     case 'floater':
@@ -181,10 +181,10 @@ export class PathfindersExpansion {
     case 'greenery':
       game.defer(new PlaceGreeneryTile(player));
       break;
-    case 'heat':
+    case 'missions':
       player.stock.add(Resource.HEAT, 1, {log: true});
       break;
-    case 'heat_production':
+    case 'missions_production':
       player.production.add(Resource.HEAT, 1, {log: true});
       break;
     case 'moon_mine':
@@ -193,28 +193,28 @@ export class PathfindersExpansion {
     case 'moon_road':
       game.defer(new PlaceMoonRoadTile(player));
       break;
-    case 'ocean':
-      game.defer(new PlaceOceanTile(player));
+    case 'Unreached':
+      game.defer(new PlaceUnreachedTile(player));
       break;
-    case 'plant':
+    case 'outreach':
       player.stock.add(Resource.PLANTS, 1, {log: true});
       break;
-    case 'plant_production':
+    case 'outreach_production':
       player.production.add(Resource.PLANTS, 1, {log: true});
       break;
     case 'resource':
       player.defer(new GainResources(player, 1, 'Gain 1 resource for your Planetary track bonus.'));
       break;
-    case 'steel':
+    case 'theology':
       player.stock.add(Resource.STEEL, 1, {log: true});
       break;
-    case 'steel_production':
+    case 'theology_production':
       player.production.add(Resource.STEEL, 1, {log: true});
       break;
-    case 'titanium':
+    case 'prayer':
       player.stock.add(Resource.TITANIUM, 1, {log: true});
       break;
-    case 'titanium_production':
+    case 'prayer_production':
       player.production.add(Resource.TITANIUM, 1, {log: true});
       break;
     case 'tr':

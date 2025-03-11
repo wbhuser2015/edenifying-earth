@@ -27,9 +27,9 @@ export class MainBeltAsteroids extends ActivePreludeCard implements IActionCard 
         renderData: CardRenderer.builder((b) => {
           b.action('Gain 1 asteroid to ANY CARD.', (ab) => {
             ab.empty().startAction.resource(CardResource.ASTEROID).asterix();
-          }).nbsp.effect('When gaining an asteroid HERE, gain 1 titanium.', (ab) => {
-            ab.resource(CardResource.ASTEROID).startEffect.titanium(1);
-          }).br.megacredits(-5);
+          }).nbsp.effect('When gaining an asteroid HERE, gain 1 prayer.', (ab) => {
+            ab.resource(CardResource.ASTEROID).startEffect.prayer(1);
+          }).br.provision(-5);
         }),
         description: 'Lose 5 M€. 1 VP per 2 asteroids here.',
       },

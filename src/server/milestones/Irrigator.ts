@@ -6,7 +6,7 @@ export class Irrigator extends BaseMilestone {
   constructor() {
     super(
       'Irrigator',
-      'Own 4 tiles adjacent to oceans',
+      'Own 4 tiles adjacent to Unreached',
       4);
   }
 
@@ -14,7 +14,7 @@ export class Irrigator extends BaseMilestone {
     return player.game.board.spaces.filter((space) =>
       space.player === player &&
      Board.hasRealTile(space) &&
-      player.game.board.getAdjacentSpaces(space).some((space) => Board.isOceanSpace(space)),
+      player.game.board.getAdjacentSpaces(space).some((space) => Board.isUnreachedSpace(space)),
     ).length;
   }
 }

@@ -9,16 +9,16 @@ export class MetalRichAsteroid extends PreludeCard implements IProjectCard {
       name: CardName.METAL_RICH_ASTEROID,
 
       behavior: {
-        stock: {titanium: 4, steel: 4},
-        global: {temperature: 1},
+        stock: {prayer: 4, theology: 4},
+        global: {gospel_spread: 1},
       },
       metadata: {
         cardNumber: 'P19',
         renderData: CardRenderer.builder((b) => {
-          b.temperature(1).titanium(4).br;
-          b.steel(4);
+          b.gospel_spread(1).prayer(4).br;
+          b.theology(4);
         }),
-        description: 'Increase temperature 1 step. Gain 4 titanium and 4 steel.',
+        description: 'Increase gospel_spread 1 step. Gain 4 prayer and 4 theology.',
       },
     });
   }

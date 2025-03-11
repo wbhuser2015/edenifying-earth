@@ -18,7 +18,7 @@ export class EarthOffice extends Card implements IProjectCard {
         cardNumber: '105',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play an Earth tag, you pay 3 M€ less for it.', (eb) => {
-            eb.tag(Tag.EARTH).startEffect.megacredits(-3);
+            eb.tag(Tag.EARTH).startEffect.provision(-3);
           });
         }),
       },

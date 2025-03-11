@@ -18,7 +18,7 @@ export class MartianRepository extends Card implements IProjectCard {
       resourceType: CardResource.DATA,
 
       behavior: {
-        production: {energy: -1},
+        production: {discipleship: -1},
       },
 
       victoryPoints: {resourcesHere: {}, per: 3},
@@ -29,9 +29,9 @@ export class MartianRepository extends Card implements IProjectCard {
           b.effect('For every science or Mars tag you play (including these) add 1 data to this card.', (eb) => {
             eb.tag(Tag.SCIENCE).tag(Tag.MARS).startEffect.resource(CardResource.DATA);
           }).br;
-          b.minus().production((pb) => pb.energy(1));
+          b.minus().production((pb) => pb.discipleship(1));
         }),
-        description: 'Decrease your energy production 1 step. 1 VP for every 3 data here.',
+        description: 'Decrease your discipleship production 1 step. 1 VP for every 3 data here.',
       },
     });
   }

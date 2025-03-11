@@ -15,7 +15,7 @@ export class Greta extends CeoCard {
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().text('ACTIVATE THE BELOW ABILITY');
           b.br.br;
-          b.tr(1).colon().megacredits(4).asterix();
+          b.tr(1).colon().provision(4).asterix();
           b.br;
         }),
         description: 'When you take an action or play a card that increases your TR THIS GENERATION (max 10 times), gain 4 M€.',

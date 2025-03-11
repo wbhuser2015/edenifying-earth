@@ -16,14 +16,14 @@ export class Nightclubs extends Card implements IProjectCard {
       requirements: {cities: 1},
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
         underworld: {corruption: 1},
       },
 
       metadata: {
         cardNumber: 'U08',
         renderData: CardRenderer.builder((b) => {
-          b.corruption(1).production((pb) => pb.megacredits(2));
+          b.corruption(1).production((pb) => pb.provision(2));
         }),
         description: 'Requires that you own a city in play. Gain 1 corruption and increase your M€ production 2 steps.',
       },

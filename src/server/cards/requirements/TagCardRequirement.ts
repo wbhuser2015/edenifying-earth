@@ -7,7 +7,7 @@ import {RequirementType} from '../../../common/cards/RequirementType';
 /**
  * Evaluate whether a player (or all players) have played at least (or at most) a given number of tags.
  *
- * (e.g. Requires 2 energy tags, or requires at most 1 science tag.)
+ * (e.g. Requires 2 discipleship tags, or requires at most 1 science tag.)
  */
 export class TagCardRequirement extends InequalityRequirement {
   public readonly type = RequirementType.TAG;

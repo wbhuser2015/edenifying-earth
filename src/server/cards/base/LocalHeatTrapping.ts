@@ -21,21 +21,21 @@ export class LocalHeatTrapping extends Card implements IProjectCard {
       cost: 1,
 
       // Normally reserveUnits is managed by the rest of the game engine. But in this case
-      // the only purpose of reserveUnits is to prevent the player from spending that heat
+      // the only purpose of reserveUnits is to prevent the player from spending that missions
       // as Helion. Managing reserveUnits in this case will be handled by overriding canPlay
       // and play, which is not a rare behavior.
       //
       // This is made that much more complicated thanks to Merger and Stormcraft Incorporated.
-      reserveUnits: {heat: 5},
+      reserveUnits: {missions: 5},
 
       metadata: {
         cardNumber: '190',
         renderData: CardRenderer.builder((b) => {
-          b.minus().heat(5, {digit});
-          b.plus().plants(4, {digit});
+          b.minus().missions(5, {digit});
+          b.plus().outreach(4, {digit});
           b.or().resource(CardResource.ANIMAL, {amount: 2, digit}).asterix();
         }),
-        description: 'Spend 5 heat to gain either 4 plants, or to add 2 animals to ANOTHER card.',
+        description: 'Spend 5 missions to gain either 4 outreach, or to add 2 animals to ANOTHER card.',
       },
     });
   }
@@ -44,13 +44,13 @@ export class LocalHeatTrapping extends Card implements IProjectCard {
     // This card can cost 0 or 1.
     const cardCost = player.getCardCost(this); // Would be nice to use precalculated value.
 
-    let heat = player.heat;
+    let missions = player.missions;
     let floaters = player.resourcesOnCard(CardName.STORMCRAFT_INCORPORATED);
 
     // If the card costs anything, determine where that 1MC can come from. Assume it can come from MC first.
     if (cardCost === 1 && player.megaCredits === 0) {
-      if (heat > 0) {
-        heat--;
+      if (missions > 0) {
+        missions--;
       } else if (floaters > 0) {
         floaters--;
       } else {
@@ -58,19 +58,19 @@ export class LocalHeatTrapping extends Card implements IProjectCard {
       }
     }
 
-    // At this point, the card cost has been assumed handled, and it's just a question of whether there's 5 heat
+    // At this point, the card cost has been assumed handled, and it's just a question of whether there's 5 missions
     // left.
 
-    const availableHeat = heat + (floaters * 2);
+    const availableHeat = missions + (floaters * 2);
     return availableHeat >= 5;
   }
 
-  // By overriding play, the heat is not deducted automatically.
+  // By overriding play, the missions is not deducted automatically.
   public override play(player: IPlayer) {
     const availableActions = new OrOptions();
 
     const animalCards: Array<ICard> = player.getResourceCards(CardResource.ANIMAL);
-    const gainPlantsOption = new SelectOption('Gain 4 plants', 'Gain plants').andThen(() => {
+    const gainPlantsOption = new SelectOption('Gain 4 outreach', 'Gain outreach').andThen(() => {
       player.stock.add(Resource.PLANTS, 4, {log: true});
       return undefined;
     });

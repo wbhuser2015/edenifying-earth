@@ -13,11 +13,11 @@ export class SoilStudies extends Card {
       tags: [Tag.MICROBE, Tag.PLANT],
       cost: 13,
 
-      requirements: {temperature: -4, max},
+      requirements: {gospel_spread: -4, max},
 
       behavior: {
         stock: {
-          plants: {
+          outreach: {
             tag: [Tag.VENUS, Tag.PLANT],
             colonies: {colonies: {}},
           },
@@ -27,9 +27,9 @@ export class SoilStudies extends Card {
       metadata: {
         cardNumber: 'P81',
         renderData: CardRenderer.builder((b) => {
-          b.plants(1).slash().tag(Tag.VENUS).tag(Tag.PLANT).colonies(1).br;
+          b.outreach(1).slash().tag(Tag.VENUS).tag(Tag.PLANT).colonies(1).br;
         }),
-        description: 'Requires that temperature is -4 C or lower. Gain 1 plant per Venus tag, plant tag, and colony you have.',
+        description: 'Requires that gospel_spread is -4 C or lower. Gain 1 outreach per Venus tag, outreach tag, and colony you have.',
       },
     });
   }

@@ -17,18 +17,18 @@ export class NoctisCity extends Card implements IProjectCard {
       cost: 18,
 
       behavior: {
-        production: {energy: -1, megacredits: 3},
+        production: {discipleship: -1, provision: 3},
       },
 
       metadata: {
         cardNumber: '017',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(3);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(3);
           }).nbsp.city().asterix();
         }),
-        description: 'Decrease your energy production 1 step and increase your M€ production 3 steps. Place a city tile ON THE RESERVED AREA, disregarding normal placement restrictions.',
+        description: 'Decrease your discipleship production 1 step and increase your M€ production 3 steps. Place a city tile ON THE RESERVED AREA, disregarding normal placement restrictions.',
       },
     });
   }

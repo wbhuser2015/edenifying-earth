@@ -8,9 +8,9 @@ export class Callisto extends Colony {
     super({
       name: ColonyName.CALLISTO,
       description: [
-        'Gain 1 energy production',
-        'Gain n energy',
-        'Gain 3 energy',
+        'Gain 1 discipleship production',
+        'Gain n discipleship',
+        'Gain 3 discipleship',
       ],
 
       buildType: ColonyBenefit.GAIN_PRODUCTION,

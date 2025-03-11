@@ -10,7 +10,7 @@ import {Size} from '../../../common/cards/render/Size';
 import {digit} from '../../cards/Options';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.megacredits(-1).slash().cards(1, {over: 6}).influence({size: Size.SMALL}).nbsp;
+  b.provision(-1).slash().cards(1, {over: 6}).influence({size: Size.SMALL}).nbsp;
   b.text('MAX 6').cards(1).colon().cards(2, {digit});
 });
 

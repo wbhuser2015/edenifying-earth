@@ -11,7 +11,7 @@ import {Size} from '../../../common/cards/render/Size';
 import {UnderworldExpansion} from '../../underworld/UnderworldExpansion';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.production((pb) => pb.megacredits(1)).slash().excavate(2, {digit}).influence({size: Size.SMALL});
+  b.production((pb) => pb.provision(1)).slash().excavate(2, {digit}).influence({size: Size.SMALL});
 });
 
 export class MigrationUnderground extends GlobalEvent implements IGlobalEvent {

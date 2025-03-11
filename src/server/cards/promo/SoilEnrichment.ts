@@ -19,10 +19,10 @@ export class SoilEnrichment extends Card implements IProjectCard {
       cost: 6,
 
       metadata: {
-        description: 'Spend 1 microbe from ANY of your cards to gain 5 plants',
+        description: 'Spend 1 microbe from ANY of your cards to gain 5 outreach',
         cardNumber: 'X67',
         renderData: CardRenderer.builder((b) => {
-          b.minus().resource(CardResource.MICROBE).asterix().nbsp.plus().plants(5, {digit});
+          b.minus().resource(CardResource.MICROBE).asterix().nbsp.plus().outreach(5, {digit});
         }),
       },
     });
@@ -41,7 +41,7 @@ export class SoilEnrichment extends Card implements IProjectCard {
       .andThen(([card]) => {
         player.removeResourceFrom(card);
         player.stock.add(Resource.PLANTS, 5);
-        player.game.log('${0} removed 1 microbe from ${1} to gain 5 plants', (b) => b.player(player).card(card));
+        player.game.log('${0} removed 1 microbe from ${1} to gain 5 outreach', (b) => b.player(player).card(card));
         return undefined;
       });
   }

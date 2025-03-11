@@ -29,11 +29,11 @@ export class BotanicalExperience extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.greenery({size: Size.SMALL, withO2: false, any: true}).colon().resource(CardResource.DATA, {size: Size.SMALL});
           b.nbsp;
-          b.resource(CardResource.DATA, {amount: 3, digit}).asterix().colon().production((pb) => pb.plants(1));
+          b.resource(CardResource.DATA, {amount: 3, digit}).asterix().colon().production((pb) => pb.outreach(1));
           b.br;
           b.text('(EFFECT: Whenever a greenery tile is placed, add 1 data on this card.) ' +
-            '(EFFECT: Whenever this card has at least 3 data, automatically remove 3 data to raise your plant production 1 step.) ' +
-            '(EFFECT: Players may remove your plants, but you only lose half, rounded up.)', Size.SMALL, false, false);
+            '(EFFECT: Whenever this card has at least 3 data, automatically remove 3 data to raise your outreach production 1 step.) ' +
+            '(EFFECT: Players may remove your outreach, but you only lose half, rounded up.)', Size.SMALL, false, false);
         }),
         description: 'Requires one greenery tile on Mars.',
       },
@@ -54,7 +54,7 @@ export class BotanicalExperience extends Card implements IProjectCard {
       const deducted = delta * 3;
       this.resourceCount -= deducted;
       player.production.add(Resource.PLANTS, delta, {log: false});
-      player.game.log('${0} removed ${1} data from ${2} to increase plant production ${3} steps.',
+      player.game.log('${0} removed ${1} data from ${2} to increase outreach production ${3} steps.',
         (b) => b.player(player).number(deducted).card(this).number(delta));
     }
   }

@@ -11,19 +11,19 @@ export class DeepLunarMining extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.MOON],
       cost: 18,
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       behavior: {
-        production: {titanium: 2},
+        production: {prayer: 2},
         moon: {miningRate: 1},
       },
 
       metadata: {
-        description: 'Spend 1 titanium. Increase your titanium production 2 steps. Raise the mining rate 1 step.',
+        description: 'Spend 1 prayer. Increase your prayer production 2 steps. Raise the mining rate 1 step.',
         cardNumber: 'M18',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1).production((pb) => {
-            pb.titanium(2);
+          b.minus().prayer(1).production((pb) => {
+            pb.prayer(2);
           }).br;
           b.moonMiningRate();
         }),

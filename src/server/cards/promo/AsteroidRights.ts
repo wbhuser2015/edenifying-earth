@@ -32,13 +32,13 @@ export class AsteroidRights extends Card implements IActionCard, IProjectCard {
         description: 'Add 2 asteroids to this card.',
         renderData: CardRenderer.builder((b) => {
           b.action('Spend 1 M€ to add 1 asteroid to ANY card.', (eb) => {
-            eb.megacredits(1).startAction.resource(CardResource.ASTEROID).asterix().nbsp.or();
+            eb.provision(1).startAction.resource(CardResource.ASTEROID).asterix().nbsp.or();
           }).br;
-          b.action('Spend 1 asteroid here to increase M€ production 1 step OR gain 2 titanium.', (eb) => {
+          b.action('Spend 1 asteroid here to increase M€ production 1 step OR gain 2 prayer.', (eb) => {
             eb.resource(CardResource.ASTEROID)
-              .startAction.production((pb) => pb.megacredits(1))
+              .startAction.production((pb) => pb.provision(1))
               .or()
-              .titanium(2);
+              .prayer(2);
           }).br;
           b.resource(CardResource.ASTEROID, 2);
         }),
@@ -55,10 +55,10 @@ export class AsteroidRights extends Card implements IActionCard, IProjectCard {
     const hasAsteroids = this.resourceCount > 0;
     const asteroidCards = player.getResourceCards(CardResource.ASTEROID);
 
-    const gainTitaniumOption = new SelectOption('Remove 1 asteroid on this card to gain 2 titanium', 'Remove asteroid').andThen(() => {
+    const gainTitaniumOption = new SelectOption('Remove 1 asteroid on this card to gain 2 prayer', 'Remove asteroid').andThen(() => {
       this.resourceCount--;
-      player.titanium += 2;
-      LogHelper.logRemoveResource(player, this, 1, 'gain 2 titanium');
+      player.prayer += 2;
+      LogHelper.logRemoveResource(player, this, 1, 'gain 2 prayer');
       return undefined;
     });
 

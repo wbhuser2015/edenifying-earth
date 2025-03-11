@@ -9,10 +9,10 @@ export class CaretakerContract extends ActionCard {
       type: CardType.ACTIVE,
       name: CardName.CARETAKER_CONTRACT,
       cost: 3,
-      requirements: {temperature: 0},
+      requirements: {gospel_spread: 0},
 
       action: {
-        spend: {heat: 8},
+        spend: {missions: 8},
         tr: 1,
       },
 
@@ -20,8 +20,8 @@ export class CaretakerContract extends ActionCard {
         cardNumber: '154',
         description: 'Requires 0° C or warmer.',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 8 heat to increase your terraform rating 1 step.', (eb) => {
-            eb.heat(8).startAction.tr(1);
+          b.action('Spend 8 missions to increase your terraform rating 1 step.', (eb) => {
+            eb.missions(8).startAction.tr(1);
           });
         }),
       },

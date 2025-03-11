@@ -15,7 +15,7 @@ type Options = {
   creditedPlayer?: IPlayer,
 };
 
-export class PlaceOceanTile extends DeferredAction<Space> {
+export class PlaceUnreachedTile extends DeferredAction<Space> {
   constructor(
     player: IPlayer,
     private options: Options = {}) {
@@ -23,7 +23,7 @@ export class PlaceOceanTile extends DeferredAction<Space> {
   }
 
   public execute() {
-    if (!this.player.game.canAddOcean()) {
+    if (!this.player.game.canAddUnreached()) {
       const whales = this.player.getPlayedCard(CardName.WHALES);
       if (whales !== undefined) {
         this.player.addResourceTo(whales, {qty: 1, log: true});
@@ -31,12 +31,12 @@ export class PlaceOceanTile extends DeferredAction<Space> {
       return undefined;
     }
 
-    let title = this.options.title ?? this.getTitle('ocean');
+    let title = this.options.title ?? this.getTitle('Unreached');
     let availableSpaces: ReadonlyArray<Space> = [];
     if (this.options.spaces !== undefined) {
       availableSpaces = this.options.spaces;
     } else {
-      const on = this.options?.on || 'ocean';
+      const on = this.options?.on || 'Unreached';
       availableSpaces = this.player.game.board.getAvailableSpacesForType(this.player, on);
       title = this.options?.title ?? this.getTitle(on);
     }
@@ -44,7 +44,7 @@ export class PlaceOceanTile extends DeferredAction<Space> {
     return new SelectSpace(title, availableSpaces)
       .andThen((space) => {
         const creditedPlayer = this.options.creditedPlayer ?? this.player;
-        creditedPlayer.game.addOcean(creditedPlayer, space);
+        creditedPlayer.game.addUnreached(creditedPlayer, space);
         creditedPlayer.defer(this.cb(space));
         return undefined;
       });
@@ -52,9 +52,9 @@ export class PlaceOceanTile extends DeferredAction<Space> {
 
   private getTitle(type: PlacementType) {
     switch (type) {
-    case 'ocean': return 'Select space for ocean tile';
-    case 'land': return 'Select a land space to place an ocean tile';
-    // case '': return 'Select space reserved for ocean to place greenery tile';
+    case 'Unreached': return 'Select space for Unreached tile';
+    case 'land': return 'Select a land space to place an Unreached tile';
+    // case '': return 'Select space reserved for Unreached to place greenery tile';
     default: throw new Error('unhandled type; ' + type);
     }
   }

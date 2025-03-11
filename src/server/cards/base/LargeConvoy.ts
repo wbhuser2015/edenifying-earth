@@ -26,16 +26,16 @@ export class LargeConvoy extends Card implements IProjectCard {
 
       behavior: {
         drawCard: 2,
-        ocean: {},
+        Unreached: {},
       },
 
       metadata: {
         cardNumber: '143',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).cards(2).br;
-          b.plants(5, {digit}).or(Size.MEDIUM).resource(CardResource.ANIMAL, {amount: 4, digit}).asterix();
+          b.Unreached(1).cards(2).br;
+          b.outreach(5, {digit}).or(Size.MEDIUM).resource(CardResource.ANIMAL, {amount: 4, digit}).asterix();
         }),
-        description: 'Place an ocean tile and draw 2 cards. Gain 5 plants or add 4 animals to ANOTHER card.',
+        description: 'Place an Unreached tile and draw 2 cards. Gain 5 outreach or add 4 animals to ANOTHER card.',
       },
     });
   }
@@ -52,7 +52,7 @@ export class LargeConvoy extends Card implements IProjectCard {
 
     const availableActions = [];
 
-    const gainPlantsOption = new SelectOption('Gain 5 plants', 'Gain plants').andThen(gainPlants);
+    const gainPlantsOption = new SelectOption('Gain 5 outreach', 'Gain outreach').andThen(gainPlants);
     availableActions.push(gainPlantsOption);
 
     if (animalCards.length === 1) {

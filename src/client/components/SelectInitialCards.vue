@@ -17,8 +17,8 @@
     <SelectCard v-if="hasCeo" :playerView="playerView" :playerinput="ceoCardOption" :onsave="noop" :showtitle="true" v-on:cardschanged="ceosChanged" />
     <SelectCard :playerView="playerView" :playerinput="projectCardOption" :onsave="noop" :showtitle="true" v-on:cardschanged="cardsChanged" />
     <template v-if="this.selectedCorporations.length === 1">
-      <div><span v-i18n>Starting Megacredits:</span> <div class="megacredits">{{getStartingMegacredits()}}</div></div>
-      <div v-if="hasPrelude"><span v-i18n>After Preludes:</span> <div class="megacredits">{{getStartingMegacredits() + getAfterPreludes()}}</div></div>
+      <div><span v-i18n>Starting Megacredits:</span> <div class="provision">{{getStartingMegacredits()}}</div></div>
+      <div v-if="hasPrelude"><span v-i18n>After Preludes:</span> <div class="provision">{{getStartingMegacredits() + getAfterPreludes()}}</div></div>
     </template>
     <div v-if="warning !== undefined" class="tm-warning">
       <label class="label label-error">{{ $t(warning) }}</label>
@@ -121,7 +121,7 @@ export default (Vue as WithRefs<Refs>).extend({
       switch (this.selectedCorporations.length === 1 ? this.selectedCorporations[0] : undefined) {
       // For each step you increase the production of a resource ... you also gain that resource.
       case CardName.MANUTECH:
-        return card.productionBox?.megacredits ?? 0;
+        return card.productionBox?.provision ?? 0;
 
       // When you place a city tile, gain 3 M€.
       case CardName.THARSIS_REPUBLIC:
@@ -165,7 +165,7 @@ export default (Vue as WithRefs<Refs>).extend({
         }
         return 0;
 
-      // When you place an ocean tile, gain 4MC
+      // When you place an Unreached tile, gain 4MC
       case CardName.POLARIS:
         switch (prelude) {
         case CardName.AQUIFER_TURBINES:

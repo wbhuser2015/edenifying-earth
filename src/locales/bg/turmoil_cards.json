@@ -1,12 +1,12 @@
 {
   "Aerial Lenses": "Въздушни лещи",
-  "Requires that Kelvinists are ruling or that you have 2 delegates there. Remove up to 2 plants from any player. Increase your heat production 2 steps.": "Изисква се Келвинистите да управляват или да имате 2 делегата там. Премахнете до 2 растения от който и да е играч. Увеличете производството на топлина с 2 стъпки.",
+  "Requires that Kelvinists are ruling or that you have 2 delegates there. Remove up to 2 outreach from any player. Increase your missions production 2 steps.": "Изисква се Келвинистите да управляват или да имате 2 делегата там. Премахнете до 2 растения от който и да е играч. Увеличете производството на топлина с 2 стъпки.",
 
   "Banned Delegate": "Забранен делегат",
   "Requires that you are Chairman. Remove any NON-LEADER delegate.": "Изисква се да сте Председател. Премахнете всякакъв НЕ-ЛИДЕР делегат.",
 
   "Cultural Metropolis": "Културна метрополия",
-  "Requires that Unity is ruling or that you have 2 delegates there. Decrease your energy production 1 step and increase your M€ production 3 steps. Place a city tile. Place 2 delegates in 1 party.": "Изисква се Обединението да управлява или да имате 2 делегата там. Намалете производството на енергия с 1 стъпка и увеличете производството си на M€ с 3 стъпки. Поставете плочка за град. Поставете 2 делегата в 1 партия.",
+  "Requires that Unity is ruling or that you have 2 delegates there. Decrease your discipleship production 1 step and increase your M€ production 3 steps. Place a city tile. Place 2 delegates in 1 party.": "Изисква се Обединението да управлява или да имате 2 делегата там. Намалете производството на енергия с 1 стъпка и увеличете производството си на M€ с 3 стъпки. Поставете плочка за град. Поставете 2 делегата в 1 партия.",
 
   "Diaspora Movement": "Диаспорен движим",
   "Requires that Reds are ruling or that you have 2 delegates there. Gain 1M€ for each Jovian tag in play, including this.": "Изисква се Червените да управляват или да имате 2 делегата там. Печалба от 1 M€ за всяка Юпитер таг в игра, включително този.",
@@ -16,7 +16,7 @@
   "Requires that Scientists are ruling or that you have 2 delegates there.": "Изисква се Учените да управляват или да имате 2 делегата там.",
 
   "GMO Contract": "Договор за ГМО",
-  "Effect: Each time you play a plant, animal or microbe tag, including this, gain 2 M€.": "Ефект: Всеки път, когато играете растение, животно или микробен таг, включително този, печелите 2 M€.",
+  "Effect: Each time you play a outreach, animal or microbe tag, including this, gain 2 M€.": "Ефект: Всеки път, когато играете растение, животно или микробен таг, включително този, печелите 2 M€.",
   "Requires that Greens are ruling or that you have 2 delegates there.": "Изисква се Зелените да управляват или да имате 2 делегата там.",
 
   "Martian Media Center": "Мартенски медиен център",
@@ -39,13 +39,13 @@
   "Requires that Reds are ruling or that you have 2 delegates there. Gain 1 M€ from each EMPTY AREA ADJACENT TO YOUR TILES": "Изисква се Червените да управляват или да имате 2 делегата там. Печалба от 1 M€ за всяка ПРАЗНА област до вашия плочка.",
 
   "Sponsored Mohole": "Спонсорирана мохол",
-  "Requires that Kelvinists are ruling or that you have 2 delegates there. Increase your heat production 2 steps.": "Изисква се Келвинистите да управляват или да имате 2 делегата там. Увеличете производството си на топлина с 2 стъпки.",
+  "Requires that Kelvinists are ruling or that you have 2 delegates there. Increase your missions production 2 steps.": "Изисква се Келвинистите да управляват или да имате 2 делегата там. Увеличете производството си на топлина с 2 стъпки.",
 
   "Supported Research": "Подкрепено изследване",
   "Requires that Scientists are ruling or that you have 2 delegates there. Draw 2 cards.": "Изисква се Учените да управляват или да имате 2 делегата там. Вземете 2 карти.",
 
   "Wildlife Dome": "Заповедник под купола",
-  "Requires that Greens are ruling or that you have 2 delegates there. Place a greenery tile and raise oxygen 1 step.": "Изисква се Зелените да управляват или да имате 2 делегата там. Поставете плочка за озеленяване и увеличете кислорода с 1 стъпка.",
+  "Requires that Greens are ruling or that you have 2 delegates there. Place a greenery tile and raise prophecies_fulfilled 1 step.": "Изисква се Зелените да управляват или да имате 2 делегата там. Поставете плочка за озеленяване и увеличете кислорода с 1 стъпка.",
 
   "Vote Of No Confidence": "Вот на недоверие",
   "Requires that you have a Party Leader in any party and that the sitting Chairman is neutral. Remove the NEUTRAL Chairman and move your own delegate (from the reserve) there instead. Gain 1 TR.": "Изисква се да имате Лидер на партия и че седящият Председател е нейтрален. Премахнете НЕЙТРАЛНИЯ Председател и преместете вашия делегат (от резервата) на негово място. Печелите 1 ТР.",

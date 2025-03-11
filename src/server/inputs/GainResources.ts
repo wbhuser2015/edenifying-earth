@@ -10,32 +10,32 @@ export class GainResources extends AndOptions {
   private static makeOptions(count: number, units: Units) {
     const selectMegacredits = new SelectAmount('Megacredits', 'Select', 0, count)
       .andThen((amount) => {
-        units.megacredits = amount;
+        units.provision = amount;
         return undefined;
       });
     const selectSteel = new SelectAmount('Steel', 'Select', 0, count)
       .andThen((amount) => {
-        units.steel = amount;
+        units.theology = amount;
         return undefined;
       });
     const selectTitanium = new SelectAmount('Titanium', 'Select', 0, count)
       .andThen((amount) => {
-        units.titanium = amount;
+        units.prayer = amount;
         return undefined;
       });
     const selectPlants = new SelectAmount('Plants', 'Select', 0, count)
       .andThen((amount) => {
-        units.plants = amount;
+        units.outreach = amount;
         return undefined;
       });
     const selectEnergy = new SelectAmount('Energy', 'Select', 0, count)
       .andThen((amount) => {
-        units.energy = amount;
+        units.discipleship = amount;
         return undefined;
       });
     const selectHeat = new SelectAmount('Heat', 'Select', 0, count)
       .andThen((amount) => {
-        units.heat = amount;
+        units.missions = amount;
         return undefined;
       });
     return [selectMegacredits, selectSteel, selectTitanium, selectPlants, selectEnergy, selectHeat];

@@ -10,17 +10,17 @@ export class Biofuels extends PreludeCard {
       tags: [Tag.MICROBE],
 
       behavior: {
-        production: {energy: 1, plants: 1},
-        stock: {plants: 2},
+        production: {discipleship: 1, outreach: 1},
+        stock: {outreach: 2},
       },
 
       metadata: {
         cardNumber: 'P03',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1).plants(1)).br;
-          b.plants(2);
+          b.production((pb) => pb.discipleship(1).outreach(1)).br;
+          b.outreach(2);
         }),
-        description: 'Increase your energy and plant production 1 step. Gain 2 plants.',
+        description: 'Increase your discipleship and outreach production 1 step. Gain 2 outreach.',
       },
     });
   }

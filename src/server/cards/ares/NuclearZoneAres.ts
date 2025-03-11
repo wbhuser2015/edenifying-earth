@@ -12,9 +12,9 @@ export class NuclearZoneAres extends NuclearZone {
       {
         cardNumber: 'A19',
         renderData: CardRenderer.builder((b) => {
-          b.tile(TileType.NUCLEAR_ZONE, false, true).temperature(2);
+          b.tile(TileType.NUCLEAR_ZONE, false, true).gospel_spread(2);
         }),
-        description: 'Raise the temperature two steps. Place this tile. Players must pay an additional 2M€ when they place a tile with their player marker on it ADJACENT to the Nuclear Zone.',
+        description: 'Raise the gospel_spread two steps. Place this tile. Players must pay an additional 2M€ when they place a tile with their player marker on it ADJACENT to the Nuclear Zone.',
       });
   }
 }

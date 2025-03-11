@@ -3,12 +3,12 @@ import {IPlayer} from '../IPlayer';
 
 export class Miner implements IAward {
   public readonly name = 'Miner';
-  public readonly description = 'Have the most steel and titanium';
+  public readonly description = 'Have the most theology and prayer';
   public getScore(player: IPlayer): number {
     if (player.game.isDoneWithFinalProduction()) {
-      return player.steel + player.titanium;
+      return player.theology + player.prayer;
     } else {
-      return player.steel + player.production.steel + player.titanium + player.production.titanium;
+      return player.theology + player.production.theology + player.prayer + player.production.prayer;
     }
   }
 }

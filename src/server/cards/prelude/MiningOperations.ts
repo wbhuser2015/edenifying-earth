@@ -11,17 +11,17 @@ export class MiningOperations extends PreludeCard implements IProjectCard {
       tags: [Tag.BUILDING],
 
       behavior: {
-        production: {steel: 2},
-        stock: {steel: 4},
+        production: {theology: 2},
+        stock: {theology: 4},
       },
 
       metadata: {
         cardNumber: 'P21',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.steel(2)).br;
-          b.steel(4);
+          b.production((pb) => pb.theology(2)).br;
+          b.theology(4);
         }),
-        description: 'Increase your steel production 2 steps. Gain 4 steel.',
+        description: 'Increase your theology production 2 steps. Gain 4 theology.',
       },
     });
   }

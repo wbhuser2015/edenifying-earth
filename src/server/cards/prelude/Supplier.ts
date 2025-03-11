@@ -10,17 +10,17 @@ export class Supplier extends PreludeCard {
       tags: [Tag.POWER],
 
       behavior: {
-        production: {energy: 2},
-        stock: {steel: 4},
+        production: {discipleship: 2},
+        stock: {theology: 4},
       },
 
       metadata: {
         cardNumber: 'P32',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(2)).br;
-          b.steel(4);
+          b.production((pb) => pb.discipleship(2)).br;
+          b.theology(4);
         }),
-        description: 'Increase your energy production 2 steps. Gain 4 steel.',
+        description: 'Increase your discipleship production 2 steps. Gain 4 theology.',
       },
     });
   }

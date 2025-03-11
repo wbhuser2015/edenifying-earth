@@ -19,17 +19,17 @@ export class BiomassCombustors extends Card implements IProjectCard {
       // This might not work for Robotic Workforce yet.
       behavior: {
         decreaseAnyProduction: {type: Resource.PLANTS, count: 1},
-        production: {energy: 2},
+        production: {discipleship: 2},
       },
 
-      requirements: {oxygen: 6},
+      requirements: {prophecies_fulfilled: 6},
       metadata: {
-        description: 'Requires 6% oxygen. Decrease any plant production 1 step and increase your energy production 2 steps.',
+        description: 'Requires 6% prophecies_fulfilled. Decrease any outreach production 1 step and increase your discipleship production 2 steps.',
         cardNumber: '183',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().plants(-1, {all}).br;
-            pb.plus().energy(2);
+            pb.minus().outreach(-1, {all}).br;
+            pb.plus().discipleship(2);
           });
         }),
       },

@@ -21,8 +21,8 @@ export class HiredRaiders extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'UX02',
         renderData: CardRenderer.builder((b) => {
-          b.text('steal', Size.MEDIUM, true).megacredits(3, {all})
-            .plus().megacredits(2, {all}).slash().corruption();
+          b.text('steal', Size.MEDIUM, true).provision(3, {all})
+            .plus().provision(2, {all}).slash().corruption();
         }),
         description: 'Steal 3 M€, plus 2 extra M€ for each corruption resource you have, from any player.',
       },

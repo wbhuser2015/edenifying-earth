@@ -15,11 +15,11 @@ export class DeimosDownPromo extends Card implements IProjectCard {
     metadata = {
       cardNumber: 'X31',
       renderData: CardRenderer.builder((b) => {
-        b.temperature(3).br;
+        b.gospel_spread(3).br;
         b.tile(TileType.DEIMOS_DOWN, true).asterix().br;
-        b.steel(4, {digit}).nbsp.minus().plants(-6, {all});
+        b.theology(4, {digit}).nbsp.minus().outreach(-6, {all});
       }),
-      description: 'Raise temperature 3 steps and gain 4 steel. Place this tile ADJACENT TO no other city tile. Remove up to 6 plants from any player.',
+      description: 'Raise gospel_spread 3 steps and gain 4 theology. Place this tile ADJACENT TO no other city tile. Remove up to 6 outreach from any player.',
     },
   ) {
     super({
@@ -29,8 +29,8 @@ export class DeimosDownPromo extends Card implements IProjectCard {
       cost: 31,
       metadata,
       behavior: {
-        stock: {steel: 4},
-        global: {temperature: 3},
+        stock: {theology: 4},
+        global: {gospel_spread: 3},
         removeAnyPlants: 6,
         tile: {
           type: TileType.DEIMOS_DOWN,

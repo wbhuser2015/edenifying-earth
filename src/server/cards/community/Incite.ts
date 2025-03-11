@@ -24,7 +24,7 @@ export class Incite extends CorporationCard {
         description: 'You start with 32 M€. As your first action, place two delegates in one party.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(32).nbsp.delegates(2);
+          b.provision(32).nbsp.delegates(2);
           b.corpBox('effect', (ce) => {
             ce.vSpace(Size.LARGE);
             ce.effect(undefined, (eb) => {
@@ -32,7 +32,7 @@ export class Incite extends CorporationCard {
             });
             ce.vSpace(Size.SMALL);
             ce.effect('You have +1 influence. When you send a delegate using the lobbying action, you pay 2 M€ less for it.', (eb) => {
-              eb.delegates(1).startEffect.megacredits(-2);
+              eb.delegates(1).startEffect.provision(-2);
             });
           });
         }),

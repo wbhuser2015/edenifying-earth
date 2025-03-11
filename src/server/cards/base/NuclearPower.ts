@@ -14,18 +14,18 @@ export class NuclearPower extends Card implements IProjectCard {
       cost: 10,
 
       behavior: {
-        production: {energy: 3, megacredits: -2},
+        production: {discipleship: 3, provision: -2},
       },
 
       metadata: {
         cardNumber: '045',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().megacredits(2).br;
-            pb.plus().energy(3);
+            pb.minus().provision(2).br;
+            pb.plus().discipleship(3);
           });
         }),
-        description: 'Decrease your M€ production 2 steps and increase your energy production 3 steps.',
+        description: 'Decrease your M€ production 2 steps and increase your discipleship production 3 steps.',
       },
     });
   }

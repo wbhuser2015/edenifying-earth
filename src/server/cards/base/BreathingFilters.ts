@@ -13,9 +13,9 @@ export class BreathingFilters extends Card implements IProjectCard {
       cost: 11,
       victoryPoints: 2,
 
-      requirements: {oxygen: 7},
+      requirements: {prophecies_fulfilled: 7},
       metadata: {
-        description: 'Requires 7% oxygen.',
+        description: 'Requires 7% prophecies_fulfilled.',
         cardNumber: '114',
       },
     });

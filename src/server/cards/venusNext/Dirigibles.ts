@@ -26,7 +26,7 @@ export class Dirigibles extends ActionCard implements IActionCard {
             eb.empty().startAction.resource(CardResource.FLOATER).asterix();
           }).br;
           b.effect('When playing a Venus tag, Floaters here may be used as payment, and are worth 3M€ each.', (eb) => {
-            eb.tag(Tag.VENUS).startEffect.resource(CardResource.FLOATER).equals().megacredits(3);
+            eb.tag(Tag.VENUS).startEffect.resource(CardResource.FLOATER).equals().provision(3);
           });
         }),
       },

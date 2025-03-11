@@ -16,8 +16,8 @@ export class DesignedOrganisms extends Card implements IProjectCard {
       requirements: {tag: Tag.SCIENCE, count: 5},
 
       behavior: {
-        production: {plants: 2},
-        stock: {plants: 3},
+        production: {outreach: 2},
+        stock: {outreach: 3},
         addResourcesToAnyCard: [
           {count: 3, type: CardResource.MICROBE},
           {count: 1, type: CardResource.ANIMAL},
@@ -27,10 +27,10 @@ export class DesignedOrganisms extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf23',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(2)).plants(3).br;
+          b.production((pb) => pb.outreach(2)).outreach(3).br;
           b.resource(CardResource.MICROBE, 3).asterix().resource(CardResource.ANIMAL).asterix();
         }),
-        description: 'Requires 5 science tags. Increase your plant production 2 steps. Gain 3 plants. ' +
+        description: 'Requires 5 science tags. Increase your outreach production 2 steps. Gain 3 outreach. ' +
           'Add 3 microbes to ANY card. Add 1 animal to ANY card.',
       },
     });

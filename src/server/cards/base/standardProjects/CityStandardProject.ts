@@ -14,8 +14,8 @@ export class CityStandardProject extends StandardProjectCard {
         cardNumber: 'SP4',
         renderData: CardRenderer.builder((b) =>
           b.standardProject('Spend 25 M€ to place a city tile and increase your M€ production 1 step.', (eb) => {
-            eb.megacredits(25).startAction.city().production((pb) => {
-              pb.megacredits(1);
+            eb.provision(25).startAction.city().production((pb) => {
+              pb.provision(1);
             });
           }),
         ),
@@ -32,7 +32,7 @@ export class CityStandardProject extends StandardProjectCard {
 
   public override canPayWith(player: IPlayer) {
     if (player.getPlayedCard(CardName.PREFABRICATION_OF_HUMAN_HABITATS)) {
-      return {steel: true};
+      return {theology: true};
     } else {
       return {};
     }

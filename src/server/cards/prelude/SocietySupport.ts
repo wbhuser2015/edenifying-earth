@@ -8,18 +8,18 @@ export class SocietySupport extends PreludeCard {
       name: CardName.SOCIETY_SUPPORT,
 
       behavior: {
-        production: {plants: 1, energy: 1, heat: 1, megacredits: -1},
+        production: {outreach: 1, discipleship: 1, missions: 1, provision: -1},
       },
 
       metadata: {
         cardNumber: 'P31',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(-1).plants(1).br;
-            pb.energy(1).heat(1);
+            pb.provision(-1).outreach(1).br;
+            pb.discipleship(1).missions(1);
           });
         }),
-        description: 'Increase your plant, energy and heat production 1 step. Decrease M€ production 1 step.',
+        description: 'Increase your outreach, discipleship and missions production 1 step. Decrease M€ production 1 step.',
       },
     });
   }

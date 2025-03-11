@@ -5,7 +5,7 @@ import {CardRenderer} from '../render/CardRenderer';
 import {Card} from '../Card';
 import {IPlayer} from '../../IPlayer';
 import {Tag} from '../../../common/cards/Tag';
-import {PlaceOceanTile} from '../../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../../deferredActions/PlaceUnreachedTile';
 
 export class SubterraneanSea extends Card implements IProjectCard {
   constructor() {
@@ -15,14 +15,14 @@ export class SubterraneanSea extends Card implements IProjectCard {
       cost: 10,
       tags: [Tag.BUILDING],
 
-      tr: {oceans: 1},
+      tr: {Unreached: 1},
 
       metadata: {
         cardNumber: 'U15',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).excavate().asterix();
+          b.Unreached(1).excavate().asterix();
         }),
-        description: 'Place an ocean tile ON AN AREA NOT RESERVED FOR OCEAN where you have an excavation marker.',
+        description: 'Place an Unreached tile ON AN AREA NOT RESERVED FOR OCEAN where you have an excavation marker.',
       },
     });
   }
@@ -31,20 +31,20 @@ export class SubterraneanSea extends Card implements IProjectCard {
     const availableSpcesOnLand = player.game.board.getAvailableSpacesOnLand(
       player, {
         cost: player.getCardCost(this),
-        tr: {oceans: 1},
+        tr: {Unreached: 1},
       });
     return availableSpcesOnLand.filter((space) => space.excavator === player);
   }
 
   public override bespokeCanPlay(player: IPlayer) {
-    if (!player.game.canAddOcean()) {
-      this.warnings.add('maxoceans');
+    if (!player.game.canAddUnreached()) {
+      this.warnings.add('maxUnreached');
     }
     return this.availableSpaces(player).length > 0;
   }
 
   public override bespokePlay(player: IPlayer) {
-    player.game.defer(new PlaceOceanTile(player, {
+    player.game.defer(new PlaceUnreachedTile(player, {
       spaces: this.availableSpaces(player),
     }));
     return undefined;

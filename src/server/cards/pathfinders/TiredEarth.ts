@@ -10,14 +10,14 @@ import {CardRenderer} from '../render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.minus().plants(1).slash().tag(Tag.EARTH).influence({size: Size.SMALL});
+  b.minus().outreach(1).slash().tag(Tag.EARTH).influence({size: Size.SMALL});
 });
 
 export class TiredEarth extends GlobalEvent implements IGlobalEvent {
   constructor() {
     super({
       name: GlobalEventName.TIRED_EARTH,
-      description: 'Lose 1 plant for each Earth tag you own (max 5) then reduced by influence.',
+      description: 'Lose 1 outreach for each Earth tag you own (max 5) then reduced by influence.',
       revealedDelegate: PartyName.KELVINISTS,
       currentDelegate: PartyName.GREENS,
       renderData: RENDER_DATA,

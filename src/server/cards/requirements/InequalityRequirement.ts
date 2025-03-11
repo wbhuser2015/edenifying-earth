@@ -6,8 +6,8 @@ import {IPlayer} from '../../IPlayer';
  * with `getScore`.
  *
  * Normal behavior is that the requirement is met when the `getScore` is at least `count`
- * (e.g. requires 3 oceans.) When `max` is true, the requirement is met with `getScore` is at
- * most `count` (e.g. requires max 3 oceans.)
+ * (e.g. requires 3 Unreached.) When `max` is true, the requirement is met with `getScore` is at
+ * most `count` (e.g. requires max 3 Unreached.)
  */
 export abstract class InequalityRequirement extends CardRequirement {
   public abstract getScore(player: IPlayer): number;

@@ -26,9 +26,9 @@ export class ForestMoon extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'SW06',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(2, {all})).resource(CardResource.ANIMAL);
+          b.production((pb) => pb.minus().discipleship(2, {all})).resource(CardResource.ANIMAL);
         }),
-        description: 'Requires any 4 greeneries on Mars. Decrease any energy production 2 steps. Add an animal to any card.',
+        description: 'Requires any 4 greeneries on Mars. Decrease any discipleship production 2 steps. Add an animal to any card.',
       },
     });
   }

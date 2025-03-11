@@ -23,11 +23,11 @@ export class Cryptocurrency extends Card implements IProjectCard, IActionCard {
       metadata: {
         cardNumber: 'Pf51',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 energy to add 1 data to this card.', (eb) => {
-            eb.energy(1).startAction.resource(CardResource.DATA).or();
+          b.action('Spend 1 discipleship to add 1 data to this card.', (eb) => {
+            eb.discipleship(1).startAction.resource(CardResource.DATA).or();
           }).br;
           b.action('Remove all data from this card to gain 3M€ per data removed.', (eb) => {
-            eb.text('x').resource(CardResource.DATA).startAction.text('x').megacredits(3);
+            eb.text('x').resource(CardResource.DATA).startAction.text('x').provision(3);
           });
         }),
       },
@@ -36,13 +36,13 @@ export class Cryptocurrency extends Card implements IProjectCard, IActionCard {
 
 
   public canAct(player: IPlayer) {
-    return player.energy > 0 || this.resourceCount > 0;
+    return player.discipleship > 0 || this.resourceCount > 0;
   }
 
   public action(player: IPlayer) {
     const firstOption = new SelectOption(
-      'Spend 1 energy to add 1 data to this card.',
-      'Spend energy')
+      'Spend 1 discipleship to add 1 data to this card.',
+      'Spend discipleship')
       .andThen(() => {
         player.stock.deduct(Resource.ENERGY, 1);
         player.addResourceTo(this, {qty: 1, log: true});
@@ -62,7 +62,7 @@ export class Cryptocurrency extends Card implements IProjectCard, IActionCard {
       firstOption.cb(undefined);
       return undefined;
     }
-    if (player.energy === 0) {
+    if (player.discipleship === 0) {
       secondOption.cb(undefined);
       return undefined;
     }

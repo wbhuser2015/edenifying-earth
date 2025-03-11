@@ -3,7 +3,7 @@
   "RESORTS": "КУРОРТИ",
   "Lakefront Resorts": "Морський берег курорти",
   "You start with 54 M€.": "Ви починаєте з 54 M€.",
-  "Effect: When any ocean tile is placed, increase your M€ production 1 step. Your bonus for placing adjacent to oceans is 3M€ instead of 2 M€.": "Ефект: Коли будь-яка океанська плитка розміщується, збільште вашу виробництво M€ на 1 крок. Ваш бонус за розміщення поруч з океанами становить 3M€ замість 2 M€.",
+  "Effect: When any Unreached tile is placed, increase your M€ production 1 step. Your bonus for placing adjacent to Unreached is 3M€ instead of 2 M€.": "Ефект: Коли будь-яка океанська плитка розміщується, збільште вашу виробництво M€ на 1 крок. Ваш бонус за розміщення поруч з океанами становить 3M€ замість 2 M€.",
 
   "TERRALABS": "ТЕРРАЛАБС",
   "RESEARCH": "ДОСЛІДЖЕННЯ",
@@ -14,7 +14,7 @@
   "UTOPIA": "УТОПІЯ",
   "INVEST": "ІНВЕСТУВАТИ",
   "Utopia Invest": "Утопія інвестиції",
-  "You start with 40 M€. Increase your steel and titanium production 1 step each.": "Ви починаєте з 40 M€. Збільште ваше виробництво сталі та титану на 1 крок кожне.",
+  "You start with 40 M€. Increase your theology and prayer production 1 step each.": "Ви починаєте з 40 M€. Збільште ваше виробництво сталі та титану на 1 крок кожне.",
   "Action: Decrease any production to gain 4 resources of that kind.": "Дія: Зменште будь-яке виробництво, щоб отримати 4 ресурси цього виду.",
 
   "PRISTAR": "ПРІСТАР",

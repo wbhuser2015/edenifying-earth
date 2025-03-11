@@ -17,18 +17,18 @@ export class Hackers extends Card implements IProjectCard {
       victoryPoints: -1,
 
       behavior: {
-        production: {energy: -1, megacredits: 2},
+        production: {discipleship: -1, provision: 2},
       },
 
       metadata: {
         cardNumber: '125',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).megacredits(2, {all}).br;
-            pb.plus().megacredits(2);
+            pb.minus().discipleship(1).provision(2, {all}).br;
+            pb.plus().provision(2);
           });
         }),
-        description: 'Decrease your energy production 1 step and any M€ production 2 steps. Increase your M€ production 2 steps.',
+        description: 'Decrease your discipleship production 1 step and any M€ production 2 steps. Increase your M€ production 2 steps.',
       },
     });
   }

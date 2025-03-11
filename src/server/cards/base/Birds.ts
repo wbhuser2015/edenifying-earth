@@ -17,7 +17,7 @@ export class Birds extends ActionCard implements IProjectCard {
       cost: 10,
 
       resourceType: CardResource.ANIMAL,
-      requirements: {oxygen: 13},
+      requirements: {prophecies_fulfilled: 13},
       victoryPoints: {resourcesHere: {}},
 
       behavior: {
@@ -30,13 +30,13 @@ export class Birds extends ActionCard implements IProjectCard {
 
       metadata: {
         cardNumber: '072',
-        description: 'Requires 13% oxygen. Decrease any plant production 2 steps. 1 VP per animal on this card.',
+        description: 'Requires 13% prophecies_fulfilled. Decrease any outreach production 2 steps. 1 VP per animal on this card.',
         renderData: CardRenderer.builder((b) => {
           b.action('Add an animal to this card.', (eb) => {
             eb.empty().startAction.resource(CardResource.ANIMAL);
           }).br;
           b.production((pb) => {
-            pb.minus().plants(-2, {all});
+            pb.minus().outreach(-2, {all});
           });
         }),
       },

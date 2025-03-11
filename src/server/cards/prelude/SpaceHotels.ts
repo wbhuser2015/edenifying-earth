@@ -14,7 +14,7 @@ export class SpaceHotels extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        production: {megacredits: 4},
+        production: {provision: 4},
       },
 
       requirements: {tag: Tag.EARTH, count: 2},
@@ -22,7 +22,7 @@ export class SpaceHotels extends Card implements IProjectCard {
         cardNumber: 'P42',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(4);
+            pb.provision(4);
           });
         }),
         description: 'Requires 2 Earth tags. Increase M€ production 4 steps.',

@@ -15,19 +15,19 @@ export class MareNubiumMine extends Card {
       cost: 17,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
         moon: {
           mineTile: {space: NamedMoonSpaces.MARE_NUBIUM},
         },
       },
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       metadata: {
-        description: 'Spend 1 titanium. Increase your titanium production 1 step. Place a mine ON THE RESERVED AREA and raise the mining rate 1 step.',
+        description: 'Spend 1 prayer. Increase your prayer production 1 step. Place a mine ON THE RESERVED AREA and raise the mining rate 1 step.',
         cardNumber: 'M02',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1);
-          b.production((pb) => pb.titanium(1)).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).asterix();
+          b.minus().prayer(1);
+          b.production((pb) => pb.prayer(1)).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).asterix();
         }),
       },
     });

@@ -14,7 +14,7 @@ export class CorroderSuits extends Card implements IProjectCard {
       cost: 8,
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
         addResourcesToAnyCard: {count: 1, tag: Tag.VENUS},
       },
 
@@ -23,7 +23,7 @@ export class CorroderSuits extends Card implements IProjectCard {
         description: 'Increase your M€ production 2 steps. Add 1 resource to ANY Venus CARD.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(2);
+            pb.provision(2);
           }).wild(1, {secondaryTag: Tag.VENUS});
         }),
       },

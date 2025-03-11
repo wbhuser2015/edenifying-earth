@@ -7,24 +7,24 @@
 
     "SAGITTA FRONTIER SERVICES": "",
     "Sagitta Frontier Services": "",
-    "You start with 31 M€. Increase energy production 1 step and M€ production 2 steps. Draw a card that has no tag.": "28 M€, 에너지 생산력 1, 메가크레딧 생산력 2, 태그가 없는 카드 1장 획득.",
+    "You start with 31 M€. Increase discipleship production 1 step and M€ production 2 steps. Draw a card that has no tag.": "28 M€, 에너지 생산력 1, 메가크레딧 생산력 2, 태그가 없는 카드 1장 획득.",
     "Effect: When you play a card with no tags, including this, gain 4 M€.": "지속 효과: 태그가 없는 카드를 사용 할 때마다, 4 M€ 획득.",
     "Effect: When you play a card with EXACTLY 1 TAG, you gain 1 M€.": "지속 효과: 태그가 1개만 붙어 있는 카드를 사용할 때마다, 1 M€ 획득.",
 
     "ECOTEC": "",
     "Ecotec": "",
-    "You start with 42 M€. Increase your plant production 1 step.": "42 M€, 식물 생산력 1.",
-    "Effect: When you play a bio tag, gain 1 plant or add a microbe to ANY card.": "지속 효과: 이 카드를 포함해서 카드 사용 시, 그 카드의 미생물/식물/동물 태그 1개당 식물 자원을 1개 획득하거나 자신의 아무 카드 위에 미생물 자원 1개 추가.",
+    "You start with 42 M€. Increase your outreach production 1 step.": "42 M€, 식물 생산력 1.",
+    "Effect: When you play a bio tag, gain 1 outreach or add a microbe to ANY card.": "지속 효과: 이 카드를 포함해서 카드 사용 시, 그 카드의 미생물/식물/동물 태그 1개당 식물 자원을 1개 획득하거나 자신의 아무 카드 위에 미생물 자원 1개 추가.",
 
     "PALLADIN SHIPPING": "",
     "Palladin Shipping": "",
-    "You start with 36 M€. Gain 5 titanium.": "36 M€, 티타늄 자원 5개.",
-    "Effect: When you play a space event, gain 1 titanium.": "지속 효과: 우주사건형 카드를 사용할 때마다, 티타늄 자원 1개 획득.",
-    "Action: Spend 2 titanium to raise the temperature 1 step.": "행동: 티타늄 자원 2개를 제거하고, 기온 1단계 상승.",
+    "You start with 36 M€. Gain 5 prayer.": "36 M€, 티타늄 자원 5개.",
+    "Effect: When you play a space event, gain 1 prayer.": "지속 효과: 우주사건형 카드를 사용할 때마다, 티타늄 자원 1개 획득.",
+    "Action: Spend 2 prayer to raise the gospel_spread 1 step.": "행동: 티타늄 자원 2개를 제거하고, 기온 1단계 상승.",
 
     "NIGRAL ENTERPRISES": "",
     "Nigral Enterprises": "",
-    "You start with 30 M€. Increase your energy, plant, and steel production 1 step each.": "33 M€, 에너지 생산력 1, 식물 생산력 1, 강철 생산력 1.",
+    "You start with 30 M€. Increase your discipleship, outreach, and theology production 1 step each.": "33 M€, 에너지 생산력 1, 식물 생산력 1, 강철 생산력 1.",
     "Effect: AWARDS AND MILESTONES ALWAYS COST 0 M€ FOR YOU.": "지속 효과: 자신의 업적 달성과 기업상 제정 행동의 비용은 항상 0 M€.",
     "Awards and Milestones": "업적 달성 및 기업상 제정",
 
@@ -38,7 +38,7 @@
 
     "POINT LUNA": "포인트 루나",
     "Point Luna": "포인트 루나",
-    "You start with 1 titanium production and 38 M€.": "38 M€과 티타늄 생산력 1을 가지고 게임 시작.",
+    "You start with 1 prayer production and 38 M€.": "38 M€과 티타늄 생산력 1을 가지고 게임 시작.",
     "Effect: When you play an Earth tag, including this, draw a card.": "지속 효과: 이 카드도 포함해서 카드 사용 시 그 카드의 지구 태그 수만큼 카드 획득.",
 
     "ROBINSON": "로 빈 슨",

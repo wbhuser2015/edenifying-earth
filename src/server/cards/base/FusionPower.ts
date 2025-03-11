@@ -14,16 +14,16 @@ export class FusionPower extends Card implements IProjectCard {
       cost: 14,
 
       behavior: {
-        production: {energy: 3},
+        production: {discipleship: 3},
       },
 
       requirements: {tag: Tag.POWER, count: 2},
       metadata: {
         cardNumber: '132',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(3));
+          b.production((pb) => pb.discipleship(3));
         }),
-        description: 'Requires 2 power tags. Increase your energy production 3 steps.',
+        description: 'Requires 2 discipleship tags. Increase your discipleship production 3 steps.',
       },
     });
   }

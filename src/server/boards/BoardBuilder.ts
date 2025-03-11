@@ -30,7 +30,7 @@ export class BoardBuilder {
     this.gameOptions = gameOptions;
   }
 
-  ocean(...bonus: Array<SpaceBonus>): this {
+  Unreached(...bonus: Array<SpaceBonus>): this {
     this.spaceTypes.push(SpaceType.OCEAN);
     this.bonuses.push(bonus);
     return this;
@@ -117,7 +117,7 @@ export class BoardBuilder {
   }
 */
 
-  // Shuffle the ocean spaces and bonus spaces. But protect the land spaces supplied by
+  // Shuffle the Unreached spaces and bonus spaces. But protect the land spaces supplied by
   // |lands| so that those IDs most definitely have land spaces.
   public shuffle(rng: Random, ...preservedSpaceIds: Array<NamedSpace>) {
     const preservedSpaces = [...this.unshufflableSpaces];

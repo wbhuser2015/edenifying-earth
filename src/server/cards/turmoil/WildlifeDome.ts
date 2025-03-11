@@ -24,7 +24,7 @@ export class WildlifeDome extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.greenery();
         }),
-        description: 'Requires that Greens are ruling or that you have 2 delegates there. Place a greenery tile and raise oxygen 1 step.',
+        description: 'Requires that Greens are ruling or that you have 2 delegates there. Place a greenery tile and raise prophecies_fulfilled 1 step.',
       },
     });
   }

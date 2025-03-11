@@ -22,10 +22,10 @@ export class Aridor extends CorporationCard {
         description: 'You start with 40 M€. As your first action, put an additional Colony Tile of your choice into play',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(40).nbsp.colonyTile();
+          b.provision(40).nbsp.colonyTile();
           b.corpBox('effect', (ce) => {
             ce.effect('When you get a new type of tag in play [event cards do not count], increase your M€ production 1 step.', (eb) => {
-              eb.diverseTag().startEffect.production((pb) => pb.megacredits(1));
+              eb.diverseTag().startEffect.production((pb) => pb.provision(1));
             });
           });
         }),

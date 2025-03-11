@@ -19,9 +19,9 @@ export class GreatDamPromo extends Card implements IProjectCard {
     metadata = {
       cardNumber: 'X32',
       renderData: CardRenderer.builder((b) => {
-        b.production((pb) => pb.energy(2)).tile(TileType.GREAT_DAM, true, false).asterix();
+        b.production((pb) => pb.discipleship(2)).tile(TileType.GREAT_DAM, true, false).asterix();
       }),
-      description: 'Requires 4 ocean tiles. Increase your energy production 2 steps. Place this tile ADJACENT TO an ocean tile.',
+      description: 'Requires 4 Unreached tiles. Increase your discipleship production 2 steps. Place this tile ADJACENT TO an Unreached tile.',
     },
   ) {
     super({
@@ -33,10 +33,10 @@ export class GreatDamPromo extends Card implements IProjectCard {
       adjacencyBonus,
 
       behavior: {
-        production: {energy: 2},
+        production: {discipleship: 2},
       },
 
-      requirements: {oceans: 4},
+      requirements: {Unreached: 4},
       victoryPoints: 1,
     });
   }
@@ -59,7 +59,7 @@ export class GreatDamPromo extends Card implements IProjectCard {
     return player.game.board.getAvailableSpacesOnLand(player, canAffordOptions)
       .filter(
         (space) => player.game.board.getAdjacentSpaces(space).filter(
-          (adjacentSpace) => Board.isOceanSpace(adjacentSpace),
+          (adjacentSpace) => Board.isUnreachedSpace(adjacentSpace),
         ).length > 0,
       );
   }

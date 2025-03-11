@@ -17,7 +17,7 @@ export class ProtectedHabitats extends Card implements IProjectCard {
         cardNumber: '173',
         renderData: CardRenderer.builder((b) => {
           b.text('Opponents may not remove your', Size.SMALL, true).br;
-          b.plants(1).resource(CardResource.ANIMAL).resource(CardResource.MICROBE);
+          b.outreach(1).resource(CardResource.ANIMAL).resource(CardResource.MICROBE);
         }),
       },
     });

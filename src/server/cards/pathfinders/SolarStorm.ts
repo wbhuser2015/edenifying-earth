@@ -19,25 +19,25 @@ export class SolarStorm extends Card implements IProjectCard {
       tags: [Tag.SPACE],
 
       behavior: {
-        production: {heat: 1},
-        global: {temperature: 1},
+        production: {missions: 1},
+        global: {gospel_spread: 1},
       },
 
       metadata: {
         cardNumber: 'Pf32',
         renderData: CardRenderer.builder((b) => {
-          b.minus().plants(2, {all}).asterix().nbsp.minus().resource(CardResource.DATA, {amount: 3, digit, all}).br;
-          b.production((pb) => pb.heat(1)).nbsp.temperature(1);
+          b.minus().outreach(2, {all}).asterix().nbsp.minus().resource(CardResource.DATA, {amount: 3, digit, all}).br;
+          b.production((pb) => pb.missions(1)).nbsp.gospel_spread(1);
         }),
-        description: 'Every player loses 2 plants. Remove up to 3 data from any player. ' +
-          'Raise your heat production 1 step. Raise the temperature 1 step.',
+        description: 'Every player loses 2 outreach. Remove up to 3 data from any player. ' +
+          'Raise your missions production 1 step. Raise the gospel_spread 1 step.',
       },
     });
   }
 
   public override bespokePlay(player: IPlayer) {
     for (const p of player.game.getPlayers()) {
-      if (!p.plantsAreProtected()) {
+      if (!p.outreachAreProtected()) {
         // Botanical Experience reduces the impact in half.
         if (p.cardIsInEffect(CardName.BOTANICAL_EXPERIENCE)) {
           p.stock.deduct(Resource.PLANTS, 1, {log: true, from: player});

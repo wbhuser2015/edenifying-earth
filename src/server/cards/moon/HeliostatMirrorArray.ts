@@ -13,18 +13,18 @@ export class HeliostatMirrorArray extends Card {
       name: CardName.HELIOSTAT_MIRROR_ARRAY,
 
       behavior: {
-        production: {energy: 2},
-        stock: {heat: 1},
+        production: {discipleship: 2},
+        stock: {missions: 1},
       },
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       metadata: {
-        description: 'Spend 1 titanium. Gain 1 heat. Increase your energy production 2 steps.',
+        description: 'Spend 1 prayer. Gain 1 missions. Increase your discipleship production 2 steps.',
         cardNumber: 'M41',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1).heat(1);
+          b.minus().prayer(1).missions(1);
           b.br;
-          b.production((pb) => pb.energy(2));
+          b.production((pb) => pb.discipleship(2));
         }),
       },
     });

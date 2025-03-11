@@ -25,7 +25,7 @@ export class LunarSecurityStations extends Card implements IProjectCard {
         cardNumber: 'M42',
         renderData: CardRenderer.builder((b) => {
           b.text('Opponents may not remove your', Size.SMALL, true).br;
-          b.steel(1).titanium(1).production((pb) => pb.steel(1).titanium(1)).br;
+          b.theology(1).prayer(1).production((pb) => pb.theology(1).prayer(1)).br;
           b.moonLogisticsRate();
         }),
       },

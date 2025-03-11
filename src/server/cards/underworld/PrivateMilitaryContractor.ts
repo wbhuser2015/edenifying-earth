@@ -20,7 +20,7 @@ export class PrivateMilitaryContractor extends ActionCard implements IProjectCar
       },
 
       action: {
-        spend: {titanium: 1},
+        spend: {prayer: 1},
         addResources: 1,
       },
 
@@ -31,8 +31,8 @@ export class PrivateMilitaryContractor extends ActionCard implements IProjectCar
             'When blocking damage from other players, you can use fighters here as if they were corruption ' +
             'resources. You cannot use them for score bribing or collusion.',
             (eb) => eb.corruptionShield().startEffect.resource(CardResource.FIGHTER).equals().corruption().asterix()).br;
-          b.action('Spend 1 titanium to add 1 fighter resource to this card.',
-            (ab) => ab.titanium(1).startAction.resource(CardResource.FIGHTER)).br;
+          b.action('Spend 1 prayer to add 1 fighter resource to this card.',
+            (ab) => ab.prayer(1).startAction.resource(CardResource.FIGHTER)).br;
           b.resource(CardResource.FIGHTER);
         }),
         description: 'Add 1 fighter resource to this card.',

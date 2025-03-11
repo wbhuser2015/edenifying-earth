@@ -11,7 +11,7 @@ import {CardRenderer} from '../render/CardRenderer';
 import {PathfindersExpansion} from '../../pathfinders/PathfindersExpansion';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.megacredits(-10).nbsp.resource(CardResource.DATA, 2).asterix().nbsp;
+  b.provision(-10).nbsp.resource(CardResource.DATA, 2).asterix().nbsp;
   b.resource(CardResource.DATA).slash().influence();
 });
 

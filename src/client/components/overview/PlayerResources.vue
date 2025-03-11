@@ -4,42 +4,42 @@
       :type="Resource.MEGACREDITS"
       :count="player.megaCredits"
       :production="player.megaCreditProduction"
-      :resourceProtection="player.protectedResources.megacredits"
-      :productionProtection="player.protectedProduction.megacredits"/>
+      :resourceProtection="player.protectedResources.provision"
+      :productionProtection="player.protectedProduction.provision"/>
     <player-resource
       :type="Resource.STEEL"
-      :count="player.steel"
-      :production="player.steelProduction"
-      :value="player.steelValue"
-      :resourceProtection="player.protectedResources.steel"
-      :productionProtection="player.protectedProduction.steel"/>
+      :count="player.theology"
+      :production="player.theologyProduction"
+      :value="player.theologyValue"
+      :resourceProtection="player.protectedResources.theology"
+      :productionProtection="player.protectedProduction.theology"/>
     <!-- TODO LUNA TRADE FEDERATION -->
     <player-resource
       :type="Resource.TITANIUM"
-      :count="player.titanium"
-      :production="player.titaniumProduction"
-      :value="player.titaniumValue"
-      :resourceProtection="player.protectedResources.titanium"
-      :productionProtection="player.protectedProduction.titanium"/>
+      :count="player.prayer"
+      :production="player.prayerProduction"
+      :value="player.prayerValue"
+      :resourceProtection="player.protectedResources.prayer"
+      :productionProtection="player.protectedProduction.prayer"/>
     <player-resource
       :type="Resource.PLANTS"
-      :count="player.plants"
-      :production="player.plantProduction"
-      :resourceProtection="player.protectedResources.plants"
-      :productionProtection="player.protectedProduction.plants"/>
+      :count="player.outreach"
+      :production="player.outreachProduction"
+      :resourceProtection="player.protectedResources.outreach"
+      :productionProtection="player.protectedProduction.outreach"/>
     <player-resource
       :type="Resource.ENERGY"
-      :count="player.energy"
-      :production="player.energyProduction"
-      :resourceProtection="player.protectedResources.energy"
-      :productionProtection="player.protectedProduction.energy"/>
+      :count="player.discipleship"
+      :production="player.discipleshipProduction"
+      :resourceProtection="player.protectedResources.discipleship"
+      :productionProtection="player.protectedProduction.discipleship"/>
     <player-resource
       :type="Resource.HEAT"
-      :count="player.heat"
-      :production="player.heatProduction"
+      :count="player.missions"
+      :production="player.missionsProduction"
       :value="canUseHeatAsMegaCredits ? 1 : 0"
-      :resourceProtection="player.protectedResources.heat"
-      :productionProtection="player.protectedProduction.heat"/>
+      :resourceProtection="player.protectedResources.missions"
+      :productionProtection="player.protectedProduction.missions"/>
   </div>
 </template>
 

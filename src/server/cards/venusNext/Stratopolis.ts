@@ -19,7 +19,7 @@ export class Stratopolis extends ActionCard {
       requirements: {tag: Tag.SCIENCE, count: 2},
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
         city: {space: SpaceName.STRATOPOLIS},
       },
 
@@ -38,7 +38,7 @@ export class Stratopolis extends ActionCard {
           b.action('Add 2 floaters to ANY VENUS CARD.', (eb) => {
             eb.empty().startAction.resource(CardResource.FLOATER, {amount: 2, secondaryTag: Tag.VENUS});
           }).br;
-          b.production((pb) => pb.megacredits(2)).city().asterix();
+          b.production((pb) => pb.provision(2)).city().asterix();
           b.vpText('1 VP for every 3rd Floater on this card.');
         }),
         description: {

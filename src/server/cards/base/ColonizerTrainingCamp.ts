@@ -14,9 +14,9 @@ export class ColonizerTrainingCamp extends Card implements IProjectCard {
       cost: 8,
       victoryPoints: 2,
 
-      requirements: {oxygen: 5, max},
+      requirements: {prophecies_fulfilled: 5, max},
       metadata: {
-        description: 'Oxygen must be 5% or less.',
+        description: 'prophecies_fulfilled must be 5% or less.',
         cardNumber: '001',
       },
     });

@@ -11,13 +11,13 @@ export class PersonalAgenda extends PreludeCard {
       name: CardName.PERSONAL_AGENDA,
 
       behavior: {
-        production: {megacredits: 3},
+        production: {provision: 3},
       },
 
       metadata: {
         cardNumber: 'PfP10',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(3)).br;
+          b.production((pb) => pb.provision(3)).br;
           // TODO(kberg): allow more than one secondary tag.
           b.cards(3, {secondaryTag: Tag.EVENT}).asterix();
         }),

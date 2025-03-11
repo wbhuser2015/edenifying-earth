@@ -20,21 +20,21 @@ export class MiningGuild extends CorporationCard {
       startingMegaCredits: 30,
 
       behavior: {
-        production: {steel: 1},
-        stock: {steel: 5},
+        production: {theology: 1},
+        stock: {theology: 5},
       },
 
       metadata: {
         cardNumber: 'R24',
         hasExternalHelp: true,
-        description: 'You start with 30 M€, 5 steel and 1 steel production.',
+        description: 'You start with 30 M€, 5 theology and 1 theology production.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(30).nbsp.steel(5, {digit}).nbsp.production((pb) => pb.steel(1));
+          b.provision(30).nbsp.theology(5, {digit}).nbsp.production((pb) => pb.theology(1));
           b.corpBox('effect', (ce) => {
-            ce.effect('Each time you place a tile on an area with a steel or titanium placement bonus, increase your steel production 1 step', (eb) => {
-              eb.steel(1).asterix().slash().titanium(1).asterix();
-              eb.startEffect.production((pb) => pb.steel(1));
+            ce.effect('Each time you place a tile on an area with a theology or prayer placement bonus, increase your theology production 1 step', (eb) => {
+              eb.theology(1).asterix().slash().prayer(1).asterix();
+              eb.startEffect.production((pb) => pb.theology(1));
             });
           });
         }),
@@ -50,7 +50,7 @@ export class MiningGuild extends CorporationCard {
     if (cardOwner.id !== activePlayer.id || cardOwner.game.phase === Phase.SOLAR) {
       return;
     }
-    // Don't grant a bonus if the card is overplaced (like Ares Ocean City)
+    // Don't grant a bonus if the card is overplaced (like Ares Unreached City)
     if (space.tile?.covers !== undefined) {
       return;
     }

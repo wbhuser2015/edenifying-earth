@@ -19,21 +19,21 @@ export class ArtificialPhotosynthesis extends Card implements IProjectCard {
           autoSelect: true,
           behaviors: [
             {
-              production: {energy: 2},
-              title: 'Increase your energy production 2 steps',
+              production: {discipleship: 2},
+              title: 'Increase your discipleship production 2 steps',
             },
             {
-              production: {plants: 1},
-              title: 'Increase your plant production 1 step',
+              production: {outreach: 1},
+              title: 'Increase your outreach production 1 step',
             },
           ],
         },
       },
 
       metadata: {
-        description: 'Increase your plant production 1 step or your energy production 2 steps.',
+        description: 'Increase your outreach production 1 step or your discipleship production 2 steps.',
         cardNumber: '115',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.plants(1).or(Size.SMALL).energy(2))),
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.outreach(1).or(Size.SMALL).discipleship(2))),
       },
     });
   }

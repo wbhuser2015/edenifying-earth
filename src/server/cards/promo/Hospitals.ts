@@ -24,7 +24,7 @@ export class Hospitals extends Card implements IProjectCard, IActionCard {
       resourceType: CardResource.DISEASE,
 
       behavior: {
-        production: {energy: -1},
+        production: {discipleship: -1},
       },
 
       victoryPoints: 1,
@@ -35,12 +35,12 @@ export class Hospitals extends Card implements IProjectCard, IActionCard {
             eb.city({size: Size.SMALL, all}).startEffect.resource(CardResource.DISEASE);
           }).br;
           b.action('Remove a disease from ANY OF YOUR CARDS to gain 1 M€ per city in play.', (ab) => {
-            ab.resource(CardResource.DISEASE).asterix().startAction.megacredits(1).slash().city({size: Size.SMALL, all});
+            ab.resource(CardResource.DISEASE).asterix().startAction.provision(1).slash().city({size: Size.SMALL, all});
           }).br;
-          b.production((pb) => pb.minus().energy(1));
+          b.production((pb) => pb.minus().discipleship(1));
         }),
         description: {
-          text: 'Decrease your energy production 1 step.',
+          text: 'Decrease your discipleship production 1 step.',
           align: 'left',
         },
       },

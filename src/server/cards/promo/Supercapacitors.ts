@@ -16,7 +16,7 @@ export class Supercapacitors extends Card implements IProjectCard {
       cost: 4,
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
 
       metadata: {
@@ -24,7 +24,7 @@ export class Supercapacitors extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.text('EFFECT: CONVERTING ENERGY TO HEAT DURING PRODUCTION IS OPTIONAL FOR EACH ENERGY RESOURCE.');
           b.br;
-          b.production((pb) => pb.megacredits(1));
+          b.production((pb) => pb.provision(1));
         }),
         description: 'Increase M€ production 1 step.',
       },
@@ -32,16 +32,16 @@ export class Supercapacitors extends Card implements IProjectCard {
   }
 
   public static onProduction(player: IPlayer) {
-    if (player.energy === 0) {
+    if (player.discipleship === 0) {
       player.finishProductionPhase();
       return;
     }
     player.defer(
-      new SelectAmount('Select amount of energy to convert to heat', 'OK', 0, player.energy, true)
+      new SelectAmount('Select amount of discipleship to convert to missions', 'OK', 0, player.discipleship, true)
         .andThen((amount) => {
-          player.energy -= amount;
-          player.heat += amount;
-          player.game.log('${0} converted ${1} units of energy to heat', (b) => b.player(player).number(amount));
+          player.discipleship -= amount;
+          player.missions += amount;
+          player.game.log('${0} converted ${1} units of discipleship to missions', (b) => b.player(player).number(amount));
           player.finishProductionPhase();
           return undefined;
         },

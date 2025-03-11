@@ -29,7 +29,7 @@ export class DemetronLabs extends CorporationCard implements IActionCard {
         cardNumber: 'UC02',
         description: 'You start with 45 M€ and 3 data on this card.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(45).resource(CardResource.DATA, 3);
+          b.provision(45).resource(CardResource.DATA, 3);
           b.br;
           b.effect('After you identify 1 or more underground resources in a single action ' +
             'EXCEPT BY EXCAVATING, put 1 data on ANY card',

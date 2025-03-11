@@ -10,14 +10,14 @@ export class CO2Reducers extends PreludeCard {
       tags: [Tag.MICROBE, Tag.VENUS],
 
       behavior: {
-        production: {megacredits: 3},
+        production: {provision: 3},
         drawCard: {count: 2, tag: Tag.MICROBE},
       },
 
       metadata: {
         cardNumber: 'PfP03',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(3)).br;
+          b.production((pb) => pb.provision(3)).br;
           b.cards(2, {secondaryTag: Tag.MICROBE});
         }),
         description: 'Increase your M€ production 3 steps. Draw 2 cards with a microbe tag.',

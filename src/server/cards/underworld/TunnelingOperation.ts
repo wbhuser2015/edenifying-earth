@@ -11,15 +11,15 @@ export class TunnelingOperation extends PreludeCard {
 
       behavior: {
         underworld: {identify: 1, excavate: 2},
-        production: {steel: 2},
+        production: {theology: 2},
       },
 
       metadata: {
         cardNumber: 'UP05',
         renderData: CardRenderer.builder((b) => {
-          b.identify(1).excavate(2).production((pb) => pb.steel(2));
+          b.identify(1).excavate(2).production((pb) => pb.theology(2));
         }),
-        description: 'Identify 1 underground resource. Then excavate 2 underground resources. Increase your steel production 2 steps.',
+        description: 'Identify 1 underground resource. Then excavate 2 underground resources. Increase your theology production 2 steps.',
       },
     });
   }

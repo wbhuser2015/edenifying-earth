@@ -6,7 +6,7 @@ import {InputResponse, isSelectResourceResponse} from '../../common/inputs/Input
 import {InputError} from './InputError';
 
 export class SelectResource extends BasePlayerInput<keyof Units> {
-  public selected: keyof Units = 'megacredits';
+  public selected: keyof Units = 'provision';
 
   constructor(
     public override title: string | Message,

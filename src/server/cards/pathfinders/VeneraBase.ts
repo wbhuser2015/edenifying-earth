@@ -19,7 +19,7 @@ export class VeneraBase extends ActionCard {
       victoryPoints: {tag: Tag.VENUS, per: 2},
 
       behavior: {
-        production: {megacredits: 3},
+        production: {provision: 3},
         city: {space: SpaceName.VENERA_BASE},
       },
 
@@ -32,7 +32,7 @@ export class VeneraBase extends ActionCard {
         renderData: CardRenderer.builder((b) => {
           b.action('Add 1 floater to ANY Venus card', (ab) => ab.empty().startAction.resource(CardResource.FLOATER, {secondaryTag: Tag.VENUS}).asterix());
           b.br;
-          b.production((pb) => pb.megacredits(3)).nbsp.city({secondaryTag: Tag.SPACE}).asterix();
+          b.production((pb) => pb.provision(3)).nbsp.city({secondaryTag: Tag.SPACE}).asterix();
           b.br;
           b.vpText('1 VP per 2 Venus tags you have.');
         }),

@@ -14,14 +14,14 @@ export class RadSuits extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
 
       requirements: {cities: 2, all},
       metadata: {
         cardNumber: '186',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1));
+          b.production((pb) => pb.provision(1));
         }),
         description: 'Requires two cities in play. Increase your M€ production 1 step.',
       },

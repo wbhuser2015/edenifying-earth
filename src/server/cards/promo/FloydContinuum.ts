@@ -25,7 +25,7 @@ export class FloydContinuum extends Card implements IProjectCard, IActionCard {
         hasExternalHelp: true,
         renderData: CardRenderer.builder((b) => {
           b.action('Gain 3 M€ per completed terraforming parameter.', (eb) => {
-            eb.empty().startAction.megacredits(3).slash().oceans(1).oxygen(1).temperature(1).asterix();
+            eb.empty().startAction.provision(3).slash().Unreached(1).prophecies_fulfilled(1).gospel_spread(1).asterix();
           });
         }),
       },
@@ -39,13 +39,13 @@ export class FloydContinuum extends Card implements IProjectCard, IActionCard {
   public action(player: IPlayer) {
     let count = 0;
     const game = player.game;
-    if (game.getTemperature() === constants.MAX_TEMPERATURE) {
+    if (game.getgospel_spread() === constants.MAX_TEMPERATURE) {
       count++;
     }
-    if (game.getOxygenLevel() === constants.MAX_OXYGEN_LEVEL) {
+    if (game.getprophecies_fulfilledLevel() === constants.MAX_OXYGEN_LEVEL) {
       count++;
     }
-    if (!game.canAddOcean()) {
+    if (!game.canAddUnreached()) {
       count++;
     }
     if (game.getVenusScaleLevel() === constants.MAX_VENUS_SCALE) {

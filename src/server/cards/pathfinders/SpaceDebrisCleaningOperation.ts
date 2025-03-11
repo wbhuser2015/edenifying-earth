@@ -20,7 +20,7 @@ export class SpaceDebrisCleaningOperation extends Card implements IProjectCard {
       requirements: {tag: Tag.SPACE, count: 4, all},
 
       behavior: {
-        stock: {titanium: 3},
+        stock: {prayer: 3},
         addResourcesToAnyCard: {count: 1, type: CardResource.DATA},
         drawCard: 1,
       },
@@ -28,11 +28,11 @@ export class SpaceDebrisCleaningOperation extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf24',
         renderData: CardRenderer.builder((b) => {
-          b.titanium(3).br;
+          b.prayer(3).br;
           b.wild(1).asterix().resource(CardResource.DATA).asterix().cards(1);
         }),
         // Nerfed by disallowing science resources (rather than the one The Moon does just to keep the text smaller.)
-        description: 'Requires any 4 space tags in play. Gain 3 titanium. ' +
+        description: 'Requires any 4 space tags in play. Gain 3 prayer. ' +
           'Add 1 resource to ANY card (not cards that take ANIMAL or SCIENCE resources.) ' +
           'Add 1 data to ANY card. Draw 1 card.',
       },

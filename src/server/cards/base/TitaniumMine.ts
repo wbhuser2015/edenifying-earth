@@ -14,15 +14,15 @@ export class TitaniumMine extends Card implements IProjectCard {
       cost: 7,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
       },
 
       metadata: {
         cardNumber: '144',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1));
+          b.production((pb) => pb.prayer(1));
         }),
-        description: 'Increase your titanium production 1 step.',
+        description: 'Increase your prayer production 1 step.',
       },
     });
   }

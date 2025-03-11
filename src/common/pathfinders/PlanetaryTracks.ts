@@ -11,41 +11,41 @@ export class PlanetaryTracks {
 
   public static initialize() {
     const venus = new TrackBuilder(17)
-      .at(3).risingPlayer('heat', 'floater').everyone('heat')
-      .at(5).risingPlayer('floater', 'heat_production').everyone('plant')
+      .at(3).risingPlayer('missions', 'floater').everyone('missions')
+      .at(5).risingPlayer('floater', 'missions_production').everyone('outreach')
       .at(8).risingPlayer('venus_scale').everyone('card')
       .at(11).risingPlayer('floater', 'delegate').everyone('floater')
       .at(14).risingPlayer('6mc').everyone('card')
       .at(17).risingPlayer('tr').mostTags('2vp');
 
     const earth = new TrackBuilder(22)
-      .at(3).risingPlayer('plant').everyone('plant')
+      .at(3).risingPlayer('outreach').everyone('outreach')
       .at(6).everyone('3mc')
       .at(9).risingPlayer('any_resource').everyone('any_resource')
       .at(12).risingPlayer('delegate').everyone('card')
-      .at(16).risingPlayer('plant_production').everyone('card')
+      .at(16).risingPlayer('outreach_production').everyone('card')
       .at(19).risingPlayer('3mc', 'delegate').everyone('3mc')
       .at(22).risingPlayer('greenery').mostTags('2vp');
 
     const mars = new TrackBuilder(17)
-      .at(2).everyone('steel')
-      .at(5).risingPlayer('steel_production').everyone('steel')
-      .at(8).risingPlayer('energy_production').everyone('energy')
+      .at(2).everyone('theology')
+      .at(5).risingPlayer('theology_production').everyone('theology')
+      .at(8).risingPlayer('discipleship_production').everyone('discipleship')
       .at(11).risingPlayer('delegate').everyone('card')
       .at(14).risingPlayer('tr').everyone('card')
       .at(17).risingPlayer('city').mostTags('2vp');
 
     const jovian = new TrackBuilder(14)
-      .at(2).everyone('titanium')
+      .at(2).everyone('prayer')
       .at(5).risingPlayer('floater', 'delegate').everyone('card')
-      .at(8).risingPlayer('titanium_production').everyone('titanium')
-      .at(11).risingPlayer('ocean').everyone('3mc')
+      .at(8).risingPlayer('prayer_production').everyone('prayer')
+      .at(11).risingPlayer('Unreached').everyone('3mc')
       .at(14).risingPlayer('tr').mostTags('1vp');
 
     const moon = new TrackBuilder(20)
-      .at(2).risingPlayer('steel').everyone('steel')
-      .at(5).risingPlayer('resource').everyone('steel')
-      .at(8).risingPlayer('steel_production').everyone('steel')
+      .at(2).risingPlayer('theology').everyone('theology')
+      .at(5).risingPlayer('resource').everyone('theology')
+      .at(8).risingPlayer('theology_production').everyone('theology')
       .at(11).risingPlayer('any_resource').everyone('any_resource')
       .at(14).risingPlayer('delegate', '3mc').everyone('card')
       .at(17).risingPlayer('moon_road').everyone('card')

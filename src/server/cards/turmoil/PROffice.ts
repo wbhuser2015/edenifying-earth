@@ -16,7 +16,7 @@ export class PROffice extends Card implements IProjectCard {
 
       behavior: {
         tr: 1,
-        stock: {megacredits: {tag: Tag.EARTH}},
+        stock: {provision: {tag: Tag.EARTH}},
       },
 
       requirements: {party: PartyName.UNITY},
@@ -24,7 +24,7 @@ export class PROffice extends Card implements IProjectCard {
         cardNumber: 'T09',
         renderData: CardRenderer.builder((b) => {
           b.tr(1).br;
-          b.megacredits(1).slash().tag(Tag.EARTH);
+          b.provision(1).slash().tag(Tag.EARTH);
         }),
         description: 'Requires that Unity are ruling or that you have 2 delegates there. Gain 1 TR. Gain 1 M€ for each Earth tag you have, including this.',
       },

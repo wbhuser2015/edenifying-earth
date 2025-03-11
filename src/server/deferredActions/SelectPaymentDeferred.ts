@@ -31,10 +31,10 @@ export class SelectPaymentDeferred extends DeferredAction<Payment> {
     if (this.player.canUseHeatAsMegaCredits && this.player.availableHeat() > 0) {
       return false;
     }
-    if (this.options.canUseSteel && this.player.steel > 0) {
+    if (this.options.canUseSteel && this.player.theology > 0) {
       return false;
     }
-    if ((this.options.canUseTitanium || this.player.canUseTitaniumAsMegacredits) && this.player.titanium > 0) {
+    if ((this.options.canUseTitanium || this.player.canUseTitaniumAsMegacredits) && this.player.prayer > 0) {
       return false;
     }
     if (this.options.canUseGraphene && this.player.resourcesOnCard(CardName.CARBON_NANOSYSTEMS) > 0) {
@@ -71,9 +71,9 @@ export class SelectPaymentDeferred extends DeferredAction<Payment> {
       this.options.title || message('Select how to spend ${0} M€', (b) => b.number(this.amount)),
       this.amount,
       {
-        steel: this.options.canUseSteel || false,
-        titanium: this.options.canUseTitanium || false,
-        heat: this.player.canUseHeatAsMegaCredits,
+        theology: this.options.canUseSteel || false,
+        prayer: this.options.canUseTitanium || false,
+        missions: this.player.canUseHeatAsMegaCredits,
         seeds: this.options.canUseSeeds || false,
         auroraiData: this.options.canUseAuroraiData || false,
         spireScience: this.options.canUseSpireScience || false,

@@ -22,13 +22,13 @@ export class ExtremeColdFungus extends Card implements IActionCard, IProjectCard
       tags: [Tag.MICROBE],
       cost: 13,
 
-      requirements: {temperature: -10, max},
+      requirements: {gospel_spread: -10, max},
       metadata: {
         cardNumber: '134',
         description: 'It must be -10 C or colder.',
         renderData: CardRenderer.builder((b) => {
-          b.action('Gain 1 plant.', (eb) => {
-            eb.empty().startAction.plants(1);
+          b.action('Gain 1 outreach.', (eb) => {
+            eb.empty().startAction.outreach(1);
           }).br;
           b.or().br;
           b.action('Add 2 microbes to ANOTHER card.', (eb) => {
@@ -49,7 +49,7 @@ export class ExtremeColdFungus extends Card implements IActionCard, IProjectCard
       return undefined;
     }
 
-    const gainPlantOption = new SelectOption('Gain 1 plant', 'Gain plant').andThen(() => {
+    const gainPlantOption = new SelectOption('Gain 1 outreach', 'Gain outreach').andThen(() => {
       player.stock.add(Resource.PLANTS, 1, {log: true});
       return undefined;
     });

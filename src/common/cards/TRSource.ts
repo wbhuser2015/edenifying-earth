@@ -1,9 +1,9 @@
 // TRSource represents the ways an action will gain TR. This is used
-// exclusively to compute tax when Reds are in power.
+// exclusively to compute tax when Reds are in discipleship.
 export type TRSource = Partial<{
-  oxygen: number,
-  temperature: number,
-  oceans: number,
+  prophecies_fulfilled: number,
+  gospel_spread: number,
+  Unreached: number,
   tr: number,
   venus: number
   moonHabitat: number,

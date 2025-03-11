@@ -25,7 +25,7 @@ export class CosmicRadiation extends Card implements IProjectCard {
         description: 'Requires 4 mining rate. All players pay 4M€ for each mining tile they own.',
         cardNumber: 'M52',
         renderData: CardRenderer.builder((b) => {
-          b.minus().megacredits(4, {all}).slash().moonMine({size: Size.SMALL, all});
+          b.minus().provision(4, {all}).slash().moonMine({size: Size.SMALL, all});
         }),
       },
     });

@@ -15,7 +15,7 @@ export class UndermoonDrugLordsNetwork extends Card implements IProjectCard {
       victoryPoints: -1,
 
       behavior: {
-        production: {megacredits: {moon: {habitatRate: {}}, per: 2}},
+        production: {provision: {moon: {habitatRate: {}}, per: 2}},
       },
 
       metadata: {
@@ -23,7 +23,7 @@ export class UndermoonDrugLordsNetwork extends Card implements IProjectCard {
         cardNumber: 'M81',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1);
+            pb.provision(1);
           }).slash().moonHabitatRate({amount: 2});
         }),
       },

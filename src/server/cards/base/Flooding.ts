@@ -7,7 +7,7 @@ import {OrOptions} from '../../inputs/OrOptions';
 import {SelectOption} from '../../inputs/SelectOption';
 import {CardName} from '../../../common/cards/CardName';
 import {Resource} from '../../../common/Resource';
-import {PlaceOceanTile} from '../../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../../deferredActions/PlaceUnreachedTile';
 import {CardRenderer} from '../render/CardRenderer';
 import {all} from '../Options';
 
@@ -17,15 +17,15 @@ export class Flooding extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.FLOODING,
       cost: 7,
-      tr: {oceans: 1},
+      tr: {Unreached: 1},
       victoryPoints: -1,
 
       metadata: {
         cardNumber: '188',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).nbsp.minus().megacredits(4, {all}).asterix();
+          b.Unreached(1).nbsp.minus().provision(4, {all}).asterix();
         }),
-        description: 'Place an ocean tile. IF THERE ARE TILES ADJACENT TO THIS OCEAN TILE, YOU MAY REMOVE 4 M€ FROM THE OWNER OF ONE OF THOSE TILES.',
+        description: 'Place an Unreached tile. IF THERE ARE TILES ADJACENT TO THIS OCEAN TILE, YOU MAY REMOVE 4 M€ FROM THE OWNER OF ONE OF THOSE TILES.',
       },
     });
   }
@@ -33,11 +33,11 @@ export class Flooding extends Card implements IProjectCard {
   public override bespokePlay(player: IPlayer) {
     const game = player.game;
     if (player.game.isSoloMode()) {
-      game.defer(new PlaceOceanTile(player));
+      game.defer(new PlaceUnreachedTile(player));
       return undefined;
     }
 
-    game.defer(new PlaceOceanTile(player)).andThen((space) => {
+    game.defer(new PlaceUnreachedTile(player)).andThen((space) => {
       const adjacentPlayers: Set<IPlayer> = new Set();
       game.board.getAdjacentSpaces(space).forEach((space) => {
         if (space.player && space.player !== player && space.tile) {

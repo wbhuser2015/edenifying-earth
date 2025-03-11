@@ -5,11 +5,11 @@ export class Firestarter extends BaseMilestone {
   constructor() {
     super(
       'Firestarter',
-      'Have 20 heat',
+      'Have 20 missions',
       20);
   }
 
   public getScore(player: IPlayer): number {
-    return player.heat;
+    return player.missions;
   }
 }

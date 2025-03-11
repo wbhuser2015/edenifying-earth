@@ -18,16 +18,16 @@ export class MicroGeodesics extends Card implements IProjectCard {
       behavior: {
         spend: {resourceFromAnyCard: {type: CardResource.MICROBE}},
         underworld: {excavate: {count: 1}},
-        stock: {plants: 3},
+        stock: {outreach: 3},
         addResourcesToAnyCard: {count: 1, type: CardResource.DATA},
       },
 
       metadata: {
         cardNumber: 'U56',
         renderData: CardRenderer.builder((b) => {
-          b.minus().resource(CardResource.MICROBE).excavate().plants(3, {digit}).resource(CardResource.DATA).asterix();
+          b.minus().resource(CardResource.MICROBE).excavate().outreach(3, {digit}).resource(CardResource.DATA).asterix();
         }),
-        description: 'Spend 1 microbe from any card to excavate an underground resource and gain 3 plants. Add 1 data resource to ANOTHER card.',
+        description: 'Spend 1 microbe from any card to excavate an underground resource and gain 3 outreach. Add 1 data resource to ANOTHER card.',
       },
     });
   }

@@ -20,7 +20,7 @@ export class WarpDrive extends Card implements IProjectCard {
         cardNumber: 'C49',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play a space card, you pay 4 M€ less for it.', (eb) => {
-            eb.tag(Tag.SPACE).startEffect.megacredits(-4);
+            eb.tag(Tag.SPACE).startEffect.provision(-4);
           });
         }),
         description: 'Requires 5 science tags.',

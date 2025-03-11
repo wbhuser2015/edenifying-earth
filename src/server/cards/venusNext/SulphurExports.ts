@@ -15,14 +15,14 @@ export class SulphurExports extends Card implements IProjectCard {
 
       behavior: {
         global: {venus: 1},
-        production: {megacredits: {tag: Tag.VENUS}},
+        production: {provision: {tag: Tag.VENUS}},
       },
 
       metadata: {
         cardNumber: '250',
         renderData: CardRenderer.builder((b) => {
           b.venus(1).br;
-          b.production((pb) => pb.megacredits(1).slash().tag(Tag.VENUS));
+          b.production((pb) => pb.provision(1).slash().tag(Tag.VENUS));
         }),
         description: 'Increase Venus 1 step. Increase your M€ production 1 step for each Venus tag you have, including this.',
       },

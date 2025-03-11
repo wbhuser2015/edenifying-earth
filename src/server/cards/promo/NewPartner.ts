@@ -10,13 +10,13 @@ export class NewPartner extends PreludeCard {
       name: CardName.NEW_PARTNER,
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
 
       metadata: {
         cardNumber: 'X42',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1)).prelude().asterix();
+          b.production((pb) => pb.provision(1)).prelude().asterix();
         }),
         description: 'Raise your M€ production 1 step. Immediately draw 2 prelude cards. Play 1 of them, and discard the other.',
       },

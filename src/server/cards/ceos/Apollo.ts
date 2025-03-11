@@ -18,7 +18,7 @@ export class Apollo extends CeoCard {
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().text('ACTIVATE THE BELOW ABILITY');
           b.br.br;
-          b.moonHabitat({all}).moonMine({all}).moonRoad({all}).nbsp.colon().megacredits(3);
+          b.moonHabitat({all}).moonMine({all}).moonRoad({all}).nbsp.colon().provision(3);
           b.br.br;
         }),
         description: 'Once per game, gain 3 M€ for each tile on The Moon.',

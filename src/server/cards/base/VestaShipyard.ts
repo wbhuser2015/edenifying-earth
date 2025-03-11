@@ -15,15 +15,15 @@ export class VestaShipyard extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
       },
 
       metadata: {
         cardNumber: '057',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1));
+          b.production((pb) => pb.prayer(1));
         }),
-        description: 'Increase your titanium production 1 step.',
+        description: 'Increase your prayer production 1 step.',
       },
     });
   }

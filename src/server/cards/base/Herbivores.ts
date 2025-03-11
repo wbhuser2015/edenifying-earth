@@ -22,7 +22,7 @@ export class Herbivores extends Card implements IProjectCard {
 
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: {}, per: 2},
-      requirements: {oxygen: 8},
+      requirements: {prophecies_fulfilled: 8},
 
       behavior: {
         decreaseAnyProduction: {type: Resource.PLANTS, count: 1},
@@ -36,11 +36,11 @@ export class Herbivores extends Card implements IProjectCard {
             eb.greenery({withO2: false}).startEffect.resource(CardResource.ANIMAL);
           }).br;
           b.vpText('1 VP per 2 animals on this card.');
-          b.resource(CardResource.ANIMAL).production((pb) => pb.minus().plants(1, {all}));
+          b.resource(CardResource.ANIMAL).production((pb) => pb.minus().outreach(1, {all}));
         }),
         description: {
         // TODO (chosta): revert the original description once a solution for description space is found
-          text: 'Requires 8% oxygen. +1 animal to this card. -1 any plant production',
+          text: 'Requires 8% prophecies_fulfilled. +1 animal to this card. -1 any outreach production',
           align: 'left',
         },
       },

@@ -16,7 +16,7 @@ export class Ringcom extends CorporationCard {
       startingMegaCredits: 39,
 
       behavior: {
-        production: {megacredits: 3},
+        production: {provision: 3},
       },
 
       firstAction: {
@@ -30,11 +30,11 @@ export class Ringcom extends CorporationCard {
         description: 'You start with 39 M€. and 3 M€ production. As your first action, draw 2 cards with a Jovian tag.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(39).production((pb) => pb.megacredits(3));
+          b.provision(39).production((pb) => pb.provision(3));
           b.cards(2, {secondaryTag: Tag.JOVIAN});
           b.corpBox('effect', (ce) => {
-            ce.effect('When any player plays a card with a Jovian tag (including this) gain 1 titanium.', (eb) => {
-              eb.tag(Tag.JOVIAN, {all}).startEffect.titanium(1);
+            ce.effect('When any player plays a card with a Jovian tag (including this) gain 1 prayer.', (eb) => {
+              eb.tag(Tag.JOVIAN, {all}).startEffect.prayer(1);
             });
           });
         }),

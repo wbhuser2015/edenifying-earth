@@ -1,19 +1,28 @@
+import { AbominationOfDesolation } from './AbominationOfDesolation';
+import { TwoWitnesses } from './TwoWitnesses';
+import { CommunityNights } from './CommunityNights';
+import { MissionsSunday } from './MissionsSunday';
+import {DiscipleshipGroups} from './DiscipleshipGroups';
+import {GivingCampaign} from './GivingCampaign';
 import {AerospaceMission} from './AerospaceMission';
 import {AgricolaInc} from './AgricolaInc';
 import {Athena} from './Athena';
 import {ByElection} from './ByElection';
 import {CardName} from '../../../common/cards/CardName';
 import {CuriosityII} from './CuriosityII';
+import {DTS} from './DTS';
 import {Eris} from './Eris';
 import {ExecutiveOrder} from './ExecutiveOrder';
 import {GlobalEventName} from '../../../common/turmoil/globalEvents/GlobalEventName';
 import {Incite} from './Incite';
 import {JunkVentures} from './JunkVentures';
 import {LeadershipSummit} from './LeadershipSummit';
+import {MEGACHURCHNETWORK} from './MEGACHURCHNETWORK';
 import {Midas} from './Midas';
 import {ModuleManifest} from '../ModuleManifest';
 import {Playwrights} from './Playwrights';
 import {PoliticalUprising} from './PoliticalUprising';
+import { PrayerMeeting } from './PrayerMeeting';
 import {ProjectWorkshop} from './ProjectWorkshop';
 import {ResearchGrant} from './ResearchGrant';
 import {SpecialDesignProxy} from './SpecialDesignProxy';
@@ -30,6 +39,7 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.PLAYWRIGHTS]: {Factory: Playwrights},
     [CardName.CURIOSITY_II]: {Factory: CuriosityII},
     [CardName.MIDAS]: {Factory: Midas},
+	[CardName.MEGACHURCHNETWORK]: {Factory: MEGACHURCHNETWORK},
     [CardName.UNITED_NATIONS_MISSION_ONE]: {Factory: UnitedNationsMissionOne},
     [CardName.JUNK_VENTURES]: {Factory: JunkVentures},
     [CardName.ERIS]: {Factory: Eris, compatibility: 'ares'},
@@ -45,7 +55,19 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.ABOMINATION_OF_DESOLATION]: { Factory: AbominationOfDesolation },
+
+  [CardName.TWO_WITNESSES]: { Factory: TwoWitnesses },
+
+  [CardName.COMMUNITY_NIGHTS]: { Factory: CommunityNights },
+
+	[CardName.MISSIONS_SUNDAY]: { Factory: MissionsSunday },
+    [CardName.DISCIPLESHIP_GROUPS]: { Factory: DiscipleshipGroups },
+    [CardName.PRAYER_MEETING]: { Factory: PrayerMeeting },
     [CardName.SPECIAL_DESIGN_PROXY]: {Factory: SpecialDesignProxy, instantiate: false},
+	[CardName.DTS]: {Factory: DTS, instantiate: false},
+	[CardName.GIVING_CAMPAIGN]: { Factory: GivingCampaign }, 
+
   },
   globalEvents: {
     [GlobalEventName.LEADERSHIP_SUMMIT]: {Factory: LeadershipSummit},

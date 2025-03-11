@@ -14,15 +14,15 @@ export class CarbonateProcessing extends Card implements IProjectCard {
       cost: 6,
 
       behavior: {
-        production: {energy: -1, heat: 3},
+        production: {discipleship: -1, missions: 3},
       },
 
       metadata: {
         cardNumber: '043',
-        description: 'Decrease your energy production 1 step and increase your heat production 3 steps.',
+        description: 'Decrease your discipleship production 1 step and increase your missions production 3 steps.',
         renderData: CardRenderer.builder((b) => b.production((pb) => {
-          pb.minus().energy(1).br;
-          pb.plus().heat(3);
+          pb.minus().discipleship(1).br;
+          pb.plus().missions(3);
         })),
       },
     });

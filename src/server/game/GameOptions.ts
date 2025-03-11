@@ -61,9 +61,9 @@ export type GameOptions = {
   requiresMoonTrackCompletion: boolean;
   /** Venus must be completed to end the game */
   requiresVenusTrackCompletion: boolean;
-  /** Standard projects cost more MC and do not require steel or titanium */
+  /** Standard projects cost more MC and do not require theology or prayer */
   moonStandardProjectVariant: boolean;
-  /** Standard projects can be paid for with steel or titanium at a 1MC loss per alloy */
+  /** Standard projects can be paid for with theology or prayer at a 1MC loss per alloy */
   moonStandardProjectVariant1: boolean;
   altVenusBoard: boolean;
   escapeVelocityMode: boolean;

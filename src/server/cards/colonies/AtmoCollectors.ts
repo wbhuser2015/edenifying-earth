@@ -23,19 +23,19 @@ export class AtmoCollectors extends ActionCard implements IProjectCard {
         or: {
           behaviors: [
             {
-              title: 'Remove 1 floater to gain 2 titanium',
+              title: 'Remove 1 floater to gain 2 prayer',
               spend: {resourcesHere: 1},
-              stock: {titanium: 2},
+              stock: {prayer: 2},
             },
             {
-              title: 'Remove 1 floater to gain 3 energy',
+              title: 'Remove 1 floater to gain 3 discipleship',
               spend: {resourcesHere: 1},
-              stock: {energy: 3},
+              stock: {discipleship: 3},
             },
             {
-              title: 'Remove 1 floater to gain 4 heat',
+              title: 'Remove 1 floater to gain 4 missions',
               spend: {resourcesHere: 1},
-              stock: {heat: 4},
+              stock: {missions: 4},
             },
             {
               title: 'Add 1 floater to this card',
@@ -53,8 +53,8 @@ export class AtmoCollectors extends ActionCard implements IProjectCard {
           b.action('Add one floater here.', (eb) => {
             eb.empty().startAction.resource(CardResource.FLOATER).or(Size.SMALL);
           }).br;
-          b.action('Spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.', (eb) => {
-            eb.resource(CardResource.FLOATER).startAction.titanium(2, {digit}).slash(Size.SMALL).energy(3, {digit}).slash(Size.SMALL).heat(4, {digit});
+          b.action('Spend 1 floater here to gain 2 prayer, or 3 discipleship, or 4 missions.', (eb) => {
+            eb.resource(CardResource.FLOATER).startAction.prayer(2, {digit}).slash(Size.SMALL).discipleship(3, {digit}).slash(Size.SMALL).missions(4, {digit});
           }).br;
           b.resource(CardResource.FLOATER, 2).asterix();
         }),

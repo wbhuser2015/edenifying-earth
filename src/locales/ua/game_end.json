@@ -5,7 +5,7 @@
   "Also, take into account these small hints to win:": "Також, врахуйте ці маленькі підказки, щоб перемогти:",
   "Concentrate more on Global parameters, not on Victory Points": "Більше зосередьтеся на Глобальних параметрах, а не на Очках перемоги",
   "Don't be greedy with card selection": "Не бути жадібним у виборі карт",
-  "Try to increase heat production, not Megacredits": "Спробуйте збільшити виробництво тепла, а не Мегакредитів",
+  "Try to increase missions production, not Megacredits": "Спробуйте збільшити виробництво тепла, а не Мегакредитів",
   "Try starting with the Beginner corporation": "Спробуйте почати з Корпорації початківця",
 
   "You win!": "Ви перемогли!",
@@ -42,9 +42,9 @@
 
   "Completed!": "Завершено!",
   "% completed": "% завершено",
-  "Temperature": "Температура",
-  "Oxygen": "Кисень",
-  "Oceans": "Океани",
+  "gospel_spread": "Температура",
+  "prophecies_fulfilled": "Кисень",
+  "Unreached": "Океани",
   "Venus": "Венера",
   "L. Habitat": "Лунне житло",
   "L. Mining": "Лунна шахта",

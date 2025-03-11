@@ -8,9 +8,9 @@ export class Ceres extends Colony {
     super({
       name: ColonyName.CERES,
       description: [
-        'Gain 1 steel production',
-        'Gain n steel',
-        'Gain 2 steel',
+        'Gain 1 theology production',
+        'Gain n theology',
+        'Gain 2 theology',
       ],
 
       buildType: ColonyBenefit.GAIN_PRODUCTION,

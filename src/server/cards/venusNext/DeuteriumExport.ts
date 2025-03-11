@@ -19,9 +19,9 @@ export class DeuteriumExport extends ActionCard {
         or: {
           autoSelect: true,
           behaviors: [{
-            title: 'Remove 1 floater to raise energy production 1 step',
+            title: 'Remove 1 floater to raise discipleship production 1 step',
             spend: {resourcesHere: 1},
-            production: {energy: 1},
+            production: {discipleship: 1},
           },
           {
             title: 'Add 1 floater to this card',
@@ -37,8 +37,8 @@ export class DeuteriumExport extends ActionCard {
             eb.empty().startAction.resource(CardResource.FLOATER);
           }).br;
           b.or(Size.SMALL).br;
-          b.action('Spend 1 floater here to increase your energy production 1 step.', (be) => {
-            be.resource(CardResource.FLOATER).startAction.production((pb) => pb.energy(1));
+          b.action('Spend 1 floater here to increase your discipleship production 1 step.', (be) => {
+            be.resource(CardResource.FLOATER).startAction.production((pb) => pb.discipleship(1));
           });
         }),
       },

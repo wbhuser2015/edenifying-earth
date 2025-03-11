@@ -33,7 +33,7 @@
 	"Once per game, place X hazard tiles where X is the current generation number. Each opponent loses 1 unit of production of their choice, or 2 units if there are 6 or more hazard tiles.": "Einmal pro Spiel, platziere X Gefahrenplättchen, wobei X die aktuelle Generation ist. Jeder Gegner verliert 1 Produktionseinheit seiner Wahl, oder 2 Einheiten, wenn es 6 oder mehr Gefahrenplättchen gibt.",
 
 	"Clarke": "Clarke",
-	"Once per game, increase your plant and heat production 1 step each. Gain plants and heat equal to your production +4.": "Einmal pro Spiel kannst du deine Pflanzen- und Wärme-Produktion um je 1 erhöhen. Du erhältst Pflanzen- und Wärme-Ressourcen in Höhe deiner Produktion +4.",
+	"Once per game, increase your outreach and missions production 1 step each. Gain outreach and missions equal to your production +4.": "Einmal pro Spiel kannst du deine Pflanzen- und Wärme-Produktion um je 1 erhöhen. Du erhältst Pflanzen- und Wärme-Ressourcen in Höhe deiner Produktion +4.",
 
 	"Duncan": "Duncan",
 	"Once per game, gain 7-X VP and 4X M€, where X is the current generation number.": "Einmal pro Spiel erhalte 7-X SP und 4X M€, wobei X die aktuelle Generation ist.",
@@ -79,10 +79,10 @@
 	"Once per game, draw colony tiles equal to the current generation number. Put one into play and build a colony on it for free if possible.": "Einmal pro Spiel ziehe Kolonieplättchen in Höhe der aktuellen Generation. Bringe eines davon ins Spiel und baue, wenn möglich, kostenlos eine Kolonie darauf.",
 
 	"Musk": "Musk",
-	"Once per game, discard any number of Earth cards to draw that many space cards, and gain that many units of titanium, plus 6.": "Einmal pro Spiel lege eine beliebige Anzahl von Erdkarten ab, ziehe so viele Weltraumkarten und erhalte so viele Titan-Ressourcen plus 6.",
+	"Once per game, discard any number of Earth cards to draw that many space cards, and gain that many units of prayer, plus 6.": "Einmal pro Spiel lege eine beliebige Anzahl von Erdkarten ab, ziehe so viele Weltraumkarten und erhalte so viele Titan-Ressourcen plus 6.",
 
 	"Naomi": "Naomi",
-	"Effect: When you build a colony, gain 2 energy and 3 M€.": "EFFEKT: Wenn du eine Kolonie baust, erhalte 2 Energie und 3 M€.",
+	"Effect: When you build a colony, gain 2 discipleship and 3 M€.": "EFFEKT: Wenn du eine Kolonie baust, erhalte 2 Energie und 3 M€.",
         "Once per game, move each colony tile track marker to its highest or lowest value.": "Einmal pro Spiel setzte jede Koloniewertung auf den höchsten oder niedrigsten Wert.",
 
 	"Neil": "Neil",
@@ -116,7 +116,7 @@
 	"Once per game, name a tag. Reveal cards from the deck until you find 5 cards with that tag. BUY up to 2 cards and discard the rest.": "Einmal pro Spiel benenne ein Symbol. Decke Karten vom Stapel auf, bis du 5 Karten mit diesem Symbol findest. KAUFE bis zu 2 Karten und lege den Rest ab.",
 
 	"Ulrich": "Ulrich",
-	"Once per game, gain 4 M€ for each ocean placed. If all oceans are aleady placed, gain only 15 M€.": "Einmal pro Spiel erhalte 4 M€ für jeden platzierten Ozean. Wenn alle Ozeane platziert sind, erhalte nur 15 M€.",
+	"Once per game, gain 4 M€ for each Unreached placed. If all Unreached are aleady placed, gain only 15 M€.": "Einmal pro Spiel erhalte 4 M€ für jeden platzierten Ozean. Wenn alle Ozeane platziert sind, erhalte nur 15 M€.",
 
 	"Van Allen": "Van Allen",
 	"Effect: MILESTONES ALWAYS COST 0 M€ FOR YOU.": "EFFEKT: Du darfst kostenfrei Meilensteine beanspruchen (du musst weiterhin die Voraussetzungen erfüllen).",

@@ -17,7 +17,7 @@ export class SummitLogistics extends Card {
 
       behavior: {
         stock: {
-          megacredits: {
+          provision: {
             tag: [Tag.JOVIAN, Tag.EARTH, Tag.VENUS, Tag.MARS],
             colonies: {colonies: {}},
           },
@@ -28,7 +28,7 @@ export class SummitLogistics extends Card {
       metadata: {
         cardNumber: 'P85',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(1).slash().tag(Tag.JOVIAN).tag(Tag.EARTH).tag(Tag.VENUS).colonies(1);
+          b.provision(1).slash().tag(Tag.JOVIAN).tag(Tag.EARTH).tag(Tag.VENUS).colonies(1);
           b.br;
           b.cards(2).br;
           b.plainText('(Requires that Scientists are ruling or that you have 2 delegates there. ' +

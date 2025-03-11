@@ -12,7 +12,7 @@ export class Bjorn extends CeoCard {
       metadata: {
         cardNumber: 'L02',
         renderData: CardRenderer.builder((b) => {
-          b.opgArrow().text('STEAL').megacredits(1, {text: 'x+2'}).asterix();
+          b.opgArrow().text('STEAL').provision(1, {text: 'x+2'}).asterix();
           b.br;
         }),
         description: 'Once per game, steal X+2 M€ from each player that has more M€ than you, where X is the current generation number.',

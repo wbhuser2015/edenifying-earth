@@ -18,15 +18,15 @@ export class SecurityFleet extends ActionCard implements IProjectCard {
       victoryPoints: {resourcesHere: {}},
 
       action: {
-        spend: {titanium: 1},
+        spend: {prayer: 1},
         addResources: 1,
       },
 
       metadata: {
         cardNumber: '028',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 titanium to add 1 fighter resource to this card.', (eb) => {
-            eb.titanium(1).startAction.resource(CardResource.FIGHTER);
+          b.action('Spend 1 prayer to add 1 fighter resource to this card.', (eb) => {
+            eb.prayer(1).startAction.resource(CardResource.FIGHTER);
           }).br;
           b.vpText('1 VP for each fighter resource on this card.');
         }),

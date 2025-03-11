@@ -22,12 +22,12 @@ export class SpecializedSettlement extends Card implements IProjectCard {
 
       metadata: {
         cardNumber: 'PF57',
-        description: 'Decrease your energy production 1 step and increase your M€ production 3 steps. ' +
+        description: 'Decrease your discipleship production 1 step and increase your M€ production 3 steps. ' +
           'Place a city tile on Mars. Increase your production by 1 of a resource on the map gained by placement bonus.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(3);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(3);
             pb.plus().wild(1);
           }).nbsp.city();
         }),
@@ -38,7 +38,7 @@ export class SpecializedSettlement extends Card implements IProjectCard {
   public bonusResource?: Array<Resource>;
 
   public override bespokeCanPlay(player: IPlayer): boolean {
-    return player.production.energy >= 1 &&
+    return player.production.discipleship >= 1 &&
       player.game.board.getAvailableSpacesForCity(player).length > 0;
   }
 
@@ -94,7 +94,7 @@ export class SpecializedSettlement extends Card implements IProjectCard {
       );
   }
 
-  private static defaultProductionBox = Units.of({energy: -1, megacredits: 3});
+  private static defaultProductionBox = Units.of({discipleship: -1, provision: 3});
 
   public productionBox() {
     const units = {...SpecializedSettlement.defaultProductionBox};

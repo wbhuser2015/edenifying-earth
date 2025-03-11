@@ -10,17 +10,17 @@ export class IoResearchOutpost extends PreludeCard {
       tags: [Tag.JOVIAN, Tag.SCIENCE],
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
         drawCard: 1,
       },
 
       metadata: {
         cardNumber: 'P16',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1)).br;
+          b.production((pb) => pb.prayer(1)).br;
           b.cards(1);
         }),
-        description: 'Increase your titanium production 1 step. Draw a card.',
+        description: 'Increase your prayer production 1 step. Draw a card.',
       },
     });
   }

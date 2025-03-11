@@ -22,7 +22,7 @@ export class QuantumCommunications extends Card implements IProjectCard {
         cardNumber: 'C31',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1).slash().colonies(1, {size: Size.SMALL, all});
+            pb.provision(1).slash().colonies(1, {size: Size.SMALL, all});
           });
         }),
         description: 'Requires 4 science tags. Increase your M€ production 1 step for each colony in play.',

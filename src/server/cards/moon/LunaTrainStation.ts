@@ -16,11 +16,11 @@ export class LunaTrainStation extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.BUILDING],
       cost: 24,
-      reserveUnits: {steel: 2},
+      reserveUnits: {theology: 2},
       victoryPoints: 'special',
 
       behavior: {
-        production: {megacredits: 4},
+        production: {provision: 4},
         moon: {
           tile: {type: TileType.LUNA_TRAIN_STATION},
           logisticsRate: 1,
@@ -30,13 +30,13 @@ export class LunaTrainStation extends Card {
       requirements: {logisticRate: 5},
 
       metadata: {
-        description: 'Requires a logistic rate of 5 or higher. Spend 2 steel. ' +
+        description: 'Requires a logistic rate of 5 or higher. Spend 2 theology. ' +
         'Increase your M€ production 4 steps. Place this tile on The Moon and raise the logistic rate 1 step. ' +
         '2 VP FOR EACH ROAD TILE ADJACENT TO THIS TILE.',
         cardNumber: 'M15',
         renderData: CardRenderer.builder((b) => {
-          b.minus().steel(2, {digit});
-          b.production((pb) => pb.megacredits(4));
+          b.minus().theology(2, {digit});
+          b.production((pb) => pb.provision(4));
           b.tile(TileType.LUNA_TRAIN_STATION, true).moonLogisticsRate();
         }),
         victoryPoints: CardRenderDynamicVictoryPoints.moonRoadTile(2, true),

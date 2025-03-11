@@ -13,13 +13,13 @@ export class Recession extends PreludeCard {
       name: CardName.RECESSION,
 
       behavior: {
-        stock: {megacredits: 10},
+        stock: {provision: 10},
       },
 
       metadata: {
         cardNumber: 'P59',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(-5, {all}).asterix().production((pb) => pb.megacredits(-1, {all})).asterix().megacredits(10);
+          b.provision(-5, {all}).asterix().production((pb) => pb.provision(-1, {all})).asterix().provision(10);
         }),
         description: 'EACH OPPONENT loses 5 M€ and decreases their M€ production 1 step. You gain 10 M€.',
       },
@@ -28,7 +28,7 @@ export class Recession extends PreludeCard {
 
   public override bespokeCanPlay(player: IPlayer) {
     for (const target of player.getOpponents()) {
-      if (target.production.megacredits === -5) {
+      if (target.production.provision === -5) {
         return false;
       }
     }

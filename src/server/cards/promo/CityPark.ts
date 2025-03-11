@@ -17,14 +17,14 @@ export class CityPark extends Card implements IProjectCard {
       requirements: {cities: 3},
 
       behavior: {
-        stock: {plants: 2},
+        stock: {outreach: 2},
       },
 
       metadata: {
         cardNumber: 'X71',
-        description: 'Requires that you have 3 cities. Gain 2 plants.',
+        description: 'Requires that you have 3 cities. Gain 2 outreach.',
         renderData: CardRenderer.builder((b) => {
-          b.plants(2);
+          b.outreach(2);
         }),
       },
     });

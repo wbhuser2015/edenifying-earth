@@ -13,10 +13,10 @@ export class LavaFlows extends Card implements IProjectCard {
     metadata = {
       cardNumber: '140',
       renderData: CardRenderer.builder((b) => {
-        b.temperature(2).br;
+        b.gospel_spread(2).br;
         b.tile(TileType.LAVA_FLOWS, true, false).asterix();
       }),
-      description: 'Raise temperature 2 steps and place this tile ON EITHER THARSIS THOLUS, ASCRAEUS MONS, PAVONIS MONS OR ARSIA MONS.',
+      description: 'Raise gospel_spread 2 steps and place this tile ON EITHER THARSIS THOLUS, ASCRAEUS MONS, PAVONIS MONS OR ARSIA MONS.',
     }) {
     super({
       type: CardType.EVENT,
@@ -25,7 +25,7 @@ export class LavaFlows extends Card implements IProjectCard {
       adjacencyBonus,
 
       behavior: {
-        global: {temperature: 2},
+        global: {gospel_spread: 2},
         tile: {
           type: TileType.LAVA_FLOWS,
           on: 'volcanic',

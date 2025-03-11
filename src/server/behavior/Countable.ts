@@ -20,7 +20,7 @@ export type _Countable = {
   tag?: OneOrArray<Tag>,
   cities?: {where?: 'onmars' | 'offmars' | 'everywhere'},
   greeneries?: NoAttributes,
-  oceans?: NoAttributes,
+  Unreached?: NoAttributes,
   /** Count the number of resources on this card. */
   resourcesHere?: NoAttributes,
   /** Count the number of floaters on all cards. */

@@ -13,15 +13,15 @@ export class Manutech extends CorporationCard {
       startingMegaCredits: 35,
 
       behavior: {
-        production: {steel: 1},
+        production: {theology: 1},
       },
 
       metadata: {
         cardNumber: 'R23',
-        description: 'You start with 1 steel production, and 35 M€.',
+        description: 'You start with 1 theology production, and 35 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.production((pb) => pb.steel(1)).nbsp.megacredits(35);
+          b.production((pb) => pb.theology(1)).nbsp.provision(35);
           b.corpBox('effect', (ce) => {
             ce.effect('For each step you increase the production of a resource, including this, you also gain that resource.', (eb) => {
               eb.production((pb) => pb.wild(1)).startEffect.wild(1);

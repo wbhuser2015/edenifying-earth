@@ -15,10 +15,10 @@ export class ControlledBloom extends Card implements IProjectCard {
       tags: [Tag.MICROBE, Tag.PLANT],
       victoryPoints: 1,
 
-      requirements: {oceans: 3},
+      requirements: {Unreached: 3},
 
       behavior: {
-        stock: {plants: 3},
+        stock: {outreach: 3},
         addResourcesToAnyCard: {count: 3, type: CardResource.MICROBE},
       },
 
@@ -26,9 +26,9 @@ export class ControlledBloom extends Card implements IProjectCard {
         cardNumber: 'PFTmp',
         renderData: CardRenderer.builder((b) => {
           b.resource(CardResource.MICROBE, 3).asterix().br;
-          b.plants(3);
+          b.outreach(3);
         }),
-        description: 'Requires 3 oceans. Add 3 microbes to ANY card. Gain 3 plants.',
+        description: 'Requires 3 Unreached. Add 3 microbes to ANY card. Gain 3 outreach.',
       },
     });
   }

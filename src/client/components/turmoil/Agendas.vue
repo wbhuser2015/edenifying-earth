@@ -29,13 +29,13 @@
     <template v-else-if="id === 'kb01'">
       <div class="resource money party-resource">1</div> /
       <div class="production-box party-production-box">
-        <div class="heat production"></div>
+        <div class="missions production"></div>
       </div>
     </template>
     <template v-else-if="id === 'kb02'">
-      <div class="resource heat party-resource"></div> /
+      <div class="resource missions party-resource"></div> /
       <div class="production-box party-production-box">
-        <div class="heat production"></div>
+        <div class="missions production"></div>
       </div>
     </template>
     <template v-else-if="id === 'rb01'">
@@ -48,7 +48,7 @@
     </template>
     <template v-else-if="id === 'gb01'">
       <div class="resource money party-resource">1</div> /
-      <div class="resource-tag tag-plant party-resource-tag"></div>
+      <div class="resource-tag tag-outreach party-resource-tag"></div>
       <div class="resource-tag tag-microbe party-resource-tag"></div>
       <div class="resource-tag tag-animal party-resource-tag"></div>
     </template>
@@ -57,13 +57,13 @@
       <div class="tile greenery-tile greenery-tile-small"></div>
     </template>
     <template v-else-if="id === 'mfp01'">
-      <div class="policy-top-margin"><div class="tile empty-tile-small"></div> : <span class="steel resource"></span></div>
+      <div class="policy-top-margin"><div class="tile empty-tile-small"></div> : <span class="theology resource"></span></div>
     </template>
     <template v-else-if="id === 'mfp02'">
       <div class="policy-top-margin"><div class="resource-tag tag-building"></div> : <div class="money resource">2</div></div>
     </template>
     <template v-else-if="id === 'mfp03'">
-      <div class="policy-top-margin"><div class="resource steel"></div> : +<div class="resource money">1</div></div>
+      <div class="policy-top-margin"><div class="resource theology"></div> : +<div class="resource money">1</div></div>
     </template>
     <template v-else-if="id === 'mfp04'">
       <span class="money resource">4</span>
@@ -79,17 +79,17 @@
     </template>
     <template v-else-if="id === 'sp02'">
       <span>
-        <div class="tile oxygen-tile req-tile-small" style="margin: 10px -5px;"></div>
-        <div class="tile ocean-tile req-tile-small"></div>
-        <div class="tile temperature-tile req-tile-small"></div>
+        <div class="tile prophecies_fulfilled-tile req-tile-small" style="margin: 10px -5px;"></div>
+        <div class="tile Unreached-tile req-tile-small"></div>
+        <div class="tile gospel_spread-tile req-tile-small"></div>
         : ± 2
       </span>
     </template>
     <template v-else-if="id === 'sp03'">
       <span>
-        <div class="tile oxygen-tile req-tile-small" style="margin: 10px -5px;"></div>
-        <div class="tile ocean-tile req-tile-small"></div>
-        <div class="tile temperature-tile req-tile-small"></div>
+        <div class="tile prophecies_fulfilled-tile req-tile-small" style="margin: 10px -5px;"></div>
+        <div class="tile Unreached-tile req-tile-small"></div>
+        <div class="tile gospel_spread-tile req-tile-small"></div>
         : <div class="resource card card-with-border"></div>
       </span>
     </template>
@@ -97,12 +97,12 @@
       <div class="scientists-requisite"><div class="resource-tag tag-science party-resource-tag"></div></div>
     </template>
     <template v-else-if="id === 'up01'">
-      <div class="policy-top-margin"><div class="resource titanium"></div> : + <div class="resource money">1</div></div>
+      <div class="policy-top-margin"><div class="resource prayer"></div> : + <div class="resource money">1</div></div>
     </template>
     <template v-else-if="id === 'up02'">
       <div class="policy-top-margin">
       <span class="money resource">4</span>
-      <span class="red-arrow-3x"></span>2<span class="titanium resource"></span> / 2<span class="floater resource"></span>
+      <span class="red-arrow-3x"></span>2<span class="prayer resource"></span> / 2<span class="floater resource"></span>
       </div>
     </template>
     <template v-else-if="id === 'up03'">
@@ -117,21 +117,21 @@
       <span class="money resource">10</span>
       <span class="red-arrow-infinity"></span>
       <div class="production-box production-box-size2">
-        <div class="energy production"></div>
-        <div class="heat production"></div>
+        <div class="discipleship production"></div>
+        <div class="missions production"></div>
       </div>
     </template>
     <template v-else-if="id === 'kp02'">
-      <div class="tile temperature-tile req-tile-small" style="margin-right:5px;"></div> : <span class="money resource">3</span>
+      <div class="tile gospel_spread-tile req-tile-small" style="margin-right:5px;"></div> : <span class="money resource">3</span>
     </template>
     <template v-else-if="id === 'kp03'">
-      6 <span class="heat resource"></span>
+      6 <span class="missions resource"></span>
       <span class="red-arrow-infinity"></span>
-      <div class="tile temperature-tile"></div>
+      <div class="tile gospel_spread-tile"></div>
     </template>
     <template v-else-if="id === 'kp04'">
       <div class="policy-top-margin"><div class="tile empty-tile-small"></div> :
-      <span class="heat resource"></span><span class="heat resource"></span></div>
+      <span class="missions resource"></span><span class="missions resource"></span></div>
     </template>
     <template v-else-if="id === 'rp01'">
       <div class="policy-top-margin">
@@ -145,14 +145,14 @@
     <template v-else-if="id === 'rp03'">
       <span class="money resource">4</span>
       <span class="red-arrow-3x"></span>
-      <div class="tile oxygen-tile req-tile-small red-outline" style="margin: 10px -5px;"></div> /
-      <div class="tile ocean-tile req-tile-small red-outline"></div> /
-      <div class="tile temperature-tile req-tile-small red-outline"></div>
+      <div class="tile prophecies_fulfilled-tile req-tile-small red-outline" style="margin: 10px -5px;"></div> /
+      <div class="tile Unreached-tile req-tile-small red-outline"></div> /
+      <div class="tile gospel_spread-tile req-tile-small red-outline"></div>
     </template>
     <template v-else-if="id === 'rp04'">
-      <div class="tile oxygen-tile req-tile-small" style="margin: 10px -5px;"></div>
-      <div class="tile ocean-tile req-tile-small"></div>
-      <div class="tile temperature-tile req-tile-small"></div>
+      <div class="tile prophecies_fulfilled-tile req-tile-small" style="margin: 10px -5px;"></div>
+      <div class="tile Unreached-tile req-tile-small"></div>
+      <div class="tile gospel_spread-tile req-tile-small"></div>
       : <div class="production-box production-box-size2" style="margin-left:5px;">
         <div class="production-prefix minus"></div><div class="money production">1</div>
       </div>
@@ -161,11 +161,11 @@
       <div class="tile greenery-tile"></div> : <div class="resource money">4</div>
     </template>
     <template v-else-if="id === 'gp02'">
-      <div class="policy-top-margin"><div class="tile empty-tile-small"></div> : <span class="plant resource"></span></div>
+      <div class="policy-top-margin"><div class="tile empty-tile-small"></div> : <span class="outreach resource"></span></div>
     </template>
     <template v-else-if="id === 'gp03'">
       <div class="policy-top-margin">
-      <div class="resource-tag tag-plant party-resource-tag"></div>
+      <div class="resource-tag tag-outreach party-resource-tag"></div>
       <div class="resource-tag tag-microbe party-resource-tag"></div>
       <div class="resource-tag tag-animal party-resource-tag"></div> : <div class="resource money">2</div>
       </div>
@@ -173,7 +173,7 @@
     <template v-else-if="id === 'gp04'">
       <div class="policy-top-margin">
       <span class="money resource">5</span>
-      <span class="red-arrow-3x"></span>3<span class="plant resource"></span> / 2<span class="microbe resource"></span>
+      <span class="red-arrow-3x"></span>3<span class="outreach resource"></span> / 2<span class="microbe resource"></span>
       </div>
     </template>
     <template v-else>

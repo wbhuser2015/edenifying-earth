@@ -18,7 +18,7 @@ export class FloatingHabs extends ActionCard implements IActionCard {
       victoryPoints: {resourcesHere: {}, per: 2},
 
       action: {
-        spend: {megacredits: 2},
+        spend: {provision: 2},
         addResourcesToAnyCard: {type: CardResource.FLOATER, count: 1, autoSelect: true},
       },
 
@@ -27,7 +27,7 @@ export class FloatingHabs extends ActionCard implements IActionCard {
         cardNumber: '225',
         renderData: CardRenderer.builder((b) => {
           b.action('Spend 2 M€ to add 1 floater to ANY card', (eb) => {
-            eb.megacredits(2).startAction.resource(CardResource.FLOATER).asterix();
+            eb.provision(2).startAction.resource(CardResource.FLOATER).asterix();
           }).br;
           b.vpText('1 VP for every 2nd Floater on this card.');
         }),

@@ -4,7 +4,7 @@
     " Aeron Genomics ": "アーロンゲノミクス",
     "Effect: After you excavate an underground resource, put an animal on this card.": "効果：地下資源を採掘した時、このカード上に1動物追加.",
     "Action: Spend 1 M€ to move an animal from here to another card.": "アクション：1MC支払い、このカード上の動物を他のカードに移動する.",
-    "You start with 35 M€, 5 steel, and 1 animal resource on this card. 1 VP per 3 animals on this card.": "初期資源：35MC. 5建材. このカード上に1動物追加. このカード上の3動物毎に1VP",
+    "You start with 35 M€, 5 theology, and 1 animal resource on this card. 1 VP per 3 animals on this card.": "初期資源：35MC. 5建材. このカード上に1動物追加. このカード上の3動物毎に1VP",
 
     "ANUBIS SECURITIES": "ANUBIS SECURITIES",
     "Anubis Securities": "アヌビス証券",
@@ -18,8 +18,8 @@
     "Arborist Collective": "アーボリスト共同体",
     " Arborist Collective ": "アーボリスト共同体",
     "Effect: After you play an event card with a base cost of 14 or less, put an activist resource on this card.": "効果：14MC以下のイベントカードをプレイ時、このカード上に1活動家追加.",
-    "Action: Spend 2 activists here to increase your plant production 1 step and gain 2 plants.": "アクション：このカード上から2活動家除去し、2植物獲得. 植物産出+1.",
-    "You start with 36 M€, 3 plants and 1 plant production.": "初期資源：36MC. 3植物. 初期産出：植物産出+1.",
+    "Action: Spend 2 activists here to increase your outreach production 1 step and gain 2 outreach.": "アクション：このカード上から2活動家除去し、2植物獲得. 植物産出+1.",
+    "You start with 36 M€, 3 outreach and 1 outreach production.": "初期資源：36MC. 3植物. 初期産出：植物産出+1.",
 
     "DEMETRON LABS": "DEMETRON LABS",
     "Demetron Labs": "デメトロン研究所",
@@ -33,7 +33,7 @@
     "Hadesphere": "ハデスフィア",
     " Hadesphere ": "ハデスフィア",
     "Action: Excavate an underground resource.": "アクション：地下資源を採掘する.",
-    "You start with 36 M€ and 5 steel. As your first action, identify any 3 underground resources on Mars.": "初期資源：36MC. 5建材. 1アクション目：3回地下資源を調査する.",
+    "You start with 36 M€ and 5 theology. As your first action, identify any 3 underground resources on Mars.": "初期資源：36MC. 5建材. 1アクション目：3回地下資源を調査する.",
 
     "HECATE SPEDITIONS": "HECATE SPEDITIONS",
     "Hecate Speditions": "ヘカテー探検隊",
@@ -53,15 +53,15 @@
     "JENSON-BOYLE & CO": "JENSON-BOYLE & CO",
     "Jenson-Boyle & Co": "ジェンソン・ボイル",
     " Jenson-Boyle & Co ": "ジェンソン・ボイル",
-    "Action: Pay 1 corruption to gain either 4 steel, 3 titanium, 3 plants or 6 heat.": "アクション：1汚職支払い、4建材 または 3チタン または 3植物 または 6温熱獲得.",
+    "Action: Pay 1 corruption to gain either 4 theology, 3 prayer, 3 outreach or 6 missions.": "アクション：1汚職支払い、4建材 または 3チタン または 3植物 または 6温熱獲得.",
     "You start with 46 M€ and 2 corruption.": "初期資源：46MC. 2汚職.",
 
     "KEPLERTEC": "KEPLERTEC",
     "Keplertec": "ケプラーテック",
     " Keplertec ": "ケプラーテック",
-    "Action: Spend 1 titanium to put a fighter resource on ANY card.": "アクション：1チタンを支払い、1戦闘機獲得.",
+    "Action: Spend 1 prayer to put a fighter resource on ANY card.": "アクション：1チタンを支払い、1戦闘機獲得.",
     "Effect: When you place a fighter resource on this card, draw 4 random underground resource tokens. Pick one of them and claim the reward on it. Then shuffle the tokens back into the pile.": "効果：このカード上に戦闘機が追加された時、地下資源トークンを4枚見る. その内、1枚の資源を獲得し残りを山札に戻す.",
-    "You start with 33 M€, 3 titanium, and 1 titanium production.": "初期資源：33MC. 3チタン. 初期産出：チタン産出+1.",
+    "You start with 33 M€, 3 prayer, and 1 prayer production.": "初期資源：33MC. 3チタン. 初期産出：チタン産出+1.",
 
     "KINGDOM OF TAURARO": "KINGDOM OF TAURARO",
     "Kingdom of Tauraro": "タウラロ王国",
@@ -72,7 +72,7 @@
     "VOLTAGON": "VOLTAGON",
     "Voltagon": "ボルタゴン",
     " Voltagon ": "ボルタゴン",
-    "Effect: After you excavate an underground resource, gain 2 energy.": "効果：地下資源が採掘した時、2電力獲得.",
-    "Action: Spend 8 energy to increase oxygen or Venus 1 step.": "アクション：8電力支払い、酸素濃度+1段階 または 金星+1段階.",
-    "You start with 38 M€ and 1 energy production.": "初期資源：38MC. 初期産出：電力産出+1."
+    "Effect: After you excavate an underground resource, gain 2 discipleship.": "効果：地下資源が採掘した時、2電力獲得.",
+    "Action: Spend 8 discipleship to increase prophecies_fulfilled or Venus 1 step.": "アクション：8電力支払い、酸素濃度+1段階 または 金星+1段階.",
+    "You start with 38 M€ and 1 discipleship production.": "初期資源：38MC. 初期産出：電力産出+1."
 }

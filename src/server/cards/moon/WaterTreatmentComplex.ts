@@ -13,16 +13,16 @@ export class WaterTreatmentComplex extends Card {
       tags: [Tag.MOON],
       cost: 12,
       requirements: {habitatTiles: 1, all},
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       behavior: {
         moon: {habitatRate: 2},
       },
 
       metadata: {
-        description: 'Requires 1 habitat tile on The Moon. Spend 1 titanium. Raise the habitat rate 2 steps.',
+        description: 'Requires 1 habitat tile on The Moon. Spend 1 prayer. Raise the habitat rate 2 steps.',
         cardNumber: 'M46',
-        renderData: CardRenderer.builder((b) => b.minus().titanium(1).br.moonHabitatRate({amount: 2})),
+        renderData: CardRenderer.builder((b) => b.minus().prayer(1).br.moonHabitatRate({amount: 2})),
       },
     });
   }

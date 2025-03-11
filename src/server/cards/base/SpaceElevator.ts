@@ -14,11 +14,11 @@ export class SpaceElevator extends ActionCard implements IProjectCard {
       cost: 27,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
       },
       action: {
-        spend: {steel: 1},
-        stock: {megacredits: 5},
+        spend: {theology: 1},
+        stock: {provision: 5},
       },
 
       victoryPoints: 2,
@@ -26,12 +26,12 @@ export class SpaceElevator extends ActionCard implements IProjectCard {
       metadata: {
         cardNumber: '013',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 steel to gain 5 M€.', (eb) => {
-            eb.steel(1).startAction.megacredits(5);
+          b.action('Spend 1 theology to gain 5 M€.', (eb) => {
+            eb.theology(1).startAction.provision(5);
           }).br;
-          b.production((pb) => pb.titanium(1));
+          b.production((pb) => pb.prayer(1));
         }),
-        description: 'Increase your titanium production 1 step.',
+        description: 'Increase your prayer production 1 step.',
       },
     });
   }

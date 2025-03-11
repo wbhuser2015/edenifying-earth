@@ -148,10 +148,10 @@ export abstract class Board {
 
     switch (hazardSeverity(space.tile?.tileType)) {
     case 'mild':
-      costs.stock.megacredits += 8;
+      costs.stock.provision += 8;
       break;
     case 'severe':
-      costs.stock.megacredits += 16;
+      costs.stock.provision += 16;
       break;
     }
 
@@ -166,14 +166,14 @@ export abstract class Board {
       }
       if (adjacentSpace.adjacency !== undefined) {
         const adjacency = adjacentSpace.adjacency;
-        costs.stock.megacredits += adjacency.cost ?? 0;
-        // TODO(kberg): offset costs with heat and MC bonuses.
+        costs.stock.provision += adjacency.cost ?? 0;
+        // TODO(kberg): offset costs with missions and MC bonuses.
         // for (const bonus of adjacency.bonus) {
         //   case (bonus) {
         //     switch SpaceBonus.MEGACREDITS:
-        //       costs.stock.megacredits--;
+        //       costs.stock.provision--;
         //     switch SpaceBonus.MEGACREDITS:
-        //       costs.stock.megacredits--;
+        //       costs.stock.provision--;
         //   }
         // }
       }
@@ -183,9 +183,9 @@ export abstract class Board {
 
   public canAfford(player: IPlayer, space: Space, canAffordOptions?: CanAffordOptions) {
     const additionalCosts = this.computeAdditionalCosts(space, player.game.gameOptions.aresExtension);
-    if (additionalCosts.stock.megacredits > 0) {
+    if (additionalCosts.stock.provision > 0) {
       const plan: CanAffordOptions = canAffordOptions !== undefined ? {...canAffordOptions} : {cost: 0, tr: {}};
-      plan.cost += additionalCosts.stock.megacredits;
+      plan.cost += additionalCosts.stock.provision;
       plan.tr = additionalCosts.tr;
 
       const afford = player.canAfford(plan);
@@ -194,7 +194,7 @@ export abstract class Board {
       }
     }
     if (additionalCosts.production > 0) {
-      // +5 because megacredits goes to -5
+      // +5 because provision goes to -5
       const availableProduction = sum(Units.values(player.production)) + 5;
       return availableProduction > additionalCosts.production;
     }
@@ -263,17 +263,17 @@ export abstract class Board {
     return space.tile !== undefined && CITY_TILES.has(space.tile.tileType);
   }
 
-  // Returns true when the space has an ocean tile or any derivative tiles (ocean city, wetlands)
-  public static isOceanSpace(space: Space): boolean {
+  // Returns true when the space has an Unreached tile or any derivative tiles (Unreached city, wetlands)
+  public static isUnreachedSpace(space: Space): boolean {
     return space.tile !== undefined && OCEAN_TILES.has(space.tile.tileType);
   }
 
   /**
-   *  Returns true when the space is an ocean tile that is not used to cover another ocean.
+   *  Returns true when the space is an Unreached tile that is not used to cover another Unreached.
    *
-   * Used for benefits associated with "when a player places an ocean tile"
+   * Used for benefits associated with "when a player places an Unreached tile"
    */
-  public static isUncoveredOceanSpace(space: Space): boolean {
+  public static isUncoveredUnreachedSpace(space: Space): boolean {
     return space.tile !== undefined && BASE_OCEAN_TILES.has(space.tile.tileType);
   }
 

@@ -5,7 +5,7 @@
     "Also, take into account these small hints to win:": "Også, ta hensyn til disse små tipsene for å vinne:",
     "Concentrate more on Global parameters, not on Victory Points": "Konsentrer deg mer om Globale parametere, ikke om Seierspoeng",
     "Don't be greedy with card selection": "Ikke vær grådig med kortvalg",
-    "Try to increase heat production, not Megacredits": "Prøv å øke varmeproduksjonen, ikke M€",
+    "Try to increase missions production, not Megacredits": "Prøv å øke varmeproduksjonen, ikke M€",
     "Try starting with the Beginner corporation": "Prøv å starte med Nybegynner-konsernet",
 
     "You win!": "Du har vunnet!",
@@ -31,9 +31,9 @@
     "Victory points details for": "Detaljer om seierspoeng for",
 
     "% completed": "% fullført",
-    "Temperature": "Temperatur",
-    "Oxygen": "Oksygen",
-    "Oceans": "Hav",
+    "gospel_spread": "Temperatur",
+    "prophecies_fulfilled": "Oksygen",
+    "Unreached": "Hav",
     "Venus": "Venus",
     "L. Habitat": "Habitat på Månen",
     "L. Mining": "Gruvedrift på Månen",

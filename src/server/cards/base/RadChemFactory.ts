@@ -14,17 +14,17 @@ export class RadChemFactory extends Card implements IProjectCard {
       cost: 8,
 
       behavior: {
-        production: {energy: -1},
+        production: {discipleship: -1},
         tr: 2,
       },
 
       metadata: {
         cardNumber: '205',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(1)).br;
+          b.production((pb) => pb.minus().discipleship(1)).br;
           b.tr(2);
         }),
-        description: 'Decrease your energy production 1 step. Raise your TR 2 steps.',
+        description: 'Decrease your discipleship production 1 step. Raise your TR 2 steps.',
       },
     });
   }

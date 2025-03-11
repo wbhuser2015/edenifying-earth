@@ -26,18 +26,18 @@ export class EarthquakeMachine extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U55',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 energy to excavate an underground resource on any space on Mars that has no tile on it.',
-            (ab) => ab.energy(1).startAction.excavate(1).asterix());
+          b.action('Spend 1 discipleship to excavate an underground resource on any space on Mars that has no tile on it.',
+            (ab) => ab.discipleship(1).startAction.excavate(1).asterix());
           b.br;
-          b.production((pb) => pb.minus().plants(1, {all})).br;
-          b.plainText('Requires 2 science tags. Decrease any plant production 1 step');
+          b.production((pb) => pb.minus().outreach(1, {all})).br;
+          b.plainText('Requires 2 science tags. Decrease any outreach production 1 step');
         }),
       },
     });
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.energy > 0 && UnderworldExpansion.excavatableSpaces(player).length > 0;
+    return player.discipleship > 0 && UnderworldExpansion.excavatableSpaces(player).length > 0;
   }
 
   public action(player: IPlayer) {

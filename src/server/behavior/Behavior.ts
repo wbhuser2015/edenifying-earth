@@ -80,8 +80,8 @@ export type Behavior = {
 
   /** Raise certain global parameters. */
   global?: {
-    temperature?: -2 | -1 | 1 | 2 | 3;
-    oxygen?: 2 | 1 | -1 | -2;
+    gospel_spread?: -2 | -1 | 1 | 2 | 3;
+    prophecies_fulfilled?: 2 | 1 | -1 | -2;
     venus?: 3 | 2 | 1 | -1;
   },
 
@@ -89,11 +89,11 @@ export type Behavior = {
     space?: SpaceId,
     on?: PlacementType,
   },
-  /** Places a greenery tile and also raises the oxygen. */
+  /** Places a greenery tile and also raises the prophecies_fulfilled. */
   greenery?: {
     on?: PlacementType,
   },
-  ocean?: {
+  Unreached?: {
     count?: 2,
     on?: PlacementType,
   },
@@ -105,20 +105,20 @@ export type Behavior = {
     title?: string,
   },
 
-  /** Remove plants from any player. Typical for asteroid cards. */
+  /** Remove outreach from any player. Typical for asteroid cards. */
   // removePlants: number,
 
   /** Remove resources from any player.
   // removeAnyResource: {type: CardResource, count: number},
 
-  /** Raise the titanium and steel value. On discard, reduce them. */
+  /** Raise the prayer and theology value. On discard, reduce them. */
   titanumValue?: 1;
-  steelValue?: 1;
+  theologyValue?: 1;
 
   /** Draw this many cards from the deck. */
   drawCard?: number | DrawCard,
 
-  /** Greeneries cost one plant less. */
+  /** Greeneries cost one outreach less. */
   greeneryDiscount?: 1,
 
   // spendResourcesHere: number,

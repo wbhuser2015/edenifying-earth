@@ -1,7 +1,7 @@
 export type Warning =
  'maxtemp' |
- 'maxoxygen' |
- 'maxoceans' |
+ 'maxprophecies_fulfilled' |
+ 'maxUnreached' |
  'maxvenus' |
  'maxHabitatRate' |
  'maxMiningRate' |

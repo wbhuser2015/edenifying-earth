@@ -18,7 +18,7 @@ export class MicroprobingTechnology extends Card implements IProjectCard {
       requirements: {tag: Tag.SCIENCE, count: 1},
 
       behavior: {
-        stock: {plants: 3},
+        stock: {outreach: 3},
         addResourcesToAnyCard: {count: 2, type: CardResource.DATA},
         underworld: {identify: 3},
       },
@@ -26,9 +26,9 @@ export class MicroprobingTechnology extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U22',
         renderData: CardRenderer.builder((b) => {
-          b.plants(3, {digit}).resource(CardResource.DATA, {amount: 2, digit}).identify(3, {digit});
+          b.outreach(3, {digit}).resource(CardResource.DATA, {amount: 2, digit}).identify(3, {digit});
         }),
-        description: 'Requires 1 science tag. Gain 3 plants. Add 2 data to any card. Identify 3 underground resources.',
+        description: 'Requires 1 science tag. Gain 3 outreach. Add 2 data to any card. Identify 3 underground resources.',
       },
     });
   }

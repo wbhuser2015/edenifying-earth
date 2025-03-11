@@ -26,9 +26,9 @@ export class RecklessDetonation extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U09',
         renderData: CardRenderer.builder((b) => {
-          b.excavate(1).minus().steel(3, {digit, all}).asterix().or().titanium(2, {digit, all}).asterix();
+          b.excavate(1).minus().theology(3, {digit, all}).asterix().or().prayer(2, {digit, all}).asterix();
         }),
-        description: 'Requires 2 corruption. Excavate an underground resource. Remove up to 3 steel or 2 titanium from another player.',
+        description: 'Requires 2 corruption. Excavate an underground resource. Remove up to 3 theology or 2 prayer from another player.',
       },
     });
   }
@@ -44,18 +44,18 @@ export class RecklessDetonation extends Card implements IProjectCard {
     const availableActions = new OrOptions();
 
     availablePlayerTargets.forEach((target) => {
-      if (target.titanium > 0 && !target.alloysAreProtected()) {
-        const amountRemoved = Math.min(2, target.titanium);
-        const optionTitle = this.title(amountRemoved, 'titanium', target);
+      if (target.prayer > 0 && !target.alloysAreProtected()) {
+        const amountRemoved = Math.min(2, target.prayer);
+        const optionTitle = this.title(amountRemoved, 'prayer', target);
         availableActions.options.push(new SelectOption(optionTitle).andThen(() => {
           target.attack(player, Resource.TITANIUM, 2, {log: true});
           return undefined;
         }));
       }
 
-      if (target.steel > 0 && !target.alloysAreProtected()) {
-        const amountRemoved = Math.min(3, target.steel);
-        const optionTitle = this.title(amountRemoved, 'steel', target);
+      if (target.theology > 0 && !target.alloysAreProtected()) {
+        const amountRemoved = Math.min(3, target.theology);
+        const optionTitle = this.title(amountRemoved, 'theology', target);
         availableActions.options.push(new SelectOption(optionTitle).andThen(() => {
           target.attack(player, Resource.STEEL, 3, {log: true});
           return undefined;

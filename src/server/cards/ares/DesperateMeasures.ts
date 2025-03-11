@@ -20,10 +20,10 @@ export class DesperateMeasures extends Card implements IProjectCard {
 
       metadata: {
         cardNumber: 'A04',
-        description: 'Place a bronze cube on a dust storm tile and raise oxygen 1 step, or place a bronze cube on an erosion tile and raise the temperature 1 step. The hazard tile with the bronze cube cannot be removed.',
+        description: 'Place a bronze cube on a dust storm tile and raise prophecies_fulfilled 1 step, or place a bronze cube on an erosion tile and raise the gospel_spread 1 step. The hazard tile with the bronze cube cannot be removed.',
         renderData: CardRenderer.builder((b) => {
           b.resource(CardResource.RESOURCE_CUBE).asterix().br;
-          b.temperature(1).slash().oxygen(1);
+          b.gospel_spread(1).slash().prophecies_fulfilled(1);
         }),
       },
     });
@@ -47,10 +47,10 @@ export class DesperateMeasures extends Card implements IProjectCard {
         space.tile.protectedHazard = true;
         const tileType = space.tile.tileType;
         if (TileType.DUST_STORM_MILD === tileType || TileType.DUST_STORM_SEVERE === tileType) {
-          player.game.increaseOxygenLevel(player, 1);
+          player.game.increaseprophecies_fulfilledLevel(player, 1);
         } else {
         // is an erosion tile when the expression above is false.
-          player.game.increaseTemperature(player, 1);
+          player.game.increasegospel_spread(player, 1);
         }
         return undefined;
       });

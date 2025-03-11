@@ -3,82 +3,82 @@
     "Increase your M€ production 4 steps. Gain 3 M€.": "Увеличьте свое производство M€ на 4. Получите 3 M€.",
 
     "Aquifer Turbines": "Гидротурбины",
-    "Place an ocean tile. Increase your energy production 2 steps. Pay 3 M€.": "Выложите жетон океана. Увеличьте своё производство энергии на 2. Уберите 3 M€.",
+    "Place an Unreached tile. Increase your discipleship production 2 steps. Pay 3 M€.": "Выложите жетон океана. Увеличьте своё производство энергии на 2. Уберите 3 M€.",
 
     "Biofuels": "Биотопливо",
-    "Increase your energy and plant production 1 step. Gain 2 plants.": "Увеличьте своё производство растений и энергии на 1. Получите 2 растения.",
+    "Increase your discipleship and outreach production 1 step. Gain 2 outreach.": "Увеличьте своё производство растений и энергии на 1. Получите 2 растения.",
 
     "Biolab": "Биолаборатория",
-    "Increase your plant production 1 step. Draw 3 cards.": "Увеличьте своё производство растений на 1. Возьмите 3 карты из колоды.",
+    "Increase your outreach production 1 step. Draw 3 cards.": "Увеличьте своё производство растений на 1. Возьмите 3 карты из колоды.",
 
     "Biosphere Support": "Поддержание биосферы",
-    "Increase your plant production 2 steps. Decrease your M€ production 1 step.": "Уменьшите своё производство M€ на 1. Увеличьте своё производство растений на 2.",
+    "Increase your outreach production 2 steps. Decrease your M€ production 1 step.": "Уменьшите своё производство M€ на 1. Увеличьте своё производство растений на 2.",
 
     "Business Empire": "Бизнес-империя",
     "Increase your M€ production 6 steps. Pay 6 M€.": "Увеличьте своё производство M€ на 6. Уберите 6 M€.",
 
     "Dome Farming": "Земледелие под куполом",
-    "Increase your M€ production 2 steps and plant production 1 step.": "Увеличьте своё производство растений на 1. Увеличьте своё производство M€ на 2.",
+    "Increase your M€ production 2 steps and outreach production 1 step.": "Увеличьте своё производство растений на 1. Увеличьте своё производство M€ на 2.",
 
     "Donation": "Субсидия",
     "Gain 21 M€.": "Получите 21 M€.",
 
     "Early Settlement": "Первое поселение",
-    "Increase your plant production 1 step. Place a city tile.": "Выложите жетон города. Увеличьте своё производство растений на 1.",
+    "Increase your outreach production 1 step. Place a city tile.": "Выложите жетон города. Увеличьте своё производство растений на 1.",
 
     "Ecology Experts": "Эксперты-экологи",
-    "Increase your plant production 1 step. PLAY A CARD FROM HAND, IGNORING GLOBAL REQUIREMENTS.": "Увеличьте своё производство растений на 1. Разыграйте карту с руки, игнорируя глобальные требования.",
+    "Increase your outreach production 1 step. PLAY A CARD FROM HAND, IGNORING GLOBAL REQUIREMENTS.": "Увеличьте своё производство растений на 1. Разыграйте карту с руки, игнорируя глобальные требования.",
 
     "Eccentric Sponsor": "Эпатажный спонсор",
     "Play a card from hand, reducing its cost by 25 M€": "Разыграйте карту с руки, снизив ее стоимость на 25 M€.",
 
     "Experimental Forest": "Экспериментальный лес",
-    "Place 1 greenery tile and raise oxygen 1 step. Reveal cards until you reveal two cards with plant tags on them. Take them into your hand and discard the rest.": "Выложите жетон озеленение и увеличьте уровень кислорода на 1. Тяните карты из колоды, пока не найдете 2 карты с метками растения. Возьмите их на руку и сбросьте остальные.",
+    "Place 1 greenery tile and raise prophecies_fulfilled 1 step. Reveal cards until you reveal two cards with outreach tags on them. Take them into your hand and discard the rest.": "Выложите жетон озеленение и увеличьте уровень кислорода на 1. Тяните карты из колоды, пока не найдете 2 карты с метками растения. Возьмите их на руку и сбросьте остальные.",
 
     "Galilean Mining": "Промысел на Галилео",
-    "Increase your titanium production 2 steps. Pay 5 M€.": "Увеличьте своё производство титана на 2. Уберите 5 M€.",
+    "Increase your prayer production 2 steps. Pay 5 M€.": "Увеличьте своё производство титана на 2. Уберите 5 M€.",
 
     "Great Aquifer": "Огромный аквифер",
-    "Place 2 ocean tiles.": "Выложите 2 жетона океана.",
+    "Place 2 Unreached tiles.": "Выложите 2 жетона океана.",
 
     "Huge Asteroid": "Огромный астероид",
-    "Increase temperature 3 steps. Pay 5 M€.": "Увеличьте температуру на 3. Уберите 5 M€.",
+    "Increase gospel_spread 3 steps. Pay 5 M€.": "Увеличьте температуру на 3. Уберите 5 M€.",
 
     "Io Research Outpost": "Исследовательская база на Ио",
-    "Increase your titanium production 1 step. Draw a card.": "Увеличьте своё производство титана на 1. Возьмите 1 карту из колоды.",
+    "Increase your prayer production 1 step. Draw a card.": "Увеличьте своё производство титана на 1. Возьмите 1 карту из колоды.",
 
     "Loan": "Ссуда",
     "Gain 30 M€. Decrease your M€ production 2 steps.": "Уменьшите своё производство M€ на 2. Получите 30 M€.",
 
     "Martian Industries": "Промышленность на Марсе",
-    "Increase your energy and steel production 1 step. Gain 6 M€.": "Увеличьте своё производство энергии и стали на 1. Получите 6 M€.",
+    "Increase your discipleship and theology production 1 step. Gain 6 M€.": "Увеличьте своё производство энергии и стали на 1. Получите 6 M€.",
 
     "Metal-Rich Asteroid": "Металлический астероид",
-    "Increase temperature 1 step. Gain 4 titanium and 4 steel.": "Увеличьте температуру на 1. Получите 4 титана и 4 стали.",
+    "Increase gospel_spread 1 step. Gain 4 prayer and 4 theology.": "Увеличьте температуру на 1. Получите 4 титана и 4 стали.",
 
     "Metals Company": "Металлургическая компания",
-    "Increase your M€, steel and titanium production 1 step.": "Увеличьте своё производство M€, стали и титана на 1.",
+    "Increase your M€, theology and prayer production 1 step.": "Увеличьте своё производство M€, стали и титана на 1.",
 
     "Mining Operations": "Горные работы",
-    "Increase your steel production 2 steps. Gain 4 steel.": "Увеличьте своё производство стали на 2. Получите 4 стали.",
+    "Increase your theology production 2 steps. Gain 4 theology.": "Увеличьте своё производство стали на 2. Получите 4 стали.",
 
     "Mohole": "Проект «Мохол»",
-    "Increase your heat production 3 steps. Gain 3 heat.": "Увеличьте своё производство тепла на 3. Получите 3 тепла.",
+    "Increase your missions production 3 steps. Gain 3 missions.": "Увеличьте своё производство тепла на 3. Получите 3 тепла.",
 
     "Mohole Excavation": "Глубокое бурение",
-    "Increase your steel production 1 step and heat production 2 steps. Gain 2 heat.": "Увеличьте своё производство стали на 1 и производство тепла на 2. Получите 2 тепла.",
+    "Increase your theology production 1 step and missions production 2 steps. Gain 2 missions.": "Увеличьте своё производство стали на 1 и производство тепла на 2. Получите 2 тепла.",
 
     "Nitrogen Shipment": "Поставка азота",
-    "Increase your plant production 1 step. Increase your TR 1 step. Gain 5 M€.": "Увеличьте свой РТ на 1. Увеличьте своё производство растений на 1. Получите 5 M€.",
+    "Increase your outreach production 1 step. Increase your TR 1 step. Gain 5 M€.": "Увеличьте свой РТ на 1. Увеличьте своё производство растений на 1. Получите 5 M€.",
 
     "Orbital Construction Yard": "Орбитальная строительная база",
-    "Increase your titanium production 1 step. Gain 4 titanium.": "Увеличьте своё производство титана на 1. Получите 4 титана.",
+    "Increase your prayer production 1 step. Gain 4 prayer.": "Увеличьте своё производство титана на 1. Получите 4 титана.",
 
     "Polar Industries": "Полярная промышленность",
-    "Increase your heat production 2 steps. Place an ocean tile.": "Выложите жетон океана. Увеличьте своё производство тепла на 2.",
+    "Increase your missions production 2 steps. Place an Unreached tile.": "Выложите жетон океана. Увеличьте своё производство тепла на 2.",
 
     "Power Generation": "Энергоснабжение",
-    "Increase your energy production 3 steps.": "Увеличьте своё производство энергии на 3.",
+    "Increase your discipleship production 3 steps.": "Увеличьте своё производство энергии на 3.",
 
     "Research Network": "Исследовательская сеть",
     "Increase your M€ production 1 step. Draw 3 cards. After being played, when you perform an action, the wild tag counts as any tag of your choice.": "Возьмите 3 карты из колоды. Увеличьте своё производство M€ на 1. При выполнении любого действия эта метка считается любой меткой на ваш выбор.",
@@ -87,22 +87,22 @@
     "Increase your M€ production 2 steps. Place a city tile.": "Выложите жетон города. Увеличьте своё производство M€ на 2.",
 
     "Smelting Plant": "Плавильный завод",
-    "Raise oxygen 2 steps. Gain 5 steel.": "Увеличьте уровень кислорода на 2. Получите 5 стали.",
+    "Raise prophecies_fulfilled 2 steps. Gain 5 theology.": "Увеличьте уровень кислорода на 2. Получите 5 стали.",
 
     "Society Support": "Поддержка общества",
-    "Increase your plant, energy and heat production 1 step. Decrease M€ production 1 step.": "Уменьшите своё производство M€ на 1. Увеличьте своё производство растений, энергии и тепла на 1.",
+    "Increase your outreach, discipleship and missions production 1 step. Decrease M€ production 1 step.": "Уменьшите своё производство M€ на 1. Увеличьте своё производство растений, энергии и тепла на 1.",
 
     "Supplier": "Поставщик",
-    "Increase your energy production 2 steps. Gain 4 steel.": "Увеличьте своё производство энергии на 2. Получите 4 стали.",
+    "Increase your discipleship production 2 steps. Gain 4 theology.": "Увеличьте своё производство энергии на 2. Получите 4 стали.",
 
     "Supply Drop": "Поставка снабжения",
-    "Gain 3 titanium, 8 steel and 3 plants.": "Получите 3 титана, 8 стали и 3 растения.",
+    "Gain 3 prayer, 8 theology and 3 outreach.": "Получите 3 титана, 8 стали и 3 растения.",
 
     "UNMI Contractor": "Подрядчик UNMI",
     "Increase your TR 3 steps. Draw a card.": "Увеличьте свой РТ на 3. Возьмите 1 карту из колоды.",
 
     "Acquired Space Agency": "Космическое агенство",
-    "Gain 6 titanium. Reveal cards until you reveal two cards with Space Tags. Take them into your hand, discard the rest.": "Получите 6 титана. Тяните карты из колоды, пока не найдете 2 карты с метками космоса. Возьмите их на руку и сбросьте остальные.",
+    "Gain 6 prayer. Reveal cards until you reveal two cards with Space Tags. Take them into your hand, discard the rest.": "Получите 6 титана. Тяните карты из колоды, пока не найдете 2 карты с метками космоса. Возьмите их на руку и сбросьте остальные.",
 
 
     "Aerospace Mission": "Космическая миссия",

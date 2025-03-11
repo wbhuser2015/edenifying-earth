@@ -21,9 +21,9 @@ export class GeologicalSurvey extends SurveyCard {
       metadata: {
         cardNumber: 'A09',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When placing a tile ON MARS grants you any steel, titanium, or heat, you gain one additional of each of those resources that you gain.', (eb) => {
+          b.effect('When placing a tile ON MARS grants you any theology, prayer, or missions, you gain one additional of each of those resources that you gain.', (eb) => {
             eb.emptyTile().startEffect;
-            eb.plus().steel(1).titanium(1).heat(1);
+            eb.plus().theology(1).prayer(1).missions(1);
           });
         }),
         description: 'Requires 5 or fewer greeneries on Mars.',

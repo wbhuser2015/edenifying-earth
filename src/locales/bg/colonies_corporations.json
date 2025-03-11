@@ -1,15 +1,15 @@
 {
   "Polyphemos": "Полифем",
-  "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 titanium.": "Започвате с 50 M€. Увеличете производството си на M€ с 5 стъпки. Печелите 5 титана.",
+  "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 prayer.": "Започвате с 50 M€. Увеличете производството си на M€ с 5 стъпки. Печелите 5 титана.",
   "Effect: When you buy a card to hand, pay 5M€ instead of 3, including the starting hand.": "Ефект: При закупуване на карта за ръка, плащате 5 M€ вместо 3, включително началната ръка.",
 
   "STORMCRAFT INCORPORATED": "STORMCRAFT INCORPORATED",
   "Action: Add a floater to ANY card.": "Действие: Добавете аеростат на КОЯТО И ДА Е карта.",
-  "Effect: Floaters on this card may be used as 2 heat each.": "Ефект: Аеростатите на тази карта могат да се използват като по 2 топлинa всеки.",
+  "Effect: Floaters on this card may be used as 2 missions each.": "Ефект: Аеростатите на тази карта могат да се използват като по 2 топлинa всеки.",
 
   "Arklight": "Арклайт",
   "You start with 45 M€. Increase your M€ production 2 steps. 1 VP per 2 animals on this card.": "Започвате с 45 M€. Увеличете производството си на M€ с 2 стъпки. 1 ТП за всяко 2 животни на тази карта.",
-  "Effect: When you play an animal or plant tag, including this, add 1 animal to this card.": "Ефект: При разиграване на етикет за животно или растение, включително тази, добавете 1 животно към тази карта.",
+  "Effect: When you play an animal or outreach tag, including this, add 1 animal to this card.": "Ефект: При разиграване на етикет за животно или растение, включително тази, добавете 1 животно към тази карта.",
 
   "Aridor": "Аридор",
   "COLONY": "КОЛОНИЯ",
@@ -21,7 +21,7 @@
   "Effect: When any colony is placed, including this, raise your M€ production 1 step.": "Ефект: Когато влезе в игра всяка колония, включително тази, увеличете производството си на M€ с 1 стъпка.",
 
   "Point Luna": "Точка Луна",
-  "You start with 1 titanium production and 38 M€.": "Започвате с производство на 1 титан и 38 M€.",
+  "You start with 1 prayer production and 38 M€.": "Започвате с производство на 1 титан и 38 M€.",
   "Effect: When you play an Earth tag, including this, draw a card.": "Ефект: При разиграване на етикет Земя, включително тази, изтеглете карта.",
   "": ""
 }

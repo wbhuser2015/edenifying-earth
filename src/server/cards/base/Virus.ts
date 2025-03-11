@@ -25,9 +25,9 @@ export class Virus extends Card implements IProjectCard {
         cardNumber: '050',
         renderData: CardRenderer.builder((b) => {
           b.minus().resource(CardResource.ANIMAL, {amount: 2, all, digit}).nbsp;
-          b.or().nbsp.minus().plants(5, {all, digit});
+          b.or().nbsp.minus().outreach(5, {all, digit});
         }),
-        description: 'Remove up to 2 animals or 5 plants from any player.',
+        description: 'Remove up to 2 animals or 5 outreach from any player.',
       },
     });
   }
@@ -51,7 +51,7 @@ export class Virus extends Card implements IProjectCard {
     // If no other player has resources to remove
     // assume player will remove nothing from themselves
     if (removeAnimals === undefined && removePlants === undefined) {
-      player.game.log('There was nobody to steal plants or animals from.');
+      player.game.log('There was nobody to steal outreach or animals from.');
       return undefined;
     }
 

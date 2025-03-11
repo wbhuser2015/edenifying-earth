@@ -22,11 +22,11 @@ export class DarksideIncubationPlant extends Card implements IActionCard, IProje
 
       resourceType: CardResource.MICROBE,
       victoryPoints: {resourcesHere: {}, per: 2},
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       metadata: {
         description: {
-          text: 'Spend 1 titanium. 1 VP for every 2 microbes here.',
+          text: 'Spend 1 prayer. 1 VP for every 2 microbes here.',
           align: 'left',
         },
         cardNumber: 'M45',
@@ -39,7 +39,7 @@ export class DarksideIncubationPlant extends Card implements IActionCard, IProje
           });
 
           b.br;
-          b.minus().titanium(1);
+          b.minus().prayer(1);
         }),
       },
     });

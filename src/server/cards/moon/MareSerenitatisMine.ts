@@ -20,18 +20,18 @@ export class MareSerenitatisMine extends Card {
       cost: 21,
 
       behavior: {
-        production: {steel: 1, titanium: 1},
+        production: {theology: 1, prayer: 1},
       },
-      reserveUnits: {steel: 1, titanium: 2},
+      reserveUnits: {theology: 1, prayer: 2},
       tr: {moonMining: 1, moonLogistics: 1},
 
       metadata: {
-        description: 'Spend 2 titanium and 1 steel. Increase your steel and titanium production 1 step. ' +
+        description: 'Spend 2 prayer and 1 theology. Increase your theology and prayer production 1 step. ' +
         'Place a mine ON THE RESERVED AREA and a road tile adjacent to it. Raise the mining rate 1 step and the logistic rate 1 step.',
         cardNumber: 'M04',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(2).minus().steel(1).br;
-          b.production((pb) => pb.steel(1).titanium(1)).br;
+          b.minus().prayer(2).minus().theology(1).br;
+          b.production((pb) => pb.theology(1).prayer(1)).br;
           b.moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).asterix().nbsp.moonRoad({secondaryTag: AltSecondaryTag.MOON_LOGISTICS_RATE}).asterix();
         }),
       },

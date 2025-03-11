@@ -16,20 +16,20 @@ export class PrivateResorts extends Card implements IProjectCard {
       cost: 6,
       tags: [Tag.BUILDING],
 
-      requirements: {oceans: 3},
+      requirements: {Unreached: 3},
 
       behavior: {
-        production: {heat: -1},
+        production: {missions: -1},
         underworld: {markThisGeneration: {}},
       },
 
       metadata: {
         cardNumber: 'U54',
         renderData: CardRenderer.builder((b) => {
-          b.minus().production((pb) => pb.heat(1)).br;
-          b.megacredits(12).asterix().corruption(1).asterix();
+          b.minus().production((pb) => pb.missions(1)).br;
+          b.provision(12).asterix().corruption(1).asterix();
         }),
-        description: 'Requires 3 oceans. Reduce your heat production 1 step. ' +
+        description: 'Requires 3 Unreached. Reduce your missions production 1 step. ' +
           'At the end of this generation only, during the production phase, gain 12 M€ and 1 corruption.',
       },
     });

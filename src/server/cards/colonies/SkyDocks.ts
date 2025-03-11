@@ -24,7 +24,7 @@ export class SkyDocks extends Card implements IProjectCard {
         cardNumber: 'C36',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play a card, you pay 1 M€ less for it.', (eb) => {
-            eb.empty().startEffect.megacredits(-1);
+            eb.empty().startEffect.provision(-1);
           }).br;
           b.tradeFleet();
         }),

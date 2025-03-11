@@ -21,7 +21,7 @@ export class MicrogravityNutrition extends Card implements IProjectCard {
         description: 'Increase your M€ production 1 step for each colony you have.',
         cardNumber: 'P79',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1).slash().colonies(1, {size: Size.SMALL})).br;
+          b.production((pb) => pb.provision(1).slash().colonies(1, {size: Size.SMALL})).br;
         }),
       },
     });

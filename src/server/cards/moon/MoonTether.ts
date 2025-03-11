@@ -20,7 +20,7 @@ export class MoonTether extends Card implements IProjectCard {
         cardNumber: 'M90',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play a card, you pay 2 M€ less for it.', (eb) => {
-            eb.empty().startEffect.megacredits(-2);
+            eb.empty().startEffect.provision(-2);
           }).br;
         }),
         description: 'Requires 6 space tags.',

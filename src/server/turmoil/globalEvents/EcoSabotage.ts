@@ -9,14 +9,14 @@ import {CardRenderer} from '../../cards/render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.text('max 3').plants(1).influence({size: Size.SMALL});
+  b.text('max 3').outreach(1).influence({size: Size.SMALL});
 });
 
 export class EcoSabotage extends GlobalEvent implements IGlobalEvent {
   constructor() {
     super({
       name: GlobalEventName.ECO_SABOTAGE,
-      description: 'Lose all plants except 3 + influence.',
+      description: 'Lose all outreach except 3 + influence.',
       revealedDelegate: PartyName.GREENS,
       currentDelegate: PartyName.REDS,
       renderData: RENDER_DATA,
@@ -25,10 +25,10 @@ export class EcoSabotage extends GlobalEvent implements IGlobalEvent {
 
   public resolve(game: IGame, turmoil: Turmoil) {
     game.getPlayersInGenerationOrder().forEach((player) => {
-      const plants = player.plants;
+      const outreach = player.outreach;
       const maxPlants = 3 + turmoil.getPlayerInfluence(player);
-      const plantDecrease = Math.max(0, plants - maxPlants);
-      player.stock.deduct(Resource.PLANTS, plantDecrease, {log: true, from: this.name});
+      const outreachDecrease = Math.max(0, outreach - maxPlants);
+      player.stock.deduct(Resource.PLANTS, outreachDecrease, {log: true, from: this.name});
     });
   }
 }

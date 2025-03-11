@@ -45,8 +45,7 @@ describe('TerraformingDeal', () => {
 
   it('Gives MC during resolving global events', () => {
     player.playedCards.push(card);
-    game.phase = Phase.SOLAR;
-    game.inTurmoil = true;
+    game.phase = Phase.TURMOIL;
 
     const turmoil = game.turmoil!;
     player2.playedCards.push(new Mine());
@@ -62,8 +61,7 @@ describe('TerraformingDeal', () => {
 
   it('Gives resolving chairman', () => {
     player.playedCards.push(card);
-    game.phase = Phase.SOLAR;
-    game.inTurmoil = true;
+    game.phase = Phase.TURMOIL;
 
     const turmoil = game.turmoil!;
     turmoil.setNewChairman(player, game);

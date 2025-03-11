@@ -23,9 +23,9 @@ export class EcologicalSurvey extends SurveyCard {
         description: 'Requires 3 greeneries on Mars.',
         cardNumber: 'A07',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When placing a tile grants you any plants, animals or microbes, you gain one additional of each of those resources that you gain.', (eb) => {
+          b.effect('When placing a tile grants you any outreach, animals or microbes, you gain one additional of each of those resources that you gain.', (eb) => {
             eb.emptyTile().startEffect;
-            eb.plus().plants(1).resource(CardResource.ANIMAL).resource(CardResource.MICROBE);
+            eb.plus().outreach(1).resource(CardResource.ANIMAL).resource(CardResource.MICROBE);
           });
         }),
       },

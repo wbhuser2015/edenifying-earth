@@ -13,17 +13,17 @@ export class ColonyTradeHub extends PreludeCard {
       tags: [Tag.SPACE],
 
       behavior: {
-        production: {energy: 1},
-        stock: {titanium: 2},
+        production: {discipleship: 1},
+        stock: {prayer: 2},
       },
 
       metadata: {
         cardNumber: 'P46',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1)).titanium(2).br;
-          b.effect('When any colony is placed, gain 2 M€.', (eb) => eb.colonies(1, {all}).startEffect.megacredits(2));
+          b.production((pb) => pb.discipleship(1)).prayer(2).br;
+          b.effect('When any colony is placed, gain 2 M€.', (eb) => eb.colonies(1, {all}).startEffect.provision(2));
         }),
-        description: 'Increase your energy production 1 step. Gain 2 titanium',
+        description: 'Increase your discipleship production 1 step. Gain 2 prayer',
       },
     });
   }

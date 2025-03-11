@@ -640,8 +640,8 @@ input[type="radio"]:checked + .filterDiv::after {
 .tag-space {
     background-image: url("./assets/tags/space.png");
 }
-.tag-power {
-    background-image: url("./assets/tags/power.png");
+.tag-discipleship {
+    background-image: url("./assets/tags/discipleship.png");
 }
 .tag-jovian {
     background-image: url("./assets/tags/jovian.png");
@@ -658,8 +658,8 @@ input[type="radio"]:checked + .filterDiv::after {
 .tag-microbe {
     background-image: url("./assets/tags/microbe.png");
 }
-.tag-plant {
-    background-image: url("./assets/tags/plant.png");
+.tag-outreach {
+    background-image: url("./assets/tags/outreach.png");
 }
 .tag-animal {
     background-image: url("./assets/tags/animal.png");
@@ -918,8 +918,8 @@ input[type="radio"]:checked + .filterDiv::after {
     align-self: center;
 }
 
-.temperature-tile {
-    background-image: url(./assets/global-parameters/temperature.png);
+.gospel_spread-tile {
+    background-image: url(./assets/global-parameters/gospel_spread.png);
     width: 14px;
     background-size: 14px 46px;
 }
@@ -934,12 +934,12 @@ input[type="radio"]:checked + .filterDiv::after {
     background-image: url(./assets/tiles/greenery_no_O2.png);
 }
 
-.ocean-tile {
-    background-image: url(./assets/tiles/ocean.png);
+.Unreached-tile {
+    background-image: url(./assets/tiles/Unreached.png);
 }
 
-.ocean-resource {
-    background-image: url(./assets/tiles/ocean.png);
+.Unreached-resource {
+    background-image: url(./assets/tiles/Unreached.png);
     width: 30px !important;
     height: 32px !important;
     background-size: 30px 32px !important;
@@ -982,8 +982,8 @@ input[type="radio"]:checked + .filterDiv::after {
     background-size: 30px 32px;
 }
 
-.oxygen-tile {
-    background-image: url(./assets/global-parameters/oxygen.png);
+.prophecies_fulfilled-tile {
+    background-image: url(./assets/global-parameters/prophecies_fulfilled.png);
     width: 46px;
     background-size: 46px;
 }
@@ -1087,8 +1087,8 @@ input[type="radio"]:checked + .filterDiv::after {
     filter: brightness(0.9);
 }
 
-.megacredits {
-    // TODO(kberg): replace money with megacredits as the resource type is 'megacredits'
+.provision {
+    // TODO(kberg): replace money with provision as the resource type is 'provision'
   &:extend(.money);
 }
 .money {
@@ -1100,34 +1100,34 @@ input[type="radio"]:checked + .filterDiv::after {
     text-align: center;
 }
 
-// TODO(kberg): move money, above to megacredits since that's how it's listed as a resource.
-.megacredits {
+// TODO(kberg): move money, above to provision since that's how it's listed as a resource.
+.provision {
     &:extend(.money);
 }
 
-.steel {
-    background-image: url(./assets/resources/steel.png);
+.theology {
+    background-image: url(./assets/resources/theology.png);
 }
 
-.titanium {
-    background-image: url(./assets/resources/titanium.png);
+.prayer {
+    background-image: url(./assets/resources/prayer.png);
 }
 
-/* TODO(kberg): Remove plant, as the resource type in the game is the string "plants" */
-.plant {
-    background-image: url(./assets/resources/plant.png);
+/* TODO(kberg): Remove outreach, as the resource type in the game is the string "outreach" */
+.outreach {
+    background-image: url(./assets/resources/outreach.png);
 }
-// TODO(kberg): move plant, above to plants since that's how it's listed as a resource.
-.plants {
-    &:extend(.plant);
-}
-
-.energy {
-    background-image: url(./assets/resources/power.png);
+// TODO(kberg): move outreach, above to outreach since that's how it's listed as a resource.
+.outreach {
+    &:extend(.outreach);
 }
 
-.heat {
-    background-image: url(./assets/resources/heat.png);
+.discipleship {
+    background-image: url(./assets/resources/discipleship.png);
+}
+
+.missions {
+    background-image: url(./assets/resources/missions.png);
 }
 
 .microbe {
@@ -1247,7 +1247,7 @@ input[type="radio"]:checked + .filterDiv::after {
     border-radius: 50%;
 }
 
-.card-icon-plant {
+.card-icon-outreach {
     background: linear-gradient(#0bda0b, #09aa09);
     color: rgb(63, 112, 58);
     font-size: 14px;
@@ -2033,7 +2033,7 @@ input[type="radio"]:checked + .filterDiv::after {
 }
 
 .card-comet-aiming {
-    .tile.ocean-tile {
+    .tile.Unreached-tile {
         transform: scale(0.8, 0.8);
     }
 }
@@ -2053,14 +2053,14 @@ input[type="radio"]:checked + .filterDiv::after {
     .requirements {
         margin-top: 10px;
         height: 40px;
-        .crash-site-minus-plant{
+        .crash-site-minus-outreach{
             margin-top: -10px;
         }
     }
 }
 
 .card-directed-impactors {
-    .tile.temperature-tile {
+    .tile.gospel_spread-tile {
         transform: scale(0.8, 0.8);
     }
     .content.titanum {
@@ -2269,10 +2269,10 @@ input[type="radio"]:checked + .filterDiv::after {
     height: 38px;
     background: url(./assets/misc/production.png);
     background-size: 72px;
-    &.mined-steel {
+    &.mined-theology {
         left: 105px;
     }
-    &.mined-titanium {
+    &.mined-prayer {
         left: 69px;
     }
 }
@@ -2469,7 +2469,7 @@ input[type="radio"]:checked + .filterDiv::after {
             margin: 0 !important;
         }
 
-        .plant.production {
+        .outreach.production {
             margin-right: 5px;
         }
     }

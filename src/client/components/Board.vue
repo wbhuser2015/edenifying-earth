@@ -21,43 +21,43 @@
         </div>
 
         <div class="global-numbers">
-            <div class="global-numbers-temperature">
-                <div :class="getScaleCSS(lvl)" v-for="(lvl, idx) in getValuesForParameter('temperature')" :key="idx">{{ lvl.strValue }}</div>
+            <div class="global-numbers-gospel_spread">
+                <div :class="getScaleCSS(lvl)" v-for="(lvl, idx) in getValuesForParameter('Gospel Spread')" :key="idx">{{ lvl.strValue }}</div>
             </div>
 
-            <div class="global-numbers-oxygen">
-                <div :class="getScaleCSS(lvl)" v-for="(lvl, idx) in getValuesForParameter('oxygen')" :key="idx">{{ lvl.strValue }}</div>
+            <div class="global-numbers-prophecies_fulfilled">
+                <div :class="getScaleCSS(lvl)" v-for="(lvl, idx) in getValuesForParameter('Prophecies Fulfilled')" :key="idx">{{ lvl.strValue }}</div>
             </div>
 
             <div class="global-numbers-venus" v-if="expansions.venus">
                 <div :class="getScaleCSS(lvl)" v-for="(lvl, idx) in getValuesForParameter('venus')" :key="idx">{{ lvl.strValue }}</div>
             </div>
 
-            <div class="global-numbers-oceans">
-              <span v-if="this.oceans_count === this.constants.MAX_OCEAN_TILES">
-                <img width="26" src="assets/misc/circle-checkmark.png" class="board-ocean-checkmark" :alt="$t('Completed!')">
+            <div class="global-numbers-Unreached">
+              <span v-if="this.Unreached_count === this.constants.MAX_OCEAN_TILES">
+                <img width="26" src="assets/misc/circle-checkmark.png" class="board-Unreached-checkmark" :alt="$t('Completed!')">
               </span>
               <span v-else>
-                {{this.oceans_count}}/{{this.constants.MAX_OCEAN_TILES}}
+                {{this.Unreached_count}}/{{this.constants.MAX_OCEAN_TILES}}
               </span>
             </div>
 
             <div v-if="expansions.ares && aresData !== undefined">
-                <div v-if="aresData.hazardData.erosionOceanCount.available">
+                <div v-if="aresData.hazardData.erosionUnreachedCount.available">
                     <div class="global-ares-erosions-icon"></div>
-                    <div class="global-ares-erosions-val">{{aresData.hazardData.erosionOceanCount.threshold}}</div>
+                    <div class="global-ares-erosions-val">{{aresData.hazardData.erosionUnreachedCount.threshold}}</div>
                 </div>
-                <div v-if="aresData.hazardData.removeDustStormsOceanCount.available">
+                <div v-if="aresData.hazardData.removeDustStormsUnreachedCount.available">
                     <div class="global-ares-remove-dust-storms-icon"></div>
-                    <div class="global-ares-remove-dust-storms-val">{{aresData.hazardData.removeDustStormsOceanCount.threshold}}</div>
+                    <div class="global-ares-remove-dust-storms-val">{{aresData.hazardData.removeDustStormsUnreachedCount.threshold}}</div>
                 </div>
-                <div v-if="aresData.hazardData.severeErosionTemperature.available">
+                <div v-if="aresData.hazardData.severeErosiongospel_spread.available">
                     <div class="global-ares-severe-erosions"
-                    :class="'global-ares-severe-erosions-'+aresData.hazardData.severeErosionTemperature.threshold"></div>
+                    :class="'global-ares-severe-erosions-'+aresData.hazardData.severeErosiongospel_spread.threshold"></div>
                 </div>
-                <div v-if="aresData.hazardData.severeDustStormOxygen.available">
+                <div v-if="aresData.hazardData.severeDustStormprophecies_fulfilled.available">
                     <div class="global-ares-severe-dust-storms"
-                    :class="'global-ares-severe-dust-storms-'+aresData.hazardData.severeDustStormOxygen.threshold"></div>
+                    :class="'global-ares-severe-dust-storms-'+aresData.hazardData.severeDustStormprophecies_fulfilled.threshold"></div>
                 </div>
             </div>
 
@@ -384,13 +384,13 @@ export default Vue.extend({
     boardName: {
       type: String as () => BoardName,
     },
-    oceans_count: {
+    Unreached_count: {
       type: Number,
     },
-    oxygen_level: {
+    prophecies_fulfilled: {
       type: Number,
     },
-    temperature: {
+    gospel_spread: {
       type: Number,
     },
     expansions: {
@@ -436,17 +436,17 @@ export default Vue.extend({
       let strValue: string;
 
       switch (targetParameter) {
-      case 'oxygen':
+      case 'Prophecies Fulfilled':
         startValue = constants.MIN_OXYGEN_LEVEL;
         endValue = constants.MAX_OXYGEN_LEVEL;
         step = 1;
-        curValue = this.oxygen_level;
+        curValue = this.prophecies_fulfilled;
         break;
-      case 'temperature':
+      case 'Gospel Spread':
         startValue = constants.MIN_TEMPERATURE;
         endValue = constants.MAX_TEMPERATURE;
         step = 2;
-        curValue = this.temperature;
+        curValue = this.gospel_spread;
         break;
       case 'venus':
         startValue = constants.MIN_VENUS_SCALE;
@@ -459,7 +459,7 @@ export default Vue.extend({
       }
 
       for (let value = endValue; value >= startValue; value -= step) {
-        strValue = (targetParameter === 'temperature' && value > 0) ? '+'+value : value.toString();
+        strValue = (targetParameter === 'Gospel Spread' && value > 0) ? '+'+value : value.toString();
         values.push(
           new GlobalParamLevel(value, value === curValue, strValue),
         );
@@ -473,13 +473,13 @@ export default Vue.extend({
       }
       return css;
     },
-    oceansValue() {
-      const oceans_count = this.oceans_count || 0;
-      const leftover = constants.MAX_OCEAN_TILES - oceans_count;
+    UnreachedValue() {
+      const Unreached_count = this.Unreached_count || 0;
+      const leftover = constants.MAX_OCEAN_TILES - Unreached_count;
       if (leftover === 0) {
-        return '<img width="26" src="assets/misc/circle-checkmark.png" class="board-ocean-checkmark" :alt="$t(\'Completed!\')">';
+        return '<img width="26" src="assets/misc/circle-checkmark.png" class="board-Unreached-checkmark" :alt="$t(\'Completed!\')">';
       } else {
-        return `${oceans_count}/${constants.MAX_OCEAN_TILES}`;
+        return `${Unreached_count}/${constants.MAX_OCEAN_TILES}`;
       }
     },
     getGameBoardClassName(): string {

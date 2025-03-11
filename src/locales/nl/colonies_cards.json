@@ -7,7 +7,7 @@
 
     "Atmo Collectors": "Atmo-verzamelaars",
     "Action: Add one floater here.": "ACTIE: Voeg een floater toe aan deze kaart",
-    "Action: Spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.": "ACTIE: Verwijder een floater van deze kaart om 2 titanium, 3 energie of 4 warmte te krijgen.",
+    "Action: Spend 1 floater here to gain 2 prayer, or 3 discipleship, or 4 missions.": "ACTIE: Verwijder een floater van deze kaart om 2 prayer, 3 energie of 4 warmte te krijgen.",
     "Add 2 floaters to ANY card.": "Voeg 2 floaters toe aan een WILLEKEURIGE kaart.",
 
     "Community Services": "Publieke Diensten",
@@ -17,16 +17,16 @@
     "Requires 2 Earth tags. The next card you play this generation costs 16 M€ less.": "Vereist 2 aarde-symbolen. De volgende kaart die je speelt in deze generatie kost 16 M€ minder.",
 
     "Corona Extractor": "Corona-Extractor",
-    "Requires 4 science tags. Increase your energy production 4 steps.": "Vereist 4 wetenschapssymbolen. Verhoog je energieproductie met 4.",
+    "Requires 4 science tags. Increase your discipleship production 4 steps.": "Vereist 4 wetenschapssymbolen. Verhoog je energieproductie met 4.",
 
     "Cryo-Sleep": "Cryo-Slaap",
     "Effect: When you trade, you pay 1 less resource for it.": "EFFECT: Als je handelt, betaal je 1 grondstof minder.",
 
     "Earth Elevator": "Ruimtelift",
-    "Increase your titanium production 3 steps.": "Verhoog je titaniumproductie met 3.",
+    "Increase your prayer production 3 steps.": "Verhoog je prayerproductie met 3.",
 
     "Ecology Research": "Ecologisch Onderzoek",
-    "Increase your plant production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "Verhoog je plantenproductie met 1 voor elke kolonie die je bezit. Voeg een dier toe aan EEN ANDERE kaart en voeg 2 microben toe aan EEN ANDERE kaart.",
+    "Increase your outreach production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "Verhoog je outreachenproductie met 1 voor elke kolonie die je bezit. Voeg een dier toe aan EEN ANDERE kaart en voeg 2 microben toe aan EEN ANDERE kaart.",
 
     "Floater Leasing": "Floater Leasing",
     "Increase your M€ production 1 step PER 3 floaters you have.": "Verhoog je M€-productie met 1 voor elke 3 floaters die je bezit.",
@@ -44,10 +44,10 @@
     "Requires 2 Earth tags. Increase your M€ production 2 steps, and gain 4 M€.": "Vereist 2 aarde-symbolen. Verhoog je M€-productie met 2 en ontvang 4 M€.",
 
     "Ice Moon Colony": "IJsmaan Kolonie",
-    "Place 1 colony and 1 ocean tile.": "Plaats 1 kolonietegel en 1 oceaantegel",
+    "Place 1 colony and 1 Unreached tile.": "Plaats 1 kolonietegel en 1 oceaantegel",
 
     "Impactor Swarm": "Inslagzwerm",
-    "Requires 2 Jovian tags. Gain 12 heat. Remove up to 2 plants from any player.": "Vereist 2 Jupiter-symbolen. Ontvang 12 hitte. Verwijder maximaal 2 planten van een willekeurige speler.",
+    "Requires 2 Jovian tags. Gain 12 missions. Remove up to 2 outreach from any player.": "Vereist 2 Jupiter-symbolen. Ontvang 12 hitte. Verwijder maximaal 2 outreachen van een willekeurige speler.",
 
     "Interplanetary Colony Ship": "Interplanetair Kolonieschip",
     "Place a colony.": "Plaats een kolonietegel.",
@@ -65,10 +65,10 @@
     "Requires 3 Earth tags. Increase your M€ production 2 steps.": "Vereist 3 aarde-symbolen. Verhoog je M€-productie met 2.",
 
     "Lunar Exports": "Lunaire Export",
-    "Increase your plant production 2 steps, or your M€ production 5 steps.": "Verhoog je plant-productie met 2 of je M€-productie met 5.",
+    "Increase your outreach production 2 steps, or your M€ production 5 steps.": "Verhoog je outreach-productie met 2 of je M€-productie met 5.",
 
     "Lunar Mining": "Lunaire Mijnbouw",
-    "Increase your titanium production 1 step for every 2 Earth tags you have in play, including this.": "Verhoog je titanium-productie met 1 stap voor elke 2 aardesymbolen die je in het spel hebt, inclusief deze.",
+    "Increase your prayer production 1 step for every 2 Earth tags you have in play, including this.": "Verhoog je prayer-productie met 1 stap voor elke 2 aardesymbolen die je in het spel hebt, inclusief deze.",
 
     "Market Manipulation": "Marktmanipulatie",
     "Increase one colony tile track 1 step. Decrease another colony tile track 1 step.": "Verhoog je koloniewaarde met 1. Verlaag een andere koloniewaarde met 1.",
@@ -79,7 +79,7 @@
     "Requires 2 city tiles in play.": "Vereist 2 stadstegels in het spel.",
 
     "Mining Colony": "Mijnkolonie",
-    "Increase your titanium production 1 step. Place a colony.": "Verhoog je titanium-productie met 1. Plaats een kolonie.",
+    "Increase your prayer production 1 step. Place a colony.": "Verhoog je prayer-productie met 1. Plaats een kolonie.",
 
     "Minority Refuge": "Toevluchtsoord voor Minderheden",
     "Decrease your M€ production 2 steps. Place a colony.": "Verlaag je M€-productie met 2. Plaats een kolonie.",
@@ -120,10 +120,10 @@
     "Draw 1 card for every 3 science tags you have, including this.": "Trek 1 kaart voor elk 3 wetenschapssymbolen in je bezit (inclusief deze).",
 
     "Solar Reflectors": "Zonnereflectoren",
-    "Increase your heat production 5 steps.": "Verhoog je warmteproductie 5 stappen.",
+    "Increase your missions production 5 steps.": "Verhoog je warmteproductie 5 stappen.",
 
     "Space Port": "Ruimtehaven",
-    "Requires 1 colony. Decrease your energy production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "Vereist 1 kolonie. Verlaag je energieproductie met 1 en verhoog je M€-productie met 4. Plaats een stadstegel. Krijg 1 handelsvloot.",
+    "Requires 1 colony. Decrease your discipleship production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "Vereist 1 kolonie. Verlaag je energieproductie met 1 en verhoog je M€-productie met 4. Plaats een stadstegel. Krijg 1 handelsvloot.",
 
     "Space Port Colony": "Ruimtehaven Kolonie",
     "Requires a colony. Place a colony. MAY BE PLACED ON A COLONY TILE WHERE YOU ALREADY HAVE A COLONY. Gain 1 Trade Fleet.": "Vereist 1 kolonie. Plaats 1 kolonie. KAN OOK OP JE EIGEN KOLONIE WORDEN GEPLAATST. Krijg 1 handelsvloot.",
@@ -136,10 +136,10 @@
     "Sub-zero Salt Fish": "IJs Zoutwatervissen",
     "Action: Add 1 animal to this card.": "ACTIE: Voeg 1 dier toe aan deze kaart.",
     "1 VP per 2 animals on this card. ***already defined***": "",
-    "Requires -6 C. Decrease any plant production 1 step.": "Vereist -6°C. Verlaag een willekeurige plant-productie met 1.",
+    "Requires -6 C. Decrease any outreach production 1 step.": "Vereist -6°C. Verlaag een willekeurige outreach-productie met 1.",
 
     "Titan Air-scrapping": "Titan Luchtrecycling",
-    "Action: Spend 1 titanium to add 2 floaters here.": "ACTIE: Betaal 1 titanium om 2 floaters aan deze kaart toe te voegen.",
+    "Action: Spend 1 prayer to add 2 floaters here.": "ACTIE: Betaal 1 prayer om 2 floaters aan deze kaart toe te voegen.",
     "Action: Spend 2 floaters here to increase your TR 1 step.": "ACTIE: verwijder 2 floaters van deze kaart om je TW met 1 te verhogen.",
 
     "Titan Floating Launch-pad": "Titan zwevend lanceerplatform",
@@ -148,7 +148,7 @@
 
     "Titan Shuttles": "Titan-Shuttles",
     "Action: Add 2 floaters to ANY JOVIAN CARD.": "ACTIE: Voeg 2 floaters toe aan EEN WILLEKEURIGE JUPITERKAART.",
-    "Action: Spend any number of floaters here to gain the same number of titanium.": "ACTIE: Verwijder een aantal floaters van deze kaart om dezelfde hoeveelheid titanium te krijgen.",
+    "Action: Spend any number of floaters here to gain the same number of prayer.": "ACTIE: Verwijder een aantal floaters van deze kaart om dezelfde hoeveelheid prayer te krijgen.",
 
     "Trade Envoys": "Commerciëel Agent",
 
@@ -157,7 +157,7 @@
     "Place a colony": "Plaats een kolonie.",
 
     "Urban Decomposers": "Stedelijke Afbrekers",
-    "Requires that you have 1 city tile and 1 colony in play. Increase your plant production 1 step, and add 2 microbes to ANOTHER card.": "Vereist dat je 1 stadstegel en 1 kolonietegel hebt. Verhoog je plantenproductie met 1 en voeg 2 microben toe aan een ANDERE kaart.",
+    "Requires that you have 1 city tile and 1 colony in play. Increase your outreach production 1 step, and add 2 microbes to ANOTHER card.": "Vereist dat je 1 stadstegel en 1 kolonietegel hebt. Verhoog je outreachenproductie met 1 en voeg 2 microben toe aan een ANDERE kaart.",
 
     "Warp Drive": "Warp Aandrijving",
     "Effect: When you play a space card, you pay 4 M€ less for it.": "EFFECT: Als je een ruimtekaart speelt, betaal je 4 M€ minder.",

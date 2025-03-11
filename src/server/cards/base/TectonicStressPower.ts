@@ -14,7 +14,7 @@ export class TectonicStressPower extends Card implements IProjectCard {
       cost: 18,
 
       behavior: {
-        production: {energy: 3},
+        production: {discipleship: 3},
       },
       victoryPoints: 1,
 
@@ -22,9 +22,9 @@ export class TectonicStressPower extends Card implements IProjectCard {
       metadata: {
         cardNumber: '145',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(3));
+          b.production((pb) => pb.discipleship(3));
         }),
-        description: 'Requires 2 science tags. Increase your energy production 3 steps.',
+        description: 'Requires 2 science tags. Increase your discipleship production 3 steps.',
       },
     });
   }

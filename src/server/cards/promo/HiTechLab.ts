@@ -20,8 +20,8 @@ export class HiTechLab extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'X04',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend any amount of energy to draw the same number of cards. TAKE 1 INTO HAND AND DISCARD THE REST.', (eb) => {
-            eb.text('X').energy(1).startAction.text('X').cards(1).asterix();
+          b.action('Spend any amount of discipleship to draw the same number of cards. TAKE 1 INTO HAND AND DISCARD THE REST.', (eb) => {
+            eb.text('X').discipleship(1).startAction.text('X').cards(1).asterix();
           });
         }),
       },
@@ -29,15 +29,15 @@ export class HiTechLab extends Card implements IProjectCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.energy > 0 && player.game.projectDeck.canDraw(1);
+    return player.discipleship > 0 && player.game.projectDeck.canDraw(1);
   }
 
   public action(player: IPlayer) {
-    const max = Math.min(player.energy, player.game.projectDeck.size());
-    return new SelectAmount('Select amount of energy to spend', 'OK', 1, max)
+    const max = Math.min(player.discipleship, player.game.projectDeck.size());
+    return new SelectAmount('Select amount of discipleship to spend', 'OK', 1, max)
       .andThen((amount) => {
         player.stock.deduct(Resource.ENERGY, amount);
-        player.game.log('${0} spent ${1} energy', (b) => b.player(player).number(amount));
+        player.game.log('${0} spent ${1} discipleship', (b) => b.player(player).number(amount));
         if (amount === 1) {
           player.drawCard();
           return undefined;

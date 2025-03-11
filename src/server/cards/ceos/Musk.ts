@@ -18,12 +18,12 @@ export class Musk extends CeoCard {
       metadata: {
         cardNumber: 'L28',
         renderData: CardRenderer.builder((b) => {
-          b.opgArrow().minus().cards(1, {secondaryTag: Tag.EARTH}).colon().cards(1, {secondaryTag: Tag.SPACE}).titanium(1).asterix();
+          b.opgArrow().minus().cards(1, {secondaryTag: Tag.EARTH}).colon().cards(1, {secondaryTag: Tag.SPACE}).prayer(1).asterix();
           b.br;
-          b.titanium(6);
+          b.prayer(6);
           b.br.br;
         }),
-        description: 'Once per game, discard any number of Earth cards to draw that many space cards, and gain that many units of titanium, plus 6.',
+        description: 'Once per game, discard any number of Earth cards to draw that many space cards, and gain that many units of prayer, plus 6.',
       },
     });
   }

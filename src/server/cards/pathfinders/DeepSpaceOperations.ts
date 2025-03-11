@@ -11,17 +11,17 @@ export class DeepSpaceOperations extends PreludeCard {
       tags: [Tag.SPACE],
 
       behavior: {
-        stock: {titanium: 4},
+        stock: {prayer: 4},
         drawCard: {count: 2, tag: Tag.SPACE, type: CardType.EVENT},
       },
 
       metadata: {
         cardNumber: 'PfP12',
         renderData: CardRenderer.builder((b) => {
-          b.titanium(4).br;
+          b.prayer(4).br;
           b.cards(2, {secondaryTag: Tag.EVENT}).super((sb) => sb.tag(Tag.SPACE));
         }),
-        description: 'Gain 4 titanium. Draw 2 event cards with a space tag.',
+        description: 'Gain 4 prayer. Draw 2 event cards with a space tag.',
       },
     });
   }

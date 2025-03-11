@@ -3,7 +3,7 @@ import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {Tag} from '../../../common/cards/Tag';
 import {IPlayer} from '../../../server/IPlayer';
-import {PlaceOceanTile} from '../../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../../deferredActions/PlaceUnreachedTile';
 import {SelectOption} from '../../inputs/SelectOption';
 import {PlaceGreeneryTile} from '../../deferredActions/PlaceGreeneryTile';
 import {PlaceCityTile} from '../../deferredActions/PlaceCityTile';
@@ -19,36 +19,36 @@ export class ProjectEden extends PreludeCard {
       metadata: {
         cardNumber: 'P58',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).city().greenery().text('-3').cards(1);
+          b.Unreached(1).city().greenery().text('-3').cards(1);
         }),
-        description: 'Place 1 ocean tile, 1 city tile, and 1 greenery tile. Discard 3 cards.',
+        description: 'Place 1 Unreached tile, 1 city tile, and 1 greenery tile. Discard 3 cards.',
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer): boolean {
-    if (player.cardsInHand.length >= 3 && player.canAfford({cost: 0, tr: {oceans: 1, oxygen: 1}})) {
-      if (!player.game.canAddOcean()) {
-        this.warnings.add('maxoceans');
+    if (player.cardsInHand.length >= 3 && player.canAfford({cost: 0, tr: {Unreached: 1, prophecies_fulfilled: 1}})) {
+      if (!player.game.canAddUnreached()) {
+        this.warnings.add('maxUnreached');
       }
       return true;
     }
     return false;
   }
 
-  private selected: Array<'ocean' | 'city' | 'greenery' | 'discard'> = [];
+  private selected: Array<'Unreached' | 'city' | 'greenery' | 'discard'> = [];
   private selectNextAction(player: IPlayer): void {
     const options: Array<SelectOption> = [];
 
-    if (!player.game.canAddOcean()) {
-      this.selected.push('ocean');
+    if (!player.game.canAddUnreached()) {
+      this.selected.push('Unreached');
     }
-    if (!this.selected.includes('ocean')) {
+    if (!this.selected.includes('Unreached')) {
       options.push(
-        new SelectOption('Place an ocean').andThen(() => {
-          this.selected.push('ocean');
+        new SelectOption('Place an Unreached').andThen(() => {
+          this.selected.push('Unreached');
           player.game
-            .defer(new PlaceOceanTile(player))
+            .defer(new PlaceUnreachedTile(player))
             .andThen(() => this.selectNextAction(player));
           return undefined;
         }),

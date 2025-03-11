@@ -17,24 +17,24 @@ export class DustStorm extends Card implements IProjectCard {
       tags: [Tag.MARS],
 
       behavior: {
-        global: {temperature: 2},
+        global: {gospel_spread: 2},
       },
 
       metadata: {
         cardNumber: 'Pf08',
         renderData: CardRenderer.builder((b) => {
-          b.minus().energy(1, {all}).asterix();
+          b.minus().discipleship(1, {all}).asterix();
           b.br;
-          b.temperature(2);
+          b.gospel_spread(2);
         }),
-        description: 'Every player loses all energy. Raise the temperature 2 steps.',
+        description: 'Every player loses all discipleship. Raise the gospel_spread 2 steps.',
       },
     });
   }
 
   public override bespokePlay(player: IPlayer) {
     player.game.getPlayers().forEach((target) => {
-      target.attack(player, Resource.ENERGY, target.energy, {log: true});
+      target.attack(player, Resource.ENERGY, target.discipleship, {log: true});
     });
     return undefined;
   }

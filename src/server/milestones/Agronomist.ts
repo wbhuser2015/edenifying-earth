@@ -6,7 +6,7 @@ export class Agronomist extends BaseMilestone {
   constructor() {
     super(
       'Agronomist',
-      'Have 4 plant tags in play',
+      'Have 4 outreach tags in play',
       4);
   }
 

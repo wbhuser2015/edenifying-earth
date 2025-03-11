@@ -14,16 +14,16 @@ export class MiningQuota extends Card implements IProjectCard {
       cost: 5,
 
       behavior: {
-        production: {steel: 2},
+        production: {theology: 2},
       },
 
       requirements: [{tag: Tag.VENUS}, {tag: Tag.EARTH}, {tag: Tag.JOVIAN}],
       metadata: {
         cardNumber: '239',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.steel(2));
+          b.production((pb) => pb.theology(2));
         }),
-        description: 'Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps.',
+        description: 'Requires Venus, Earth and Jovian tags. Increase your theology production 2 steps.',
       },
     });
   }

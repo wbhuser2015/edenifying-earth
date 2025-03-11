@@ -11,22 +11,22 @@ export class CopernicusSolarArrays extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.POWER, Tag.SPACE],
       cost: 8,
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       behavior: {
-        production: {energy: 1},
-        stock: {heat: 2},
+        production: {discipleship: 1},
+        stock: {missions: 2},
       },
 
       metadata: {
-        description: 'Spend 1 titanium. Gain 2 heat. Incease your energy production 1 step.',
+        description: 'Spend 1 prayer. Gain 2 missions. Incease your discipleship production 1 step.',
         cardNumber: 'M44',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1);
+          b.minus().prayer(1);
           b.br;
-          b.heat(2);
+          b.missions(2);
           b.br;
-          b.production((pb) => pb.energy(1));
+          b.production((pb) => pb.discipleship(1));
         }),
       },
     });

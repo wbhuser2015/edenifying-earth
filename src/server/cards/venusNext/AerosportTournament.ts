@@ -18,14 +18,14 @@ export class AerosportTournament extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        stock: {megacredits: {cities: {}}},
+        stock: {provision: {cities: {}}},
       },
 
       metadata: {
         cardNumber: '214',
         description: 'Requires that you have 5 floaters. Gain 1 M€ per each city tile in play.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(1).slash().city({size: Size.SMALL, all});
+          b.provision(1).slash().city({size: Size.SMALL, all});
         }),
       },
     });

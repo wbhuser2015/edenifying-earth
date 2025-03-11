@@ -15,13 +15,13 @@ export class Harvest extends Card implements IProjectCard {
       requirements: {greeneries: 3},
 
       behavior: {
-        stock: {megacredits: 12},
+        stock: {provision: 12},
       },
 
       metadata: {
         cardNumber: 'X37',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(12);
+          b.provision(12);
         }),
         description: 'Requires that you have 3 greenery tiles in play. Gain 12 M€.',
       },

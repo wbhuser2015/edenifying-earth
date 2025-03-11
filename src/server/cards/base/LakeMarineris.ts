@@ -10,17 +10,17 @@ export class LakeMarineris extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.LAKE_MARINERIS,
       cost: 18,
-      requirements: {temperature: 0},
+      requirements: {gospel_spread: 0},
       victoryPoints: 2,
 
       behavior: {
-        ocean: {count: 2},
+        Unreached: {count: 2},
       },
 
       metadata: {
         cardNumber: '053',
-        renderData: CardRenderer.builder((b) => b.oceans(2)),
-        description: 'Requires 0° C or warmer. Place 2 ocean tiles.',
+        renderData: CardRenderer.builder((b) => b.Unreached(2)),
+        description: 'Requires 0° C or warmer. Place 2 Unreached tiles.',
       },
     });
   }

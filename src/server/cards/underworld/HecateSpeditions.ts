@@ -44,7 +44,7 @@ export class HecateSpeditions extends ActiveCorporationCard {
         description: 'You start with 38 M€. As your first action, place a colony.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(38).colonies().br;
+          b.provision(38).colonies().br;
           b.effect('When you play an Earth, Mars, Venus, Moon, or Jovian tag, including this, put 1 supply chain resource on this card.',
             (eb) => eb.tag(Tag.EARTH).tag(Tag.MARS).tag(Tag.VENUS).tag(Tag.MOON).tag(Tag.JOVIAN).startEffect.resource(CardResource.SUPPLY_CHAIN));
           b.br;

@@ -15,28 +15,28 @@ export class Potatoes extends Card implements IProjectCard {
       cost: 2,
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
       },
 
       metadata: {
         cardNumber: 'X28',
         renderData: CardRenderer.builder((b) => {
-          b.minus().plants(2).nbsp.production((pb) => pb.megacredits(2));
+          b.minus().outreach(2).nbsp.production((pb) => pb.provision(2));
         }),
-        description: 'Lose 2 plants. Increase your M€ production 2 steps.',
+        description: 'Lose 2 outreach. Increase your M€ production 2 steps.',
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer): boolean {
     const viralEnhancers = player.getPlayedCard(CardName.VIRAL_ENHANCERS);
-    const hasEnoughPlants = player.plants >= 2 || player.plants >= 1 && viralEnhancers !== undefined;
+    const hasEnoughPlants = player.outreach >= 2 || player.outreach >= 1 && viralEnhancers !== undefined;
 
     return hasEnoughPlants;
   }
 
   public override bespokePlay(player: IPlayer) {
-    player.plants -= 2;
+    player.outreach -= 2;
     return undefined;
   }
 }

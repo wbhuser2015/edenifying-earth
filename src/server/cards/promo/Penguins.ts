@@ -20,7 +20,7 @@ export class Penguins extends ActionCard implements IProjectCard {
         addResources: 1,
       },
 
-      requirements: {oceans: 8},
+      requirements: {Unreached: 8},
       metadata: {
         cardNumber: '212',
         renderData: CardRenderer.builder((b) => {
@@ -29,7 +29,7 @@ export class Penguins extends ActionCard implements IProjectCard {
           }).br;
           b.vpText('1 VP for each animal on this card.');
         }),
-        description: 'Requires 8 oceans.',
+        description: 'Requires 8 Unreached.',
       },
     });
   }

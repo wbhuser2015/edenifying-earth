@@ -22,10 +22,10 @@ export class GuerillaEcologists extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U89',
         renderData: CardRenderer.builder((b) => {
-          b.minus().plants(4, {digit}).greenery().asterix();
+          b.minus().outreach(4, {digit}).greenery().asterix();
         }),
-        // description: 'Requires 1 corruption and that you lose 4 plants. Place a greenery tile IGNORING ADJACENCY RESTRICTIONS.',
-        description: 'Requires 1 corruption. Spend 4 plants to place a greenery tile IGNORING ADJACENCY RESTRICTIONS.',
+        // description: 'Requires 1 corruption and that you lose 4 outreach. Place a greenery tile IGNORING ADJACENCY RESTRICTIONS.',
+        description: 'Requires 1 corruption. Spend 4 outreach to place a greenery tile IGNORING ADJACENCY RESTRICTIONS.',
       },
     });
   }
@@ -35,7 +35,7 @@ export class GuerillaEcologists extends Card implements IProjectCard {
   }
 
   public override bespokeCanPlay(player: IPlayer) {
-    if (player.plants >= 4 || (player.plants >= 3 && player.cardIsInEffect(CardName.VIRAL_ENHANCERS))) {
+    if (player.outreach >= 4 || (player.outreach >= 3 && player.cardIsInEffect(CardName.VIRAL_ENHANCERS))) {
       return this.availableSpaces(player).length > 0;
     }
     return false;
@@ -47,7 +47,7 @@ export class GuerillaEcologists extends Card implements IProjectCard {
       return undefined;
     }
 
-    player.plants -= 4; // This temporarily breaks things if the player only has 3, but Viral Enhancers makes up for it.
+    player.outreach -= 4; // This temporarily breaks things if the player only has 3, but Viral Enhancers makes up for it.
     return new SelectSpace('Select space for greenery tile', availableSpaces)
       .andThen((space) => {
         player.game.addGreenery(player, space);

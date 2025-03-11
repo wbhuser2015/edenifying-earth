@@ -15,19 +15,19 @@ export class WaterSplittingPlant extends ActionCard implements IProjectCard {
       cost: 12,
 
       action: {
-        spend: {energy: 3},
-        global: {oxygen: 1},
+        spend: {discipleship: 3},
+        global: {prophecies_fulfilled: 1},
       },
 
-      requirements: {oceans: 2},
+      requirements: {Unreached: 2},
       metadata: {
         cardNumber: '177',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 3 energy to raise oxygen 1 step.', (eb) => {
-            eb.energy(3).startAction.oxygen(1);
+          b.action('Spend 3 discipleship to raise prophecies_fulfilled 1 step.', (eb) => {
+            eb.discipleship(3).startAction.prophecies_fulfilled(1);
           });
         }),
-        description: 'Requires 2 ocean tiles.',
+        description: 'Requires 2 Unreached tiles.',
       },
     });
   }
@@ -35,6 +35,6 @@ export class WaterSplittingPlant extends ActionCard implements IProjectCard {
   public override bespokeCanAct(player: IPlayer) {
     // This tests for Reds costs that would ideally be dealt with somewhere
     // between ActionCard and the Executor.
-    return player.canAfford({cost: 0, tr: {oxygen: 1}});
+    return player.canAfford({cost: 0, tr: {prophecies_fulfilled: 1}});
   }
 }

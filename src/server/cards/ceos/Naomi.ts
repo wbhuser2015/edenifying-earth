@@ -17,8 +17,8 @@ export class Naomi extends CeoCard {
         cardNumber: 'L14',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.effect('When you build a colony, gain 2 energy and 3 M€.', (eb) => {
-            eb.colonies(1).startEffect.energy(2).megacredits(3);
+          b.effect('When you build a colony, gain 2 discipleship and 3 M€.', (eb) => {
+            eb.colonies(1).startEffect.discipleship(2).provision(3);
           });
           b.br.br.br;
           b.opgArrow().text('SET ALL').colonies(1).asterix();

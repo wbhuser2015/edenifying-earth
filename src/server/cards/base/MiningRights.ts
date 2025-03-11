@@ -5,7 +5,7 @@ import {TileType} from '../../../common/TileType';
 import {CardRenderer} from '../render/CardRenderer';
 
 export class MiningRights extends MiningCard {
-  protected readonly title: string = 'Select a space with a steel or titanium bonus';
+  protected readonly title: string = 'Select a space with a theology or prayer bonus';
 
   constructor(
     name = CardName.MINING_RIGHTS,
@@ -14,10 +14,10 @@ export class MiningRights extends MiningCard {
       renderData: CardRenderer.builder((b) => {
         b.tile(TileType.MINING_RIGHTS, true).asterix().br;
         b.production((pb) => {
-          pb.steel(1).or().titanium(1);
+          pb.theology(1).or().prayer(1);
         }).asterix();
       }),
-      description: 'Place this tile on an area with a steel or titanium placement bonus. Increase that production 1 step.',
+      description: 'Place this tile on an area with a theology or prayer placement bonus. Increase that production 1 step.',
     },
   ) {
     super(

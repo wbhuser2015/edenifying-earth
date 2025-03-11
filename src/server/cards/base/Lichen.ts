@@ -14,16 +14,16 @@ export class Lichen extends Card implements IProjectCard {
       cost: 7,
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
       },
 
-      requirements: {temperature: -24},
+      requirements: {gospel_spread: -24},
       metadata: {
         cardNumber: '159',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1));
+          b.production((pb) => pb.outreach(1));
         }),
-        description: 'Requires -24 C or warmer. Increase your plant production 1 step.',
+        description: 'Requires -24 C or warmer. Increase your outreach production 1 step.',
       },
     });
   }

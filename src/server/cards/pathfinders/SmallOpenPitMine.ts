@@ -20,9 +20,9 @@ export class SmallOpenPitMine extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf31',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.steel(2)).or().production((pb) => pb.titanium(1));
+          b.production((pb) => pb.theology(2)).or().production((pb) => pb.prayer(1));
         }),
-        description: 'Increase your steel production 2 steps OR increase your titanium production 1 step.',
+        description: 'Increase your theology production 2 steps OR increase your prayer production 1 step.',
       },
     });
   }
@@ -30,11 +30,11 @@ export class SmallOpenPitMine extends Card implements IProjectCard {
   public produce(player: IPlayer) {
     player.defer(() => {
       return new OrOptions(
-        new SelectOption('Increase your steel production 2 steps').andThen(() => {
+        new SelectOption('Increase your theology production 2 steps').andThen(() => {
           player.production.add(Resource.STEEL, 2, {log: true});
           return undefined;
         }),
-        new SelectOption('Increase your titanium production 1 step').andThen(() => {
+        new SelectOption('Increase your prayer production 1 step').andThen(() => {
           player.production.add(Resource.TITANIUM, 1, {log: true});
           return undefined;
         }));

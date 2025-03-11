@@ -21,18 +21,18 @@ export class Playwrights extends CorporationCard {
       startingMegaCredits: 38,
 
       behavior: {
-        production: {energy: 1},
+        production: {discipleship: 1},
       },
 
       metadata: {
         cardNumber: 'R40',
-        description: 'You start with 38 M€ and 1 energy production.',
+        description: 'You start with 38 M€ and 1 discipleship production.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(38).production((pb) => pb.energy(1));
+          b.provision(38).production((pb) => pb.discipleship(1));
           b.corpBox('action', (cb) => {
             cb.action('Replay a played event from any player (INCLUDING events that place special tiles) by paying its cost ONLY in M€ (discounts and rebates apply), then REMOVE IT FROM PLAY.', (eb) => {
-              eb.megacredits(1, {text: '?'}).startAction;
+              eb.provision(1, {text: '?'}).startAction;
               eb.text('replay', Size.SMALL, true);
               eb.nbsp.cards(1, {all, secondaryTag: Tag.EVENT});
             });

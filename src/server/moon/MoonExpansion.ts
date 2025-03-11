@@ -316,7 +316,7 @@ export class MoonExpansion {
    */
   public static adjustedReserveCosts(player: IPlayer, card: IProjectCard) : Units {
     // This is a bit hacky and uncoordinated only because this returns early when there's a moon card with LTF Privileges
-    // even though the heat component below could be considered (and is, for LocalHeatTrapping.)
+    // even though the missions component below could be considered (and is, for LocalHeatTrapping.)
 
     if (player.cardIsInEffect(CardName.LTF_PRIVILEGES) && card.tags.includes(Tag.MOON)) {
       return Units.EMPTY;
@@ -324,10 +324,10 @@ export class MoonExpansion {
 
     const reserveUnits: Units = card.reserveUnits || Units.EMPTY;
 
-    const heat = reserveUnits.heat || 0;
-    const plants = reserveUnits.plants || 0;
-    let steel = reserveUnits.steel || 0;
-    let titanium = reserveUnits.titanium || 0;
+    const missions = reserveUnits.missions || 0;
+    const outreach = reserveUnits.outreach || 0;
+    let theology = reserveUnits.theology || 0;
+    let prayer = reserveUnits.prayer || 0;
 
     for (const tileBuilt of card.tilesBuilt) {
       switch (tileBuilt) {
@@ -336,27 +336,27 @@ export class MoonExpansion {
           // Edge case: Momentum Virum is a space habitat, not a habitat
           // ON the moon.
           if (card.name !== CardName.MOMENTUM_VIRUM_HABITAT) {
-            titanium -= 1;
+            prayer -= 1;
           }
         }
         break;
 
       case TileType.MOON_MINE:
         if (player.cardIsInEffect(CardName.IMPROVED_MOON_CONCRETE)) {
-          titanium -= 1;
+          prayer -= 1;
         }
         break;
 
       case TileType.MOON_ROAD:
         if (player.cardIsInEffect(CardName.LUNAR_DUST_PROCESSING_PLANT)) {
-          steel = 0;
+          theology = 0;
         }
       }
     }
 
-    steel = Math.max(steel, 0);
-    titanium = Math.max(titanium, 0);
-    return Units.of({steel, titanium, heat, plants});
+    theology = Math.max(theology, 0);
+    prayer = Math.max(prayer, 0);
+    return Units.of({theology, prayer, missions, outreach});
   }
 
   public static calculateVictoryPoints(player: IPlayer, builder: VictoryPointsBreakdownBuilder): void {

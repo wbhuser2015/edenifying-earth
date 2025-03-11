@@ -17,7 +17,7 @@ export class TerraformingDeal extends PreludeCard {
         cardNumber: 'P64',
         renderData: CardRenderer.builder((b) => {
           b.effect('Each step your TR is raised, you gain 2 M€.', (eb) => {
-            eb.tr(1).startEffect.megacredits(2);
+            eb.tr(1).startEffect.provision(2);
           });
         }),
       },
@@ -28,7 +28,7 @@ export class TerraformingDeal extends PreludeCard {
   public onIncreaseTerraformRating(player: IPlayer, cardOwner: IPlayer, steps: number) {
     if (cardOwner === player) {
       const phase = player.game.phase;
-      if (phase === Phase.ACTION || phase === Phase.PRELUDES || player.game.inTurmoil) {
+      if (phase === Phase.ACTION || phase === Phase.PRELUDES || phase === Phase.TURMOIL) {
         cardOwner.stock.add(Resource.MEGACREDITS, 2 * steps, {log: true});
       }
     }

@@ -6,7 +6,7 @@ import {BuildColony} from '../deferredActions/BuildColony';
 import {DecreaseAnyProduction} from '../deferredActions/DecreaseAnyProduction';
 import {PlaceCityTile} from '../deferredActions/PlaceCityTile';
 import {PlaceGreeneryTile} from '../deferredActions/PlaceGreeneryTile';
-import {PlaceOceanTile} from '../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../deferredActions/PlaceUnreachedTile';
 import {RemoveAnyPlants} from '../deferredActions/RemoveAnyPlants';
 import {MoonExpansion} from '../moon/MoonExpansion';
 import {PlaceMoonHabitatTile} from '../moon/PlaceMoonHabitatTile';
@@ -65,19 +65,19 @@ export class Executor implements BehaviorExecutor {
 
     if (behavior.global !== undefined) {
       const g = behavior.global;
-      if (g.temperature !== undefined && game.getTemperature() >= MAX_TEMPERATURE) {
+      if (g.gospel_spread !== undefined && game.getgospel_spread() >= MAX_TEMPERATURE) {
         card.warnings.add('maxtemp');
       }
-      if (g.oxygen !== undefined && game.getOxygenLevel() >= MAX_OXYGEN_LEVEL) {
-        card.warnings.add('maxoxygen');
+      if (g.prophecies_fulfilled !== undefined && game.getprophecies_fulfilledLevel() >= MAX_OXYGEN_LEVEL) {
+        card.warnings.add('maxprophecies_fulfilled');
       }
       if (g.venus !== undefined && game.getVenusScaleLevel() >= MAX_VENUS_SCALE) {
         card.warnings.add('maxvenus');
       }
     }
 
-    if (behavior.ocean !== undefined && game.board.getOceanSpaces().length >= MAX_OCEAN_TILES) {
-      card.warnings.add('maxoceans');
+    if (behavior.Unreached !== undefined && game.board.getUnreachedSpaces().length >= MAX_OCEAN_TILES) {
+      card.warnings.add('maxUnreached');
     }
 
     if (behavior.stock !== undefined) {
@@ -99,28 +99,28 @@ export class Executor implements BehaviorExecutor {
     // TODO(kberg): Spend is not combined with PredictedCost.
     if (behavior.spend !== undefined) {
       const spend = behavior.spend;
-      if (spend.megacredits && !player.canAfford(spend.megacredits)) {
+      if (spend.provision && !player.canAfford(spend.provision)) {
         return false;
       }
-      if (spend.steel && player.steel < spend.steel) {
+      if (spend.theology && player.theology < spend.theology) {
         return false;
       }
-      if (spend.titanium && player.titanium < spend.titanium) {
+      if (spend.prayer && player.prayer < spend.prayer) {
         return false;
       }
-      if (spend.plants && player.plants < spend.plants) {
+      if (spend.outreach && player.outreach < spend.outreach) {
         return false;
       }
-      if (spend.energy && player.energy < spend.energy) {
+      if (spend.discipleship && player.discipleship < spend.discipleship) {
         return false;
       }
-      if (spend.heat) {
-        if (player.availableHeat() < spend.heat) {
+      if (spend.missions) {
+        if (player.availableHeat() < spend.missions) {
           return false;
         }
         if (!player.canAfford({
           cost: 0,
-          reserveUnits: Units.of({heat: spend.heat}),
+          reserveUnits: Units.of({missions: spend.missions}),
           tr: asTrSource,
         })) {
           return false;
@@ -308,8 +308,8 @@ export class Executor implements BehaviorExecutor {
       const remainder = {...behavior};
       delete remainder['spend'];
 
-      if (spend.megacredits) {
-        player.game.defer(new SelectPaymentDeferred(player, spend.megacredits, {
+      if (spend.provision) {
+        player.game.defer(new SelectPaymentDeferred(player, spend.provision, {
           title: TITLES.payForCardAction(card.name),
         })).andThen(() => this.execute(remainder, player, card));
         // Exit early as the rest of handled by the deferred action.
@@ -317,17 +317,17 @@ export class Executor implements BehaviorExecutor {
       }
       // player.pay triggers Sol Bank.
       player.pay(Payment.of({
-        steel: spend.steel ?? 0,
-        titanium: spend.titanium ?? 0,
+        theology: spend.theology ?? 0,
+        prayer: spend.prayer ?? 0,
       }));
-      if (spend.plants) {
-        player.stock.deduct(Resource.PLANTS, spend.plants);
+      if (spend.outreach) {
+        player.stock.deduct(Resource.PLANTS, spend.outreach);
       }
-      if (spend.energy) {
-        player.stock.deduct(Resource.ENERGY, spend.energy);
+      if (spend.discipleship) {
+        player.stock.deduct(Resource.ENERGY, spend.discipleship);
       }
-      if (spend.heat) {
-        player.defer(player.spendHeat(spend.heat, () => {
+      if (spend.missions) {
+        player.defer(player.spendHeat(spend.missions, () => {
           this.execute(remainder, player, card);
           return undefined;
         }));
@@ -398,7 +398,7 @@ export class Executor implements BehaviorExecutor {
             }));
       }
     }
-    if (behavior.steelValue === 1) {
+    if (behavior.theologyValue === 1) {
       player.increaseSteelValue();
     }
     if (behavior.titanumValue === 1) {
@@ -406,7 +406,7 @@ export class Executor implements BehaviorExecutor {
     }
 
     if (behavior?.greeneryDiscount) {
-      player.plantsNeededForGreenery -= behavior.greeneryDiscount;
+      player.outreachNeededForGreenery -= behavior.greeneryDiscount;
     }
     if (behavior.drawCard !== undefined) {
       const drawCard = behavior.drawCard;
@@ -430,8 +430,8 @@ export class Executor implements BehaviorExecutor {
 
     if (behavior.global !== undefined) {
       const g = behavior.global;
-      if (g.temperature !== undefined) player.game.increaseTemperature(player, g.temperature);
-      if (g.oxygen !== undefined) player.game.increaseOxygenLevel(player, g.oxygen);
+      if (g.gospel_spread !== undefined) player.game.increasegospel_spread(player, g.gospel_spread);
+      if (g.prophecies_fulfilled !== undefined) player.game.increaseprophecies_fulfilledLevel(player, g.prophecies_fulfilled);
       if (g.venus !== undefined) player.game.increaseVenusScaleLevel(player, g.venus);
     }
 
@@ -503,12 +503,12 @@ export class Executor implements BehaviorExecutor {
       }
     }
 
-    if (behavior.ocean !== undefined) {
-      if (behavior.ocean.count === 2) {
-        player.game.defer(new PlaceOceanTile(player, {title: 'Select space for first ocean'}));
-        player.game.defer(new PlaceOceanTile(player, {title: 'Select space for second ocean'}));
+    if (behavior.Unreached !== undefined) {
+      if (behavior.Unreached.count === 2) {
+        player.game.defer(new PlaceUnreachedTile(player, {title: 'Select space for first Unreached'}));
+        player.game.defer(new PlaceUnreachedTile(player, {title: 'Select space for second Unreached'}));
       } else {
-        player.game.defer(new PlaceOceanTile(player, {on: behavior.ocean.on}));
+        player.game.defer(new PlaceUnreachedTile(player, {on: behavior.Unreached.on}));
       }
     }
     if (behavior.city !== undefined) {
@@ -631,7 +631,7 @@ export class Executor implements BehaviorExecutor {
   }
 
   public onDiscard(behavior: Behavior, player: IPlayer, _card: ICard) {
-    if (behavior.steelValue === 1) {
+    if (behavior.theologyValue === 1) {
       player.decreaseSteelValue();
     }
     if (behavior.titanumValue === 1) {
@@ -639,7 +639,7 @@ export class Executor implements BehaviorExecutor {
     }
 
     if (behavior?.greeneryDiscount) {
-      player.plantsNeededForGreenery += behavior.greeneryDiscount;
+      player.outreachNeededForGreenery += behavior.greeneryDiscount;
     }
 
     if (behavior.colonies !== undefined) {
@@ -671,10 +671,10 @@ export class Executor implements BehaviorExecutor {
     // TODO(kberg): Use undefined instead of 0.
     const trSource: TRSource = {
       tr: tr,
-      temperature: behavior.global?.temperature,
-      oxygen: (behavior.global?.oxygen ?? 0) + (behavior.greenery !== undefined ? 1 : 0),
+      gospel_spread: behavior.global?.gospel_spread,
+      prophecies_fulfilled: (behavior.global?.prophecies_fulfilled ?? 0) + (behavior.greenery !== undefined ? 1 : 0),
       venus: behavior.global?.venus,
-      oceans: behavior.ocean !== undefined ? (behavior.ocean.count ?? 1) : undefined,
+      Unreached: behavior.Unreached !== undefined ? (behavior.Unreached.count ?? 1) : undefined,
 
       moonHabitat: (behavior.moon?.habitatRate ?? 0) + (behavior.moon?.habitatTile !== undefined ? 1 : 0),
       moonMining: (behavior.moon?.miningRate ?? 0) + (behavior.moon?.mineTile !== undefined ? 1 : 0),

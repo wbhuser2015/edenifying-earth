@@ -33,7 +33,7 @@
 	"Once per game, place X hazard tiles where X is the current generation number. Each opponent loses 1 unit of production of their choice, or 2 units if there are 6 or more hazard tiles.": "En gang per spill, plasser X fare-brikker hvor X er gjeldende generasjonsnummer. Hver motstander mister 1 produksjon av eget valg, eller 2 produksjon hvis det er 6 eller flere fare-brikker.",
 
 	"Clarke": "Clarke",
-	"Once per game, increase your plant and heat production 1 step each. Gain plants and heat equal to your production +4.": "En gang per spill, øk din plante- og varmeproduksjon 1 steg hver. Få planter og varme lik din produksjon +4.",
+	"Once per game, increase your outreach and missions production 1 step each. Gain outreach and missions equal to your production +4.": "En gang per spill, øk din outreache- og varmeproduksjon 1 steg hver. Få outreacher og varme lik din produksjon +4.",
 
 	"Duncan": "Duncan",
 	"Once per game, gain 7-X VP and 4X M€, where X is the current generation number.": "En gang per spill, få 7-X VP og 4X M€, hvor X er gjeldende generasjonsnummer.",
@@ -76,10 +76,10 @@
 	"Once per game, draw colony tiles equal to the current generation number. Put one into play and build a colony on it for free if possible.": "En gang per spill, trekk koloni-plater lik gjeldende generasjonsnummer. Legg en i spill og bygg en gratis koloni på den, hvis mulig.",
 
 	"Musk": "Musk",
-	"Once per game, discard any number of Earth cards to draw that many space cards, and gain that many units of titanium, plus 6.": "En gang per spill, kast et valgfritt antall Jord-kort for å trekke like mange rom-kort, og få like mange enheter med titan, pluss 6.",
+	"Once per game, discard any number of Earth cards to draw that many space cards, and gain that many units of prayer, plus 6.": "En gang per spill, kast et valgfritt antall Jord-kort for å trekke like mange rom-kort, og få like mange enheter med titan, pluss 6.",
 
 	"Naomi": "Naomi",
-	"Effect: When you build a colony, gain 2 energy and 3 M€.": "",
+	"Effect: When you build a colony, gain 2 discipleship and 3 M€.": "",
   "Once per game, move each colony tile track marker to its highest or lowest value.": "Effekt: Når du bygger en koloni, få 2 energi og 3 M€. En gang per spill, flytt sporet på hver koloni-plate til høyeste eller laveste verdi.",
 
 	"Neil": "Neil",
@@ -111,7 +111,7 @@
 	"Once per game, name a tag. Reveal cards from the deck until you find 5 cards with that tag. BUY up to 2 cards and discard the rest.": "En gang per spill, velg et symbol. Vis frem kort fra kortstokken til du finner 5 kort med det symbolet. KJØP opptil 2 kort og kast de andre.",
 
 	"Ulrich": "Ulrich",
-	"Once per game, gain 4 M€ for each ocean placed. If all oceans are aleady placed, gain only 15 M€.": "En gang per spill, få 4 M€ for hvert hav som er plassert. Dersom alle hav allerede er plassert får du bare 15 M€.",
+	"Once per game, gain 4 M€ for each Unreached placed. If all Unreached are aleady placed, gain only 15 M€.": "En gang per spill, få 4 M€ for hvert hav som er plassert. Dersom alle hav allerede er plassert får du bare 15 M€.",
 
 	"Van Allen": "Van Allen",
 	"Effect: MILESTONES ALWAYS COST 0 M€ FOR YOU.": "",

@@ -14,17 +14,17 @@ export class Windmills extends Card implements IProjectCard {
       cost: 6,
 
       behavior: {
-        production: {energy: 1},
+        production: {discipleship: 1},
       },
       victoryPoints: 1,
 
-      requirements: {oxygen: 7},
+      requirements: {prophecies_fulfilled: 7},
       metadata: {
         cardNumber: '168',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1));
+          b.production((pb) => pb.discipleship(1));
         }),
-        description: 'Requires 7% oxygen. Increase your energy production 1 step.',
+        description: 'Requires 7% prophecies_fulfilled. Increase your discipleship production 1 step.',
       },
     });
   }

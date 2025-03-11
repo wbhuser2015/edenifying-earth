@@ -14,18 +14,18 @@ export class FueledGenerators extends Card implements IProjectCard {
       cost: 1,
 
       behavior: {
-        production: {energy: 1, megacredits: -1},
+        production: {discipleship: 1, provision: -1},
       },
 
       metadata: {
         cardNumber: '100',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().megacredits(1).br;
-            pb.plus().energy(1);
+            pb.minus().provision(1).br;
+            pb.plus().discipleship(1);
           });
         }),
-        description: 'Decrease your M€ production 1 step and increase your energy production 1 steps.',
+        description: 'Decrease your M€ production 1 step and increase your discipleship production 1 steps.',
       },
     });
   }

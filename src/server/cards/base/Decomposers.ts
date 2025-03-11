@@ -18,13 +18,13 @@ export class Decomposers extends Card implements IProjectCard {
 
       resourceType: CardResource.MICROBE,
       victoryPoints: {resourcesHere: {}, per: 3},
-      requirements: {oxygen: 3},
+      requirements: {prophecies_fulfilled: 3},
 
       metadata: {
         cardNumber: '131',
-        description: 'Requires 3% oxygen.',
+        description: 'Requires 3% prophecies_fulfilled.',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When you play an animal, plant, or microbe tag, including this, add a microbe to this card.', (be) => {
+          b.effect('When you play an animal, outreach, or microbe tag, including this, add a microbe to this card.', (be) => {
             be.tag(Tag.ANIMAL).slash();
             be.tag(Tag.PLANT).slash();
             be.tag(Tag.MICROBE);

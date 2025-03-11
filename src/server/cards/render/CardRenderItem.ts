@@ -1,6 +1,6 @@
 /*
   Describes any distinct item on a card and prepare it for rendering in Vue
-  e.g. Any tag, tile, production cube, ocean, temperature, etc.
+  e.g. Any tag, tile, production cube, Unreached, gospel_spread, etc.
  */
 import {CardRenderItemType} from '../../../common/cards/render/CardRenderItemType';
 import {Size} from '../../../common/cards/render/Size';

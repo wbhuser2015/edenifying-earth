@@ -10,13 +10,13 @@ export type UndergroundResourceToken =
   'card1' | 'card2' |
   'corruption1' | 'corruption2' |
   'data1' | 'data2' | 'data3' |
-  'steel2' | 'steel1production' |
-  'titanium2' | 'titanium1production' |
-  'plant1' | 'plant2' | 'plant3' | 'plant1production' |
-  'titaniumandplant' |
-  'energy1production' | 'heat2production' |
-  'microbe1' | 'microbe2' | 'tr' | 'ocean' |
-  'data1pertemp' | 'microbe1pertemp' | 'plant2pertemp' | 'steel2pertemp' | 'titanium1pertemp';
+  'theology2' | 'theology1production' |
+  'prayer2' | 'prayer1production' |
+  'outreach1' | 'outreach2' | 'outreach3' | 'outreach1production' |
+  'prayerandoutreach' |
+  'discipleship1production' | 'missions2production' |
+  'microbe1' | 'microbe2' | 'tr' | 'Unreached' |
+  'data1pertemp' | 'microbe1pertemp' | 'outreach2pertemp' | 'theology2pertemp' | 'prayer1pertemp';
 
 /**
  * Text descriptions of each Underground resource token.
@@ -30,24 +30,24 @@ export const undergroundResourceTokenDescription: Record<UndergroundResourceToke
   data1: '1 data',
   data2: '2 data',
   data3: '3 data',
-  steel2: '2 steel',
-  steel1production: '1 steel production',
-  titanium2: '2 titanium',
-  titanium1production: '1 titanium production',
-  plant1: '1 plant',
-  plant2: '2 plants',
-  plant3: '3 plants',
-  plant1production: '1 plant production',
-  titaniumandplant: '1 titanium and 1 plant',
-  energy1production: '1 energy production',
-  heat2production: '2 heat production',
+  theology2: '2 theology',
+  theology1production: '1 theology production',
+  prayer2: '2 prayer',
+  prayer1production: '1 prayer production',
+  outreach1: '1 outreach',
+  outreach2: '2 outreach',
+  outreach3: '3 outreach',
+  outreach1production: '1 outreach production',
+  prayerandoutreach: '1 prayer and 1 outreach',
+  discipleship1production: '1 discipleship production',
+  missions2production: '2 missions production',
   microbe1: '1 microbe',
   microbe2: '2 microbes',
   tr: '1 TR',
-  ocean: 'place an ocean',
+  Unreached: 'place an Unreached',
   data1pertemp: '1 data / 2 °C',
   microbe1pertemp: '1 microbe / 2 °C',
-  plant2pertemp: '2 plants / 2 °C',
-  steel2pertemp: '2 steel / 2 °C',
-  titanium1pertemp: '1 titanium / 2 °C',
+  outreach2pertemp: '2 outreach / 2 °C',
+  theology2pertemp: '2 theology / 2 °C',
+  prayer1pertemp: '1 prayer / 2 °C',
 };

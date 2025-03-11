@@ -10,12 +10,12 @@
   "Luna First Incorporated": "",
   "Effect: When you raise any Moon Rate, increase your M€ production 1 step per step.": "",
   "Effect: When any player raises any Moon Rate, gain 1M€ per step.": "",
-  "You start with 40 M€, 1 steel, and 1 titanium.": "",
+  "You start with 40 M€, 1 theology, and 1 prayer.": "",
 
   "Luna Hyperloop Corporation": "",
   "Action: Gain 1 M€ for each road tile on The Moon.": "",
   "1 VP for each road tile on The Moon.": "",
-  "You start with 38 M€ and 4 steel.": "",
+  "You start with 38 M€ and 4 theology.": "",
 
   "Nanotech Industries": "",
   "Action: Add 1 science resource to ANY card [except those giving 2 or more VP per 1 science resource.]": "",
@@ -32,17 +32,17 @@
   "You start with 55 M€.": "",
 
   "Luna Trade Federation": "",
-  "Effect: When you place a mine tile on The Moon, raise your titanium production 1 step.": "",
-  "Effect: You may use titanium resources as 2M€ each.": "",
-  "You start with 15 M€ and 10 titanium.": "",
+  "Effect: When you place a mine tile on The Moon, raise your prayer production 1 step.": "",
+  "Effect: You may use prayer resources as 2M€ each.": "",
+  "You start with 15 M€ and 10 prayer.": "",
 
   "The Darkside of The Moon Syndicate": "",
-  "Action: Spend 1 titanium to add 1 syndicate fleet on this card OR remove 1 syndicate fleet from this card to steal 2M€ from every opponent.": "",
+  "Action: Spend 1 prayer to add 1 syndicate fleet on this card OR remove 1 syndicate fleet from this card to steal 2M€ from every opponent.": "",
   "You start with 40 M€ and 2 syndicate fleets on this card.": "",
   "Effect: When you place a tile on The Moon, steal 2 M€ from opponents for each of their tiles next to yours.": "",
 
   "The Grand Luna Capital Group": "",
   "Effect: When you place a habitat tile, gain 2 M€ for each adjacent habitat tile.": "",
   "1 VP for each habitat tile adjacent to your habitat tiles.": "",
-  "You start with 32 M€ and 1 titanium. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.": ""
+  "You start with 32 M€ and 1 prayer. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.": ""
 }

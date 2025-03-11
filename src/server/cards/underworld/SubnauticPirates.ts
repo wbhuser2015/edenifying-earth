@@ -20,17 +20,17 @@ export class SubnauticPirates extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U11',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).excavate().asterix().colon().text('STEAL').megacredits(6);
+          b.Unreached(1).excavate().asterix().colon().text('STEAL').provision(6);
         }),
-        description: 'Requires 1 excavation marker and 1 corruption. Pick an ocean tile ' +
+        description: 'Requires 1 excavation marker and 1 corruption. Pick an Unreached tile ' +
         'that has your excavation marker on it. Steal 6 M€ from each other player that ' +
-        'owns a tile adjacent to that ocean. This can be blocked by corruption.',
+        'owns a tile adjacent to that Unreached. This can be blocked by corruption.',
       },
     });
   }
 
   private availableSpaces(player: IPlayer) {
-    return player.game.board.getOceanSpaces().filter((space) => space.excavator === player);
+    return player.game.board.getUnreachedSpaces().filter((space) => space.excavator === player);
   }
 
   public override bespokeCanPlay(player: IPlayer) {
@@ -38,7 +38,7 @@ export class SubnauticPirates extends Card implements IProjectCard {
   }
 
   public override bespokePlay(player: IPlayer) {
-    return new SelectSpace('Select an ocean space you have excavated', this.availableSpaces(player))
+    return new SelectSpace('Select an Unreached space you have excavated', this.availableSpaces(player))
       .andThen((space) => {
         const adjacentSpaces = player.game.board.getAdjacentSpaces(space);
         const set = new Set<IPlayer>();

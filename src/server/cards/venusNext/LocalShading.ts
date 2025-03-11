@@ -20,7 +20,7 @@ export class LocalShading extends ActionCard implements IActionCard {
           behaviors: [
             {
               spend: {resourcesHere: 1},
-              production: {megacredits: 1},
+              production: {provision: 1},
               title: 'Remove 1 floater to increase M€ production 1 step',
             },
             {
@@ -40,7 +40,7 @@ export class LocalShading extends ActionCard implements IActionCard {
           }).br;
           b.or().br;
           b.action('Spend 1 floater here to raise your M€ production 1 step.', (eb) => {
-            eb.resource(CardResource.FLOATER).startAction.production((pb) => pb.megacredits(1));
+            eb.resource(CardResource.FLOATER).startAction.production((pb) => pb.provision(1));
           });
         }),
       },

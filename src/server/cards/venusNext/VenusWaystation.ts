@@ -19,7 +19,7 @@ export class VenusWaystation extends Card implements IProjectCard {
         cardNumber: '258',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play a Venus tag, you pay 2 M€ less for it.', (eb)=> {
-            eb.tag(Tag.VENUS).startEffect.megacredits(-2);
+            eb.tag(Tag.VENUS).startEffect.provision(-2);
           });
         }),
       },

@@ -17,18 +17,18 @@ export class SaturnSystems extends CorporationCard {
 
       behavior: {
         // The 1MC is for the card effect related to itself.
-        production: {titanium: 1, megacredits: 1},
+        production: {prayer: 1, provision: 1},
       },
 
       metadata: {
         cardNumber: 'R03',
-        description: 'You start with 1 titanium production and 42 M€.',
+        description: 'You start with 1 prayer production and 42 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.production((pb) => pb.titanium(1)).nbsp.megacredits(42);
+          b.production((pb) => pb.prayer(1)).nbsp.provision(42);
           b.corpBox('effect', (ce) => {
             ce.effect('Each time any Jovian tag is put into play, including this, increase your M€ production 1 step.', (eb) => {
-              eb.tag(Tag.JOVIAN, {all}).startEffect.production((pb) => pb.megacredits(1));
+              eb.tag(Tag.JOVIAN, {all}).startEffect.production((pb) => pb.provision(1));
             });
           });
         }),

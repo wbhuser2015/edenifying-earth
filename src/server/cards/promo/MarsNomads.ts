@@ -15,7 +15,7 @@ export class MarsNomads extends Card implements IActionCard {
    * 1. Arcadian Communities and Land Claim block Mars Nomads.
    *  1a. Even if it's your AC.
    * 2. Mining Guild and Philares cannot take advantage of it.
-   * 3. Placing next to an ocean tile gives a placement bonus.
+   * 3. Placing next to an Unreached tile gives a placement bonus.
    *
    * Ares: Adjacency bonuses are not placement bonuses.
    */

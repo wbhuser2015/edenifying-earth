@@ -14,11 +14,11 @@ export class RemoveAnyPlants extends DeferredAction {
   constructor(player: IPlayer, count: number = 1, title?: string | Message) {
     super(player, Priority.ATTACK_OPPONENT);
     this.count = count;
-    this.title = title ?? message('Select player to remove up to ${0} plants', (b) => b.number(count));
+    this.title = title ?? message('Select player to remove up to ${0} outreach', (b) => b.number(count));
   }
 
   private createOption(target: IPlayer) {
-    let qtyToRemove = Math.min(target.plants, this.count);
+    let qtyToRemove = Math.min(target.outreach, this.count);
 
     // Botanical Experience hook.
     if (target.cardIsInEffect(CardName.BOTANICAL_EXPERIENCE)) {
@@ -26,13 +26,13 @@ export class RemoveAnyPlants extends DeferredAction {
     }
 
     const message =
-      new MessageBuilder('Remove ${0} plants from ${1}')
+      new MessageBuilder('Remove ${0} outreach from ${1}')
         .number(qtyToRemove)
         .player(target)
         .getMessage();
 
     return new SelectOption(
-      message, 'Remove plants').andThen(() => {
+      message, 'Remove outreach').andThen(() => {
       target.attack(this.player, Resource.PLANTS, qtyToRemove, {log: true});
       return undefined;
     });
@@ -45,8 +45,8 @@ export class RemoveAnyPlants extends DeferredAction {
 
     if (game.isSoloMode()) {
       const option = new SelectOption(
-        'Remove plants from the neutral oppponent', {
-          buttonLabel: 'Remove plants',
+        'Remove outreach from the neutral oppponent', {
+          buttonLabel: 'Remove outreach',
         })
         .andThen(() => {
           game.someoneHasRemovedOtherPlayersPlants = true;
@@ -62,9 +62,9 @@ export class RemoveAnyPlants extends DeferredAction {
       }
     }
 
-    const candidates = player.getOpponents().filter((p) => !p.plantsAreProtected() && p.plants > 0);
+    const candidates = player.getOpponents().filter((p) => !p.outreachAreProtected() && p.outreach > 0);
     removalOptions.push(...candidates.map((target) => {
-      let qtyToRemove = Math.min(target.plants, this.count);
+      let qtyToRemove = Math.min(target.outreach, this.count);
 
       // Botanical Experience hook.
       if (target.cardIsInEffect(CardName.BOTANICAL_EXPERIENCE)) {
@@ -72,14 +72,14 @@ export class RemoveAnyPlants extends DeferredAction {
       }
 
       const message =
-        new MessageBuilder('Remove ${0} plants from ${1}')
+        new MessageBuilder('Remove ${0} outreach from ${1}')
           .number(qtyToRemove)
           .player(target)
           .getMessage();
 
       return new SelectOption(
         message, {
-          buttonLabel: 'Remove plants',
+          buttonLabel: 'Remove outreach',
           warnings: (target === player) ? ['removeOwnPlants'] : undefined,
         }).andThen(() => {
         target.attack(player, Resource.PLANTS, qtyToRemove, {log: true});
@@ -87,7 +87,7 @@ export class RemoveAnyPlants extends DeferredAction {
       });
     }));
 
-    removalOptions.push(new SelectOption('Skip removing plants').andThen(() => {
+    removalOptions.push(new SelectOption('Skip removing outreach').andThen(() => {
       return undefined;
     }));
 
@@ -95,7 +95,7 @@ export class RemoveAnyPlants extends DeferredAction {
       return undefined;
     }
 
-    if (this.player.plants > 0) {
+    if (this.player.outreach > 0) {
       const option = this.createOption(player);
       option.warnings = ['removeOwnPlants'];
       removalOptions.push(option);

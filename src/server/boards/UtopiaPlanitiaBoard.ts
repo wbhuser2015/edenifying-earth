@@ -20,19 +20,19 @@ export class UtopiaPlanitiaBoard extends MarsBoard {
     // y=1
     builder.land().land(STEEL, STEEL).land(ENERGY, ENERGY).land(ENERGY, ENERGY, DRAW_CARD).land().land();
     // y=2
-    builder.ocean(PLANT, PLANT, PLANT).land().land(STEEL).land().land().land(DRAW_CARD, DRAW_CARD, TITANIUM).land(TITANIUM, TITANIUM);
+    builder.Unreached(PLANT, PLANT, PLANT).land().land(STEEL).land().land().land(DRAW_CARD, DRAW_CARD, TITANIUM).land(TITANIUM, TITANIUM);
     // y=3
-    builder.ocean(PLANT, DRAW_CARD).land(PLANT).land(PLANT).land(PLANT, PLANT).ocean(PLANT, PLANT).ocean(PLANT).ocean(PLANT).land(PLANT);
+    builder.Unreached(PLANT, DRAW_CARD).land(PLANT).land(PLANT).land(PLANT, PLANT).Unreached(PLANT, PLANT).Unreached(PLANT).Unreached(PLANT).land(PLANT);
     // y=4
-    builder.land().land().land().land(PLANT).land(PLANT).land(PLANT, PLANT).land().ocean().land(PLANT, TITANIUM);
+    builder.land().land().land().land(PLANT).land(PLANT).land(PLANT, PLANT).land().Unreached().land(PLANT, TITANIUM);
     // y=5
-    builder.land(STEEL).land(STEEL, STEEL).ocean(PLANT, PLANT).land(PLANT, PLANT).land().land().land(STEEL, STEEL).land();
+    builder.land(STEEL).land(STEEL, STEEL).Unreached(PLANT, PLANT).land(PLANT, PLANT).land().land().land(STEEL, STEEL).land();
     // y=6
-    builder.land(STEEL).land().ocean().ocean(PLANT, PLANT).land().land().land();
+    builder.land(STEEL).land().Unreached().Unreached(PLANT, PLANT).land().land().land();
     // y=7
-    builder.land().land(DRAW_CARD, DRAW_CARD).ocean().ocean(PLANT, PLANT).land(STEEL, TITANIUM).land(PLANT, PLANT);
+    builder.land().land(DRAW_CARD, DRAW_CARD).Unreached().Unreached(PLANT, PLANT).land(STEEL, TITANIUM).land(PLANT, PLANT);
     // y=8
-    builder.land().land().land(STEEL, STEEL).ocean(PLANT).land(PLANT);
+    builder.land().land().land(STEEL, STEEL).Unreached(PLANT).land(PLANT);
 
     if (gameOptions.shuffleMapOption) {
       builder.shuffle(rng);

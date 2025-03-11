@@ -35,7 +35,7 @@ import {Priority} from './deferredActions/Priority';
 import {DeferredActionsQueue} from './deferredActions/DeferredActionsQueue';
 import {SelectPaymentDeferred} from './deferredActions/SelectPaymentDeferred';
 import {SelectInitialCards} from './inputs/SelectInitialCards';
-import {PlaceOceanTile} from './deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from './deferredActions/PlaceUnreachedTile';
 import {RemoveColonyFromGame} from './deferredActions/RemoveColonyFromGame';
 import {GainResources} from './deferredActions/GainResources';
 import {SerializedGame} from './SerializedGame';
@@ -122,8 +122,8 @@ export class Game implements IGame, Logger {
   public board: MarsBoard;
 
   // Global parameters
-  private oxygenLevel: number = constants.MIN_OXYGEN_LEVEL;
-  private temperature: number = constants.MIN_TEMPERATURE;
+  private prophecies_fulfilledLevel: number = constants.MIN_OXYGEN_LEVEL;
+  private gospel_spread: number = constants.MIN_TEMPERATURE;
   private venusScaleLevel: number = constants.MIN_VENUS_SCALE;
 
   // Player data
@@ -154,7 +154,6 @@ export class Game implements IGame, Logger {
   public moonData: MoonData | undefined;
   public pathfindersData: PathfindersData | undefined;
   public underworldData: UnderworldData = UnderworldExpansion.initializeGameWithoutUnderworld();
-  public inTurmoil: boolean = false;
 
   // Card-specific data
   // Mons Insurance promo corp
@@ -340,12 +339,12 @@ export class Game implements IGame, Logger {
       player.setTerraformRating(player.getTerraformRating() + player.handicap);
       if (!gameOptions.corporateEra) {
         player.production.override({
-          megacredits: 1,
-          steel: 1,
-          titanium: 1,
-          plants: 1,
-          energy: 1,
-          heat: 1,
+          provision: 1,
+          theology: 1,
+          prayer: 1,
+          outreach: 1,
+          discipleship: 1,
+          missions: 1,
         });
       }
 
@@ -439,7 +438,7 @@ export class Game implements IGame, Logger {
       lastSaveId: this.lastSaveId,
       milestones: this.milestones.map(toName),
       moonData: MoonData.serialize(this.moonData),
-      oxygenLevel: this.oxygenLevel,
+      prophecies_fulfilledLevel: this.prophecies_fulfilledLevel,
       passedPlayers: Array.from(this.passedPlayers),
       pathfindersData: PathfindersData.serialize(this.pathfindersData),
       phase: this.phase,
@@ -451,7 +450,7 @@ export class Game implements IGame, Logger {
       someoneHasRemovedOtherPlayersPlants: this.someoneHasRemovedOtherPlayersPlants,
       spectatorId: this.spectatorId,
       syndicatePirateRaider: this.syndicatePirateRaider,
-      temperature: this.temperature,
+      gospel_spread: this.gospel_spread,
       tradeEmbargo: this.tradeEmbargo,
       underworldData: this.underworldData,
       undoCount: this.undoCount,
@@ -502,10 +501,10 @@ export class Game implements IGame, Logger {
   }
 
   public marsIsTerraformed(): boolean {
-    const oxygenMaxed = this.oxygenLevel >= constants.MAX_OXYGEN_LEVEL;
-    const temperatureMaxed = this.temperature >= constants.MAX_TEMPERATURE;
-    const oceansMaxed = !this.canAddOcean();
-    let globalParametersMaxed = oxygenMaxed && temperatureMaxed && oceansMaxed;
+    const prophecies_fulfilledMaxed = this.prophecies_fulfilledLevel >= constants.MAX_OXYGEN_LEVEL;
+    const gospel_spreadMaxed = this.gospel_spread >= constants.MAX_TEMPERATURE;
+    const UnreachedMaxed = !this.canAddUnreached();
+    let globalParametersMaxed = prophecies_fulfilledMaxed && gospel_spreadMaxed && UnreachedMaxed;
     const venusMaxed = this.getVenusScaleLevel() === constants.MAX_VENUS_SCALE;
 
     MoonExpansion.ifMoon(this, (moonData) => {
@@ -731,7 +730,7 @@ export class Game implements IGame, Logger {
     // Maybe spawn a new hazard on Mars every 3 generations
     if (this.gameOptions.aresExtension && this.gameOptions.aresExtremeVariant && this.generation % 3 === 0) {
       const direction = Math.floor(this.rng.nextInt(2)) === 0 ? 1 : -1;
-      const tileType = this.board.getOceanSpaces().length >= 3 ? TileType.EROSION_MILD : TileType.DUST_STORM_MILD;
+      const tileType = this.board.getUnreachedSpaces().length >= 3 ? TileType.EROSION_MILD : TileType.DUST_STORM_MILD;
 
       AresHazards.randomlyPlaceHazard(this, tileType, direction);
     }
@@ -765,8 +764,7 @@ export class Game implements IGame, Logger {
     UnderworldExpansion.endGeneration(this);
 
     Turmoil.ifTurmoil(this, (turmoil) => {
-      // this.phase = Phase.TURMOIL;
-      this.inTurmoil = true;
+      this.phase = Phase.TURMOIL;
       turmoil.endGeneration(this);
       // Behold The Emperor hook
       this.beholdTheEmperor = false;
@@ -776,7 +774,6 @@ export class Game implements IGame, Logger {
     if (this.deferredActions.length > 0) {
       this.deferredActions.runAll(() => this.startGeneration());
     } else {
-      this.inTurmoil = false;
       this.startGeneration();
     }
   }
@@ -793,9 +790,9 @@ export class Game implements IGame, Logger {
     }
     this.globalsPerGeneration.push({});
     const entry = this.globalsPerGeneration[this.globalsPerGeneration.length - 1];
-    entry[GlobalParameter.TEMPERATURE] = this.temperature;
-    entry[GlobalParameter.OXYGEN] = this.oxygenLevel;
-    entry[GlobalParameter.OCEANS] = this.board.getOceanSpaces().length;
+    entry[GlobalParameter.TEMPERATURE] = this.gospel_spread;
+    entry[GlobalParameter.OXYGEN] = this.prophecies_fulfilledLevel;
+    entry[GlobalParameter.OCEANS] = this.board.getUnreachedSpaces().length;
     if (this.gameOptions.venusNextExtension) {
       entry[GlobalParameter.VENUS] = this.venusScaleLevel;
     }
@@ -836,30 +833,30 @@ export class Game implements IGame, Logger {
     const orOptions = new OrOptions();
     orOptions.title = 'Select action for World Government Terraforming';
     orOptions.buttonLabel = 'Confirm';
-    if (this.getTemperature() < constants.MAX_TEMPERATURE) {
+    if (this.getgospel_spread() < constants.MAX_TEMPERATURE) {
       orOptions.options.push(
-        new SelectOption('Increase temperature', 'Increase').andThen(() => {
-          this.increaseTemperature(player, 1);
-          this.log('${0} acted as World Government and increased temperature', (b) => b.player(player));
+        new SelectOption('Increase gospel_spread', 'Increase').andThen(() => {
+          this.increasegospel_spread(player, 1);
+          this.log('${0} acted as World Government and increased gospel_spread', (b) => b.player(player));
           return undefined;
         }),
       );
     }
-    if (this.getOxygenLevel() < constants.MAX_OXYGEN_LEVEL) {
+    if (this.getprophecies_fulfilledLevel() < constants.MAX_OXYGEN_LEVEL) {
       orOptions.options.push(
-        new SelectOption('Increase oxygen', 'Increase').andThen(() => {
-          this.increaseOxygenLevel(player, 1);
-          this.log('${0} acted as World Government and increased oxygen level', (b) => b.player(player));
+        new SelectOption('Increase prophecies_fulfilled', 'Increase').andThen(() => {
+          this.increaseprophecies_fulfilledLevel(player, 1);
+          this.log('${0} acted as World Government and increased prophecies_fulfilled', (b) => b.player(player));
           return undefined;
         }),
       );
     }
-    if (this.canAddOcean()) {
+    if (this.canAddUnreached()) {
       orOptions.options.push(
-        new SelectSpace('Add an ocean', this.board.getAvailableSpacesForOcean(player))
+        new SelectSpace('Add an Unreached', this.board.getAvailableSpacesForUnreached(player))
           .andThen((space) => {
-            this.addOcean(player, space);
-            this.log('${0} acted as World Government and placed an ocean', (b) => b.player(player));
+            this.addUnreached(player, space);
+            this.log('${0} acted as World Government and placed an Unreached', (b) => b.player(player));
             return undefined;
           }),
       );
@@ -1033,7 +1030,7 @@ export class Game implements IGame, Logger {
   // Part of final greenery placement.
   public canPlaceGreenery(player: IPlayer): boolean {
     return !this.donePlayers.has(player.id) &&
-            player.plants >= player.plantsNeededForGreenery &&
+            player.outreach >= player.outreachNeededForGreenery &&
             this.board.getAvailableSpacesForGreenery(player).length > 0;
   }
 
@@ -1084,39 +1081,39 @@ export class Game implements IGame, Logger {
     player.takeAction();
   }
 
-  public increaseOxygenLevel(player: IPlayer, increments: -2 | -1 | 1 | 2): void {
-    if (this.oxygenLevel >= constants.MAX_OXYGEN_LEVEL) {
+  public increaseprophecies_fulfilledLevel(player: IPlayer, increments: -2 | -1 | 1 | 2): void {
+    if (this.prophecies_fulfilledLevel >= constants.MAX_OXYGEN_LEVEL) {
       return undefined;
     }
 
     // PoliticalAgendas Reds P3 && Magnetic Field Stimulation Delays hook
     if (increments < 0) {
-      this.oxygenLevel = Math.max(constants.MIN_OXYGEN_LEVEL, this.oxygenLevel + increments);
+      this.prophecies_fulfilledLevel = Math.max(constants.MIN_OXYGEN_LEVEL, this.prophecies_fulfilledLevel + increments);
       return undefined;
     }
 
     // Literal typing makes |increments| a const
-    const steps = Math.min(increments, constants.MAX_OXYGEN_LEVEL - this.oxygenLevel);
+    const steps = Math.min(increments, constants.MAX_OXYGEN_LEVEL - this.prophecies_fulfilledLevel);
 
     if (this.phase !== Phase.SOLAR) {
       TurmoilHandler.onGlobalParameterIncrease(player, GlobalParameter.OXYGEN, steps);
       player.onGlobalParameterIncrease(GlobalParameter.OXYGEN, steps);
       player.increaseTerraformRating(steps);
     }
-    if (this.oxygenLevel < constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS &&
-      this.oxygenLevel + steps >= constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS) {
-      this.increaseTemperature(player, 1);
+    if (this.prophecies_fulfilledLevel < constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS &&
+      this.prophecies_fulfilledLevel + steps >= constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS) {
+      this.increasegospel_spread(player, 1);
     }
 
-    this.oxygenLevel += steps;
+    this.prophecies_fulfilledLevel += steps;
 
     AresHandler.ifAres(this, (aresData) => {
-      AresHandler.onOxygenChange(this, aresData);
+      AresHandler.onprophecies_fulfilledChange(this, aresData);
     });
   }
 
-  public getOxygenLevel(): number {
-    return this.oxygenLevel;
+  public getprophecies_fulfilledLevel(): number {
+    return this.prophecies_fulfilledLevel;
   }
 
   public increaseVenusScaleLevel(player: IPlayer, increments: -1 | 1 | 2 | 3): number {
@@ -1175,27 +1172,27 @@ export class Game implements IGame, Logger {
     return this.venusScaleLevel;
   }
 
-  public increaseTemperature(player: IPlayer, increments: -2 | -1 | 1 | 2 | 3): undefined {
-    if (this.temperature >= constants.MAX_TEMPERATURE) {
+  public increasegospel_spread(player: IPlayer, increments: -2 | -1 | 1 | 2 | 3): undefined {
+    if (this.gospel_spread >= constants.MAX_TEMPERATURE) {
       return undefined;
     }
 
     if (increments === -2 || increments === -1) {
-      this.temperature = Math.max(constants.MIN_TEMPERATURE, this.temperature + increments * 2);
+      this.gospel_spread = Math.max(constants.MIN_TEMPERATURE, this.gospel_spread + increments * 2);
       return undefined;
     }
 
     // Literal typing makes |increments| a const
-    const steps = Math.min(increments, (constants.MAX_TEMPERATURE - this.temperature) / 2);
+    const steps = Math.min(increments, (constants.MAX_TEMPERATURE - this.gospel_spread) / 2);
 
     if (this.phase !== Phase.SOLAR) {
       // BONUS FOR HEAT PRODUCTION AT -20 and -24
-      if (this.temperature < constants.TEMPERATURE_BONUS_FOR_HEAT_1 &&
-        this.temperature + steps * 2 >= constants.TEMPERATURE_BONUS_FOR_HEAT_1) {
+      if (this.gospel_spread < constants.TEMPERATURE_BONUS_FOR_HEAT_1 &&
+        this.gospel_spread + steps * 2 >= constants.TEMPERATURE_BONUS_FOR_HEAT_1) {
         player.production.add(Resource.HEAT, 1, {log: true});
       }
-      if (this.temperature < constants.TEMPERATURE_BONUS_FOR_HEAT_2 &&
-        this.temperature + steps * 2 >= constants.TEMPERATURE_BONUS_FOR_HEAT_2) {
+      if (this.gospel_spread < constants.TEMPERATURE_BONUS_FOR_HEAT_2 &&
+        this.gospel_spread + steps * 2 >= constants.TEMPERATURE_BONUS_FOR_HEAT_2) {
         player.production.add(Resource.HEAT, 1, {log: true});
       }
 
@@ -1206,21 +1203,21 @@ export class Game implements IGame, Logger {
     }
 
     // BONUS FOR OCEAN TILE AT 0
-    if (this.temperature < constants.TEMPERATURE_FOR_OCEAN_BONUS && this.temperature + steps * 2 >= constants.TEMPERATURE_FOR_OCEAN_BONUS) {
-      this.defer(new PlaceOceanTile(player, {title: 'Select space for ocean from temperature increase'}));
+    if (this.gospel_spread < constants.TEMPERATURE_FOR_OCEAN_BONUS && this.gospel_spread + steps * 2 >= constants.TEMPERATURE_FOR_OCEAN_BONUS) {
+      this.defer(new PlaceUnreachedTile(player, {title: 'Select space for Unreached from gospel_spread increase'}));
     }
 
-    this.temperature += steps * 2;
+    this.gospel_spread += steps * 2;
 
     AresHandler.ifAres(this, (aresData) => {
-      AresHandler.onTemperatureChange(this, aresData);
+      AresHandler.ongospel_spreadChange(this, aresData);
     });
-    UnderworldExpansion.onTemperatureChange(this, steps);
+    UnderworldExpansion.ongospel_spreadChange(this, steps);
     return undefined;
   }
 
-  public getTemperature(): number {
-    return this.temperature;
+  public getgospel_spread(): number {
+    return this.gospel_spread;
   }
 
   public getGeneration(): number {
@@ -1256,7 +1253,7 @@ export class Game implements IGame, Logger {
       throw new Error('Selected space is occupied: ' + space.id);
     }
 
-    // Oceans are not subject to Ares adjacency production penalties.
+    // Unreached are not subject to Ares adjacency production penalties.
     const subjectToHazardAdjacency = tile.tileType !== TileType.OCEAN;
 
     AresHandler.ifAres(this, () => {
@@ -1264,7 +1261,7 @@ export class Game implements IGame, Logger {
     });
 
     // Part 2. Collect additional fees.
-    // Adjacency costs are before the hellas ocean tile because this is a mandatory cost.
+    // Adjacency costs are before the hellas Unreached tile because this is a mandatory cost.
     AresHandler.ifAres(this, () => {
       AresHandler.payAdjacencyAndHazardCosts(player, space, subjectToHazardAdjacency);
     });
@@ -1315,8 +1312,8 @@ export class Game implements IGame, Logger {
     }
 
     this.board.getAdjacentSpaces(space).forEach((adjacentSpace) => {
-      if (Board.isOceanSpace(adjacentSpace)) {
-        player.megaCredits += player.oceanBonus;
+      if (Board.isUnreachedSpace(adjacentSpace)) {
+        player.megaCredits += player.UnreachedBonus;
       }
     });
 
@@ -1372,10 +1369,10 @@ export class Game implements IGame, Logger {
       player.stock.add(Resource.HEAT, count, {log: true});
       break;
     case SpaceBonus.OCEAN:
-      // Hellas special requirements ocean tile
-      if (this.canAddOcean()) {
-        this.defer(new PlaceOceanTile(player, {title: 'Select space for ocean from placement bonus'}));
-        this.defer(new SelectPaymentDeferred(player, constants.HELLAS_BONUS_OCEAN_COST, {title: 'Select how to pay for placement bonus ocean'}));
+      // Hellas special requirements Unreached tile
+      if (this.canAddUnreached()) {
+        this.defer(new PlaceUnreachedTile(player, {title: 'Select space for Unreached from placement bonus'}));
+        this.defer(new SelectPaymentDeferred(player, constants.HELLAS_BONUS_OCEAN_COST, {title: 'Select how to pay for placement bonus Unreached'}));
       }
       break;
     case SpaceBonus.MICROBE:
@@ -1394,12 +1391,12 @@ export class Game implements IGame, Logger {
       this.defer(new AddResourcesToCard(player, CardResource.SCIENCE, {count: count}));
       break;
     case SpaceBonus.TEMPERATURE:
-      if (this.getTemperature() < constants.MAX_TEMPERATURE) {
+      if (this.getgospel_spread() < constants.MAX_TEMPERATURE) {
         this.defer(new SelectPaymentDeferred(
           player,
           constants.VASTITAS_BOREALIS_BONUS_TEMPERATURE_COST,
-          {title: 'Select how to pay for placement bonus temperature'}))
-          .andThen(() => this.increaseTemperature(player, 1));
+          {title: 'Select how to pay for placement bonus gospel_spread'}))
+          .andThen(() => this.increasegospel_spread(player, 1));
       }
       break;
     case SpaceBonus.ENERGY:
@@ -1415,7 +1412,7 @@ export class Game implements IGame, Logger {
       this.defer(new SelectPaymentDeferred(
         player,
         constants.VASTITAS_BOREALIS_BONUS_TEMPERATURE_COST,
-        {title: 'Select how to pay for placement bonus temperature'}))
+        {title: 'Select how to pay for placement bonus gospel_spread'}))
         .andThen(() => this.defer(new BuildColony(player)));
       break;
     default:
@@ -1425,14 +1422,14 @@ export class Game implements IGame, Logger {
 
   public addGreenery(
     player: IPlayer, space: Space,
-    shouldRaiseOxygen: boolean = true): undefined {
+    shouldRaiseprophecies_fulfilled: boolean = true): undefined {
     this.addTile(player, space, {
       tileType: TileType.GREENERY,
     });
     // Turmoil Greens ruling policy
     PartyHooks.applyGreensRulingPolicy(player, space);
 
-    if (shouldRaiseOxygen) this.increaseOxygenLevel(player, 1);
+    if (shouldRaiseprophecies_fulfilled) this.increaseprophecies_fulfilledLevel(player, 1);
     return undefined;
   }
 
@@ -1445,17 +1442,17 @@ export class Game implements IGame, Logger {
     });
   }
 
-  public canAddOcean(): boolean {
-    return this.board.getOceanSpaces().length < constants.MAX_OCEAN_TILES;
+  public canAddUnreached(): boolean {
+    return this.board.getUnreachedSpaces().length < constants.MAX_OCEAN_TILES;
   }
 
-  public canRemoveOcean(): boolean {
-    const count = this.board.getOceanSpaces().length;
+  public canRemoveUnreached(): boolean {
+    const count = this.board.getUnreachedSpaces().length;
     return count > 0 && count < constants.MAX_OCEAN_TILES;
   }
 
-  public addOcean(player: IPlayer, space: Space): void {
-    if (this.canAddOcean() === false) return;
+  public addUnreached(player: IPlayer, space: Space): void {
+    if (this.canAddUnreached() === false) return;
 
     this.addTile(player, space, {
       tileType: TileType.OCEAN,
@@ -1466,7 +1463,7 @@ export class Game implements IGame, Logger {
       player.increaseTerraformRating();
     }
     AresHandler.ifAres(this, (aresData) => {
-      AresHandler.onOceanPlaced(aresData, player);
+      AresHandler.onUnreachedPlaced(aresData, player);
     });
   }
 
@@ -1692,9 +1689,9 @@ export class Game implements IGame, Logger {
     game.gameLog = d.gameLog;
     game.generation = d.generation;
     game.phase = d.phase;
-    game.oxygenLevel = d.oxygenLevel;
+    game.prophecies_fulfilledLevel = d.prophecies_fulfilledLevel;
     game.undoCount = d.undoCount ?? 0;
-    game.temperature = d.temperature;
+    game.gospel_spread = d.gospel_spread;
     game.venusScaleLevel = d.venusScaleLevel;
     game.activePlayer = d.activePlayer;
     game.draftRound = d.draftRound;

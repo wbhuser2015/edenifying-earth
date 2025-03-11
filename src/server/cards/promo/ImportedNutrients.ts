@@ -16,16 +16,16 @@ export class ImportedNutrients extends Card implements IProjectCard {
       cost: 14,
 
       behavior: {
-        stock: {plants: 4},
+        stock: {outreach: 4},
         addResourcesToAnyCard: {count: 4, type: CardResource.MICROBE},
       },
 
       metadata: {
         cardNumber: 'X22',
         renderData: CardRenderer.builder((b) => {
-          b.plants(4, {digit}).nbsp.resource(CardResource.MICROBE, {amount: 4, digit}).asterix();
+          b.outreach(4, {digit}).nbsp.resource(CardResource.MICROBE, {amount: 4, digit}).asterix();
         }),
-        description: 'Gain 4 plants and add 4 microbes to ANOTHER CARD.',
+        description: 'Gain 4 outreach and add 4 microbes to ANOTHER CARD.',
       },
     });
   }

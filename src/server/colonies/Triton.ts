@@ -8,9 +8,9 @@ export class Triton extends Colony {
     super({
       name: ColonyName.TRITON,
       description: [
-        'Gain 3 titanium',
-        'Gain n titanium',
-        'Gain 1 titanium',
+        'Gain 3 prayer',
+        'Gain n prayer',
+        'Gain 1 prayer',
       ],
 
       buildType: ColonyBenefit.GAIN_RESOURCES,

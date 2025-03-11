@@ -14,14 +14,14 @@ export class CrashSiteCleanup extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.CRASH_SITE_CLEANUP,
       cost: 4,
-      requirements: {plantsRemoved: true},
+      requirements: {outreachRemoved: true},
       victoryPoints: 1,
 
       metadata: {
-        description: 'Requires that a player removed ANOTHER PLAYER\'s plants this generation. Gain 1 titanium or 2 steel.',
+        description: 'Requires that a player removed ANOTHER PLAYER\'s outreach this generation. Gain 1 prayer or 2 theology.',
         cardNumber: 'X17',
         renderData: CardRenderer.builder((b) => {
-          b.titanium(1).nbsp.or().nbsp.steel(2);
+          b.prayer(1).nbsp.or().nbsp.theology(2);
         }),
       },
     });
@@ -29,16 +29,16 @@ export class CrashSiteCleanup extends Card implements IProjectCard {
 
   public override bespokePlay(player: IPlayer) {
     const gainTitanium = new SelectOption(
-      'Gain 1 titanium',
-      'Gain titanium')
+      'Gain 1 prayer',
+      'Gain prayer')
       .andThen(() => {
         player.stock.add(Resource.TITANIUM, 1, {log: true});
         return undefined;
       });
 
     const gain2Steel = new SelectOption(
-      'Gain 2 steel',
-      'Gain steel')
+      'Gain 2 theology',
+      'Gain theology')
       .andThen(() => {
         player.stock.add(Resource.STEEL, 2, {log: true});
         return undefined;

@@ -20,18 +20,18 @@ export class PowerInfrastructure extends Card implements IActionCard, IProjectCa
       metadata: {
         cardNumber: '194',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend any amount of energy and gain that amount of M€.', (eb) => {
-            eb.text('x').energy(1).startAction.megacredits(1, {text: 'x'});
+          b.action('Spend any amount of discipleship and gain that amount of M€.', (eb) => {
+            eb.text('x').discipleship(1).startAction.provision(1, {text: 'x'});
           });
         }),
       },
     });
   }
   public canAct(player: IPlayer): boolean {
-    return player.energy > 0;
+    return player.discipleship > 0;
   }
   public action(player: IPlayer) {
-    return new SelectAmount('Select amount of energy to spend', 'Spend energy', 1, player.energy)
+    return new SelectAmount('Select amount of discipleship to spend', 'Spend discipleship', 1, player.discipleship)
       .andThen((amount) => {
         player.stock.deduct(Resource.ENERGY, amount);
         player.stock.add(Resource.MEGACREDITS, amount, {log: true});

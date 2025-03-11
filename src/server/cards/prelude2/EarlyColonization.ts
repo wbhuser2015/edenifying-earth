@@ -14,16 +14,16 @@ export class EarlyColonization extends PreludeCard {
 
       behavior: {
         colonies: {buildColony: {}},
-        stock: {energy: 3},
+        stock: {discipleship: 3},
       },
 
       metadata: {
         cardNumber: 'P48',
-        description: 'Place a colony. Gain 3 energy.',
+        description: 'Place a colony. Gain 3 discipleship.',
         renderData: CardRenderer.builder((b) => {
           b.colonyTile({all}).text('+2').br;
           b.text('INCREASE ALL COLONY TRACKS 2 STEPS', Size.SMALL, true).br;
-          b.colonies(1).energy(3);
+          b.colonies(1).discipleship(3);
         }),
       },
     });

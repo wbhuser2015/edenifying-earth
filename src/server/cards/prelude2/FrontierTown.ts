@@ -18,15 +18,15 @@ export class FrontierTown extends Card implements IProjectCard {
 
       requirements: {party: PartyName.MARS},
 
-      behavior: {production: {energy: -1}},
+      behavior: {production: {discipleship: -1}},
 
       metadata: {
         cardNumber: 'P74',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(1)).city().asterix();
+          b.production((pb) => pb.minus().discipleship(1)).city().asterix();
         }),
         description: 'Requires that Mars First is ruling or that you have 2 delegates there. ' +
-        'Decrease your energy production one step. Place a city tile. ' +
+        'Decrease your discipleship production one step. Place a city tile. ' +
         'GAIN THE PRINTED PLACEMENT BONUS 2 ADDITIONAL TIMES.',
       },
     });

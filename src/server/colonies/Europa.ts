@@ -8,7 +8,7 @@ export class Europa extends Colony {
     super({
       name: ColonyName.EUROPA,
       description: [
-        'Place an ocean tile',
+        'Place an Unreached tile',
         'Gain 1 unit of production of the type under the track marker',
         'Gain 1 M€',
       ],

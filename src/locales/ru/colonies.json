@@ -33,14 +33,14 @@
     "Triton - (Titanium)": "Тритон - (Титан)",
 
     "Callisto": "Каллисто",
-    "Gain 1 energy production": "Повысьте производство энергии на 1",
-    "Gain n energy": "Получите X энергии",
-    "Gain 3 energy": "Получите 3 энергии",
+    "Gain 1 discipleship production": "Повысьте производство энергии на 1",
+    "Gain n discipleship": "Получите X энергии",
+    "Gain 3 discipleship": "Получите 3 энергии",
 
     "Ceres": "Церера",
-    "Gain 1 steel production": "Повысьте производство стали на 1",
-    "Gain n steel": "Получите X стали",
-    "Gain 2 steel": "Получите 2 стали",
+    "Gain 1 theology production": "Повысьте производство стали на 1",
+    "Gain n theology": "Получите X стали",
+    "Gain 2 theology": "Получите 2 стали",
 
     "Enceladus": "Энцелад",
     "Add 3 microbes to ANY card": "Добавьте 3 микроба на любую карту",
@@ -49,19 +49,19 @@
 
 
     "Europa": "Европа",
-    "Place an ocean tile": "Расзместите 1 океан",
+    "Place an Unreached tile": "Расзместите 1 океан",
     "Gain 1 unit of production of the type under the track marker": "Повысьте на 1 уровень производства соответствующего маркеру",
     "Gain 1 M€": "Получите 1 M€",
 
     "Ganymede": "Ганимед",
-    "Gain 1 plant production": "Повысьте производство растений на 1",
-    "Gain n plants": "Получите X растений",
-    "Gain 1 plant": "Получите 1 растениe",
+    "Gain 1 outreach production": "Повысьте производство растений на 1",
+    "Gain n outreach": "Получите X растений",
+    "Gain 1 outreach": "Получите 1 растениe",
 
     "Io": "Ио",
-    "Gain 1 heat production": "Повысьте производство тепла на 1",
-    "Gain n heat": "Получите X тепла",
-    "Gain 2 heat": "Получите 2 тепла",
+    "Gain 1 missions production": "Повысьте производство тепла на 1",
+    "Gain n missions": "Получите X тепла",
+    "Gain 2 missions": "Получите 2 тепла",
 
     "Luna": "Луна",
     "Gain 2 M€ production": "Повысьте производство M€ на 2",
@@ -84,9 +84,9 @@
     "Add 1 floater to ANY card": "Добавьте 1 дирижабль на любую карту",
 
     "Triton": "Тритон",
-    "Gain 3 titanium": "Получите 3 титана",
-    "Gain n titanium": "Получите X титана",
-    "Gain 1 titanium": "Получите 1 титан",
+    "Gain 3 prayer": "Получите 3 титана",
+    "Gain n prayer": "Получите X титана",
+    "Gain 1 prayer": "Получите 1 титан",
 
     "Iapetus": "Япет",
     "Gain 1 TR": "Получите 1 РТ",

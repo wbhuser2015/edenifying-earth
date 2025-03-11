@@ -22,9 +22,9 @@ export class SpecialPermit extends Card implements IProjectCard {
 
       metadata: {
         cardNumber: 'P82',
-        description: 'Requires that Greens are ruling or that you have 2 delegates there. Steal 4 plants from any player.',
+        description: 'Requires that Greens are ruling or that you have 2 delegates there. Steal 4 outreach from any player.',
         renderData: CardRenderer.builder((b) => {
-          b.text('steal', Size.MEDIUM, true).plants(4, {all, digit});
+          b.text('steal', Size.MEDIUM, true).outreach(4, {all, digit});
         }),
       },
     });

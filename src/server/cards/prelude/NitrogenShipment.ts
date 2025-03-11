@@ -9,18 +9,18 @@ export class NitrogenShipment extends PreludeCard implements IProjectCard {
       name: CardName.NITROGEN_SHIPMENT,
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
         tr: 1,
-        stock: {megacredits: 5},
+        stock: {provision: 5},
       },
 
       metadata: {
         cardNumber: 'P24',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).tr(1).br;
-          b.megacredits(5);
+          b.production((pb) => pb.outreach(1)).tr(1).br;
+          b.provision(5);
         }),
-        description: 'Increase your plant production 1 step. Increase your TR 1 step. Gain 5 M€.',
+        description: 'Increase your outreach production 1 step. Increase your TR 1 step. Gain 5 M€.',
       },
     });
   }

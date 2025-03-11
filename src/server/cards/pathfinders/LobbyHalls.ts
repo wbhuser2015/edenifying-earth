@@ -16,14 +16,14 @@ export class LobbyHalls extends Card implements IProjectCard, ICloneTagCard {
       cost: 11,
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
         turmoil: {sendDelegates: {count: 1}},
       },
 
       metadata: {
         cardNumber: 'PfT1',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(2)).delegates(1);
+          b.production((pb) => pb.provision(2)).delegates(1);
         }),
         description: 'Increase your M€ production 2 steps. Place 1 delegate in any party.' +
                      ' Choose a planet tag. This card counts as having 1 of that tag. Raise the corresponding planetary track 1 step.',

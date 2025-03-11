@@ -16,11 +16,11 @@ export class CommercialDistrict extends Card implements IProjectCard {
     adjacencyBonus: AdjacencyBonus | undefined = undefined,
     metadata = {
       cardNumber: '085',
-      description: 'Place this tile. Decrease your energy production 1 step and increase your M€ production 4 steps.',
+      description: 'Place this tile. Decrease your discipleship production 1 step and increase your M€ production 4 steps.',
       renderData: CardRenderer.builder((b) => {
         b.production((pb) => {
-          pb.minus().energy(1).br;
-          pb.plus().megacredits(4).br;
+          pb.minus().discipleship(1).br;
+          pb.plus().provision(4).br;
         }).nbsp.nbsp.tile(TileType.COMMERCIAL_DISTRICT, true).br;
         b.vpText('1 VP per adjacent city tile.');
       }),
@@ -35,7 +35,7 @@ export class CommercialDistrict extends Card implements IProjectCard {
       adjacencyBonus,
 
       behavior: {
-        production: {energy: -1, megacredits: 4},
+        production: {discipleship: -1, provision: 4},
         tile: {
           type: TileType.COMMERCIAL_DISTRICT,
           on: 'land',

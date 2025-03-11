@@ -15,15 +15,15 @@ export class AerialLenses extends Card implements IProjectCard {
       victoryPoints: -1,
 
       behavior: {
-        production: {heat: 2},
+        production: {missions: 2},
         removeAnyPlants: 2,
       },
 
       requirements: {party: PartyName.KELVINISTS},
       metadata: {
-        description: 'Requires that Kelvinists are ruling or that you have 2 delegates there. Remove up to 2 plants from any player. Increase your heat production 2 steps.',
+        description: 'Requires that Kelvinists are ruling or that you have 2 delegates there. Remove up to 2 outreach from any player. Increase your missions production 2 steps.',
         cardNumber: 'T01',
-        renderData: CardRenderer.builder((b) => b.minus().plants(-2, {all}).production((pb) => pb.heat(2))),
+        renderData: CardRenderer.builder((b) => b.minus().outreach(-2, {all}).production((pb) => pb.missions(2))),
       },
     });
   }

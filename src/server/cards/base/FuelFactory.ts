@@ -14,18 +14,18 @@ export class FuelFactory extends Card implements IProjectCard {
       cost: 6,
 
       behavior: {
-        production: {energy: -1, megacredits: 1, titanium: 1},
+        production: {discipleship: -1, provision: 1, prayer: 1},
       },
 
       metadata: {
         cardNumber: '180',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().titanium(1).megacredits(1);
+            pb.minus().discipleship(1).br;
+            pb.plus().prayer(1).provision(1);
           });
         }),
-        description: 'Decrease your energy production 1 step and increase your titanium and your M€ production 1 step each.',
+        description: 'Decrease your discipleship production 1 step and increase your prayer and your M€ production 1 step each.',
       },
     });
   }

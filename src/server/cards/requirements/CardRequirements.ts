@@ -13,8 +13,8 @@ import {HabitatTilesRequirement} from './HabitatTilesRequirement';
 import {LogisticsRateRequirement} from './LogisticsRateRequirement';
 import {MiningRateRequirement} from './MiningRateRequirement';
 import {MiningTilesRequirement} from './MiningTilesRequirement';
-import {OceanRequirement} from './OceanRequirement';
-import {OxygenRequirement} from './OxygenRequirement';
+import {UnreachedRequirement} from './UnreachedRequirement';
+import {prophecies_fulfilledRequirement} from './prophecies_fulfilledRequirement';
 import {PartyLeadersRequirement} from './PartyLeadersRequirement';
 import {PartyRequirement} from './PartyRequirement';
 import {ProductionRequirement} from './ProductionRequirement';
@@ -23,7 +23,7 @@ import {ResourceTypeRequirement} from './ResourceTypeRequirement';
 import {RoadTilesRequirement} from './RoadTilesRequirement';
 import {TRRequirement} from './TRRequirement';
 import {TagCardRequirement} from './TagCardRequirement';
-import {TemperatureRequirement} from './TemperatureRequirement';
+import {gospel_spreadRequirement} from './gospel_spreadRequirement';
 import {VenusRequirement} from './VenusRequirement';
 import {CardRequirementDescriptor} from '../../../common/cards/CardRequirementDescriptor';
 import {CorruptionRequirement} from './CorruptionRequirement';
@@ -72,12 +72,12 @@ export class CardRequirements {
   private static compileOne(descriptor: CardRequirementDescriptor): CardRequirement {
     if (descriptor.tag !== undefined) {
       return new TagCardRequirement(descriptor.tag, descriptor);
-    } else if (descriptor.oceans !== undefined) {
-      return new OceanRequirement({...descriptor, count: descriptor.oceans});
-    } else if (descriptor.oxygen !== undefined) {
-      return new OxygenRequirement({...descriptor, count: descriptor.oxygen});
-    } else if (descriptor.temperature !== undefined) {
-      return new TemperatureRequirement({...descriptor, count: descriptor.temperature});
+    } else if (descriptor.Unreached !== undefined) {
+      return new UnreachedRequirement({...descriptor, count: descriptor.Unreached});
+    } else if (descriptor.prophecies_fulfilled !== undefined) {
+      return new prophecies_fulfilledRequirement({...descriptor, count: descriptor.prophecies_fulfilled});
+    } else if (descriptor.gospel_spread !== undefined) {
+      return new gospel_spreadRequirement({...descriptor, count: descriptor.gospel_spread});
     } else if (descriptor.venus !== undefined) {
       return new VenusRequirement({...descriptor, count: descriptor.venus});
     } else if (descriptor.tr !== undefined) {
@@ -100,7 +100,7 @@ export class CardRequirements {
       return new ProductionRequirement(descriptor.production, descriptor);
     } else if (descriptor.party !== undefined) {
       return new PartyRequirement(descriptor.party);
-    } else if (descriptor.plantsRemoved !== undefined) {
+    } else if (descriptor.outreachRemoved !== undefined) {
       return new RemovedPlantsRequirement();
     } else if (descriptor.habitatRate !== undefined) {
       return new HabitatRateRequirement({...descriptor, count: descriptor.habitatRate});

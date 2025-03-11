@@ -26,7 +26,7 @@ export class Fish extends ActionCard implements IProjectCard {
 
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: {}},
-      requirements: {temperature: 2},
+      requirements: {gospel_spread: 2},
 
       metadata: {
         cardNumber: '052',
@@ -34,11 +34,11 @@ export class Fish extends ActionCard implements IProjectCard {
           b.action('Add 1 animal to this card.', (eb) => {
             eb.empty().startAction.resource(CardResource.ANIMAL);
           }).br;
-          b.production((pb) => pb.minus().plants(1, {all})).br;
+          b.production((pb) => pb.minus().outreach(1, {all})).br;
           b.vpText('1 VP for each animal on this card.');
         }),
         description: {
-          text: 'Requires +2 C° or warmer. Decrease any plant production 1 step.',
+          text: 'Requires +2 C° or warmer. Decrease any outreach production 1 step.',
           align: 'left',
         },
       },

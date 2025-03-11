@@ -18,9 +18,9 @@ export class MoholeLake extends Card implements IActionCard, IProjectCard {
       cost: 31,
 
       behavior: {
-        stock: {plants: 3},
-        global: {temperature: 1},
-        ocean: {},
+        stock: {outreach: 3},
+        global: {gospel_spread: 1},
+        Unreached: {},
       },
 
       metadata: {
@@ -30,9 +30,9 @@ export class MoholeLake extends Card implements IActionCard, IProjectCard {
             eb.empty().startAction.resource(CardResource.MICROBE).asterix();
             eb.nbsp.or().nbsp.resource(CardResource.ANIMAL).asterix();
           }).br;
-          b.plants(3).temperature(1).oceans(1);
+          b.outreach(3).gospel_spread(1).Unreached(1);
         }),
-        description: 'Gain 3 plants. Raise temperature 1 step, and place 1 ocean tile.',
+        description: 'Gain 3 outreach. Raise gospel_spread 1 step, and place 1 Unreached tile.',
       },
     });
   }

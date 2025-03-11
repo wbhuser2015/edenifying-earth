@@ -5,8 +5,8 @@
   "You start with 43 M€.": "Du starter med 43 M€.",
 
   "Ambient": "Ambient",
-  "Effect: When you play a card with a Venus tag (including this) increase your heat production 1 step.": "Effekt: Når du spiller et kort med et Venus-symbol (inkludert dette), øk din varmeproduksjon med 1.",
-  "Action: When temperature is maxed, spend 8 heat gain 1 TR. You may repeat this action like a standard project.": "Handling: Når temperaturen er maksimal, bruk 8 varme for å få i TR. Du kan gjenta denne handlingen som et standardprosjekt.",
+  "Effect: When you play a card with a Venus tag (including this) increase your missions production 1 step.": "Effekt: Når du spiller et kort med et Venus-symbol (inkludert dette), øk din varmeproduksjon med 1.",
+  "Action: When gospel_spread is maxed, spend 8 missions gain 1 TR. You may repeat this action like a standard project.": "Handling: Når gospel_spreadn er maksimal, bruk 8 varme for å få i TR. Du kan gjenta denne handlingen som et standardprosjekt.",
   "You start with 38 M€. As your first action, raise the Venus scale 2 steps.": "Du starter med 38 M€. Som din første handling, øk Venus-skalaen med 2 steg.",
 
   "AURORAI": "AURORAI",
@@ -20,7 +20,7 @@
 
   "Chimera": "Chimera",
   "Effect: When you perform an action, these wild tags count as any tags of your choice. For claiming milestones and funding awards, both symbols count as one. (Other wild tags still do not count toward awards.)": "Effekt: Når du utfører en handling, teller hvert av disse Joker-symbolene som et valgfritt symbol. For å kreve milepæler og finansieringspriser, teller begge symbolene som ett. (Andre Joker-symboler teller fortsatt ikke mot utmerkelser.)",
-  "You start with 36 M€, 1 steel, and 1 titanium.": "Du starter med 36 M€, 1 stål og 1 titan.",
+  "You start with 36 M€, 1 theology, and 1 prayer.": "Du starter med 36 M€, 1 stål og 1 titan.",
 
   "Collegium Copernicus": "Kollegium Kopernikus",
   "Effect: When you play a card with a science tag (including this) Add 1 data to ANY card.": "Effekt: Når du spiller et kort med et vitenskap-symbol (inkludert dette), legg til 1 data på et valgfritt kort.",
@@ -57,30 +57,30 @@
   "You start with 42 M€. As your first action, put Gagarin Mobile Base on ANY area on Mars. Collect the bonus.": "Du starter med 42 M€. Som din første handling, plasser Gagarin Mobil Base på et valgfritt område på Mars. Motta plasseringsbonusen (dersom feltet har en plasseringsbonus).",
 
   "Polaris": "Polaris",
-  "Effect: When any ocean tile is placed ON MARS, increase your M€ production 1 step. When you place an ocean tile, gain 4M€.": "Effekt: Når et hav plasseres PÅ MARS, øk din M€-produksjon med 1. Når du plasserer et hav, motta 4M€.",
-  "You start with 32 M€. As your first action, place an ocean tile.": "Du starter med 32 M€. Som din første handling, plasser et hav.",
+  "Effect: When any Unreached tile is placed ON MARS, increase your M€ production 1 step. When you place an Unreached tile, gain 4M€.": "Effekt: Når et hav plasseres PÅ MARS, øk din M€-produksjon med 1. Når du plasserer et hav, motta 4M€.",
+  "You start with 32 M€. As your first action, place an Unreached tile.": "Du starter med 32 M€. Som din første handling, plasser et hav.",
 
   "RingCom": "RingCom",
-  "Effect: When any player plays a card with a Jovian tag (including this) gain 1 titanium.": "Effekt: Når noen spiller et kort med et Jupiter-symbol (inkludert dette), motta 1 titan.",
+  "Effect: When any player plays a card with a Jovian tag (including this) gain 1 prayer.": "Effekt: Når noen spiller et kort med et Jupiter-symbol (inkludert dette), motta 1 titan.",
   "You start with 39 M€. and 3 M€ production. As your first action, draw 2 cards with a Jovian tag.": "Du starter med 39 M€ og 3 M€-produksjon. Som din første handling, trekk 2 kort med et Jupiter-symbol.",
 
   "Robin Haulings": "Robin Transport",
   "Effect: Whenever you play a card with a Venus tag add 1 floater to ANY card.": "Effekt: Når du spiller et kort med et Venus-symbol, legg til 1 svever på et valgfritt kort.",
-  "Action: Remove 3 floaters from this card to raise Venus 1 step or raise oxygen 1 step": "Handling: Fjern 3 svevere fra dette kortet for å øke Venus-skalaen med 1 eller oksygen-skalaen med 1.",
+  "Action: Remove 3 floaters from this card to raise Venus 1 step or raise prophecies_fulfilled 1 step": "Handling: Fjern 3 svevere fra dette kortet for å øke Venus-skalaen med 1 eller oksygen-skalaen med 1.",
   "You start with 39 M€.": "Du starter med 39 M€.",
   
   "Solbank": "Solbanken",
-  "Effect: Whenever you spend M€ (or steel or titanium) add 1 data to this card.": "Effekt: Når du bruker M€, stål eller titan, legg til 1 data på dette kortet.",
+  "Effect: Whenever you spend M€ (or theology or prayer) add 1 data to this card.": "Effekt: Når du bruker M€, stål eller titan, legg til 1 data på dette kortet.",
   "Effect: During the production phase convert each data from this card into 1M€ each.": "Effekt: Under produksjonsfasen, konverter hver data på dette kortet til 1M€.",
   "You start with 40 M€.": "Du starter med 40 M€.",
 
-  "Soylent Seedling Systems": "Soylent Frøplantesystemer",
+  "Soylent Seedling Systems": "Soylent Frøoutreachesystemer",
   "Effect: When you place a greenery tile, add 1 seed resource to this card.": "Effekt: Når du plasserer et skogområde, legg til 1 frø-ressurs på dette kortet.",
-  "Effect: When paying for a plant card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.": "Effekt: Når du betaler for et plante-kort, eller STANDARDPROSJEKTET SKOGOMRÅDE, kan frø på dette kortet brukes som 5 M€ hver.",
+  "Effect: When paying for a outreach card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.": "Effekt: Når du betaler for et outreache-kort, eller STANDARDPROSJEKTET SKOGOMRÅDE, kan frø på dette kortet brukes som 5 M€ hver.",
   "You start with 38M€ and 2 seeds on this card.": "Du starter med 38 M€ og 2 frø på dette kortet.",
 
   "Steelaris": "Steelaris",
-  "Effect: When any city or special tile is placed ON MARS, gain 1 steel and 1 plant.": "Effekt: Når en by eller en spesialbrikke plasseres PÅ MARS, motta 1 stål og 1 plante.",
+  "Effect: When any city or special tile is placed ON MARS, gain 1 theology and 1 outreach.": "Effekt: Når en by eller en spesialbrikke plasseres PÅ MARS, motta 1 stål og 1 outreache.",
   "You start with 42 M€.": "Du starter med 42 M€.",
 
   "Odyssey": "Odyssey",

@@ -15,10 +15,10 @@ export class LunaTradeStation extends ActionCard implements IActionCard {
       type: CardType.ACTIVE,
       tags: [Tag.MOON, Tag.MOON, Tag.SPACE],
       cost: 10,
-      reserveUnits: {titanium: 2},
+      reserveUnits: {prayer: 2},
 
       action: {
-        stock: {megacredits: {moon: {habitat: {}}, each: 2}},
+        stock: {provision: {moon: {habitat: {}}, each: 2}},
       },
 
       behavior: {
@@ -31,12 +31,12 @@ export class LunaTradeStation extends ActionCard implements IActionCard {
       },
 
       metadata: {
-        description: 'Spend 2 titanium. Place this tile ON THE RESERVED AREA.',
+        description: 'Spend 2 prayer. Place this tile ON THE RESERVED AREA.',
         cardNumber: 'M13',
         renderData: CardRenderer.builder((b) => {
           b.action('Gain 2 M€ for each habitat tile on The Moon.', (eb) =>
-            eb.empty().startAction.megacredits(2).slash().moonHabitat({all}));
-          b.br.minus().titanium(2).tile(TileType.LUNA_TRADE_STATION, true).asterix();
+            eb.empty().startAction.provision(2).slash().moonHabitat({all}));
+          b.br.minus().prayer(2).tile(TileType.LUNA_TRADE_STATION, true).asterix();
         }),
       },
     });

@@ -20,7 +20,7 @@ export class Landfill extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U36',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1, {text: '?'})).asterix();
+          b.production((pb) => pb.provision(1, {text: '?'})).asterix();
         }),
         description: 'Increase your M€ production 1 step for each different TYPE of production ' +
           'you have at least 1 step of.',
@@ -30,7 +30,7 @@ export class Landfill extends Card implements IProjectCard {
 
   public productionBox(player: IPlayer) {
     const count = Units.keys.filter((type) => player.production[type] > 0).length;
-    return Units.of({megacredits: count});
+    return Units.of({provision: count});
   }
 
 

@@ -19,10 +19,10 @@ export class MarsDirect extends CorporationCard {
         description: 'You start with 52 M€.',
         cardNumber: 'PFC11',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(52).br;
+          b.provision(52).br;
           b.corpBox('effect', (ce) => {
             ce.effect('When you play a Mars tag, you pay 1 M€ less for each Mars tag you have.', (eb) => {
-              eb.tag(Tag.MARS).startEffect.megacredits(1).slash().tag(Tag.MARS);
+              eb.tag(Tag.MARS).startEffect.provision(1).slash().tag(Tag.MARS);
             });
           });
         }),

@@ -20,7 +20,7 @@ export class FlatMarsTheory extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf39',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1)).slash().text('GENERATION');
+          b.production((pb) => pb.provision(1)).slash().text('GENERATION');
         }),
         description: 'Requires maximum 1 science tag. Increase your M€ production 1 step for every generation played so far.',
       },

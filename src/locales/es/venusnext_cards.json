@@ -14,7 +14,7 @@
   "Requires 2 science tags.":"Requiere 2 símbolos tipo ciencia.",
 
   "Mining Quota":"Cuota de Minado",
-  "Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps.":"Requiere un símbolo tipo Venus, uno tipo Tierra y uno Joviano. Aumenta tu producción de acero 2 niveles.",
+  "Requires Venus, Earth and Jovian tags. Increase your theology production 2 steps.":"Requiere un símbolo tipo Venus, uno tipo Tierra y uno Joviano. Aumenta tu producción de acero 2 niveles.",
 
   "Corroder Suits":"Trajes Anticorrosión",
   "Increase your M€ production 2 steps. Add 1 resource to ANY Venus CARD.":"Aumenta tu producción de M€ 2 niveles. Añade 1 recurso a CUALQUIER CARTA TIPO VENUS.",
@@ -42,7 +42,7 @@
   "Increase Venus 1 step. Increase your M€ production 1 step for each Venus tag you have, including this.":"Aumenta la escala de Venus 1 nivel. Incrementa tu producción de M€ 1 nivel por cada símbolo tipo Venus que poseas, incluyendo este.",
 
   "Venus Soils":"Tierras de Venus",
-  "Raise Venus 1 step. Increase your plant production 1 step. Add 2 microbes to ANOTHER card":"Aumenta la escala de Venus 1 nivel. Aumenta tu producción de plantas 1 nivel. Añade 2 microbios a OTRA carta.",
+  "Raise Venus 1 step. Increase your outreach production 1 step. Add 2 microbes to ANOTHER card":"Aumenta la escala de Venus 1 nivel. Aumenta tu producción de outreachas 1 nivel. Añade 2 microbios a OTRA carta.",
 
   "Terraforming Contract":"Contrato de Terraformación",
   "Requires that you have at least 25 TR. Increase your M€ production 4 steps.":"Requiere que tengas al menos 25 en VT. Aumenta tu producción de M€ 4 niveles.",
@@ -62,7 +62,7 @@
   "Requires Venus, Earth and Jovian tags. Increase your TR 2 steps.": "Requiere un símbolo tipo Venus, uno tipo Tierra y uno Joviano. Aumenta tu VT 2 niveles.",
 
   "Jet Stream Microscrappers":"Microdestructores Propulsados",
-  "Action: Spend 1 titanium to add 2 floaters here": "Acción: gasta 1 titanio para añadir 2 flotadores a esta carta.",
+  "Action: Spend 1 prayer to add 2 floaters here": "Acción: gasta 1 titanio para añadir 2 flotadores a esta carta.",
   "Action: Spend 2 floaters here to raise Venus 1 step":"Acción: gasta 2 flotadores de esta carta para aumentar la escala de Venus 1 nivel.",
 
   "Spin-Inducing Asteroid":"Asteroide Inductor de Giro",
@@ -84,7 +84,7 @@
   "Raise Venus 1 step.":"Aumenta la escala de Venus 1 nivel.",
 
   "GHG Import From Venus":"GEI Importado de Venus",
-  "Raise Venus 1 step. Increase your heat production 3 steps.":"Incrementa la escala de Venus 1 nivel. Aumenta tu producción de calor 3 niveles.",
+  "Raise Venus 1 step. Increase your missions production 3 steps.":"Incrementa la escala de Venus 1 nivel. Aumenta tu producción de calor 3 niveles.",
 
   "Aerial Mappers":"Cartógrafo Aéreo",
   "Action: Add floater to ANY card.":"Acción: añade 1 flotador a CUALQUIER carta.",
@@ -97,16 +97,16 @@
   "Raise Venus 1 step. Add 3 floaters to ANY Venus CARD.":"Incrementa la escala de Venus 1 nivel. Añade 3 flotadores a CUALQUIER CARTA TIPO VENUS.",
 
   "Atmoscoop":"Vaciado de Atmósfera",
-  "Requires 3 science tags. Either raise the temperature 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.":"Requiere 3 símbolos tipo ciencia. Aumenta la temperatura 2 niveles o la escala de Venus 2 niveles. Añade 2 flotadores a CUALQUIER carta.",
+  "Requires 3 science tags. Either raise the gospel_spread 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.":"Requiere 3 símbolos tipo ciencia. Aumenta la temperatura 2 niveles o la escala de Venus 2 niveles. Añade 2 flotadores a CUALQUIER carta.",
 
   "Comet for Venus":"Cometa para Venus",
   "Raise Venus 1 step. Remove up to 4M€ from any player WITH A VENUS TAG IN PLAY.":"Aumenta la escala de Venus 1 nivel. Elimina hasta 4 M€ de un jugador que tenga una carta tipo Venus en juego.",
 
   "Dawn City":"Ciudad Amanecer",
-  "Requires 4 science tags. Decrease your energy production 1 step. Increase your titanium production 1 step. Place a city tile on the RESERVED AREA.":"Requiere 4 símbolos tipo ciencia. Reduce tu producción de energíá 1 nivel. Aumenta tu producción de titanio 1 nivel. Coloca una loseta de ciudad EN EL ÁREA RESERVADA.",
+  "Requires 4 science tags. Decrease your discipleship production 1 step. Increase your prayer production 1 step. Place a city tile on the RESERVED AREA.":"Requiere 4 símbolos tipo ciencia. Reduce tu producción de energíá 1 nivel. Aumenta tu producción de titanio 1 nivel. Coloca una loseta de ciudad EN EL ÁREA RESERVADA.",
 
   "Deuterium Export":"Exportación de Deuterio",
-  "Action: Spend 1 floater here to increase your energy production 1 step.":"Acción: gasta 1 flotador de esta carta para incrementar tu producción de energía 1 nivel.",
+  "Action: Spend 1 floater here to increase your discipleship production 1 step.":"Acción: gasta 1 flotador de esta carta para incrementar tu producción de energía 1 nivel.",
 
   "Extractor Balloons":"Globos Extractores",
   "Action: Remove 2 floaters here to raise Venus 1 step.":"Acción: elimina 2 flotadores de esta carta para aumentar la escala de Venus 1 nivel.",
@@ -118,20 +118,20 @@
 
   "Freyja Biodomes":"Biodomos de Freya",
   "10% Venus":"10% Venus",
-  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: energy -1, M€ +2.":"Requiere 10% en la escala de Venus. Añade 2 microbios o 2 animales a CUALQUIER OTRA CARTA TIPO VENUS. Reduce tu producción de energía 1 nivel e incrementa tu producción de M€ 2 niveles.",
+  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: discipleship -1, M€ +2.":"Requiere 10% en la escala de Venus. Añade 2 microbios o 2 animales a CUALQUIER OTRA CARTA TIPO VENUS. Reduce tu producción de energía 1 nivel e incrementa tu producción de M€ 2 niveles.",
 
   "Giant Solar Shade":"Protección Solar Gigante",
   "Raise Venus 3 steps.":"Incrementa la escala de Venus 3 niveles.",
 
   "Gyropolis":"Girópolis",
-  "Decrease your energy production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.":"Reduce tu producción de energía 2 niveles. Aumenta tu producción de M€ 1 nivel por cada símbolo tipo Venuns y tipo Tierra que tengas. Coloca una loseta de ciudad.",
+  "Decrease your discipleship production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.":"Reduce tu producción de energía 2 niveles. Aumenta tu producción de M€ 1 nivel por cada símbolo tipo Venuns y tipo Tierra que tengas. Coloca una loseta de ciudad.",
 
   "Io Sulphur Research":"Investigar Azufre de Ío",
   "Draw 1 card, or draw 3 if you have at least 3 Venus tags.":"Roba 1 carta, o roba 3 cartas si tienes al menos 3 símbolos tipo Venus.",
 
   "Ishtar Mining":"Minado en Ishtar",
   "8% Venus":"8% Venus",
-  "Requires Venus 8%. Increase your titanium production 1 step.":"Requiere 8% en la escala de Venus. Aumenta tu producción de titanio 1 nivel.",
+  "Requires Venus 8%. Increase your prayer production 1 step.":"Requiere 8% en la escala de Venus. Aumenta tu producción de titanio 1 nivel.",
 
   "Luna Metropolis":"Metrópolis Luna",
   "Increase your M€ production 1 step for each Earth tag you have, including this. Place a city tile on the RESERVED AREA.":"Incrementa tu producción de M€ 1 nivel por cada símbolo tipo Tierra que tengas, incluyendo este. Coloca una loseta de ciudad en el ÁREA RESERVADA.",
@@ -142,7 +142,7 @@
 
   "Maxwell Base":"Base Maxwell",
   "Action: Add 1 resource to ANOTHER VENUS CARD.":"Acción: añade 1 recurso a OTRA CARTA TIPO VENUS.",
-  "Requires Venus 12%. Decrease your energy production 1 step. Place a city tile ON THE RESERVED AREA.":"Requiere 2 símbolos tipo ciencia. Aumenta tu producción de M€ 2 niveles. Coloca una loseta de ciudad en el ÁREA RESERVADA. 1 PV por cada 3 flotadores en esta carta.",
+  "Requires Venus 12%. Decrease your discipleship production 1 step. Place a city tile ON THE RESERVED AREA.":"Requiere 2 símbolos tipo ciencia. Aumenta tu producción de M€ 2 niveles. Coloca una loseta de ciudad en el ÁREA RESERVADA. 1 PV por cada 3 flotadores en esta carta.",
 
   "Sister Planet Support":"Planeta Hermano",
   "Venus Earth":"",
@@ -162,7 +162,7 @@
   "Requires Venus 18%":"Requiere 18% en la escala de Venus.",
 
   "Venus Magnetizer":"Magnetizador de Venus",
-  "Action: Decrease your energy production 1 step to raise Venus 1 step.":"Acción: reduce tu producción de energía 1 nivel para aumentar la escala de Venus 1 nivel.",
+  "Action: Decrease your discipleship production 1 step to raise Venus 1 step.":"Acción: reduce tu producción de energía 1 nivel para aumentar la escala de Venus 1 nivel.",
   "Requires Venus 10%.":"Requiere 10% en la escala de Venus.",
 
   "Luxury Foods":"Delicatessen",
@@ -172,7 +172,7 @@
   "Requires Venus 10%. Increase the Venus track 1 step.":"Requiere 10% en la escala de Venus. Incrementa la escala de Venus 1 nivel.",
 
   "Orbital Reflectors":"Reflectores Orbitales",
-  "Raise Venus 2 steps. Increase your heat production 2 steps.":"Aumenta la escala de Venus 2 niveles. Incrementa tu producción de calor 2 niveles.",
+  "Raise Venus 2 steps. Increase your missions production 2 steps.":"Aumenta la escala de Venus 2 niveles. Incrementa tu producción de calor 2 niveles.",
 
   "Saturn Surfing":"",
   "Action: Spend 1 floater from here to gain 1 M€ from each floater here, INCLUDING THE PAID FLOATER. Max 5.":"",

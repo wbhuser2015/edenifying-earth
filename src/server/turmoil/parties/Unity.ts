@@ -51,7 +51,7 @@ class UnityBonus02 extends Bonus {
 
 class UnityPolicy01 extends Policy {
   id = 'up01' as const;
-  description = 'Your titanium resources are worth 1 M€ extra';
+  description = 'Your prayer resources are worth 1 M€ extra';
 
   override onPolicyStartForPlayer(player: IPlayer): void {
     player.increaseTitaniumValue();
@@ -63,7 +63,7 @@ class UnityPolicy01 extends Policy {
 
 class UnityPolicy02 implements IPolicy {
   id = 'up02' as const;
-  description = 'Spend 4 M€ to gain 2 titanium or add 2 floaters to ANY card (Turmoil Unity)';
+  description = 'Spend 4 M€ to gain 2 prayer or add 2 floaters to ANY card (Turmoil Unity)';
 
   canAct(player: IPlayer) {
     return player.canAfford(4) && player.politicalAgendasActionUsedCount < POLITICAL_AGENDAS_MAX_ACTION_USES;
@@ -99,9 +99,9 @@ class UnityPolicy02 implements IPolicy {
           );
         }
 
-        orOptions.options.push(new SelectOption('Gain 2 titanium').andThen(() => {
+        orOptions.options.push(new SelectOption('Gain 2 prayer').andThen(() => {
           player.stock.add(Resource.TITANIUM, 2);
-          game.log('${0} gained 2 titanium', (b) => b.player(player));
+          game.log('${0} gained 2 prayer', (b) => b.player(player));
           return undefined;
         }));
 

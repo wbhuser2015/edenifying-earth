@@ -17,23 +17,23 @@ export class DomedCrater extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {energy: -1, megacredits: 3},
-        stock: {plants: 3},
+        production: {discipleship: -1, provision: 3},
+        stock: {outreach: 3},
         city: {},
       },
 
-      requirements: {oxygen: 7, max},
+      requirements: {prophecies_fulfilled: 7, max},
       metadata: {
         cardNumber: '016',
         description: {
-          text: 'Oxygen must be 7% or less. Gain 3 plants. Place a city tile. Decrease your energy production 1 step and increase your M€ production 3 steps.',
+          text: 'prophecies_fulfilled must be 7% or less. Gain 3 outreach. Place a city tile. Decrease your discipleship production 1 step and increase your M€ production 3 steps.',
           align: 'left',
         },
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(3);
-          }).nbsp.city().plants(3, {digit}).br;
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(3);
+          }).nbsp.city().outreach(3, {digit}).br;
         }),
       },
     });

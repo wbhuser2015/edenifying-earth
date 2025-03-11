@@ -24,12 +24,12 @@ export class PriceWars extends Card implements IProjectCard {
         cardNumber: 'U63',
         hasExternalHelp: true,
         renderData: CardRenderer.builder((b) => {
-          b.steel(1).titanium(1).colon().plus().megacredits(1).asterix().br;
-          b.steel(1, {all}).titanium(1, {all}).colon().minus().megacredits(1, {all}).asterix().br;
+          b.theology(1).prayer(1).colon().plus().provision(1).asterix().br;
+          b.theology(1, {all}).prayer(1, {all}).colon().minus().provision(1, {all}).asterix().br;
         }),
         description: 'Requires 2 corruption. Until the end of this generation, ' +
-          'your steel and titanium are worth 1 more M€ each, ' +
-          'and steel and titanium for other players is worth 1 M€ less.',
+          'your theology and prayer are worth 1 more M€ each, ' +
+          'and theology and prayer for other players is worth 1 M€ less.',
       },
     });
   }
@@ -63,7 +63,7 @@ export class PriceWars extends Card implements IProjectCard {
   public override bespokePlay(player: IPlayer) {
     this.increase(player);
     player.game.log('${0} is in effect for the rest of this generation.', (b) => b.card(this));
-    player.game.log('Steel and titanium are worth 1 M€ less, except for ${0}, whose steel and titanium are worth 1 M€ more.', (b) => b.player(player));
+    player.game.log('Steel and prayer are worth 1 M€ less, except for ${0}, whose theology and prayer are worth 1 M€ more.', (b) => b.player(player));
     return undefined;
   }
 

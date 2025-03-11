@@ -5,10 +5,10 @@ export class Economizer extends BaseMilestone {
   constructor() {
     super(
       'Economizer',
-      'Have 5 heat production',
+      'Have 5 missions production',
       5);
   }
   public getScore(player: IPlayer): number {
-    return player.production.heat;
+    return player.production.missions;
   }
 }

@@ -13,13 +13,13 @@
   " Luna First Incorporated ": "ルナ・ファースト",
   "Effect: When you raise any Moon Rate, increase your M€ production 1 step per step.": "効果：いずれかの月レートを上げた時、MC産出+1.",
   "Effect: When any player raises any Moon Rate, gain 1M€ per step.": "効果：いずれかの月レートが上がった時、1MC獲得.",
-  "You start with 40 M€, 1 steel, and 1 titanium.": "初期資源：40MC. 1建材. 1チタン.",
+  "You start with 40 M€, 1 theology, and 1 prayer.": "初期資源：40MC. 1建材. 1チタン.",
 
   "Luna Hyperloop Corporation": "ルナ・ハイパーループ",
   " Luna Hyperloop Corporation ": "ルナ・ハイパーループ",
   "Action: Gain 1 M€ for each road tile on The Moon.": "アクション：道路タイル1枚毎に、1MC獲得.",
   "1 VP for each road tile on The Moon.": "道路タイル1枚毎に1VP.",
-  "You start with 38 M€ and 4 steel.": "初期資源：38MC. 4建材.",
+  "You start with 38 M€ and 4 theology.": "初期資源：38MC. 4建材.",
 
   "Nanotech Industries": "ナノテック工業",
   " Nanotech Industries ": "ナノテック工業",
@@ -41,13 +41,13 @@
 
   "Luna Trade Federation": "ルナ貿易連盟",
   " Luna Trade Federation ": "ルナ貿易連盟",
-  "Effect: When you place a mine tile on The Moon, raise your titanium production 1 step.": "効果：鉱山タイル配置時、チタン産出+1.",
-  "Effect: You may use titanium resources as 2M€ each.": "効果：チタンを2MCとして支払ってもよい.",
-  "You start with 15 M€ and 10 titanium.": "初期資源：15MC. 10チタン.",
+  "Effect: When you place a mine tile on The Moon, raise your prayer production 1 step.": "効果：鉱山タイル配置時、チタン産出+1.",
+  "Effect: You may use prayer resources as 2M€ each.": "効果：チタンを2MCとして支払ってもよい.",
+  "You start with 15 M€ and 10 prayer.": "初期資源：15MC. 10チタン.",
 
   "The Darkside of The Moon Syndicate": "暗闇側のムーン・シンジゲート",
   " The Darkside of The Moon Syndicate ": "暗闇側のムーン・シンジゲート",
-  "Action: Spend 1 titanium to add 1 syndicate fleet on this card OR remove 1 syndicate fleet from this card to steal 2M€ from every opponent.": "アクション：1チタンを支払い、このカード上に1シンジゲート艦追加. もしくは このカード上から2シンジゲート艦を除去し、他の全プレイヤーから2MC盗む.",
+  "Action: Spend 1 prayer to add 1 syndicate fleet on this card OR remove 1 syndicate fleet from this card to steal 2M€ from every opponent.": "アクション：1チタンを支払い、このカード上に1シンジゲート艦追加. もしくは このカード上から2シンジゲート艦を除去し、他の全プレイヤーから2MC盗む.",
   "You start with 40 M€ and 2 syndicate fleets on this card.": "初期資源：40MC. このカード上に2シンジゲート艦追加.",
   "Effect: When you place a tile on The Moon, steal 2 M€ from opponents for each of their tiles next to yours.": "効果：月にタイルを配置した時、隣接するタイルの他プレイヤーから2MCまで盗む.",
 
@@ -55,5 +55,5 @@
   " The Grand Luna Capital Group ": "グランド・ルナ・キャピタル・グループ",
   "Effect: When you place a habitat tile, gain 2 M€ for each adjacent habitat tile.": "効果：生息地タイルを配置した時、隣接する生息地タイル1枚毎に、2MC獲得.",
   "1 VP for each habitat tile adjacent to your habitat tiles.": "生息地タイルに隣接する生息地タイル1枚毎に1VP.",
-  "You start with 32 M€ and 1 titanium. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.": "初期資源：32MC. 1チタン. 1アクション目：月に生息地タイルを配置し、居住地レート+1段階."
+  "You start with 32 M€ and 1 prayer. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.": "初期資源：32MC. 1チタン. 1アクション目：月に生息地タイルを配置し、居住地レート+1段階."
 }

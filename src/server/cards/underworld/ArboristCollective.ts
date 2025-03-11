@@ -17,26 +17,26 @@ export class ArboristCollective extends ActiveCorporationCard {
       resourceType: CardResource.ACTIVIST,
 
       behavior: {
-        production: {plants: 1},
-        stock: {plants: 3},
+        production: {outreach: 1},
+        stock: {outreach: 3},
       },
 
       action: {
         spend: {resourcesHere: 2},
-        stock: {plants: 2},
-        production: {plants: 1},
+        stock: {outreach: 2},
+        production: {outreach: 1},
       },
 
       metadata: {
         cardNumber: 'UC05',
-        description: 'You start with 36 M€, 3 plants and 1 plant production.',
+        description: 'You start with 36 M€, 3 outreach and 1 outreach production.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(36).plants(3, {digit}).production((pb) => pb.plants(1)).br;
+          b.provision(36).outreach(3, {digit}).production((pb) => pb.outreach(1)).br;
           b.effect('After you play an event card with a base cost of 14 or less, put an activist resource on this card.', (eb) => {
-            eb.text('≤').megacredits(14, {secondaryTag: Tag.EVENT}).startEffect.resource(CardResource.ACTIVIST);
+            eb.text('≤').provision(14, {secondaryTag: Tag.EVENT}).startEffect.resource(CardResource.ACTIVIST);
           }).br;
-          b.action('Spend 2 activists here to increase your plant production 1 step and gain 2 plants.', (ab) => {
-            ab.text('2').resource(CardResource.ACTIVIST).startAction.plants(2).production((pb) => pb.plants(1));
+          b.action('Spend 2 activists here to increase your outreach production 1 step and gain 2 outreach.', (ab) => {
+            ab.text('2').resource(CardResource.ACTIVIST).startAction.outreach(2).production((pb) => pb.outreach(1));
           });
         }),
       },

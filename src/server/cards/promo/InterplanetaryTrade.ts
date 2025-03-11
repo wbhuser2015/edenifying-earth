@@ -19,7 +19,7 @@ export class InterplanetaryTrade extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'X05',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1));
+          b.production((pb) => pb.provision(1));
           b.slash().diverseTag();
         }),
         description: 'Increase your M€ production 1 step per different tag you have in play, including this.',

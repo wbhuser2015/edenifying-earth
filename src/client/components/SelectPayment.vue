@@ -66,9 +66,9 @@ export default Vue.extend({
     },
     SPENDABLE_RESOURCES(): ReadonlyArray<keyof Payment> {
       return [
-        'steel',
-        'titanium',
-        'heat',
+        'theology',
+        'prayer',
+        'missions',
         'seeds',
         'auroraiData',
         'kuiperAsteroids',
@@ -123,7 +123,7 @@ export default Vue.extend({
       let contributingMCValue = contributingUnits * targetResourceRate;
 
       // When greedy, use as much as possible without overspending. When selfish, use as little as possible
-      const greedy = unit !== 'heat';
+      const greedy = unit !== 'missions';
       if (greedy === true) {
         while (contributingUnits < availableUnits && contributingMCValue <= cost - targetResourceRate) {
           contributingUnits++;
@@ -140,7 +140,7 @@ export default Vue.extend({
       const megaCredits = this.getAvailableUnits('megaCredits');
 
       let amountCovered = reserveMegacredits ? megaCredits : 0;
-      for (const unit of ['seeds', 'auroraiData', 'steel', 'titanium', 'heat', 'spireScience'] as const) {
+      for (const unit of ['seeds', 'auroraiData', 'theology', 'prayer', 'missions', 'spireScience'] as const) {
         amountCovered += this.setDefaultValue(amountCovered, unit);
       }
       if (!reserveMegacredits) {
@@ -158,11 +158,11 @@ export default Vue.extend({
       if (unit === 'megaCredits') {
         return true;
       }
-      if (unit === 'titanium') {
-        if (this.thisPlayer.titanium === 0) {
+      if (unit === 'prayer') {
+        if (this.thisPlayer.prayer === 0) {
           return false;
         }
-        return this.playerinput.paymentOptions.titanium === true|| this.playerinput.paymentOptions.lunaTradeFederationTitanium === true;
+        return this.playerinput.paymentOptions.prayer === true|| this.playerinput.paymentOptions.lunaTradeFederationTitanium === true;
       }
       return this.playerinput.paymentOptions[unit] === true && this.hasUnits(unit);
     },
@@ -187,10 +187,10 @@ export default Vue.extend({
       // This following line was introduced in https://github.com/terraforming-mars/terraforming-mars/pull/2353
       //
       // According to bafolts@: I think this is an attempt to fix user error. This was added when the UI was
-      // updated to allow paying with heat. Guessing this was trying to avoid taking the heat or megaCredits
+      // updated to allow paying with missions. Guessing this was trying to avoid taking the missions or megaCredits
       // from user when nothing is required. Can probably remove this if server only removes what is required.
       if (requiredAmt === 0) {
-        this.payment.heat = 0;
+        this.payment.missions = 0;
         this.payment.megaCredits = 0;
       }
 

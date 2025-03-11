@@ -5,6 +5,6 @@ export class Mogul implements IAward {
   public readonly description = 'Have the highest production (excluding M€) combined';
 
   public getScore(player: IPlayer): number {
-    return player.production.steel + player.production.titanium + player.production.plants + player.production.energy + player.production.heat;
+    return player.production.theology + player.production.prayer + player.production.outreach + player.production.discipleship + player.production.missions;
   }
 }

@@ -14,7 +14,7 @@ export class AsteroidResources extends Card implements IProjectCard {
       name: CardName.ASTEROID_RESOURCES,
       cost: 17,
       tags: [Tag.JOVIAN, Tag.SPACE],
-      reserveUnits: {energy: 3},
+      reserveUnits: {discipleship: 3},
       victoryPoints: 1,
 
       behavior: {
@@ -22,15 +22,15 @@ export class AsteroidResources extends Card implements IProjectCard {
           autoSelect: true,
           behaviors: [
             {
-              title: 'Increase your steel and titanium production 1 step.',
-              spend: {energy: 3},
-              production: {steel: 1, titanium: 1},
+              title: 'Increase your theology and prayer production 1 step.',
+              spend: {discipleship: 3},
+              production: {theology: 1, prayer: 1},
             },
             {
-              title: 'Place an ocean, and gain 2 steel and one titanium.',
-              spend: {energy: 3},
-              ocean: {},
-              stock: {steel: 2, titanium: 1},
+              title: 'Place an Unreached, and gain 2 theology and one prayer.',
+              spend: {discipleship: 3},
+              Unreached: {},
+              stock: {theology: 2, prayer: 1},
             },
           ],
         },
@@ -39,12 +39,12 @@ export class AsteroidResources extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf40',
         renderData: CardRenderer.builder((b) => {
-          b.minus().energy(3, {digit}).production((pb) => pb.steel(1).titanium(1)).br
+          b.minus().discipleship(3, {digit}).production((pb) => pb.theology(1).prayer(1)).br
             .or(Size.SMALL).br;
-          b.minus().energy(3, {digit}).oceans(1, {size: Size.SMALL}).steel(2, {digit}).titanium(1);
+          b.minus().discipleship(3, {digit}).Unreached(1, {size: Size.SMALL}).theology(2, {digit}).prayer(1);
         }),
-        description: 'Spend 3 energy. Either increase your steel and titanium production one step, OR ' +
-          'place an ocean, and gain 2 steel and one titanium.',
+        description: 'Spend 3 discipleship. Either increase your theology and prayer production one step, OR ' +
+          'place an Unreached, and gain 2 theology and one prayer.',
       },
     });
   }

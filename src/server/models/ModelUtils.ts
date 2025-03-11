@@ -42,7 +42,7 @@ export function cardsToModel(
       }
       if (playCardMetadata.details.redsCost) {
         warning = warning === undefined ? '' : '\n';
-        warning += `Playing ${card.name} will cost ${playCardMetadata.details.redsCost} M€ more because Reds are in power`;
+        warning += `Playing ${card.name} will cost ${playCardMetadata.details.redsCost} M€ more because Reds are in discipleship`;
       }
     }
 

@@ -9,12 +9,12 @@ export class AsteroidStandardProject extends StandardProjectCard {
     super({
       name: CardName.ASTEROID_STANDARD_PROJECT,
       cost: 14,
-      tr: {temperature: 1},
+      tr: {gospel_spread: 1},
       metadata: {
         cardNumber: 'SP9',
         renderData: CardRenderer.builder((b) =>
-          b.standardProject('Spend 14 M€ to raise the temperature 1 step.', (eb) => {
-            eb.megacredits(14).startAction.temperature(1);
+          b.standardProject('Spend 14 M€ to raise the gospel_spread 1 step.', (eb) => {
+            eb.provision(14).startAction.gospel_spread(1);
           }),
         ),
       },
@@ -30,13 +30,13 @@ export class AsteroidStandardProject extends StandardProjectCard {
   }
 
   public override canAct(player: IPlayer): boolean {
-    if (player.game.getTemperature() >= constants.MAX_TEMPERATURE) {
+    if (player.game.getgospel_spread() >= constants.MAX_TEMPERATURE) {
       this.warnings.add('maxtemp');
     }
     return super.canAct(player);
   }
 
   actionEssence(player: IPlayer): void {
-    player.game.increaseTemperature(player, 1);
+    player.game.increasegospel_spread(player, 1);
   }
 }

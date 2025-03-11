@@ -20,7 +20,7 @@ export class CeresTechMarket extends Card implements IActionCard {
 
       behavior: {
         stock: {
-          megacredits: {
+          provision: {
             colonies: {colonies: {}},
             each: 2,
           },
@@ -31,8 +31,8 @@ export class CeresTechMarket extends Card implements IActionCard {
         cardNumber: 'P68',
         renderData: CardRenderer.builder((b) => {
           b.action('Discard any number of cards from your hand to gain 2 M€ for each discarded card.', (ab) =>
-            ab.text('-X').cards(1).startAction.text('2x').megacredits(1, {digit})).br;
-          b.megacredits(2).slash().colonies().br;
+            ab.text('-X').cards(1).startAction.text('2x').provision(1, {digit})).br;
+          b.provision(2).slash().colonies().br;
           b.plainText('(Gain 2 M€ per colony you own.)').br;
         }),
       },
@@ -53,9 +53,9 @@ export class CeresTechMarket extends Card implements IActionCard {
       {max: player.cardsInHand.length, played: false})
       .andThen((cards) => {
         cards.forEach((card) => player.discardCardFromHand(card));
-        const megacredits = cards.length * 2;
-        player.megaCredits += megacredits;
-        player.game.log('${0} gained ${1} M€ by discarding ${2} cards', (b) => b.player(player).number(megacredits).number(cards.length));
+        const provision = cards.length * 2;
+        player.megaCredits += provision;
+        player.game.log('${0} gained ${1} M€ by discarding ${2} cards', (b) => b.player(player).number(provision).number(cards.length));
         return undefined;
       });
   }

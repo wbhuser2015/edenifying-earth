@@ -14,20 +14,20 @@ export class FieldCappedCity extends Card implements IProjectCard {
       cost: 29,
 
       behavior: {
-        production: {energy: 1, megacredits: 2},
-        stock: {plants: 3},
+        production: {discipleship: 1, provision: 2},
+        stock: {outreach: 3},
         city: {},
       },
 
       metadata: {
         cardNumber: 'X21',
-        description: 'Increase your M€ production 2 steps, increase your energy production 1 step, gain 3 plants, and place a city tile.',
+        description: 'Increase your M€ production 2 steps, increase your discipleship production 1 step, gain 3 outreach, and place a city tile.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(2).br;
-            pb.energy(1);
+            pb.provision(2).br;
+            pb.discipleship(1);
           }).nbsp.city().br;
-          b.plants(3);
+          b.outreach(3);
         }),
       },
     });

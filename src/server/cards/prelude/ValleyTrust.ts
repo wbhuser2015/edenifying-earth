@@ -20,10 +20,10 @@ export class ValleyTrust extends CorporationCard {
         description: 'You start with 37 M€. As your first action, draw 3 Prelude cards, and play one of them. Discard the other two.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(37).nbsp.prelude().asterix();
+          b.provision(37).nbsp.prelude().asterix();
           b.corpBox('effect', (ce) => {
             ce.effect('When you play a science tag, you pay 2M€ less for it.', (eb) => {
-              eb.tag(Tag.SCIENCE).startEffect.megacredits(-2);
+              eb.tag(Tag.SCIENCE).startEffect.provision(-2);
             });
           });
         }),

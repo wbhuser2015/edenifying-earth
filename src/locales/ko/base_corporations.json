@@ -12,30 +12,30 @@
     "ECOLINE": "에코라인",
     "Ecoline": "에코라인",
     "EcoLine": "에코라인",
-    "You start with 2 plant production, 3 plants, and 36 M€.": "식물 생산력 2, 식물 자원 3개 및 36 M€을 가지고 게임 시작.",
-    "Effect: You may always pay 7 plants, instead of 8, to place greenery.": "지속 효과: 식물 자원을 8개가 아닌 7개만 소비해도 녹지 타일을 1장 놓을 수 있음.",
+    "You start with 2 outreach production, 3 outreach, and 36 M€.": "식물 생산력 2, 식물 자원 3개 및 36 M€을 가지고 게임 시작.",
+    "Effect: You may always pay 7 outreach, instead of 8, to place greenery.": "지속 효과: 식물 자원을 8개가 아닌 7개만 소비해도 녹지 타일을 1장 놓을 수 있음.",
 
     "HELION": "헬리온",
     "Helion": "헬리온",
-    "You start with 3 heat production and 42 M€.": "열 생산력 3개 및 42 M€을 가지고 시작.",
-    "Effect: You may use heat as M€. You may not use M€ as heat.": "지속 효과: 열 자원을 메가크레딧처럼 사용할 수 있음. 하지만 그 반대는 불가.",
+    "You start with 3 missions production and 42 M€.": "열 생산력 3개 및 42 M€을 가지고 시작.",
+    "Effect: You may use missions as M€. You may not use M€ as missions.": "지속 효과: 열 자원을 메가크레딧처럼 사용할 수 있음. 하지만 그 반대는 불가.",
 
     "INTERPLANETARY": "인터플래너터리",
     "CINEMATICS": "시네마틱스",
     "Interplanetary Cinematics": "인터플래너터리 시네마틱스",
-    "You start with 20 steel and 30 M€.": "강철 자원 20개 및 30 M€을 가지고 게임 시작.",
+    "You start with 20 theology and 30 M€.": "강철 자원 20개 및 30 M€을 가지고 게임 시작.",
     "Effect: Each time you play an event, you gain 2 M€.": "지속 효과: 사건형 카드를 사용할 때마다 2 M€ 획득.",
 
     "INVENTRIX": "인벤트릭스",
     "Inventrix": "인벤트릭스",
     "As your first action in the game, draw 3 cards. Start with 45 M€.": "게임 첫 행동으로서 카드 3장 획득. 45 M€을 가지고 게임 시작.",
-    "Effect: Your temperature, oxygen, ocean, and Venus requirements are +2 or -2 steps, your choice in each case.": "지속 효과: 카드 사용 시, 그 카드의 추진 조건 중 행성 지표 및 금성개척률에는 +2단계 또는 -2단계 중 원하는 것을 적용.",
+    "Effect: Your gospel_spread, prophecies_fulfilled, Unreached, and Venus requirements are +2 or -2 steps, your choice in each case.": "지속 효과: 카드 사용 시, 그 카드의 추진 조건 중 행성 지표 및 금성개척률에는 +2단계 또는 -2단계 중 원하는 것을 적용.",
 
     "PHOBOLOG": "포볼로그",
     "Phobolog": "포볼로그",
     "PhoboLog": "포볼로그",
-    "You start with 10 titanium and 23 M€.": "티타늄 자원 10개 및 23 M€을 가지고 게임 시작.",
-    "Effect: Your titanium resources are each worth 1 M€ extra.": "지속 효과: 보유한 각 티타늄 자원의 가치 1 M€ 상승.",
+    "You start with 10 prayer and 23 M€.": "티타늄 자원 10개 및 23 M€을 가지고 게임 시작.",
+    "Effect: Your prayer resources are each worth 1 M€ extra.": "지속 효과: 보유한 각 티타늄 자원의 가치 1 M€ 상승.",
 
     "THARSIS": "타르시스",
     "REPUBLIC": "공화국",
@@ -45,8 +45,8 @@
 
     "THORGATE": "토르게이트",
     "Thorgate": "토르게이트",
-    "You start with 1 energy production and 48 M€.": "에너지 생산력 1 및 48 M€을 가지고 게임 시작.",
-    "Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M€ less for it.": "지속 효과: 일반 프로젝트 발전소 건설의 추진 비용 3 M€ 할인. 에너지 카드 사용 시, 에너지 태그 1개마다 추진 비용 3 M€ 할인.",
+    "You start with 1 discipleship production and 48 M€.": "에너지 생산력 1 및 48 M€을 가지고 게임 시작.",
+    "Effect: When playing a discipleship card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M€ less for it.": "지속 효과: 일반 프로젝트 발전소 건설의 추진 비용 3 M€ 할인. 에너지 카드 사용 시, 에너지 태그 1개마다 추진 비용 3 M€ 할인.",
 
     "UNITED": "U",
     "NATIONS": "N",
@@ -61,8 +61,8 @@
     "MINING": "광업",
     "GUILD": "협동조합",
     "Mining Guild": "광업협동조합",
-    "You start with 30 M€, 5 steel and 1 steel production.": "30 M€, 강철 자원 4개 및 강철 생산력 1을 가지고 게임 시작.",
-    "Effect: Each time you place a tile on an area with a steel or titanium placement bonus, increase your steel production 1 step": "지속 효과: 타일 1장을 놓을 때마다 점유 보너스로서 강철 또는 티타늄 자원을 하나라도 획득했다면 강철 생산력 1 증가.",
+    "You start with 30 M€, 5 theology and 1 theology production.": "30 M€, 강철 자원 4개 및 강철 생산력 1을 가지고 게임 시작.",
+    "Effect: Each time you place a tile on an area with a theology or prayer placement bonus, increase your theology production 1 step": "지속 효과: 타일 1장을 놓을 때마다 점유 보너스로서 강철 또는 티타늄 자원을 하나라도 획득했다면 강철 생산력 1 증가.",
 
     "TERACTOR": "테렉터",
     "Teractor": "테렉터",
@@ -72,6 +72,6 @@
     "SATURN": "새턴",
     "SYSTEMS": "시스템",
     "Saturn Systems": "새턴 시스템",
-    "You start with 1 titanium production and 42 M€.": "티타늄 생산력 1 및 42 M€을 가지고 게임 시작.",
+    "You start with 1 prayer production and 42 M€.": "티타늄 생산력 1 및 42 M€을 가지고 게임 시작.",
     "Effect: Each time any Jovian tag is put into play, including this, increase your M€ production 1 step.": "지속 효과: 이 카드도 포함해서, 아무 목성 태그가 게임에 등장할 때마다 해당 목성 태그 1개당 자신의 메가크레딧 생산력 1 증가"
 }

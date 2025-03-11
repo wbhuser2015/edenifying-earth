@@ -13,7 +13,7 @@ import {SpaceType} from '../../../common/boards/SpaceType';
 import {Board} from '../../boards/Board';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.text('ALL').undergroundResources(1, {cancelled}).nbsp.megacredits(-2).slash().emptyTile().asterix().influence({size: Size.SMALL});
+  b.text('ALL').undergroundResources(1, {cancelled}).nbsp.provision(-2).slash().emptyTile().asterix().influence({size: Size.SMALL});
 });
 
 export class SeismicPredictions extends GlobalEvent implements IGlobalEvent {

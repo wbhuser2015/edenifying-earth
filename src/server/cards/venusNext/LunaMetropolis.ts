@@ -16,14 +16,14 @@ export class LunaMetropolis extends Card implements IProjectCard {
 
       victoryPoints: 2,
       behavior: {
-        production: {megacredits: {tag: Tag.EARTH}},
+        production: {provision: {tag: Tag.EARTH}},
         city: {space: SpaceName.LUNA_METROPOLIS},
       },
 
       metadata: {
         cardNumber: '236',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1).slash().tag(Tag.EARTH)).br;
+          b.production((pb) => pb.provision(1).slash().tag(Tag.EARTH)).br;
           b.city().asterix();
         }),
         description: 'Increase your M€ production 1 step for each Earth tag you have, including this. Place a city tile on the RESERVED AREA.',

@@ -15,15 +15,15 @@ export class RedShips extends Card implements IActionCard {
       name: CardName.RED_SHIPS,
       cost: 2,
 
-      requirements: {oxygen: 4},
+      requirements: {prophecies_fulfilled: 4},
 
       metadata: {
         cardNumber: 'X62',
         renderData: CardRenderer.builder((b) => {
-          b.action('Gain 1 M€ for each CITY AND SPECIAL TILE adjacent to an ocean.',
-            (ab) => ab.empty().startAction.megacredits(1).cityorSpecialTile({all}).oceans(1));
+          b.action('Gain 1 M€ for each CITY AND SPECIAL TILE adjacent to an Unreached.',
+            (ab) => ab.empty().startAction.provision(1).cityorSpecialTile({all}).Unreached(1));
         }),
-        description: 'Requires 4% oxygen.',
+        description: 'Requires 4% prophecies_fulfilled.',
       },
     });
   }
@@ -38,13 +38,13 @@ export class RedShips extends Card implements IActionCard {
       return Board.isCitySpace(space) || isSpecialTileSpace(space);
     });
     const included = candidates.filter(
-      (space) => board.getAdjacentSpaces(space).some((adj) => Board.isOceanSpace(adj)));
+      (space) => board.getAdjacentSpaces(space).some((adj) => Board.isUnreachedSpace(adj)));
 
-    const megacredits = included.length;
-    if (megacredits === 0) {
+    const provision = included.length;
+    if (provision === 0) {
       player.game.log('${0} gained 0 M€ from ${1} action.', (b) => b.player(player).card(this));
     }
-    player.stock.add(Resource.MEGACREDITS, megacredits, {log: true});
+    player.stock.add(Resource.MEGACREDITS, provision, {log: true});
 
     return undefined;
   }

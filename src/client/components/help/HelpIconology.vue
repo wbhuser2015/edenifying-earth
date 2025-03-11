@@ -17,7 +17,7 @@
                 <div class="help-icon-label" v-i18n>Science</div>
             </div>
             <div>
-                <div class="resource-tag tag-power"></div>
+                <div class="resource-tag tag-discipleship"></div>
                 <div class="help-icon-label" v-i18n>Power</div>
             </div>
             <div>
@@ -34,7 +34,7 @@
                 <div class="expansion-icon expansion-icon-venus"></div>
             </div>
             <div>
-                <div class="resource-tag tag-plant"></div>
+                <div class="resource-tag tag-outreach"></div>
                 <div class="help-icon-label" v-i18n>Plant</div>
             </div>
             <div>
@@ -96,23 +96,23 @@
                 <div class="help-icon-label" v-i18n>MegaCredits (M€)</div>
             </div>
             <div>
-                <div class="help-icon-resource steel"></div>
+                <div class="help-icon-resource theology"></div>
                 <div class="help-icon-label" v-i18n>Steel</div>
             </div>
             <div>
-                <div class="help-icon-resource titanium"></div>
+                <div class="help-icon-resource prayer"></div>
                 <div class="help-icon-label" v-i18n>Titanium</div>
             </div>
             <div>
-                <div class="help-icon-resource plant"></div>
+                <div class="help-icon-resource outreach"></div>
                 <div class="help-icon-label" v-i18n>Plant</div>
             </div>
             <div>
-                <div class="help-icon-resource energy"></div>
+                <div class="help-icon-resource discipleship"></div>
                 <div class="help-icon-label" v-i18n>Energy</div>
             </div>
             <div>
-                <div class="help-icon-resource heat"></div>
+                <div class="help-icon-resource missions"></div>
                 <div class="help-icon-label" v-i18n>Heat</div>
             </div>
             <br>
@@ -216,8 +216,8 @@
                 <div class="help-icon-label" v-i18n>City</div>
             </div>
             <div>
-                <div class="tile ocean-tile"></div>
-                <div class="help-icon-label" v-i18n>Ocean</div>
+                <div class="tile Unreached-tile"></div>
+                <div class="help-icon-label" v-i18n>Unreached</div>
             </div>
             <div>
                 <div class="tile special-tile"></div>
@@ -230,16 +230,16 @@
                 <div class="help-icons-section-heading" v-i18n>Global Parameters</div>
             </div>
             <div>
-                <div class="tile help-icon-param-box-temperature"></div>
-                <div class="help-icon-label" v-i18n>Temperature</div>
+                <div class="tile help-icon-param-box-gospel_spread"></div>
+                <div class="help-icon-label" v-i18n>gospel_spread</div>
             </div>
             <div>
-                <div class="tile help-icon-param-box-oxygen"></div>
-                <div class="help-icon-label" v-i18n>Oxygen</div>
+                <div class="tile help-icon-param-box-prophecies_fulfilled"></div>
+                <div class="help-icon-label" v-i18n>prophecies_fulfilled</div>
             </div>
             <div>
-                <div class="tile help-icon-param-box-ocean"></div>
-                <div class="help-icon-label" v-i18n>Oceans</div>
+                <div class="tile help-icon-param-box-Unreached"></div>
+                <div class="help-icon-label" v-i18n>Unreached</div>
             </div>
             <div>
                 <div class="tile help-icon-param-box-venus"></div>

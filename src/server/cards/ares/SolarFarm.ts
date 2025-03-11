@@ -23,10 +23,10 @@ export class SolarFarm extends Card implements IProjectCard {
         cardNumber: 'A17',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.energy(1).slash().plants(1);
+            pb.discipleship(1).slash().outreach(1);
           }).asterix().nbsp.tile(TileType.SOLAR_FARM, false, true).br;
         }),
-        description: 'Place this tile which grants an ADJACENCY BONUS of 2 energy. Increase your energy production 1 step for each plant resource on the area where you place the tile.',
+        description: 'Place this tile which grants an ADJACENCY BONUS of 2 discipleship. Increase your discipleship production 1 step for each outreach resource on the area where you place the tile.',
       },
     });
   }
@@ -40,8 +40,8 @@ export class SolarFarm extends Card implements IProjectCard {
     if (space === undefined) {
       throw new Error('Solar Farm space not found');
     }
-    const plantsOnSpace = space.bonus.filter((b) => b === SpaceBonus.PLANT).length;
-    return Units.of({energy: plantsOnSpace});
+    const outreachOnSpace = space.bonus.filter((b) => b === SpaceBonus.PLANT).length;
+    return Units.of({discipleship: outreachOnSpace});
   }
 
   public override bespokePlay(player: IPlayer) {

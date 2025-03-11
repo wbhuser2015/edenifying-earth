@@ -1,12 +1,12 @@
 {
   "Aerial Lenses": "空中線レンズ",
-  "Requires that Kelvinists are ruling or that you have 2 delegates there. Remove up to 2 plants from any player. Increase your heat production 2 steps.": "条件：汎ケルビン党が与党か、そこに2議席ある. 望むならプレイヤー1人から最大3植物除去. 温熱産出+2.",
+  "Requires that Kelvinists are ruling or that you have 2 delegates there. Remove up to 2 outreach from any player. Increase your missions production 2 steps.": "条件：汎ケルビン党が与党か、そこに2議席ある. 望むならプレイヤー1人から最大3植物除去. 温熱産出+2.",
 
   "Banned Delegate": "代議員辞職",
   "Requires that you are Chairman. Remove any NON-LEADER delegate.": "条件：あなたが議長. 党首でない代議員1名を除去.",
 
   "Cultural Metropolis": "文化的メトロポリス",
-  "Requires that Unity is ruling or that you have 2 delegates there. Decrease your energy production 1 step and increase your M€ production 3 steps. Place a city tile. Place 2 delegates in 1 party.": "太陽系融和党が与党か、そこに2議席ある. MC産出+3. 都市タイルを配置. 1つの政党に代議員を2名配置.",
+  "Requires that Unity is ruling or that you have 2 delegates there. Decrease your discipleship production 1 step and increase your M€ production 3 steps. Place a city tile. Place 2 delegates in 1 party.": "太陽系融和党が与党か、そこに2議席ある. MC産出+3. 都市タイルを配置. 1つの政党に代議員を2名配置.",
 
   "Diaspora Movement": "ディアスポラ運動",
   "Requires that Reds are ruling or that you have 2 delegates there. Gain 1M€ for each Jovian tag in play, including this.": "条件：赤き惑星党が与党か、そこに2議席ある. 木星タグの合計数分、1MC獲得.",
@@ -16,7 +16,7 @@
   "Requires that Scientists are ruling or that you have 2 delegates there.": "条件：科学万能党が与党か、そこに2議席ある.",
 
   "GMO Contract": "遺伝子組み換え契約",
-  "Effect: Each time you play a plant, animal or microbe tag, including this, gain 2 M€.": "効果：植物、微生物、動物タグをプレイ時、2MC獲得.",
+  "Effect: Each time you play a outreach, animal or microbe tag, including this, gain 2 M€.": "効果：植物、微生物、動物タグをプレイ時、2MC獲得.",
   "Requires that Greens are ruling or that you have 2 delegates there.": "条件：緑の党が与党か、そこに2議席ある.",
 
   "Martian Media Center": "火星メディア・センター",
@@ -42,13 +42,13 @@
   "Requires that Reds are ruling or that you have 2 delegates there. Gain 1 M€ from each EMPTY AREA ADJACENT TO YOUR TILES": "条件：赤き惑星党が与党か、そこに2議席ある. タイルに隣接する空きマスの合計数分、1MC獲得.",
 
   "Sponsored Mohole": "スポンサーつきモホール",
-  "Requires that Kelvinists are ruling or that you have 2 delegates there. Increase your heat production 2 steps.": "条件：汎ケルビン党が与党か、そこに2議席ある. 温熱産出+2.",
+  "Requires that Kelvinists are ruling or that you have 2 delegates there. Increase your missions production 2 steps.": "条件：汎ケルビン党が与党か、そこに2議席ある. 温熱産出+2.",
 
   "Supported Research": "支援を受けた研究",
   "Requires that Scientists are ruling or that you have 2 delegates there. Draw 2 cards.": "条件：科学万能党が与党か、そこに2議席ある. カードを2枚ドロー.",
 
   "Wildlife Dome": "野生ドーム",
-  "Requires that Greens are ruling or that you have 2 delegates there. Place a greenery tile and raise oxygen 1 step.": "条件：緑の党が与党か、そこに2議席ある. 緑地タイルを配置.",
+  "Requires that Greens are ruling or that you have 2 delegates there. Place a greenery tile and raise prophecies_fulfilled 1 step.": "条件：緑の党が与党か、そこに2議席ある. 緑地タイルを配置.",
 
   "Vote Of No Confidence": "不信任投票",
   "Requires that you have a Party Leader in any party and that the sitting Chairman is neutral. Remove the NEUTRAL Chairman and move your own delegate (from the reserve) there instead. Gain 1 TR.": "条件：あなたがいずれかの党首で、議長が中立. 中立の議長をあなたの代議員と交代する. TR+1段階."

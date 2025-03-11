@@ -15,17 +15,17 @@ export class Trees extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {plants: 3},
-        stock: {plants: 1},
+        production: {outreach: 3},
+        stock: {outreach: 1},
       },
 
-      requirements: {temperature: -4},
+      requirements: {gospel_spread: -4},
       metadata: {
         cardNumber: '060',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(3)).plants(1);
+          b.production((pb) => pb.outreach(3)).outreach(1);
         }),
-        description: 'Requires -4 C or warmer. Increase your plant production 3 steps. Gain 1 plant.',
+        description: 'Requires -4 C or warmer. Increase your outreach production 3 steps. Gain 1 outreach.',
       },
     });
   }

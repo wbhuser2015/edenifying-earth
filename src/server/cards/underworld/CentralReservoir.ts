@@ -5,7 +5,7 @@ import {Tag} from '../../../common/cards/Tag';
 import {IPlayer} from '../../IPlayer';
 import {UnderworldExpansion} from '../../underworld/UnderworldExpansion';
 import {intersection} from '../../../common/utils/utils';
-import {PlaceOceanTile} from '../../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../../deferredActions/PlaceUnreachedTile';
 
 export class CentralReservoir extends PreludeCard {
   constructor() {
@@ -18,9 +18,9 @@ export class CentralReservoir extends PreludeCard {
       metadata: {
         cardNumber: 'UP09',
         renderData: CardRenderer.builder((b) => {
-          b.tr(1).oceans(1).asterix().excavate().asterix();
+          b.tr(1).Unreached(1).asterix().excavate().asterix();
         }),
-        description: 'Gain 1 TR. Place an ocean tile ON AN AREA NOT RESERVED FOR OCEAN. ' +
+        description: 'Gain 1 TR. Place an Unreached tile ON AN AREA NOT RESERVED FOR OCEAN. ' +
           'Then excavate the underground resource in that space.',
       },
     });
@@ -33,14 +33,14 @@ export class CentralReservoir extends PreludeCard {
   }
 
   public override bespokeCanPlay(player: IPlayer) {
-    if (!player.game.canAddOcean()) {
-      this.warnings.add('maxoceans');
+    if (!player.game.canAddUnreached()) {
+      this.warnings.add('maxUnreached');
     }
     return this.availableSpaces(player).length > 0;
   }
 
   public override bespokePlay(player: IPlayer) {
-    player.game.defer(new PlaceOceanTile(player, {
+    player.game.defer(new PlaceUnreachedTile(player, {
       spaces: this.availableSpaces(player),
     })).andThen((space) => {
       UnderworldExpansion.excavate(player, space);

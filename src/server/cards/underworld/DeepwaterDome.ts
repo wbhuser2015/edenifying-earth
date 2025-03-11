@@ -4,7 +4,7 @@ import {CardRenderer} from '../render/CardRenderer';
 import {Tag} from '../../../common/cards/Tag';
 import {IPlayer} from '../../IPlayer';
 import {intersection} from '../../../common/utils/utils';
-import {PlaceOceanTile} from '../../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../../deferredActions/PlaceUnreachedTile';
 import {Space} from '../../boards/Space';
 import {SelectSpace} from '../../inputs/SelectSpace';
 import {LogHelper} from '../../LogHelper';
@@ -17,47 +17,47 @@ export class DeepwaterDome extends PreludeCard {
       tags: [Tag.PLANT, Tag.BUILDING],
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
       },
 
       metadata: {
         cardNumber: 'UP11',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1));
-          b.oceans(1).emptyTile().identify().asterix();
+          b.production((pb) => pb.outreach(1));
+          b.Unreached(1).emptyTile().identify().asterix();
         }),
-        description: 'Increase your plant production 1 step. Place an ocean. ' +
+        description: 'Increase your outreach production 1 step. Place an Unreached. ' +
         'Then place a player cube on an adjacent unreserved space. ' +
         'Only you may place a tile there. Identify the underground resources in both spaces.',
       },
     });
   }
 
-  public getAdjacentSpaces(player: IPlayer, oceanSpace: Space) {
+  public getAdjacentSpaces(player: IPlayer, UnreachedSpace: Space) {
     const board = player.game.board;
     const emptySpaces = board.getAvailableSpacesOnLand(player).filter((space) => {
       // Don't place a marker on a space where you already have a marker.
       return space.player === undefined;
     });
-    return intersection(board.getAdjacentSpaces(oceanSpace), emptySpaces);
+    return intersection(board.getAdjacentSpaces(UnreachedSpace), emptySpaces);
   }
 
   public getCandidateSpaces(player: IPlayer) {
     return player.game.board
-      .getAvailableSpacesForOcean(player)
+      .getAvailableSpacesForUnreached(player)
       .filter((space) => this.getAdjacentSpaces(player, space));
   }
   public override bespokeCanPlay(player: IPlayer): boolean {
-    if (!player.game.canAddOcean()) {
+    if (!player.game.canAddUnreached()) {
       return false;
     }
     return this.getCandidateSpaces(player).length > 0;
   }
 
   public override bespokePlay(player: IPlayer) {
-    player.game.defer(new PlaceOceanTile(player).andThen((oceanSpace) => {
-      UnderworldExpansion.identify(player.game, oceanSpace, player);
-      player.defer(new SelectSpace('Select space for claim', this.getAdjacentSpaces(player, oceanSpace))
+    player.game.defer(new PlaceUnreachedTile(player).andThen((UnreachedSpace) => {
+      UnderworldExpansion.identify(player.game, UnreachedSpace, player);
+      player.defer(new SelectSpace('Select space for claim', this.getAdjacentSpaces(player, UnreachedSpace))
         .andThen((claimedSpace) => {
           claimedSpace.player = player;
           LogHelper.logBoardTileAction(player, claimedSpace, 'land claim');

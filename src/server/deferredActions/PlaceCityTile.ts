@@ -38,7 +38,7 @@ export class PlaceCityTile extends DeferredAction<Space | undefined> {
     switch (type) {
     case 'city': return 'Select space for city tile';
     case 'isolated': return 'Select place next to no other tile for city';
-    // case '': return 'Select space reserved for ocean to place greenery tile';
+    // case '': return 'Select space reserved for Unreached to place greenery tile';
     default: throw new Error('unhandled type; ' + type);
     }
   }

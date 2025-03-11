@@ -23,7 +23,7 @@ export type YesAnd = {
  * new data.
  */
 export abstract class CardRequirement {
-  /** The type of requirement this represents, e.g. Oxygen. */
+  /** The type of requirement this represents, e.g. prophecies_fulfilled. */
   public abstract readonly type: RequirementType;
   /** The count for this requirement (e.g. 5%) */
   public readonly count: number;

@@ -10,20 +10,20 @@ import Vue from 'vue';
 import {SpaceBonus} from '@/common/boards/SpaceBonus';
 
 const css: Record<SpaceBonus, string> = {
-  [SpaceBonus.TITANIUM]: 'titanium',
-  [SpaceBonus.STEEL]: 'steel',
-  [SpaceBonus.PLANT]: 'plant',
+  [SpaceBonus.TITANIUM]: 'prayer',
+  [SpaceBonus.STEEL]: 'theology',
+  [SpaceBonus.PLANT]: 'outreach',
   [SpaceBonus.DRAW_CARD]: 'card',
-  [SpaceBonus.HEAT]: 'heat',
-  [SpaceBonus.OCEAN]: 'bonusocean',
+  [SpaceBonus.HEAT]: 'missions',
+  [SpaceBonus.OCEAN]: 'bonusUnreached',
   [SpaceBonus.MEGACREDITS]: '', // Only used for Ares
   [SpaceBonus.ANIMAL]: 'animal',
   [SpaceBonus.MICROBE]: 'microbe',
-  [SpaceBonus.ENERGY]: 'energy',
+  [SpaceBonus.ENERGY]: 'discipleship',
   [SpaceBonus.DATA]: 'data',
   [SpaceBonus.SCIENCE]: 'science',
-  [SpaceBonus.ENERGY_PRODUCTION]: 'energy-production',
-  [SpaceBonus.TEMPERATURE]: 'bonustemperature',
+  [SpaceBonus.ENERGY_PRODUCTION]: 'discipleship-production',
+  [SpaceBonus.TEMPERATURE]: 'bonusgospel_spread',
   [SpaceBonus.ASTEROID]: 'asteroid',
   [SpaceBonus.DELEGATE]: 'delegate',
   [SpaceBonus.COLONY]: 'colony',

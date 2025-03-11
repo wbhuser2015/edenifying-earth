@@ -25,10 +25,10 @@ export class Steelaris extends CorporationCard {
         cardNumber: 'PfC9',
         description: 'You start with 42 M€.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(42).br;
+          b.provision(42).br;
           b.corpBox('effect', (ce) => {
-            ce.effect('When any city or special tile is placed ON MARS, gain 1 steel and 1 plant.', (eb) => {
-              eb.city({size: Size.SMALL, all}).slash().specialTile({size: Size.SMALL, all}).startEffect.steel(1).plants(1);
+            ce.effect('When any city or special tile is placed ON MARS, gain 1 theology and 1 outreach.', (eb) => {
+              eb.city({size: Size.SMALL, all}).slash().specialTile({size: Size.SMALL, all}).startEffect.theology(1).outreach(1);
             });
           });
         }),
@@ -50,7 +50,7 @@ export class Steelaris extends CorporationCard {
       return;
     }
     game.defer(
-      new GainStock(cardOwner, Units.of({steel: 1, plants: 1}), {
+      new GainStock(cardOwner, Units.of({theology: 1, outreach: 1}), {
         cb: () => game.log(
           '${0} gained 1 ${1} and 1 ${2} from ${3}',
           (b) => b.player(cardOwner).string(Resource.STEEL).string(Resource.PLANTS).cardName(this.name)),

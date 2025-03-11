@@ -21,7 +21,7 @@ export class MooncrateBlockFactory extends Card implements IProjectCard {
         cardNumber: 'M38',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you pay for a Lunar standard project, you spend 4M€ less.', (eb) => {
-            eb.plate('Lunar standard projects').startEffect.megacredits(-4);
+            eb.plate('Lunar standard projects').startEffect.provision(-4);
           });
         }),
       },

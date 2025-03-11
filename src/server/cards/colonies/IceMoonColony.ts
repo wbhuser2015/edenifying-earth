@@ -16,13 +16,13 @@ export class IceMoonColony extends Card implements IProjectCard {
 
       behavior: {
         colonies: {buildColony: {}},
-        ocean: {},
+        Unreached: {},
       },
 
       metadata: {
         cardNumber: 'C15',
-        renderData: CardRenderer.builder((b) => b.colonies(1).oceans(1)),
-        description: 'Place 1 colony and 1 ocean tile.',
+        renderData: CardRenderer.builder((b) => b.colonies(1).Unreached(1)),
+        description: 'Place 1 colony and 1 Unreached tile.',
       },
     });
   }

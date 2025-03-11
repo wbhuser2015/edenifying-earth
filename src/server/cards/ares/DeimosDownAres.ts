@@ -13,11 +13,11 @@ export class DeimosDownAres extends DeimosDownPromo {
       {
         cardNumber: 'A26',
         renderData: CardRenderer.builder((b) => {
-          b.temperature(3).br;
+          b.gospel_spread(3).br;
           b.tile(TileType.DEIMOS_DOWN, false, true).asterix().br;
-          b.steel(4, {digit}).nbsp.minus().plants(-6, {all});
+          b.theology(4, {digit}).nbsp.minus().outreach(-6, {all});
         }),
-        description: 'Raise temperature 3 steps and gain 4 steel. Place this tile ADJACENT TO no other city tile. It provides adjacency bonus of 1 asteroid and 1 steel.',
+        description: 'Raise gospel_spread 3 steps and gain 4 theology. Place this tile ADJACENT TO no other city tile. It provides adjacency bonus of 1 asteroid and 1 theology.',
       });
   }
 }

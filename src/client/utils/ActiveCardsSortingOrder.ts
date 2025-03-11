@@ -17,7 +17,6 @@ export const ActiveCardsSortingOrder: Map<CardName, number> = new Map([
 
   // Space discount
   CardName.WARP_DRIVE,
-  CardName.MASS_CONVERTER,
   CardName.QUANTUM_EXTRACTOR,
   CardName.SPACE_STATION,
   CardName.SHUTTLES,
@@ -47,16 +46,12 @@ export const ActiveCardsSortingOrder: Map<CardName, number> = new Map([
   CardName.SPACE_ELEVATOR,
   CardName.ENERGY_MARKET,
   CardName.ORBITAL_CLEANUP,
-  CardName.MARTIAN_ZOO,
-  CardName.MARTIAN_RAILS,
-  CardName.POWER_INFRASTRUCTURE,
+  CardName.MARTIAN_ZOO,  CardName.POWER_INFRASTRUCTURE,
   CardName.MELTWORKS,
 
   // Card draw (active)
   CardName.AI_CENTRAL,
   CardName.SUB_CRUST_MEASUREMENTS,
-  CardName.RESTRICTED_AREA,
-  CardName.RESTRICTED_AREA_ARES,
   CardName.DEVELOPMENT_CENTER,
   CardName.HI_TECH_LAB,
   CardName.RED_SPOT_OBSERVATORY,
@@ -65,7 +60,6 @@ export const ActiveCardsSortingOrder: Map<CardName, number> = new Map([
   CardName.BUSINESS_NETWORK,
 
   // Card draw (passive)
-  CardName.MARS_UNIVERSITY,
   CardName.OLYMPUS_CONFERENCE,
   CardName.SPINOFF_DEPARTMENT,
 
@@ -97,7 +91,7 @@ export const ActiveCardsSortingOrder: Map<CardName, number> = new Map([
   CardName.DIRECTED_IMPACTORS,
   CardName.ASTEROID_HOLLOWING,
 
-  // energy engine
+  // discipleship engine
   CardName.PHYSICS_COMPLEX,
   CardName.ORE_PROCESSOR,
   CardName.STEELWORKS,

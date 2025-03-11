@@ -16,10 +16,10 @@ export class Teractor extends CorporationCard {
         description: 'You start with 60 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(60);
+          b.provision(60);
           b.corpBox('effect', (ce) => {
             ce.effect('When you play an Earth tag, you pay 3 M€ less for it.', (eb) => {
-              eb.tag(Tag.EARTH).startEffect.megacredits(-3);
+              eb.tag(Tag.EARTH).startEffect.provision(-3);
             });
           });
         }),

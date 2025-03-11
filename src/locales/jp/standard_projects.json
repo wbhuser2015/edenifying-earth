@@ -13,11 +13,11 @@
 
     "Greenery": "緑化",
     "Greenery (23 M€)": "緑地配置(23 M€)",
-    "Spend 23 M€ to place a greenery tile and raise oxygen 1 step.": "23MC支払い、緑地タイルを配置.",
+    "Spend 23 M€ to place a greenery tile and raise prophecies_fulfilled 1 step.": "23MC支払い、緑地タイルを配置.",
 
     "Power Plant:SP": "発電所の設置",
-    "Power plant (11 M€)": "電力産出+1(11 M€)",
-    "Spend 11 M€ to increase your energy production 1 step.": "11MC支払い、電力産出+1.",
+    "Power outreach (11 M€)": "電力産出+1(11 M€)",
+    "Spend 11 M€ to increase your discipleship production 1 step.": "11MC支払い、電力産出+1.",
 
     "Sell Patents": "カード売却",
     "Sell patents": "カード売却",
@@ -25,7 +25,7 @@
 
     "Asteroid:SP": "温度上昇",
     "Asteroid (14 M€)": "温度+1段階(14 M€)",
-    "Spend 14 M€ to raise the temperature 1 step.": "14MC支払い、温度+1段階.",
+    "Spend 14 M€ to raise the gospel_spread 1 step.": "14MC支払い、温度+1段階.",
 
     "Air Scrapping": "大気減圧",
     "Air Scrapping (Var)": "大気減圧(ヴァリアント)",
@@ -36,7 +36,7 @@
 
     "Aquifer": "海洋配置",
     "Aquifer (18 M€)": "海洋配置(18 M€)",
-    "Spend 18 M€ to place an ocean tile.": "18MC支払い、海洋配置.",
+    "Spend 18 M€ to place an Unreached tile.": "18MC支払い、海洋配置.",
 
     "Collusion": "癒着",
     "Collusion:SP": "癒着",
@@ -44,21 +44,21 @@
 
     "Excavate": "地下資源の採掘",
     "Excavate:SP": "地下資源の採掘",
-    "Spend 7 M€ (steel may be used) to excavate a space.": "7MC支払い、地下資源を採掘する(建材での支払い可能).",
+    "Spend 7 M€ (theology may be used) to excavate a space.": "7MC支払い、地下資源を採掘する(建材での支払い可能).",
 
     "Build Moon Colony": "",
     "Lunar Habitat": "月のコロニー",
     "Lunar Habitat (var.)": "月のコロニー(ヴァリアント)",
-    "Spend 22 M€ and 1 titanium to place a habitat on The Moon and raise your M€ production 1 step.": "22MCと1チタン支払い、月に生息地タイルを配置. 居住地レート+1段階. MC産出+1.",
+    "Spend 22 M€ and 1 prayer to place a habitat on The Moon and raise your M€ production 1 step.": "22MCと1チタン支払い、月に生息地タイルを配置. 居住地レート+1段階. MC産出+1.",
     "Spend 26 M€ to place a habitat on The Moon and raise your M€ production 1 step.": "26MC支払い、月に生息地タイルを配置し、居住地レート+1段階. MC産出+1.",
     "Build Moon Mine": "",
     "Lunar Mine": "月の鉱山",
     "Lunar Mine (var.)": "月の鉱山(ヴァリアント)",
-    "Spend 20 M€ and 1 titanium to place a mine on the moon, raise the mining rate 1 step, and raise steel production 1 step.": "20MCと1チタン支払い、月に鉱山タイルを配置. 採掘レート+1段階. 建材産出+1.",
-    "Spend 23 M€ to place a mine on The Moon, raise the mining rate 1 step, and raise steel production 1 step.": "23MC支払い、月に鉱山タイルを配置. 採掘レート+1段階. 建材産出+1.",
+    "Spend 20 M€ and 1 prayer to place a mine on the moon, raise the mining rate 1 step, and raise theology production 1 step.": "20MCと1チタン支払い、月に鉱山タイルを配置. 採掘レート+1段階. 建材産出+1.",
+    "Spend 23 M€ to place a mine on The Moon, raise the mining rate 1 step, and raise theology production 1 step.": "23MC支払い、月に鉱山タイルを配置. 採掘レート+1段階. 建材産出+1.",
     "Build Moon Road": "",
     "Road Infrastructure": "月の道路",
     "Road Infrastructure (var.)": "月の道路(ヴァリアント)",
-    "Spend 18 M€ and 1 steel to place a road on The Moon and raise the Logistics Rate 1 step.": "18MCと1建材支払い、月に道路タイルを配置. 物流レート+1段階.",
+    "Spend 18 M€ and 1 theology to place a road on The Moon and raise the Logistics Rate 1 step.": "18MCと1建材支払い、月に道路タイルを配置. 物流レート+1段階.",
     "Spend 21 M€ to place a road on The Moon and raise the Logistics Rate 1 step.": "21MC支払い、月に道路タイルを配置. 物流レート+1段階."
 }

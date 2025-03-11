@@ -15,7 +15,7 @@ export class VenusSoils extends Card implements IProjectCard {
       cost: 20,
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
         global: {venus: 1},
         addResourcesToAnyCard: {count: 2, type: CardResource.MICROBE},
       },
@@ -24,9 +24,9 @@ export class VenusSoils extends Card implements IProjectCard {
         cardNumber: '257',
         renderData: CardRenderer.builder((b) => {
           b.venus(1).br;
-          b.production((pb) => pb.plants(1)).resource(CardResource.MICROBE, 2).asterix();
+          b.production((pb) => pb.outreach(1)).resource(CardResource.MICROBE, 2).asterix();
         }),
-        description: 'Raise Venus 1 step. Increase your plant production 1 step. Add 2 microbes to ANOTHER card',
+        description: 'Raise Venus 1 step. Increase your outreach production 1 step. Add 2 microbes to ANOTHER card',
       },
     });
   }

@@ -20,7 +20,7 @@ export class MediaArchives extends Card implements IProjectCard {
       metadata: {
         cardNumber: '107',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(1).slash().tag(Tag.EVENT, {all});
+          b.provision(1).slash().tag(Tag.EVENT, {all});
         }),
         description: 'Gain 1 M€ for each event EVER PLAYED by all players.',
       },

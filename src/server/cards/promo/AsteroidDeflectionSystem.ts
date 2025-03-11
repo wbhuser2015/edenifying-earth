@@ -21,7 +21,7 @@ export class AsteroidDeflectionSystem extends Card implements IActionCard, IProj
       victoryPoints: {resourcesHere: {}},
 
       behavior: {
-        production: {energy: -1},
+        production: {discipleship: -1},
       },
 
       metadata: {
@@ -30,10 +30,10 @@ export class AsteroidDeflectionSystem extends Card implements IActionCard, IProj
           b.action('REVEAL AND DISCARD the top card of the deck. If it has a space tag, add an asteroid here.', (eb) => {
             eb.empty().startAction.cards(1).asterix().nbsp.tag(Tag.SPACE).colon().resource(CardResource.ASTEROID);
           }).br;
-          b.production((pb) => pb.minus().energy(1)).text('opponents may not remove your plants', Size.SMALL, true);
+          b.production((pb) => pb.minus().discipleship(1)).text('opponents may not remove your outreach', Size.SMALL, true);
         }),
         description: {
-          text: 'Decrease your energy production 1 step. 1VP per asteroid on this card.',
+          text: 'Decrease your discipleship production 1 step. 1VP per asteroid on this card.',
           align: 'left',
         },
       },

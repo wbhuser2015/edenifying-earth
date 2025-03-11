@@ -32,7 +32,7 @@ export class JupiterFloatingStation extends Card implements IProjectCard {
           b.or().br;
           b.action('Gain 1 M€ for every floater here [MAX 4].', (eb) => {
             eb.empty().startAction;
-            eb.megacredits(1).slash().resource(CardResource.FLOATER).text('[max 4]', Size.SMALL);
+            eb.provision(1).slash().resource(CardResource.FLOATER).text('[max 4]', Size.SMALL);
           });
         }),
         description: {

@@ -21,7 +21,7 @@ export class CommunicationCenter extends Card implements IProjectCard {
       resourceType: CardResource.DATA,
 
       behavior: {
-        production: {energy: -1},
+        production: {discipleship: -1},
         addResources: 2,
       },
 
@@ -31,9 +31,9 @@ export class CommunicationCenter extends Card implements IProjectCard {
           b.tag(Tag.EVENT, {all}).colon().resource(CardResource.DATA).nbsp.resource(CardResource.DATA, {amount: 3, digit}).colon().cards(1).br;
           b.text('(Effect: Whenever ANY PLAYER plays an event, add 1 data to this card.)', Size.TINY, false, false).br;
           b.text('(Effect: Remove 3 data to draw a card automatically.)', Size.TINY, false, false).br;
-          b.minus().production((pb) => pb.energy(1)).resource(CardResource.DATA, 2);
+          b.minus().production((pb) => pb.discipleship(1)).resource(CardResource.DATA, 2);
         }),
-        description: 'Decrease your energy production 1 step. Place 2 data on this card.',
+        description: 'Decrease your discipleship production 1 step. Place 2 data on this card.',
       },
     });
   }

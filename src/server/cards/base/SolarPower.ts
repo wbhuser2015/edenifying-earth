@@ -14,16 +14,16 @@ export class SolarPower extends Card implements IProjectCard {
       cost: 11,
 
       behavior: {
-        production: {energy: 1},
+        production: {discipleship: 1},
       },
       victoryPoints: 1,
 
       metadata: {
         cardNumber: '113',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1));
+          b.production((pb) => pb.discipleship(1));
         }),
-        description: 'Increase your energy production 1 step.',
+        description: 'Increase your discipleship production 1 step.',
       },
     });
   }

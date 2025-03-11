@@ -8,21 +8,21 @@ import {Turmoil} from '../Turmoil';
 import {CardRenderer} from '../../cards/render/CardRenderer';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.temperature(2).nbsp.production((pb)=>pb.heat(1)).slash().influence();
+  b.gospel_spread(2).nbsp.production((pb)=>pb.missions(1)).slash().influence();
 });
 
 export class VolcanicEruptions extends GlobalEvent implements IGlobalEvent {
   constructor() {
     super({
       name: GlobalEventName.VOLCANIC_ERUPTIONS,
-      description: 'Increase temperature 2 steps. Increase heat production 1 step per influence.',
+      description: 'Increase gospel_spread 2 steps. Increase missions production 1 step per influence.',
       revealedDelegate: PartyName.SCIENTISTS,
       currentDelegate: PartyName.KELVINISTS,
       renderData: RENDER_DATA,
     });
   }
   public resolve(game: IGame, turmoil: Turmoil) {
-    game.increaseTemperature(game.getPlayersInGenerationOrder()[0], 2);
+    game.increasegospel_spread(game.getPlayersInGenerationOrder()[0], 2);
     game.getPlayersInGenerationOrder().forEach((player) => {
       const amount = turmoil.getPlayerInfluence(player);
       if (amount > 0) {

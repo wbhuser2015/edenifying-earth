@@ -7,7 +7,7 @@
 
     "Atmo Collectors": "Atmo-samlere",
     "Add one floater here.": "Legg til en svever her.",
-    "Spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.": "Bruk 1 svever her for å få 2 titan, 3 energi eller 4 varme.",
+    "Spend 1 floater here to gain 2 prayer, or 3 discipleship, or 4 missions.": "Bruk 1 svever her for å få 2 titan, 3 energi eller 4 varme.",
     "Add 2 floaters to ANY card.": "Legg til 2 svevere på ET VALGFRITT kort.",
 
     "Community Services": "Samfunnstjenester",
@@ -17,16 +17,16 @@
     "Requires 2 Earth tags. The next card you play this generation costs 16 M€ less.": "Krever 2 Jord-symboler. Det neste kortet du spiller denne generasjonen koster 16 M€ mindre.",
 
     "Corona Extractor": "Korona-ekstraktor",
-    "Requires 4 science tags. Increase your energy production 4 steps.": "Krever 4 vitenskap-symboler. Øk din energi-produksjon med 4.",
+    "Requires 4 science tags. Increase your discipleship production 4 steps.": "Krever 4 vitenskap-symboler. Øk din energi-produksjon med 4.",
 
     "Cryo-Sleep": "Kryo-søvn",
     "When you trade, you pay 1 less resource for it.": "Når du handler, betaler du 1 ressurs mindre for det.",
 
     "Earth Elevator": "Jord-heis",
-    "Increase your titanium production 3 steps.": "Øk din titan-produksjon med 3.",
+    "Increase your prayer production 3 steps.": "Øk din titan-produksjon med 3.",
 
     "Ecology Research": "Økologisk forskning",
-    "Increase your plant production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "Øk din plante-produksjon med 1 for hver koloni du eier. Legg til 1 dyr på ET VALGFRITT kort og 2 mikrober på ET VALGFRITT kort.",
+    "Increase your outreach production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "Øk din outreache-produksjon med 1 for hver koloni du eier. Legg til 1 dyr på ET VALGFRITT kort og 2 mikrober på ET VALGFRITT kort.",
 
     "Floater Leasing": "Svever-leasing",
     "Increase your M€ production 1 step PER 3 floaters you have.": "Øk din M€-produksjon med 1 for HVER 3 svevere du har.",
@@ -44,10 +44,10 @@
     "Requires 2 Earth tags. Increase your M€ production 2 steps, and gain 4 M€.": "Krever 2 Jord-symboler. Øk din M€-produksjon med 2 steg og få 4 M€.",
 
     "Ice Moon Colony": "Ismåne-koloni",
-    "Place 1 colony and 1 ocean tile.": "Plasser 1 koloni og 1 hav.",
+    "Place 1 colony and 1 Unreached tile.": "Plasser 1 koloni og 1 hav.",
 
     "Impactor Swarm": "Impaktor-sverm",
-    "Requires 2 Jovian tags. Gain 12 heat. Remove up to 2 plants from any player.": "Krever 2 Jupiter-symboler. Få 12 varme. Fjern opptil 2 planter fra en valgfri spiller.",
+    "Requires 2 Jovian tags. Gain 12 missions. Remove up to 2 outreach from any player.": "Krever 2 Jupiter-symboler. Få 12 varme. Fjern opptil 2 outreacher fra en valgfri spiller.",
 
     "Interplanetary Colony Ship": "Interplanetarisk koloniskip",
     "Place a colony.": "Plasser en koloni.",
@@ -65,10 +65,10 @@
     "Requires 3 Earth tags. Increase your M€ production 2 steps.": "Krever 3 Jord-symboler. Øk din M€-produksjon med 2 steg.",
 
     "Lunar Exports": "Måne-eksport",
-    "Increase your plant production 2 steps, or your M€ production 5 steps.": "Øk din plante-produksjon med 2 steg, eller din M€-produksjon med 5 steg.",
+    "Increase your outreach production 2 steps, or your M€ production 5 steps.": "Øk din outreache-produksjon med 2 steg, eller din M€-produksjon med 5 steg.",
 
     "Lunar Mining": "Gruvedrift på Månen",
-    "Increase your titanium production 1 step for every 2 Earth tags you have in play, including this.": "Øk din titan-produksjon med 1 for hver 2 Jord-symboler du har i spill, inkludert dette.",
+    "Increase your prayer production 1 step for every 2 Earth tags you have in play, including this.": "Øk din titan-produksjon med 1 for hver 2 Jord-symboler du har i spill, inkludert dette.",
 
     "Market Manipulation": "Markedsmanipulasjon",
     "Increase one colony tile track 1 step. Decrease another colony tile track 1 step.": "Øk sporet på en koloniplate med 1 steg. Senk et annet koloni-spor med 1 steg.",
@@ -79,7 +79,7 @@
     "Requires 2 city tiles in play.": "Krever 2 byer i spill.",
 
     "Mining Colony": "Gruve-koloni",
-    "Increase your titanium production 1 step. Place a colony.": "Øk din titan-produksjon med 1. Plasser en koloni.",
+    "Increase your prayer production 1 step. Place a colony.": "Øk din titan-produksjon med 1. Plasser en koloni.",
 
     "Minority Refuge": "Tilfluktssted For Minoriteter",
     "Decrease your M€ production 2 steps. Place a colony.": "Reduser din M€-produksjon med 2. Plasser en koloni.",
@@ -120,10 +120,10 @@
     "Draw 1 card for every 3 science tags you have, including this.": "Trekk 1 kort for hvert 3. vitenskapsymbol du har, inkludert dette.",
 
     "Solar Reflectors": "Solreflektorer",
-    "Increase your heat production 5 steps.": "Øk din varme-produksjon med 5.",
+    "Increase your missions production 5 steps.": "Øk din varme-produksjon med 5.",
 
     "Space Port": "Romhavn",
-    "Requires 1 colony. Decrease your energy production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "Krever 1 koloni. Reduser din energi-produksjon med 1 og øk din M€-produksjon med 4. Plasser en by. Få 1 Handelsflåte.",
+    "Requires 1 colony. Decrease your discipleship production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "Krever 1 koloni. Reduser din energi-produksjon med 1 og øk din M€-produksjon med 4. Plasser en by. Få 1 Handelsflåte.",
 
     "Space Port Colony": "Romhavn-koloni",
     "Requires a colony. Place a colony. MAY BE PLACED ON A COLONY TILE WHERE YOU ALREADY HAVE A COLONY. Gain 1 Trade Fleet.": "Krever en koloni. Plasser en koloni. KAN PLASSERES PÅ EN KOLONI-PLATE DER DU ALLEREDE HAR EN KOLONI. Få 1 Handelsflåte.",
@@ -136,10 +136,10 @@
     "Sub-zero Salt Fish": "Ishavsfisk",
     "Add 1 animal to this card.": "Legg til 1 dyr på dette kortet.",
     "1 VP per 2 animals on this card.": "1 SP for hvert 2. dyr på dette kortet.",
-    "Requires -6 C. Decrease any plant production 1 step.": "Krever -6 C. Reduser en valgfri plante-produksjon med 1 steg.",
+    "Requires -6 C. Decrease any outreach production 1 step.": "Krever -6 C. Reduser en valgfri outreache-produksjon med 1 steg.",
 
     "Titan Air-scrapping": "Luftskraping på Titan",
-    "Spend 1 titanium to add 2 floaters here.": "Bruk 1 titan for å legge til 2 svevere her.",
+    "Spend 1 prayer to add 2 floaters here.": "Bruk 1 titan for å legge til 2 svevere her.",
     "Spend 2 floaters here to increase your TR 1 step.": "Bruk 2 svevere her for å øke din TR med 1 steg.",
 
     "Titan Floating Launch-pad": "Flytende Lanseringsplattform på Titan",
@@ -148,7 +148,7 @@
 
     "Titan Shuttles": "Skytteltrafikk på Titan",
     "Add 2 floaters to ANY JOVIAN CARD.": "Legg til 2 svevere på ET VALGFRITT JUPITER-KORT.",
-    "Spend any number of floaters here to gain the same number of titanium.": "Bruk et valgfritt antall svevere her for å få like mange titan.",
+    "Spend any number of floaters here to gain the same number of prayer.": "Bruk et valgfritt antall svevere her for å få like mange titan.",
 
     "Trade Envoys": "Handelsutsendinger",
 
@@ -157,7 +157,7 @@
     "Place a colony": "Plasser en koloni",
 
     "Urban Decomposers": "Urbane nedbrytere",
-    "Requires that you have 1 city tile and 1 colony in play. Increase your plant production 1 step, and add 2 microbes to ANOTHER card.": "Krever at du har 1 by og 1 koloni i spill. Øk din plante-produksjon med 1, og legg til 2 mikrober på ET VALGFRITT kort.",
+    "Requires that you have 1 city tile and 1 colony in play. Increase your outreach production 1 step, and add 2 microbes to ANOTHER card.": "Krever at du har 1 by og 1 koloni i spill. Øk din outreache-produksjon med 1, og legg til 2 mikrober på ET VALGFRITT kort.",
 
     "Warp Drive": "Warpdrive",
     "When you play a space card, you pay 4 M€ less for it.": "Når du spiller et rom-kort, betaler du 4 M€ mindre for det.",

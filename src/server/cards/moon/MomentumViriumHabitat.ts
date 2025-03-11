@@ -15,21 +15,21 @@ export class MomentumViriumHabitat extends Card {
       cost: 23,
 
       behavior: {
-        production: {heat: 2, megacredits: 3},
+        production: {missions: 2, provision: 3},
         moon: {
           habitatTile: {space: NamedMoonSpaces.MOMENTUM_VIRIUM},
         },
       },
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       metadata: {
-        description: 'Spend 1 titanium. Increase your heat production 2 steps and your M€ production 3 steps. ' +
+        description: 'Spend 1 prayer. Increase your missions production 2 steps and your M€ production 3 steps. ' +
         'Place a habitat tile ON THE RESERVED AREA and raise the habitat rate 1 step.',
         cardNumber: 'M12',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1).br;
+          b.minus().prayer(1).br;
           b.production((pb) => {
-            pb.heat(2).megacredits(3);
+            pb.missions(2).provision(3);
           }).br;
           b.moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).asterix();
         }),

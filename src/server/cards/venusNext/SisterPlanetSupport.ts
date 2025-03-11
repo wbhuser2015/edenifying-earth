@@ -14,14 +14,14 @@ export class SisterPlanetSupport extends Card implements IProjectCard {
       cost: 7,
 
       behavior: {
-        production: {megacredits: 3},
+        production: {provision: 3},
       },
 
       requirements: [{tag: Tag.VENUS}, {tag: Tag.EARTH}],
       metadata: {
         cardNumber: '244',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(3));
+          b.production((pb) => pb.provision(3));
         }),
         description: 'Requires Venus and Earth tags. Increase your M€ production 3 steps.',
       },

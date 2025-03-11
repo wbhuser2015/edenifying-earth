@@ -15,14 +15,14 @@ export class MirandaResort extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: {tag: Tag.EARTH}},
+        production: {provision: {tag: Tag.EARTH}},
       },
 
       metadata: {
         cardNumber: '051',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1).slash().tag(Tag.EARTH);
+            pb.provision(1).slash().tag(Tag.EARTH);
           });
         }),
         description: 'Increase your M€ production 1 step for each Earth tag you have.',

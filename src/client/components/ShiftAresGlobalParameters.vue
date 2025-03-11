@@ -1,38 +1,38 @@
 <template>
   <div class="wf-component">
-    <div v-if="hazardData.erosionOceanCount.available">
+    <div v-if="hazardData.erosionUnreachedCount.available">
         <span v-i18n>Reveal erosions at:</span>&nbsp;
         <label class="form-radio form-inline ares-global-parameter-label" v-for="value in ADJUSTMENT_RANGE" :key='value'>
-          <input type="radio" :value="value" name="lowOceanDelta" v-model="lowOceanDelta">
+          <input type="radio" :value="value" name="lowUnreachedDelta" v-model="lowUnreachedDelta">
           <i class="form-icon" />
-          <div class="ares-global-parameter-option" v-i18n>{{ value + hazardData.erosionOceanCount.threshold }} oceans</div>
+          <div class="ares-global-parameter-option" v-i18n>{{ value + hazardData.erosionUnreachedCount.threshold }} Unreached</div>
         </label>
     </div>
 
-    <div v-if="hazardData.removeDustStormsOceanCount.available">
+    <div v-if="hazardData.removeDustStormsUnreachedCount.available">
         <span v-i18n>Remove dust storms at:</span>&nbsp;
         <label class="form-radio form-inline ares-global-parameter-label" v-for="value in ADJUSTMENT_RANGE" :key='value'>
-          <input type="radio" :value="value" name="highOceanDelta" v-model="highOceanDelta">
+          <input type="radio" :value="value" name="highUnreachedDelta" v-model="highUnreachedDelta">
           <i class="form-icon" />
-          <div class="ares-global-parameter-option" v-i18n>{{ value + hazardData.removeDustStormsOceanCount.threshold }} oceans</div>
+          <div class="ares-global-parameter-option" v-i18n>{{ value + hazardData.removeDustStormsUnreachedCount.threshold }} Unreached</div>
         </label>
     </div>
 
-    <div v-if="hazardData.severeErosionTemperature.available">
+    <div v-if="hazardData.severeErosiongospel_spread.available">
         <span v-i18n>Amplify erosions at:</span>&nbsp;
         <label class="form-radio form-inline ares-global-parameter-label" v-for="value in ADJUSTMENT_RANGE" :key='value'>
-          <input type="radio" :value="value" name="temperatureDelta" v-model="temperatureDelta">
+          <input type="radio" :value="value" name="gospel_spreadDelta" v-model="gospel_spreadDelta">
           <i class="form-icon" />
-          <div class="ares-global-parameter-option" v-i18n>{{ (2 * value) + hazardData.severeErosionTemperature.threshold }} °C</div>
+          <div class="ares-global-parameter-option" v-i18n>{{ (2 * value) + hazardData.severeErosiongospel_spread.threshold }} °C</div>
         </label>
     </div>
 
-    <div v-if="hazardData.severeDustStormOxygen.available">
+    <div v-if="hazardData.severeDustStormprophecies_fulfilled.available">
         <span v-i18n>Amplify dust storms at:</span>&nbsp;
         <label class="form-radio form-inline ares-global-parameter-label" v-for="value in ADJUSTMENT_RANGE" :key='value'>
-          <input type="radio" :value="value" name="oxygenDelta" v-model="oxygenDelta">
+          <input type="radio" :value="value" name="prophecies_fulfilledDelta" v-model="prophecies_fulfilledDelta">
           <i class="form-icon" />
-          <div class="ares-global-parameter-option" v-i18n>{{ value + hazardData.severeDustStormOxygen.threshold }}% oxygen</div>
+          <div class="ares-global-parameter-option" v-i18n>{{ value + hazardData.severeDustStormprophecies_fulfilled.threshold }}% prophecies_fulfilled</div>
         </label>
     </div>
 
@@ -72,19 +72,19 @@ export default Vue.extend({
     const hazardData = this.playerinput.aresData.hazardData;
     return {
       hazardData: hazardData,
-      lowOceanDelta: 0,
-      highOceanDelta: 0,
-      temperatureDelta: 0,
-      oxygenDelta: 0,
+      lowUnreachedDelta: 0,
+      highUnreachedDelta: 0,
+      gospel_spreadDelta: 0,
+      prophecies_fulfilledDelta: 0,
     };
   },
   methods: {
     saveData() {
       const response: AresGlobalParametersResponse = {
-        lowOceanDelta: this.lowOceanDelta,
-        highOceanDelta: this.highOceanDelta,
-        temperatureDelta: this.temperatureDelta,
-        oxygenDelta: this.oxygenDelta,
+        lowUnreachedDelta: this.lowUnreachedDelta,
+        highUnreachedDelta: this.highUnreachedDelta,
+        gospel_spreadDelta: this.gospel_spreadDelta,
+        prophecies_fulfilledDelta: this.prophecies_fulfilledDelta,
       };
 
       this.onsave({type: 'aresGlobalParameters', response});

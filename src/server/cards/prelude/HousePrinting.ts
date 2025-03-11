@@ -14,16 +14,16 @@ export class HousePrinting extends Card implements IProjectCard {
       cost: 10,
 
       behavior: {
-        production: {steel: 1},
+        production: {theology: 1},
       },
       victoryPoints: 1,
 
       metadata: {
         cardNumber: 'P36',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.steel(1));
+          b.production((pb) => pb.theology(1));
         }),
-        description: 'Increase your steel production 1 step.',
+        description: 'Increase your theology production 1 step.',
       },
     });
   }

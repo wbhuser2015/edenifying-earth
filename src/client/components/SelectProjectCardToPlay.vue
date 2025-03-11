@@ -89,10 +89,10 @@ export default Vue.extend({
     },
     SPENDABLE_RESOURCES(): ReadonlyArray<keyof Payment> {
       return [
-        'steel',
-        'titanium',
-        'heat',
-        'plants',
+        'theology',
+        'prayer',
+        'missions',
+        'outreach',
         'microbes',
         'floaters',
         'lunaArchivesScience',
@@ -230,35 +230,35 @@ export default Vue.extend({
 
       // These aren't in the loop above because of the reserve units bit.
       // It's doable of course.
-      this.available.steel = Math.max(this.thisPlayer.steel - this.reserveUnits.steel, 0);
-      if (megacreditBalance > 0 && this.canUse('steel')) {
-        this.payment.steel = deductUnits(this.available.steel, this.getResourceRate('steel'), true);
+      this.available.theology = Math.max(this.thisPlayer.theology - this.reserveUnits.theology, 0);
+      if (megacreditBalance > 0 && this.canUse('theology')) {
+        this.payment.theology = deductUnits(this.available.theology, this.getResourceRate('theology'), true);
       }
 
-      this.available.titanium = Math.max(this.thisPlayer.titanium - this.reserveUnits.titanium, 0);
-      if (megacreditBalance > 0 && (this.canUse('titanium') || this.canUseLunaTradeFederationTitanium())) {
-        this.payment.titanium = deductUnits(this.available.titanium, this.getResourceRate('titanium'), true);
+      this.available.prayer = Math.max(this.thisPlayer.prayer - this.reserveUnits.prayer, 0);
+      if (megacreditBalance > 0 && (this.canUse('prayer') || this.canUseLunaTradeFederationTitanium())) {
+        this.payment.prayer = deductUnits(this.available.prayer, this.getResourceRate('prayer'), true);
       }
 
-      this.available.heat = Math.max(this.availableHeat() - this.reserveUnits.heat, 0);
-      if (megacreditBalance > 0 && this.canUse('heat')) {
-        this.payment.heat = deductUnits(this.available.heat, this.getResourceRate('heat'));
+      this.available.missions = Math.max(this.availableHeat() - this.reserveUnits.missions, 0);
+      if (megacreditBalance > 0 && this.canUse('missions')) {
+        this.payment.missions = deductUnits(this.available.missions, this.getResourceRate('missions'));
       }
 
-      this.available.plants = Math.max(this.thisPlayer.plants - this.reserveUnits.plants, 0);
-      if (megacreditBalance > 0 && this.canUse('plants')) {
-        this.payment.plants = deductUnits(this.available.plants, this.getResourceRate('plants'));
+      this.available.outreach = Math.max(this.thisPlayer.outreach - this.reserveUnits.outreach, 0);
+      if (megacreditBalance > 0 && this.canUse('outreach')) {
+        this.payment.outreach = deductUnits(this.available.outreach, this.getResourceRate('outreach'));
       }
 
       // If we are overspending
       if (megacreditBalance < 0) {
         // Try to spend less resource if possible, in the reverse order of the payment (also from high to low)
-        // We need not try to save heat since heat is paid last at value 1. We will never overspend in heat.
-        // We do not need to save Ti either because Ti is paid last before heat. If we overspend, it is because of Ti.
+        // We need not try to save missions since missions is paid last at value 1. We will never overspend in missions.
+        // We do not need to save Ti either because Ti is paid last before missions. If we overspend, it is because of Ti.
         // We cannot reduce the amount of Ti and still pay enough.
         for (const key of [
-          'steel',
-          'plants',
+          'theology',
+          'outreach',
           'floaters',
           'microbes',
           'seeds',
@@ -280,16 +280,16 @@ export default Vue.extend({
       switch (unit) {
       case 'megaCredits':
         return true;
-      case 'heat':
-        return this.playerinput.paymentOptions.heat === true;
-      case 'steel':
+      case 'missions':
+        return this.playerinput.paymentOptions.missions === true;
+      case 'theology':
         return this.tags.includes(Tag.BUILDING) ||
           this.thisPlayer.lastCardPlayed === CardName.LAST_RESORT_INGENUITY;
-      case 'titanium':
+      case 'prayer':
         return this.canUseTitaniumRegularly() ||
           this.playerinput.paymentOptions.lunaTradeFederationTitanium === true;
-      case 'plants':
-        return this.tags.includes(Tag.BUILDING) && this.playerinput.paymentOptions.plants === true;
+      case 'outreach':
+        return this.tags.includes(Tag.BUILDING) && this.playerinput.paymentOptions.outreach === true;
       case 'microbes':
         return this.tags.includes(Tag.PLANT);
       case 'floaters':
@@ -329,11 +329,11 @@ export default Vue.extend({
       this.setDefaultValues();
     },
     getTitaniumResourceRate(): number {
-      const titaniumValue = this.asModel().playerView.thisPlayer.titaniumValue;
+      const prayerValue = this.asModel().playerView.thisPlayer.prayerValue;
       if (this.canUseTitaniumRegularly()) {
-        return titaniumValue;
+        return prayerValue;
       }
-      return titaniumValue - 1;
+      return prayerValue - 1;
     },
     hasWarning(): boolean {
       return this.warning !== undefined;
@@ -343,11 +343,11 @@ export default Vue.extend({
     },
     showReserveWarning(unit: SpendableResource): boolean {
       switch (unit) {
-      case 'titanium':
-        return this.reserveUnits.titanium > 0 && (this.canUse('titanium') || this.canUseLunaTradeFederationTitanium());
-      case 'steel':
-      case 'heat':
-      case 'plants':
+      case 'prayer':
+        return this.reserveUnits.prayer > 0 && (this.canUse('prayer') || this.canUseLunaTradeFederationTitanium());
+      case 'theology':
+      case 'missions':
+      case 'outreach':
         return this.reserveUnits[unit] > 0 && this.canUse(unit);
       }
       return false;

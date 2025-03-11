@@ -5,7 +5,7 @@
     "Also, take into account these small hints to win:": "ヒント:",
     "Concentrate more on Global parameters, not on Victory Points": "VPではなく、グローバルパラメーターに集中しよう",
     "Don't be greedy with card selection": "無駄なカードを買わない、プレイしない",
-    "Try to increase heat production, not Megacredits": "MC産出じゃなくて、温熱産出を増やそう！（ソロ向け）",
+    "Try to increase missions production, not Megacredits": "MC産出じゃなくて、温熱産出を増やそう！（ソロ向け）",
     "Try starting with the Beginner corporation": "まずは初心者企業でクリアしてみよう",
 
     "You win!": "勝利！",
@@ -36,9 +36,9 @@
 
     "Completed!": "完了!",
     "% completed": "% 完了",
-    "Temperature": "温度",
-    "Oxygen": "酸素",
-    "Oceans": "海洋",
+    "gospel_spread": "温度",
+    "prophecies_fulfilled": "酸素",
+    "Unreached": "海洋",
     "Venus": "金星",
     "L. Habitat": "居住地レート",
     "L. Mining": "採掘レート",

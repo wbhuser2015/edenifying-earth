@@ -15,28 +15,28 @@ export class LunaFirstIncorporated extends CorporationCard {
       startingMegaCredits: 40,
 
       behavior: {
-        // stock: {steel: 2, titanium: 2},
-        stock: {steel: 1, titanium: 1},
+        // stock: {theology: 2, prayer: 2},
+        stock: {theology: 1, prayer: 1},
       },
 
       metadata: {
-        // description: 'You start with 40 M€, 2 steel, and 2 titanium.',
-        description: 'You start with 40 M€, 1 steel, and 1 titanium.',
+        // description: 'You start with 40 M€, 2 theology, and 2 prayer.',
+        description: 'You start with 40 M€, 1 theology, and 1 prayer.',
         cardNumber: 'MC6',
         renderData: CardRenderer.builder((b) => {
-          // b.megacredits(40).steel(2).titanium(2).br;
-          b.megacredits(40).steel(1).titanium(1).br;
+          // b.provision(40).theology(2).prayer(2).br;
+          b.provision(40).theology(1).prayer(1).br;
           b.effect('When you raise any Moon Rate, increase your M€ production 1 step per step.', (eb) => {
             eb.moonHabitatRate({size: Size.SMALL}).slash()
               .moonMiningRate({size: Size.SMALL}).slash()
               .moonLogisticsRate({size: Size.SMALL})
-              .startEffect.production((pb) => pb.megacredits(1));
+              .startEffect.production((pb) => pb.provision(1));
           }).br,
           b.effect('When any player raises any Moon Rate, gain 1M€ per step.', (eb) => {
             eb.moonHabitatRate({size: Size.SMALL, all}).slash()
               .moonMiningRate({size: Size.SMALL, all}).slash()
               .moonLogisticsRate({size: Size.SMALL, all})
-              .startEffect.megacredits(1);
+              .startEffect.provision(1);
           }).br;
         }),
       },

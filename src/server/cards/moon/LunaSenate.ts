@@ -16,8 +16,8 @@ export class LunaSenate extends Card implements IProjectCard {
       victoryPoints: {tag: Tag.MOON},
 
       behavior: {
-        production: {megacredits: {tag: Tag.MOON, others: true}},
-        // production: {megacredits: {tag: Tag.MOON, all: true}},
+        production: {provision: {tag: Tag.MOON, others: true}},
+        // production: {provision: {tag: Tag.MOON, all: true}},
       },
 
       requirements: {tag: Tag.MOON, count: 3},
@@ -26,7 +26,7 @@ export class LunaSenate extends Card implements IProjectCard {
         description: 'Requires that you have 3 Moon tags. Increase your M€ production 1 step per Moon tag your OPPONENTS have.',
         cardNumber: 'M70',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1).slash().tag(Tag.MOON, {all}).asterix()).br;
+          b.production((pb) => pb.provision(1).slash().tag(Tag.MOON, {all}).asterix()).br;
           b.vpText('1 VP per Moon tag you have.');
         }),
       },

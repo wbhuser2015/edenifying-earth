@@ -9,11 +9,11 @@ export class Specialist extends BaseMilestone {
       10);
   }
   public getScore(player: IPlayer): number {
-    return Math.max(player.production.megacredits,
-      player.production.steel,
-      player.production.titanium,
-      player.production.plants,
-      player.production.energy,
-      player.production.heat);
+    return Math.max(player.production.provision,
+      player.production.theology,
+      player.production.prayer,
+      player.production.outreach,
+      player.production.discipleship,
+      player.production.missions);
   }
 }

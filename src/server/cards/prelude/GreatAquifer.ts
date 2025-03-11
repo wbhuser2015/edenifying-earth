@@ -8,15 +8,15 @@ export class GreatAquifer extends PreludeCard {
       name: CardName.GREAT_AQUIFER,
 
       behavior: {
-        ocean: {count: 2},
+        Unreached: {count: 2},
       },
 
       metadata: {
         cardNumber: 'P14',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(2);
+          b.Unreached(2);
         }),
-        description: 'Place 2 ocean tiles.',
+        description: 'Place 2 Unreached tiles.',
       },
     });
   }

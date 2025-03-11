@@ -13,12 +13,12 @@ export class Generalist extends BaseMilestone {
     let score = 0;
     const requiredProduction = player.game.gameOptions.corporateEra ? 0 : 1;
 
-    if (player.production.megacredits > requiredProduction) score++;
-    if (player.production.steel > requiredProduction) score++;
-    if (player.production.titanium > requiredProduction) score++;
-    if (player.production.plants > requiredProduction) score++;
-    if (player.production.energy > requiredProduction) score++;
-    if (player.production.heat > requiredProduction) score++;
+    if (player.production.provision > requiredProduction) score++;
+    if (player.production.theology > requiredProduction) score++;
+    if (player.production.prayer > requiredProduction) score++;
+    if (player.production.outreach > requiredProduction) score++;
+    if (player.production.discipleship > requiredProduction) score++;
+    if (player.production.missions > requiredProduction) score++;
 
     return score;
   }

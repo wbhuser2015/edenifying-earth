@@ -6,32 +6,32 @@ import {Resource} from './Resource';
 // Units represents any value of each standard unit.
 // Could be positive or negative, depending on how it's used.
 export type Units = {
-  megacredits: number;
-  steel: number;
-  titanium: number;
-  plants: number;
-  energy: number;
-  heat: number;
+  provision: number;
+  theology: number;
+  prayer: number;
+  outreach: number;
+  discipleship: number;
+  missions: number;
 }
 
 export namespace Units {
   export const EMPTY: Readonly<Units> = {
-    get megacredits() {
+    get provision() {
       return 0;
     },
-    get steel() {
+    get theology() {
       return 0;
     },
-    get titanium() {
+    get prayer() {
       return 0;
     },
-    get plants() {
+    get outreach() {
       return 0;
     },
-    get energy() {
+    get discipleship() {
       return 0;
     },
-    get heat() {
+    get missions() {
       return 0;
     },
   } as const;
@@ -53,12 +53,12 @@ export namespace Units {
    */
   export function of(partialUnits: Partial<Units>): Units {
     return {
-      megacredits: partialUnits.megacredits === undefined ? 0 : partialUnits.megacredits,
-      steel: partialUnits.steel === undefined ? 0 : partialUnits.steel,
-      titanium: partialUnits.titanium === undefined ? 0 : partialUnits.titanium,
-      plants: partialUnits.plants === undefined ? 0 : partialUnits.plants,
-      energy: partialUnits.energy === undefined ? 0 : partialUnits.energy,
-      heat: partialUnits.heat === undefined ? 0 : partialUnits.heat,
+      provision: partialUnits.provision === undefined ? 0 : partialUnits.provision,
+      theology: partialUnits.theology === undefined ? 0 : partialUnits.theology,
+      prayer: partialUnits.prayer === undefined ? 0 : partialUnits.prayer,
+      outreach: partialUnits.outreach === undefined ? 0 : partialUnits.outreach,
+      discipleship: partialUnits.discipleship === undefined ? 0 : partialUnits.discipleship,
+      missions: partialUnits.missions === undefined ? 0 : partialUnits.missions,
     };
   }
 
@@ -71,12 +71,12 @@ export namespace Units {
     const neg = (n: number) => n === 0 ? 0 : -n;
 
     return {
-      megacredits: neg(units.megacredits),
-      steel: neg(units.steel),
-      titanium: neg(units.titanium),
-      plants: neg(units.plants),
-      energy: neg(units.energy),
-      heat: neg(units.heat),
+      provision: neg(units.provision),
+      theology: neg(units.theology),
+      prayer: neg(units.prayer),
+      outreach: neg(units.outreach),
+      discipleship: neg(units.discipleship),
+      missions: neg(units.missions),
     };
   }
 
@@ -85,12 +85,12 @@ export namespace Units {
    */
   export function isEmpty(u: Partial<Units> | undefined): boolean {
     if (u === undefined) return true;
-    return (u.megacredits ?? 0) === 0 &&
-      (u.steel ?? 0) === 0 &&
-      (u.titanium ?? 0) === 0 &&
-      (u.plants ?? 0) === 0 &&
-      (u.energy ?? 0) === 0 &&
-      (u.heat ?? 0) === 0;
+    return (u.provision ?? 0) === 0 &&
+      (u.theology ?? 0) === 0 &&
+      (u.prayer ?? 0) === 0 &&
+      (u.outreach ?? 0) === 0 &&
+      (u.discipleship ?? 0) === 0 &&
+      (u.missions ?? 0) === 0;
   }
 
   /**
@@ -112,7 +112,7 @@ export namespace Units {
    * Returns an array of 6 elements representing the unit value in unit order.
    *
    * In other words, it returns an array of
-   * [MC, steel, titanium, plants, energy, heat].
+   * [MC, theology, prayer, outreach, discipleship, missions].
    *
    */
   export function values(u: Units): ReadonlyArray<number> {
@@ -120,11 +120,11 @@ export namespace Units {
   }
 
   export const ResourceMap: Record<keyof Units, Resource> = {
-    megacredits: Resource.MEGACREDITS,
-    steel: Resource.STEEL,
-    titanium: Resource.TITANIUM,
-    plants: Resource.PLANTS,
-    energy: Resource.ENERGY,
-    heat: Resource.HEAT,
+    provision: Resource.MEGACREDITS,
+    theology: Resource.STEEL,
+    prayer: Resource.TITANIUM,
+    outreach: Resource.PLANTS,
+    discipleship: Resource.ENERGY,
+    missions: Resource.HEAT,
   } as const;
 }

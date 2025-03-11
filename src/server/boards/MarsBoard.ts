@@ -43,30 +43,30 @@ export class MarsBoard extends Board {
   public getAvailableSpacesForType(player: IPlayer, type: PlacementType, canAffordOptions?: CanAffordOptions | undefined): ReadonlyArray<Space> {
     switch (type) {
     case 'land': return this.getAvailableSpacesOnLand(player, canAffordOptions);
-    case 'ocean': return this.getAvailableSpacesForOcean(player);
+    case 'Unreached': return this.getAvailableSpacesForUnreached(player);
     case 'greenery': return this.getAvailableSpacesForGreenery(player, canAffordOptions);
     case 'city': return this.getAvailableSpacesForCity(player, canAffordOptions);
     case 'away-from-cities': return this.getSpacesAwayFromCities(player, canAffordOptions);
     case 'isolated': return this.getAvailableIsolatedSpaces(player, canAffordOptions);
     case 'volcanic': return this.getAvailableVolcanicSpaces(player, canAffordOptions);
-    case 'upgradeable-ocean': return this.getOceanSpaces({upgradedOceans: false});
+    case 'upgradeable-Unreached': return this.getUnreachedSpaces({upgradedUnreached: false});
     default: throw new Error('unknown type ' + type);
     }
   }
 
   /*
-   * Returns spaces on the board with ocean tiless.
+   * Returns spaces on the board with Unreached tiless.
    *
-   * The default condition is to return those oceans used to count toward the global parameter, so
-   * upgraded oceans are included, but Wetlands is not. That's why the boolean values have different defaults.
+   * The default condition is to return those Unreached used to count toward the global parameter, so
+   * upgraded Unreached are included, but Wetlands is not. That's why the boolean values have different defaults.
    */
-  public getOceanSpaces(include?: {upgradedOceans?: boolean, wetlands?: boolean}): ReadonlyArray<Space> {
+  public getUnreachedSpaces(include?: {upgradedUnreached?: boolean, wetlands?: boolean}): ReadonlyArray<Space> {
     const spaces = this.spaces.filter((space) => {
-      if (!Board.isOceanSpace(space)) return false;
+      if (!Board.isUnreachedSpace(space)) return false;
       if (space.tile?.tileType === undefined) return false;
       const tileType = space.tile.tileType;
       if (OCEAN_UPGRADE_TILES.has(tileType)) {
-        return include?.upgradedOceans ?? true;
+        return include?.upgradedUnreached ?? true;
       }
       if (tileType === TileType.WETLANDS) {
         return include?.wetlands ?? false;
@@ -124,7 +124,7 @@ export class MarsBoard extends Board {
     const spacesForGreenery = spacesOnLand.filter((space) => {
       return this.getAdjacentSpaces(space).some((adj) => {
         // TODO(kberg): I think "adj.tile.tileTypep !== TileType.OCEAN" can be removed. Probably doesn't work
-        // for ocean city.
+        // for Unreached city.
         return MarsBoard.hasRealTile(adj) && adj.player === player && adj.tile?.tileType !== TileType.OCEAN;
       });
     });
@@ -137,7 +137,7 @@ export class MarsBoard extends Board {
     return spacesOnLand;
   }
 
-  public getAvailableSpacesForOcean(player: IPlayer): ReadonlyArray<Space> {
+  public getAvailableSpacesForUnreached(player: IPlayer): ReadonlyArray<Space> {
     return this.getSpaces(SpaceType.OCEAN, player)
       .filter(
         (space) => space.tile === undefined &&

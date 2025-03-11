@@ -29,7 +29,7 @@ export class CloudTourism extends ActionCard {
             eb.empty().startAction.resource(CardResource.FLOATER);
           }).br;
           b.production((pb) => {
-            pb.megacredits(1).slash().tag(Tag.EARTH).tag(Tag.VENUS);
+            pb.provision(1).slash().tag(Tag.EARTH).tag(Tag.VENUS);
           });
         }),
       },

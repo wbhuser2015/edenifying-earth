@@ -28,7 +28,7 @@ export class Gaia extends CeoCard {
     AresHandler.ifAres(player.game, () => {
       const board = player.game.board;
       // For every tile placed on the board, grant all the adjacency bonuses for that tile.
-      // We do not exclude Ocean tiles because of things like Ocean Cities.
+      // We do not exclude Unreached tiles because of things like Unreached Cities.
       // We exclude all tiles that _do not_ have owners
       // We exlcude all hazard tiles. (Spaces with Hazard tiles can have players in weird edge cases, like with Land Claim)
       const tilesOnMars = board.spaces

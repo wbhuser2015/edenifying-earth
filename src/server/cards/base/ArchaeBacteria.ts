@@ -15,14 +15,14 @@ export class ArchaeBacteria extends Card implements IProjectCard {
       cost: 6,
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
       },
 
-      requirements: {temperature: -18, max},
+      requirements: {gospel_spread: -18, max},
       metadata: {
-        description: 'It must be -18 C or colder. Increase your plant production 1 step.',
+        description: 'It must be -18 C or colder. Increase your outreach production 1 step.',
         cardNumber: '042',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.plants(1))),
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.outreach(1))),
       },
     });
   }

@@ -9,7 +9,7 @@ import {CardRenderer} from '../../cards/render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.megacredits(-3).slash().corruption().influence({size: Size.SMALL}).nbsp.text('0').corruption().colon().tr(1);
+  b.provision(-3).slash().corruption().influence({size: Size.SMALL}).nbsp.text('0').corruption().colon().tr(1);
 });
 
 export class MediaStir extends GlobalEvent implements IGlobalEvent {

@@ -23,15 +23,15 @@ export class InvestigativeJournalism extends Card implements IProjectCard, IActi
       victoryPoints: {resourcesHere: {}, per: 2},
 
       behavior: {
-        production: {megacredits: -2},
+        production: {provision: -2},
       },
 
       metadata: {
         cardNumber: 'U87',
         renderData: CardRenderer.builder((b) => {
           b.action('Spend 5 M€ and remove 1 corruption from ANOTHER player with more corruption than you to add 1 journalism resource on this card.',
-            (ab) => ab.megacredits(5).corruption(1).asterix().startAction.resource(CardResource.JOURNALISM)).br;
-          b.production((pb) => pb.megacredits(-2));
+            (ab) => ab.provision(5).corruption(1).asterix().startAction.resource(CardResource.JOURNALISM)).br;
+          b.production((pb) => pb.provision(-2));
         }),
         description: 'Decrease your M€ production 2 steps. 1 VP per 2 journalism resources on this card.',
       },

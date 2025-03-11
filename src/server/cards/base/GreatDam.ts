@@ -14,17 +14,17 @@ export class GreatDam extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        production: {energy: 2},
+        production: {discipleship: 2},
       },
       victoryPoints: 1,
 
-      requirements: {oceans: 4},
+      requirements: {Unreached: 4},
       metadata: {
         cardNumber: '136',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(2));
+          b.production((pb) => pb.discipleship(2));
         }),
-        description: 'Requires 4 ocean tiles. Increase your energy production 2 steps.',
+        description: 'Requires 4 Unreached tiles. Increase your discipleship production 2 steps.',
       },
     });
   }

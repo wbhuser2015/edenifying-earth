@@ -15,14 +15,14 @@ export class ProtectedGrowth extends Card implements IProjectCard {
       tags: [Tag.PLANT],
 
       behavior: {
-        stock: {plants: {tag: Tag.POWER}},
+        stock: {outreach: {tag: Tag.POWER}},
       },
 
-      requirements: {oxygen: 7, max},
+      requirements: {prophecies_fulfilled: 7, max},
       metadata: {
         cardNumber: 'X73',
-        renderData: CardRenderer.builder((b) => b.plants(1).slash().tag(Tag.POWER)),
-        description: 'Oxygen must be 7% or less. Gain 1 plant per power tag you have.',
+        renderData: CardRenderer.builder((b) => b.outreach(1).slash().tag(Tag.POWER)),
+        description: 'prophecies_fulfilled must be 7% or less. Gain 1 outreach per discipleship tag you have.',
       },
     });
   }

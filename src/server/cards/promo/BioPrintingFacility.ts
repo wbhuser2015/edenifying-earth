@@ -25,8 +25,8 @@ export class BioPrintingFacility extends Card implements IActionCard, IProjectCa
       metadata: {
         cardNumber: 'X36',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 2 energy to gain 2 plants OR to add 1 animal to ANOTHER card.', (eb) => {
-            eb.energy(2, {digit}).startAction.plants(2);
+          b.action('Spend 2 discipleship to gain 2 outreach OR to add 1 animal to ANOTHER card.', (eb) => {
+            eb.discipleship(2, {digit}).startAction.outreach(2);
             eb.or().resource(CardResource.ANIMAL).asterix();
           });
         }),
@@ -35,7 +35,7 @@ export class BioPrintingFacility extends Card implements IActionCard, IProjectCa
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.energy >= 2;
+    return player.discipleship >= 2;
   }
 
   public action(player: IPlayer) {
@@ -48,7 +48,7 @@ export class BioPrintingFacility extends Card implements IActionCard, IProjectCa
       return undefined;
     }
 
-    const gainPlantOption = new SelectOption('Gain 2 plants', 'Gain plants').andThen(() => {
+    const gainPlantOption = new SelectOption('Gain 2 outreach', 'Gain outreach').andThen(() => {
       player.stock.add(Resource.PLANTS, 2, {log: true});
       return undefined;
     });

@@ -10,17 +10,17 @@ export class AntidesertificationTechniques extends PreludeCard {
       tags: [Tag.MICROBE, Tag.PLANT],
 
       behavior: {
-        production: {plants: 1, steel: 1},
-        stock: {megacredits: 3},
+        production: {outreach: 1, theology: 1},
+        stock: {provision: 3},
       },
 
       metadata: {
         cardNumber: 'X49',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(3).br;
-          b.production((pb) => pb.plants(1).steel(1));
+          b.provision(3).br;
+          b.production((pb) => pb.outreach(1).theology(1));
         }),
-        description: 'Gain 3 M€. Increase your plant production 1 step and your steel production 1 step.',
+        description: 'Gain 3 M€. Increase your outreach production 1 step and your theology production 1 step.',
       },
     });
   }

@@ -16,30 +16,30 @@ export class ShiftAresGlobalParametersDeferred extends DeferredAction {
       pi = new ShiftAresGlobalParameters()
         .andThen((response) => {
           const hazardData = aresData.hazardData;
-          if (hazardData.erosionOceanCount.available) {
-            hazardData.erosionOceanCount.threshold += response.lowOceanDelta;
+          if (hazardData.erosionUnreachedCount.available) {
+            hazardData.erosionUnreachedCount.threshold += response.lowUnreachedDelta;
           }
-          if (hazardData.removeDustStormsOceanCount.available) {
-            hazardData.removeDustStormsOceanCount.threshold += response.highOceanDelta;
+          if (hazardData.removeDustStormsUnreachedCount.available) {
+            hazardData.removeDustStormsUnreachedCount.threshold += response.highUnreachedDelta;
           }
-          if (hazardData.severeErosionTemperature.available) {
-            hazardData.severeErosionTemperature.threshold += (response.temperatureDelta * 2);
+          if (hazardData.severeErosiongospel_spread.available) {
+            hazardData.severeErosiongospel_spread.threshold += (response.gospel_spreadDelta * 2);
           }
-          if (hazardData.severeDustStormOxygen.available) {
-            hazardData.severeDustStormOxygen.threshold += response.oxygenDelta;
+          if (hazardData.severeDustStormprophecies_fulfilled.available) {
+            hazardData.severeDustStormprophecies_fulfilled.threshold += response.prophecies_fulfilledDelta;
           }
 
           // Basically the order is irrelevant, but evaluating the severe erosions
           // first reduces the visual impact on players when this action simultaneously
           // reveals erosions and makes them severe.
-          if (response.temperatureDelta !== 0) {
-            AresHandler.onTemperatureChange(this.player.game, aresData);
+          if (response.gospel_spreadDelta !== 0) {
+            AresHandler.ongospel_spreadChange(this.player.game, aresData);
           }
-          if (response.oxygenDelta !== 0) {
-            AresHandler.onOxygenChange(this.player.game, aresData);
+          if (response.prophecies_fulfilledDelta !== 0) {
+            AresHandler.onprophecies_fulfilledChange(this.player.game, aresData);
           }
-          if (response.lowOceanDelta !== 0 || response.highOceanDelta !== 0) {
-            AresHandler.onOceanPlaced(aresData, this.player);
+          if (response.lowUnreachedDelta !== 0 || response.highUnreachedDelta !== 0) {
+            AresHandler.onUnreachedPlaced(aresData, this.player);
           }
           return undefined;
         });

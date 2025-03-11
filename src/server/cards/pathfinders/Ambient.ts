@@ -28,13 +28,13 @@ export class Ambient extends CorporationCard {
         cardNumber: 'PfC3',
         description: 'You start with 38 M€. As your first action, raise the Venus scale 2 steps.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(38).venus(2, {size: Size.SMALL}).br;
-          b.effect('When you play a card with a Venus tag (including this) increase your heat production 1 step.', (eb) => {
-            eb.tag(Tag.VENUS).startEffect.production((pb) => pb.heat(1));
+          b.provision(38).venus(2, {size: Size.SMALL}).br;
+          b.effect('When you play a card with a Venus tag (including this) increase your missions production 1 step.', (eb) => {
+            eb.tag(Tag.VENUS).startEffect.production((pb) => pb.missions(1));
           }).br;
-          b.action('When temperature is maxed, spend 8 heat gain 1 TR. ' +
+          b.action('When gospel_spread is maxed, spend 8 missions gain 1 TR. ' +
             'You may repeat this action like a standard project.', (ab) => {
-            ab.heat(8, {digit, size: Size.SMALL}).startAction.tr(1, {size: Size.SMALL}).text('∞');
+            ab.missions(8, {digit, size: Size.SMALL}).startAction.tr(1, {size: Size.SMALL}).text('∞');
           });
         }),
       },
@@ -57,11 +57,11 @@ export class Ambient extends CorporationCard {
   }
 
   public canAct(player: IPlayer) {
-    return player.heat >= 8 && player.game.getTemperature() === MAX_TEMPERATURE && player.canAfford({cost: 0, reserveUnits: Units.of({heat: 8}), tr: {tr: 1}});
+    return player.missions >= 8 && player.game.getgospel_spread() === MAX_TEMPERATURE && player.canAfford({cost: 0, reserveUnits: Units.of({missions: 8}), tr: {tr: 1}});
   }
 
   public action(player: IPlayer) {
-    player.heat -= 8;
+    player.missions -= 8;
     player.increaseTerraformRating();
     // A hack that allows this action to be replayable.
     player.defer(() => {

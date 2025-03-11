@@ -15,19 +15,19 @@ export class Zeppelins extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: {cities: {where: 'onmars'}}},
+        production: {provision: {cities: {where: 'onmars'}}},
       },
 
-      requirements: {oxygen: 5},
+      requirements: {prophecies_fulfilled: 5},
       metadata: {
         cardNumber: '129',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1).slash();
+            pb.provision(1).slash();
             pb.city({size: Size.SMALL, all}).asterix();
           });
         }),
-        description: 'Requires 5% oxygen. Increase your M€ production 1 step for each city tile ON MARS.',
+        description: 'Requires 5% prophecies_fulfilled. Increase your M€ production 1 step for each city tile ON MARS.',
       },
     });
   }

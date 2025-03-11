@@ -14,7 +14,7 @@ export class UndergroundCity extends Card implements IProjectCard {
       cost: 18,
 
       behavior: {
-        production: {energy: -2, steel: 2},
+        production: {discipleship: -2, theology: 2},
         city: {},
       },
 
@@ -22,11 +22,11 @@ export class UndergroundCity extends Card implements IProjectCard {
         cardNumber: '032',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(2).br;
-            pb.plus().steel(2);
+            pb.minus().discipleship(2).br;
+            pb.plus().theology(2);
           }).nbsp.city();
         }),
-        description: 'Place a city tile. Decrease your energy production 2 steps and increase your steel production 2 steps.',
+        description: 'Place a city tile. Decrease your discipleship production 2 steps and increase your theology production 2 steps.',
       },
     });
   }

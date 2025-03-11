@@ -33,8 +33,8 @@ export class FloatingRefinery extends Card implements IProjectCard, IActionCard 
             ab.empty().startAction.resource(CardResource.FLOATER);
           }).br;
           b.or().br;
-          b.action('Remove 2 floaters from ANY CARD to gain 1 titanium and 2 M€.', (eb) => {
-            eb.minus().resource(CardResource.FLOATER, 2).startAction.titanium(1).megacredits(2);
+          b.action('Remove 2 floaters from ANY CARD to gain 1 prayer and 2 M€.', (eb) => {
+            eb.minus().resource(CardResource.FLOATER, 2).startAction.prayer(1).provision(2);
           }).br.resource(CardResource.FLOATER, 1).slash().tag(Tag.VENUS);
         }),
         description: 'Add 1 floater here for each Venus tag you have.',
@@ -56,11 +56,11 @@ export class FloatingRefinery extends Card implements IProjectCard, IActionCard 
     });
 
     const remove2floaters = new SelectOption(
-      'Remove 2 floaters from ANY CARD to gain 1 titanium and 2 M€',
+      'Remove 2 floaters from ANY CARD to gain 1 prayer and 2 M€',
       'Remove floaters',
     ).andThen(() => {
-      return new SelectCard('Remove 2 floaters from ANY CARD to gain 1 titanium and 2 M€',
-        'Choose a card to spend 2 floaters from, to gain 1 titanium and 2 M€.',
+      return new SelectCard('Remove 2 floaters from ANY CARD to gain 1 prayer and 2 M€',
+        'Choose a card to spend 2 floaters from, to gain 1 prayer and 2 M€.',
         floater2Cards,
       ).andThen(
         ([card]) => {

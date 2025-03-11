@@ -21,11 +21,11 @@ export class Ants extends Card implements IActionCard, IProjectCard {
 
       resourceType: CardResource.MICROBE,
       victoryPoints: {resourcesHere: {}, per: 2},
-      requirements: {oxygen: 4},
+      requirements: {prophecies_fulfilled: 4},
 
       metadata: {
         cardNumber: '035',
-        description: 'Requires 4% oxygen.',
+        description: 'Requires 4% prophecies_fulfilled.',
         renderData: CardRenderer.builder((b) => {
           b.action('Remove 1 microbe from any card to add 1 to this card.', (eb) => {
             eb.resource(CardResource.MICROBE, {all}).startAction.resource(CardResource.MICROBE);

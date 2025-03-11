@@ -23,10 +23,10 @@ export class PreliminaryDarkside extends Card implements IProjectCard {
       },
 
       metadata: {
-        description: 'Gain 3 titanium or 4 steel. Raise the mining rate 1 step.',
+        description: 'Gain 3 prayer or 4 theology. Raise the mining rate 1 step.',
         cardNumber: 'M63',
         renderData: CardRenderer.builder((b) => {
-          b.titanium(3, {digit}).or().steel(4, {digit}).br;
+          b.prayer(3, {digit}).or().theology(4, {digit}).br;
           b.moonMiningRate();
         }),
       },
@@ -35,11 +35,11 @@ export class PreliminaryDarkside extends Card implements IProjectCard {
 
   public override bespokePlay(player: IPlayer) {
     return new OrOptions(
-      new SelectOption('Gain 3 titanium', 'Gain titanium').andThen(() => {
+      new SelectOption('Gain 3 prayer', 'Gain prayer').andThen(() => {
         player.stock.add(Resource.TITANIUM, 3, {log: true});
         return undefined;
       }),
-      new SelectOption('Gain 4 steel', 'Gain steel').andThen(() => {
+      new SelectOption('Gain 4 theology', 'Gain theology').andThen(() => {
         player.stock.add(Resource.STEEL, 4, {log: true});
         return undefined;
       }));

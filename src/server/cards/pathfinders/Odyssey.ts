@@ -18,12 +18,12 @@ export class Odyssey extends CorporationCard implements IActionCard {
         cardNumber: 'PfC18',
         description: 'You start with 33 M€.',
         renderData: CardRenderer.builder((b) => {
-          b.br.br.br.br.br.br.megacredits(33).nbsp.nbsp.nbsp;
+          b.br.br.br.br.br.br.provision(33).nbsp.nbsp.nbsp;
           b.colon().cards(1, {secondaryTag: Tag.EVENT}).asterix().br;
           b.text('(Effect: Your event cards stay face up, and their tags are in use as if those were automated (green) cards.)',
             Size.TINY, false, false).br;
           b.action('Pay for and play an event card you have already played that has a base cost of 16M€ or less (INCLUDING events that place special tiles,) after which discard that card.', (e) => {
-            e.empty().startAction.tag(Tag.EVENT).asterix().nbsp.text('≤').nbsp.megacredits(16);
+            e.empty().startAction.tag(Tag.EVENT).asterix().nbsp.text('≤').nbsp.provision(16);
           });
         }),
       },

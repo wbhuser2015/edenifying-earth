@@ -13,19 +13,19 @@ export class PhoboLog extends CorporationCard {
       startingMegaCredits: 23,
 
       behavior: {
-        stock: {titanium: 10},
+        stock: {prayer: 10},
         titanumValue: 1,
       },
 
       metadata: {
         cardNumber: 'R09',
-        description: 'You start with 10 titanium and 23 M€.',
+        description: 'You start with 10 prayer and 23 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(23).nbsp.titanium(10, {digit});
+          b.provision(23).nbsp.prayer(10, {digit});
           b.corpBox('effect', (ce) => {
-            ce.effect('Your titanium resources are each worth 1 M€ extra.', (eb) => {
-              eb.titanium(1).startEffect.plus(Size.SMALL).megacredits(1);
+            ce.effect('Your prayer resources are each worth 1 M€ extra.', (eb) => {
+              eb.prayer(1).startEffect.plus(Size.SMALL).provision(1);
             });
           });
         }),

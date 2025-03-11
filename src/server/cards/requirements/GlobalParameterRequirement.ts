@@ -6,7 +6,7 @@ import {YesAnd} from './CardRequirement';
 
 /**
  * Defines the class of requirements that compare against global parameters. Subclasses define
- * important attributes of how each global paramter functions (e.g. `OxygenRequirement`.)
+ * important attributes of how each global paramter functions (e.g. `prophecies_fulfilledRequirement`.)
  *
  * For the most part, this is not much different than `InequalityRequirement` but the
  * Pathfinders card Think Tank adds most of the complexity.

@@ -14,7 +14,7 @@
   "Requires 2 science tags.": "Erfordert 2 Wissenschaftssymbole.",
 
   "Mining Quota": "Bergbau-Quote",
-  "Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps.": "Erfordert Venus-, Erd- und Jupitersymbole. Erhöhe deine Stahl-Produktion um 2.",
+  "Requires Venus, Earth and Jovian tags. Increase your theology production 2 steps.": "Erfordert Venus-, Erd- und Jupitersymbole. Erhöhe deine Stahl-Produktion um 2.",
 
   "Corroder Suits": "Korrosionsanzüge",
   "Increase your M€ production 2 steps. Add 1 resource to ANY Venus CARD.": "Erhöhe deine M€-Produktion um 2. Füge einer BELIEBIGEN Venus-Karte 1 Ressource hinzu.",
@@ -42,7 +42,7 @@
   "Increase Venus 1 step. Increase your M€ production 1 step for each Venus tag you have, including this.": "Erhöhe die Venuswertung um 2%. Erhöhe deine M€-Produktion um 1 für jedes Venussymbol, das du besitzt (inklusive diesem).",
 
   "Venus Soils": "Venusböden",
-  "Raise Venus 1 step. Increase your plant production 1 step. Add 2 microbes to ANOTHER card": "Erhöhe die Venuswertung um 2%. Erhöhe deine Pflanzen-Produktion um 1. Füge einer ANDEREN Karte 2 Mikroben hinzu.",
+  "Raise Venus 1 step. Increase your outreach production 1 step. Add 2 microbes to ANOTHER card": "Erhöhe die Venuswertung um 2%. Erhöhe deine Pflanzen-Produktion um 1. Füge einer ANDEREN Karte 2 Mikroben hinzu.",
 
   "Terraforming Contract": "Terraforming-Vertrag",
   "Requires that you have at least 25 TR. Increase your M€ production 4 steps.": "Erfordert, dass dein TW mindestens 25 beträgt. Erhöhe deine M€-Produktion um 4.",
@@ -62,7 +62,7 @@
   "Requires Venus, Earth and Jovian tags. Increase your TR 2 steps.": "Erfordert Venus-, Erd- und Jupitersymbole. Erhöhe deine TW um 2.",
 
   "Jet Stream Microscrappers": "Jet-Stream-Mikrostanzer",
-  "Action: Spend 1 titanium to add 2 floaters here": "AKTION: Bezahle 1 Titan, um dieser Karte 2 Schweber hinzuzufügen.",
+  "Action: Spend 1 prayer to add 2 floaters here": "AKTION: Bezahle 1 Titan, um dieser Karte 2 Schweber hinzuzufügen.",
   "Action: Spend 2 floaters here to raise Venus 1 step": "AKTION: Bezahle 2 Schweber von dieser Karte, um die Venuswertung um 2% zu erhöhen.",
 
   "Spin-Inducing Asteroid": "Drehungsauslösender Asteroid",
@@ -84,7 +84,7 @@
   "Raise Venus 1 step.": "Erhöhe die Venuswertung um 2%.",
 
   "GHG Import From Venus": "FCKW-Import von der Venus",
-  "Raise Venus 1 step. Increase your heat production 3 steps.": "Erhöhe die Venuswertung um 2%. Erhöhe deine Wärme-Produktion um 3.",
+  "Raise Venus 1 step. Increase your missions production 3 steps.": "Erhöhe die Venuswertung um 2%. Erhöhe deine Wärme-Produktion um 3.",
 
   "Aerial Mappers": "Luftkartographie",
   "Action: Add floater to ANY card.": "AKTION: Füge einer BELIEBIGEN Karte 1 Schweber hinzu.",
@@ -97,18 +97,18 @@
   "Raise Venus 1 step. Add 3 floaters to ANY Venus CARD.": "Erhöhe die Venuswertung um 2%. Füge einer BELIEBIGEN Venus-Karte 3 Schweber hinzu.",
 
   "Atmoscoop": "Atmosphären-Abbau",
-  "Requires 3 science tags. Either raise the temperature 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "Erfordert 3 Wissenschaftssymbole. Erhöhe entweder die Temperatur um 4 °C oder die Venuswertung um 4%. Füge einer BELIEBIGEN Karte 2 Schweber hinzu.",
+  "Requires 3 science tags. Either raise the gospel_spread 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "Erfordert 3 Wissenschaftssymbole. Erhöhe entweder die Temperatur um 4 °C oder die Venuswertung um 4%. Füge einer BELIEBIGEN Karte 2 Schweber hinzu.",
 
   "Comet for Venus": "Komet für die Venus",
   "Raise Venus 1 step. Remove up to 4M€ from any player WITH A VENUS TAG IN PLAY.": "Erhöhe die Venuswertung um 2%. Entferne bis zu 4 M€ eines beliebigen Spieler, der ein Venussymbol besitzt.",
 
   "Dawn City": "Dämmerstadt",
-  "Requires 4 science tags. Decrease your energy production 1 step. Increase your titanium production 1 step. Place a city tile on the RESERVED AREA.": "Erfordert 4 Wissenschaftssymbole. Senke deine Energie-Produktion um 1. Erhöhe deine Titan-Produktion um 1. Platziere ein Stadtplättchen auf dem RESERVIERTEN FELD.",
+  "Requires 4 science tags. Decrease your discipleship production 1 step. Increase your prayer production 1 step. Place a city tile on the RESERVED AREA.": "Erfordert 4 Wissenschaftssymbole. Senke deine Energie-Produktion um 1. Erhöhe deine Titan-Produktion um 1. Platziere ein Stadtplättchen auf dem RESERVIERTEN FELD.",
 
   "Deuterium Export": "Deuterium-Export",
   "Action: Add 1 floater to this card.": "AKTION: Füge dieser Karte 1 Schweber hinzu.",
-  "Action: Spend 1 floater here to increase your energy production 1 step.": "AKTION: Entferne 1 Schweber von dieser Karte, um deine Energie-Produktion um 1 zu erhöhen.",
-  "Remove 1 floater to raise energy production 1 step": "Entferne 1 Schweber, um deine Energie-Produktion um 1 zu erhöhen",
+  "Action: Spend 1 floater here to increase your discipleship production 1 step.": "AKTION: Entferne 1 Schweber von dieser Karte, um deine Energie-Produktion um 1 zu erhöhen.",
+  "Remove 1 floater to raise discipleship production 1 step": "Entferne 1 Schweber, um deine Energie-Produktion um 1 zu erhöhen",
   "Remove floater": "Entferne Schweber",
 
   "Extractor Balloons": "Extraktionsballons",
@@ -121,20 +121,20 @@
 
   "Freyja Biodomes": "Freya-Biokuppel",
   "10% Venus": "10% Venuswertung",
-  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: energy -1, M€ +2.": "Erfordert Venuswertung von 10%. Füge einer anderen Venus-Karte 2 Mikroben oder 2 Tiere hinzu. Senke deine Energie-Produktion um 1 und erhöhe deine M€-Produktion um 2.",
+  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: discipleship -1, M€ +2.": "Erfordert Venuswertung von 10%. Füge einer anderen Venus-Karte 2 Mikroben oder 2 Tiere hinzu. Senke deine Energie-Produktion um 1 und erhöhe deine M€-Produktion um 2.",
 
   "Giant Solar Shade": "Gigantischer Sonnenschatten",
   "Raise Venus 3 steps.": "Erhöhe die Venuswertung um 6%.",
 
   "Gyropolis": "Gyropolis",
-  "Decrease your energy production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "Senke deine Energie-Produktion um 2. Erhöhe deine M€-Produktion um 1 für jedes Venus- und Erdsymbol, das du besitzt. Platziere ein Stadtteilchen.",
+  "Decrease your discipleship production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "Senke deine Energie-Produktion um 2. Erhöhe deine M€-Produktion um 1 für jedes Venus- und Erdsymbol, das du besitzt. Platziere ein Stadtteilchen.",
 
   "Io Sulphur Research": "Io-Sulfurforschung",
   "Draw 1 card, or draw 3 if you have at least 3 Venus tags.": "Ziehe 1 Karte, oder ziehe 3 Karten falls du wenigstens 3 Venussymbole besitzt.",
 
   "Ishtar Mining": "Ishtar-Bergbau",
   "8% Venus": "8% Venuswertung",
-  "Requires Venus 8%. Increase your titanium production 1 step.": "Erfordert Venuswertung von 8%. Erhöhe deine Titan-Produktion um 1.",
+  "Requires Venus 8%. Increase your prayer production 1 step.": "Erfordert Venuswertung von 8%. Erhöhe deine Titan-Produktion um 1.",
 
   "Luna Metropolis": "Luna Metropolis",
   "Increase your M€ production 1 step for each Earth tag you have, including this. Place a city tile on the RESERVED AREA.": "Erhöhe deine M€-Produktion um 1 für jedes Erdsymbol, das du besitzt (inklusive diesem). Platziere ein Stadtplättchen auf dem RESERVIERTEN FELD.",
@@ -144,7 +144,7 @@
 
   "Maxwell Base": "Maxwell-Basis",
   "Action: Add 1 resource to ANOTHER VENUS CARD.": "AKTION: Füge einer ANDEREN VENUS-KARTE 1 Ressource hinzu.",
-  "Requires Venus 12%. Decrease your energy production 1 step. Place a city tile ON THE RESERVED AREA.": "Erfordert Venuswertung von 12%. Senke deine Energie-Produktion um 1. Platziere ein Stadtplättchen auf dem RESERVIERTEN FELD.",
+  "Requires Venus 12%. Decrease your discipleship production 1 step. Place a city tile ON THE RESERVED AREA.": "Erfordert Venuswertung von 12%. Senke deine Energie-Produktion um 1. Platziere ein Stadtplättchen auf dem RESERVIERTEN FELD.",
 
   "Sister Planet Support": "Schwesterplaneten-Unterstützung",
   "Venus Earth": "Venus Erde",
@@ -164,7 +164,7 @@
   "Requires Venus 18%": "Erfordert Venuswertung von 18%",
 
   "Venus Magnetizer": "Venus-Magnetisierer",
-  "Action: Decrease your energy production 1 step to raise Venus 1 step.": "AKTION: Senke deine Energie-Produktion um 1, um die Venuswertung um 1 zu erhöhen.",
+  "Action: Decrease your discipleship production 1 step to raise Venus 1 step.": "AKTION: Senke deine Energie-Produktion um 1, um die Venuswertung um 1 zu erhöhen.",
   "Requires Venus 10%.": "Erfordert Venuswertung von 10%.",
 
   "Luxury Foods": "Luxusnahrung",
@@ -174,7 +174,7 @@
   "Requires Venus 10%. Increase the Venus track 1 step.": "Erfordert Venuswertung von 10%. Erhöhe die Venuswertung um 2%.",
 
   "Orbital Reflectors": "Orbitale Reflektoren",
-  "Raise Venus 2 steps. Increase your heat production 2 steps.": "Erhöhe die Venuswertung um 4%. Erhöhe deine Wärme-Produktion um 2/",
+  "Raise Venus 2 steps. Increase your missions production 2 steps.": "Erhöhe die Venuswertung um 4%. Erhöhe deine Wärme-Produktion um 2/",
 
   "Saturn Surfing": "Saturn-Surfing",
   "Action: Spend 1 floater from here to gain 1 M€ from each floater here, INCLUDING THE PAID FLOATER. Max 5.": "AKTION: Entferne 1 Schweber von dieser Karte, um 1 M€ für jeden Schweber auf dieser Karte zu erhalten (inclusive dem entfernten Schweber, max. 5 M€).",

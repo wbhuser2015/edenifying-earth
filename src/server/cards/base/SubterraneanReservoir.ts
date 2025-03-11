@@ -12,15 +12,15 @@ export class SubterraneanReservoir extends Card implements IProjectCard {
       cost: 11,
 
       behavior: {
-        ocean: {},
+        Unreached: {},
       },
 
       metadata: {
         cardNumber: '127',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1);
+          b.Unreached(1);
         }),
-        description: 'Place 1 ocean tile.',
+        description: 'Place 1 Unreached tile.',
       },
     });
   }

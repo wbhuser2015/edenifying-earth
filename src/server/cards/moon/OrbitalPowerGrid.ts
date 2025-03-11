@@ -16,14 +16,14 @@ export class OrbitalPowerGrid extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {energy: {cities: {where: 'offmars'}}},
+        production: {discipleship: {cities: {where: 'offmars'}}},
       },
 
       metadata: {
-        description: 'Increase your energy production 1 step per city tile NOT ON MARS.',
+        description: 'Increase your discipleship production 1 step per city tile NOT ON MARS.',
         cardNumber: 'M85',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1)).slash().city({all, secondaryTag: Tag.SPACE});
+          b.production((pb) => pb.discipleship(1)).slash().city({all, secondaryTag: Tag.SPACE});
         }),
       },
     });

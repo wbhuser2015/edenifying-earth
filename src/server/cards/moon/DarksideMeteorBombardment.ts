@@ -14,15 +14,15 @@ export class DarksideMeteorBombardment extends Card implements IProjectCard {
       cost: 20,
 
       behavior: {
-        stock: {steel: 2, titanium: 2},
+        stock: {theology: 2, prayer: 2},
         moon: {miningRate: 2},
       },
 
       metadata: {
-        description: 'Gain 2 steel and 2 titanium. Raise the mining rate 2 steps.',
+        description: 'Gain 2 theology and 2 prayer. Raise the mining rate 2 steps.',
         cardNumber: 'M33',
         renderData: CardRenderer.builder((b) => {
-          b.steel(2).titanium(2);
+          b.theology(2).prayer(2);
           b.br;
           b.moonMiningRate({amount: 2});
         }),

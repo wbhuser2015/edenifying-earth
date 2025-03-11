@@ -18,13 +18,13 @@ export class MartianMonuments extends Card implements IProjectCard {
       requirements: {cities: 1, text: 'ON MARS'},
 
       behavior: {
-        production: {megacredits: {tag: Tag.MARS}},
+        production: {provision: {tag: Tag.MARS}},
       },
 
       metadata: {
         cardNumber: 'Pf09',
         renderData: CardRenderer.builder((b) => {
-          b.production(((pb) => pb.megacredits(1))).slash().tag(Tag.MARS);
+          b.production(((pb) => pb.provision(1))).slash().tag(Tag.MARS);
         }),
         description: 'Requires that you own a city ON MARS. Raise your M€ production 1 step for every Mars tag you own (including this.)',
       },

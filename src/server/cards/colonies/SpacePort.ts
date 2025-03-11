@@ -14,7 +14,7 @@ export class SpacePort extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {energy: -1, megacredits: 4},
+        production: {discipleship: -1, provision: 4},
         colonies: {addTradeFleet: 1},
         city: {},
       },
@@ -24,12 +24,12 @@ export class SpacePort extends Card implements IProjectCard {
         cardNumber: 'C39',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(4);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(4);
           }).nbsp.city().br;
           b.tradeFleet();
         }),
-        description: 'Requires 1 colony. Decrease your energy production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.',
+        description: 'Requires 1 colony. Decrease your discipleship production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.',
       },
     });
   }

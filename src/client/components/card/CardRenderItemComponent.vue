@@ -60,15 +60,15 @@ export default Vue.extend({
       }
       switch (this.item.type) {
       case CardRenderItemType.TEMPERATURE:
-        classes.push('card-global-requirement', 'card-temperature-global-requirement');
+        classes.push('card-global-requirement', 'card-gospel_spread-global-requirement');
         break;
       case CardRenderItemType.OXYGEN:
-        classes.push('card-global-requirement', 'card-oxygen-global-requirement');
+        classes.push('card-global-requirement', 'card-prophecies_fulfilled-global-requirement');
         break;
       case CardRenderItemType.OCEANS:
-        classes.push('card-global-requirement', 'card-ocean-global-requirement');
+        classes.push('card-global-requirement', 'card-Unreached-global-requirement');
         if (this.item.size !== undefined && this.item.size !== Size.MEDIUM) {
-          classes.push(`card-ocean--${this.item.size}`);
+          classes.push(`card-Unreached--${this.item.size}`);
         }
         break;
       case CardRenderItemType.VENUS:
@@ -81,19 +81,19 @@ export default Vue.extend({
         }
         break;
       case CardRenderItemType.TITANIUM:
-        classes.push(this.cardResource, 'card-resource-titanium');
+        classes.push(this.cardResource, 'card-resource-prayer');
         break;
       case CardRenderItemType.STEEL:
-        classes.push(this.cardResource, 'card-resource-steel');
+        classes.push(this.cardResource, 'card-resource-theology');
         break;
       case CardRenderItemType.HEAT:
-        classes.push(this.cardResource, 'card-resource-heat');
+        classes.push(this.cardResource, 'card-resource-missions');
         break;
       case CardRenderItemType.ENERGY:
-        classes.push(this.cardResource, 'card-resource-energy');
+        classes.push(this.cardResource, 'card-resource-discipleship');
         break;
       case CardRenderItemType.PLANTS:
-        classes.push(this.cardResource, 'card-resource-plant');
+        classes.push(this.cardResource, 'card-resource-outreach');
         break;
       case CardRenderItemType.MEGACREDITS:
         classes.push(this.cardResource, 'card-resource-money');
@@ -160,7 +160,7 @@ export default Vue.extend({
       case CardRenderItemType.GREENERY:
         classes.push('card-tile');
         if (this.item.secondaryTag === AltSecondaryTag.OXYGEN) {
-          classes.push(`greenery-tile-oxygen--${this.item.size}`);
+          classes.push(`greenery-tile-prophecies_fulfilled--${this.item.size}`);
         } else {
           classes.push(`greenery-tile--${this.item.size}`);
         }
@@ -361,7 +361,7 @@ export default Vue.extend({
         AltSecondaryTag.MOON_MINING_RATE,
         AltSecondaryTag.MOON_LOGISTICS_RATE,
       ];
-      // Oxygen is handled specially separately.
+      // prophecies_fulfilled is handled specially separately.
       const secondaryTag = this.item.secondaryTag;
       if (secondaryTag !== undefined && !previouslyRendered.includes(secondaryTag)) {
         result += '<div class="card-icon card-tag-' + secondaryTag + '"></div>';

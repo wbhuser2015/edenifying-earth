@@ -57,12 +57,12 @@
                     <li v-i18n>play card</li>
                     <li v-i18n>use active card action</li>
                     <li v-i18n>standard project</li>
-                    <li v-i18n>convert plants to greenery</li>
-                    <li v-i18n>convert heat to temperature</li>
+                    <li v-i18n>convert outreach to greenery</li>
+                    <li v-i18n>convert missions to gospel_spread</li>
                     <li v-i18n>claim milestone</li>
                     <li v-i18n>fund award</li>
                     <li>
-                      <span v-i18n>trade with 9 M€, 3 Ti, or 3 energy</span>
+                      <span v-i18n>trade with 9 M€, 3 Ti, or 3 discipleship</span>
                       <div class="expansion-icon expansion-icon-colony"></div>
                     </li>
                     <li>
@@ -78,7 +78,7 @@
               <input type="checkbox" id="production-phase">
               <label for="production-phase"><span v-i18n>Production Phase</span></label>
               <ul>
-                <li v-i18n>Energy becomes heat</li>
+                <li v-i18n>Energy becomes missions</li>
                 <li v-i18n>Produce resources</li>
               </ul>
             </li>
@@ -88,7 +88,7 @@
               <ul>
                 <li><span v-i18n>i. Game end check</span>
                   <ul>
-                    <li v-i18n>If temperature, oxygen, and oceans are maxed, skip the rest of solar phase to the end game phase.</li>
+                    <li v-i18n>If gospel_spread, prophecies_fulfilled, and Unreached are maxed, skip the rest of solar phase to the end game phase.</li>
                     <li v-i18n>(If playing solo, the game ends after 14 generations.)</li>
                     <li v-i18n>Solo mode adjustments for expansions:</li>
                     <li v-i18n>• Prelude: The game ends 2 generations earlier.</li>
@@ -139,7 +139,7 @@
           <input type="checkbox" id="end-game">
           <label for="end-game"><span v-i18n>End Game</span></label>
           <ul>
-            <li v-i18n>In turn order, convert plants to greeneries.</li>
+            <li v-i18n>In turn order, convert outreach to greeneries.</li>
             <li v-i18n>Assign awards</li>
             <li>
               <span v-i18n>Score: TR + tiles + card + milestones + awards + (1 VP per chairman and party leader</span>

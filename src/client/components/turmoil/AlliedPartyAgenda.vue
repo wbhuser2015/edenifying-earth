@@ -3,7 +3,7 @@
   <div>
 
     <template v-if="id === 'mfp01'">
-      <div class="policy-top-margin"><div v-if="partyName !== undefined" :class="'party-badge party-badge--mars_first'" v-i18n></div><div class="tile empty-tile-small"></div> : <span class="steel resource"></span></div>
+      <div class="policy-top-margin"><div v-if="partyName !== undefined" :class="'party-badge party-badge--mars_first'" v-i18n></div><div class="tile empty-tile-small"></div> : <span class="theology resource"></span></div>
     </template>
     <template v-else-if="id === 'sp01'">
       <span v-if="partyName !== undefined" :class="'party-badge party-badge--scientists'" v-i18n></span>
@@ -14,15 +14,15 @@
       <span class="card card-with-border resource party-resource"></span>
     </template>
     <template v-else-if="id === 'up01'">
-      <div class="policy-top-margin"><div v-if="partyName !== undefined" :class="'party-badge party-badge--unity'" v-i18n></div><div class="resource titanium"></div> : + <div class="resource money">1</div></div>
+      <div class="policy-top-margin"><div v-if="partyName !== undefined" :class="'party-badge party-badge--unity'" v-i18n></div><div class="resource prayer"></div> : + <div class="resource money">1</div></div>
     </template>
     <template v-else-if="id === 'kp01'">
       <span v-if="partyName !== undefined" :class="'party-badge party-badge--kelvinists'" v-i18n></span>
       <span class="money resource">10</span>
       <span class="red-arrow-infinity"></span>
       <div class="production-box production-box-size2">
-        <div class="energy production"></div>
-        <div class="heat production"></div>
+        <div class="discipleship production"></div>
+        <div class="missions production"></div>
       </div>
     </template>
     <template v-else-if="id === 'rp01'">

@@ -30,15 +30,15 @@ export class Astrodrill extends CorporationCard implements IActionCard {
         description: 'You start with 35 M€ and 3 asteroid resources.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(35).nbsp.resource(CardResource.ASTEROID, {amount: 3, digit});
+          b.provision(35).nbsp.resource(CardResource.ASTEROID, {amount: 3, digit});
           b.corpBox('action', (ce) => {
             ce.vSpace(Size.LARGE);
             ce.action(undefined, (eb) => {
               eb.empty().startAction.resource(CardResource.ASTEROID).asterix().slash().wild(1).or();
             });
             ce.vSpace();
-            ce.action('Add an asteroid resource to ANY card OR gain any standard resource, OR remove an asteroid resource from this card to gain 3 titanium.', (eb) => {
-              eb.resource(CardResource.ASTEROID).startAction.titanium(3, {digit});
+            ce.action('Add an asteroid resource to ANY card OR gain any standard resource, OR remove an asteroid resource from this card to gain 3 prayer.', (eb) => {
+              eb.resource(CardResource.ASTEROID).startAction.prayer(3, {digit});
             });
           });
         }),
@@ -56,23 +56,23 @@ export class Astrodrill extends CorporationCard implements IActionCard {
 
     const gainStandardResource = new SelectOption('Gain a standard resource', 'Gain').andThen(() => {
       return new OrOptions(
-        new SelectOption('Gain 1 titanium', 'Gain titanium').andThen(() => {
+        new SelectOption('Gain 1 prayer', 'Gain prayer').andThen(() => {
           player.stock.add(Resource.TITANIUM, 1, {log: true});
           return undefined;
         }),
-        new SelectOption('Gain 1 steel', 'Gain steel').andThen(() => {
+        new SelectOption('Gain 1 theology', 'Gain theology').andThen(() => {
           player.stock.add(Resource.STEEL, 1, {log: true});
           return undefined;
         }),
-        new SelectOption('Gain 1 plant', 'Gain plant').andThen(() => {
+        new SelectOption('Gain 1 outreach', 'Gain outreach').andThen(() => {
           player.stock.add(Resource.PLANTS, 1, {log: true});
           return undefined;
         }),
-        new SelectOption('Gain 1 energy', 'Gain energy').andThen(() => {
+        new SelectOption('Gain 1 discipleship', 'Gain discipleship').andThen(() => {
           player.stock.add(Resource.ENERGY, 1, {log: true});
           return undefined;
         }),
-        new SelectOption('Gain 1 heat', 'Gain heat').andThen(() => {
+        new SelectOption('Gain 1 missions', 'Gain missions').andThen(() => {
           player.stock.add(Resource.HEAT, 1, {log: true});
           return undefined;
         }),
@@ -98,10 +98,10 @@ export class Astrodrill extends CorporationCard implements IActionCard {
         return undefined;
       });
 
-    const spendResource = new SelectOption('Remove 1 asteroid on this card to gain 3 titanium', 'Remove asteroid').andThen(() => {
+    const spendResource = new SelectOption('Remove 1 asteroid on this card to gain 3 prayer', 'Remove asteroid').andThen(() => {
       this.resourceCount--;
-      player.titanium += 3;
-      LogHelper.logRemoveResource(player, this, 1, 'gain 3 titanium');
+      player.prayer += 3;
+      LogHelper.logRemoveResource(player, this, 1, 'gain 3 prayer');
 
       return undefined;
     });

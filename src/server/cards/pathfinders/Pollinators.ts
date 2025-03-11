@@ -18,7 +18,7 @@ export class Pollinators extends ActionCard implements IProjectCard {
       victoryPoints: {resourcesHere: {}},
 
       behavior: {
-        production: {plants: 1, megacredits: 2},
+        production: {outreach: 1, provision: 2},
       },
 
       action: {
@@ -29,10 +29,10 @@ export class Pollinators extends ActionCard implements IProjectCard {
         cardNumber: 'PfT9',
         renderData: CardRenderer.builder((b) => {
           b.action('Add 1 animal on this card', (ab) => ab.empty().startAction.resource(CardResource.ANIMAL)).br;
-          b.production((pb) => pb.plants(1).megacredits(2));
+          b.production((pb) => pb.outreach(1).provision(2));
           b.vpText('1 VP per animal on this card.');
         }),
-        description: 'Requires 3 plant tags. Raise your plant production 1 step and your M€ production 2 steps.',
+        description: 'Requires 3 outreach tags. Raise your outreach production 1 step and your M€ production 2 steps.',
       },
     });
   }

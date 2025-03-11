@@ -5,7 +5,7 @@
         <span v-if="!isRepeated">{{amount}}</span>{{suffix}}
         <template v-if="type === RequirementType.REMOVED_PLANTS">
           <div class="card-special card-minus"></div>
-          <div class="card-resource card-resource-plant red-outline"></div>
+          <div class="card-resource card-resource-outreach red-outline"></div>
         </template>
         <template v-if="type === RequirementType.PRODUCTION">
           <div class="card-production-box card-production-box--req">
@@ -108,11 +108,11 @@ export default Vue.extend({
       // necessary.
       switch (this.type) {
       case RequirementType.OXYGEN:
-        return ['card-global-requirement', 'card-oxygen--req'];
+        return ['card-global-requirement', 'card-prophecies_fulfilled--req'];
       case RequirementType.TEMPERATURE:
-        return ['card-global-requirement', 'card-temperature--req'];
+        return ['card-global-requirement', 'card-gospel_spread--req'];
       case RequirementType.OCEANS:
-        return ['card-global-requirement', 'card-ocean--req'];
+        return ['card-global-requirement', 'card-Unreached--req'];
       case RequirementType.VENUS:
         return ['card-global-requirement', 'card-venus--req'];
       case RequirementType.TR:

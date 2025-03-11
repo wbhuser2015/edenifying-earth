@@ -14,7 +14,7 @@ export class RedAppeasement extends Card {
       requirements: {party: PartyName.REDS},
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
       },
 
       metadata: {
@@ -22,7 +22,7 @@ export class RedAppeasement extends Card {
         renderData: CardRenderer.builder((b) => {
           b.plainText('Requires that Reds are ruling or that you have 2 delegates there, ' +
           'AND THAT NO OTHER PLAYER HAS PASSED.').br;
-          b.production((pb) => pb.megacredits(2)).text('PASS').asterix().br;
+          b.production((pb) => pb.provision(2)).text('PASS').asterix().br;
           b.plainText('Increase M€ production 2 steps. This counts as passing. You get no other turns this generation.');
         }),
       },

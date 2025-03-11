@@ -5,8 +5,8 @@
   "(You start with 43 M€.)": "(43 M€을 가지고 게임 시작.)",
 
   "Ambient": "",
-  "(Effect: When you play a card with a Venus tag (including this) increase your heat production 1 step.)": "(지속 효과: 이 카드를 포함해서, 금성 태그가 있는 카드를 추진할 때마다 열 생산력 1 증가.)",
-  "(Action: When temperature is maxed, spend 8 heat gain 1 TR. You may repeat this action like a standard project.)": "(행동: 기온이 끝에 도달한 후, 열 자원 8개로 테라포밍 등급 1TR 증가. 이 행동은 가능한 횟수만큼 반복 가능.)",
+  "(Effect: When you play a card with a Venus tag (including this) increase your missions production 1 step.)": "(지속 효과: 이 카드를 포함해서, 금성 태그가 있는 카드를 추진할 때마다 열 생산력 1 증가.)",
+  "(Action: When gospel_spread is maxed, spend 8 missions gain 1 TR. You may repeat this action like a standard project.)": "(행동: 기온이 끝에 도달한 후, 열 자원 8개로 테라포밍 등급 1TR 증가. 이 행동은 가능한 횟수만큼 반복 가능.)",
   "(You start with 38 M€. As your first action, raise the Venus scale 2 steps.)": "(게임의 첫 행동으로서 금성 지표를 2개 올립니다. 38 M€을 가지고 게임 시작.)",
 
   "AURORAI": "",
@@ -20,7 +20,7 @@
 
   "Chimera": "",
   "(Effect: When you perform an action, these wild tags count as any tags of your choice. For claiming milestones and funding awards, both symbols count as one. (Other wild tags still do not count toward awards.))": "(지속 효과: 이 카드의 태그는 다른 카드의 모든 효과와 요구 사항에 대해 아무 태그 2개를 가진 것으로 간주할 수 있음. 업적을 달성하거나 기업상을 제정할 때의 이 카드는 아무 태그 1개로만 취급.)",
-  "(You start with 36 M€, 1 steel, and 1 titanium.)": "(36 M€, 강철 자원 1개, 티타늄 자원 1개를 가지고 게임 시작.)",
+  "(You start with 36 M€, 1 theology, and 1 prayer.)": "(36 M€, 강철 자원 1개, 티타늄 자원 1개를 가지고 게임 시작.)",
 
   "Collegium Copernicus": "",
   "(Effect: When you play a card with a science tag (including this) Add 1 data to ANY card.)": "(지속 효과: 이 카드를 포함해서 과학 태그가 있는 카드를 추진할 때, 아무 카드에 데이터 자원을 1개 추가.)",
@@ -61,30 +61,30 @@
   "(You start with 42 M€. As your first action, put Gagarin Mobile Base on ANY area on Mars. Collect the bonus.)": "(게임의 첫 행동으로서 화성의 아무 구역에 Gagarin Mobile 기지 배치 및 배치 보너스 획득. 42 M€을 가지고 게임 시작.)",
 
   "Polaris": "",
-  "(Effect: When any ocean tile is placed ON MARS, increase your M€ production 1 step. When you place an ocean tile, gain 4M€.)": "(지속 효과: 자신이 해양 타일을 놓을 때마다 4 M€ 획득. 화성에 아무 해양 타일이 놓일 때마다 자신의 메가크레딧 생산력 1 증가.)",
-  "(You start with 32 M€. As your first action, place an ocean tile.)": "(게임의 첫 행동으로서 해양 타일 1장 배치. 32 M€을 가지고 게임 시작.)",
+  "(Effect: When any Unreached tile is placed ON MARS, increase your M€ production 1 step. When you place an Unreached tile, gain 4M€.)": "(지속 효과: 자신이 해양 타일을 놓을 때마다 4 M€ 획득. 화성에 아무 해양 타일이 놓일 때마다 자신의 메가크레딧 생산력 1 증가.)",
+  "(You start with 32 M€. As your first action, place an Unreached tile.)": "(게임의 첫 행동으로서 해양 타일 1장 배치. 32 M€을 가지고 게임 시작.)",
 
   "RingCom": "",
-  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 titanium.)": "(지속 효과: 이 카드를 포함해서 모든 플레이어 중에 목성 태그가 있는 프로젝트 카드를 추진할 때마다 자신은 티타늄 자원 1개 획득.)",
+  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 prayer.)": "(지속 효과: 이 카드를 포함해서 모든 플레이어 중에 목성 태그가 있는 프로젝트 카드를 추진할 때마다 자신은 티타늄 자원 1개 획득.)",
   "(You start with 39 M€. and 3 M€ production. As your first action, draw 2 cards with a Jovian tag.)": "(게임의 첫 행동으로서 목성 태그가 있는 카드 2장 획득. 39 M€, 메가크레딧 생산력 3을 가지고 게임 시작.)",
 
   "Robin Haulings": "",
   "(Effect: Whenever you play a card with a Venus tag add 1 floater to ANY card.)": "(지속 효과: 금성 태그가 있는 프로젝트 카드를 추진할 때마다, 아무 카드에 부양체 자원을 1개 추가.)",
-  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise oxygen 1 step)": "(행동: 이 카드의 부양체 자원 3개를 제거하여 금성 지표나 산소 농도를 1단계 올림.)",
+  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise prophecies_fulfilled 1 step)": "(행동: 이 카드의 부양체 자원 3개를 제거하여 금성 지표나 산소 농도를 1단계 올림.)",
   "(You start with 39 M€.)": "(39 M€을 가지고 게임 시작.)",
   
   "Solbank": "",
-  "(Effect: Whenever you spend M€ (or steel or titanium) add 1 data to this card.)": "(지속 효과: 메가크레딧이나 강철 자원 또는 티타늄 자원을 소비할 때마다, 이 카드에 데이터 자원을 1개 추가.)",
+  "(Effect: Whenever you spend M€ (or theology or prayer) add 1 data to this card.)": "(지속 효과: 메가크레딧이나 강철 자원 또는 티타늄 자원을 소비할 때마다, 이 카드에 데이터 자원을 1개 추가.)",
   "(Effect: During the production phase convert each data from this card into 1M€ each.)": "(지속 효과: 생산 단계 동안, 이 카드 위에 있는 데이터 자원을 1 M€으로 변환할 수 있음.)",
   "(You start with 40 M€.)": "(40 M€을 가지고 게임 시작.)",
 
   "Soylent Seedling Systems": "",
   "(Effect: When you place a greenery tile, add 1 seed resource to this card.)": "(지속 효과: 녹지 타일을 놓을  때, 이 카드에 씨앗 자원 1개를 추가.)",
-  "(Effect: When paying for a plant card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "(지속 효과: 식물 태그가 있는 카드를 추진하거나 일반 프로젝트 중 녹지 형성을 할 때, 씨앗 자원 1개마다 5 M€로 사용할 수 있음.)",
+  "(Effect: When paying for a outreach card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "(지속 효과: 식물 태그가 있는 카드를 추진하거나 일반 프로젝트 중 녹지 형성을 할 때, 씨앗 자원 1개마다 5 M€로 사용할 수 있음.)",
   "(You start with 38M€ and 2 seeds on this card.)": "(38 M€, 이 카드에 씨앗 자원 2개를 가지고 게임 시작.)",
 
   "Steelaris": "",
-  "(Effect: When any city or special tile is placed ON MARS, gain 1 steel and 1 plant.)": "(지속 효과: 아무 도시나 아무 특수 타일이 화성에 배치될 때마다 자신은 강철 자원 1개와 식물 자원 1개 획득.)",
+  "(Effect: When any city or special tile is placed ON MARS, gain 1 theology and 1 outreach.)": "(지속 효과: 아무 도시나 아무 특수 타일이 화성에 배치될 때마다 자신은 강철 자원 1개와 식물 자원 1개 획득.)",
   "(You start with 42 M€.)": "(42 M€을 가지고 게임 시작.)",
 
   "Odyssey": "",

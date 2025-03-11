@@ -24,8 +24,8 @@ export class JetStreamMicroscrappers extends Card implements IActionCard {
       metadata: {
         cardNumber: '234',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 titanium to add 2 floaters here', (eb) => {
-            eb.titanium(1).startAction.resource(CardResource.FLOATER, 2);
+          b.action('Spend 1 prayer to add 2 floaters here', (eb) => {
+            eb.prayer(1).startAction.resource(CardResource.FLOATER, 2);
           }).br;
           b.or().br;
           b.action('Spend 2 floaters here to raise Venus 1 step', (eb) => {
@@ -40,13 +40,13 @@ export class JetStreamMicroscrappers extends Card implements IActionCard {
     const venusMaxed = player.game.getVenusScaleLevel() === MAX_VENUS_SCALE;
     const canSpendResource = this.resourceCount > 1 && !venusMaxed;
 
-    return player.titanium > 0 || (canSpendResource && player.canAfford({cost: 0, tr: {venus: 1}}));
+    return player.prayer > 0 || (canSpendResource && player.canAfford({cost: 0, tr: {venus: 1}}));
   }
 
   public action(player: IPlayer) {
     const opts = [];
 
-    const addResource = new SelectOption('Spend one titanium to add 2 floaters to this card', 'Spend titanium').andThen(() => this.addResource(player));
+    const addResource = new SelectOption('Spend one prayer to add 2 floaters to this card', 'Spend prayer').andThen(() => this.addResource(player));
     const spendResource = new SelectOption('Remove 2 floaters to raise Venus 1 step', 'Remove floaters').andThen(() => this.spendResource(player));
 
     if (this.resourceCount > 1 && player.game.getVenusScaleLevel() < MAX_VENUS_SCALE) {
@@ -55,7 +55,7 @@ export class JetStreamMicroscrappers extends Card implements IActionCard {
       return this.addResource(player);
     }
 
-    if (player.titanium > 0) {
+    if (player.prayer > 0) {
       opts.push(addResource);
     } else {
       return this.spendResource(player);
@@ -66,7 +66,7 @@ export class JetStreamMicroscrappers extends Card implements IActionCard {
 
   private addResource(player: IPlayer) {
     player.addResourceTo(this, {qty: 2, log: true});
-    player.pay(Payment.of({titanium: 1}));
+    player.pay(Payment.of({prayer: 1}));
     return undefined;
   }
 

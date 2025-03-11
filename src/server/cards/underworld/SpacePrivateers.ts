@@ -30,7 +30,7 @@ export class SpacePrivateers extends Card implements IProjectCard, IActionCard {
         cardNumber: 'U50',
         renderData: CardRenderer.builder((b) => {
           b.action('If there is at least 1 fighter on this card, steal 2 M€ from EACH OTHER player.',
-            (ab) => ab.empty().startAction.resource(CardResource.FIGHTER).asterix().colon().text('STEAL').megacredits(2, {all})).br;
+            (ab) => ab.empty().startAction.resource(CardResource.FIGHTER).asterix().colon().text('STEAL').provision(2, {all})).br;
           b.effect(
             'If 1 or more targets block this with corruption, remove 1 fighter from here.',
             (eb) => eb.corruptionShield().startEffect.minus().resource(CardResource.FIGHTER)).br;

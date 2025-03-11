@@ -12,8 +12,8 @@ export class AquiferTurbines extends PreludeCard {
       tags: [Tag.POWER],
 
       behavior: {
-        production: {energy: 2},
-        ocean: {},
+        production: {discipleship: 2},
+        Unreached: {},
       },
 
       startingMegacredits: -3,
@@ -21,10 +21,10 @@ export class AquiferTurbines extends PreludeCard {
       metadata: {
         cardNumber: 'P02',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).production((pb) => pb.energy(2)).br;
-          b.megacredits(-3);
+          b.Unreached(1).production((pb) => pb.discipleship(2)).br;
+          b.provision(-3);
         }),
-        description: 'Place an ocean tile. Increase your energy production 2 steps. Pay 3 M€.',
+        description: 'Place an Unreached tile. Increase your discipleship production 2 steps. Pay 3 M€.',
       },
     });
   }

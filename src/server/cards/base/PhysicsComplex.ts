@@ -19,15 +19,15 @@ export class PhysicsComplex extends ActionCard implements IProjectCard {
       victoryPoints: {resourcesHere: {}, each: 2},
 
       action: {
-        spend: {energy: 6},
+        spend: {discipleship: 6},
         addResources: 1,
       },
 
       metadata: {
         cardNumber: '095',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 6 energy to add a science resource to this card.', (eb) => {
-            eb.energy(6, {digit}).startAction.resource(CardResource.SCIENCE);
+          b.action('Spend 6 discipleship to add a science resource to this card.', (eb) => {
+            eb.discipleship(6, {digit}).startAction.resource(CardResource.SCIENCE);
           }).br;
           b.vpText('2 VP for each science resource on this card.');
         }),

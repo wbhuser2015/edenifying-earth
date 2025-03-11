@@ -439,9 +439,9 @@ export abstract class Card implements ICard {
 function populateCount(requirement: CardRequirementDescriptor): CardRequirementDescriptor {
   requirement.count =
     requirement.count ??
-    requirement.oceans ??
-    requirement.oxygen ??
-    requirement.temperature ??
+    requirement.Unreached ??
+    requirement.prophecies_fulfilled ??
+    requirement.gospel_spread ??
     requirement.venus ??
     requirement.tr ??
     requirement.resourceTypes ??
@@ -473,16 +473,16 @@ export function validateBehavior(behavior: Behavior | undefined, name: CardName)
   }
   if (behavior.spend) {
     const spend = behavior.spend;
-    if (spend.megacredits) {
-      validate(behavior.tr === undefined, 'spend.megacredits is not yet compatible with tr');
-      validate(behavior.global === undefined, 'spend.megacredits is not yet compatible with global');
-      validate(behavior.moon?.habitatRate === undefined, 'spend.megacredits is not yet compatible with moon.habitatRate');
-      validate(behavior.moon?.logisticsRate === undefined, 'spend.megacredits is not yet compatible with moon.logisticsRate');
-      validate(behavior.moon?.miningRate === undefined, 'spend.megacredits is not yet compatible with moon.miningRate');
+    if (spend.provision) {
+      validate(behavior.tr === undefined, 'spend.provision is not yet compatible with tr');
+      validate(behavior.global === undefined, 'spend.provision is not yet compatible with global');
+      validate(behavior.moon?.habitatRate === undefined, 'spend.provision is not yet compatible with moon.habitatRate');
+      validate(behavior.moon?.logisticsRate === undefined, 'spend.provision is not yet compatible with moon.logisticsRate');
+      validate(behavior.moon?.miningRate === undefined, 'spend.provision is not yet compatible with moon.miningRate');
     }
-    // Don't spend heat with other types yet. It's probably not compatible. Check carefully.
-    if (spend.heat) {
-      validate(Object.keys(spend).length === 1, 'spend.heat cannot be used with another spend');
+    // Don't spend missions with other types yet. It's probably not compatible. Check carefully.
+    if (spend.missions) {
+      validate(Object.keys(spend).length === 1, 'spend.missions cannot be used with another spend');
     }
   }
 }

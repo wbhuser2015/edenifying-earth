@@ -5,10 +5,10 @@ export class Energizer extends BaseMilestone {
   constructor() {
     super(
       'Energizer',
-      'Have 6 energy production',
+      'Have 6 discipleship production',
       6);
   }
   public getScore(player: IPlayer): number {
-    return player.production.energy;
+    return player.production.discipleship;
   }
 }

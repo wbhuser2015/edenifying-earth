@@ -26,7 +26,7 @@ export class EcologicalZone extends Card implements IProjectCard {
       },
       cardNumber: '128',
       renderData: CardRenderer.builder((b) => {
-        b.effect('When you play an animal or plant tag INCLUDING THESE, add an animal to this card.', (eb) => {
+        b.effect('When you play an animal or outreach tag INCLUDING THESE, add an animal to this card.', (eb) => {
           eb.tag(Tag.ANIMAL).slash().tag(Tag.PLANT).startEffect.resource(CardResource.ANIMAL);
         }).br;
         b.vpText('1 VP per 2 animals on this card.').tile(TileType.ECOLOGICAL_ZONE, true).asterix();

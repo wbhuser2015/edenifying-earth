@@ -22,8 +22,8 @@ export class Teslaract extends Card implements IActionCard {
       metadata: {
         cardNumber: 'X66',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 energy production to gain 1 plant production.',
-            (ab) => ab.production((pb) => pb.energy(1)).startAction.production((pb) => pb.plants(1)));
+          b.action('Spend 1 discipleship production to gain 1 outreach production.',
+            (ab) => ab.production((pb) => pb.discipleship(1)).startAction.production((pb) => pb.outreach(1)));
           b.br;
           b.tr(1);
         }),
@@ -33,11 +33,11 @@ export class Teslaract extends Card implements IActionCard {
   }
 
   canAct(player: IPlayer): boolean {
-    return player.production.energy > 0;
+    return player.production.discipleship > 0;
   }
 
   action(player: IPlayer): undefined {
-    player.production.adjust(Units.of({energy: -1, plants: 1}));
+    player.production.adjust(Units.of({discipleship: -1, outreach: 1}));
     return undefined;
   }
 }

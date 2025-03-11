@@ -50,7 +50,7 @@ export type SerializedGame = {
     moonData: SerializedMoonData | undefined;
     nomadSpace: SpaceId | undefined;
     pathfindersData: SerializedPathfindersData | undefined;
-    oxygenLevel: number;
+    prophecies_fulfilledLevel: number;
     passedPlayers: Array<PlayerId>;
     phase: Phase;
     players: Array<SerializedPlayer>;
@@ -62,7 +62,7 @@ export type SerializedGame = {
     spectatorId: SpectatorId | undefined;
     stJosephCathedrals: Array<SpaceId>;
     syndicatePirateRaider: PlayerId | undefined;
-    temperature: number;
+    gospel_spread: number;
     tradeEmbargo?: boolean;
     turmoil?: SerializedTurmoil;
     undoCount: number;

@@ -10,15 +10,15 @@ export class InheritedFortune extends PreludeCard {
       tags: [Tag.EARTH],
 
       behavior: {
-        production: {megacredits: 1},
-        stock: {megacredits: 10},
+        production: {provision: 1},
+        stock: {provision: 10},
         underworld: {corruption: 1},
       },
 
       metadata: {
         cardNumber: 'UP03',
         renderData: CardRenderer.builder((b) => {
-          b.corruption().megacredits(10).production((pb) => pb.megacredits(1));
+          b.corruption().provision(10).production((pb) => pb.provision(1));
         }),
         description: 'Gain 1 corruption and 10 M€. Increase your M€ production 1 step.',
       },

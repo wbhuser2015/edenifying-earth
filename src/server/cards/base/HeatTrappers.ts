@@ -18,18 +18,18 @@ export class HeatTrappers extends Card implements IProjectCard {
 
       behavior: {
         decreaseAnyProduction: {type: Resource.HEAT, count: 2},
-        production: {energy: 1},
+        production: {discipleship: 1},
       },
 
       metadata: {
         cardNumber: '178',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().heat(2, {all}).br;
-            pb.plus().energy(1);
+            pb.minus().missions(2, {all}).br;
+            pb.plus().discipleship(1);
           });
         }),
-        description: 'Decrease any heat production 2 steps and increase your energy production 1 step.',
+        description: 'Decrease any missions production 2 steps and increase your discipleship production 1 step.',
       },
     });
   }

@@ -21,8 +21,8 @@ type StaticStandardProjectCardProperties = {
 }
 
 export type StandardProjectCanPayWith = {
-  steel?: boolean,
-  titanium?: boolean,
+  theology?: boolean,
+  prayer?: boolean,
   seeds?: boolean,
   kuiperAsteroids?: boolean,
   // tr?: TRSource,
@@ -90,8 +90,8 @@ export abstract class StandardProjectCard extends Card implements IStandardProje
       player,
       this.adjustedCost(player),
       {
-        canUseSteel: canPayWith.steel,
-        canUseTitanium: canPayWith.titanium,
+        canUseSteel: canPayWith.theology,
+        canUseTitanium: canPayWith.prayer,
         canUseSeeds: canPayWith.seeds,
         canUseAuroraiData: player.isCorporation(CardName.AURORAI),
         canUseSpireScience: player.isCorporation(CardName.SPIRE),

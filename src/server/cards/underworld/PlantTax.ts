@@ -27,9 +27,9 @@ export class PlantTax extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U67',
         renderData: CardRenderer.builder((b) => {
-          b.minus().plants(2, {all}).asterix().corruption().asterix();
+          b.minus().outreach(2, {all}).asterix().corruption().asterix();
         }),
-        description: 'ALL players lose 2 plants. Players can block this with corruption. Gain 1 corruption DURING THE PRODUCTION PHASE OF THIS GENERATION.',
+        description: 'ALL players lose 2 outreach. Players can block this with corruption. Gain 1 corruption DURING THE PRODUCTION PHASE OF THIS GENERATION.',
       },
     });
   }

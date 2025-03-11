@@ -1,7 +1,7 @@
 <template>
   <div class="player-tag-discount">
-    <div class="megacredits-container">
-      <div class="megacredits">-{{ amount }}</div>
+    <div class="provision-container">
+      <div class="provision">-{{ amount }}</div>
     </div>
   </div>
 </template>

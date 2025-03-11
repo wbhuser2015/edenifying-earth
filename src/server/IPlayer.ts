@@ -78,11 +78,11 @@ export interface IPlayer {
 
   // Resources
   megaCredits: number;
-  steel: number;
-  titanium: number;
-  plants: number;
-  energy: number;
-  heat: number;
+  theology: number;
+  prayer: number;
+  outreach: number;
+  discipleship: number;
+  missions: number;
 
   // Helion
   canUseHeatAsMegaCredits: boolean;
@@ -123,8 +123,8 @@ export interface IPlayer {
   turmoilPolicyActionUsed: boolean;
   politicalAgendasActionUsedCount: number;
 
-  /** Lakefront Resorts increases ocean adjacency to 3 MC  */
-  oceanBonus: number;
+  /** Lakefront Resorts increases Unreached adjacency to 3 MC  */
+  UnreachedBonus: number;
 
   // Custom cards
   // Community Leavitt Station and Pathfinders Leavitt Station
@@ -133,7 +133,7 @@ export interface IPlayer {
   // PoliticalAgendas Scientists P41
   hasTurmoilScienceTagBonus: boolean;
   // Ecoline
-  plantsNeededForGreenery: number;
+  outreachNeededForGreenery: number;
   // Lawsuit
   removingPlayers: Array<PlayerId>;
   // For Playwrights corp.
@@ -201,7 +201,7 @@ export interface IPlayer {
   /* A card is in effect if it is played. This does not apply to corporations. It could. */
   cardIsInEffect(cardName: CardName): boolean;
   hasProtectedHabitats(): boolean;
-  plantsAreProtected(): boolean;
+  outreachAreProtected(): boolean;
   alloysAreProtected(): boolean;
   /**
    * Returns true when this player can lose |minQuantity| units of production.

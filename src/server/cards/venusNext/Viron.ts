@@ -18,7 +18,7 @@ export class Viron extends CorporationCard {
         description: 'You start with 48 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(48);
+          b.provision(48);
           b.corpBox('action', (ce) => {
             ce.action('Use a blue card action that has already been used this generation.', (eb) => {
               eb.empty().startAction.empty();

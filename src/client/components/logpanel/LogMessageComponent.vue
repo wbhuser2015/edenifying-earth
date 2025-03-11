@@ -53,7 +53,7 @@ export default Vue.extend({
 
       let costHTML = '';
       if (attrs?.cost === true) {
-        costHTML = `<span>&nbsp;<div class="log-resource-megacredits">${card.cost}</div></span>`;
+        costHTML = `<span>&nbsp;<div class="log-resource-provision">${card.cost}</div></span>`;
       }
       return '<span class="log-card '+ className + '">' + this.$t(suffixFreeCardName) + tagHTML + costHTML +'</span>';
     },

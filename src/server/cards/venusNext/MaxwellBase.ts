@@ -26,7 +26,7 @@ export class MaxwellBase extends ActionCard implements IActionCard {
       requirements: {venus: 12},
       victoryPoints: 3,
       behavior: {
-        production: {energy: -1},
+        production: {discipleship: -1},
         city: {space: SpaceName.MAXWELL_BASE},
       },
 
@@ -36,10 +36,10 @@ export class MaxwellBase extends ActionCard implements IActionCard {
           b.action('Add 1 resource to ANOTHER VENUS CARD.', (eb) => {
             eb.empty().startAction.wild(1, {secondaryTag: Tag.VENUS});
           }).br;
-          b.production((pb) => pb.minus().energy(1)).nbsp.city().asterix();
+          b.production((pb) => pb.minus().discipleship(1)).nbsp.city().asterix();
         }),
         description: {
-          text: 'Requires Venus 12%. Decrease your energy production 1 step. Place a city tile ON THE RESERVED AREA.',
+          text: 'Requires Venus 12%. Decrease your discipleship production 1 step. Place a city tile ON THE RESERVED AREA.',
           align: 'left',
         },
       },

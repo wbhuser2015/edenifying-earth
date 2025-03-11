@@ -14,16 +14,16 @@ export class ImportedGHG extends Card implements IProjectCard {
       cost: 7,
 
       behavior: {
-        production: {heat: 1},
-        stock: {heat: 3},
+        production: {missions: 1},
+        stock: {missions: 3},
       },
 
       metadata: {
         cardNumber: '162',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.heat(1)).heat(3);
+          b.production((pb) => pb.missions(1)).missions(3);
         }),
-        description: 'Increase your heat production 1 step and gain 3 heat.',
+        description: 'Increase your missions production 1 step and gain 3 missions.',
       },
     });
   }

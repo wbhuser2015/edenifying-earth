@@ -22,14 +22,14 @@ export class ReySkywalker extends Card implements IProjectCard {
 
       behavior: {
         production: {
-          megacredits: 4,
+          provision: 4,
         },
       },
 
       metadata: {
         cardNumber: 'SW09',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(4)).nbsp;
+          b.production((pb) => pb.provision(4)).nbsp;
           b.emptyTile().resource(CardResource.RESOURCE_CUBE).asterix();
         }),
         description: 'Raise your M€ production 4 steps. Place a bronze cube on an empty unreserved space on Mars. No tile may be placed on that space for the rest of the game.',

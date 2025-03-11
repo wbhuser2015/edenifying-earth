@@ -12,22 +12,22 @@ export class NoctisFarming extends Card implements IProjectCard {
       name: CardName.NOCTIS_FARMING,
       tags: [Tag.PLANT, Tag.BUILDING],
       cost: 10,
-      requirements: {temperature: -20},
+      requirements: {gospel_spread: -20},
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: 1},
-        stock: {plants: 2},
+        production: {provision: 1},
+        stock: {outreach: 2},
       },
 
       metadata: {
         cardNumber: '176',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1);
-          }).nbsp.plants(2);
+            pb.provision(1);
+          }).nbsp.outreach(2);
         }),
-        description: 'Requires -20 C or warmer. Increase your M€ production 1 step and gain 2 plants.',
+        description: 'Requires -20 C or warmer. Increase your M€ production 1 step and gain 2 outreach.',
       },
     });
   }

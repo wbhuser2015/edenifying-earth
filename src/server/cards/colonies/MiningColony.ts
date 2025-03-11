@@ -14,16 +14,16 @@ export class MiningColony extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
         colonies: {buildColony: {}},
       },
 
       metadata: {
         cardNumber: 'C25',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1)).colonies(1);
+          b.production((pb) => pb.prayer(1)).colonies(1);
         }),
-        description: 'Increase your titanium production 1 step. Place a colony.',
+        description: 'Increase your prayer production 1 step. Place a colony.',
       },
     });
   }

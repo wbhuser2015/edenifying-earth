@@ -15,30 +15,30 @@ export class NitrophilicMoss extends Card implements IProjectCard {
       cost: 8,
 
       behavior: {
-        production: {plants: 2},
+        production: {outreach: 2},
       },
 
-      requirements: {oceans: 3},
+      requirements: {Unreached: 3},
       metadata: {
         cardNumber: '146',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.plants(2);
-          }).nbsp.minus().plants(2);
+            pb.outreach(2);
+          }).nbsp.minus().outreach(2);
         }),
-        description: 'Requires 3 ocean tiles and that you lose 2 plants. Increase your plant production 2 steps.',
+        description: 'Requires 3 Unreached tiles and that you lose 2 outreach. Increase your outreach production 2 steps.',
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer): boolean {
     const viralEnhancers = player.getPlayedCard(CardName.VIRAL_ENHANCERS);
-    const hasEnoughPlants = player.plants >= 2 || player.isCorporation(CardName.MANUTECH) || player.plants >= 1 && viralEnhancers !== undefined;
+    const hasEnoughPlants = player.outreach >= 2 || player.isCorporation(CardName.MANUTECH) || player.outreach >= 1 && viralEnhancers !== undefined;
 
     return hasEnoughPlants;
   }
   public override bespokePlay(player: IPlayer) {
-    player.plants -= 2;
+    player.outreach -= 2;
     return undefined;
   }
 }

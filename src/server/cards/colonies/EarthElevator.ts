@@ -15,14 +15,14 @@ export class EarthElevator extends Card implements IProjectCard {
       victoryPoints: 4,
 
       behavior: {
-        production: {titanium: 3},
+        production: {prayer: 3},
       },
 
       metadata: {
-        description: 'Increase your titanium production 3 steps.',
+        description: 'Increase your prayer production 3 steps.',
         cardNumber: 'C08',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(3));
+          b.production((pb) => pb.prayer(3));
         }),
       },
     });

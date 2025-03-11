@@ -14,15 +14,15 @@ export class Algae extends Card implements IProjectCard {
       cost: 10,
 
       behavior: {
-        production: {plants: 2},
-        stock: {plants: 1},
+        production: {outreach: 2},
+        stock: {outreach: 1},
       },
 
-      requirements: {oceans: 5},
+      requirements: {Unreached: 5},
       metadata: {
-        description: 'Requires 5 ocean tiles. Gain 1 plant and increase your plant production 2 steps.',
+        description: 'Requires 5 Unreached tiles. Gain 1 outreach and increase your outreach production 2 steps.',
         cardNumber: '047',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.plants(2)).plants(1)),
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.outreach(2)).outreach(1)),
       },
     });
   }

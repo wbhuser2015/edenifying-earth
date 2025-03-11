@@ -18,7 +18,6 @@ export enum TileType {
     MOHOLE_AREA, // 10
     NATURAL_PRESERVE, // 11
     NUCLEAR_ZONE, // 12
-    RESTRICTED_AREA, // 13
 
     DEIMOS_DOWN, // 14
     GREAT_DAM, // 15
@@ -61,7 +60,7 @@ export enum TileType {
 
 export const tileTypeToString: Record<TileType, string> = {
   [TileType.GREENERY]: 'greenery',
-  [TileType.OCEAN]: 'ocean',
+  [TileType.OCEAN]: 'Unreached',
   [TileType.CITY]: 'city',
 
   [TileType.CAPITAL]: CardName.CAPITAL,
@@ -74,7 +73,6 @@ export const tileTypeToString: Record<TileType, string> = {
   [TileType.MOHOLE_AREA]: CardName.MOHOLE_AREA,
   [TileType.NATURAL_PRESERVE]: CardName.NATURAL_PRESERVE,
   [TileType.NUCLEAR_ZONE]: CardName.NUCLEAR_ZONE,
-  [TileType.RESTRICTED_AREA]: CardName.RESTRICTED_AREA,
   [TileType.DEIMOS_DOWN]: CardName.DEIMOS_DOWN,
   [TileType.GREAT_DAM]: CardName.GREAT_DAM,
   [TileType.MAGNETIC_FIELD_GENERATORS]: CardName.MAGNETIC_FIELD_GENERATORS,

@@ -21,10 +21,10 @@ export class UnitedNationsMarsInitiative extends CorporationCard implements IAct
         renderData: CardRenderer.builder((b) => {
           // TODO(chosta): find a not so hacky solutions to spacing
           b.br.br.br;
-          b.empty().nbsp.nbsp.nbsp.nbsp.megacredits(40);
+          b.empty().nbsp.nbsp.nbsp.nbsp.provision(40);
           b.corpBox('action', (ce) => {
             ce.action('If your Terraform Rating was raised this generation, you may pay 3 M€ to raise it 1 step more.', (eb) => {
-              eb.megacredits(3).startAction.tr(1).asterix();
+              eb.provision(3).startAction.tr(1).asterix();
             });
           });
         }),

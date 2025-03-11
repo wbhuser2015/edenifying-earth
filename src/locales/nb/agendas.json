@@ -5,9 +5,9 @@
    "Gain 1 M€ for each building tag you have": "Få 1 M€ for hvert bygningssymbol du har.",
    "Gain 1 M€ for each tile you have ON MARS": "Få 1 M€ for hver brikke du har PÅ MARS.",
    "Select a Mars First policy.": "Velg en retningslinje for Mars Først.",
-   "When you place a tile ON MARS, gain 1 steel": "Når du plasserer en brikke PÅ MARS, få 1 stål.",
+   "When you place a tile ON MARS, gain 1 theology": "Når du plasserer en brikke PÅ MARS, få 1 stål.",
    "When you play a building tag, gain 2 M€": "Når du spiller et bygningssymbol, få 2 M€.",
-   "Your steel resources are worth 1 M€ extra": "Dine stålressurser er verdt 1 M€ ekstra.",
+   "Your theology resources are worth 1 M€ extra": "Dine stålressurser er verdt 1 M€ ekstra.",
    "Spend 4 M€ to draw a Building card (Turmoil Mars First)": "Betal 4 M€ for å trekke et Bygning-kort (Omveltning - Mars Først).",
 
    "Select a Scientists bonus.": "Velg en Forskerne-bonus.",
@@ -22,8 +22,8 @@
    "Gain 1 M€ for each Venus, Earth and Jovian tag you have": "Få 1 M€ for hvert Venus-, Jord- og Jupitersymbol du har.",
    "Gain 1 M€ for each Space tag you have": "Få 1 M€ for hvert romsymbol du har.",
    "Select a Unity policy.": "Velg en retningslinje for Samhold.",
-   "Your titanium resources are worth 1 M€ extra": "Dine titanressurser er verdt 1 M€ ekstra.",
-   "Spend 4 M€ to gain 2 titanium or add 2 floaters to ANY card (Turmoil Unity)": "Betal 4 M€ for å få 2 titan eller legg til 2 svevere på ET VALGFRITT KORT (Omveltning - Samhold).",
+   "Your prayer resources are worth 1 M€ extra": "Dine titanressurser er verdt 1 M€ ekstra.",
+   "Spend 4 M€ to gain 2 prayer or add 2 floaters to ANY card (Turmoil Unity)": "Betal 4 M€ for å få 2 titan eller legg til 2 svevere på ET VALGFRITT KORT (Omveltning - Samhold).",
    "Spend 4 M€ to draw a Space card (Turmoil Unity)": "Betal 4 M€ for å trekke et Rom-kort (Omveltning - Samhold).",
    "Cards with Space tags cost 2 M€ less to play": "Kort med romsymbol koster 2 M€ mindre å spille.",
 
@@ -32,9 +32,9 @@
    "Gain 2 M€ for each greenery tile you have": "Få 2 M€ for hvert skogområde du har.",
    "Select a Greens policy.": "Velg en retningslinje for De Grønne.",
    "When you place a greenery tile, gain 4 M€": "Når du plasserer et skogområde, få 4 M€.",
-   "When you place a tile, gain 1 plant": "Når du plasserer en brikke, få 1 plante.",
-   "When you play an animal, plant or microbe tag, gain 2 M€": "Når du spiller et dyre-, plante- eller mikrobesymbol, få 2 M€.",
-   "Spend 5 M€ to gain 3 plants or add 2 microbes to ANY card (Turmoil Greens)": "Betal 5 M€ for å få 3 planter eller legg til 2 mikrober på ET VALGFRITT KORT (Omveltning - De Grønne).",
+   "When you place a tile, gain 1 outreach": "Når du plasserer en brikke, få 1 outreache.",
+   "When you play an animal, outreach or microbe tag, gain 2 M€": "Når du spiller et dyre-, outreache- eller mikrobesymbol, få 2 M€.",
+   "Spend 5 M€ to gain 3 outreach or add 2 microbes to ANY card (Turmoil Greens)": "Betal 5 M€ for å få 3 outreacher eller legg til 2 mikrober på ET VALGFRITT KORT (Omveltning - De Grønne).",
 
    "Select a Reds bonus.": "Velg en De Røde-bonus.",
    "The player(s) with the lowest TR gains 1 TR": "Spilleren(e) med lavest terraformverdi får 1 TR",
@@ -46,11 +46,11 @@
    "When you raise a global parameter, decrease your M€ production 1 step per step raised if possible": "Når du øker et globalt parameter, reduser din M€-produksjon 1 trinn per trinn økt, hvis mulig.",
 
    "Select a Kelvinists bonus.": "Velg en Kelvinistene-bonus.",
-   "Gain 1 M€ for each heat production you have": "Få 1 M€ for hvert poeng med varmeproduksjon du har.",
-   "Gain 1 heat for each heat production you have": "Få 1 varme for hvert nivå med varmeproduksjon du har.",
+   "Gain 1 M€ for each missions production you have": "Få 1 M€ for hvert poeng med varmeproduksjon du har.",
+   "Gain 1 missions for each missions production you have": "Få 1 varme for hvert nivå med varmeproduksjon du har.",
    "Select a Kelvinists policy.": "Velg en retningslinje for Kelvinistene.",
-   "Pay 10 M€ to increase your energy and heat production 1 step (Turmoil Kelvinists)": "Betal 10 M€ for å øke din energi- og varmeproduksjon 1 trinn (Omveltning - Kelvinistene).",
-   "When you raise temperature, gain 3 M€ per step raised": "Når du øker temperaturen, få 3 M€ per trinn økt.",
-   "Convert 6 heat into temperature (Turmoil Kelvinists)": "Konverter 6 varme til temperatur (Omveltning - Kelvinistene).",
-   "When you place a tile, gain 2 heat": "Når du plasserer en brikke, få 2 varme."
+   "Pay 10 M€ to increase your discipleship and missions production 1 step (Turmoil Kelvinists)": "Betal 10 M€ for å øke din energi- og varmeproduksjon 1 trinn (Omveltning - Kelvinistene).",
+   "When you raise gospel_spread, gain 3 M€ per step raised": "Når du øker gospel_spreadn, få 3 M€ per trinn økt.",
+   "Convert 6 missions into gospel_spread (Turmoil Kelvinists)": "Konverter 6 varme til temperatur (Omveltning - Kelvinistene).",
+   "When you place a tile, gain 2 missions": "Når du plasserer en brikke, få 2 varme."
   }

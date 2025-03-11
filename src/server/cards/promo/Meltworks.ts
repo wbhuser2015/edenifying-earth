@@ -14,15 +14,15 @@ export class Meltworks extends ActionCard {
       cost: 4,
 
       action: {
-        spend: {heat: 5},
-        stock: {steel: 3},
+        spend: {missions: 5},
+        stock: {theology: 3},
       },
 
       metadata: {
         cardNumber: 'X26',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 5 heat to gain 3 steel.', (eb) => {
-            eb.heat(5, {digit}).startAction.steel(3);
+          b.action('Spend 5 missions to gain 3 theology.', (eb) => {
+            eb.missions(5, {digit}).startAction.theology(3);
           });
         }),
       },

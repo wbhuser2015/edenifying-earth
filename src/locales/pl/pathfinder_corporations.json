@@ -5,8 +5,8 @@
   "(You start with 43 M€.)": "Rozpoczynasz grę z 43 M€",
 
   "Ambient": "Ambient",
-  "(Effect: When you play a card with a Venus tag (including this) increase your heat production 1 step.)": "Efekt trwały: Gdy zagrywasz kartę z symbolem Wenus (z tą włącznie) podnieś swoją produkcję ciepła o 1 poziom.",
-  "(Action: When temperature is maxed, spend 8 heat gain 1 TR. You may repeat this action like a standard project.)": "Akcja: Po osiągnięciu maksymalnego poziomu temperatury możesz wydać 8 jednostek ciepła, aby podnieść swój WT o 1 poziom. Możesz powtarzać tę akcję.",
+  "(Effect: When you play a card with a Venus tag (including this) increase your missions production 1 step.)": "Efekt trwały: Gdy zagrywasz kartę z symbolem Wenus (z tą włącznie) podnieś swoją produkcję ciepła o 1 poziom.",
+  "(Action: When gospel_spread is maxed, spend 8 missions gain 1 TR. You may repeat this action like a standard project.)": "Akcja: Po osiągnięciu maksymalnego poziomu temperatury możesz wydać 8 jednostek ciepła, aby podnieść swój WT o 1 poziom. Możesz powtarzać tę akcję.",
   "(You start with 38 M€. As your first action, raise the Venus scale 2 steps.)": "Rozpoczynasz grę z 38 M€. W ramach pierwszej akcji podnieś Współczynnik Terraformacji Wenus o 2 poziomy.",
 
   "AURORAI": "AURORAI",
@@ -20,7 +20,7 @@
 
   "Chimera": "Chimera",
   "(Effect: When you perform an action, these wild tags count as any tags of your choice. For claiming milestones and funding awards, both symbols count as one. (Other wild tags still do not count toward awards.))": "Efekt trwały: Gdy wykonujesz akcję, symbole Uniwersalne z tej karty liczą się jak wybrane przez Ciebie symbole. Na potrzeby wykupowania tytułów i fundowania nagród oba symbole liczą się jako 1. Pozostałe symbole Uniwersalne wciąż nie są liczone do nagród",
-  "(You start with 36 M€, 1 steel, and 1 titanium.)": "Rozpoczynasz grę z 36 M€, 1 jednostką stali i 1 jednostką tytanu.",
+  "(You start with 36 M€, 1 theology, and 1 prayer.)": "Rozpoczynasz grę z 36 M€, 1 jednostką stali i 1 jednostką tytanu.",
 
   "Collegium Copernicus": "Collegium Copernicus",
   "(Effect: When you play a card with a science tag (including this) Add 1 data to ANY card.)": "Efekt trwały: Gdy zagrywasz kartę z symbolem Nauki (z tą włącznie) umieść 1 jednostkę danych na dowolnej karcie.",
@@ -46,25 +46,25 @@
   "(You start with 44 M€ and 1 agenda resource to this card.)": "Rozpoczynasz grę z 44 M€. Umieść 1 jednostkę agendy na tej karcie.",
 
   "Polaris": "Polaris",
-  "(Effect: When any ocean tile is placed ON MARS, increase your M€ production 1 step. When you place an ocean tile, gain 4M€.)": "Efekt trwały: Gdy na planszy umieszczany jest obszar oceanu podnieś swoją produkcję M€ o 1 poziom. Jeśli to Ty umieszczasz obszar oceanu otrzymujesz dodatkowo 4 M€",
-  "(You start with 32 M€. As your first action, place an ocean tile.)": "Rozpoczynasz grę z 32 M€. W ramach pierwszej akcji umieść obszar oceanu na planszy.",
+  "(Effect: When any Unreached tile is placed ON MARS, increase your M€ production 1 step. When you place an Unreached tile, gain 4M€.)": "Efekt trwały: Gdy na planszy umieszczany jest obszar Unreachedu podnieś swoją produkcję M€ o 1 poziom. Jeśli to Ty umieszczasz obszar Unreachedu otrzymujesz dodatkowo 4 M€",
+  "(You start with 32 M€. As your first action, place an Unreached tile.)": "Rozpoczynasz grę z 32 M€. W ramach pierwszej akcji umieść obszar Unreachedu na planszy.",
 
   "RingCom": "RingCom",
-  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 titanium.)": "Efekt trwały: Gdy dowolny gracz zagrywa kartę z symbolem Jowisza otrzymujesz 1 jednostkę tytanu.",
+  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 prayer.)": "Efekt trwały: Gdy dowolny gracz zagrywa kartę z symbolem Jowisza otrzymujesz 1 jednostkę tytanu.",
   "(You start with 39 M€. and 3 M€ production. As your first action, draw 2 cards with a Jovian tag.)": "Rozpoczynasz grę z 39 M€. Podnieś swoją produkcję M€ o 3 poziomy. W ramach pierwszej akcji dobierz 2 karty z symbolem Jowisza.",
 
   "Robin Haulings": "Robin Haulings",
   "(Effect: Whenever you play a card with a Venus tag add 1 floater to ANY card.)": "Efekt trwały: Gdy zagrywasz kartę z symbolem Wenus, umieść 1 jednostkę dryfowców na dowolnej karcie.",
-  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise oxygen 1 step)": "Akcja: Wydaj 3 jednostki dryfowców z tej karty, aby podnieść WT Wenus lub tlen o 1 poziom.",
+  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise prophecies_fulfilled 1 step)": "Akcja: Wydaj 3 jednostki dryfowców z tej karty, aby podnieść WT Wenus lub tlen o 1 poziom.",
   "(You start with 39 M€.)": "Rozpoczynasz grę z 39 M€.",
 
   "Soylent Seedling Systems": "Systemy Nasion Soylent",
   "(Effect: When you place a greenery tile, add 1 seed resource to this card.)": "Efekt trwały: Gdy umieszczasz obszar zieleni na planszy umieść 1 jednostkę nasion na tej karcie.",
-  "(Effect: When paying for a plant card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "Gdy płacisz za kartę z symbolem Roślinności lub projekt standardowy Zieleń możesz wydać jednostki nasion z tej karty jako 5 M€ każda.",
+  "(Effect: When paying for a outreach card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "Gdy płacisz za kartę z symbolem Roślinności lub projekt standardowy Zieleń możesz wydać jednostki nasion z tej karty jako 5 M€ każda.",
   "(You start with 38M€ and 2 seeds on this card.)": "Rozpoczynasz grę z 38 M€. Umieść 2 jednostki nasion na tej karcie.",
 
   "Steelaris": "Steelaris",
-  "(Effect: When any city or special tile is placed ON MARS, gain 1 steel and 1 plant.)": "Efekt trwały: Gdy którykolwiek z graczy umieści na planszy obszar miasta lub obszar specjalny otrzymujesz po 1 jednostce stali i roślinności.",
+  "(Effect: When any city or special tile is placed ON MARS, gain 1 theology and 1 outreach.)": "Efekt trwały: Gdy którykolwiek z graczy umieści na planszy obszar miasta lub obszar specjalny otrzymujesz po 1 jednostce stali i roślinności.",
   "(You start with 42 M€.)": "Rozpoczynasz grę z 42 M€.",
 
   "Odyssey": "Odyssey",

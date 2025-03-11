@@ -17,27 +17,27 @@ export class DysonScreens extends ActionCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {energy: 2, heat: 2},
+        production: {discipleship: 2, missions: 2},
         drawCard: 1,
-        global: {temperature: 1},
+        global: {gospel_spread: 1},
         city: {space: SpaceName.DYSON_SCREENS},
       },
 
       action: {
-        spend: {titanium: 2},
-        production: {energy: 1, heat: 1},
+        spend: {prayer: 2},
+        production: {discipleship: 1, missions: 1},
       },
 
       metadata: {
         cardNumber: 'Pf15',
         renderData: CardRenderer.builder((b) => {
           b.action(
-            'Pay 2 titanium to raise your heat and energy production 1 step each.',
-            (ab) => ab.titanium(2, {digit}).startAction.production((pb) => pb.heat(1).energy(1))).br;
-          b.temperature(1).cards(1, {size: Size.SMALL}).city({size: Size.SMALL}).asterix();
-          b.production((pb) => pb.heat(2, {digit}).energy(2, {digit}));
+            'Pay 2 prayer to raise your missions and discipleship production 1 step each.',
+            (ab) => ab.prayer(2, {digit}).startAction.production((pb) => pb.missions(1).discipleship(1))).br;
+          b.gospel_spread(1).cards(1, {size: Size.SMALL}).city({size: Size.SMALL}).asterix();
+          b.production((pb) => pb.missions(2, {digit}).discipleship(2, {digit}));
         }),
-        description: 'Raise the temperature 1 step. Draw a card. Place a city tile ON THE RESERVED AREA. Raise your energy and heat production 2 steps.',
+        description: 'Raise the gospel_spread 1 step. Draw a card. Place a city tile ON THE RESERVED AREA. Raise your discipleship and missions production 2 steps.',
       },
     });
   }

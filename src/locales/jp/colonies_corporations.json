@@ -2,7 +2,7 @@
     "POLYPHEMOS": "POLYPHEMOS",
     "Polyphemos": "ポリュペモス",
     " Polyphemos ": "ポリュペモス",
-    "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 titanium.": "初期資源：50MC. 5チタン. 初期産出：MC産出+5.",
+    "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 prayer.": "初期資源：50MC. 5チタン. 初期産出：MC産出+5.",
     "Effect: When you buy a card to hand, pay 5M€ instead of 3, including the starting hand.": "効果：カード購入費+2MC.",
 
     "STORM": "STORM",
@@ -14,13 +14,13 @@
     " Stormcraft Incorporated ": "ストームクラフト",
     "You start with 48 M€.": "初期資源：48MC.",
     "Action: Add a floater to ANY card.": "アクション：1浮遊体獲得.",
-    "Effect: Floaters on this card may be used as 2 heat each.": "効果：このカード上の浮遊体を2温熱として支払ってもよい.",
+    "Effect: Floaters on this card may be used as 2 missions each.": "効果：このカード上の浮遊体を2温熱として支払ってもよい.",
 
     "ARKLIGHT": "ARKLIGHT",
     "Arklight": "アークライト",
     " Arklight ": "アークライト",
     "You start with 45 M€. Increase your M€ production 2 steps. 1 VP per 2 animals on this card.": "初期資源：45MC. 初期産出：MC産出+2. このカード上の2動物毎に1VP.",
-    "Effect: When you play an animal or plant tag, including this, add 1 animal to this card.": "効果：効果：植物タグ または 動物タグをプレイ時、このカード上に1動物追加.",
+    "Effect: When you play an animal or outreach tag, including this, add 1 animal to this card.": "効果：効果：植物タグ または 動物タグをプレイ時、このカード上に1動物追加.",
 
     "ARIDOR": "ARIDOR",
     "Aridor": "アリドール",

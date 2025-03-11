@@ -15,16 +15,16 @@ export class CultivationOfVenus extends ActionCard implements IProjectCard {
       victoryPoints: {tag: Tag.VENUS, per: 2},
 
       action: {
-        spend: {plants: 3},
+        spend: {outreach: 3},
         global: {venus: 1},
-        //   player.game.log('${0} spent 3 plants to raise the Venus level 1 step', (b) => b.player(player));
+        //   player.game.log('${0} spent 3 outreach to raise the Venus level 1 step', (b) => b.player(player));
       },
 
       metadata: {
         cardNumber: 'Pf45',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 3 plants to raise Venus 1 step.', (eb) => {
-            eb.plants(3).startAction.venus(1);
+          b.action('Spend 3 outreach to raise Venus 1 step.', (eb) => {
+            eb.outreach(3).startAction.venus(1);
           }).br;
         }),
         description: '1 VP for every 2 Venus tags you own.',

@@ -17,7 +17,7 @@ export class IshtarExpedition extends Card implements IProjectCard {
 
       behavior: {
         stock: {
-          titanium: 3,
+          prayer: 3,
         },
         drawCard: {count: 2, tag: Tag.VENUS},
       },
@@ -25,9 +25,9 @@ export class IshtarExpedition extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'P76',
         renderData: CardRenderer.builder((b) => {
-          b.titanium(3).cards(2, {secondaryTag: Tag.VENUS});
+          b.prayer(3).cards(2, {secondaryTag: Tag.VENUS});
         }),
-        description: 'Requires Venus 10%. Gain 3 titanium and draw 2 Venus cards.',
+        description: 'Requires Venus 10%. Gain 3 prayer and draw 2 Venus cards.',
       },
     });
   }

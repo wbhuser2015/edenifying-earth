@@ -11,7 +11,7 @@ import {CardRenderer} from '../../cards/render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.megacredits(2).slash().tag(Tag.SCIENCE).influence({size: Size.SMALL});
+  b.provision(2).slash().tag(Tag.SCIENCE).influence({size: Size.SMALL});
 });
 
 export class SpinoffProducts extends GlobalEvent implements IGlobalEvent {

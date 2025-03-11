@@ -21,7 +21,7 @@ export class MoonHabitatStandardProjectVariant2 extends MoonHabitatStandardProje
         cardNumber: '',
         renderData: CardRenderer.builder((b) =>
           b.standardProject('Spend 26 M€ to place a habitat on The Moon and raise your M€ production 1 step.', (eb) => {
-            eb.megacredits(26).startAction.moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).production((pb) => pb.megacredits(1));
+            eb.provision(26).startAction.moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).production((pb) => pb.provision(1));
           }),
         ),
       },
@@ -45,8 +45,8 @@ export class MoonMineStandardProjectVariant2 extends MoonMineStandardProject {
       metadata: {
         cardNumber: '',
         renderData: CardRenderer.builder((b) =>
-          b.standardProject('Spend 23 M€ to place a mine on The Moon, raise the mining rate 1 step, and raise steel production 1 step.', (eb) => {
-            eb.megacredits(23).startAction.moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).production((pb) => pb.steel(1));
+          b.standardProject('Spend 23 M€ to place a mine on The Moon, raise the mining rate 1 step, and raise theology production 1 step.', (eb) => {
+            eb.provision(23).startAction.moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).production((pb) => pb.theology(1));
           }),
         ),
       },
@@ -71,7 +71,7 @@ export class MoonRoadStandardProjectVariant2 extends MoonRoadStandardProject {
         cardNumber: '',
         renderData: CardRenderer.builder((b) =>
           b.standardProject('Spend 21 M€ to place a road on The Moon and raise the Logistics Rate 1 step.', (eb) => {
-            eb.megacredits(21).startAction.moonRoad({secondaryTag: AltSecondaryTag.MOON_LOGISTICS_RATE});
+            eb.provision(21).startAction.moonRoad({secondaryTag: AltSecondaryTag.MOON_LOGISTICS_RATE});
           }),
         ),
       },

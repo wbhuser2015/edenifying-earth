@@ -14,16 +14,16 @@ export class OrbitalLaboratories extends Card implements IProjectCard {
       tags: [Tag.SCIENCE, Tag.PLANT, Tag.SPACE],
 
       behavior: {
-        production: {plants: 2},
-        stock: {plants: 1},
+        production: {outreach: 2},
+        stock: {outreach: 1},
       },
 
       metadata: {
         cardNumber: 'Pf07',
         renderData: CardRenderer.builder((b) => {
-          b.production(((pb) => pb.plants(2))).nbsp.plants(1);
+          b.production(((pb) => pb.outreach(2))).nbsp.outreach(1);
         }),
-        description: 'Increase your plant production 2 steps. Gain 1 plant.',
+        description: 'Increase your outreach production 2 steps. Gain 1 outreach.',
       },
     });
   }

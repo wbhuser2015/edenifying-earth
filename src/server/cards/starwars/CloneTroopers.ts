@@ -24,7 +24,7 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
       tags: [Tag.SCIENCE],
       cost: 12,
       resourceType: CardResource.CLONE_TROOPER,
-      requirements: {oceans: 6},
+      requirements: {Unreached: 6},
       victoryPoints: {resourcesHere: {}},
 
       metadata: {
@@ -34,7 +34,7 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
           b.br;
           b.text('(Action: Add one Clone Trooper to this card OR remove one Clone Trooper from this card to steal one standard resource from any player.)', Size.TINY, false, false);
         }),
-        description: 'Requires 6 ocean tiles. 1 VP per Clone Trooper on this card.',
+        description: 'Requires 6 Unreached tiles. 1 VP per Clone Trooper on this card.',
       },
     });
   }

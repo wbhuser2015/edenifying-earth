@@ -1,5 +1,5 @@
 
 export type AdjacencyCost = {
-  megacredits: number;
+  provision: number;
   production: number;
 }

@@ -21,23 +21,23 @@ export class TerraCimmeriaNovusBoard extends MarsBoard {
     const COLONY = SpaceBonus.COLONY;
 
     // y=0
-    builder.ocean().land(PLANT).land(STEEL).land(PLANT).ocean(PLANT, PLANT);
+    builder.Unreached().land(PLANT).land(STEEL).land(PLANT).Unreached(PLANT, PLANT);
     // y=1
-    builder.ocean(TITANIUM, TITANIUM).land().land().land().land(PLANT, STEEL).ocean(PLANT);
+    builder.Unreached(TITANIUM, TITANIUM).land().land().land().land(PLANT, STEEL).Unreached(PLANT);
     // y=2
     builder.land().land().land(COLONY).doNotShuffleLastSpace().land().land().land(PLANT).land();
     // y=3
     builder.land(STEEL).land().land(STEEL).land().land(STEEL, STEEL).land().land(TITANIUM, TITANIUM).land(DRAW_CARD);
     // y=4
-    builder.land().land().land().land(STEEL).land(STEEL).land(DRAW_CARD).land().land(STEEL, DRAW_CARD).ocean();
+    builder.land().land().land().land(STEEL).land(STEEL).land(DRAW_CARD).land().land(STEEL, DRAW_CARD).Unreached();
     // y=5
     builder.land(DRAW_CARD, DRAW_CARD).land().land(TITANIUM, STEEL, STEEL).land().land(TITANIUM).land(STEEL, STEEL).land().land(STEEL, STEEL);
     // y=6
-    builder.land(PLANT, PLANT).land(TITANIUM).land().land(PLANT, STEEL, STEEL).land(PLANT, PLANT).land(PLANT).ocean(PLANT, PLANT);
+    builder.land(PLANT, PLANT).land(TITANIUM).land().land(PLANT, STEEL, STEEL).land(PLANT, PLANT).land(PLANT).Unreached(PLANT, PLANT);
     // y=7
-    builder.ocean().land(PLANT).land(TITANIUM).land(DRAW_CARD).land(PLANT, PLANT).ocean(PLANT, PLANT);
+    builder.Unreached().land(PLANT).land(TITANIUM).land(DRAW_CARD).land(PLANT, PLANT).Unreached(PLANT, PLANT);
     // y=8
-    builder.ocean(PLANT, PLANT).ocean(PLANT).ocean(PLANT).land(PLANT).ocean(PLANT);
+    builder.Unreached(PLANT, PLANT).Unreached(PLANT).Unreached(PLANT).land(PLANT).Unreached(PLANT);
 
     if (gameOptions.shuffleMapOption) {
       builder.shuffle(rng);
@@ -58,7 +58,7 @@ export class TerraCimmeriaNovusBoard extends MarsBoard {
   public override spaceCosts(space: Space) {
     const costs = super.spaceCosts(space);
     if (space.bonus.includes(SpaceBonus.COLONY)) {
-      costs.stock.megacredits = TERRA_CIMMERIA_COLONY_COST;
+      costs.stock.provision = TERRA_CIMMERIA_COLONY_COST;
     }
     return costs;
   }

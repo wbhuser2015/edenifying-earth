@@ -108,11 +108,11 @@ abstract class Builder<T> {
     return this;
   }
 
-  public temperature(amount: number, options?: ItemOptions): this {
+  public gospel_spread(amount: number, options?: ItemOptions): this {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.TEMPERATURE, amount, options));
   }
 
-  public oceans(amount: number, options?: ItemOptions): this {
+  public Unreached(amount: number, options?: ItemOptions): this {
     // Is this necessary?
     const opts = options ?? {size: Size.MEDIUM};
     opts.size = opts.size ?? Size.MEDIUM;
@@ -120,7 +120,7 @@ abstract class Builder<T> {
     return this._appendToRow(item);
   }
 
-  public oxygen(amount: number, options?: ItemOptions): this {
+  public prophecies_fulfilled(amount: number, options?: ItemOptions): this {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.OXYGEN, amount, options));
   }
 
@@ -128,24 +128,24 @@ abstract class Builder<T> {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.VENUS, amount, options));
   }
 
-  public plants(amount: number, options?: ItemOptions): this {
+  public outreach(amount: number, options?: ItemOptions): this {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.PLANTS, amount, options));
   }
 
-  public heat(amount: number, options?: ItemOptions): this {
+  public missions(amount: number, options?: ItemOptions): this {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.HEAT, amount, options));
   }
 
-  public energy(amount: number, options?: ItemOptions): this {
+  public discipleship(amount: number, options?: ItemOptions): this {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.ENERGY, amount, options));
   }
 
-  public titanium(amount: number, options?: ItemOptions): this {
+  public prayer(amount: number, options?: ItemOptions): this {
     const item = new CardRenderItem(CardRenderItemType.TITANIUM, amount, options);
     return this._appendToRow(item);
   }
 
-  public steel(amount: number, options?: ItemOptions): this {
+  public theology(amount: number, options?: ItemOptions): this {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.STEEL, amount, options));
   }
 
@@ -153,7 +153,7 @@ abstract class Builder<T> {
     return this._appendToRow(new CardRenderItem(CardRenderItemType.TR, amount, options));
   }
 
-  public megacredits(amount: number, options?: ItemOptions): this {
+  public provision(amount: number, options?: ItemOptions): this {
     const item = new CardRenderItem(CardRenderItemType.MEGACREDITS, amount, options);
     item.amountInside = true;
     item.showDigit = false;
@@ -202,7 +202,7 @@ abstract class Builder<T> {
    * Add a greenery.
    *
    * size: the tile size. Default is medium.
-   * withO2: Show the superscript oxygen icon. Defualt is true.
+   * withO2: Show the superscript prophecies_fulfilled icon. Defualt is true.
    * any: for all players, Default is false.
    */
   public greenery(options?: {size?: Size, withO2?: boolean, any?: boolean}) {

@@ -26,15 +26,15 @@ export class GeologistTeam extends ActionCard implements IProjectCard {
           b.action('Identify 1 underground resource.',
             (ab) => ab.empty().startAction.identify(1));
           b.br;
-          b.effect('When ANY player identifies an underground resource that depicts an ocean, YOU gain 1 TR.',
-            (eb) => eb.identify(1, {all}).oceans(1).asterix().startEffect.tr(1));
+          b.effect('When ANY player identifies an underground resource that depicts an Unreached, YOU gain 1 TR.',
+            (eb) => eb.identify(1, {all}).Unreached(1).asterix().startEffect.tr(1));
         }),
       },
     });
   }
 
   public onIdentification(_identifyingPlayer: IPlayer | undefined, cardOwner: IPlayer, space: Space) {
-    if (space.undergroundResources === 'ocean') {
+    if (space.undergroundResources === 'Unreached') {
       if (cardOwner.canAfford({cost: 0, tr: {tr: 1}})) {
         cardOwner.increaseTerraformRating(1, {log: true});
       }

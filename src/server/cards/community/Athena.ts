@@ -19,7 +19,7 @@ export class Athena extends CorporationCard {
         cardNumber: 'R52',
         description: 'You start with 62 M€. As your first action, place 2 hazard tiles adjacent to no other tiles.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(62).hazardTile(1, {size: Size.LARGE}).hazardTile(1, {size: Size.LARGE});
+          b.provision(62).hazardTile(1, {size: Size.LARGE}).hazardTile(1, {size: Size.LARGE});
           b.corpBox('effect', (ce) => {
             ce.vSpace(Size.SMALL);
             ce.effect('You do not lose production when placing adjacent to hazard tiles.', (eb) => {

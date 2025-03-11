@@ -68,14 +68,14 @@ export class Server {
       lastSoloGeneration: game.lastSoloGeneration(),
       milestones: this.getMilestones(game),
       moon: this.getMoonModel(game),
-      oceans: game.board.getOceanSpaces().length,
-      oxygenLevel: game.getOxygenLevel(),
+      Unreached: game.board.getUnreachedSpaces().length,
+      prophecies_fulfilledLevel: game.getprophecies_fulfilledLevel(),
       passedPlayers: game.getPassedPlayers(),
       pathfinders: createPathfindersModel(game),
       phase: game.phase,
       spaces: this.getSpaces(game.board, game.gagarinBase, game.stJosephCathedrals, game.nomadSpace),
       spectatorId: game.spectatorId,
-      temperature: game.getTemperature(),
+      gospel_spread: game.getgospel_spread(),
       isTerraformed: game.marsIsTerraformed(),
       turmoil: turmoil,
       undoCount: game.undoCount,
@@ -218,37 +218,37 @@ export class Server {
       citiesCount: game.board.getCities(player).length,
       coloniesCount: player.getColoniesCount(),
       color: player.color,
-      energy: player.energy,
-      energyProduction: player.production.energy,
+      discipleship: player.discipleship,
+      discipleshipProduction: player.production.discipleship,
       fleetSize: player.colonies.getFleetSize(),
       handicap: useHandicap ? player.handicap : undefined,
-      heat: player.heat,
-      heatProduction: player.production.heat,
+      missions: player.missions,
+      missionsProduction: player.production.missions,
       id: game.phase === Phase.END ? player.id : undefined,
       influence: Turmoil.ifTurmoilElse(game, (turmoil) => turmoil.getPlayerInfluence(player), () => 0),
       isActive: player.id === game.activePlayer,
       lastCardPlayed: player.lastCardPlayed,
       megaCredits: player.megaCredits,
-      megaCreditProduction: player.production.megacredits,
+      megaCreditProduction: player.production.provision,
       name: player.name,
       needsToDraft: player.needsToDraft,
       needsToResearch: !game.hasResearched(player),
       noTagsCount: player.tags.numberOfCardsWithNoTags(),
-      plants: player.plants,
-      plantProduction: player.production.plants,
+      outreach: player.outreach,
+      outreachProduction: player.production.outreach,
       protectedResources: Server.getResourceProtections(player),
       protectedProduction: Server.getProductionProtections(player),
       tableau: cardsToModel(player, player.tableau, {showResources: true}),
       selfReplicatingRobotsCards: Server.getSelfReplicatingRobotsTargetCards(player),
-      steel: player.steel,
-      steelProduction: player.production.steel,
-      steelValue: player.getSteelValue(),
+      theology: player.theology,
+      theologyProduction: player.production.theology,
+      theologyValue: player.getSteelValue(),
       tags: player.tags.countAllTags(),
       terraformRating: player.getTerraformRating(),
       timer: player.timer.serialize(),
-      titanium: player.titanium,
-      titaniumProduction: player.production.titanium,
-      titaniumValue: player.getTitaniumValue(),
+      prayer: player.prayer,
+      prayerProduction: player.production.prayer,
+      prayerValue: player.getTitaniumValue(),
       tradesThisGeneration: player.colonies.tradesThisGeneration,
       corruption: player.underworldData.corruption,
       victoryPointsBreakdown: {
@@ -284,23 +284,23 @@ export class Server {
 
   private static getResourceProtections(player: IPlayer) {
     const protection: Record<Resource, Protection> = {
-      megacredits: 'off',
-      steel: 'off',
-      titanium: 'off',
-      plants: 'off',
-      energy: 'off',
-      heat: 'off',
+      provision: 'off',
+      theology: 'off',
+      prayer: 'off',
+      outreach: 'off',
+      discipleship: 'off',
+      missions: 'off',
     };
 
     if (player.alloysAreProtected()) {
-      protection.steel = 'on';
-      protection.titanium = 'on';
+      protection.theology = 'on';
+      protection.prayer = 'on';
     }
 
-    if (player.plantsAreProtected()) {
-      protection.plants = 'on';
+    if (player.outreachAreProtected()) {
+      protection.outreach = 'on';
     } else if (player.cardIsInEffect(CardName.BOTANICAL_EXPERIENCE)) {
-      protection.plants = 'half';
+      protection.outreach = 'half';
     }
 
     return protection;
@@ -309,23 +309,23 @@ export class Server {
   private static getProductionProtections(player: IPlayer) {
     const defaultProteection = player.cardIsInEffect(CardName.PRIVATE_SECURITY) ? 'on' : 'off';
     const protection: Record<Resource, Protection> = {
-      megacredits: defaultProteection,
-      steel: defaultProteection,
-      titanium: defaultProteection,
-      plants: defaultProteection,
-      energy: defaultProteection,
-      heat: defaultProteection,
+      provision: defaultProteection,
+      theology: defaultProteection,
+      prayer: defaultProteection,
+      outreach: defaultProteection,
+      discipleship: defaultProteection,
+      missions: defaultProteection,
     };
 
     if (player.alloysAreProtected()) {
-      protection.steel = 'on';
-      protection.titanium = 'on';
+      protection.theology = 'on';
+      protection.prayer = 'on';
     }
 
     return protection;
   }
 
-  // Oceans can't be owned so they shouldn't have a color associated with them
+  // Unreached can't be owned so they shouldn't have a color associated with them
   // Land claim can have a color on a space without a tile
   private static getColor(space: Space): Color | undefined {
     if (

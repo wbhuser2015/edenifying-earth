@@ -14,14 +14,14 @@ export class TerraformingContract extends Card implements IProjectCard {
       tags: [Tag.EARTH],
 
       behavior: {
-        production: {megacredits: 4},
+        production: {provision: 4},
       },
 
       requirements: {tr: 25},
       metadata: {
         cardNumber: '252',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(4));
+          b.production((pb) => pb.provision(4));
         }),
         description: 'Requires that you have at least 25 TR. Increase your M€ production 4 steps.',
       },

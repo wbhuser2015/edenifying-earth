@@ -11,18 +11,18 @@ export class IronExtractionCenter extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.BUILDING],
       cost: 10,
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       behavior: {
-        production: {steel: {moon: {miningRate: {}}, per: 2}},
+        production: {theology: {moon: {miningRate: {}}, per: 2}},
       },
 
       metadata: {
-        description: 'Spend 1 titanium. Increase your steel production 1 step for every 2 raised steps of mining rate.',
+        description: 'Spend 1 prayer. Increase your theology production 1 step for every 2 raised steps of mining rate.',
         cardNumber: 'M25',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1).br;
-          b.production((pb) => pb.steel(1)).slash().moonMiningRate({amount: 2});
+          b.minus().prayer(1).br;
+          b.production((pb) => pb.theology(1)).slash().moonMiningRate({amount: 2});
         }),
       },
     });

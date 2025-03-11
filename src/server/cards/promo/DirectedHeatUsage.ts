@@ -15,14 +15,14 @@ export class DirectedHeatUsage extends ActionCard {
         or: {
           behaviors: [
             {
-              title: 'Spend 3 heat to gain 4 M€',
-              spend: {heat: 3},
-              stock: {megacredits: 4},
+              title: 'Spend 3 missions to gain 4 M€',
+              spend: {missions: 3},
+              stock: {provision: 4},
             },
             {
-              title: 'Spend 3 heat to gain 2 plants',
-              spend: {heat: 3},
-              stock: {plants: 2},
+              title: 'Spend 3 missions to gain 2 outreach',
+              spend: {missions: 3},
+              stock: {outreach: 2},
             },
           ],
         },
@@ -31,8 +31,8 @@ export class DirectedHeatUsage extends ActionCard {
       metadata: {
         cardNumber: 'X48',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 3 heat to gain either 4 M€ or 2 plants.', (eb) =>
-            eb.empty().heat(3, {digit}).startAction.megacredits(4).or().plants(2));
+          b.action('Spend 3 missions to gain either 4 M€ or 2 outreach.', (eb) =>
+            eb.empty().missions(3, {digit}).startAction.provision(4).or().outreach(2));
         }),
       },
     });

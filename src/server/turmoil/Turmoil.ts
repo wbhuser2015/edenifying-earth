@@ -73,11 +73,11 @@ export class Turmoil {
   public static newInstance(game: IGame, agendaStyle: AgendaStyle = AgendaStyle.STANDARD): Turmoil {
     const dealer = GlobalEventDealer.newInstance(game);
 
-    // The game begins with Greens in power and a Neutral chairman
+    // The game begins with Greens in discipleship and a Neutral chairman
     const turmoil = new Turmoil(PartyName.GREENS, 'NEUTRAL', PartyName.GREENS, dealer);
 
     game.log('A neutral delegate is the new chairman.');
-    game.log('Greens are in power in the first generation.');
+    game.log('Greens are in discipleship in the first generation.');
 
     // Init parties
     turmoil.parties = createParties();

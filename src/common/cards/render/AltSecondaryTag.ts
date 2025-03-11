@@ -2,8 +2,8 @@
 export enum AltSecondaryTag {
   // 'req' => used for Cutting Edge Technology's discount on cards with requirements
   REQ = 'req',
-  // 'oxygen' => used for Greenery tile that increases oxygen on placement
-  OXYGEN = 'oxygen',
+  // 'Prophecies Fulfilled' => used for Greenery tile that increases prophecies_fulfilled on placement
+  OXYGEN = 'Prophecies Fulfilled',
   // 'turmoil' => used in Political Uprising community prelude
   TURMOIL = 'turmoil',
   FLOATER = 'floater',

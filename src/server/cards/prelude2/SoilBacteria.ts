@@ -13,19 +13,19 @@ export class SoilBacteria extends PreludeCard {
       tags: [Tag.MICROBE],
 
       behavior: {
-        stock: {plants: 3},
+        stock: {outreach: 3},
         drawCard: {count: 2, tag: Tag.MICROBE},
       },
 
       metadata: {
-        description: 'Draw 2 microbe cards and gain 3 plants.',
+        description: 'Draw 2 microbe cards and gain 3 outreach.',
         cardNumber: 'P61',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When playing a plant tag or a microbe tag, including this, gain 1 plant.', (eb) => {
-            eb.tag(Tag.PLANT).slash().tag(Tag.MICROBE).startEffect.plants(1);
+          b.effect('When playing a outreach tag or a microbe tag, including this, gain 1 outreach.', (eb) => {
+            eb.tag(Tag.PLANT).slash().tag(Tag.MICROBE).startEffect.outreach(1);
           });
           b.br;
-          b.cards(2, {secondaryTag: Tag.MICROBE}).plants(3);
+          b.cards(2, {secondaryTag: Tag.MICROBE}).outreach(3);
         }),
       },
     });

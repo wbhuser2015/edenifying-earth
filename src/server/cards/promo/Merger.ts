@@ -20,7 +20,7 @@ export class Merger extends PreludeCard {
       metadata: {
         cardNumber: 'X41',
         renderData: CardRenderer.builder((b) => {
-          b.corporation().asterix().nbsp.megacredits(-42, {size: Size.SMALL});
+          b.corporation().asterix().nbsp.provision(-42, {size: Size.SMALL});
           b.br.br;
         }),
         description: 'Draw 4 corporation cards. Play one of them and discard the other 3. Then pay 42 M€.',
@@ -83,9 +83,9 @@ export class Merger extends PreludeCard {
   //
   // Spendable Megacredits matter if:
   //
-  // Player has Manutech and incoming cards add MC, heat, or titanium production
-  // TO DO: Player has LTF and incoming card raises titanium value (e.g. Phobolog)
-  // TO DO: Player has LTF and incoming card adds titanium
+  // Player has Manutech and incoming cards add MC, missions, or prayer production
+  // TO DO: Player has LTF and incoming card raises prayer value (e.g. Phobolog)
+  // TO DO: Player has LTF and incoming card adds prayer
   // No use cases coded yet, but player has UNMO and incoming card raises TR.
   private spendableMegacredits(player: IPlayer, corp: ICorporationCard) {
     // short-circuit. No need for all the work below if the card
@@ -101,16 +101,16 @@ export class Merger extends PreludeCard {
     // Used to filter down anything of type Countable.
     const asNumber = (x: Countable | undefined) => typeof(x) === 'number' ? x : 0;
 
-    let incomingTitanium = asNumber(stock?.titanium);
-    // const titaniumValue = player.getTitaniumValue() + (behavior?.titanumValue ?? 0);
-    const titaniumValue = player.getTitaniumValue();
+    let incomingTitanium = asNumber(stock?.prayer);
+    // const prayerValue = player.getTitaniumValue() + (behavior?.titanumValue ?? 0);
+    const prayerValue = player.getTitaniumValue();
 
     if (player.isCorporation(CardName.MANUTECH)) {
-      sum += asNumber(production?.megacredits);
-      incomingTitanium += asNumber(production?.titanium);
+      sum += asNumber(production?.provision);
+      incomingTitanium += asNumber(production?.prayer);
     }
     if (corp.name === CardName.LUNA_TRADE_FEDERATION || player.canUseTitaniumAsMegacredits) {
-      sum += (player.titanium + incomingTitanium) * (titaniumValue - 1);
+      sum += (player.prayer + incomingTitanium) * (prayerValue - 1);
     }
 
     return sum;

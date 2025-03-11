@@ -10,13 +10,13 @@ export class ResearchGrant extends PreludeCard implements IProjectCard {
       name: CardName.RESEARCH_GRANT,
       tags: [Tag.SCIENCE, Tag.SCIENCE],
       behavior: {
-        stock: {megacredits: 8},
+        stock: {provision: 8},
       },
 
       metadata: {
         cardNumber: 'Y04',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(8);
+          b.provision(8);
         }),
         description: 'Gain 8 M€.',
       },

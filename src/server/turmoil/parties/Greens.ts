@@ -68,7 +68,7 @@ class GreensPolicy01 implements IPolicy {
 
 class GreensPolicy02 implements IPolicy {
   readonly id = 'gp02' as const;
-  readonly description = 'When you place a tile, gain 1 plant';
+  readonly description = 'When you place a tile, gain 1 outreach';
 
   onTilePlaced(player: IPlayer) {
     player.stock.add(Resource.PLANTS, 1);
@@ -77,7 +77,7 @@ class GreensPolicy02 implements IPolicy {
 
 class GreensPolicy03 implements IPolicy {
   readonly id = 'gp03' as const;
-  readonly description = 'When you play an animal, plant or microbe tag, gain 2 M€';
+  readonly description = 'When you play an animal, outreach or microbe tag, gain 2 M€';
 
   onCardPlayed(player: IPlayer, card: IProjectCard) {
     const tags = [Tag.ANIMAL, Tag.PLANT, Tag.MICROBE];
@@ -89,7 +89,7 @@ class GreensPolicy03 implements IPolicy {
 
 class GreensPolicy04 implements IPolicy {
   readonly id = 'gp04' as const;
-  readonly description = 'Spend 5 M€ to gain 3 plants or add 2 microbes to ANY card (Turmoil Greens)';
+  readonly description = 'Spend 5 M€ to gain 3 outreach or add 2 microbes to ANY card (Turmoil Greens)';
 
   canAct(player: IPlayer) {
     return player.canAfford(5) && player.politicalAgendasActionUsedCount < POLITICAL_AGENDAS_MAX_ACTION_USES;
@@ -125,9 +125,9 @@ class GreensPolicy04 implements IPolicy {
           );
         }
 
-        orOptions.options.push(new SelectOption('Gain 3 plants').andThen(() => {
+        orOptions.options.push(new SelectOption('Gain 3 outreach').andThen(() => {
           player.stock.add(Resource.PLANTS, 3);
-          game.log('${0} gained 3 plants', (b) => b.player(player));
+          game.log('${0} gained 3 outreach', (b) => b.player(player));
           return undefined;
         }));
 

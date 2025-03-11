@@ -26,7 +26,7 @@ export class ProjectWorkshop extends CorporationCard {
       startingMegaCredits: 39,
 
       behavior: {
-        stock: {steel: 1, titanium: 1},
+        stock: {theology: 1, prayer: 1},
       },
 
       firstAction: {
@@ -36,9 +36,9 @@ export class ProjectWorkshop extends CorporationCard {
 
       metadata: {
         cardNumber: 'R45',
-        description: 'You start with 39 M€, 1 steel and 1 titanium. As your first action, draw a blue card.',
+        description: 'You start with 39 M€, 1 theology and 1 prayer. As your first action, draw a blue card.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(39).steel(1).titanium(1).cards(1, {secondaryTag: AltSecondaryTag.BLUE});
+          b.provision(39).theology(1).prayer(1).cards(1, {secondaryTag: AltSecondaryTag.BLUE});
           b.corpBox('action', (cb) => {
             cb.vSpace(Size.LARGE);
             cb.action(undefined, (eb) => {
@@ -48,7 +48,7 @@ export class ProjectWorkshop extends CorporationCard {
             });
             cb.vSpace(Size.SMALL);
             cb.action('Flip and discard a played blue card to convert any VP on it into TR and draw 2 cards, or spend 3 M€ to draw a blue card.', (eb) => {
-              eb.or().megacredits(3).startAction.cards(1, {secondaryTag: AltSecondaryTag.BLUE});
+              eb.or().provision(3).startAction.cards(1, {secondaryTag: AltSecondaryTag.BLUE});
             });
           });
         }),

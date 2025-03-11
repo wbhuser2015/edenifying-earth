@@ -33,7 +33,7 @@ export class ExtractorBalloons extends Card implements IActionCard {
       //       spend: {resourcesHere: 2},
       //       global: {venus: 1},
       //       // Don't offer this if Venus isn't maximized?
-      //       // // // LogHelper.logRemoveResource(player, this, 2, 'raise oxygen 1 step');
+      //       // // // LogHelper.logRemoveResource(player, this, 2, 'raise prophecies_fulfilled 1 step');
       //     },
       //     {
       //       title: 'Add 1 floater to this card.',

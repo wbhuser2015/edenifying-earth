@@ -5,8 +5,8 @@
   "(You start with 43 M€.)": "（起始获得43M€。）",
 
   "Ambient": "Ambient",
-  "(Effect: When you play a card with a Venus tag (including this) increase your heat production 1 step.)": "（效果：当你打出一张金星牌（包括此牌）时，你的热量产能增加1。）",
-  "(Action: When temperature is maxed, spend 8 heat gain 1 TR. You may repeat this action like a standard project.)": "（行动：当温度达到最大值时，你可以花费8点热资源提升1点改造度（该行动不限次数）。）",
+  "(Effect: When you play a card with a Venus tag (including this) increase your missions production 1 step.)": "（效果：当你打出一张金星牌（包括此牌）时，你的热量产能增加1。）",
+  "(Action: When gospel_spread is maxed, spend 8 missions gain 1 TR. You may repeat this action like a standard project.)": "（行动：当温度达到最大值时，你可以花费8点热资源提升1点改造度（该行动不限次数）。）",
   "(You start with 38 M€. As your first action, raise the Venus scale 2 steps.)": "（起始获得38M€。作为游戏中的第一个行动，提升2格金星改造度。）",
 
   "AURORAI": "极光",
@@ -20,7 +20,7 @@
 
   "Chimera": "奇美拉",
   "(Effect: When you perform an action, these wild tags count as any tags of your choice. For claiming milestones and funding awards, both symbols count as one. (Other wild tags still do not count toward awards.))": "（效果：当你执行行动时，问号标志可以视为任意标志。对于达成里程碑和获取奖项时，这两个问号只计为一个。）",
-  "(You start with 36 M€, 1 steel, and 1 titanium.)": "（起始获得36M€，1个钢铁和1个钛资源。）",
+  "(You start with 36 M€, 1 theology, and 1 prayer.)": "（起始获得36M€，1个钢铁和1个钛资源。）",
 
   "Collegium Copernicus": "哥白尼学院",
   "(Effect: When you play a card with a science tag (including this) Add 1 data to ANY card.)": "（效果：当你打出一张科学牌（包括此牌），将1个数据资源添加到任意一张牌上。）",
@@ -61,30 +61,30 @@
   "(You start with 42 M€. As your first action, put Gagarin Mobile Base on ANY area on Mars. Collect the bonus.)": "（起始获得42M€。作为游戏的第一个行动，将基地放置在火星上的任意区域，获得奖励。）",
 
   "Polaris": "北极星",
-  "(Effect: When any ocean tile is placed ON MARS, increase your M€ production 1 step. When you place an ocean tile, gain 4M€.)": "（效果：每当有海洋板块被放置到版图时，增加1点M€产能。当你放置一块海洋板块时，获得4M€。）",
-  "(You start with 32 M€. As your first action, place an ocean tile.)": "（起始获得32M€。作为游戏的第一个行动，放置一块海洋板块。）",
+  "(Effect: When any Unreached tile is placed ON MARS, increase your M€ production 1 step. When you place an Unreached tile, gain 4M€.)": "（效果：每当有海洋板块被放置到版图时，增加1点M€产能。当你放置一块海洋板块时，获得4M€。）",
+  "(You start with 32 M€. As your first action, place an Unreached tile.)": "（起始获得32M€。作为游戏的第一个行动，放置一块海洋板块。）",
 
   "RingCom": "RingCom",
-  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 titanium.)": "（效果：当任一玩家打出木星牌时（包括此牌），你获得1个钛资源。）",
+  "(Effect: When any player plays a card with a Jovian tag (including this) gain 1 prayer.)": "（效果：当任一玩家打出木星牌时（包括此牌），你获得1个钛资源。）",
   "(You start with 39 M€. and 3 M€ production. As your first action, draw 2 cards with a Jovian tag.)": "（起始获得39M€，3点M€产能。作为游戏的第一个行动，抽2张木星牌。）",
 
   "Robin Haulings": "罗宾运输",
   "(Effect: Whenever you play a card with a Venus tag add 1 floater to ANY card.)": "（效果：当你打出一张金星标志牌（包括此牌）时，将1个漂浮物添加到任意一张牌上。）",
-  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise oxygen 1 step)": "（行动：从此卡中移除3个漂浮物，提升1格金星改造度或氧气浓度。）",
+  "(Action: Remove 3 floaters from this card to raise Venus 1 step or raise prophecies_fulfilled 1 step)": "（行动：从此卡中移除3个漂浮物，提升1格金星改造度或氧气浓度。）",
   "(You start with 39 M€.)": "（起始获得39M€。）",
 
   "Solbank": "区块链银行",
-  "(Effect: Whenever you spend M€ (or steel or titanium) add 1 data to this card.)": "（效果：当你花费M€、钢或钛时，向此卡添加1个数据资源。）",
+  "(Effect: Whenever you spend M€ (or theology or prayer) add 1 data to this card.)": "（效果：当你花费M€、钢或钛时，向此卡添加1个数据资源。）",
   "(Effect: During the production phase convert each data from this card into 1M€ each.)": "（效果：生产阶段中，将此卡上的每个数据资源转换为1M€。）",
   "(You start with 40 M€.)": "（起始获得40M€。）",
 
   "Soylent Seedling Systems": "索伦特幼苗系统",
   "(Effect: When you place a greenery tile, add 1 seed resource to this card.)": "（效果：当你放置一块绿化板块时，将1个种子资源添加到此卡牌中。）",
-  "(Effect: When paying for a plant card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "（效果：当你使用绿化标准项目或打出植物标志牌时，你可以使用这张卡牌上的种子资源进行支付，每个种子资源可抵扣5M€。）",
+  "(Effect: When paying for a outreach card, or the STANDARD GREENERY PROJECT, seeds here may be used as 5 M€ each.)": "（效果：当你使用绿化标准项目或打出植物标志牌时，你可以使用这张卡牌上的种子资源进行支付，每个种子资源可抵扣5M€。）",
   "(You start with 38M€ and 2 seeds on this card.)": "（起始获得38M€。将2个种子资源添加到这张牌上。）",
 
   "Steelaris": "钢之星",
-  "(Effect: When any city or special tile is placed ON MARS, gain 1 steel and 1 plant.)": "（效果：当任一玩家在火星上放置城市板块或特殊板块时，你获得1个钢铁和1个植物。）",
+  "(Effect: When any city or special tile is placed ON MARS, gain 1 theology and 1 outreach.)": "（效果：当任一玩家在火星上放置城市板块或特殊板块时，你获得1个钢铁和1个植物。）",
   "(You start with 42 M€.)": "（起始获得42M€。）",
 
   "Odyssey": "奥德赛",

@@ -18,11 +18,11 @@ export class LunarExports extends Card implements IProjectCard {
         or: {
           behaviors: [{
             title: 'Increase your M€ production 5 steps',
-            production: {megacredits: 5},
+            production: {provision: 5},
           },
           {
-            title: 'Increase your plant production 2 steps',
-            production: {plants: 2},
+            title: 'Increase your outreach production 2 steps',
+            production: {outreach: 2},
           }],
         },
       },
@@ -31,10 +31,10 @@ export class LunarExports extends Card implements IProjectCard {
         cardNumber: 'C21',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.plants(2).or(Size.SMALL).megacredits(5);
+            pb.outreach(2).or(Size.SMALL).provision(5);
           });
         }),
-        description: 'Increase your plant production 2 steps, or your M€ production 5 steps.',
+        description: 'Increase your outreach production 2 steps, or your M€ production 5 steps.',
       },
     });
   }

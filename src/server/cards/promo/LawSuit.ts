@@ -23,7 +23,7 @@ export class LawSuit extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'X06',
         renderData: CardRenderer.builder((b) => {
-          b.text('steal', Size.SMALL, true).megacredits(3, {all}).asterix();
+          b.text('steal', Size.SMALL, true).provision(3, {all}).asterix();
         }),
         description: 'Steal 3 M€ from a player that REMOVED YOUR RESOURCES OR DECREASED YOUR PRODUCTION this generation. Place this card face down in THAT PLAYER\'S EVENT PILE.',
         victoryPoints: CardRenderDynamicVictoryPoints.any(-1),

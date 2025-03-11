@@ -17,7 +17,7 @@ export class OffWorldCityLiving extends Card implements IProjectCard {
 
       behavior: {
         moon: {habitatRate: 1},
-        production: {megacredits: {cities: {where: 'offmars'}}},
+        production: {provision: {cities: {where: 'offmars'}}},
       },
 
       metadata: {
@@ -25,7 +25,7 @@ export class OffWorldCityLiving extends Card implements IProjectCard {
         description: 'Increase your M€ production 1 step per city tile NOT ON MARS. Increase habitat rate 1 step.',
         cardNumber: 'M53',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1)).slash().city({all, secondaryTag: Tag.SPACE}).br;
+          b.production((pb) => pb.provision(1)).slash().city({all, secondaryTag: Tag.SPACE}).br;
           b.moonHabitatRate().br;
           b.vpText('1 VP for every 3rd City in play.');
         }),

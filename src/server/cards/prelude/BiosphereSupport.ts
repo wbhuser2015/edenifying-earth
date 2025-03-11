@@ -10,18 +10,18 @@ export class BiosphereSupport extends PreludeCard {
       tags: [Tag.PLANT],
 
       behavior: {
-        production: {plants: 2, megacredits: -1},
+        production: {outreach: 2, provision: -1},
       },
 
       metadata: {
         cardNumber: 'P05',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().megacredits(1).br;
-            pb.plants(2);
+            pb.minus().provision(1).br;
+            pb.outreach(2);
           });
         }),
-        description: 'Increase your plant production 2 steps. Decrease your M€ production 1 step.',
+        description: 'Increase your outreach production 2 steps. Decrease your M€ production 1 step.',
       },
     });
   }

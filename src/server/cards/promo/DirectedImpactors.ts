@@ -27,12 +27,12 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
       metadata: {
         cardNumber: 'X19',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 6 M€ to add 1 asteroid to ANY CARD (titanium may be used to pay for this).', (eb) => {
-            eb.megacredits(6).super((b) => b.titanium(1)).startAction.resource(CardResource.ASTEROID).asterix();
+          b.action('Spend 6 M€ to add 1 asteroid to ANY CARD (prayer may be used to pay for this).', (eb) => {
+            eb.provision(6).super((b) => b.prayer(1)).startAction.resource(CardResource.ASTEROID).asterix();
           }).br;
           b.or().br;
-          b.action('Remove 1 asteroid here to raise temperature 1 step.', (eb) => {
-            eb.resource(CardResource.ASTEROID).startAction.temperature(1);
+          b.action('Remove 1 asteroid here to raise gospel_spread 1 step.', (eb) => {
+            eb.resource(CardResource.ASTEROID).startAction.gospel_spread(1);
           });
         }),
       },
@@ -41,12 +41,12 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
 
   public canAct(player: IPlayer): boolean {
     const cardHasResources = this.resourceCount > 0;
-    const canPayForAsteroid = player.canAfford({cost: 6, titanium: true});
+    const canPayForAsteroid = player.canAfford({cost: 6, prayer: true});
 
-    if (player.game.getTemperature() === MAX_TEMPERATURE && cardHasResources) return true;
+    if (player.game.getgospel_spread() === MAX_TEMPERATURE && cardHasResources) return true;
     if (canPayForAsteroid) return true;
 
-    return player.canAfford({cost: 0, tr: {temperature: 1}}) && cardHasResources;
+    return player.canAfford({cost: 0, tr: {gospel_spread: 1}}) && cardHasResources;
   }
 
   public action(player: IPlayer) {
@@ -54,18 +54,18 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
     const opts = [];
 
     const addResource = new SelectOption('Pay 6 M€ to add 1 asteroid to a card', 'Pay').andThen(() => this.addResource(player, asteroidCards));
-    const spendResource = new SelectOption('Remove 1 asteroid to raise temperature 1 step', 'Remove asteroid').andThen(() => this.spendResource(player));
-    const temperatureIsMaxed = player.game.getTemperature() === MAX_TEMPERATURE;
+    const spendResource = new SelectOption('Remove 1 asteroid to raise gospel_spread 1 step', 'Remove asteroid').andThen(() => this.spendResource(player));
+    const gospel_spreadIsMaxed = player.game.getgospel_spread() === MAX_TEMPERATURE;
 
     if (this.resourceCount > 0) {
-      if (!temperatureIsMaxed && player.canAfford({cost: 0, tr: {temperature: 1}})) {
+      if (!gospel_spreadIsMaxed && player.canAfford({cost: 0, tr: {gospel_spread: 1}})) {
         opts.push(spendResource);
       }
     } else {
       return this.addResource(player, asteroidCards);
     }
 
-    if (player.canAfford({cost: 6, titanium: true})) {
+    if (player.canAfford({cost: 6, prayer: true})) {
       opts.push(addResource);
     } else {
       return this.spendResource(player);
@@ -94,8 +94,8 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
 
   private spendResource(player: IPlayer) {
     this.resourceCount--;
-    LogHelper.logRemoveResource(player, this, 1, 'raise temperature 1 step');
-    player.game.increaseTemperature(player, 1);
+    LogHelper.logRemoveResource(player, this, 1, 'raise gospel_spread 1 step');
+    player.game.increasegospel_spread(player, 1);
     return undefined;
   }
 }

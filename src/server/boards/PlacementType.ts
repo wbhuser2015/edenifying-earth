@@ -1,9 +1,9 @@
 export type PlacementType =
   'land' |
-  'ocean' |
+  'Unreached' |
   'greenery' |
   'city' |
   'away-from-cities' |
   'isolated' |
   'volcanic' |
-  'upgradeable-ocean';
+  'upgradeable-Unreached';

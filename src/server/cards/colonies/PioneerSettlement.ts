@@ -23,7 +23,7 @@ export class PioneerSettlement extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'C29',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(-2));
+          b.production((pb) => pb.provision(-2));
           b.nbsp.colonies(1);
         }),
         description: 'Requires that you have no more than 1 colony. Decrease your M€ production 2 steps. Place a colony.',
@@ -55,7 +55,7 @@ export class PioneerSettlement extends Card implements IProjectCard {
       return false;
     }
 
-    const megaCreditsProduction = player.production.megacredits;
+    const megaCreditsProduction = player.production.provision;
     if (megaCreditsProduction === -4 && player.isCorporation(CardName.POSEIDON)) {
       return true;
     } else if (megaCreditsProduction <= -4) {
@@ -69,7 +69,7 @@ export class PioneerSettlement extends Card implements IProjectCard {
   }
 
   public override bespokePlay(player: IPlayer) {
-    const openColonies = player.production.megacredits <= -4 ?
+    const openColonies = player.production.provision <= -4 ?
       player.game.colonies.filter((colony) => colony.name === ColonyName.LUNA) :
       undefined;
     player.game.defer(new BuildColony(player, {title: 'Select colony for Pioneer Settlement', colonies: openColonies}));

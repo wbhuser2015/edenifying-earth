@@ -123,20 +123,14 @@ import {Lichen} from './base/Lichen';
 import {LightningHarvest} from './base/LightningHarvest';
 import {Livestock} from './base/Livestock';
 import {LocalHeatTrapping} from './base/LocalHeatTrapping';
-import {LunarBeam} from './base/LunarBeam';
 import {MagneticFieldDome} from './base/MagneticFieldDome';
 import {MagneticFieldGenerators} from './base/MagneticFieldGenerators';
-import {Mangrove} from './base/Mangrove';
-import {MarsUniversity} from './base/MarsUniversity';
-import {MartianRails} from './base/MartianRails';
-import {MassConverter} from './base/MassConverter';
 import {MediaArchives} from './base/MediaArchives';
 import {MediaGroup} from './base/MediaGroup';
 import {MedicalLab} from './base/MedicalLab';
 import {MethaneFromTitan} from './base/MethaneFromTitan';
 import {MicroMills} from './base/MicroMills';
 import {Mine} from './base/Mine';
-import {MineralDeposit} from './base/MineralDeposit';
 import {MiningArea} from './base/MiningArea';
 import {MiningExpedition} from './base/MiningExpedition';
 import {MiningRights} from './base/MiningRights';
@@ -175,8 +169,6 @@ import {RegolithEaters} from './base/RegolithEaters';
 import {ReleaseOfInertGases} from './base/ReleaseOfInertGases';
 import {Research} from './base/Research';
 import {ResearchOutpost} from './base/ResearchOutpost';
-import {RestrictedArea} from './base/RestrictedArea';
-import {RoboticWorkforce} from './base/RoboticWorkforce';
 import {RoverConstruction} from './base/RoverConstruction';
 import {Sabotage} from './base/Sabotage';
 import {Satellites} from './base/Satellites';
@@ -309,11 +301,8 @@ export const BASE_CARD_MANIFEST = new ModuleManifest({
     [CardName.LICHEN]: {Factory: Lichen},
     [CardName.LIVESTOCK]: {Factory: Livestock},
     [CardName.LOCAL_HEAT_TRAPPING]: {Factory: LocalHeatTrapping},
-    [CardName.LUNAR_BEAM]: {Factory: LunarBeam},
     [CardName.MAGNETIC_FIELD_DOME]: {Factory: MagneticFieldDome},
     [CardName.MAGNETIC_FIELD_GENERATORS]: {Factory: MagneticFieldGenerators},
-    [CardName.MANGROVE]: {Factory: Mangrove},
-    [CardName.MARTIAN_RAILS]: {Factory: MartianRails},
     [CardName.METHANE_FROM_TITAN]: {Factory: MethaneFromTitan},
     [CardName.MICRO_MILLS]: {Factory: MicroMills},
     [CardName.MINING_EXPEDITION]: {Factory: MiningExpedition},
@@ -439,13 +428,10 @@ export const CORP_ERA_CARD_MANIFEST = new ModuleManifest({
     [CardName.LAGRANGE_OBSERVATORY]: {Factory: LagrangeObservatory},
     [CardName.LAND_CLAIM]: {Factory: LandClaim},
     [CardName.LIGHTNING_HARVEST]: {Factory: LightningHarvest},
-    [CardName.MARS_UNIVERSITY]: {Factory: MarsUniversity},
-    [CardName.MASS_CONVERTER]: {Factory: MassConverter},
     [CardName.MEDIA_ARCHIVES]: {Factory: MediaArchives},
     [CardName.MEDIA_GROUP]: {Factory: MediaGroup},
     [CardName.MEDICAL_LAB]: {Factory: MedicalLab},
     [CardName.MINE]: {Factory: Mine},
-    [CardName.MINERAL_DEPOSIT]: {Factory: MineralDeposit},
     [CardName.MINING_AREA]: {Factory: MiningArea},
     [CardName.MIRANDA_RESORT]: {Factory: MirandaResort},
     [CardName.OLYMPUS_CONFERENCE]: {Factory: OlympusConference},
@@ -456,8 +442,6 @@ export const CORP_ERA_CARD_MANIFEST = new ModuleManifest({
     [CardName.QUANTUM_EXTRACTOR]: {Factory: QuantumExtractor},
     [CardName.RAD_SUITS]: {Factory: RadSuits},
     [CardName.RESEARCH]: {Factory: Research},
-    [CardName.RESTRICTED_AREA]: {Factory: RestrictedArea},
-    [CardName.ROBOTIC_WORKFORCE]: {Factory: RoboticWorkforce},
     [CardName.SABOTAGE]: {Factory: Sabotage},
     [CardName.SATELLITES]: {Factory: Satellites},
     [CardName.SECURITY_FLEET]: {Factory: SecurityFleet},

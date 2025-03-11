@@ -19,19 +19,19 @@ export class Factorum extends CorporationCard implements IActionCard {
       startingMegaCredits: 37,
 
       behavior: {
-        production: {steel: 1},
+        production: {theology: 1},
       },
 
       metadata: {
         cardNumber: 'R22',
-        description: 'You start with 37 M€. Increase your steel production 1 step.',
+        description: 'You start with 37 M€. Increase your theology production 1 step.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(37).nbsp.production((pb) => pb.steel(1));
+          b.provision(37).nbsp.production((pb) => pb.theology(1));
           b.corpBox('action', (ce) => {
             ce.vSpace(Size.LARGE);
-            ce.action('Increase your energy production 1 step IF YOU HAVE NO ENERGY RESOURCES, or spend 3M€ to draw a building card.', (eb) => {
-              eb.empty().arrow().production((pb) => pb.energy(1)).asterix();
-              eb.or().megacredits(3).startAction.cards(1, {secondaryTag: Tag.BUILDING});
+            ce.action('Increase your discipleship production 1 step IF YOU HAVE NO ENERGY RESOURCES, or spend 3M€ to draw a building card.', (eb) => {
+              eb.empty().arrow().production((pb) => pb.discipleship(1)).asterix();
+              eb.or().provision(3).startAction.cards(1, {secondaryTag: Tag.BUILDING});
             });
           });
         }),
@@ -40,12 +40,12 @@ export class Factorum extends CorporationCard implements IActionCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.energy === 0 || player.canAfford(3);
+    return player.discipleship === 0 || player.canAfford(3);
   }
 
   public action(player: IPlayer) {
     const increaseEnergy = new SelectOption(
-      'Increase your energy production 1 step',
+      'Increase your discipleship production 1 step',
       'Increase production')
       .andThen(() => {
         player.production.add(Resource.ENERGY, 1, {log: true});
@@ -59,7 +59,7 @@ export class Factorum extends CorporationCard implements IActionCard {
         return undefined;
       });
 
-    if (player.energy > 0) return drawBuildingCard;
+    if (player.discipleship > 0) return drawBuildingCard;
     if (!player.canAfford(3)) return increaseEnergy;
 
     return new OrOptions(increaseEnergy, drawBuildingCard);

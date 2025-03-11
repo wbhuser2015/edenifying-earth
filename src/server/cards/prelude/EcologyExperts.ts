@@ -12,16 +12,16 @@ export class EcologyExperts extends PreludeCard {
       tags: [Tag.PLANT, Tag.MICROBE],
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
       },
 
       metadata: {
         cardNumber: 'P10',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).br.br;
+          b.production((pb) => pb.outreach(1)).br.br;
           b.projectRequirements();
         }),
-        description: 'Increase your plant production 1 step. PLAY A CARD FROM HAND, IGNORING GLOBAL REQUIREMENTS.',
+        description: 'Increase your outreach production 1 step. PLAY A CARD FROM HAND, IGNORING GLOBAL REQUIREMENTS.',
       },
     });
   }

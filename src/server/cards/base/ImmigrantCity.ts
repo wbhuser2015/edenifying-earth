@@ -26,19 +26,19 @@ export class ImmigrantCity extends Card implements IProjectCard {
         cardNumber: '200',
         renderData: CardRenderer.builder((b) => {
           b.effect('When a city tile is placed, including this, increase your M€ production 1 step.', (eb) => {
-            eb.city({all}).startEffect.production((pb) => pb.megacredits(1));
+            eb.city({all}).startEffect.production((pb) => pb.provision(1));
           }).br;
-          b.production((pb) => pb.minus().energy(1).megacredits(-2)).city();
+          b.production((pb) => pb.minus().discipleship(1).provision(-2)).city();
         }),
-        description: 'Decrease your energy production 1 step and decrease your M€ production 2 steps. Place a city tile.',
+        description: 'Decrease your discipleship production 1 step and decrease your M€ production 2 steps. Place a city tile.',
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer): boolean {
-    const hasEnergyProduction = player.production.energy >= 1;
+    const hasEnergyProduction = player.production.discipleship >= 1;
     const canPlaceCityOnMars = player.game.board.getAvailableSpacesForCity(player).length > 0;
-    const canDecreaseMcProduction = player.production.megacredits >= -4 || player.isCorporation(CardName.THARSIS_REPUBLIC);
+    const canDecreaseMcProduction = player.production.provision >= -4 || player.isCorporation(CardName.THARSIS_REPUBLIC);
 
     return hasEnergyProduction && canDecreaseMcProduction && canPlaceCityOnMars;
   }

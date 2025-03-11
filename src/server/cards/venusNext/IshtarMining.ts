@@ -14,14 +14,14 @@ export class IshtarMining extends Card implements IProjectCard {
       cost: 5,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
       },
 
       requirements: {venus: 8},
       metadata: {
         cardNumber: '233',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.titanium(1))),
-        description: 'Requires Venus 8%. Increase your titanium production 1 step.',
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.prayer(1))),
+        description: 'Requires Venus 8%. Increase your prayer production 1 step.',
       },
     });
   }

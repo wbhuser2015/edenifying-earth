@@ -14,13 +14,13 @@ export class Mine extends Card implements IProjectCard {
       cost: 4,
 
       behavior: {
-        production: {steel: 1},
+        production: {theology: 1},
       },
 
       metadata: {
-        description: 'Increase your steel production 1 step.',
+        description: 'Increase your theology production 1 step.',
         cardNumber: '056',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.steel(1))),
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.theology(1))),
       },
     });
   }

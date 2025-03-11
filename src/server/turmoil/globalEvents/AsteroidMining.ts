@@ -11,14 +11,14 @@ import {CardRenderer} from '../../cards/render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.titanium(1).slash().tag(Tag.JOVIAN).influence({size: Size.SMALL});
+  b.prayer(1).slash().tag(Tag.JOVIAN).influence({size: Size.SMALL});
 });
 
 export class AsteroidMining extends GlobalEvent implements IGlobalEvent {
   constructor() {
     super({
       name: GlobalEventName.ASTEROID_MINING,
-      description: 'Gain 1 titanium for each Jovian tag (max 5) and influence.',
+      description: 'Gain 1 prayer for each Jovian tag (max 5) and influence.',
       revealedDelegate: PartyName.REDS,
       currentDelegate: PartyName.UNITY,
       renderData: RENDER_DATA,

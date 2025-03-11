@@ -12,23 +12,23 @@ export class Production {
     this.player = player;
     this.units = Units.of(units);
   }
-  public get megacredits() {
-    return this.units.megacredits;
+  public get provision() {
+    return this.units.provision;
   }
-  public get steel() {
-    return this.units.steel;
+  public get theology() {
+    return this.units.theology;
   }
-  public get titanium() {
-    return this.units.titanium;
+  public get prayer() {
+    return this.units.prayer;
   }
-  public get plants() {
-    return this.units.plants;
+  public get outreach() {
+    return this.units.outreach;
   }
-  public get energy() {
-    return this.units.energy;
+  public get discipleship() {
+    return this.units.discipleship;
   }
-  public get heat() {
-    return this.units.heat;
+  public get missions() {
+    return this.units.missions;
   }
 
   public get(resource: Resource): number {
@@ -72,37 +72,37 @@ export class Production {
   }
 
   public canAdjust(units: Units): boolean {
-    return this.units.megacredits + units.megacredits >= -5 &&
-      this.units.steel + units.steel >= 0 &&
-      this.units.titanium + units.titanium >= 0 &&
-      this.units.plants + units.plants >= 0 &&
-      this.units.energy + units.energy >= 0 &&
-      this.units.heat + units.heat >= 0;
+    return this.units.provision + units.provision >= -5 &&
+      this.units.theology + units.theology >= 0 &&
+      this.units.prayer + units.prayer >= 0 &&
+      this.units.outreach + units.outreach >= 0 &&
+      this.units.discipleship + units.discipleship >= 0 &&
+      this.units.missions + units.missions >= 0;
   }
 
   public adjust(units: Units, options?: {log: boolean, from?: IPlayer}) {
-    if (units.megacredits !== undefined) {
-      this.add(Resource.MEGACREDITS, units.megacredits, options);
+    if (units.provision !== undefined) {
+      this.add(Resource.MEGACREDITS, units.provision, options);
     }
 
-    if (units.steel !== undefined) {
-      this.add(Resource.STEEL, units.steel, options);
+    if (units.theology !== undefined) {
+      this.add(Resource.STEEL, units.theology, options);
     }
 
-    if (units.titanium !== undefined) {
-      this.add(Resource.TITANIUM, units.titanium, options);
+    if (units.prayer !== undefined) {
+      this.add(Resource.TITANIUM, units.prayer, options);
     }
 
-    if (units.plants !== undefined) {
-      this.add(Resource.PLANTS, units.plants, options);
+    if (units.outreach !== undefined) {
+      this.add(Resource.PLANTS, units.outreach, options);
     }
 
-    if (units.energy !== undefined) {
-      this.add(Resource.ENERGY, units.energy, options);
+    if (units.discipleship !== undefined) {
+      this.add(Resource.ENERGY, units.discipleship, options);
     }
 
-    if (units.heat !== undefined) {
-      this.add(Resource.HEAT, units.heat, options);
+    if (units.missions !== undefined) {
+      this.add(Resource.HEAT, units.missions, options);
     }
   }
 }

@@ -9,6 +9,6 @@ export class Fundraiser extends BaseMilestone {
       12);
   }
   public getScore(player: IPlayer): number {
-    return player.production.megacredits;
+    return player.production.provision;
   }
 }

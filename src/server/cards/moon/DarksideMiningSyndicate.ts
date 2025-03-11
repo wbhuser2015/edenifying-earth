@@ -18,12 +18,12 @@ export class DarksideMiningSyndicate extends Card implements IProjectCard {
       tr: {moonMining: 1},
 
       metadata: {
-        description: 'Increase your titanium production 2 steps, or ' +
+        description: 'Increase your prayer production 2 steps, or ' +
         '1 step if the mining rate is at least 2. And then raise the mining rate 1 step.',
         cardNumber: 'M66',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(2)).or().br;
-          b.moonMiningRate({amount: 2}).colon().production((pb) => pb.titanium(1)).br;
+          b.production((pb) => pb.prayer(2)).or().br;
+          b.moonMiningRate({amount: 2}).colon().production((pb) => pb.prayer(1)).br;
           b.moonMiningRate().br;
         }),
       },

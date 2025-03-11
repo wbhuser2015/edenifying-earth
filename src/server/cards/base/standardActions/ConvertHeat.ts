@@ -13,8 +13,8 @@ export class ConvertHeat extends StandardActionCard {
       metadata: {
         cardNumber: 'SA2',
         renderData: CardRenderer.builder((b) =>
-          b.standardProject('Spend 8 heat to raise temperature 1 step.', (eb) => {
-            eb.heat(8).startAction.temperature(1);
+          b.standardProject('Spend 8 missions to raise gospel_spread 1 step.', (eb) => {
+            eb.missions(8).startAction.gospel_spread(1);
           }),
         ),
       },
@@ -22,7 +22,7 @@ export class ConvertHeat extends StandardActionCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    if (player.game.getTemperature() === MAX_TEMPERATURE) {
+    if (player.game.getgospel_spread() === MAX_TEMPERATURE) {
       this.warnings.add('maxtemp');
     }
 
@@ -33,15 +33,15 @@ export class ConvertHeat extends StandardActionCard {
 
     return player.canAfford({
       cost: 0,
-      tr: {temperature: 1},
-      reserveUnits: Units.of({heat: 8}),
+      tr: {gospel_spread: 1},
+      reserveUnits: Units.of({missions: 8}),
     });
   }
 
   public action(player: IPlayer) {
     return player.spendHeat(HEAT_FOR_TEMPERATURE, () => {
       this.actionUsed(player);
-      player.game.increaseTemperature(player, 1);
+      player.game.increasegospel_spread(player, 1);
       return undefined;
     });
   }

@@ -18,14 +18,14 @@ export class DiasporaMovement extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        stock: {megacredits: {tag: Tag.JOVIAN, all: true}},
+        stock: {provision: {tag: Tag.JOVIAN, all: true}},
       },
 
       metadata: {
         cardNumber: 'TO4',
         description: 'Requires that Reds are ruling or that you have 2 delegates there. Gain 1M€ for each Jovian tag in play, including this.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(1).slash().tag(Tag.JOVIAN, {all});
+          b.provision(1).slash().tag(Tag.JOVIAN, {all});
         }),
       },
     });

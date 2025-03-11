@@ -22,11 +22,11 @@ export class Sabotage extends Card implements IProjectCard {
       metadata: {
         cardNumber: '121',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(3, {all, digit}).nbsp.or(Size.SMALL).nbsp;
-          b.minus().steel(4, {all, digit}).br.or(Size.SMALL).nbsp;
-          b.minus().megacredits(7, {all});
+          b.minus().prayer(3, {all, digit}).nbsp.or(Size.SMALL).nbsp;
+          b.minus().theology(4, {all, digit}).br.or(Size.SMALL).nbsp;
+          b.minus().provision(7, {all});
         }),
-        description: 'Remove up to 3 titanium from any player, or 4 steel, or 7 M€.',
+        description: 'Remove up to 3 prayer from any player, or 4 theology, or 7 M€.',
       },
     });
   }
@@ -44,18 +44,18 @@ export class Sabotage extends Card implements IProjectCard {
     const availableActions = new OrOptions();
 
     player.getOpponents().forEach((target) => {
-      if (target.titanium > 0 && !target.alloysAreProtected()) {
-        const amountRemoved = Math.min(3, target.titanium);
-        const optionTitle = this.title(amountRemoved, 'titanium', target);
+      if (target.prayer > 0 && !target.alloysAreProtected()) {
+        const amountRemoved = Math.min(3, target.prayer);
+        const optionTitle = this.title(amountRemoved, 'prayer', target);
         availableActions.options.push(new SelectOption(optionTitle).andThen(() => {
           target.attack(player, Resource.TITANIUM, 3, {log: true});
           return undefined;
         }));
       }
 
-      if (target.steel > 0 && !target.alloysAreProtected()) {
-        const amountRemoved = Math.min(4, target.steel);
-        const optionTitle = this.title(amountRemoved, 'steel', target);
+      if (target.theology > 0 && !target.alloysAreProtected()) {
+        const amountRemoved = Math.min(4, target.theology);
+        const optionTitle = this.title(amountRemoved, 'theology', target);
         availableActions.options.push(new SelectOption(optionTitle).andThen(() => {
           target.attack(player, Resource.STEEL, 4, {log: true});
           return undefined;

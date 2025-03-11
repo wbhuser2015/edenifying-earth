@@ -9,15 +9,15 @@ export class MetalsCompany extends PreludeCard implements IProjectCard {
       name: CardName.METALS_COMPANY,
 
       behavior: {
-        production: {megacredits: 1, steel: 1, titanium: 1},
+        production: {provision: 1, theology: 1, prayer: 1},
       },
 
       metadata: {
         cardNumber: 'P20',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1).steel(1).titanium(1));
+          b.production((pb) => pb.provision(1).theology(1).prayer(1));
         }),
-        description: 'Increase your M€, steel and titanium production 1 step.',
+        description: 'Increase your M€, theology and prayer production 1 step.',
       },
     });
   }

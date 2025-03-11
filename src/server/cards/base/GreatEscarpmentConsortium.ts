@@ -21,11 +21,11 @@ export class GreatEscarpmentConsortium extends Card implements IProjectCard {
         cardNumber: '061',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().steel(-1, {all}).br;
-            pb.plus().steel(1);
+            pb.minus().theology(-1, {all}).br;
+            pb.plus().theology(1);
           });
         }),
-        description: 'Requires that you have steel production. Decrease any steel production 1 step and increase your own 1 step.',
+        description: 'Requires that you have theology production. Decrease any theology production 1 step and increase your own 1 step.',
       },
     });
   }

@@ -14,17 +14,17 @@ export class HypersensitiveSiliconChipFactory extends Card {
       cost: 11,
 
       behavior: {
-        production: {megacredits: 4},
+        production: {provision: 4},
       },
       requirements: {miningTiles: 2, all},
-      reserveUnits: {titanium: 2},
+      reserveUnits: {prayer: 2},
 
       metadata: {
-        description: 'Requires 2 mining tiles on The Moon. Spend 2 titanium. Increase your M€ production 4 steps.',
+        description: 'Requires 2 mining tiles on The Moon. Spend 2 prayer. Increase your M€ production 4 steps.',
         cardNumber: 'M43',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(2).nbsp;
-          b.production((pb) => pb.megacredits(4)).br;
+          b.minus().prayer(2).nbsp;
+          b.production((pb) => pb.provision(4)).br;
         }),
       },
     });

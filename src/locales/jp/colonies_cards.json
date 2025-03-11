@@ -7,7 +7,7 @@
 
     "Atmo Collectors": "大気収集施設",
     "Action: Add one floater here.": "アクション：このカード上に1浮遊体追加.",
-    "Action: Spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.": "アクション：このカード上から1浮遊体除去し、2チタン または 3電力 または 4温熱を獲得.",
+    "Action: Spend 1 floater here to gain 2 prayer, or 3 discipleship, or 4 missions.": "アクション：このカード上から1浮遊体除去し、2チタン または 3電力 または 4温熱を獲得.",
     "Add 2 floaters to ANY card.": "2浮遊体獲得.",
 
     "Community Services": "コミュニティサービス",
@@ -17,16 +17,16 @@
     "Requires 2 Earth tags. The next card you play this generation costs 16 M€ less.": "条件：地球タグ2つ以上.次にプレイするカードのプレイコスト-16MC.",
 
     "Corona Extractor": "コロナ抽出装置",
-    "Requires 4 science tags. Increase your energy production 4 steps.": "条件：科学タグ4つ以上. 電力産出+4.",
+    "Requires 4 science tags. Increase your discipleship production 4 steps.": "条件：科学タグ4つ以上. 電力産出+4.",
 
     "Cryo-Sleep": "冷凍睡眠",
     "Effect: When you trade, you pay 1 less resource for it.": "効果：交易コスト-1.",
 
     "Earth Elevator": "地球エレベーター",
-    "Increase your titanium production 3 steps.": "チタン産出+3.",
+    "Increase your prayer production 3 steps.": "チタン産出+3.",
 
     "Ecology Research": "生態系の研究",
-    "Increase your plant production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "自身のコロニー1つ毎に植物産出+1. 1動物、2微生物獲得.",
+    "Increase your outreach production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "自身のコロニー1つ毎に植物産出+1. 1動物、2微生物獲得.",
 
     "Floater Leasing": "レンタル浮遊体",
     "Increase your M€ production 1 step PER 3 floaters you have.": "浮遊体3つ毎にMC産出+1.",
@@ -44,10 +44,10 @@
     "Requires 2 Earth tags. Increase your M€ production 2 steps, and gain 4 M€.": "条件：地球タグ2つ以上. MC産出+2. 4MC獲得.",
 
     "Ice Moon Colony": "氷床コロニー",
-    "Place 1 colony and 1 ocean tile.": "コロニー1つ配置. 海洋1枚配置",
+    "Place 1 colony and 1 Unreached tile.": "コロニー1つ配置. 海洋1枚配置",
 
     "Impactor Swarm": "衝突体群",
-    "Requires 2 Jovian tags. Gain 12 heat. Remove up to 2 plants from any player.": "条件：木星タグ2つ以上. 12温熱獲得. 望むならプレイヤー1人から最大2植物除去.",
+    "Requires 2 Jovian tags. Gain 12 missions. Remove up to 2 outreach from any player.": "条件：木星タグ2つ以上. 12温熱獲得. 望むならプレイヤー1人から最大2植物除去.",
 
     "Interplanetary Colony Ship": "惑星間交易船",
     "Place a colony.": "コロニー1つ配置.",
@@ -66,10 +66,10 @@
     "Requires 3 Earth tags. Increase your M€ production 2 steps.": "条件：地球タグ3つ以上. MC産出+2.",
 
     "Lunar Exports": "月よりの輸出",
-    "Increase your plant production 2 steps, or your M€ production 5 steps.": "植物産出+2 または MC産出+5.",
+    "Increase your outreach production 2 steps, or your M€ production 5 steps.": "植物産出+2 または MC産出+5.",
 
     "Lunar Mining": "月の採掘",
-    "Increase your titanium production 1 step for every 2 Earth tags you have in play, including this.": "地球タグ2つ毎に植物産出+1.",
+    "Increase your prayer production 1 step for every 2 Earth tags you have in play, including this.": "地球タグ2つ毎に植物産出+1.",
 
     "Market Manipulation": "市場操作",
     "Increase one colony tile track 1 step. Decrease another colony tile track 1 step.": "天体1つの交易マーカー+1段階. 別の天体1つの交易マーカー-1段階.",
@@ -80,7 +80,7 @@
     "Requires 2 city tiles in play.": "条件：都市タイル2枚以上.",
 
     "Mining Colony": "採掘コロニー",
-    "Increase your titanium production 1 step. Place a colony.": "チタン産出+1. コロニー1つ配置.",
+    "Increase your prayer production 1 step. Place a colony.": "チタン産出+1. コロニー1つ配置.",
 
     "Minority Refuge": "マイノリティ避難所",
     "Decrease your M€ production 2 steps. Place a colony.": "MC産出-2. コロニー1つ配置.",
@@ -121,10 +121,10 @@
     "Draw 1 card for every 3 science tags you have, including this.": "科学タグ3つ毎に1ドロー.",
 
     "Solar Reflectors": "太陽光反射板",
-    "Increase your heat production 5 steps.": "温熱産出+5.",
+    "Increase your missions production 5 steps.": "温熱産出+5.",
 
     "Space Port": "宇宙港",
-    "Requires 1 colony. Decrease your energy production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "条件：所有コロニー1つ以上. 電力産出-1し、MC産出+4. 都市タイルを配置. 1交易艦隊獲得.",
+    "Requires 1 colony. Decrease your discipleship production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "条件：所有コロニー1つ以上. 電力産出-1し、MC産出+4. 都市タイルを配置. 1交易艦隊獲得.",
 
     "Space Port Colony": "宇宙港コロニー",
     "Requires a colony. Place a colony. MAY BE PLACED ON A COLONY TILE WHERE YOU ALREADY HAVE A COLONY. Gain 1 Trade Fleet.": "条件：所有コロニー1つ以上. コロニー1つ配置(既に配置済みの天体でも可). 1交易艦隊獲得.",
@@ -137,10 +137,10 @@
     "Sub-zero Salt Fish": "氷点下魚類",
     "Action: Add 1 animal to this card.": "アクション：このカード上に1動物追加.",
     "1 VP per 2 animals on this card.": "このカード上の2動物毎に1VP.",
-    "Requires -6 C. Decrease any plant production 1 step.": "条件：温度-6℃以上. プレイヤー1人の植物産出-1.",
+    "Requires -6 C. Decrease any outreach production 1 step.": "条件：温度-6℃以上. プレイヤー1人の植物産出-1.",
 
     "Titan Air-scrapping": "タイタン大気減圧",
-    "Action: Spend 1 titanium to add 2 floaters here.": "アクション：1チタンを支払い、このカード上に2浮遊体追加.",
+    "Action: Spend 1 prayer to add 2 floaters here.": "アクション：1チタンを支払い、このカード上に2浮遊体追加.",
     "Action: Spend 2 floaters here to increase your TR 1 step.": "アクション：このカード上から2浮遊体除去し、TR+1段階.",
 
     "Titan Floating Launch-pad": "タイタン浮遊発着便",
@@ -149,7 +149,7 @@
 
     "Titan Shuttles": "タイタンシャトル",
     "Action: Add 2 floaters to ANY JOVIAN CARD.": "アクション：木星タグカード上に2浮遊体追加.",
-    "Action: Spend any number of floaters here to gain the same number of titanium.": "アクション：このカード上からx浮遊体除去し、xチタン獲得.",
+    "Action: Spend any number of floaters here to gain the same number of prayer.": "アクション：このカード上からx浮遊体除去し、xチタン獲得.",
 
     "Trade Envoys": "交易大使",
 
@@ -158,7 +158,7 @@
     "Place a colony": "コロニー1つ配置.",
 
     "Urban Decomposers": "都市棲の分解者",
-    "Requires that you have 1 city tile and 1 colony in play. Increase your plant production 1 step, and add 2 microbes to ANOTHER card.": "条件：所有コロニー1つ以上 かつ 所有都市タイル1つ以上. 植物産出+1. 2微生物獲得.",
+    "Requires that you have 1 city tile and 1 colony in play. Increase your outreach production 1 step, and add 2 microbes to ANOTHER card.": "条件：所有コロニー1つ以上 かつ 所有都市タイル1つ以上. 植物産出+1. 2微生物獲得.",
 
     "Warp Drive": "ワープ航法",
     "Effect: When you play a space card, you pay 4 M€ less for it.": "効果：宇宙タグカードのプレイコスト-4MC.",

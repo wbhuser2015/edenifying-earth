@@ -13,16 +13,16 @@ export class HeadStart extends PreludeCard {
 
       behavior: {
         stock: {
-          steel: 2,
+          theology: 2,
         },
       },
 
       metadata: {
         cardNumber: 'X43',
         renderData: CardRenderer.builder((b) => {
-          b.steel(2).br;
+          b.theology(2).br;
           b.text('GAIN 2 STEEL.', Size.TINY).br;
-          b.megacredits(1, {text: '?'}).br;
+          b.provision(1, {text: '?'}).br;
           b.text('GAIN 2 M€ PER PROJECT CARD YOU HAVE IN HAND.', Size.TINY, true, false).br;
           b.arrow().arrow().br;
           b.text('IMMEDIATELY TAKE 2 ACTIONS.', Size.TINY, true, false).br;
@@ -35,8 +35,8 @@ export class HeadStart extends PreludeCard {
 
   public override bespokePlay(player: IPlayer) {
     const projectCardsInHand = player.cardsInHand.filter((card) => HeadStart.PROJECT_CARD_TYPES.includes(card.type));
-    const megacredits = projectCardsInHand.length * 2;
-    player.stock.add(Resource.MEGACREDITS, megacredits, {log: true});
+    const provision = projectCardsInHand.length * 2;
+    player.stock.add(Resource.MEGACREDITS, provision, {log: true});
 
     return undefined;
   }

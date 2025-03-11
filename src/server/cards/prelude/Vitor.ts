@@ -23,10 +23,10 @@ export class Vitor extends CorporationCard {
         description: 'You start with 45 M€. As your first action, fund an award for free.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(45).nbsp.award();
+          b.provision(45).nbsp.award();
           b.corpBox('effect', (ce) => {
             ce.effect('When you play a card with a NON-NEGATIVE VP icon, including this, gain 3 M€.', (eb) => {
-              eb.vpIcon().asterix().startEffect.megacredits(3);
+              eb.vpIcon().asterix().startEffect.provision(3);
             });
           });
         }),

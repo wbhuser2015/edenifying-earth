@@ -13,13 +13,13 @@ export class TakondaCastle extends Card {
       cost: 2,
 
       behavior: {
-        stock: {megacredits: {tag: [Tag.MICROBE, Tag.ANIMAL]}},
+        stock: {provision: {tag: [Tag.MICROBE, Tag.ANIMAL]}},
       },
 
       metadata: {
         cardNumber: 'SW07',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(1).slash().tag(Tag.MICROBE).tag(Tag.ANIMAL);
+          b.provision(1).slash().tag(Tag.MICROBE).tag(Tag.ANIMAL);
         }),
         description: 'Gain 1 M€ for each of your microbe tags and animal tags.',
       },

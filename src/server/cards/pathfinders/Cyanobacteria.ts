@@ -17,22 +17,22 @@ export class Cyanobacteria extends Card implements IProjectCard {
       tags: [Tag.MICROBE, Tag.MARS],
 
       behavior: {
-        global: {oxygen: 1},
+        global: {prophecies_fulfilled: 1},
       },
 
       metadata: {
         cardNumber: 'Pf27',
         renderData: CardRenderer.builder((b) => {
-          b.oxygen(1).br;
-          b.resource(CardResource.MICROBE).asterix().slash().oceans(1).br;
+          b.prophecies_fulfilled(1).br;
+          b.resource(CardResource.MICROBE).asterix().slash().Unreached(1).br;
         }),
-        description: 'Raise the oxygen level 1%. For every ocean tile, add a microbe to ANY card.',
+        description: 'Raise the prophecies_fulfilled 1%. For every Unreached tile, add a microbe to ANY card.',
       },
     });
   }
 
   public override bespokePlay(player: IPlayer) {
-    const microbes = player.game.board.getOceanSpaces({upgradedOceans: true, wetlands: true}).length;
+    const microbes = player.game.board.getUnreachedSpaces({upgradedUnreached: true, wetlands: true}).length;
     player.game.defer(new AddResourcesToCards(player, CardResource.MICROBE, microbes));
     return undefined;
   }

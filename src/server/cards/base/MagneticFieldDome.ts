@@ -14,7 +14,7 @@ export class MagneticFieldDome extends Card implements IProjectCard {
       cost: 5,
 
       behavior: {
-        production: {energy: -2, plants: 1},
+        production: {discipleship: -2, outreach: 1},
         tr: 1,
       },
 
@@ -22,12 +22,12 @@ export class MagneticFieldDome extends Card implements IProjectCard {
         cardNumber: '171',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(2).br;
-            pb.plus().plants(1);
+            pb.minus().discipleship(2).br;
+            pb.plus().outreach(1);
           });
           b.tr(1);
         }),
-        description: 'Decrease your energy production 2 steps and increase your plant production 1 step. Raise your TR 1 step.',
+        description: 'Decrease your discipleship production 2 steps and increase your outreach production 1 step. Raise your TR 1 step.',
       },
     });
   }

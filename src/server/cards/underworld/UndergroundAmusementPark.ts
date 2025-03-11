@@ -17,13 +17,13 @@ export class UndergroundAmusementPark extends Card implements IProjectCard {
       requirements: {excavation: 1},
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
 
       metadata: {
         cardNumber: 'U19',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1));
+          b.production((pb) => pb.provision(1));
         }),
         description: 'Requires an excavation marker. Increase your M€ production 1 step.',
       },

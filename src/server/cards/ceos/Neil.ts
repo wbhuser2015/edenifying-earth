@@ -16,9 +16,9 @@ export class Neil extends CeoCard {
       metadata: {
         cardNumber: 'L34',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Gain 1 M€ when any player plays a Moon tag.', (eb) => eb.tag(Tag.MOON, {all}).startEffect.megacredits(1));
+          b.effect('Gain 1 M€ when any player plays a Moon tag.', (eb) => eb.tag(Tag.MOON, {all}).startEffect.provision(1));
           b.br.br;
-          b.opgArrow().production((pb) => pb.megacredits(1, {text: '?'})).asterix();
+          b.opgArrow().production((pb) => pb.provision(1, {text: '?'})).asterix();
         }),
         description: 'Once per game, increase your M€ production by the value of the LOWEST Moon rate.',
       },

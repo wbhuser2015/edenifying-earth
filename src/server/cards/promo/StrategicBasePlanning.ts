@@ -22,7 +22,7 @@ export class StrategicBasePlanning extends PreludeCard {
       metadata: {
         cardNumber: 'X65',
         renderData: CardRenderer.builder((b) => {
-          b.minus().megacredits(3).city().colonies();
+          b.minus().provision(3).city().colonies();
         }),
         description: 'Pay 3M€. Place a city. Place a colony.',
       },

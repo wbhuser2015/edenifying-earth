@@ -6,40 +6,40 @@
     <h3 class="payments_title" v-i18n>Which resource production would you prefer to decrease?</h3>
 
     <div class="payments_type input-group" v-if="canDeductMegaCredits()">
-      <div class="production-box"><div class="production resource_icon--megacredits" style="background-size:contain;"></div></div>
-      <button class="btn btn-primary" v-on:click="delta('megacredits', -1)"><i class="icon icon-minus" /></button>
-      <input class="form-input form-inline payments_input" v-model.number="units.megacredits" />
-      <button class="btn btn-primary" v-on:click="delta('megacredits', 1)"><i class="icon icon-plus" /></button>
+      <div class="production-box"><div class="production resource_icon--provision" style="background-size:contain;"></div></div>
+      <button class="btn btn-primary" v-on:click="delta('provision', -1)"><i class="icon icon-minus" /></button>
+      <input class="form-input form-inline payments_input" v-model.number="units.provision" />
+      <button class="btn btn-primary" v-on:click="delta('provision', 1)"><i class="icon icon-plus" /></button>
     </div>
     <div class="payments_type input-group" v-if="canDeductSteel()">
-      <div class="production-box"><div class="production steel"></div></div>
-      <button class="btn btn-primary" v-on:click="delta('steel', -1)"><i class="icon icon-minus" /></button>
-      <input class="form-input form-inline payments_input" v-model.number="units.steel" />
-      <button class="btn btn-primary" v-on:click="delta('steel', 1)"><i class="icon icon-plus" /></button>
+      <div class="production-box"><div class="production theology"></div></div>
+      <button class="btn btn-primary" v-on:click="delta('theology', -1)"><i class="icon icon-minus" /></button>
+      <input class="form-input form-inline payments_input" v-model.number="units.theology" />
+      <button class="btn btn-primary" v-on:click="delta('theology', 1)"><i class="icon icon-plus" /></button>
     </div >
     <div class="payments_type input-group" v-if="canDeductTitanium()" >
-      <div class="production-box"><div class="production titanium"></div></div>
-      <button class="btn btn-primary" v-on:click="delta('titanium', -1)"><i class="icon icon-minus" /></button>
-      <input class="form-input form-inline payments_input" v-model.number="units.titanium" />
-      <button class="btn btn-primary" v-on:click="delta('titanium', 1)"><i class="icon icon-plus" /></button>
+      <div class="production-box"><div class="production prayer"></div></div>
+      <button class="btn btn-primary" v-on:click="delta('prayer', -1)"><i class="icon icon-minus" /></button>
+      <input class="form-input form-inline payments_input" v-model.number="units.prayer" />
+      <button class="btn btn-primary" v-on:click="delta('prayer', 1)"><i class="icon icon-plus" /></button>
     </div >
     <div class="payments_type input-group" v-if="canDeductPlants()" >
-      <div class="production-box"><div class="production plant"></div></div>
-      <button class="btn btn-primary" v-on:click="delta('plants', -1)"><i class="icon icon-minus" /></button>
-      <input class="form-input form-inline payments_input" v-model.number="units.plants" />
-      <button class="btn btn-primary" v-on:click="delta('plants', 1)"><i class="icon icon-plus" /></button>
+      <div class="production-box"><div class="production outreach"></div></div>
+      <button class="btn btn-primary" v-on:click="delta('outreach', -1)"><i class="icon icon-minus" /></button>
+      <input class="form-input form-inline payments_input" v-model.number="units.outreach" />
+      <button class="btn btn-primary" v-on:click="delta('outreach', 1)"><i class="icon icon-plus" /></button>
     </div >
     <div class="payments_type input-group" v-if="canDeductEnergy()" >
-      <div class="production-box"><div class="production energy"></div></div>
-      <button class="btn btn-primary" v-on:click="delta('energy', -1)"><i class="icon icon-minus" /></button>
-      <input class="form-input form-inline payments_input" v-model.number="units.energy" />
-      <button class="btn btn-primary" v-on:click="delta('energy', 1)"><i class="icon icon-plus" /></button>
+      <div class="production-box"><div class="production discipleship"></div></div>
+      <button class="btn btn-primary" v-on:click="delta('discipleship', -1)"><i class="icon icon-minus" /></button>
+      <input class="form-input form-inline payments_input" v-model.number="units.discipleship" />
+      <button class="btn btn-primary" v-on:click="delta('discipleship', 1)"><i class="icon icon-plus" /></button>
     </div >
     <div class="payments_type input-group" v-if="canDeductHeat()" >
-      <div class="production-box"><div class="production heat"></div></div>
-      <button class="btn btn-primary" v-on:click="delta('heat', -1)"><i class="icon icon-minus" /></button>
-      <input class="form-input form-inline payments_input" v-model.number="units.heat" />
-      <button class="btn btn-primary" v-on:click="delta('heat', 1)"><i class="icon icon-plus" /></button>
+      <div class="production-box"><div class="production missions"></div></div>
+      <button class="btn btn-primary" v-on:click="delta('missions', -1)"><i class="icon icon-minus" /></button>
+      <input class="form-input form-inline payments_input" v-model.number="units.missions" />
+      <button class="btn btn-primary" v-on:click="delta('missions', 1)"><i class="icon icon-plus" /></button>
     </div >
 
     <div v-if="hasWarning()" class="tm-warning">
@@ -89,22 +89,22 @@ export default Vue.extend({
   },
   methods: {
     canDeductMegaCredits() {
-      return this.playerinput.payProduction.units.megacredits > -5;
+      return this.playerinput.payProduction.units.provision > -5;
     },
     canDeductSteel() {
-      return this.playerinput.payProduction.units.steel > 0;
+      return this.playerinput.payProduction.units.theology > 0;
     },
     canDeductTitanium() {
-      return this.playerinput.payProduction.units.titanium > 0;
+      return this.playerinput.payProduction.units.prayer > 0;
     },
     canDeductPlants() {
-      return this.playerinput.payProduction.units.plants > 0;
+      return this.playerinput.payProduction.units.outreach > 0;
     },
     canDeductEnergy() {
-      return this.playerinput.payProduction.units.energy > 0;
+      return this.playerinput.payProduction.units.discipleship > 0;
     },
     canDeductHeat() {
-      return this.playerinput.payProduction.units.heat > 0;
+      return this.playerinput.payProduction.units.missions > 0;
     },
     hasWarning() {
       return this.warning !== undefined;
@@ -112,18 +112,18 @@ export default Vue.extend({
     delta(type: keyof Units, direction: number) {
       const expendableProductionQuantity = function(type: keyof Units, model: PayProductionModel): number {
         switch (type) {
-        case 'megacredits':
-          return model.units.megacredits + 5;
-        case 'steel':
-          return model.units.steel;
-        case 'titanium':
-          return model.units.titanium;
-        case 'plants':
-          return model.units.plants;
-        case 'energy':
-          return model.units.energy;
-        case 'heat':
-          return model.units.heat;
+        case 'provision':
+          return model.units.provision + 5;
+        case 'theology':
+          return model.units.theology;
+        case 'prayer':
+          return model.units.prayer;
+        case 'outreach':
+          return model.units.outreach;
+        case 'discipleship':
+          return model.units.discipleship;
+        case 'missions':
+          return model.units.missions;
         default:
           return -1;
         }

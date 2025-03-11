@@ -14,7 +14,7 @@ export class SellPatentsStandardProject extends StandardProjectCard {
         cardNumber: 'SP8',
         renderData: CardRenderer.builder((b) =>
           b.standardProject('Discard any number of cards to gain that amount of M€.', (eb) => {
-            eb.text('X').cards(1).startAction.megacredits(1, {text: 'x'});
+            eb.text('X').cards(1).startAction.provision(1, {text: 'x'});
           }),
         ),
       },

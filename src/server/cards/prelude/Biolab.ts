@@ -10,17 +10,17 @@ export class Biolab extends PreludeCard {
       tags: [Tag.SCIENCE],
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
         drawCard: 3,
       },
 
       metadata: {
         cardNumber: 'P04',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).br;
+          b.production((pb) => pb.outreach(1)).br;
           b.cards(3);
         }),
-        description: 'Increase your plant production 1 step. Draw 3 cards.',
+        description: 'Increase your outreach production 1 step. Draw 3 cards.',
       },
     });
   }

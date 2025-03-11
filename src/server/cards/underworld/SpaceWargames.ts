@@ -25,13 +25,13 @@ export class SpaceWargames extends ActionCard implements IProjectCard {
         or: {
           behaviors: [
             {
-              spend: {titanium: 1},
+              spend: {prayer: 1},
               addResources: 1,
-              title: 'Spend 1 titanium to add 1 fighter resource to this card.',
+              title: 'Spend 1 prayer to add 1 fighter resource to this card.',
             },
             {
               spend: {resourcesHere: 1},
-              stock: {megacredits: {start: 1, resourcesHere: {}, each: 3}},
+              stock: {provision: {start: 1, resourcesHere: {}, each: 3}},
               title: 'Spend 1 fighter resource on this card to gain 3 M€ for each fighter on this card, including the fighter.',
             },
           ],
@@ -42,10 +42,10 @@ export class SpaceWargames extends ActionCard implements IProjectCard {
       metadata: {
         cardNumber: 'U48',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 titanium to gain 1 fighter resource to this card.',
-            (ab) => ab.titanium(1).startAction.resource(CardResource.FIGHTER)).br;
+          b.action('Spend 1 prayer to gain 1 fighter resource to this card.',
+            (ab) => ab.prayer(1).startAction.resource(CardResource.FIGHTER)).br;
           b.action('Spend 1 fighter resource on this card to gain 3 M€ for each fighter resource on this card INCLUDING THE PAID FIGHTER.',
-            (ab) => ab.or().resource(CardResource.FIGHTER).startAction.megacredits(3, {digit}).slash().resource(CardResource.FIGHTER).asterix()).br;
+            (ab) => ab.or().resource(CardResource.FIGHTER).startAction.provision(3, {digit}).slash().resource(CardResource.FIGHTER).asterix()).br;
           b.resource(CardResource.FIGHTER);
         }),
         description: 'Put 1 fighter resource on this card. 1VP for each Jovian tag you have.',

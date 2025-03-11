@@ -17,19 +17,19 @@ export class LavaTubeSettlement extends Card implements IProjectCard {
       cost: 15,
 
       behavior: {
-        production: {energy: -1, megacredits: 2},
+        production: {discipleship: -1, provision: 2},
       },
 
       metadata: {
         cardNumber: 'P37',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(2);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(2);
           }).br;
           b.city().asterix();
         }),
-        description: 'Decrease your energy production 1 step and increase your M€ production 2 steps. Place a city tile on a VOLCANIC AREA regardless of adjacent cities.',
+        description: 'Decrease your discipleship production 1 step and increase your M€ production 2 steps. Place a city tile on a VOLCANIC AREA regardless of adjacent cities.',
       },
     });
   }
@@ -41,7 +41,7 @@ export class LavaTubeSettlement extends Card implements IProjectCard {
   }
 
   public override bespokeCanPlay(player: IPlayer): boolean {
-    return this.getSpacesForCity(player).length > 0 && player.production.energy >= 1;
+    return this.getSpacesForCity(player).length > 0 && player.production.discipleship >= 1;
   }
 
   public override bespokePlay(player: IPlayer) {

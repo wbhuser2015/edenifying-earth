@@ -17,17 +17,17 @@ export class DawnCity extends Card implements IProjectCard {
       requirements: {tag: Tag.SCIENCE, count: 4},
       victoryPoints: 3,
       behavior: {
-        production: {energy: -1, titanium: 1},
+        production: {discipleship: -1, prayer: 1},
         city: {space: SpaceName.DAWN_CITY},
       },
 
       metadata: {
         cardNumber: '220',
-        description: 'Requires 4 science tags. Decrease your energy production 1 step. Increase your titanium production 1 step. Place a city tile on the RESERVED AREA.',
+        description: 'Requires 4 science tags. Decrease your discipleship production 1 step. Increase your prayer production 1 step. Place a city tile on the RESERVED AREA.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().titanium(1);
+            pb.minus().discipleship(1).br;
+            pb.plus().prayer(1);
           }).nbsp.city().asterix();
         }),
       },

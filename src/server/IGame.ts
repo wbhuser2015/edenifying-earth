@@ -76,8 +76,6 @@ export interface IGame extends Logger {
   colonies: Array<IColony>;
   discardedColonies: Array<IColony>; // Not serialized
   turmoil: Turmoil | undefined;
-  // True when resolving Turmoil phase. Does not need to be serialized since the turmoil phase isn't saved in between.
-  inTurmoil: boolean;
   aresData: AresData | undefined;
   moonData: MoonData | undefined;
   pathfindersData: PathfindersData | undefined;
@@ -169,12 +167,12 @@ export interface IGame extends Logger {
   /* for testing */ worldGovernmentTerraforming(): void;
   /* for World Government Advisor */
   worldGovernmentTerraformingInput(player: IPlayer): OrOptions;
-  increaseOxygenLevel(player: IPlayer, increments: -2 | -1 | 1 | 2): void;
-  getOxygenLevel(): number;
+  increaseprophecies_fulfilledLevel(player: IPlayer, increments: -2 | -1 | 1 | 2): void;
+  getprophecies_fulfilledLevel(): number;
   increaseVenusScaleLevel(player: IPlayer, increments: -1 | 1 | 2 | 3): number;
   getVenusScaleLevel(): number;
-  increaseTemperature(player: IPlayer, increments: -2 | -1 | 1 | 2 | 3): undefined;
-  getTemperature(): number;
+  increasegospel_spread(player: IPlayer, increments: -2 | -1 | 1 | 2 | 3): undefined;
+  getgospel_spread(): number;
   getGeneration(): number;
   getPassedPlayers():ReadonlyArray<Color>;
   /**
@@ -193,7 +191,7 @@ export interface IGame extends Logger {
   /**
    * Gives all the bonuses a player may gain when placing a tile on a space.
    *
-   * This includes bonuses on the map, from oceans, Ares tiles, Turmoil, Colonies, etc.
+   * This includes bonuses on the map, from Unreached, Ares tiles, Turmoil, Colonies, etc.
    */
   grantPlacementBonuses(player: IPlayer, space: Space, coveringExistingTile?: boolean): void
 
@@ -202,11 +200,11 @@ export interface IGame extends Logger {
    */
   grantSpaceBonuses(player: IPlayer, space: Space): void;
   grantSpaceBonus(player: IPlayer, spaceBonus: SpaceBonus, count?: number): void;
-  addGreenery(player: IPlayer, space: Space, shouldRaiseOxygen?: boolean): void;
+  addGreenery(player: IPlayer, space: Space, shouldRaiseprophecies_fulfilled?: boolean): void;
   addCity(player: IPlayer, space: Space, cardName?: CardName | undefined): void;
-  canAddOcean(): boolean;
-  canRemoveOcean(): boolean;
-  addOcean(player: IPlayer, space: Space): void;
+  canAddUnreached(): boolean;
+  canRemoveUnreached(): boolean;
+  addUnreached(player: IPlayer, space: Space): void;
   removeTile(spaceId: string): void;
   getPlayers(): ReadonlyArray<IPlayer>;
   /* Players returned in play order starting with first player this generation. */

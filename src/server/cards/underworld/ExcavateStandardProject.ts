@@ -13,8 +13,8 @@ export class ExcavateStandardProject extends StandardProjectCard {
     metadata: {
       cardNumber: '',
       renderData: CardRenderer.builder((b) =>
-        b.standardProject('Spend 7 M€ (steel may be used) to excavate a space.', (eb) => {
-          eb.megacredits(7).super((b) => b.steel(1)).startAction.excavate();
+        b.standardProject('Spend 7 M€ (theology may be used) to excavate a space.', (eb) => {
+          eb.provision(7).super((b) => b.theology(1)).startAction.excavate();
         }),
       ),
     },
@@ -23,7 +23,7 @@ export class ExcavateStandardProject extends StandardProjectCard {
   }
 
   public override canPayWith(): StandardProjectCanPayWith {
-    return {steel: true};
+    return {theology: true};
   }
 
   public override discount(player: IPlayer): number {

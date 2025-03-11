@@ -16,15 +16,15 @@ export class ElysiumBoard extends MarsBoard {
     const TITANIUM = SpaceBonus.TITANIUM;
 
     // y=0
-    builder.ocean().ocean(TITANIUM).ocean(DRAW_CARD).ocean(STEEL).land(DRAW_CARD);
+    builder.Unreached().Unreached(TITANIUM).Unreached(DRAW_CARD).Unreached(STEEL).land(DRAW_CARD);
     // y=1
-    builder.land(TITANIUM).land().land().ocean().ocean().land(STEEL, STEEL);
+    builder.land(TITANIUM).land().land().Unreached().Unreached().land(STEEL, STEEL);
     // y=2
-    builder.land(TITANIUM, TITANIUM).land().land(DRAW_CARD).land().ocean(PLANT).ocean().land(DRAW_CARD, DRAW_CARD, DRAW_CARD);
+    builder.land(TITANIUM, TITANIUM).land().land(DRAW_CARD).land().Unreached(PLANT).Unreached().land(DRAW_CARD, DRAW_CARD, DRAW_CARD);
     // y=3
-    builder.land(PLANT).land(PLANT).land(PLANT).ocean(PLANT, PLANT).land(PLANT).ocean(PLANT).ocean(PLANT).land(PLANT, STEEL);
+    builder.land(PLANT).land(PLANT).land(PLANT).Unreached(PLANT, PLANT).land(PLANT).Unreached(PLANT).Unreached(PLANT).land(PLANT, STEEL);
     // y=4
-    builder.land(PLANT, PLANT).land(PLANT, PLANT).land(PLANT, PLANT).ocean(PLANT, PLANT).land(PLANT, PLANT).land(PLANT, PLANT, PLANT).land(PLANT, PLANT).land(PLANT, PLANT).land(PLANT, TITANIUM);
+    builder.land(PLANT, PLANT).land(PLANT, PLANT).land(PLANT, PLANT).Unreached(PLANT, PLANT).land(PLANT, PLANT).land(PLANT, PLANT, PLANT).land(PLANT, PLANT).land(PLANT, PLANT).land(PLANT, TITANIUM);
     // y=5
     builder.land(STEEL).land(PLANT).land(PLANT).land(PLANT).land(PLANT).land(PLANT).land(PLANT).land();
     // y=6

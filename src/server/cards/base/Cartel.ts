@@ -15,14 +15,14 @@ export class Cartel extends Card implements IProjectCard {
       cost: 8,
 
       behavior: {
-        production: {megacredits: {tag: Tag.EARTH}},
+        production: {provision: {tag: Tag.EARTH}},
       },
 
       metadata: {
         cardNumber: '137',
         description: 'Increase your M€ production 1 step for each Earth tag you have, including this.',
         renderData: CardRenderer.builder((b) => b.production((pb) => {
-          pb.megacredits(1).slash().tag(Tag.EARTH);
+          pb.provision(1).slash().tag(Tag.EARTH);
         })),
       },
     });

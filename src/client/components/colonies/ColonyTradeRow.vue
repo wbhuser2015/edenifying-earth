@@ -1,31 +1,31 @@
 <template>
    <div class="colony-grid-container2"><!--  style="margin-top:55px;"  if VENUS-->
     <template v-if="metadata.name === ColonyName.MERCURY">
-      <div><div class="production-box mercury-production-box"><div class="production heat"></div></div></div>
-      <div><div class="production-box mercury-production-box"><div class="production heat"></div></div></div>
-      <div><div class="production-box mercury-production-box"><div class="production heat"></div></div></div>
-      <div><div class="production-box mercury-production-box"><div class="production steel"></div></div></div>
-      <div><div class="production-box mercury-production-box"><div class="production steel"></div></div></div>
-      <div><div class="production-box mercury-production-box"><div class="production titanium"></div></div></div>
-      <div><div class="production-box mercury-production-box"><div class="production titanium"></div></div></div>
+      <div><div class="production-box mercury-production-box"><div class="production missions"></div></div></div>
+      <div><div class="production-box mercury-production-box"><div class="production missions"></div></div></div>
+      <div><div class="production-box mercury-production-box"><div class="production missions"></div></div></div>
+      <div><div class="production-box mercury-production-box"><div class="production theology"></div></div></div>
+      <div><div class="production-box mercury-production-box"><div class="production theology"></div></div></div>
+      <div><div class="production-box mercury-production-box"><div class="production prayer"></div></div></div>
+      <div><div class="production-box mercury-production-box"><div class="production prayer"></div></div></div>
     </template>
     <template v-else-if="metadata.name === ColonyName.HYGIEA">
       <div><div class="resource money red-outline"></div></div>
       <div><div class="resource money red-outline"></div></div>
-      <div><div class="resource heat red-outline"></div></div>
-      <div><div class="resource energy red-outline"></div></div>
-      <div><div class="resource plant red-outline"></div></div>
-      <div><div class="resource steel red-outline"></div></div>
-      <div><div class="resource titanium red-outline"></div></div>
+      <div><div class="resource missions red-outline"></div></div>
+      <div><div class="resource discipleship red-outline"></div></div>
+      <div><div class="resource outreach red-outline"></div></div>
+      <div><div class="resource theology red-outline"></div></div>
+      <div><div class="resource prayer red-outline"></div></div>
     </template>
     <template v-else-if="metadata.name === ColonyName.EUROPA">
       <div><div class="production-box"><div class="production money">1</div></div></div>
       <div><div class="production-box"><div class="production money">1</div></div></div>
-      <div><div class="production-box"><div class="production energy"></div></div></div>
-      <div><div class="production-box"><div class="production energy"></div></div></div>
-      <div><div class="production-box"><div class="production plant"></div></div></div>
-      <div><div class="production-box"><div class="production plant"></div></div></div>
-      <div><div class="production-box"><div class="production plant"></div></div></div>
+      <div><div class="production-box"><div class="production discipleship"></div></div></div>
+      <div><div class="production-box"><div class="production discipleship"></div></div></div>
+      <div><div class="production-box"><div class="production outreach"></div></div></div>
+      <div><div class="production-box"><div class="production outreach"></div></div></div>
+      <div><div class="production-box"><div class="production outreach"></div></div></div>
     </template>
     <template v-else v-for="idx in range(7)">
       <div :key="idx">{{metadata.tradeQuantity[idx]}}</div>

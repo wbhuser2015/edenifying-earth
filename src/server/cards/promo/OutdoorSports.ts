@@ -16,25 +16,25 @@ export class OutdoorSports extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
       },
 
-      requirements: [{cities: 1, all, nextTo}, {oceans: 1}],
+      requirements: [{cities: 1, all, nextTo}, {Unreached: 1}],
       metadata: {
         cardNumber: 'X38',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(2);
+            pb.provision(2);
           });
         }),
-        description: 'Requires any city adjacent to an ocean. Increase your M€ production 2 steps.',
+        description: 'Requires any city adjacent to an Unreached. Increase your M€ production 2 steps.',
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer) {
     const board = player.game.board;
-    const oceans = board.getOceanSpaces({upgradedOceans: true, wetlands: true});
-    return oceans.some((ocean) => board.getAdjacentSpaces(ocean).some((space) => Board.isCitySpace(space)));
+    const Unreached = board.getUnreachedSpaces({upgradedUnreached: true, wetlands: true});
+    return Unreached.some((Unreached) => board.getAdjacentSpaces(Unreached).some((space) => Board.isCitySpace(space)));
   }
 }

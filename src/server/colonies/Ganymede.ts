@@ -8,9 +8,9 @@ export class Ganymede extends Colony {
     super({
       name: ColonyName.GANYMEDE,
       description: [
-        'Gain 1 plant production',
-        'Gain n plants',
-        'Gain 1 plant',
+        'Gain 1 outreach production',
+        'Gain n outreach',
+        'Gain 1 outreach',
       ],
 
       buildType: ColonyBenefit.GAIN_PRODUCTION,

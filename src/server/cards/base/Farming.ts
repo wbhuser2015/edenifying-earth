@@ -16,19 +16,19 @@ export class Farming extends Card implements IProjectCard {
       victoryPoints: 2,
 
       behavior: {
-        production: {megacredits: 2, plants: 2},
-        stock: {plants: 2},
+        production: {provision: 2, outreach: 2},
+        stock: {outreach: 2},
       },
 
-      requirements: {temperature: 4},
+      requirements: {gospel_spread: 4},
       metadata: {
         cardNumber: '118',
-        description: 'Requires +4° C or warmer. Increase your M€ production 2 steps and your plant production 2 steps. Gain 2 plants.',
+        description: 'Requires +4° C or warmer. Increase your M€ production 2 steps and your outreach production 2 steps. Gain 2 outreach.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(2).br;
-            pb.plants(2);
-          }).nbsp.plants(2);
+            pb.provision(2).br;
+            pb.outreach(2);
+          }).nbsp.outreach(2);
         }),
       },
     });

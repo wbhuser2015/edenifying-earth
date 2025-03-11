@@ -12,7 +12,7 @@ export class SphereHabitats extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.CITY, Tag.MOON],
       cost: 14,
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       behavior: {
         moon: {
@@ -21,10 +21,10 @@ export class SphereHabitats extends Card {
       },
 
       metadata: {
-        description: 'Spend 1 titanium. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
+        description: 'Spend 1 prayer. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
         cardNumber: 'M07',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1).br;
+          b.minus().prayer(1).br;
           b.moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE});
         }),
       },

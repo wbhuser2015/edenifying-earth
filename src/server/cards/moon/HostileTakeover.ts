@@ -19,13 +19,13 @@ export class HostileTakeover extends Card {
       requirements: [{habitatRate: 2}, {miningRate: 4}],
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
       },
 
       metadata: {
         cardNumber: 'M64',
         renderData: CardRenderer.builder((b) => {
-          b.moonHabitat().asterix().moonMine().asterix().production((pb) => pb.megacredits(2));
+          b.moonHabitat().asterix().moonMine().asterix().production((pb) => pb.provision(2));
         }),
         description: 'Requires a habitat rate of 2 or higher, and a mining rate of 4 or higher. ' +
           'Add your player marker to a habitat tile and a mining tile owned by any opponent. ' +

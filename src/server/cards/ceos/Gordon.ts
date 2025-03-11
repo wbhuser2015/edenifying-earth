@@ -21,7 +21,7 @@ export class Gordon extends CeoCard {
             (eb) => eb.greenery().city().startEffect.asterix());
           b.br;
           b.effect('Gain 2 M€ when you place a greenery or city tile on Mars.',
-            (eb) => eb.greenery().city().startEffect.megacredits(2));
+            (eb) => eb.greenery().city().startEffect.provision(2));
         }),
       },
     });

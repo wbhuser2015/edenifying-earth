@@ -15,7 +15,7 @@ export class MartianInsuranceGroup extends CorporationCard {
       startingMegaCredits: 42,
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
 
       metadata: {
@@ -23,10 +23,10 @@ export class MartianInsuranceGroup extends CorporationCard {
         description: 'You start with 42 M€ and 1 M€ production.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(42).production((pb) => pb.megacredits(1));
+          b.provision(42).production((pb) => pb.provision(1));
           b.corpBox('effect', (ce) => {
             ce.effect('Whenever you play an event card, raise your M€ production 1 step.', (eb) => {
-              eb.tag(Tag.EVENT).startEffect.production((pb) => pb.megacredits(1));
+              eb.tag(Tag.EVENT).startEffect.production((pb) => pb.provision(1));
             });
           });
         }),

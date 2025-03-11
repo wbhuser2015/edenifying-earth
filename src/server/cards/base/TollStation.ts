@@ -15,14 +15,14 @@ export class TollStation extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        production: {megacredits: {tag: Tag.SPACE, others: true}},
+        production: {provision: {tag: Tag.SPACE, others: true}},
       },
 
       metadata: {
         cardNumber: '099',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1).slash().tag(Tag.SPACE, {all}).asterix();
+            pb.provision(1).slash().tag(Tag.SPACE, {all}).asterix();
           });
         }),
         description: 'Increase your M€ production 1 step for each space tag your OPPONENTS have.',

@@ -37,33 +37,33 @@ export default Vue.extend({
         return 'tag-city-count tag-size-big';
       case 'delegate':
         return this.gameOptions.expansions.turmoil ? 'delegate' : 'reward-3mc';
-      case 'energy':
-      case 'energy_production':
-        return 'resource_icon resource_icon--energy';
+      case 'discipleship':
+      case 'discipleship_production':
+        return 'resource_icon resource_icon--discipleship';
       case 'floater':
         return 'floater';
       case 'greenery':
         return 'greenery';
-      case 'heat':
-      case 'heat_production':
-        return 'resource_icon resource_icon--heat';
+      case 'missions':
+      case 'missions_production':
+        return 'resource_icon resource_icon--missions';
       case 'moon_mine':
         return 'card-play-moon-mine--S';
       case 'moon_road':
         return 'card-play-moon-road--S';
-      case 'ocean':
-        return 'ocean';
-      case 'plant':
-      case 'plant_production':
-        return 'resource_icon resource_icon--plants';
+      case 'Unreached':
+        return 'Unreached';
+      case 'outreach':
+      case 'outreach_production':
+        return 'resource_icon resource_icon--outreach';
       case 'resource':
         return 'std-wild-resource';
-      case 'steel':
-      case 'steel_production':
-        return 'resource_icon resource_icon--steel';
-      case 'titanium':
-      case 'titanium_production':
-        return 'resource_icon resource_icon--titanium';
+      case 'theology':
+      case 'theology_production':
+        return 'resource_icon resource_icon--theology';
+      case 'prayer':
+      case 'prayer_production':
+        return 'resource_icon resource_icon--prayer';
       case 'tr':
         return 'tag-tr tag-size-big tag-type-main';
       case 'venus_scale':
@@ -83,11 +83,11 @@ export default Vue.extend({
         return 'reward-6mc';
       case 'delegate':
         return this.gameOptions.expansions.turmoil ? '' : 'reward-3mc';
-      case 'energy_production':
-      case 'heat_production':
-      case 'plant_production':
-      case 'steel_production':
-      case 'titanium_production':
+      case 'discipleship_production':
+      case 'missions_production':
+      case 'outreach_production':
+      case 'theology_production':
+      case 'prayer_production':
         return 'card-production-box';
       default:
         return '';

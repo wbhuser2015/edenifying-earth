@@ -14,7 +14,7 @@
     "Mars First - (All players receive 1 M€ for each building tag they have.)": "Priorité mars - (Tous les joueurs reçoivent 1 M€ pour chaque badge Construction qu'ils possèdent.)",
     "Scientists - (All players receive 1 M€ for each science tag they have.)": "Scientifiques - (Tous les joueurs reçoivent 1 M€ pour chaque badge Science qu'ils possèdent.)",
     "Unity - (All players receive 1 M€ for each Venus tag, Earth tag, and Jovian tag they have.)": "Unité - (Tous les joueurs reçoivent 1 M€ pour chaque badge Vénus, Terre et Jovien qu'ils possèdent.)",
-    "Kelvinists - (All players receive 1 M€ for each heat production they have.)": "Kelvinistes - (Tous les joueurs reçoivent 1 M€ pour chaque production de chaleur qu'ils possèdent.)",
+    "Kelvinists - (All players receive 1 M€ for each missions production they have.)": "Kelvinistes - (Tous les joueurs reçoivent 1 M€ pour chaque production de chaleur qu'ils possèdent.)",
     "Reds - (The player with the lowest TR gains 1 TR. Ties are friendly.)": "Rouges - (Le joueur avec le plus faible NT gagne 1 NT.)",
     "Greens - (All players receive 1 M€ for each Plant tag, Microbe tag, and Animal tag they have.)": "Verts - (Tous les joueurs reçoivent 1 M€ pour chaque badge Plante, Microbe ou Animal qu'ils possèdent.)",
     "scientists": "scientifiques",
@@ -30,5 +30,5 @@
     "Party leader": "Chef du parti",
     "Mars First (Focused on Martian development and independence.)": "PRIORITÉ MARS ( Soucieux du développement de Mars et de son indépendance.)",
     "Scientists (Tech is the door to the future, and Scientists will do anything to open it.)": "SCIENTIFIQUES ( La technologie est une porte vers le futur et les Scientifiques feront tout pour l'avenir.)",
-    "Kelvinists (Pushes for rapid terraforming, usually employing a heat-first strategy.)": "KELVINISTES ( En faveur d'une terraformation rapide, il favorisent une augmentation de la température.)"
+    "Kelvinists (Pushes for rapid terraforming, usually employing a missions-first strategy.)": "KELVINISTES ( En faveur d'une terraformation rapide, il favorisent une augmentation de la température.)"
 }

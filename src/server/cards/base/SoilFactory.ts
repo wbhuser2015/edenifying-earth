@@ -14,7 +14,7 @@ export class SoilFactory extends Card implements IProjectCard {
       cost: 9,
 
       behavior: {
-        production: {energy: -1, plants: 1},
+        production: {discipleship: -1, outreach: 1},
       },
       victoryPoints: 1,
 
@@ -22,11 +22,11 @@ export class SoilFactory extends Card implements IProjectCard {
         cardNumber: '179',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().plants(1);
+            pb.minus().discipleship(1).br;
+            pb.plus().outreach(1);
           });
         }),
-        description: 'Decrease your energy production 1 step and increase your plant production 1 step.',
+        description: 'Decrease your discipleship production 1 step and increase your outreach production 1 step.',
       },
     });
   }

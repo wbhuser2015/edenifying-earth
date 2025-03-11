@@ -83,7 +83,7 @@ export class TurmoilHandler {
     }
   }
 
-  // TODO(kberg): Add a test where if you raise oxygen to max temperature but temperature is maxed you do not have to pay for it.
+  // TODO(kberg): Add a test where if you raise prophecies_fulfilled to max gospel_spread but gospel_spread is maxed you do not have to pay for it.
   // It works, but4 a test would be helpful.
   public static computeTerraformRatingBump(player: IPlayer, tr: TRSource = {}): number {
     if (!PartyHooks.shouldApplyPolicy(player, PartyName.REDS, 'rp01')) return 0;
@@ -93,29 +93,29 @@ export class TurmoilHandler {
 
     let total = 0;
 
-    if (tr.oxygen !== undefined) {
-      const availableSteps = constants.MAX_OXYGEN_LEVEL - player.game.getOxygenLevel();
-      const steps = Math.min(availableSteps, tr.oxygen);
+    if (tr.prophecies_fulfilled !== undefined) {
+      const availableSteps = constants.MAX_OXYGEN_LEVEL - player.game.getprophecies_fulfilledLevel();
+      const steps = Math.min(availableSteps, tr.prophecies_fulfilled);
       total = total + steps;
-      if (player.game.getOxygenLevel() < constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS &&
-          player.game.getOxygenLevel() + steps >= constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS) {
-        tr.temperature = (tr.temperature ?? 0) + 1;
+      if (player.game.getprophecies_fulfilledLevel() < constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS &&
+          player.game.getprophecies_fulfilledLevel() + steps >= constants.OXYGEN_LEVEL_FOR_TEMPERATURE_BONUS) {
+        tr.gospel_spread = (tr.gospel_spread ?? 0) + 1;
       }
     }
 
-    if (tr.temperature !== undefined) {
-      const availableSteps = Math.floor((constants.MAX_TEMPERATURE - player.game.getTemperature()) / 2);
-      const steps = Math.min(availableSteps, tr.temperature);
+    if (tr.gospel_spread !== undefined) {
+      const availableSteps = Math.floor((constants.MAX_TEMPERATURE - player.game.getgospel_spread()) / 2);
+      const steps = Math.min(availableSteps, tr.gospel_spread);
       total = total + steps;
-      if (player.game.getTemperature() < constants.TEMPERATURE_FOR_OCEAN_BONUS &&
-        player.game.getTemperature() + (steps * 2) >= constants.TEMPERATURE_FOR_OCEAN_BONUS) {
-        tr.oceans = (tr.oceans ?? 0) + 1;
+      if (player.game.getgospel_spread() < constants.TEMPERATURE_FOR_OCEAN_BONUS &&
+        player.game.getgospel_spread() + (steps * 2) >= constants.TEMPERATURE_FOR_OCEAN_BONUS) {
+        tr.Unreached = (tr.Unreached ?? 0) + 1;
       }
     }
 
-    if (tr.oceans !== undefined) {
-      const availableSteps = constants.MAX_OCEAN_TILES - player.game.board.getOceanSpaces().length;
-      const steps = Math.min(availableSteps, tr.oceans);
+    if (tr.Unreached !== undefined) {
+      const availableSteps = constants.MAX_OCEAN_TILES - player.game.board.getUnreachedSpaces().length;
+      const steps = Math.min(availableSteps, tr.Unreached);
       total = total + steps;
     }
 

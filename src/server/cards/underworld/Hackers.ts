@@ -19,15 +19,15 @@ export class Hackers extends Card implements IProjectCard {
       requirements: {corruption: 2},
 
       behavior: {
-        production: {megacredits: {underworld: {corruption: {}}}},
+        production: {provision: {underworld: {corruption: {}}}},
       },
 
       metadata: {
         cardNumber: 'UX01',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().megacredits(2, {all}).br;
-            pb.plus().megacredits(1).slash().corruption();
+            pb.minus().provision(2, {all}).br;
+            pb.plus().provision(1).slash().corruption();
           });
         }),
         description: 'Requires 2 corruption. Decrease any M€ production 2 steps. Increase your M€ production 1 step for every unit of corruption you have.',

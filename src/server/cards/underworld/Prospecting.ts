@@ -16,7 +16,7 @@ export class Prospecting extends PreludeCard {
         cardNumber: 'UP13',
         description: 'Pay 4 M€. Put an additional colony tile of your choice into play. Then place a colony on it.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(-4).nbsp.colonyTile().colonies().asterix();
+          b.provision(-4).nbsp.colonyTile().colonies().asterix();
         }),
       },
     });

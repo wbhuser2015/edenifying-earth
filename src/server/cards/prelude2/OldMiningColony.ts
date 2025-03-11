@@ -13,16 +13,16 @@ export class OldMiningColony extends PreludeCard {
       tags: [Tag.SPACE],
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
         colonies: {buildColony: {}},
       },
 
       metadata: {
         cardNumber: 'P55',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1)).colonies(1).minus().cards(1);
+          b.production((pb) => pb.prayer(1)).colonies(1).minus().cards(1);
         }),
-        description: 'Increase your titanium production 1 step. Place 1 colony. Discard 1 card.',
+        description: 'Increase your prayer production 1 step. Place 1 colony. Discard 1 card.',
       },
     });
   }

@@ -17,7 +17,7 @@ export class Lowell extends CeoCard {
       metadata: {
         cardNumber: 'L12',
         renderData: CardRenderer.builder((b) => {
-          b.opgArrow().megacredits(8).colon().text('CHANGE LEADER').asterix();
+          b.opgArrow().provision(8).colon().text('CHANGE LEADER').asterix();
           b.br.br;
         }),
         description: 'Once per game, pay 8 M€ to draw 3 CEO cards and choose one to play. Discard this card.',

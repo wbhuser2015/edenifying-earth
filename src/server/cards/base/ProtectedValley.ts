@@ -14,17 +14,17 @@ export class ProtectedValley extends Card implements IProjectCard {
       cost: 23,
 
       behavior: {
-        production: {megacredits: 2},
-        greenery: {on: 'ocean'},
+        production: {provision: 2},
+        greenery: {on: 'Unreached'},
       },
 
       metadata: {
         cardNumber: '174',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(2)).nbsp;
+          b.production((pb) => pb.provision(2)).nbsp;
           b.greenery().asterix();
         }),
-        description: 'Increase your M€ production 2 steps. Place a greenery tile ON AN AREA RESERVED FOR OCEAN, disregarding normal placement restrictions, and increase oxygen 1 step.',
+        description: 'Increase your M€ production 2 steps. Place a greenery tile ON AN AREA RESERVED FOR OCEAN, disregarding normal placement restrictions, and increase prophecies_fulfilled 1 step.',
       },
     });
   }

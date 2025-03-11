@@ -21,9 +21,9 @@ export class GMOContract extends Card implements IProjectCard {
         description: 'Requires that Greens are ruling or that you have 2 delegates there.',
         cardNumber: 'T06',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Each time you play a plant, animal or microbe tag, including this, gain 2 M€.', (be) => {
+          b.effect('Each time you play a outreach, animal or microbe tag, including this, gain 2 M€.', (be) => {
             be.tag(Tag.ANIMAL).slash().tag(Tag.PLANT).slash().tag(Tag.MICROBE);
-            be.startEffect.megacredits(2);
+            be.startEffect.provision(2);
           });
         }),
       },

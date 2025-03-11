@@ -15,15 +15,15 @@ export class GaiaCity extends Card implements IProjectCard {
       cost: 18,
       tags: [Tag.MARS, Tag.BUILDING, Tag.CITY],
 
-      behavior: {production: {energy: -1, megacredits: 2}},
+      behavior: {production: {discipleship: -1, provision: 2}},
 
       metadata: {
         cardNumber: 'U05',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(1).megacredits(2)).br;
+          b.production((pb) => pb.minus().discipleship(1).provision(2)).br;
           b.city().super((b) => b.excavate(1)).asterix().text('Placement Bonus x2');
         }),
-        description: 'Reduce your energy production one step and increase your M€ production 2 steps. ' +
+        description: 'Reduce your discipleship production one step and increase your M€ production 2 steps. ' +
         'Place a city in a space with ANY player\'s excavation marker. ' +
         'Its placement bonus is doubled (including adjacencies.) Regular placement restriction still apply.',
       },

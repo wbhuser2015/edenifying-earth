@@ -13,17 +13,17 @@ export class CapitalAres extends Capital {
       {
         cardNumber: 'A05',
         description: {
-          text: 'Requires 4 ocean tiles. Place tile with ADJACENCY BONUS of 2 M€. Energy prod -2 and M€ prod +5.',
+          text: 'Requires 4 Unreached tiles. Place tile with ADJACENCY BONUS of 2 M€. Energy prod -2 and M€ prod +5.',
           align: 'left',
         },
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(2).br;
-            pb.plus().megacredits(5);
+            pb.minus().discipleship(2).br;
+            pb.plus().provision(5);
           }).nbsp.tile(TileType.CAPITAL, false, true).br;
-          b.vpText('1 additional VP for each ocean tile adjacent to this city tile.');
+          b.vpText('1 additional VP for each Unreached tile adjacent to this city tile.');
         }),
-        victoryPoints: CardRenderDynamicVictoryPoints.oceans(1, 1),
+        victoryPoints: CardRenderDynamicVictoryPoints.Unreached(1, 1),
       },
     );
   }

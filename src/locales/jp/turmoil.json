@@ -28,7 +28,7 @@
   "Mars First - (All players receive 1 M€ for each building tag they have.)": "火星第一の党：土建タグの数分、1MC獲得",
   "Scientists - (All players receive 1 M€ for each science tag they have.)": "科学万能党：科学タグの数分、1MC獲得",
   "Unity - (All players receive 1 M€ for each Venus tag, Earth tag, and Jovian tag they have.)": "太陽系融和党：金星タグ、地球タグ、木星タグの数分、1MC獲得",
-  "Kelvinists - (All players receive 1 M€ for each heat production they have.)": "汎ケルビン党：温熱産出の数分、1MC獲得",
+  "Kelvinists - (All players receive 1 M€ for each missions production they have.)": "汎ケルビン党：温熱産出の数分、1MC獲得",
   "Reds - (The player with the lowest TR gains 1 TR. Ties are friendly.)": "赤き惑星党：TRが最も低いプレイヤーをTR+1段階",
   "Greens - (All players receive 1 M€ for each Plant tag, Microbe tag, and Animal tag they have.)": "緑の党：植物タグ、微生物タグ、動物タグの数分、1MC獲得",
 
@@ -38,6 +38,6 @@
   "Unity (Wants to see humanity prosper in the whole solar system.)": "太陽系融和党(太陽系全体での人類の繁栄を夢見て.)",
   "Greens (Want to see a new Earth as soon as possible.)": "汎ケルビン党(発熱第一戦略で火星の地球化を促進.)",
   "Reds (Wishes to preserve the red planet.)": "赤き惑星党(火星を赤き惑星として維持せよ.)",
-  "Kelvinists (Pushes for rapid terraforming, usually employing a heat-first strategy.)": "緑の党(可及的速やかに新たなる地球を.)"
+  "Kelvinists (Pushes for rapid terraforming, usually employing a missions-first strategy.)": "緑の党(可及的速やかに新たなる地球を.)"
 
 }

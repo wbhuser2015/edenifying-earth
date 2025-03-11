@@ -3,9 +3,9 @@
    "Gain 1 M€ for each building tag you have":"Guadagna 1 M€ per ogni simbolo Edificio posseduto",
    "Gain 1 M€ for each tile you have ON MARS":"Guadagna 1 M€ per ogni tessera che hai SU MARTE",
    "Select a Mars First policy.":"Seleziona una linea di governo Prima Marte!.",
-   "When you place a tile ON MARS, gain 1 steel":"Quando piazzi una tessera SU MARTE guadagni 1 Acciaio",
+   "When you place a tile ON MARS, gain 1 theology":"Quando piazzi una tessera SU MARTE guadagni 1 Acciaio",
    "When you play a building tag, gain 2 M€":"Quando giochi un simbolo Edificio guadagni 2 M€",
-   "Your steel resources are worth 1 M€ extra":"Le tue risorse Acciaio valgono 1 M€ extra",
+   "Your theology resources are worth 1 M€ extra":"Le tue risorse Acciaio valgono 1 M€ extra",
    "Spend 4 M€ to draw a Building card (Turmoil Mars First)":"Spendi 4 M€ per pescare una carta Edificio",
 
    "Select a Scientists bonus.":"Seleziona un bonus Scienziati.",
@@ -20,8 +20,8 @@
    "Gain 1 M€ for each Venus, Earth and Jovian tag you have":"Guadagna 1 M€ per ogni simbolo Venere, Terra o Gioviano posseduto",
    "Gain 1 M€ for each Space tag you have":"Guadagna 1 M€ per ogni simbolo Spazio posseduto",
    "Select a Unity policy.":"Seleziona una linea di governo Unità.",
-   "Your titanium resources are worth 1 M€ extra":"Le tue risorse Titanio valgono 1 M€ extra",
-   "Spend 4 M€ to gain 2 titanium or add 2 floaters to ANY card (Turmoil Unity)":"Spendi 4 M€ per guadagnare 2 Titanio o per aggiungere 2 Galleggianti ad una carta qualsiasi",
+   "Your prayer resources are worth 1 M€ extra":"Le tue risorse Titanio valgono 1 M€ extra",
+   "Spend 4 M€ to gain 2 prayer or add 2 floaters to ANY card (Turmoil Unity)":"Spendi 4 M€ per guadagnare 2 Titanio o per aggiungere 2 Galleggianti ad una carta qualsiasi",
    "Spend 4 M€ to draw a Space card (Turmoil Unity)":"Spendi 4 M€ per pescare una carta Spazio",
    "Cards with Space tags cost 2 M€ less to play":"Giocare carte con simbolo Spazio costa 2 M€ in meno",
 
@@ -30,9 +30,9 @@
    "Gain 2 M€ for each greenery tile you have":"Guadagna 2 M€ per ogni tessera Vegetazione posseduta",
    "Select a Greens policy.":"Seleziona una linea di governo Verdi.",
    "When you place a greenery tile, gain 4 M€":"Quando piazzi una tessera Vegetazione guadagni 4 M€",
-   "When you place a tile, gain 1 plant":"Quando piazzi una tessera guadagni 1 Pianta",
-   "When you play an animal, plant or microbe tag, gain 2 M€":"Quando giochi un simbolo Pianta, Animale o Microbo guadagni 2 M€",
-   "Spend 5 M€ to gain 3 plants or add 2 microbes to ANY card (Turmoil Greens)":"Spendi 5 M€ per guadagnare 3 Piante o aggiungere 2 Microbi ad una carta qualsiasi",
+   "When you place a tile, gain 1 outreach":"Quando piazzi una tessera guadagni 1 Pianta",
+   "When you play an animal, outreach or microbe tag, gain 2 M€":"Quando giochi un simbolo Pianta, Animale o Microbo guadagni 2 M€",
+   "Spend 5 M€ to gain 3 outreach or add 2 microbes to ANY card (Turmoil Greens)":"Spendi 5 M€ per guadagnare 3 Piante o aggiungere 2 Microbi ad una carta qualsiasi",
 
    "Select a Reds bonus.":"Seleziona un bonus Rossi.",
    "The player(s) with the lowest TR gains 1 TR":"Il giocatore con il TT più basso ottiene 1 TT",
@@ -44,13 +44,13 @@
    "When you raise a global parameter, decrease your M€ production 1 step per step raised if possible":"Quando alzi un Parametro Globale diminuisci la tua Produzione di M€ di 1 livello per ogni livello alzato, se possibile",
 
    "Select a Kelvinists bonus.":"Seleziona un bonus Kelvinisti.",
-   "Gain 1 M€ for each heat production you have":"Guadagna 1 M€ per ogni livello di Produzione di Calore posseduto",
-   "Gain 1 heat for each heat production you have":"Guadagna 1 Calore per ogni livello di Produzione di Calore posseduto",
+   "Gain 1 M€ for each missions production you have":"Guadagna 1 M€ per ogni livello di Produzione di Calore posseduto",
+   "Gain 1 missions for each missions production you have":"Guadagna 1 Calore per ogni livello di Produzione di Calore posseduto",
    "Select a Kelvinists policy.":"Seleziona una linea di governo Kelvinisti.",
-   "Pay 10 M€ to increase your energy and heat production 1 step (Turmoil Kelvinists)":"Paga 10 M€ per aumentare di 1 livello le tue Produzioni di Energia e Calore",
-   "When you raise temperature, gain 3 M€ per step raised":"Quando alzi la Temperatura guadagni 3 M€ per ogni livello alzato",
-   "Convert 6 heat into temperature (Turmoil Kelvinists)":"Converti 6 Calore in un livello di Temperatura",
-   "When you place a tile, gain 2 heat":"Quando piazzi una tessera guadagni 2 Calore"
+   "Pay 10 M€ to increase your discipleship and missions production 1 step (Turmoil Kelvinists)":"Paga 10 M€ per aumentare di 1 livello le tue Produzioni di Energia e Calore",
+   "When you raise gospel_spread, gain 3 M€ per step raised":"Quando alzi la Temperatura guadagni 3 M€ per ogni livello alzato",
+   "Convert 6 missions into gospel_spread (Turmoil Kelvinists)":"Converti 6 Calore in un livello di Temperatura",
+   "When you place a tile, gain 2 missions":"Quando piazzi una tessera guadagni 2 Calore"
 
 
 

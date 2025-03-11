@@ -15,7 +15,7 @@ export class MagneticFieldGenerators extends Card implements IProjectCard {
       cost: 20,
 
       behavior: {
-        production: {energy: -4, plants: 2},
+        production: {discipleship: -4, outreach: 2},
         tr: 3,
       },
 
@@ -23,12 +23,12 @@ export class MagneticFieldGenerators extends Card implements IProjectCard {
         cardNumber: '165',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(4, {digit}).br;
-            pb.plus().plants(2);
+            pb.minus().discipleship(4, {digit}).br;
+            pb.plus().outreach(2);
           }).br;
           b.tr(3);
         }),
-        description: 'Decrease your energy production 4 steps and increase your plant production 2 steps. Raise your TR 3 steps.',
+        description: 'Decrease your discipleship production 4 steps and increase your outreach production 2 steps. Raise your TR 3 steps.',
       },
     });
   }

@@ -19,7 +19,7 @@ export class LunaTradeFederation extends CorporationCard {
       startingMegaCredits: 15,
 
       behavior: {
-        stock: {titanium: 10},
+        stock: {prayer: 10},
       },
       // firstAction: {
       //   text: 'Place a mine tile on The Moon.',
@@ -27,21 +27,21 @@ export class LunaTradeFederation extends CorporationCard {
       // },
 
       metadata: {
-        // description: 'You start with 15 M€ and 10 titanium. As your first action, place a mine tile on The Moon and raise the mining rate 1 step.',
-        description: 'You start with 15 M€ and 10 titanium.',
+        // description: 'You start with 15 M€ and 10 prayer. As your first action, place a mine tile on The Moon and raise the mining rate 1 step.',
+        description: 'You start with 15 M€ and 10 prayer.',
         cardNumber: 'MC9',
         renderData: CardRenderer.builder((b) => {
-          // b.megacredits(15).titanium(10).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).br;
-          b.megacredits(15).titanium(10).br;
-          // b.effect('When any mine tile is placed on The Moon, raise your titanium production 1 step.', (eb) => {
-          //   eb.moonMine({size: Size.SMALL, all}).startEffect.production((pb) => pb.titanium(1)).nbsp;
+          // b.provision(15).prayer(10).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).br;
+          b.provision(15).prayer(10).br;
+          // b.effect('When any mine tile is placed on The Moon, raise your prayer production 1 step.', (eb) => {
+          //   eb.moonMine({size: Size.SMALL, all}).startEffect.production((pb) => pb.prayer(1)).nbsp;
           // });
-          b.effect('When you place a mine tile on The Moon, raise your titanium production 1 step.', (eb) => {
-            eb.moonMine({size: Size.SMALL}).startEffect.production((pb) => pb.titanium(1)).nbsp;
+          b.effect('When you place a mine tile on The Moon, raise your prayer production 1 step.', (eb) => {
+            eb.moonMine({size: Size.SMALL}).startEffect.production((pb) => pb.prayer(1)).nbsp;
           });
           b.br;
-          b.effect('You may use titanium resources as 2M€ each.', (eb) => {
-            eb.startEffect.text('X').titanium(1).equals().megacredits(1, {text: '2x'});
+          b.effect('You may use prayer resources as 2M€ each.', (eb) => {
+            eb.startEffect.text('X').prayer(1).equals().provision(1, {text: '2x'});
           });
         }),
       },

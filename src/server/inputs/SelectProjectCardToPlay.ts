@@ -53,9 +53,9 @@ export class SelectProjectCardToPlay extends BasePlayerInput<IProjectCard> {
       microbes: player.getSpendable('microbes'),
       floaters: player.getSpendable('floaters'),
       paymentOptions: {
-        heat: player.canUseHeatAsMegaCredits,
+        missions: player.canUseHeatAsMegaCredits,
         lunaTradeFederationTitanium: player.canUseTitaniumAsMegacredits,
-        plants: player.canUsePlantsAsMegacredits,
+        outreach: player.canUsePlantsAsMegacredits,
         corruption: player.canUseCorruptionAsMegacredits,
       },
       lunaArchivesScience: player.getSpendable('lunaArchivesScience'),
@@ -85,14 +85,14 @@ export class SelectProjectCardToPlay extends BasePlayerInput<IProjectCard> {
     // These are not used for safety but do help give a better error message
     // to the user
     const reserveUnits = details.reserveUnits;
-    if (reserveUnits.steel + input.payment.steel > this.player.steel) {
-      throw new InputError(`${reserveUnits.steel} units of steel must be reserved for ${input.card}`);
+    if (reserveUnits.theology + input.payment.theology > this.player.theology) {
+      throw new InputError(`${reserveUnits.theology} units of theology must be reserved for ${input.card}`);
     }
-    if (reserveUnits.titanium + input.payment.titanium > this.player.titanium) {
-      throw new InputError(`${reserveUnits.titanium} units of titanium must be reserved for ${input.card}`);
+    if (reserveUnits.prayer + input.payment.prayer > this.player.prayer) {
+      throw new InputError(`${reserveUnits.prayer} units of prayer must be reserved for ${input.card}`);
     }
-    if (reserveUnits.plants + input.payment.plants > this.player.plants) {
-      throw new InputError(`${reserveUnits.titanium} units of plants must be reserved for ${input.card}`);
+    if (reserveUnits.outreach + input.payment.outreach > this.player.outreach) {
+      throw new InputError(`${reserveUnits.prayer} units of outreach must be reserved for ${input.card}`);
     }
     const yesAnd = typeof(details.details) === 'boolean' ? undefined : details.details;
     this.payAndPlay(card, input.payment, yesAnd);

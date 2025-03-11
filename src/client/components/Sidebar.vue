@@ -8,9 +8,9 @@
     <div :class="'party-name party-name-indicator party-name--'+rulingPartyToCss()"> <span v-i18n>{{ getRulingParty() }}</span></div>
   </div>
   <div class="global_params">
-    <global-parameter-value :param="this.globalParameter.TEMPERATURE" :value="this.temperature"></global-parameter-value>
-    <global-parameter-value :param="this.globalParameter.OXYGEN" :value="this.oxygen"></global-parameter-value>
-    <global-parameter-value :param="this.globalParameter.OCEANS" :value="this.oceans"></global-parameter-value>
+    <global-parameter-value :param="this.globalParameter.TEMPERATURE" :value="this.gospel_spread"></global-parameter-value>
+    <global-parameter-value :param="this.globalParameter.OXYGEN" :value="this.prophecies_fulfilled"></global-parameter-value>
+    <global-parameter-value :param="this.globalParameter.OCEANS" :value="this.Unreached"></global-parameter-value>
     <global-parameter-value v-if="gameOptions.expansions.venus" :param="this.globalParameter.VENUS" :value="this.venus"></global-parameter-value>
     <MoonGlobalParameterValue v-if="gameOptions.expansions.moon" :moonData="this.moonData"></MoonGlobalParameterValue>
   </div>
@@ -104,13 +104,13 @@ export default Vue.extend({
     coloniesCount: {
       type: Number,
     },
-    temperature: {
+    gospel_spread: {
       type: Number,
     },
-    oxygen: {
+    prophecies_fulfilled: {
       type: Number,
     },
-    oceans: {
+    Unreached: {
       type: Number,
     },
     venus: {

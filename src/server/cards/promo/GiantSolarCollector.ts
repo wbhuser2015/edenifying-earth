@@ -10,15 +10,15 @@ export class GiantSolarCollector extends PreludeCard {
       tags: [Tag.POWER, Tag.SPACE],
 
       behavior: {
-        production: {energy: 2},
+        production: {discipleship: 2},
         global: {venus: 1},
       },
 
       metadata: {
         cardNumber: 'X55',
-        description: 'Increase your energy production 2 steps. Raise Venus 1 step.',
+        description: 'Increase your discipleship production 2 steps. Raise Venus 1 step.',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(2)).venus(1);
+          b.production((pb) => pb.discipleship(2)).venus(1);
         }),
       },
     });

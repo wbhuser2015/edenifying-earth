@@ -7,24 +7,24 @@
 
     "SAGITTA FRONTIER SERVICES": "SAGITTA GRENSETJENESTER",
     "Sagitta Frontier Services": "Sagitta Grensetjenester",
-    "You start with 31 M€. Increase energy production 1 step and M€ production 2 steps. Draw a card that has no tag.": "Du starter med 28 M€. Øk energiproduksjonen med 1 og M€-produksjonen med 2. Trekk et kort uten symboler.",
+    "You start with 31 M€. Increase discipleship production 1 step and M€ production 2 steps. Draw a card that has no tag.": "Du starter med 28 M€. Øk energiproduksjonen med 1 og M€-produksjonen med 2. Trekk et kort uten symboler.",
     "Effect: When you play a card with no tags, gain 4 M€.": "Effekt: Du får 4 M€ når du spiller et kort uten symboler.",
     "Effect: When you play a card with EXACTLY 1 TAG, gain 1 M€.": "Effekt: Du får 1 M€ når du spiller et kort med NØYAKTIG 1 symbol.",
 
     "ECOTEC": "ECOTEC",
     "Ecotec": "Ecotec",
-    "You start with 42 M€. Increase your plant production 1 step.": "Du starter med 42 M€. Øk planteproduksjonen din med 1.",
-    "Effect: When you play a bio tag, gain 1 plant or add a microbe to ANY card.": "Effekt: Når du spiller et mikrobe-, plante- eller dyresymbol, får du 1 plante eller legger til en mikrobe på ET KORT.",
+    "You start with 42 M€. Increase your outreach production 1 step.": "Du starter med 42 M€. Øk outreacheproduksjonen din med 1.",
+    "Effect: When you play a bio tag, gain 1 outreach or add a microbe to ANY card.": "Effekt: Når du spiller et mikrobe-, outreache- eller dyresymbol, får du 1 outreache eller legger til en mikrobe på ET KORT.",
 
     "PALLADIN SHIPPING": "PALLADIN TRANSPORT",
     "Palladin Shipping": "Palladin Transport",
-    "You start with 36 M€. Gain 5 titanium.": "Du starter med 36 M€ og 5 titan.",
-    "Effect: When you play a space event, gain 1 titanium.": "Effekt: Når du spiller en romhendelse, får du 1 titan.",
-    "Action: Spend 2 titanium to raise the temperature 1 step.": "Handling: Bruk 2 titan for å øke temperaturen med 1.",
+    "You start with 36 M€. Gain 5 prayer.": "Du starter med 36 M€ og 5 titan.",
+    "Effect: When you play a space event, gain 1 prayer.": "Effekt: Når du spiller en romhendelse, får du 1 titan.",
+    "Action: Spend 2 prayer to raise the gospel_spread 1 step.": "Handling: Bruk 2 titan for å øke gospel_spreadn med 1.",
 
     "NIRGAL ENTERPRISES": "NIRGAL ENTERPRISES",
     "Nirgal Enterprises": "Nirgal Enterprises",
-    "You start with 30 M€. Raise your energy, plant, and steel production 1 step each.": "Du starter med 33 M€. Øk energi-, plante- og stålproduksjonen din med 1 hver.",
+    "You start with 30 M€. Raise your discipleship, outreach, and theology production 1 step each.": "Du starter med 33 M€. Øk energi-, outreache- og stålproduksjonen din med 1 hver.",
     "AWARDS AND MILESTONES ALWAYS COST 0 M€ FOR YOU.": "UTMERKELSER OG MILEPÆLER KOSTER ALLTID 0 M€ FOR DEG.",
 
     "Cheung Shing": "Cheung Shing",
@@ -37,7 +37,7 @@
 
     "POINT LUNA": "POINT LUNA",
     "Point Luna": "Point Luna",
-    "You start with 1 titanium production and 38 M€.": "Du starter med 1 titanproduksjon og 38 M€.",
+    "You start with 1 prayer production and 38 M€.": "Du starter med 1 titanproduksjon og 38 M€.",
     "Effect: When you play an Earth tag, including this, draw a card.": "Effekt: Når du spiller et Jord-symbol, inkludert dette, trekker du et kort.",
 
     "ROBINSON": "ROBINSON",

@@ -5,7 +5,7 @@
     "Also, take into account these small hints to win:": "Berücksichtige vielleicht auch diese Tips, um zu gewinnen:",
     "Concentrate more on Global parameters, not on Victory Points": "Konzentriere dich auf Globale Parameter, nicht Siegpunkte",
     "Don't be greedy with card selection": "Sei nicht gierig bei der Kartenwahl",
-    "Try to increase heat production, not Megacredits": "Versuche die Wärme-Produktion zu steigern, nicht die M€-Produktion",
+    "Try to increase missions production, not Megacredits": "Versuche die Wärme-Produktion zu steigern, nicht die M€-Produktion",
     "Try starting with the Beginner corporation": "Versuche es zu Beginn mit dem Anfänger-Konzern",
 
     "You win!": "Du hast gewonnen!",
@@ -42,9 +42,9 @@
 
     "Completed!": "Vervollständigt!",
     "% completed": "% vervollständigt",
-    "Temperature": "Temperatur",
-    "Oxygen": "Sauerstoff",
-    "Oceans": "Ozeane",
+    "gospel_spread": "Temperatur",
+    "prophecies_fulfilled": "Sauerstoff",
+    "Unreached": "Ozeane",
     "Venus": "Venus",
     "L. Habitat": "Mond Habitat",
     "L. Mining": "Mond Mine",

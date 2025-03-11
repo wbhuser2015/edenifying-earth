@@ -18,9 +18,9 @@ export class CrescentResearchAssociation extends CorporationCard {
         description: 'You start with 50 M€. 1 VP for every 3 Moon tags you have.',
         cardNumber: 'MC5',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(50).br;
+          b.provision(50).br;
           b.effect('When you play a Moon tag, you pay 1 M€ less for each Moon tag you have.', (eb) => {
-            eb.tag(Tag.MOON).startEffect.megacredits(1).slash().tag(Tag.MOON);
+            eb.tag(Tag.MOON).startEffect.provision(1).slash().tag(Tag.MOON);
           });
         }),
       },

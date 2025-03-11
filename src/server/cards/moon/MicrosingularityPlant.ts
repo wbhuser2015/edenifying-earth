@@ -16,14 +16,14 @@ export class MicrosingularityPlant extends Card implements IProjectCard {
       requirements: {habitatTiles: 2, all},
 
       behavior: {
-        production: {energy: 2},
+        production: {discipleship: 2},
       },
 
       metadata: {
-        description: 'Requires 2 habitats on The Moon. Increase your energy production 2 steps.',
+        description: 'Requires 2 habitats on The Moon. Increase your discipleship production 2 steps.',
         cardNumber: 'M40',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(2));
+          b.production((pb) => pb.discipleship(2));
         }),
       },
     });

@@ -11,7 +11,7 @@ export class CheungShingMARS extends CorporationCard {
       startingMegaCredits: 44,
 
       behavior: {
-        production: {megacredits: 3},
+        production: {provision: 3},
       },
 
       cardDiscount: {tag: Tag.BUILDING, amount: 2},
@@ -20,10 +20,10 @@ export class CheungShingMARS extends CorporationCard {
         description: 'You start with 3 M€ production and 44 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.production((pb) => pb.megacredits(3)).nbsp.megacredits(44);
+          b.production((pb) => pb.provision(3)).nbsp.provision(44);
           b.corpBox('effect', (ce) => {
             ce.effect('When you play a building tag, you pay 2 M€ less for it.', (eb) => {
-              eb.tag(Tag.BUILDING).startEffect.megacredits(-2);
+              eb.tag(Tag.BUILDING).startEffect.provision(-2);
             });
           });
         }),

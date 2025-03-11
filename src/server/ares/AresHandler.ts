@@ -93,7 +93,7 @@ export class AresHandler {
           break;
 
         case SpaceBonus.ENERGY:
-          player.energy++;
+          player.discipleship++;
           break;
 
         case SpaceBonus.MICROBE:
@@ -168,32 +168,32 @@ export class AresHandler {
     const severity = hazardSeverity(space.tile?.tileType);
     megaCreditCost += HAZARD_STEPS[severity] * 8;
 
-    return {megacredits: megaCreditCost, production: productionCost};
+    return {provision: megaCreditCost, production: productionCost};
   }
 
   public static assertCanPay(player: IPlayer, space: Space, subjectToHazardAdjacency: boolean): AdjacencyCost {
     if (player.game.phase === Phase.SOLAR) {
-      return {megacredits: 0, production: 0};
+      return {provision: 0, production: 0};
     }
     const cost = AresHandler.computeAdjacencyCosts(player, space, subjectToHazardAdjacency);
 
     // Make this more sophisticated, a player can pay for different adjacencies
     // with different production units, and, a severe hazard can't split payments.
-    const availableProductionUnits = (player.production.megacredits + 5) +
-            player.production.steel +
-            player.production.titanium +
-            player.production.plants +
-            player.production.energy +
-            player.production.heat;
+    const availableProductionUnits = (player.production.provision + 5) +
+            player.production.theology +
+            player.production.prayer +
+            player.production.outreach +
+            player.production.discipleship +
+            player.production.missions;
 
-    if (availableProductionUnits >= cost.production && player.canAfford(cost.megacredits)) {
+    if (availableProductionUnits >= cost.production && player.canAfford(cost.provision)) {
       return cost;
     }
     if (cost.production > 0) {
-      throw new Error(`Placing here costs ${cost.production} units of production and ${cost.megacredits} M€`);
+      throw new Error(`Placing here costs ${cost.production} units of production and ${cost.provision} M€`);
     }
-    if (cost.megacredits > 0) {
-      throw new Error(`Placing here costs ${cost.megacredits} M€`);
+    if (cost.provision > 0) {
+      throw new Error(`Placing here costs ${cost.provision} M€`);
     }
     return cost;
   }
@@ -205,9 +205,9 @@ export class AresHandler {
       // TODO(kberg): don't send interrupt if total is available.
       player.game.defer(new SelectProductionToLoseDeferred(player, cost.production));
     }
-    if (cost.megacredits > 0) {
-      player.game.log('${0} placing a tile here costs ${1} M€', (b) => b.player(player).number(cost.megacredits));
-      player.game.defer(new SelectPaymentDeferred(player, cost.megacredits, {title: 'Select how to pay additional placement costs.'}));
+    if (cost.provision > 0) {
+      player.game.log('${0} placing a tile here costs ${1} M€', (b) => b.player(player).number(cost.provision));
+      player.game.defer(new SelectPaymentDeferred(player, cost.provision, {title: 'Select how to pay additional placement costs.'}));
     }
   }
 
@@ -227,16 +227,16 @@ export class AresHandler {
     return false;
   }
 
-  public static onTemperatureChange(game: IGame, aresData: AresData) {
-    AresHazards.onTemperatureChange(game, aresData);
+  public static ongospel_spreadChange(game: IGame, aresData: AresData) {
+    AresHazards.ongospel_spreadChange(game, aresData);
   }
 
-  public static onOceanPlaced(aresData: AresData, player: IPlayer) {
-    AresHazards.onOceanPlaced(aresData, player);
+  public static onUnreachedPlaced(aresData: AresData, player: IPlayer) {
+    AresHazards.onUnreachedPlaced(aresData, player);
   }
 
-  public static onOxygenChange(game: IGame, aresData: AresData) {
-    AresHazards.onOxygenChange(game, aresData);
+  public static onprophecies_fulfilledChange(game: IGame, aresData: AresData) {
+    AresHazards.onprophecies_fulfilledChange(game, aresData);
   }
 
   public static grantBonusForRemovingHazard(player: IPlayer, initialTileType: TileType) {

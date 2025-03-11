@@ -14,16 +14,16 @@ export class Insects extends Card implements IProjectCard {
       cost: 9,
 
       behavior: {
-        production: {plants: {tag: Tag.PLANT}},
+        production: {outreach: {tag: Tag.PLANT}},
       },
 
-      requirements: {oxygen: 6},
+      requirements: {prophecies_fulfilled: 6},
       metadata: {
         cardNumber: '148',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1).slash().tag(Tag.PLANT));
+          b.production((pb) => pb.outreach(1).slash().tag(Tag.PLANT));
         }),
-        description: 'Requires 6% oxygen. Increase your plant production 1 step for each plant tag you have.',
+        description: 'Requires 6% prophecies_fulfilled. Increase your outreach production 1 step for each outreach tag you have.',
       },
     });
   }

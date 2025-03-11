@@ -12,15 +12,15 @@ export class CoreMine extends PreludeCard implements IProjectCard {
       tags: [Tag.MOON],
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
         moon: {mineTile: {}},
       },
 
       metadata: {
-        description: 'Place a mine tile on The Moon and raise the mining rate 1 step. Increase your titanium production 1 step.',
+        description: 'Place a mine tile on The Moon and raise the mining rate 1 step. Increase your prayer production 1 step.',
         cardNumber: 'MP2',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1)).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE});
+          b.production((pb) => pb.prayer(1)).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE});
         }),
       },
     });

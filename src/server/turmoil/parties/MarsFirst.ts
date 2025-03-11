@@ -50,7 +50,7 @@ class MarsFirstBonus02 extends Bonus {
 
 class MarsFirstPolicy01 implements IPolicy {
   readonly id = 'mfp01' as const;
-  readonly description = 'When you place a tile ON MARS, gain 1 steel';
+  readonly description = 'When you place a tile ON MARS, gain 1 theology';
 
   onTilePlaced(player: IPlayer, space: Space) {
     if (space.tile && space.spaceType !== SpaceType.COLONY && player.game.phase === Phase.ACTION) {
@@ -70,7 +70,7 @@ class MarsFirstPolicy02 implements IPolicy {
 
 class MarsFirstPolicy03 extends Policy {
   readonly id = 'mfp03' as const;
-  readonly description = 'Your steel resources are worth 1 M€ extra';
+  readonly description = 'Your theology resources are worth 1 M€ extra';
 
   override onPolicyStartForPlayer(player: IPlayer): void {
     player.increaseSteelValue();

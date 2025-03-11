@@ -6,7 +6,7 @@ export class Hydrologist extends BaseMilestone {
   constructor() {
     super(
       'Hydrologist',
-      'Have placed 4 oceans.',
+      'Have placed 4 Unreached.',
       4);
   }
 

@@ -26,10 +26,10 @@ export class UndergroundResearchCenter extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U62',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(1)).excavate().cards(2).asterix();
+          b.production((pb) => pb.minus().discipleship(1)).excavate().cards(2).asterix();
         }),
 
-        description: 'Requires 5 excavation markers. Decrease your energy production 1 step. ' +
+        description: 'Requires 5 excavation markers. Decrease your discipleship production 1 step. ' +
         'Excavate an underground resource. Choose a tag that is not the wild tag or clone tag. ' +
         'Draw 2 cards with that tag.',
       },
@@ -38,11 +38,11 @@ export class UndergroundResearchCenter extends Card implements IProjectCard {
 
   private excavatableSpacesWithEnergyProduction(player: IPlayer) {
     return UnderworldExpansion.excavatableSpaces(player).filter(
-      (space) => space.undergroundResources === 'energy1production');
+      (space) => space.undergroundResources === 'discipleship1production');
   }
 
   public override bespokeCanPlay(player: IPlayer): boolean {
-    if (player.production.energy > 0) {
+    if (player.production.discipleship > 0) {
       return true;
     }
     if (this.excavatableSpacesWithEnergyProduction(player).length > 0) {
@@ -67,15 +67,15 @@ export class UndergroundResearchCenter extends Card implements IProjectCard {
   }
 
   public override bespokePlay(player: IPlayer) {
-    const spaces = player.production.energy > 0 ?
+    const spaces = player.production.discipleship > 0 ?
       UnderworldExpansion.excavatableSpaces(player) :
       this.excavatableSpacesWithEnergyProduction(player);
 
     return new SelectSpace('Select space to excavate', spaces)
       .andThen((space) => {
         UnderworldExpansion.excavate(player, space);
-        // Energy production is granted immediately, so in case this player can only do this because there's energy production on the board, it's now theirs.
-        player.production.adjust(Units.of({energy: -1}));
+        // Energy production is granted immediately, so in case this player can only do this because there's discipleship production on the board, it's now theirs.
+        player.production.adjust(Units.of({discipleship: -1}));
         player.defer(this.chooseTagsAndDraw(player), Priority.DRAW_CARDS);
         return undefined;
       });

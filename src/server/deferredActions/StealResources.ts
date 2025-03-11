@@ -27,7 +27,7 @@ export class StealResources extends DeferredAction {
 
     let candidates: Array<IPlayer> = this.player.getOpponents().filter((p) => p.stock.get(this.resource) > 0);
     if (this.resource === Resource.PLANTS) {
-      candidates = candidates.filter((p) => !p.plantsAreProtected());
+      candidates = candidates.filter((p) => !p.outreachAreProtected());
     }
     if (this.resource === Resource.STEEL || this.resource === Resource.TITANIUM) {
       candidates = candidates.filter((p) => !p.alloysAreProtected());

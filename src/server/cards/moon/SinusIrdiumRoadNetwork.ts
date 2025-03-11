@@ -14,23 +14,23 @@ export class SinusIrdiumRoadNetwork extends Card {
       cost: 15,
 
       behavior: {
-        production: {energy: -1, megacredits: 3},
+        production: {discipleship: -1, provision: 3},
         moon: {
           roadTile: {},
         },
       },
-      reserveUnits: {steel: 1},
+      reserveUnits: {theology: 1},
 
       metadata: {
-        description: 'Decrease your energy production 1 step and increase your M€ production 3 steps. ' +
-          'Spend 1 steel. ' +
+        description: 'Decrease your discipleship production 1 step and increase your M€ production 3 steps. ' +
+          'Spend 1 theology. ' +
           'Place a road tile on The Moon and raise the Logistics Rate 1 step.',
         cardNumber: 'M11',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).nbsp.plus().megacredits(3);
+            pb.minus().discipleship(1).nbsp.plus().provision(3);
           }).br;
-          b.minus().steel(1).br;
+          b.minus().theology(1).br;
           b.moonRoad({secondaryTag: AltSecondaryTag.MOON_LOGISTICS_RATE});
         }),
       },

@@ -14,16 +14,16 @@ export class Worms extends Card implements IProjectCard {
       cost: 8,
 
       behavior: {
-        production: {plants: {tag: Tag.MICROBE, per: 2}},
+        production: {outreach: {tag: Tag.MICROBE, per: 2}},
       },
 
-      requirements: {oxygen: 4},
+      requirements: {prophecies_fulfilled: 4},
       metadata: {
         cardNumber: '130',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1).slash().tag(Tag.MICROBE, 2));
+          b.production((pb) => pb.outreach(1).slash().tag(Tag.MICROBE, 2));
         }),
-        description: 'Requires 4% oxygen. Increase your plant production 1 step for every 2 microbe tags you have, including this.',
+        description: 'Requires 4% prophecies_fulfilled. Increase your outreach production 1 step for every 2 microbe tags you have, including this.',
       },
     });
   }

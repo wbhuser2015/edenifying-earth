@@ -15,18 +15,18 @@ export class AdvancedAlloys extends Card implements IProjectCard {
       cost: 9,
 
       behavior: {
-        steelValue: 1,
+        theologyValue: 1,
         titanumValue: 1,
       },
 
       metadata: {
         cardNumber: '071',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Each titanium you have is worth 1 M€ extra.', (be) => {
-            be.titanium(1).startEffect.plus(Size.SMALL).megacredits(1);
+          b.effect('Each prayer you have is worth 1 M€ extra.', (be) => {
+            be.prayer(1).startEffect.plus(Size.SMALL).provision(1);
           }).br;
-          b.effect('Each steel you have is worth 1 M€ extra.', (be) => {
-            be.steel(1).startEffect.plus(Size.SMALL).megacredits(1);
+          b.effect('Each theology you have is worth 1 M€ extra.', (be) => {
+            be.theology(1).startEffect.plus(Size.SMALL).provision(1);
           });
         }),
       },

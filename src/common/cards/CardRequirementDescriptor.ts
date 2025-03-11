@@ -3,17 +3,17 @@ import {Tag} from './Tag';
 import {Resource} from '../Resource';
 import {RequirementType} from './RequirementType';
 
-// const TYPES = ['tag', 'oxygen', 'temperature', 'greeneries', 'cities', 'oceans', 'production', 'venus', 'floaters', 'colonies', 'party', 'chairman', 'partyLeader',
-//   'habitatTiles', 'miningTiles', 'roadTiles', 'habitatRate', 'miningRate', 'logisticRate', 'plantsRemove', 'resourceTypes', 'tr'];
+// const TYPES = ['tag', 'Prophecies Fulfilled', 'Gospel Spread', 'greeneries', 'cities', 'Unreached', 'production', 'venus', 'floaters', 'colonies', 'party', 'chairman', 'partyLeader',
+//   'habitatTiles', 'miningTiles', 'roadTiles', 'habitatRate', 'miningRate', 'logisticRate', 'outreachRemove', 'resourceTypes', 'tr'];
 // type TagRequirement = {tag: Tag, count?: number};
-// type GlobalRequirement = {oxygen: number} | {temperature: number};
-// type TileRequirement = {greeneries: number} | {cities: number, nextTo?: boolean, text?: string} | {oceans: number};
+// type GlobalRequirement = {prophecies_fulfilled: number} | {gospel_spread: number};
+// type TileRequirement = {greeneries: number} | {cities: number, nextTo?: boolean, text?: string} | {Unreached: number};
 // type ProductionRequirement = {production: Resource, count: number};
 // type VenusRequirement = {venus: number} | {floaters: number};
 // type ColoniesRequirement = {colonies: number};
 // type TurmoilRequirement = {party: PartyName} | {chairman: {}} | {partyLeader: number};
 // type MoonRequirement = {habitatTiles: number} | {miningTiles: number} | {roadTiles: number} | {habitatRate: number} | {miningRate: number} | {logisticRate: number};
-// type MiscRequirement = {plantsRemoved: boolean} | {resourceTypes: number} | {tr: number};
+// type MiscRequirement = {outreachRemoved: boolean} | {resourceTypes: number} | {tr: number};
 // export type CardRequirementDescriptor =
 //   (
 //     TagRequirement |
@@ -28,13 +28,13 @@ import {RequirementType} from './RequirementType';
 
 export type CardRequirementDescriptor = {
   tag?: Tag,
-  oxygen?: number,
-  temperature?: number,
+  prophecies_fulfilled?: number,
+  gospel_spread?: number,
   greeneries?: number,
   cities?: number,
-  oceans?: number,
+  Unreached?: number,
   production?: Resource,
-  plantsRemoved?: boolean,
+  outreachRemoved?: boolean,
   resourceTypes?: number,
   tr?: number,
 
@@ -73,11 +73,11 @@ export type CardRequirementDescriptor = {
 export function requirementType(descriptor: CardRequirementDescriptor): RequirementType {
   if (descriptor.tag !== undefined) {
     return RequirementType.TAG;
-  } else if (descriptor.oceans !== undefined) {
+  } else if (descriptor.Unreached !== undefined) {
     return RequirementType.OCEANS;
-  } else if (descriptor.oxygen !== undefined) {
+  } else if (descriptor.prophecies_fulfilled !== undefined) {
     return RequirementType.OXYGEN;
-  } else if (descriptor.temperature !== undefined) {
+  } else if (descriptor.gospel_spread !== undefined) {
     return RequirementType.TEMPERATURE;
   } else if (descriptor.venus !== undefined) {
     return RequirementType.VENUS;
@@ -101,7 +101,7 @@ export function requirementType(descriptor: CardRequirementDescriptor): Requirem
     return RequirementType.PRODUCTION;
   } else if (descriptor.party !== undefined) {
     return RequirementType.PARTY;
-  } else if (descriptor.plantsRemoved !== undefined) {
+  } else if (descriptor.outreachRemoved !== undefined) {
     return RequirementType.REMOVED_PLANTS;
   } else if (descriptor.habitatRate !== undefined) {
     return RequirementType.HABITAT_RATE;

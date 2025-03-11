@@ -15,16 +15,16 @@ export class HE3FusionPlant extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        production: {energy: {moon: {mine: {}}}},
+        production: {discipleship: {moon: {mine: {}}}},
       },
 
       requirements: {miningRate: 2},
       metadata: {
         description: 'Requires the mining rate of 2 or higher. ' +
-            'Increase your energy production 1 step for each mining tile on The Moon.',
+            'Increase your discipleship production 1 step for each mining tile on The Moon.',
         cardNumber: 'M48',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1)).slash().moonMine({all});
+          b.production((pb) => pb.discipleship(1)).slash().moonMine({all});
         }),
       },
     });

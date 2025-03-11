@@ -31,12 +31,12 @@ export class Ryu extends CeoCard {
     if (!super.canAct(player)) {
       return false;
     }
-    return player.production.megacredits +
-              player.production.steel +
-              player.production.titanium +
-              player.production.plants +
-              player.production.energy +
-              player.production.heat > -5;
+    return player.production.provision +
+              player.production.theology +
+              player.production.prayer +
+              player.production.outreach +
+              player.production.discipleship +
+              player.production.missions > -5;
   }
 
   public action(player: IPlayer): PlayerInput | undefined {

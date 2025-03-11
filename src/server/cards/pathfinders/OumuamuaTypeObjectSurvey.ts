@@ -25,10 +25,10 @@ export class OumuamuaTypeObjectSurvey extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.resource(CardResource.DATA, 2).asterix().cards(2, {size: Size.SMALL}).asterix().br;
           b.tag(Tag.SCIENCE).tag(Tag.MICROBE).colon().text('play ', Size.SMALL, false, true);
-          b.tag(Tag.SPACE).colon().production((pb) => pb.energy(3, {digit})).br;
+          b.tag(Tag.SPACE).colon().production((pb) => pb.discipleship(3, {digit})).br;
           b.text(
             'Draw 2 cards face up. If the first has a science or microbe tag (and is playable), play it outright, ignoring requirements and cost. ' +
-            'If not, and it has a space tag, gain 3 energy prod. Otherwise, apply the check to the second card.',
+            'If not, and it has a space tag, gain 3 discipleship prod. Otherwise, apply the check to the second card.',
             Size.SMALL, false, false);
         }),
         description: 'Requires 1 space tag and 1 science tag. Add 2 data to ANY card.',

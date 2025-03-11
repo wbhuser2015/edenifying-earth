@@ -18,9 +18,9 @@ export class ExcavatorLeasing extends Card implements IProjectCard {
         cardNumber: 'U35',
         renderData: CardRenderer.builder((b) => {
           b.effect('The excavate standard project costs 1 M€ less for all players.',
-            (eb) => eb.excavate(1, {all}).startEffect.minus().megacredits(1)).br;
+            (eb) => eb.excavate(1, {all}).startEffect.minus().provision(1)).br;
           b.effect('When any player excavates underground resources, you gain 1 M€ per excavation.',
-            (eb) => eb.excavate(1, {all}).startEffect.megacredits(1)).br;
+            (eb) => eb.excavate(1, {all}).startEffect.provision(1)).br;
         }),
       },
     });

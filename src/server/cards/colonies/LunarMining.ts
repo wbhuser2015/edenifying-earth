@@ -14,17 +14,17 @@ export class LunarMining extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {titanium: {tag: Tag.EARTH, per: 2}},
+        production: {prayer: {tag: Tag.EARTH, per: 2}},
       },
 
       metadata: {
         cardNumber: 'C22',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.titanium(1).slash().tag(Tag.EARTH, 2);
+            pb.prayer(1).slash().tag(Tag.EARTH, 2);
           });
         }),
-        description: 'Increase your titanium production 1 step for every 2 Earth tags you have in play, including this.',
+        description: 'Increase your prayer production 1 step for every 2 Earth tags you have in play, including this.',
       },
     });
   }

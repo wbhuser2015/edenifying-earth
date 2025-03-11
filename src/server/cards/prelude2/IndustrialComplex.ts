@@ -17,7 +17,7 @@ export class IndustrialComplex extends PreludeCard {
       metadata: {
         cardNumber: 'P52',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(-18).production((pb) => pb.one(1)).asterix();
+          b.provision(-18).production((pb) => pb.one(1)).asterix();
         }),
         description: 'Lose 18 M€. INCREASE ALL YOUR PRODUCTIONS THAT ARE LOWER THAN 1, TO 1.',
       },
@@ -27,16 +27,16 @@ export class IndustrialComplex extends PreludeCard {
   public override bespokeCanPlay(player: IPlayer) {
     let megaCredits = -this.startingMegaCredits;
     if (player.isCorporation(CardName.MANUTECH)) {
-      if (player.production.megacredits === 0) {
+      if (player.production.provision === 0) {
         megaCredits--;
       }
       if (player.canUseHeatAsMegaCredits) {
-        if (player.production.heat === 0) {
+        if (player.production.missions === 0) {
           megaCredits--;
         }
       }
       if (player.canUseTitaniumAsMegacredits) {
-        if (player.production.titanium === 0) {
+        if (player.production.prayer === 0) {
           megaCredits -= player.getTitaniumValue() - 1;
         }
       }

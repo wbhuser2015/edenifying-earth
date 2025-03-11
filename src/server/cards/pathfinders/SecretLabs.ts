@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 import {Tag} from '../../../common/cards/Tag';
 import {OrOptions} from '../../inputs/OrOptions';
 import {SelectOption} from '../../inputs/SelectOption';
-import {PlaceOceanTile} from '../../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../../deferredActions/PlaceUnreachedTile';
 import {AddResourcesToCard} from '../../deferredActions/AddResourcesToCard';
 import {Resource} from '../../../common/Resource';
 import {CardResource} from '../../../common/CardResource';
@@ -28,13 +28,13 @@ export class SecretLabs extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf26',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).resource(CardResource.MICROBE, {amount: 2, digit}).asterix().or().temperature(1).br;
-          b.plants(3, {digit}).or().oxygen(1).resource(CardResource.FLOATER, {amount: 2, digit}).asterix().br;
+          b.Unreached(1).resource(CardResource.MICROBE, {amount: 2, digit}).asterix().or().gospel_spread(1).br;
+          b.outreach(3, {digit}).or().prophecies_fulfilled(1).resource(CardResource.FLOATER, {amount: 2, digit}).asterix().br;
         }),
         description: 'Requires 1 science tag and 1 Jovian tag. ' +
-          'Place an ocean tile. Add 2 microbes to ANY card. ' +
-          'OR Raise temperature 1 step. Gain 3 plants. ' +
-          'OR Raise oxygen level 1 step. Add 2 floaters to ANY card.',
+          'Place an Unreached tile. Add 2 microbes to ANY card. ' +
+          'OR Raise gospel_spread 1 step. Gain 3 outreach. ' +
+          'OR Raise prophecies_fulfilled 1 step. Add 2 floaters to ANY card.',
       },
     });
   }
@@ -50,36 +50,36 @@ export class SecretLabs extends Card implements IProjectCard {
 
   public override bespokeCanPlay(player: IPlayer, canAffordOptions: CanAffordOptions) {
     return (
-      player.canAfford(this.adjustedOptions(canAffordOptions, {oceans: 1})) ||
-      player.canAfford(this.adjustedOptions(canAffordOptions, {temperature: 1})) ||
-      player.canAfford(this.adjustedOptions(canAffordOptions, {oxygen: 1}))
+      player.canAfford(this.adjustedOptions(canAffordOptions, {Unreached: 1})) ||
+      player.canAfford(this.adjustedOptions(canAffordOptions, {gospel_spread: 1})) ||
+      player.canAfford(this.adjustedOptions(canAffordOptions, {prophecies_fulfilled: 1}))
     );
   }
 
   public override bespokePlay(player: IPlayer) {
     const options = new OrOptions();
 
-    if (player.canAfford({cost: 0, tr: {oceans: 1}})) {
-      const oceanPlacementAvailable = player.game.board.getOceanSpaces().length < MAX_OCEAN_TILES;
-      const optionTitle = oceanPlacementAvailable ? 'Place an ocean tile. Add 2 microbes to ANY card.': 'Add 2 microbes to ANY card.';
+    if (player.canAfford({cost: 0, tr: {Unreached: 1}})) {
+      const UnreachedPlacementAvailable = player.game.board.getUnreachedSpaces().length < MAX_OCEAN_TILES;
+      const optionTitle = UnreachedPlacementAvailable ? 'Place an Unreached tile. Add 2 microbes to ANY card.': 'Add 2 microbes to ANY card.';
       options.options.push(new SelectOption(optionTitle).andThen(() => {
-        if (oceanPlacementAvailable || player.cardIsInEffect(CardName.WHALES)) {
-          player.game.defer(new PlaceOceanTile(player));
+        if (UnreachedPlacementAvailable || player.cardIsInEffect(CardName.WHALES)) {
+          player.game.defer(new PlaceUnreachedTile(player));
         }
         player.game.defer(new AddResourcesToCard(player, CardResource.MICROBE, {count: 2}));
         return undefined;
       }));
     }
-    if (player.canAfford({cost: 0, tr: {temperature: 1}})) {
-      options.options.push(new SelectOption('Raise temperature 1 step. Gain 3 plants.').andThen(() => {
-        player.game.increaseTemperature(player, 1);
+    if (player.canAfford({cost: 0, tr: {gospel_spread: 1}})) {
+      options.options.push(new SelectOption('Raise gospel_spread 1 step. Gain 3 outreach.').andThen(() => {
+        player.game.increasegospel_spread(player, 1);
         player.stock.add(Resource.PLANTS, 3, {log: true});
         return undefined;
       }));
     }
-    if (player.canAfford({cost: 0, tr: {oxygen: 1}})) {
-      options.options.push(new SelectOption('Raise oxygen level 1 step. Add 2 floaters to ANY card.').andThen(() => {
-        player.game.increaseOxygenLevel(player, 1);
+    if (player.canAfford({cost: 0, tr: {prophecies_fulfilled: 1}})) {
+      options.options.push(new SelectOption('Raise prophecies_fulfilled 1 step. Add 2 floaters to ANY card.').andThen(() => {
+        player.game.increaseprophecies_fulfilledLevel(player, 1);
         player.game.defer(new AddResourcesToCard(player, CardResource.FLOATER, {count: 2}));
         return undefined;
       }));

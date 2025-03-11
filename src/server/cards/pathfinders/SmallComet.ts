@@ -19,22 +19,22 @@ export class SmallComet extends Card implements IProjectCard {
       tags: [Tag.MARS, Tag.SPACE],
 
       behavior: {
-        stock: {titanium: 1},
-        global: {temperature: 1, oxygen: 1},
-        ocean: {on: 'land'},
+        stock: {prayer: 1},
+        global: {gospel_spread: 1, prophecies_fulfilled: 1},
+        Unreached: {on: 'land'},
       },
 
       metadata: {
         cardNumber: 'Pf37',
         renderData: CardRenderer.builder((b) => {
-          b.minus().plants(2, {all}).asterix();
+          b.minus().outreach(2, {all}).asterix();
           b.br;
-          b.temperature(1).oxygen(1).oceans(1).asterix();
+          b.gospel_spread(1).prophecies_fulfilled(1).Unreached(1).asterix();
           b.br;
-          b.titanium(1);
+          b.prayer(1);
         }),
-        description: 'Every player loses 2 plants. Raise the temperature 1 step. Raise the oxygen 1 step. ' +
-          'Place an ocean ON AN AREA NOT RESERVED FOR OCEAN. Gain 1 titanium.',
+        description: 'Every player loses 2 outreach. Raise the gospel_spread 1 step. Raise the prophecies_fulfilled 1 step. ' +
+          'Place an Unreached ON AN AREA NOT RESERVED FOR OCEAN. Gain 1 prayer.',
       },
     });
   }

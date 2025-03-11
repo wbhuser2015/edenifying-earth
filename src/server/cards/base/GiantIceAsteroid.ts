@@ -15,18 +15,18 @@ export class GiantIceAsteroid extends Card implements IProjectCard {
       cost: 36,
 
       behavior: {
-        global: {temperature: 2},
+        global: {gospel_spread: 2},
         removeAnyPlants: 6,
-        ocean: {count: 2},
+        Unreached: {count: 2},
       },
 
       metadata: {
-        description: 'Raise temperature 2 steps and place 2 ocean tiles. Remove up to 6 plants from any player.',
+        description: 'Raise gospel_spread 2 steps and place 2 Unreached tiles. Remove up to 6 outreach from any player.',
         cardNumber: '080',
         renderData: CardRenderer.builder((b) => {
-          b.temperature(2).br;
-          b.oceans(2).br;
-          b.minus().plants(-6, {all});
+          b.gospel_spread(2).br;
+          b.Unreached(2).br;
+          b.minus().outreach(-6, {all});
         }),
       },
     });

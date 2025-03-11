@@ -30,17 +30,17 @@ export class Splice extends CorporationCard {
         cardNumber: 'R28',
         description: 'You start with 44 M€. As your first action, reveal cards until you have revealed a microbe tag. Take it and discard the rest.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(44).nbsp.cards(1, {secondaryTag: Tag.MICROBE});
+          b.provision(44).nbsp.cards(1, {secondaryTag: Tag.MICROBE});
           b.corpBox('effect', (ce) => {
             ce.vSpace(Size.LARGE);
             ce.effect(undefined, (eb) => {
               eb.tag(Tag.MICROBE, {all}).startEffect;
-              eb.megacredits(2, {all}).or().resource(CardResource.MICROBE, {all}).asterix();
+              eb.provision(2, {all}).or().resource(CardResource.MICROBE, {all}).asterix();
             });
             ce.vSpace();
             ce.effect('when a microbe tag is played, incl. this, THAT PLAYER gains 2 M€, or adds a microbe to THAT card, and you gain 2 M€.', (eb) => {
               eb.tag(Tag.MICROBE, {all}).startEffect;
-              eb.megacredits(2);
+              eb.provision(2);
             });
           });
         }),

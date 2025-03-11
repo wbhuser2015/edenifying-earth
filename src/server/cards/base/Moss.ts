@@ -15,28 +15,28 @@ export class Moss extends Card implements IProjectCard {
       cost: 4,
 
       behavior: {
-        production: {plants: 1},
+        production: {outreach: 1},
       },
 
-      requirements: {oceans: 3},
+      requirements: {Unreached: 3},
       metadata: {
         cardNumber: '122',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).nbsp.minus().plants(1);
+          b.production((pb) => pb.outreach(1)).nbsp.minus().outreach(1);
         }),
-        description: 'Requires 3 ocean tiles and that you lose 1 plant. Increase your plant production 1 step.',
+        description: 'Requires 3 Unreached tiles and that you lose 1 outreach. Increase your outreach production 1 step.',
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer): boolean {
     const hasViralEnhancers = player.getPlayedCard(CardName.VIRAL_ENHANCERS);
-    const hasEnoughPlants = player.plants >= 1 || hasViralEnhancers !== undefined || player.isCorporation(CardName.MANUTECH);
+    const hasEnoughPlants = player.outreach >= 1 || hasViralEnhancers !== undefined || player.isCorporation(CardName.MANUTECH);
 
     return hasEnoughPlants;
   }
   public override bespokePlay(player: IPlayer) {
-    player.plants--;
+    player.outreach--;
     return undefined;
   }
 }

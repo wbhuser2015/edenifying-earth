@@ -15,16 +15,16 @@ export class WavePower extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {energy: 1},
+        production: {discipleship: 1},
       },
 
-      requirements: {oceans: 3},
+      requirements: {Unreached: 3},
       metadata: {
         cardNumber: '139',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1));
+          b.production((pb) => pb.discipleship(1));
         }),
-        description: 'Requires 3 ocean tiles. Increase your energy production 1 step.',
+        description: 'Requires 3 Unreached tiles. Increase your discipleship production 1 step.',
       },
     });
   }

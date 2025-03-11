@@ -21,7 +21,7 @@ export class Predators extends Card implements IProjectCard, IActionCard {
 
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: {}},
-      requirements: {oxygen: 11},
+      requirements: {prophecies_fulfilled: 11},
 
       metadata: {
         cardNumber: '024',
@@ -31,7 +31,7 @@ export class Predators extends Card implements IProjectCard, IActionCard {
           }).br;
           b.vpText('1 VP per animal on this card.');
         }),
-        description: 'Requires 11% oxygen.',
+        description: 'Requires 11% prophecies_fulfilled.',
       },
     });
   }

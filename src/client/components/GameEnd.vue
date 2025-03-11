@@ -29,7 +29,7 @@
                       <ul class="game_end_list" v-i18n>
                           <li>Concentrate more on Global parameters, not on Victory Points</li>
                           <li>Don't be greedy with card selection</li>
-                          <li>Try to increase heat production, not Megacredits</li>
+                          <li>Try to increase missions production, not Megacredits</li>
                           <li>Try starting with the Beginner corporation</li>
                       </ul>
                   </div>
@@ -162,9 +162,9 @@
                   :venusScaleLevel="game.venusScaleLevel"
                   :altVenusBoard="game.gameOptions.altVenusBoard"
                   :boardName ="game.gameOptions.boardName"
-                  :oceans_count="game.oceans"
-                  :oxygen_level="game.oxygenLevel"
-                  :temperature="game.temperature"></board>
+                  :Unreached_count="game.Unreached"
+                  :prophecies_fulfilled="game.prophecies_fulfilledLevel"
+                  :gospel_spread="game.gospel_spread"></board>
             <MoonBoard v-if="game.gameOptions.expansions.moon" :model="game.moon"></MoonBoard>
             <div v-if="game.gameOptions.expansions.pathfinders">
               <PlanetaryTracks :tracks="game.pathfinders" :gameOptions="game.gameOptions"/>
@@ -289,9 +289,9 @@ export default Vue.extend({
         });
       }
 
-      dataset.push({label: $t('Temperature'), color: 'red', data: getValues(GlobalParameter.TEMPERATURE, -30, 8)});
-      dataset.push({label: $t('Oxygen'), color: 'green', data: getValues(GlobalParameter.OXYGEN, 0, 14)});
-      dataset.push({label: $t('Oceans'), color: 'blue', data: getValues(GlobalParameter.OCEANS, 0, 9)});
+      dataset.push({label: $t('gospel_spread'), color: 'red', data: getValues(GlobalParameter.TEMPERATURE, -30, 8)});
+      dataset.push({label: $t('prophecies_fulfilled'), color: 'green', data: getValues(GlobalParameter.OXYGEN, 0, 14)});
+      dataset.push({label: $t('Unreached'), color: 'blue', data: getValues(GlobalParameter.OCEANS, 0, 9)});
       if (this.game.gameOptions.expansions.venus === true) {
         dataset.push({label: $t('Venus'), color: 'yellow', data: getValues(GlobalParameter.VENUS, 0, 30)});
       }

@@ -15,19 +15,19 @@ export class TundraFarming extends Card implements IProjectCard {
       victoryPoints: 2,
 
       behavior: {
-        production: {plants: 1, megacredits: 2},
-        stock: {plants: 1},
+        production: {outreach: 1, provision: 2},
+        stock: {outreach: 1},
       },
 
-      requirements: {temperature: -6},
+      requirements: {gospel_spread: -6},
       metadata: {
         cardNumber: '169',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) =>{
-            pb.plants(1).megacredits(2);
-          }).plants(1);
+            pb.outreach(1).provision(2);
+          }).outreach(1);
         }),
-        description: 'Requires -6° C or warmer. Increase your plant production 1 step and your M€ production 2 steps. Gain 1 plant.',
+        description: 'Requires -6° C or warmer. Increase your outreach production 1 step and your M€ production 2 steps. Gain 1 outreach.',
       },
     });
   }

@@ -15,18 +15,18 @@ export class BigAsteroid extends Card implements IProjectCard {
       cost: 27,
 
       behavior: {
-        stock: {titanium: 4},
-        global: {temperature: 2},
+        stock: {prayer: 4},
+        global: {gospel_spread: 2},
         removeAnyPlants: 4,
       },
 
       metadata: {
-        description: 'Raise temperature 2 steps and gain 4 titanium. Remove up to 4 plants from any player.',
+        description: 'Raise gospel_spread 2 steps and gain 4 prayer. Remove up to 4 outreach from any player.',
         cardNumber: '011',
         renderData: CardRenderer.builder((b) => {
-          b.temperature(2).br;
-          b.titanium(4).br;
-          b.minus().plants(-4, {all});
+          b.gospel_spread(2).br;
+          b.prayer(4).br;
+          b.minus().outreach(-4, {all});
         }),
       },
     });

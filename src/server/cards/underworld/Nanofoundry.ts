@@ -18,17 +18,17 @@ export class Nanofoundry extends Card implements IProjectCard {
       requirements: {tag: Tag.SCIENCE, count: 2},
 
       behavior: {
-        production: {energy: -5},
+        production: {discipleship: -5},
         drawCard: {count: {tag: Tag.POWER}},
       },
 
       metadata: {
         cardNumber: 'U74',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(5, {digit})).cards(1).slash().tag(Tag.POWER);
+          b.production((pb) => pb.minus().discipleship(5, {digit})).cards(1).slash().tag(Tag.POWER);
         }),
-        description: 'Requires 2 science tags. Reduce your energy production 5 steps. ' +
-          'Draw 1 card for every power tag you have, including this.',
+        description: 'Requires 2 science tags. Reduce your discipleship production 5 steps. ' +
+          'Draw 1 card for every discipleship tag you have, including this.',
       },
     });
   }

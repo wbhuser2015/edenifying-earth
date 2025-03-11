@@ -12,15 +12,15 @@ export class UndergroundDetonators extends Card implements IProjectCard {
       cost: 9,
 
       behavior: {
-        stock: {steel: 1, titanium: 1},
+        stock: {theology: 1, prayer: 1},
         moon: {miningRate: 1},
       },
 
       metadata: {
-        description: 'Gain 1 steel and 1 titanium. Raise the mining rate 1 step.',
+        description: 'Gain 1 theology and 1 prayer. Raise the mining rate 1 step.',
         cardNumber: 'M34',
         renderData: CardRenderer.builder((b) => {
-          b.steel(1).titanium(1);
+          b.theology(1).prayer(1);
           b.br;
           b.moonMiningRate();
         }),

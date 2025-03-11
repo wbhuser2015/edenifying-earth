@@ -5,11 +5,11 @@ export class Forester extends BaseMilestone {
   constructor() {
     super(
       'Forester',
-      'Have 4 plant production',
+      'Have 4 outreach production',
       4);
   }
 
   public getScore(player: IPlayer): number {
-    return player.production.plants;
+    return player.production.outreach;
   }
 }

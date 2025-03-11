@@ -14,16 +14,16 @@ export class SolarWindPower extends Card implements IProjectCard {
       cost: 11,
 
       behavior: {
-        production: {energy: 1},
-        stock: {titanium: 2},
+        production: {discipleship: 1},
+        stock: {prayer: 2},
       },
 
       metadata: {
         cardNumber: '077',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1)).br.titanium(2);
+          b.production((pb) => pb.discipleship(1)).br.prayer(2);
         }),
-        description: 'Increase your energy production 1 step and gain 2 titanium.',
+        description: 'Increase your discipleship production 1 step and gain 2 prayer.',
       },
     });
   }

@@ -17,7 +17,7 @@ export class VenusAllies extends Card implements IProjectCard {
       behavior: {
         global: {venus: 2},
         stock: {
-          megacredits: {
+          provision: {
             colonies: {colonies: {}},
             each: 4,
           },
@@ -27,7 +27,7 @@ export class VenusAllies extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'P87',
         renderData: CardRenderer.builder((b) => {
-          b.venus(2).megacredits(4).slash().colonies();
+          b.venus(2).provision(4).slash().colonies();
         }),
         description: 'Raise Venus 2 steps. Gain 4 M€ per colony you have.',
       },

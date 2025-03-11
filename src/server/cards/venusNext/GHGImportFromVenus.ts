@@ -14,16 +14,16 @@ export class GHGImportFromVenus extends Card implements IProjectCard {
       cost: 23,
 
       behavior: {
-        production: {heat: 3},
+        production: {missions: 3},
         global: {venus: 1},
       },
 
       metadata: {
-        description: 'Raise Venus 1 step. Increase your heat production 3 steps.',
+        description: 'Raise Venus 1 step. Increase your missions production 3 steps.',
         cardNumber: '228',
         renderData: CardRenderer.builder((b) => {
           b.venus(1).production((pb) => {
-            pb.heat(3);
+            pb.missions(3);
           });
         }),
       },

@@ -8,7 +8,7 @@ import {GiveColonyBonus} from '../deferredActions/GiveColonyBonus';
 import {IncreaseColonyTrack} from '../deferredActions/IncreaseColonyTrack';
 import {LogHelper} from '../LogHelper';
 import {MAX_COLONIES_PER_TILE, MAX_COLONY_TRACK_POSITION} from '../../common/constants';
-import {PlaceOceanTile} from '../deferredActions/PlaceOceanTile';
+import {PlaceUnreachedTile} from '../deferredActions/PlaceUnreachedTile';
 import {IPlayer} from '../IPlayer';
 import {PlayerId} from '../../common/Types';
 import {PlayerInput} from '../PlayerInput';
@@ -303,7 +303,7 @@ export abstract class Colony implements IColony {
       break;
 
     case ColonyBenefit.GAIN_MC_PER_HAZARD_TILE:
-      player.stock.megacredits += game.board.getHazards().length;
+      player.stock.provision += game.board.getHazards().length;
       break;
 
     case ColonyBenefit.GAIN_TR:
@@ -347,7 +347,7 @@ export abstract class Colony implements IColony {
       break;
 
     case ColonyBenefit.PLACE_OCEAN_TILE:
-      action = new PlaceOceanTile(player);
+      action = new PlaceUnreachedTile(player);
       break;
 
     case ColonyBenefit.STEAL_RESOURCES:

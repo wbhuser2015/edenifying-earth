@@ -14,7 +14,7 @@ export class OrbitalReflectors extends Card implements IProjectCard {
       cost: 26,
 
       behavior: {
-        production: {heat: 2},
+        production: {missions: 2},
         global: {venus: 2},
       },
 
@@ -23,10 +23,10 @@ export class OrbitalReflectors extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.venus(2).br;
           b.production((pb) => {
-            pb.heat(2);
+            pb.missions(2);
           });
         }),
-        description: 'Raise Venus 2 steps. Increase your heat production 2 steps.',
+        description: 'Raise Venus 2 steps. Increase your missions production 2 steps.',
       },
     });
   }

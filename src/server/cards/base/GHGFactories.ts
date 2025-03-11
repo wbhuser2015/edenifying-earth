@@ -15,18 +15,18 @@ export class GHGFactories extends Card implements IProjectCard {
       cost: 11,
 
       behavior: {
-        production: {energy: -1, heat: 4},
+        production: {discipleship: -1, missions: 4},
       },
 
       metadata: {
         cardNumber: '126',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().heat(4, {digit});
+            pb.minus().discipleship(1).br;
+            pb.plus().missions(4, {digit});
           });
         }),
-        description: 'Decrease your energy production 1 step and increase your heat production 4 steps.',
+        description: 'Decrease your discipleship production 1 step and increase your missions production 4 steps.',
       },
     });
   }

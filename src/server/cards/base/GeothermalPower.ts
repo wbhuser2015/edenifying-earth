@@ -14,13 +14,13 @@ export class GeothermalPower extends Card implements IProjectCard {
       cost: 11,
 
       behavior: {
-        production: {energy: 2},
+        production: {discipleship: 2},
       },
 
       metadata: {
         cardNumber: '117',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.energy(2))),
-        description: 'Increase your energy production 2 steps.',
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.discipleship(2))),
+        description: 'Increase your discipleship production 2 steps.',
       },
     });
   }

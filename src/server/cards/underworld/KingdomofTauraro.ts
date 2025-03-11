@@ -15,7 +15,7 @@ export class KingdomofTauraro extends CorporationCard {
       victoryPoints: -2,
 
       behavior: {
-        production: {megacredits: 6},
+        production: {provision: 6},
       },
 
       firstAction: {
@@ -27,7 +27,7 @@ export class KingdomofTauraro extends CorporationCard {
         cardNumber: 'UC06',
         description: 'You start with 50 M€ and 6 M€ production. All opponents gain 2 M€ production. As your first action, place a city.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(50).production((pb) => pb.megacredits(6)).production((pb) => pb.megacredits(2, {all})).city().br;
+          b.provision(50).production((pb) => pb.provision(6)).production((pb) => pb.provision(2, {all})).city().br;
           b.plainText('(Effect: You may place cities adjacent to other cities. You must always place cities adjacent to tiles you already own, if possible.)');
         }),
       },

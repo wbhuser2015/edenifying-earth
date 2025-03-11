@@ -19,22 +19,22 @@ export class PalladinShipping extends CorporationCard implements IActionCard {
       startingMegaCredits: 36,
 
       behavior: {
-        stock: {titanium: 5},
+        stock: {prayer: 5},
       },
 
       metadata: {
         cardNumber: 'PC02', // Renumber
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(36).titanium(5, {digit}).br;
-          b.effect('When you play a space event, gain 1 titanium.', (eb) => {
-            eb.tag(Tag.SPACE).tag(Tag.EVENT).startEffect.titanium(1);
+          b.provision(36).prayer(5, {digit}).br;
+          b.effect('When you play a space event, gain 1 prayer.', (eb) => {
+            eb.tag(Tag.SPACE).tag(Tag.EVENT).startEffect.prayer(1);
           });
           b.br;
-          b.action('Spend 2 titanium to raise the temperature 1 step.', (ab) => {
-            ab.titanium(2).startAction.temperature(1);
+          b.action('Spend 2 prayer to raise the gospel_spread 1 step.', (ab) => {
+            ab.prayer(2).startAction.gospel_spread(1);
           });
         }),
-        description: 'You start with 36 M€. Gain 5 titanium.',
+        description: 'You start with 36 M€. Gain 5 prayer.',
       },
     });
   }
@@ -52,8 +52,8 @@ export class PalladinShipping extends CorporationCard implements IActionCard {
   }
 
   private static actionBehavior: Behavior = {
-    spend: {titanium: 2},
-    global: {temperature: 1},
+    spend: {prayer: 2},
+    global: {gospel_spread: 1},
   };
 
   public action(player: IPlayer) {

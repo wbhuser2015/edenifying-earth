@@ -17,7 +17,7 @@ export class AerospaceMission extends PreludeCard {
         cardNumber: 'Y01',
         renderData: CardRenderer.builder((b) => {
           b.colonies(1).nbsp.colonies(1).br;
-          b.minus().megacredits(14);
+          b.minus().provision(14);
         }),
         description: 'Place 2 colonies. Pay 14 M€.',
       },

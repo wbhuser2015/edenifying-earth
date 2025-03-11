@@ -17,12 +17,12 @@ export class CaveCity extends Card implements IProjectCard {
 
       requirements: {excavation: 1},
 
-      behavior: {production: {megacredits: 1}},
+      behavior: {production: {provision: 1}},
 
       metadata: {
         cardNumber: 'U27',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1)).br;
+          b.production((pb) => pb.provision(1)).br;
           b.city().excavate().asterix();
         }),
         description: 'Requires 1 excavation marker. Increase your M€ production 1 step. ' +

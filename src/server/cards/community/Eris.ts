@@ -38,7 +38,6 @@ const ARES_CARDS = [
   CardName.OCEAN_CITY,
   CardName.OCEAN_FARM,
   CardName.OCEAN_SANCTUARY,
-  CardName.RESTRICTED_AREA_ARES,
   CardName.SOLAR_FARM,
 ];
 
@@ -55,7 +54,7 @@ export class Eris extends CorporationCard {
         description: 'You start with 46 M€. As your first action, draw an Ares card.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(46).nbsp.cards(1, {secondaryTag: AltSecondaryTag.ARES});
+          b.provision(46).nbsp.cards(1, {secondaryTag: AltSecondaryTag.ARES});
           b.corpBox('action', (ce) => {
             ce.action('Place a new hazard tile adjacent to NO OTHER TILE, OR remove a hazard tile to gain 1 TR.', (eb) => {
               eb.empty().startAction.plus().hazardTile().slash().minus().hazardTile().colon().tr(1, {size: Size.SMALL});

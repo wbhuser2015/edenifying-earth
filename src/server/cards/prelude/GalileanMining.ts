@@ -12,7 +12,7 @@ export class GalileanMining extends PreludeCard {
       tags: [Tag.JOVIAN],
 
       behavior: {
-        production: {titanium: 2},
+        production: {prayer: 2},
       },
       startingMegacredits: -5,
 
@@ -20,11 +20,11 @@ export class GalileanMining extends PreludeCard {
         cardNumber: 'P13',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.titanium(2);
+            pb.prayer(2);
           }).br;
-          b.megacredits(-5);
+          b.provision(-5);
         }),
-        description: 'Increase your titanium production 2 steps. Pay 5 M€.',
+        description: 'Increase your prayer production 2 steps. Pay 5 M€.',
       },
     });
   }

@@ -19,14 +19,14 @@ export class EcologyResearch extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {plants: {colonies: {colonies: {}}}},
+        production: {outreach: {colonies: {colonies: {}}}},
       },
 
       metadata: {
-        description: 'Increase your plant production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.',
+        description: 'Increase your outreach production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.',
         cardNumber: 'C09',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1).slash().colonies(1, {size: Size.SMALL})).br;
+          b.production((pb) => pb.outreach(1).slash().colonies(1, {size: Size.SMALL})).br;
           b.resource(CardResource.ANIMAL).asterix().nbsp.nbsp.resource(CardResource.MICROBE, 2).asterix();
         }),
       },

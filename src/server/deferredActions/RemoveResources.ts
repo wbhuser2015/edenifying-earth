@@ -18,7 +18,7 @@ export class RemoveResources extends DeferredAction<number> {
 
   public execute() {
     if (this.resource === Resource.PLANTS) {
-      if (this.target.plantsAreProtected()) {
+      if (this.target.outreachAreProtected()) {
         this.cb(0);
         return undefined;
       }

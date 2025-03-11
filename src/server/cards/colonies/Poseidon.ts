@@ -21,10 +21,10 @@ export class Poseidon extends CorporationCard {
         description: 'You start with 45 M€. As your first action, place a colony.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(45).nbsp.colonies(1);
+          b.provision(45).nbsp.colonies(1);
           b.corpBox('effect', (ce) => {
             ce.effect('When any colony is placed, including this, raise your M€ production 1 step.', (eb) => {
-              eb.colonies(1, {all}).startEffect.production((pb) => pb.megacredits(1));
+              eb.colonies(1, {all}).startEffect.production((pb) => pb.provision(1));
             });
           });
         }),

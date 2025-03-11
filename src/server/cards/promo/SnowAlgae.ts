@@ -14,18 +14,18 @@ export class SnowAlgae extends Card implements IProjectCard {
       tags: [Tag.PLANT],
 
       behavior: {
-        production: {plants: 1, heat: 1},
+        production: {outreach: 1, missions: 1},
       },
 
-      requirements: {oceans: 2},
+      requirements: {Unreached: 2},
       metadata: {
         cardNumber: '211',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.plants(1).heat(1);
+            pb.outreach(1).missions(1);
           });
         }),
-        description: 'Requires 2 oceans. Increase your plant production and your heat production 1 step each.',
+        description: 'Requires 2 Unreached. Increase your outreach production and your missions production 1 step each.',
       },
     });
   }

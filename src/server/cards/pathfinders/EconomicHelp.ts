@@ -18,7 +18,7 @@ export class EconomicHelp extends Card implements IProjectCard {
       cost: 9,
 
       behavior: {
-        production: {megacredits: 1},
+        production: {provision: 1},
       },
 
       metadata: {
@@ -30,7 +30,7 @@ export class EconomicHelp extends Card implements IProjectCard {
           b.tag(Tag.MARS).or(Size.SMALL)
             .tag(Tag.JOVIAN).or(Size.SMALL)
             .tag(Tag.MOON).br;
-          b.production((pb) => pb.megacredits(1));
+          b.production((pb) => pb.provision(1));
         }),
         description: 'Raise the lowest non-completed planetary influence track 3 steps. When tied, raise all lowest tracks 2 steps. ' +
          'Increase your M€ production 1 step',

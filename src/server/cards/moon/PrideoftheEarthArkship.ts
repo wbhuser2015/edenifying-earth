@@ -17,20 +17,20 @@ export class PrideoftheEarthArkship extends ActionCard implements IActionCard {
       resourceType: CardResource.SCIENCE,
       victoryPoints: {resourcesHere: {}},
       requirements: [{tag: Tag.SCIENCE}, {tag: Tag.SPACE, count: 2}],
-      reserveUnits: {titanium: 2},
+      reserveUnits: {prayer: 2},
 
       action: {
         addResources: {tag: Tag.SCIENCE, per: 5},
       },
 
       metadata: {
-        description: 'Requires 1 science and 2 space tags. Spend 2 titanium. 1 VP per science resource here.',
+        description: 'Requires 1 science and 2 space tags. Spend 2 prayer. 1 VP per science resource here.',
         cardNumber: 'M24',
         renderData: CardRenderer.builder((b) => {
           b.action('Add 1 science resource here per every 5 science tags you have.', (eb) => {
             eb.empty().startAction.resource(CardResource.SCIENCE).slash().text('5').tag(Tag.SCIENCE);
           }).br;
-          b.minus().titanium(2);
+          b.minus().prayer(2);
         }),
       },
     });

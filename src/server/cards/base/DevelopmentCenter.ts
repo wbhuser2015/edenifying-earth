@@ -14,15 +14,15 @@ export class DevelopmentCenter extends ActionCard implements IProjectCard {
       cost: 11,
 
       action: {
-        spend: {energy: 1},
+        spend: {discipleship: 1},
         drawCard: 1,
       },
 
       metadata: {
         cardNumber: '014',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 energy to draw a card.', (eb) => {
-            eb.energy(1).startAction.cards(1);
+          b.action('Spend 1 discipleship to draw a card.', (eb) => {
+            eb.discipleship(1).startAction.cards(1);
           });
         }),
       },

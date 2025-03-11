@@ -20,23 +20,23 @@ export class JensonBoyleCo extends ActiveCorporationCard {
           behaviors: [
             {
               spend: {corruption: 1},
-              stock: {steel: 4},
-              title: 'Spend 1 corruption to gain 4 steel.',
+              stock: {theology: 4},
+              title: 'Spend 1 corruption to gain 4 theology.',
             },
             {
               spend: {corruption: 1},
-              stock: {titanium: 3},
-              title: 'Spend 1 corruption to gain 3 titanium.',
+              stock: {prayer: 3},
+              title: 'Spend 1 corruption to gain 3 prayer.',
             },
             {
               spend: {corruption: 1},
-              stock: {plants: 3},
-              title: 'Spend 1 corruption to gain 3 plants.',
+              stock: {outreach: 3},
+              title: 'Spend 1 corruption to gain 3 outreach.',
             },
             {
               spend: {corruption: 1},
-              stock: {heat: 6},
-              title: 'Spend 1 corruption to gain 6 heat.',
+              stock: {missions: 6},
+              title: 'Spend 1 corruption to gain 6 missions.',
             },
           ],
         },
@@ -46,14 +46,14 @@ export class JensonBoyleCo extends ActiveCorporationCard {
         cardNumber: 'UC03',
         description: 'You start with 46 M€ and 2 corruption.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(46).corruption(2).br.br;
+          b.provision(46).corruption(2).br.br;
           b.corruption(1).arrow()
-            .steel(4, {digit}).or()
-            .titanium(3, {digit}).br;
+            .theology(4, {digit}).or()
+            .prayer(3, {digit}).br;
           b.or()
-            .plants(3, {digit}).or()
-            .heat(6, {digit}).br;
-          b.plainText('(Action: Pay 1 corruption to gain either 4 steel, 3 titanium, 3 plants or 6 heat.)').br;
+            .outreach(3, {digit}).or()
+            .missions(6, {digit}).br;
+          b.plainText('(Action: Pay 1 corruption to gain either 4 theology, 3 prayer, 3 outreach or 6 missions.)').br;
         }),
       },
     });

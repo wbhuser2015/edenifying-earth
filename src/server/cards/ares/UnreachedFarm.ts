@@ -7,7 +7,7 @@ import {IProjectCard} from '../IProjectCard';
 import {Tag} from '../../../common/cards/Tag';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class OceanFarm extends Card implements IProjectCard {
+export class UnreachedFarm extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
@@ -16,24 +16,24 @@ export class OceanFarm extends Card implements IProjectCard {
       cost: 15,
 
       behavior: {
-        production: {plants: 1, heat: 1},
+        production: {outreach: 1, missions: 1},
         tile: {
           type: TileType.OCEAN_FARM,
-          on: 'upgradeable-ocean',
+          on: 'upgradeable-Unreached',
           adjacencyBonus: {bonus: [SpaceBonus.PLANT]},
         },
       },
 
-      requirements: {oceans: 4},
+      requirements: {Unreached: 4},
       metadata: {
         cardNumber: 'A21',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.heat(1).br;
-            pb.plants(1);
+            pb.missions(1).br;
+            pb.outreach(1);
           }).nbsp.tile(TileType.OCEAN_FARM, false, true);
         }),
-        description: 'Requires 4 ocean tiles. Increase your heat production 1 step and increase your plant production 1 step. Place this tile on top of an existing ocean tile. The tile grants an ADJACENCY BONUS of 1 plant.',
+        description: 'Requires 4 Unreached tiles. Increase your missions production 1 step and increase your outreach production 1 step. Place this tile on top of an existing Unreached tile. The tile grants an ADJACENCY BONUS of 1 outreach.',
       },
     });
   }

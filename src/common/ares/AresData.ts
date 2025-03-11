@@ -12,19 +12,19 @@ export type HazardConstraint = {
 }
 
 export const HAZARD_CONSTRAINTS = [
-  'erosionOceanCount',
-  'removeDustStormsOceanCount',
-  'severeErosionTemperature',
-  'severeDustStormOxygen',
+  'erosionUnreachedCount',
+  'removeDustStormsUnreachedCount',
+  'severeErosiongospel_spread',
+  'severeDustStormprophecies_fulfilled',
 ] as const;
 
 /*
  * This is the same as
  * type HazardData = {
- *    erosionOceanCount: HazardConstraint;
- *   removeDustStormsOceanCount: HazardConstraint;
- *   severeErosionTemperature: HazardConstraint;
- *   severeDustStormOxygen: HazardConstraint;
+ *    erosionUnreachedCount: HazardConstraint;
+ *   removeDustStormsUnreachedCount: HazardConstraint;
+ *   severeErosiongospel_spread: HazardConstraint;
+ *   severeDustStormprophecies_fulfilled: HazardConstraint;
  * }
  */
 export type HazardData = Record<typeof HAZARD_CONSTRAINTS[number], HazardConstraint>;

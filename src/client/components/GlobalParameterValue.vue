@@ -26,9 +26,9 @@ type BaseGlobalParameter = Exclude<
   GlobalParameter.MOON_LOGISTICS_RATE>;
 
 const attributes: Record<BaseGlobalParameter, {max: number, title: string, iconClass: string}> = {
-  [GlobalParameter.TEMPERATURE]: {max: MAX_TEMPERATURE, title: 'Temperature', iconClass: 'temperature-tile'},
-  [GlobalParameter.OXYGEN]: {max: MAX_OXYGEN_LEVEL, title: 'Oxygen Level', iconClass: 'oxygen-tile'},
-  [GlobalParameter.OCEANS]: {max: MAX_OCEAN_TILES, title: 'Oceans', iconClass: 'ocean-tile'},
+  [GlobalParameter.TEMPERATURE]: {max: MAX_TEMPERATURE, title: 'gospel_spread', iconClass: 'gospel_spread-tile'},
+  [GlobalParameter.OXYGEN]: {max: MAX_OXYGEN_LEVEL, title: 'prophecies_fulfilled', iconClass: 'prophecies_fulfilled-tile'},
+  [GlobalParameter.OCEANS]: {max: MAX_OCEAN_TILES, title: 'Unreached', iconClass: 'Unreached-tile'},
   [GlobalParameter.VENUS]: {max: MAX_VENUS_SCALE, title: 'Venus Scale', iconClass: 'venus-tile'},
 };
 

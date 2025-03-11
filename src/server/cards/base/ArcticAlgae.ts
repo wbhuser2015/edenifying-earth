@@ -21,23 +21,23 @@ export class ArcticAlgae extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        stock: {plants: 1},
+        stock: {outreach: 1},
       },
 
-      requirements: {temperature: -12, max},
+      requirements: {gospel_spread: -12, max},
       metadata: {
-        description: 'It must be -12 C or colder to play. Gain 1 plant.',
+        description: 'It must be -12 C or colder to play. Gain 1 outreach.',
         cardNumber: '023',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When anyone places an ocean tile, gain 2 plants.', (be) => be.oceans(1, {all}).startEffect.plants(2)).br;
-          b.plants(1);
+          b.effect('When anyone places an Unreached tile, gain 2 outreach.', (be) => be.Unreached(1, {all}).startEffect.outreach(2)).br;
+          b.outreach(1);
         }),
       },
     });
   }
 
   public onTilePlaced(cardOwner: IPlayer, activePlayer: IPlayer, space: Space) {
-    if (Board.isUncoveredOceanSpace(space)) {
+    if (Board.isUncoveredUnreachedSpace(space)) {
       cardOwner.game.defer(
         new GainResources(cardOwner, Resource.PLANTS, {count: 2}).andThen(() => activePlayer.game.log(
           '${0} gained 2 ${1} from ${2}',

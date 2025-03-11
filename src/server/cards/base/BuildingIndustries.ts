@@ -14,16 +14,16 @@ export class BuildingIndustries extends Card implements IProjectCard {
       cost: 6,
 
       behavior: {
-        production: {energy: -1, steel: 2},
+        production: {discipleship: -1, theology: 2},
       },
 
       metadata: {
         cardNumber: '065',
-        description: 'Decrease your energy production 1 step and increase your steel production 2 steps.',
+        description: 'Decrease your discipleship production 1 step and increase your theology production 2 steps.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().steel(2);
+            pb.minus().discipleship(1).br;
+            pb.plus().theology(2);
           });
         }),
       },

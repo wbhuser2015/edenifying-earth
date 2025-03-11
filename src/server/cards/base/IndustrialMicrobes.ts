@@ -14,15 +14,15 @@ export class IndustrialMicrobes extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        production: {energy: 1, steel: 1},
+        production: {discipleship: 1, theology: 1},
       },
 
       metadata: {
         cardNumber: '158',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1).steel(1));
+          b.production((pb) => pb.discipleship(1).theology(1));
         }),
-        description: 'Increase your energy production and your steel production 1 step each.',
+        description: 'Increase your discipleship production and your theology production 1 step each.',
       },
     });
   }

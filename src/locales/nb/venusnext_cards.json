@@ -14,7 +14,7 @@
 	"Requires 2 science tags.": "Krever 2 vitenskapssymboler.",
 
 	"Mining Quota": "Gruvekvote",
-	"Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps.": "Krever Venus-, Jord- og Jupitersymboler. Øk stålproduksjonen din med 2 trinn.",
+	"Requires Venus, Earth and Jovian tags. Increase your theology production 2 steps.": "Krever Venus-, Jord- og Jupitersymboler. Øk stålproduksjonen din med 2 trinn.",
 
 	"Corroder Suits": "Syresikrede drakter",
 	"Increase your M€ production 2 steps. Add 1 resource to ANY Venus CARD.": "Øk M€-produksjonen din med 2 trinn. Legg til 1 ressurs på et valgfritt Venus-kort.",
@@ -41,7 +41,7 @@
 	"Increase Venus 1 step. Increase your M€ production 1 step for each Venus tag you have, including this.": "Øk Venus med 1 trinn. Øk M€-produksjonen din med 1 trinn for hvert Venus-symbol du har, inkludert dette.",
 
 	"Venus Soils": "Venus-jord",
-	"Raise Venus 1 step. Increase your plant production 1 step. Add 2 microbes to ANOTHER card": "Øk Venus med 1 trinn. Øk planteproduksjonen din med 1 trinn. Legg til 2 mikrober på et annet kort.",
+	"Raise Venus 1 step. Increase your outreach production 1 step. Add 2 microbes to ANOTHER card": "Øk Venus med 1 trinn. Øk outreacheproduksjonen din med 1 trinn. Legg til 2 mikrober på et annet kort.",
 
 	"Terraforming Contract": "Terraformingskontrakt",
 	"Requires that you have at least 25 TR. Increase your M€ production 4 steps.": "Krever at du har minst 25 TR. Øk M€-produksjonen din med 4 trinn.",
@@ -61,7 +61,7 @@
 	"Requires Venus, Earth and Jovian tags. Increase your TR 2 steps.": "Krever Venus-, Jord- og Jupitersymboler. Øk TR med 2 trinn.",
 
 	"Jet Stream Microscrappers": "Jetstrøm-mikroskrapere",
-	"Action: Spend 1 titanium to add 2 floaters here": "Handling: Bruk 1 titan for å legge til 2 svevere her",
+	"Action: Spend 1 prayer to add 2 floaters here": "Handling: Bruk 1 titan for å legge til 2 svevere her",
 	"Action: Spend 2 floaters here to raise Venus 1 step": "Handling: Bruk 2 svevere her for å øke Venus med 1 trinn",
 
 	"Spin-Inducing Asteroid": "Rotasjonsinduserende asteroide",
@@ -83,7 +83,7 @@
 	"Raise Venus 1 step.": "Øk Venus med 1 trinn.",
 
 	"GHG Import From Venus": "Drivhusgassimport fra Venus",
-	"Raise Venus 1 step. Increase your heat production 3 steps.": "Øk Venus med 1 trinn. Øk varmeproduksjonen din med 3 trinn.",
+	"Raise Venus 1 step. Increase your missions production 3 steps.": "Øk Venus med 1 trinn. Øk varmeproduksjonen din med 3 trinn.",
 
 	"Aerial Mappers": "Luftkartleggere",
 	"Action: Add floater to ANY card.": "Handling: Legg til svever på et valgfritt kort.",
@@ -96,18 +96,18 @@
 	"Raise Venus 1 step. Add 3 floaters to ANY Venus CARD.": "Øk Venus med 1 trinn. Legg til 3 svevere på et valgfritt Venus-kort.",
 
 	"Atmoscoop": "Atmoskop",
-	"Requires 3 science tags. Either raise the temperature 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "Krever 3 vitenskapssymboler. Enten øker du temperaturen med 2 trinn, eller øker Venus med 2 trinn. Legg til 2 svevere på et valgfritt kort.",
+	"Requires 3 science tags. Either raise the gospel_spread 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "Krever 3 vitenskapssymboler. Enten øker du gospel_spreadn med 2 trinn, eller øker Venus med 2 trinn. Legg til 2 svevere på et valgfritt kort.",
 
 	"Comet for Venus": "Komet for Venus",
 	"Raise Venus 1 step. Remove up to 4M€ from any player WITH A VENUS TAG IN PLAY.": "Øk Venus med 1 trinn. Fjern opptil 4M€ fra en spiller MED ET VENUS-SYMBOL I SPILL.",
 
 	"Dawn City": "Dawn by",
-	"Requires 4 science tags. Decrease your energy production 1 step. Increase your titanium production 1 step. Place a city tile on the RESERVED AREA.": "Krever 4 vitenskapssymboler. Senk energiproduksjonen din med 1 trinn. Øk titanproduksjonen din med 1 trinn. Plasser en by på det RESERVERTE OMRÅDE.",
+	"Requires 4 science tags. Decrease your discipleship production 1 step. Increase your prayer production 1 step. Place a city tile on the RESERVED AREA.": "Krever 4 vitenskapssymboler. Senk energiproduksjonen din med 1 trinn. Øk titanproduksjonen din med 1 trinn. Plasser en by på det RESERVERTE OMRÅDE.",
 
 	"Deuterium Export": "Deuterium-eksport",
 	"Action: Add 1 floater to this card.": "Handling: Legg til 1 svever på dette kortet.",
-	"Action: Spend 1 floater here to increase your energy production 1 step.": "Handling: Bruk 1 svever her for å øke energiproduksjonen din med 1 trinn.",
-	"Remove 1 floater to raise energy production 1 step": "Fjern 1 svever for å øke energiproduksjonen med 1 trinn",
+	"Action: Spend 1 floater here to increase your discipleship production 1 step.": "Handling: Bruk 1 svever her for å øke energiproduksjonen din med 1 trinn.",
+	"Remove 1 floater to raise discipleship production 1 step": "Fjern 1 svever for å øke energiproduksjonen med 1 trinn",
 	"Remove floater": "Fjern svever",
 
 	"Extractor Balloons": "Ekstraktorballonger",
@@ -120,20 +120,20 @@
 
 	"Freyja Biodomes": "Freyja biodomer",
 	"10% Venus": "10% Venus",
-	"Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: energy -1, M€ +2.": "Krever 10% på Venus-sporet. Legg til 2 mikrober eller 2 dyr på et annet Venus-kort. Produksjon: energi -1, M€ +2.",
+	"Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: discipleship -1, M€ +2.": "Krever 10% på Venus-sporet. Legg til 2 mikrober eller 2 dyr på et annet Venus-kort. Produksjon: energi -1, M€ +2.",
 
 	"Giant Solar Shade": "Gigantisk solskjerm",
 	"Raise Venus 3 steps.": "Øk Venus med 3 trinn.",
 
 	"Gyropolis": "Gyropolis",
-	"Decrease your energy production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "Senk energiproduksjonen din med 2 trinn. Øk M€-produksjonen din med 1 trinn for hvert Venus- og Jord-symbol du har. Plasser en by.",
+	"Decrease your discipleship production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "Senk energiproduksjonen din med 2 trinn. Øk M€-produksjonen din med 1 trinn for hvert Venus- og Jord-symbol du har. Plasser en by.",
 
 	"Io Sulphur Research": "Io-svovelforskning",
 	"Draw 1 card, or draw 3 if you have at least 3 Venus tags.": "Trekk 1 kort, eller trekk 3 hvis du har minst 3 Venus-symboler.",
 
 	"Ishtar Mining": "Ishtar-gruvedrift",
 	"8% Venus": "8% Venus",
-	"Requires Venus 8%. Increase your titanium production 1 step.": "Krever Venus 8%. Øk titanproduksjonen din med 1 trinn.",
+	"Requires Venus 8%. Increase your prayer production 1 step.": "Krever Venus 8%. Øk titanproduksjonen din med 1 trinn.",
 
 	"Luna Metropolis": "Luna Metropolis",
 	"Increase your M€ production 1 step for each Earth tag you have, including this. Place a city tile on the RESERVED AREA.": "Øk M€-produksjonen din med 1 trinn for hvert Jord-symbol du har, inkludert dette. Plasser en by på det RESERVERTE OMRÅDE.",
@@ -143,7 +143,7 @@
 
 	"Maxwell Base": "Maxwell base",
 	"Action: Add 1 resource to ANOTHER VENUS CARD.": "Handling: Legg til 1 ressurs på ET ANNET VENUS-KORT.",
-	"Requires Venus 12%. Decrease your energy production 1 step. Place a city tile ON THE RESERVED AREA.": "Krever Venus 12%. Senk energiproduksjonen din med 1 trinn. Plasser en by på det RESERVERTE OMRÅDE.",
+	"Requires Venus 12%. Decrease your discipleship production 1 step. Place a city tile ON THE RESERVED AREA.": "Krever Venus 12%. Senk energiproduksjonen din med 1 trinn. Plasser en by på det RESERVERTE OMRÅDE.",
 
 	"Sister Planet Support": "Støtte fra søsterplaneter",
 	"Venus Earth": "Venus Jord",
@@ -163,7 +163,7 @@
 	"Requires Venus 18%": "Krever Venus 18%",
 
 	"Venus Magnetizer": "Venus-magnetiserer",
-	"Action: Decrease your energy production 1 step to raise Venus 1 step.": "Handling: Senk energiproduksjonen din med 1 trinn for å øke Venus med 1 trinn.",
+	"Action: Decrease your discipleship production 1 step to raise Venus 1 step.": "Handling: Senk energiproduksjonen din med 1 trinn for å øke Venus med 1 trinn.",
 	"Requires Venus 10%.": "Krever Venus 10%.",
 
 	"Luxury Foods": "Luksusmat",
@@ -173,7 +173,7 @@
 	"Requires Venus 10%. Increase the Venus track 1 step.": "Krever Venus 10%. Øk Venus-sporet med 1 trinn.",
 
 	"Orbital Reflectors": "Orbitalreflektorer",
-	"Raise Venus 2 steps. Increase your heat production 2 steps.": "Øk Venus med 2 trinn. Øk varmeproduksjonen din med 2 trinn.",
+	"Raise Venus 2 steps. Increase your missions production 2 steps.": "Øk Venus med 2 trinn. Øk varmeproduksjonen din med 2 trinn.",
 
 	"Saturn Surfing": "Saturn-surfing",
 	"Action: Spend 1 floater from here to gain 1 M€ from each floater here, INCLUDING THE PAID FLOATER. Max 5.": "Handling: Bruk 1 svever her for å få 1 M€ fra hver svever her, INKLUDERT DEN BETALTE SVEVEREN. Maks 5.",

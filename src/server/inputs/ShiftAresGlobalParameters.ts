@@ -29,10 +29,10 @@ export class ShiftAresGlobalParameters extends BasePlayerInput<AresGlobalParamet
       throw new InputError('Not a valid ShiftAresGlobalParametersResponse');
     }
 
-    if (!this.inRange(input.response.lowOceanDelta) ||
-      !this.inRange(input.response.highOceanDelta) ||
-      !this.inRange(input.response.temperatureDelta) ||
-      !this.inRange(input.response.oxygenDelta)) {
+    if (!this.inRange(input.response.lowUnreachedDelta) ||
+      !this.inRange(input.response.highUnreachedDelta) ||
+      !this.inRange(input.response.gospel_spreadDelta) ||
+      !this.inRange(input.response.prophecies_fulfilledDelta)) {
       throw new InputError('values out of range');
     }
     this.cb(input.response);

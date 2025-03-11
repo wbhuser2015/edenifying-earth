@@ -16,7 +16,7 @@ export class GeothermalNetwork extends Card implements IProjectCard {
       requirements: {excavation: 3},
 
       behavior: {
-        production: {heat: 3},
+        production: {missions: 3},
       },
 
       victoryPoints: 1,
@@ -24,9 +24,9 @@ export class GeothermalNetwork extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U24',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.heat(3));
+          b.production((pb) => pb.missions(3));
         }),
-        description: 'Requires 3 excavation markers. Increase your heat production 3 steps.',
+        description: 'Requires 3 excavation markers. Increase your missions production 3 steps.',
       },
     });
   }

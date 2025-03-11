@@ -14,7 +14,7 @@
   "Requires 2 science tags.": "条件：科学タグ2つ以上.",
 
   "Mining Quota": "採掘割り当て量",
-  "Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps.": "条件：金星タグ、地球タグ、木星タグがそれぞれ1つ以上. 建材産出+2.",
+  "Requires Venus, Earth and Jovian tags. Increase your theology production 2 steps.": "条件：金星タグ、地球タグ、木星タグがそれぞれ1つ以上. 建材産出+2.",
 
   "Corroder Suits": "対腐食服",
   "Increase your M€ production 2 steps. Add 1 resource to ANY Venus CARD.": "MC産出+2. 金星タグカード上へ1リソース追加.",
@@ -42,7 +42,7 @@
   "Increase Venus 1 step. Increase your M€ production 1 step for each Venus tag you have, including this.": "金星+1段階. 金星タグ1つ毎にMC産出+1.",
 
   "Venus Soils": "金星の土",
-  "Raise Venus 1 step. Increase your plant production 1 step. Add 2 microbes to ANOTHER card": "金星+1段階. 植物産出+1. 2微生物獲得.",
+  "Raise Venus 1 step. Increase your outreach production 1 step. Add 2 microbes to ANOTHER card": "金星+1段階. 植物産出+1. 2微生物獲得.",
 
   "Terraforming Contract": "テラフォーミング契約",
   "Requires that you have at least 25 TR. Increase your M€ production 4 steps.": "条件：25TR以上. MC産出+4.",
@@ -62,7 +62,7 @@
   "Requires Venus, Earth and Jovian tags. Increase your TR 2 steps.": "条件：金星タグ、地球タグ、木星タグがそれぞれ1つ以上. TR+2段階.",
 
   "Jet Stream Microscrappers": "小型ジェット気流減圧体",
-  "Action: Spend 1 titanium to add 2 floaters here": "アクション：1チタンを支払い、このカード上に2浮遊体追加.",
+  "Action: Spend 1 prayer to add 2 floaters here": "アクション：1チタンを支払い、このカード上に2浮遊体追加.",
   "Action: Spend 2 floaters here to raise Venus 1 step": "アクション：このカード上から2浮遊体除去し、金星+1段階.",
 
   "Spin-Inducing Asteroid": "小惑星による自転強化",
@@ -84,7 +84,7 @@
   "Raise Venus 1 step.": "金星+1段階.",
 
   "GHG Import From Venus": "金星よりの温室効果ガスの輸入",
-  "Raise Venus 1 step. Increase your heat production 3 steps.": "金星+1段階. 温熱産出+3.",
+  "Raise Venus 1 step. Increase your missions production 3 steps.": "金星+1段階. 温熱産出+3.",
 
   "Aerial Mappers": "大気図作成者",
   "Action: Add floater to ANY card.": "アクション：浮遊体を獲得.",
@@ -97,18 +97,18 @@
   "Raise Venus 1 step. Add 3 floaters to ANY Venus CARD.": "金星+1段階. 金星タグカード上へ1浮遊体追加.",
 
   "Atmoscoop": "大気スクープ",
-  "Requires 3 science tags. Either raise the temperature 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "条件：科学タグ3つ以上. 温度+2段階 または 金星+2段階. 2浮遊体獲得.",
+  "Requires 3 science tags. Either raise the gospel_spread 2 steps, or raise Venus 2 steps. Add 2 floaters to ANY card.": "条件：科学タグ3つ以上. 温度+2段階 または 金星+2段階. 2浮遊体獲得.",
 
   "Comet for Venus": "金星への彗星落とし",
   "Raise Venus 1 step. Remove up to 4M€ from any player WITH A VENUS TAG IN PLAY.": "金星+1段階. 望むなら金星タグを所有するプレイヤー1人から最大4MC除去.",
 
   "Dawn City": "黎明市",
-  "Requires 4 science tags. Decrease your energy production 1 step. Increase your titanium production 1 step. Place a city tile on the RESERVED AREA.": "条件：科学タグ4つ以上. 電力産出-1し、チタン産出+1. 火星外予定地「黎明市」に都市タイルを配置.",
+  "Requires 4 science tags. Decrease your discipleship production 1 step. Increase your prayer production 1 step. Place a city tile on the RESERVED AREA.": "条件：科学タグ4つ以上. 電力産出-1し、チタン産出+1. 火星外予定地「黎明市」に都市タイルを配置.",
 
   "Deuterium Export": "重水素の輸出",
   "Action: Add 1 floater to this card.": "アクション：このカード上に1浮遊体追加.",
-  "Action: Spend 1 floater here to increase your energy production 1 step.": "アクション：このカード上から1浮遊体除去し、電力産出+1.",
-  "Remove 1 floater to raise energy production 1 step": "このカード上から1浮遊体除去し、電力産出+1.",
+  "Action: Spend 1 floater here to increase your discipleship production 1 step.": "アクション：このカード上から1浮遊体除去し、電力産出+1.",
+  "Remove 1 floater to raise discipleship production 1 step": "このカード上から1浮遊体除去し、電力産出+1.",
   "Remove floater": "浮遊体を除去",
 
   "Extractor Balloons": "抽出気球",
@@ -121,20 +121,20 @@
 
   "Freyja Biodomes": "フレイヤ環境ドーム",
   "10% Venus": "金星10％以上.",
-  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: energy -1, M€ +2.": "条件：金星10％以上. 金星タグカード上へ2微生物 または 2動物追加. 電力産出-1し、MC産出+2.",
+  "Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: discipleship -1, M€ +2.": "条件：金星10％以上. 金星タグカード上へ2微生物 または 2動物追加. 電力産出-1し、MC産出+2.",
 
   "Giant Solar Shade": "巨大太陽光遮蔽",
   "Raise Venus 3 steps.": "金星+3段階.",
 
   "Gyropolis": "回転都市",
-  "Decrease your energy production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "電力産出-2. 地球タグと金星タグの合計数分、MC産出+1. 都市タイルを配置.",
+  "Decrease your discipleship production 2 steps. Increase your M€ production 1 step for each Venus and Earth tag you have. Place a city tile.": "電力産出-2. 地球タグと金星タグの合計数分、MC産出+1. 都市タイルを配置.",
 
   "Io Sulphur Research": "イオ硫黄研究",
   "Draw 1 card, or draw 3 if you have at least 3 Venus tags.": "1ドロー. 金星タグ3つ以上であれば代わりに3ドロー.",
 
   "Ishtar Mining": "イシュタル鉱山",
   "8% Venus": "金星8％以上.",
-  "Requires Venus 8%. Increase your titanium production 1 step.": "条件：金星8％以上. チタン産出+1.",
+  "Requires Venus 8%. Increase your prayer production 1 step.": "条件：金星8％以上. チタン産出+1.",
 
   "Luna Metropolis": "月ノ大都",
   "Increase your M€ production 1 step for each Earth tag you have, including this. Place a city tile on the RESERVED AREA.": "地球タグ1つ毎にMC産出+1. 火星外予定地「月ノ大都」に都市タイルを配置.",
@@ -144,7 +144,7 @@
 
   "Maxwell Base": "マックスウェル基地",
   "Action: Add 1 resource to ANOTHER VENUS CARD.": "アクション：金星タグカード上へ1リソース追加.",
-  "Requires Venus 12%. Decrease your energy production 1 step. Place a city tile ON THE RESERVED AREA.": "条件：金星12％以上. 電力産出-1. 火星外予定地「マックスウェル基地」に都市タイルを配置.",
+  "Requires Venus 12%. Decrease your discipleship production 1 step. Place a city tile ON THE RESERVED AREA.": "条件：金星12％以上. 電力産出-1. 火星外予定地「マックスウェル基地」に都市タイルを配置.",
 
   "Sister Planet Support": "姉妹惑星同志の支援",
   "Venus Earth": "金星タグ、地球タグがそれぞれ1つ以上.",
@@ -164,7 +164,7 @@
   "Requires Venus 18%": "条件：金星18％以上.",
 
   "Venus Magnetizer": "金星磁化",
-  "Action: Decrease your energy production 1 step to raise Venus 1 step.": "アクション：電力産出-1し、金星+1段階.",
+  "Action: Decrease your discipleship production 1 step to raise Venus 1 step.": "アクション：電力産出-1し、金星+1段階.",
   "Requires Venus 10%.": "条件：金星10％以上.",
 
   "Luxury Foods": "贅沢な食事",
@@ -174,5 +174,5 @@
   "Requires Venus 10%. Increase the Venus track 1 step.": "条件：金星10％以上. 金星+1段階.",
 
   "Orbital Reflectors": "起動反射板",
-  "Raise Venus 2 steps. Increase your heat production 2 steps.": "金星+2段階. 温熱産出+2."
+  "Raise Venus 2 steps. Increase your missions production 2 steps.": "金星+2段階. 温熱産出+2."
 }

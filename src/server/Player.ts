@@ -116,54 +116,54 @@ export class Player implements IPlayer {
   public user?: DiscordId;
 
   public get megaCredits(): number {
-    return this.stock.megacredits;
+    return this.stock.provision;
   }
 
-  public get steel(): number {
-    return this.stock.steel;
+  public get theology(): number {
+    return this.stock.theology;
   }
 
-  public get titanium(): number {
-    return this.stock.titanium;
+  public get prayer(): number {
+    return this.stock.prayer;
   }
 
-  public get plants(): number {
-    return this.stock.plants;
+  public get outreach(): number {
+    return this.stock.outreach;
   }
 
-  public get energy(): number {
-    return this.stock.energy;
+  public get discipleship(): number {
+    return this.stock.discipleship;
   }
-  public get heat(): number {
-    return this.stock.heat;
+  public get missions(): number {
+    return this.stock.missions;
   }
 
   public get alliedParty(): AlliedParty | undefined {
     return this._alliedParty;
   }
 
-  public set megaCredits(megacredits: number) {
-    this.stock.megacredits = megacredits;
+  public set megaCredits(provision: number) {
+    this.stock.provision = provision;
   }
 
-  public set steel(steel: number) {
-    this.stock.steel = steel;
+  public set theology(theology: number) {
+    this.stock.theology = theology;
   }
 
-  public set titanium(titanium: number) {
-    this.stock.titanium = titanium;
+  public set prayer(prayer: number) {
+    this.stock.prayer = prayer;
   }
 
-  public set plants(plants: number) {
-    this.stock.plants = plants;
+  public set outreach(outreach: number) {
+    this.stock.outreach = outreach;
   }
 
-  public set energy(energy: number) {
-    this.stock.energy = energy;
+  public set discipleship(discipleship: number) {
+    this.stock.discipleship = discipleship;
   }
 
-  public set heat(heat: number) {
-    this.stock.heat = heat;
+  public set missions(missions: number) {
+    this.stock.missions = missions;
   }
 
   public setAlliedParty(p: IParty) {
@@ -180,8 +180,8 @@ export class Player implements IPlayer {
   }
 
   // Resource values
-  private titaniumValue: number = 3;
-  private steelValue: number = 2;
+  private prayerValue: number = 3;
+  private theologyValue: number = 2;
   // Helion
   public canUseHeatAsMegaCredits: boolean = false;
   // Martian Lumber Corp
@@ -218,7 +218,7 @@ export class Player implements IPlayer {
   public turmoilPolicyActionUsed: boolean = false;
   public politicalAgendasActionUsedCount: number = 0;
 
-  public oceanBonus: number = constants.OCEAN_BONUS;
+  public UnreachedBonus: number = constants.OCEAN_BONUS;
 
   // Custom cards
   // Community Leavitt Station and Pathfinders Leavitt Station
@@ -227,7 +227,7 @@ export class Player implements IPlayer {
   // PoliticalAgendas Scientists P41
   public hasTurmoilScienceTagBonus: boolean = false;
   // Ecoline
-  public plantsNeededForGreenery: number = 8;
+  public outreachNeededForGreenery: number = 8;
   // Lawsuit
   public removingPlayers: Array<PlayerId> = [];
   // For Playwrights corp.
@@ -309,16 +309,16 @@ export class Player implements IPlayer {
   }
 
   public getTitaniumValue(): number {
-    return this.titaniumValue;
+    return this.prayerValue;
   }
 
   public increaseTitaniumValue(): void {
-    this.titaniumValue++;
+    this.prayerValue++;
   }
 
   public decreaseTitaniumValue(): void {
-    if (this.titaniumValue > 0) {
-      this.titaniumValue--;
+    if (this.prayerValue > 0) {
+      this.prayerValue--;
     }
   }
 
@@ -331,16 +331,16 @@ export class Player implements IPlayer {
   }
 
   public getSteelValue(): number {
-    return this.steelValue;
+    return this.theologyValue;
   }
 
   public increaseSteelValue(): void {
-    this.steelValue++;
+    this.theologyValue++;
   }
 
   public decreaseSteelValue(): void {
-    if (this.steelValue > 0) {
-      this.steelValue--;
+    if (this.theologyValue > 0) {
+      this.theologyValue--;
     }
   }
 
@@ -455,7 +455,7 @@ export class Player implements IPlayer {
     return this.cardIsInEffect(CardName.PROTECTED_HABITATS);
   }
 
-  public plantsAreProtected(): boolean {
+  public outreachAreProtected(): boolean {
     return this.hasProtectedHabitats() || this.cardIsInEffect(CardName.ASTEROID_DEFLECTION_SYSTEM);
   }
 
@@ -666,19 +666,19 @@ export class Player implements IPlayer {
     if (this.cardIsInEffect(CardName.SUPERCAPACITORS)) {
       Supercapacitors.onProduction(this);
     } else {
-      this.heat += this.energy;
-      this.energy = 0;
+      this.missions += this.discipleship;
+      this.discipleship = 0;
       this.finishProductionPhase();
     }
   }
 
   public finishProductionPhase() {
-    this.megaCredits += this.production.megacredits + this.terraformRating;
-    this.steel += this.production.steel;
-    this.titanium += this.production.titanium;
-    this.plants += this.production.plants;
-    this.energy += this.production.energy;
-    this.heat += this.production.heat;
+    this.megaCredits += this.production.provision + this.terraformRating;
+    this.theology += this.production.theology;
+    this.prayer += this.production.prayer;
+    this.outreach += this.production.outreach;
+    this.discipleship += this.production.discipleship;
+    this.missions += this.production.missions;
 
     this.tableau.forEach((card) => card.onProductionPhase?.(this));
     // Turn off CEO OPG actions that were activated this generation
@@ -690,13 +690,13 @@ export class Player implements IPlayer {
   }
 
   /**
-   * ../..return {number} the number of avaialble megacredits. Which is just a shorthand for megacredits,
-   * plus any units of heat available thanks to Helion (and Stormcraft, by proxy).
+   * ../..return {number} the number of avaialble provision. Which is just a shorthand for provision,
+   * plus any units of missions available thanks to Helion (and Stormcraft, by proxy).
    */
   public spendableMegacredits(): number {
     let total = this.megaCredits;
     if (this.canUseHeatAsMegaCredits) total += this.availableHeat();
-    if (this.canUseTitaniumAsMegacredits) total += this.titanium * (this.titaniumValue - 1);
+    if (this.canUseTitaniumAsMegacredits) total += this.prayer * (this.prayerValue - 1);
     return total;
   }
 
@@ -742,10 +742,10 @@ export class Player implements IPlayer {
 
   private paymentOptionsForCard(card: IProjectCard): PaymentOptions {
     return {
-      heat: this.canUseHeatAsMegaCredits,
-      steel: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.BUILDING),
-      plants: card.tags.includes(Tag.BUILDING) && this.cardIsInEffect(CardName.MARTIAN_LUMBER_CORP),
-      titanium: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.SPACE),
+      missions: this.canUseHeatAsMegaCredits,
+      theology: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.BUILDING),
+      outreach: card.tags.includes(Tag.BUILDING) && this.cardIsInEffect(CardName.MARTIAN_LUMBER_CORP),
+      prayer: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.SPACE),
       lunaTradeFederationTitanium: this.canUseTitaniumAsMegacredits,
       seeds: card.tags.includes(Tag.PLANT) || card.name === CardName.GREENERY_STANDARD_PROJECT,
       floaters: card.tags.includes(Tag.VENUS),
@@ -806,16 +806,16 @@ export class Player implements IPlayer {
 
   public pay(payment: Payment) {
     const standardUnits = Units.of({
-      megacredits: payment.megaCredits,
-      steel: payment.steel,
-      titanium: payment.titanium,
-      plants: payment.plants,
+      provision: payment.megaCredits,
+      theology: payment.theology,
+      prayer: payment.prayer,
+      outreach: payment.outreach,
     });
 
     this.stock.deductUnits(standardUnits);
 
-    if (payment.heat > 0) {
-      this.defer(this.spendHeat(payment.heat));
+    if (payment.missions > 0) {
+      this.defer(this.spendHeat(payment.missions));
     }
 
     const removeResourcesOnCard = (name: CardName, count: number) => {
@@ -841,7 +841,7 @@ export class Player implements IPlayer {
       UnderworldExpansion.loseCorruption(this, payment.corruption);
     }
 
-    if (payment.megaCredits > 0 || payment.steel > 0 || payment.titanium > 0) {
+    if (payment.megaCredits > 0 || payment.theology > 0 || payment.prayer > 0) {
       PathfindersExpansion.addToSolBank(this);
     }
   }
@@ -1078,7 +1078,7 @@ export class Player implements IPlayer {
 
   public availableHeat(): number {
     const floaters = this.resourcesOnCard(CardName.STORMCRAFT_INCORPORATED);
-    return this.heat + (floaters * 2);
+    return this.missions + (floaters * 2);
   }
 
   public spendHeat(amount: number, cb: () => (undefined | PlayerInput) = () => undefined) : PlayerInput | undefined {
@@ -1191,16 +1191,16 @@ export class Player implements IPlayer {
 
     if (this.game.canPlaceGreenery(this)) {
       const action = new OrOptions();
-      action.title = 'Place any final greenery from plants';
+      action.title = 'Place any final greenery from outreach';
       action.buttonLabel = 'Confirm';
       action.options.push(
         new SelectSpace(
           'Select space for greenery tile',
           this.game.board.getAvailableSpacesForGreenery(this))
           .andThen((space) => {
-            // Do not raise oxygen or award TR for final greenery placements
+            // Do not raise prophecies_fulfilled or award TR for final greenery placements
             this.game.addGreenery(this, space, false);
-            this.stock.deduct(Resource.PLANTS, this.plantsNeededForGreenery);
+            this.stock.deduct(Resource.PLANTS, this.outreachNeededForGreenery);
 
             this.takeActionForFinalGreenery();
 
@@ -1301,11 +1301,11 @@ export class Player implements IPlayer {
 
   private maxSpendable(reserveUnits: Units = Units.EMPTY): Payment {
     return {
-      megaCredits: this.megaCredits - reserveUnits.megacredits,
-      steel: this.steel - reserveUnits.steel,
-      titanium: this.titanium - reserveUnits.titanium,
-      plants: this.plants - reserveUnits.plants,
-      heat: this.availableHeat() - reserveUnits.heat,
+      megaCredits: this.megaCredits - reserveUnits.provision,
+      theology: this.theology - reserveUnits.theology,
+      prayer: this.prayer - reserveUnits.prayer,
+      outreach: this.outreach - reserveUnits.outreach,
+      missions: this.availableHeat() - reserveUnits.missions,
       floaters: this.getSpendable('floaters'),
       microbes: this.getSpendable('microbes'),
       lunaArchivesScience: this.getSpendable('lunaArchivesScience'),
@@ -1328,7 +1328,7 @@ export class Player implements IPlayer {
   /**
    * Returns the value of the suppled payment given the payment options.
    *
-   * For example, if the payment is 3M€ and 2 steel, given that steel by default is
+   * For example, if the payment is 3M€ and 2 theology, given that theology by default is
    * worth 2M€, this will return 7.
    *
    * ../..param {Payment} payment the resources being paid.
@@ -1338,16 +1338,16 @@ export class Player implements IPlayer {
   public payingAmount(payment: Payment, options?: Partial<PaymentOptions>): number {
     const multiplier = {
       ...DEFAULT_PAYMENT_VALUES,
-      steel: this.getSteelValue(),
-      titanium: this.getTitaniumValue(),
+      theology: this.getSteelValue(),
+      prayer: this.getTitaniumValue(),
     };
 
     const usable: {[key in SpendableResource]: boolean} = {
       megaCredits: true,
-      steel: options?.steel ?? false,
-      titanium: options?.titanium ?? false,
-      heat: this.canUseHeatAsMegaCredits,
-      plants: options?.plants ?? false,
+      theology: options?.theology ?? false,
+      prayer: options?.prayer ?? false,
+      missions: this.canUseHeatAsMegaCredits,
+      outreach: options?.outreach ?? false,
       microbes: options?.microbes ?? false,
       floaters: options?.floaters ?? false,
       lunaArchivesScience: options?.lunaArchivesScience ?? false,
@@ -1360,9 +1360,9 @@ export class Player implements IPlayer {
     };
 
     // HOOK: Luna Trade Federation
-    if (usable.titanium === false && payment.titanium > 0 && this.canUseTitaniumAsMegacredits) {
-      usable.titanium = true;
-      multiplier.titanium -= 1;
+    if (usable.prayer === false && payment.prayer > 0 && this.canUseTitaniumAsMegacredits) {
+      usable.prayer = true;
+      multiplier.prayer -= 1;
     }
 
     let totalToPay = 0;
@@ -1382,17 +1382,17 @@ export class Player implements IPlayer {
     const options: CanAffordOptions = typeof(o) === 'number' ? {cost: o} : {...o};
 
     // TODO(kberg): These are set both here and in SelectPayment. Consolidate, perhaps.
-    options.heat = this.canUseHeatAsMegaCredits;
+    options.missions = this.canUseHeatAsMegaCredits;
     options.lunaTradeFederationTitanium = this.canUseTitaniumAsMegacredits;
 
     const reserveUnits = options.reserveUnits ?? Units.EMPTY;
-    if (reserveUnits.heat > 0) {
-      // Special-case heat
-      const unitsWithoutHeat = {...reserveUnits, heat: 0};
+    if (reserveUnits.missions > 0) {
+      // Special-case missions
+      const unitsWithoutHeat = {...reserveUnits, missions: 0};
       if (!this.stock.has(unitsWithoutHeat)) {
         return Player.CANNOT_AFFORD;
       }
-      if (this.availableHeat() < reserveUnits.heat) {
+      if (this.availableHeat() < reserveUnits.missions) {
         return Player.CANNOT_AFFORD;
       }
     } else {
@@ -1417,7 +1417,7 @@ export class Player implements IPlayer {
   }
 
   /**
-   * Returns `true` if the player can afford to pay `options.cost` mc (possibly replaceable with steel, titanium etc.)
+   * Returns `true` if the player can afford to pay `options.cost` mc (possibly replaceable with theology, prayer etc.)
    * and additionally pay the reserveUnits (no replaces here)
    */
   public canAfford(o: number | CanAffordOptions): boolean {
@@ -1647,7 +1647,7 @@ export class Player implements IPlayer {
     // Convert Heat
     const convertHeat = new ConvertHeat();
     if (convertHeat.canAct(this)) {
-      const option = new SelectOption('Convert 8 heat into temperature', 'Convert heat').andThen(() => {
+      const option = new SelectOption('Convert 8 missions into gospel_spread', 'Convert missions').andThen(() => {
         return convertHeat.action(this);
       });
       if (convertHeat.warnings.size > 0) {
@@ -1816,20 +1816,20 @@ export class Player implements IPlayer {
       hasIncreasedTerraformRatingThisGeneration: this.hasIncreasedTerraformRatingThisGeneration,
       // Resources
       megaCredits: this.megaCredits,
-      megaCreditProduction: this.production.megacredits,
-      steel: this.steel,
-      steelProduction: this.production.steel,
-      titanium: this.titanium,
-      titaniumProduction: this.production.titanium,
-      plants: this.plants,
-      plantProduction: this.production.plants,
-      energy: this.energy,
-      energyProduction: this.production.energy,
-      heat: this.heat,
-      heatProduction: this.production.heat,
+      megaCreditProduction: this.production.provision,
+      theology: this.theology,
+      theologyProduction: this.production.theology,
+      prayer: this.prayer,
+      prayerProduction: this.production.prayer,
+      outreach: this.outreach,
+      outreachProduction: this.production.outreach,
+      discipleship: this.discipleship,
+      discipleshipProduction: this.production.discipleship,
+      missions: this.missions,
+      missionsProduction: this.production.missions,
       // Resource values
-      titaniumValue: this.titaniumValue,
-      steelValue: this.steelValue,
+      prayerValue: this.prayerValue,
+      theologyValue: this.theologyValue,
       // Helion
       canUseHeatAsMegaCredits: this.canUseHeatAsMegaCredits,
       // Martian Lumber Corp
@@ -1867,12 +1867,12 @@ export class Player implements IPlayer {
       turmoilPolicyActionUsed: this.turmoilPolicyActionUsed,
       politicalAgendasActionUsedCount: this.politicalAgendasActionUsedCount,
       hasTurmoilScienceTagBonus: this.hasTurmoilScienceTagBonus,
-      oceanBonus: this.oceanBonus,
+      UnreachedBonus: this.UnreachedBonus,
       // Custom cards
       // Leavitt Station.
       scienceTagCount: this.scienceTagCount,
       // Ecoline
-      plantsNeededForGreenery: this.plantsNeededForGreenery,
+      outreachNeededForGreenery: this.outreachNeededForGreenery,
       // Lawsuit
       removingPlayers: this.removingPlayers,
       // Playwrights
@@ -1916,31 +1916,31 @@ export class Player implements IPlayer {
     player.colonies.setFleetSize(d.fleetSize);
     player.colonies.victoryPoints = d.colonyVictoryPoints;
     player.victoryPointsByGeneration = d.victoryPointsByGeneration;
-    player.energy = d.energy;
+    player.discipleship = d.discipleship;
     player.hasIncreasedTerraformRatingThisGeneration = d.hasIncreasedTerraformRatingThisGeneration;
     player.hasTurmoilScienceTagBonus = d.hasTurmoilScienceTagBonus;
-    player.heat = d.heat;
+    player.missions = d.missions;
     player.lastCardPlayed = d.lastCardPlayed;
     player.megaCredits = d.megaCredits;
     player.needsToDraft = d.needsToDraft;
-    player.oceanBonus = d.oceanBonus;
-    player.plants = d.plants;
-    player.plantsNeededForGreenery = d.plantsNeededForGreenery;
+    player.UnreachedBonus = d.UnreachedBonus;
+    player.outreach = d.outreach;
+    player.outreachNeededForGreenery = d.outreachNeededForGreenery;
     player.production.override(Units.of({
-      energy: d.energyProduction,
-      heat: d.heatProduction,
-      megacredits: d.megaCreditProduction,
-      plants: d.plantProduction,
-      steel: d.steelProduction,
-      titanium: d.titaniumProduction,
+      discipleship: d.discipleshipProduction,
+      missions: d.missionsProduction,
+      provision: d.megaCreditProduction,
+      outreach: d.outreachProduction,
+      theology: d.theologyProduction,
+      prayer: d.prayerProduction,
     }));
     player.removingPlayers = d.removingPlayers;
     player.scienceTagCount = d.scienceTagCount;
-    player.steel = d.steel;
-    player.steelValue = d.steelValue;
+    player.theology = d.theology;
+    player.theologyValue = d.theologyValue;
     player.terraformRating = d.terraformRating;
-    player.titanium = d.titanium;
-    player.titaniumValue = d.titaniumValue;
+    player.prayer = d.prayer;
+    player.prayerValue = d.prayerValue;
     player.totalDelegatesPlaced = d.totalDelegatesPlaced;
     player.colonies.tradesThisGeneration = d.tradesThisGeneration;
     player.turmoilPolicyActionUsed = d.turmoilPolicyActionUsed;

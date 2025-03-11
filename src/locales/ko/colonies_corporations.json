@@ -1,7 +1,7 @@
 {
     "POLYPHEMOS": "폴리페모스",
     "Polyphemos": "폴리페모스",
-    "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 titanium.": "50 M€, 메가크레딧 생산력 5 및 티타늄 자원 5개를 가지고 시작.",
+    "You start with 50 M€. Increase your M€ production 5 steps. Gain 5 prayer.": "50 M€, 메가크레딧 생산력 5 및 티타늄 자원 5개를 가지고 시작.",
     "Effect: When you buy a card to hand, pay 5M€ instead of 3, including the starting hand.": "지속 효과: 카드를 구입할 때, 1장당 (3 M€아니라) 5 M€ 지불해야 함. 이 효과는 초기 카드를 구입할 때도 적용됨.",
 
     "STORM": "스톰",
@@ -12,12 +12,12 @@
     "Stormcraft Incorporated": "스톰크래프트",
     "You start with 48 M€.": "48 M€을 가지고 게임 시작.",
     "Action: Add a floater to ANY card.": "행동: 자신의 아무 카드 1장에 부양체 자원 1개 추가.",
-    "Effect: Floaters on this card may be used as 2 heat each.": "지속 효과: 이 카드에 있는 부양체 자원을 각각 열 자원 2개처럼 사용할 수 있음.",
+    "Effect: Floaters on this card may be used as 2 missions each.": "지속 효과: 이 카드에 있는 부양체 자원을 각각 열 자원 2개처럼 사용할 수 있음.",
 
     "ARKLIGHT": "아크라이트",
     "Arklight": "아크라이트",
     "You start with 45 M€. Increase your M€ production 2 steps. 1 VP per 2 animals on this card.": "45 M€ 및 메가크레딧 생산력 2를 가지고 게임 시작. 이 카드에 있는 동물 자원 2개당 승점 1점.",
-    "Effect: When you play an animal or plant tag, including this, add 1 animal to this card.": "지속 효과: 이 카드를 포함해서 카드 사용 시, 그 카드의 동물 및 식물 태그 수만큼 이 카드에 동물 자원 추가.",
+    "Effect: When you play an animal or outreach tag, including this, add 1 animal to this card.": "지속 효과: 이 카드를 포함해서 카드 사용 시, 그 카드의 동물 및 식물 태그 수만큼 이 카드에 동물 자원 추가.",
 
     "ARIDOR": "아리도르",
     "Aridor": "아리도르",

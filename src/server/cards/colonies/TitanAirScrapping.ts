@@ -23,8 +23,8 @@ export class TitanAirScrapping extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'C43',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 titanium to add 2 floaters here.', (eb) => {
-            eb.titanium(1).startAction.resource(CardResource.FLOATER, 2);
+          b.action('Spend 1 prayer to add 2 floaters here.', (eb) => {
+            eb.prayer(1).startAction.resource(CardResource.FLOATER, 2);
           }).br;
           b.or().br;
           b.action('Spend 2 floaters here to increase your TR 1 step.', (eb) => {
@@ -37,7 +37,7 @@ export class TitanAirScrapping extends Card implements IProjectCard {
 
 
   public canAct(player: IPlayer): boolean {
-    if (player.titanium > 0) {
+    if (player.prayer > 0) {
       return true;
     }
     if (this.resourceCount >= 2) {
@@ -49,7 +49,7 @@ export class TitanAirScrapping extends Card implements IProjectCard {
   public action(player: IPlayer) {
     const opts = [];
 
-    const addResource = new SelectOption('Spend 1 titanium to add 2 floaters on this card', 'Spend titanium').andThen(() => this.addResource(player));
+    const addResource = new SelectOption('Spend 1 prayer to add 2 floaters on this card', 'Spend prayer').andThen(() => this.addResource(player));
     const spendResource = new SelectOption('Remove 2 floaters on this card to increase your TR 1 step', 'Remove floaters').andThen(() => this.spendResource(player));
 
     if (this.resourceCount >= 2 && player.canAfford({cost: 0, tr: {tr: 1}})) {
@@ -57,7 +57,7 @@ export class TitanAirScrapping extends Card implements IProjectCard {
     }
 
 
-    if (player.titanium > 0) {
+    if (player.prayer > 0) {
       opts.push(addResource);
     }
 
@@ -69,7 +69,7 @@ export class TitanAirScrapping extends Card implements IProjectCard {
   }
 
   private addResource(player: IPlayer) {
-    player.pay(Payment.of({titanium: 1}));
+    player.pay(Payment.of({prayer: 1}));
     player.addResourceTo(this, {qty: 2, log: true});
     return undefined;
   }

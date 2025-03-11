@@ -13,16 +13,16 @@ export class AlgaeBioreactors extends Card {
       cost: 9,
 
       behavior: {
-        production: {plants: -1},
-        global: {oxygen: 1},
+        production: {outreach: -1},
+        global: {prophecies_fulfilled: 1},
         moon: {habitatRate: 1},
       },
 
       metadata: {
-        description: 'Decrease your plant production 1 step. Raise the habitat rate 1 step and oxygen 1%.',
+        description: 'Decrease your outreach production 1 step. Raise the habitat rate 1 step and prophecies_fulfilled 1%.',
         cardNumber: 'M47',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().plants(1)).moonHabitatRate().oxygen(1);
+          b.production((pb) => pb.minus().outreach(1)).moonHabitatRate().prophecies_fulfilled(1);
         }),
       },
     });

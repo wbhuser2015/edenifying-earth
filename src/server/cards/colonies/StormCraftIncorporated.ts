@@ -28,15 +28,15 @@ export class StormCraftIncorporated extends ActiveCorporationCard {
         description: 'You start with 48 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(48);
+          b.provision(48);
           b.corpBox('action', (ce) => {
             ce.vSpace(Size.LARGE);
             ce.action('Add a floater to ANY card.', (eb) => {
               eb.empty().startAction.resource(CardResource.FLOATER).asterix();
             });
             ce.vSpace();
-            ce.effect('Floaters on this card may be used as 2 heat each.', (eb) => {
-              eb.startEffect.resource(CardResource.FLOATER).equals().heat(2);
+            ce.effect('Floaters on this card may be used as 2 missions each.', (eb) => {
+              eb.startEffect.resource(CardResource.FLOATER).equals().missions(2);
             });
           });
         }),
@@ -46,35 +46,35 @@ export class StormCraftIncorporated extends ActiveCorporationCard {
 
   public spendHeat(player: IPlayer, targetAmount: number,
     cb: () => (undefined | PlayerInput) = () => undefined): AndOptions {
-    let heatAmount: number;
+    let missionsAmount: number;
     let floaterAmount: number;
 
     const options = new AndOptions(
-      new SelectAmount('Heat', 'Spend heat', 0, Math.min(player.heat, targetAmount))
+      new SelectAmount('Heat', 'Spend missions', 0, Math.min(player.missions, targetAmount))
         .andThen((amount) => {
-          heatAmount = amount;
+          missionsAmount = amount;
           return undefined;
         }),
-      new SelectAmount('Stormcraft Incorporated Floaters (2 heat each)', 'Spend floaters',
+      new SelectAmount('Stormcraft Incorporated Floaters (2 missions each)', 'Spend floaters',
         0, Math.min(this.resourceCount, Math.ceil(targetAmount / 2)))
         .andThen((amount) => {
           floaterAmount = amount;
           return undefined;
         })).andThen(() => {
-      if (heatAmount + (floaterAmount * 2) < targetAmount) {
-        throw new Error(`Need to pay ${targetAmount} heat`);
+      if (missionsAmount + (floaterAmount * 2) < targetAmount) {
+        throw new Error(`Need to pay ${targetAmount} missions`);
       }
-      if (heatAmount > 0 && heatAmount - 1 + (floaterAmount * 2) >= targetAmount) {
-        throw new Error('You cannot overspend heat');
+      if (missionsAmount > 0 && missionsAmount - 1 + (floaterAmount * 2) >= targetAmount) {
+        throw new Error('You cannot overspend missions');
       }
-      if (floaterAmount > 0 && heatAmount + ((floaterAmount - 1) * 2) >= targetAmount) {
+      if (floaterAmount > 0 && missionsAmount + ((floaterAmount - 1) * 2) >= targetAmount) {
         throw new Error('You cannot overspend floaters');
       }
       player.removeResourceFrom(this, floaterAmount);
-      player.stock.deduct(Resource.HEAT, heatAmount);
+      player.stock.deduct(Resource.HEAT, missionsAmount);
       return cb();
     });
-    options.title = message('Select how to spend ${0} heat', (b) => b.number(targetAmount));
+    options.title = message('Select how to spend ${0} missions', (b) => b.number(targetAmount));
     return options;
   }
 }

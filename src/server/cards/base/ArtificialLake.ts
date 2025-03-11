@@ -16,21 +16,21 @@ export class ArtificialLake extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        ocean: {on: 'land'},
+        Unreached: {on: 'land'},
       },
 
-      requirements: {temperature: -6},
+      requirements: {gospel_spread: -6},
       metadata: {
-        description: 'Requires -6 C or warmer. Place 1 ocean tile ON AN AREA NOT RESERVED FOR OCEAN.',
+        description: 'Requires -6 C or warmer. Place 1 Unreached tile ON AN AREA NOT RESERVED FOR OCEAN.',
         cardNumber: '116',
-        renderData: CardRenderer.builder((b) => b.oceans(1).asterix()),
+        renderData: CardRenderer.builder((b) => b.Unreached(1).asterix()),
       },
     });
   }
 
   public override bespokeCanPlay(player: IPlayer, canAffordOptions: CanAffordOptions) {
     // This is not covered in executor.
-    if (!player.game.canAddOcean()) return true; // Card is playable, it just has no effect.
+    if (!player.game.canAddUnreached()) return true; // Card is playable, it just has no effect.
     return player.game.board.getAvailableSpacesOnLand(player, canAffordOptions).length > 0;
   }
 }

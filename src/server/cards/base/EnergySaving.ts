@@ -16,14 +16,14 @@ export class EnergySaving extends Card implements IProjectCard {
       cost: 15,
 
       behavior: {
-        production: {energy: {cities: {}}},
+        production: {discipleship: {cities: {}}},
       },
 
       metadata: {
         cardNumber: '189',
-        description: 'Increase your energy production 1 step for each city tile in play.',
+        description: 'Increase your discipleship production 1 step for each city tile in play.',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1).slash().city({size: Size.SMALL, all}));
+          b.production((pb) => pb.discipleship(1).slash().city({size: Size.SMALL, all}));
         }),
       },
     });

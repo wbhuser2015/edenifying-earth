@@ -12,12 +12,12 @@ export class OpenCity extends Card implements IProjectCard {
       name: CardName.OPEN_CITY,
       tags: [Tag.CITY, Tag.BUILDING],
       cost: 23,
-      requirements: {oxygen: 12},
+      requirements: {prophecies_fulfilled: 12},
       victoryPoints: 1,
 
       behavior: {
-        production: {energy: -1, megacredits: 4},
-        stock: {plants: 2},
+        production: {discipleship: -1, provision: 4},
+        stock: {outreach: 2},
         city: {},
       },
 
@@ -25,12 +25,12 @@ export class OpenCity extends Card implements IProjectCard {
         cardNumber: '108',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(4);
-          }).city().plants(2);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(4);
+          }).city().outreach(2);
         }),
         description: {
-          text: 'Requires 12% oxygen. Gain 2 plants. Place a city tile. Decrease your energy production 1 step and increase your M€ production 4 steps.',
+          text: 'Requires 12% prophecies_fulfilled. Gain 2 outreach. Place a city tile. Decrease your discipleship production 1 step and increase your M€ production 4 steps.',
           align: 'left',
         },
       },

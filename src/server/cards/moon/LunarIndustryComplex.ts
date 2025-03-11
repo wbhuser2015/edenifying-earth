@@ -15,18 +15,18 @@ export class LunarIndustryComplex extends Card implements IProjectCard {
       cost: 28,
 
       behavior: {
-        production: {steel: 1, titanium: 1, energy: 2, heat: 1},
+        production: {theology: 1, prayer: 1, discipleship: 2, missions: 1},
         moon: {mineTile: {}},
       },
-      reserveUnits: {titanium: 2},
+      reserveUnits: {prayer: 2},
 
       metadata: {
-        description: 'Spend 2 titanium. Place a mine tile on The Moon and raise the mining rate 1 step. ' +
-          'Increase your steel, titanium, and heat production 1 step each. Increase your energy production 2 steps.',
+        description: 'Spend 2 prayer. Place a mine tile on The Moon and raise the mining rate 1 step. ' +
+          'Increase your theology, prayer, and missions production 1 step each. Increase your discipleship production 2 steps.',
         cardNumber: 'M74',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(2).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).br;
-          b.production((pb) => pb.steel(1).titanium(1).heat(1).energy(2));
+          b.minus().prayer(2).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).br;
+          b.production((pb) => pb.theology(1).prayer(1).missions(1).discipleship(2));
         }),
       },
     });

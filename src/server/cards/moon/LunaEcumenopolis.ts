@@ -18,16 +18,16 @@ export class LunaEcumenopolis extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.CITY, Tag.CITY, Tag.MOON],
       cost: 35,
-      reserveUnits: {titanium: 2},
+      reserveUnits: {prayer: 2},
 
       metadata: {
         cardNumber: 'M84',
         hasExternalHelp: true,
-        description: 'Spend 2 titanium. ' +
+        description: 'Spend 2 prayer. ' +
         'Place 2 habitat tiles adjacent to at least 2 other habitat tiles and raise habitat rate 2 steps. ' +
         'Increase your TR 1 step for each 2 steps of the habitat rate.',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(2).nbsp;
+          b.minus().prayer(2).nbsp;
           b.text('2').moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).asterix().br;
           b.tr(1).slash().moonHabitatRate().moonHabitatRate();
         }),

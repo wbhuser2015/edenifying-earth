@@ -15,9 +15,9 @@ export class LastResortIngenuity extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf47',
         renderData: CardRenderer.builder((b) => {
-          b.cards(1).asterix().colon().super((b) => b.steel(1).titanium(1));
+          b.cards(1).asterix().colon().super((b) => b.theology(1).prayer(1));
           b.br;
-          b.text('The next card you play this generation can be paid for with steel or titanium despite its tags.', Size.MEDIUM, true, true);
+          b.text('The next card you play this generation can be paid for with theology or prayer despite its tags.', Size.MEDIUM, true, true);
         }),
       },
     });

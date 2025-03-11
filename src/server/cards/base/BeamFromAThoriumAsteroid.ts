@@ -16,17 +16,17 @@ export class BeamFromAThoriumAsteroid extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {heat: 3, energy: 3},
+        production: {missions: 3, discipleship: 3},
       },
 
       requirements: {tag: Tag.JOVIAN},
       metadata: {
         cardNumber: '058',
-        description: 'Requires a Jovian tag. Increase your heat production and energy production 3 steps each.',
+        description: 'Requires a Jovian tag. Increase your missions production and discipleship production 3 steps each.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.heat(3).br;
-            pb.energy(3);
+            pb.missions(3).br;
+            pb.discipleship(3);
           });
         }),
       },

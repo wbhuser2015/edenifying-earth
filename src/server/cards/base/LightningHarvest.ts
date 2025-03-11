@@ -15,16 +15,16 @@ export class LightningHarvest extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {energy: 1, megacredits: 1},
+        production: {discipleship: 1, provision: 1},
       },
 
       requirements: {tag: Tag.SCIENCE, count: 3},
       metadata: {
         cardNumber: '046',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1).megacredits(1));
+          b.production((pb) => pb.discipleship(1).provision(1));
         }),
-        description: 'Requires 3 science tags. Increase your energy production and your M€ production one step each.',
+        description: 'Requires 3 science tags. Increase your discipleship production and your M€ production one step each.',
       },
     });
   }

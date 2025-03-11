@@ -14,16 +14,16 @@ export class PointLuna extends CorporationCard {
       startingMegaCredits: 38,
 
       behavior: {
-        production: {titanium: 1},
+        production: {prayer: 1},
         drawCard: 1,
       },
 
       metadata: {
         cardNumber: 'R10',
-        description: 'You start with 1 titanium production and 38 M€.',
+        description: 'You start with 1 prayer production and 38 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.production((pb) => pb.titanium(1)).nbsp.megacredits(38);
+          b.production((pb) => pb.prayer(1)).nbsp.provision(38);
           b.corpBox('effect', (ce) => {
             ce.effect('When you play an Earth tag, including this, draw a card.', (eb) => {
               eb.tag(Tag.EARTH).startEffect.cards(1);

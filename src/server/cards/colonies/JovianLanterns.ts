@@ -28,8 +28,8 @@ export class JovianLanterns extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'C18',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 titanium to add 2 floaters here.', (eb) => {
-            eb.titanium(1).startAction.resource(CardResource.FLOATER, 2);
+          b.action('Spend 1 prayer to add 2 floaters here.', (eb) => {
+            eb.prayer(1).startAction.resource(CardResource.FLOATER, 2);
           }).br;
           b.tr(1).resource(CardResource.FLOATER, 2).asterix().br;
           b.vpText('1 VP per 2 floaters here.');
@@ -44,11 +44,11 @@ export class JovianLanterns extends Card implements IProjectCard {
 
 
   public canAct(player: IPlayer): boolean {
-    return player.titanium > 0;
+    return player.prayer > 0;
   }
 
   public action(player: IPlayer) {
-    player.pay(Payment.of({titanium: 1}));
+    player.pay(Payment.of({prayer: 1}));
     player.addResourceTo(this, {qty: 2, log: true});
     return undefined;
   }

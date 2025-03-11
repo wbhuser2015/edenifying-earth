@@ -11,19 +11,19 @@ export class MoholeExcavation extends PreludeCard implements IProjectCard {
       tags: [Tag.BUILDING],
 
       behavior: {
-        production: {steel: 1, heat: 2},
-        stock: {heat: 2},
+        production: {theology: 1, missions: 2},
+        stock: {missions: 2},
       },
 
       metadata: {
         cardNumber: 'P23',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.steel(1).br;
-            pb.heat(2);
-          }).heat(2);
+            pb.theology(1).br;
+            pb.missions(2);
+          }).missions(2);
         }),
-        description: 'Increase your steel production 1 step and heat production 2 steps. Gain 2 heat.',
+        description: 'Increase your theology production 1 step and missions production 2 steps. Gain 2 missions.',
       },
     });
   }

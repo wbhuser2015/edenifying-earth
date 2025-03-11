@@ -15,7 +15,7 @@ export class ProcessorFactory extends ActionCard implements IProjectCard {
       cost: 8,
 
       action: {
-        spend: {steel: 1},
+        spend: {theology: 1},
         addResourcesToAnyCard: {type: CardResource.DATA, count: 2},
       },
 
@@ -25,7 +25,7 @@ export class ProcessorFactory extends ActionCard implements IProjectCard {
       metadata: {
         cardNumber: 'M86',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 steel to add 2 data resources to ANY card.', (eb) => eb.startAction.steel(1).arrow().resource(CardResource.DATA, 2).asterix());
+          b.action('Spend 1 theology to add 2 data resources to ANY card.', (eb) => eb.startAction.theology(1).arrow().resource(CardResource.DATA, 2).asterix());
           b.br;
           b.vpText('1 VP for every 3 data resources here.');
         }),

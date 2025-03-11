@@ -21,11 +21,11 @@ export class HyperspaceDrivePrototype extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U52',
         renderData: CardRenderer.builder((b) => {
-          b.resource(CardResource.FIGHTER).or().titanium(1).asterix().br;
+          b.resource(CardResource.FIGHTER).or().prayer(1).asterix().br;
           b.resource(CardResource.SCIENCE).or().tr(1).asterix().br;
         }),
         description: 'Requires that 3 science tags. ' +
-        'Put a fighter resource on a card you own, or gain 1 titanium if you have no suitable card. ' +
+        'Put a fighter resource on a card you own, or gain 1 prayer if you have no suitable card. ' +
         'Put a science resource on a card you own, or gain 1 TR if you have no suitable card.',
       },
     });
@@ -36,8 +36,8 @@ export class HyperspaceDrivePrototype extends Card implements IProjectCard {
     if (fighterCards.length > 0) {
       player.game.defer(new AddResourcesToCard(player, CardResource.FIGHTER));
     } else {
-      player.game.log('${0} has no fighter resource cards and gained 1 titanium.', (b) => b.player(player));
-      player.stock.titanium += 1;
+      player.game.log('${0} has no fighter resource cards and gained 1 prayer.', (b) => b.player(player));
+      player.stock.prayer += 1;
     }
     const scienceCards = player.getResourceCards(CardResource.SCIENCE);
     if (scienceCards.length > 0) {

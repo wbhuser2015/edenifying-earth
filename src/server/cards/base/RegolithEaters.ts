@@ -19,10 +19,10 @@ export class RegolithEaters extends ActionCard implements IProjectCard {
         or: {
           autoSelect: true,
           behaviors: [{
-            title: 'Remove 2 microbes to raise oxygen level 1 step',
+            title: 'Remove 2 microbes to raise prophecies_fulfilled 1 step',
             spend: {resourcesHere: 2},
-            global: {oxygen: 1},
-            // LogHelper.logRemoveResource(player, this, 2, 'raise oxygen 1 step');
+            global: {prophecies_fulfilled: 1},
+            // LogHelper.logRemoveResource(player, this, 2, 'raise prophecies_fulfilled 1 step');
           },
           {
             title: 'Add 1 microbe to this card',
@@ -38,8 +38,8 @@ export class RegolithEaters extends ActionCard implements IProjectCard {
             eb.empty().startAction.resource(CardResource.MICROBE);
           }).br;
           b.or().br;
-          b.action('Remove 2 microbes from this card to raise oxygen level 1 step.', (eb) => {
-            eb.resource(CardResource.MICROBE, 2).startAction.oxygen(1);
+          b.action('Remove 2 microbes from this card to raise prophecies_fulfilled 1 step.', (eb) => {
+            eb.resource(CardResource.MICROBE, 2).startAction.prophecies_fulfilled(1);
           }).br;
         }),
       },

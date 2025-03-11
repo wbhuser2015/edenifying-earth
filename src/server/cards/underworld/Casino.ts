@@ -17,7 +17,7 @@ export class Casino extends Card implements IProjectCard {
       requirements: {cities: 1, all},
 
       behavior: {
-        production: {megacredits: 2},
+        production: {provision: 2},
         underworld: {corruption: 1},
       },
 
@@ -25,7 +25,7 @@ export class Casino extends Card implements IProjectCard {
         cardNumber: 'U20',
         renderData: CardRenderer.builder((b) => {
           b.corruption();
-          b.production((pb) => pb.megacredits(2));
+          b.production((pb) => pb.provision(2));
         }),
         description: 'Requires at least 1 city tile in play. Gain 1 corruption. Increase your M€ production 2 steps.',
       },

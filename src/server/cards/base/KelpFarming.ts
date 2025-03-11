@@ -15,20 +15,20 @@ export class KelpFarming extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: 2, plants: 3},
-        stock: {plants: 2},
+        production: {provision: 2, outreach: 3},
+        stock: {outreach: 2},
       },
 
-      requirements: {oceans: 6},
+      requirements: {Unreached: 6},
       metadata: {
         cardNumber: '055',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(2).br;
-            pb.plants(3);
-          }).nbsp.plants(2);
+            pb.provision(2).br;
+            pb.outreach(3);
+          }).nbsp.outreach(2);
         }),
-        description: 'Requires 6 ocean tiles. Increase your M€ production 2 steps and your plant production 3 steps. Gain 2 plants.',
+        description: 'Requires 6 Unreached tiles. Increase your M€ production 2 steps and your outreach production 3 steps. Gain 2 outreach.',
       },
     });
   }

@@ -15,14 +15,14 @@ export class MedicalLab extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: {tag: Tag.BUILDING, per: 2}},
+        production: {provision: {tag: Tag.BUILDING, per: 2}},
       },
 
       metadata: {
         cardNumber: '207',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.megacredits(1).slash().tag(Tag.BUILDING, 2);
+            pb.provision(1).slash().tag(Tag.BUILDING, 2);
           });
         }),
         description: 'Increase your M€ production 1 step for every 2 building tags you have, including this.',

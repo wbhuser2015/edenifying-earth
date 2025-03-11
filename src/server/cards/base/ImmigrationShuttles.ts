@@ -15,13 +15,13 @@ export class ImmigrationShuttles extends Card implements IProjectCard {
       victoryPoints: {cities: {}, all: true, per: 3},
 
       behavior: {
-        production: {megacredits: 5},
+        production: {provision: 5},
       },
 
       metadata: {
         cardNumber: '198',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(5)).br;
+          b.production((pb) => pb.provision(5)).br;
           b.vpText('1 VP for every 3rd City in play.');
         }),
         description: 'Increase your M€ production 5 steps.',

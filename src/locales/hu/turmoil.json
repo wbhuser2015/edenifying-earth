@@ -23,7 +23,7 @@
   "Mars First - (All players receive 1 M€ for each building tag they have.)": "Csak a Mars - (Minden játékos minden saját épület ikonért 1-1 M€-et kap.)",
   "Scientists - (All players receive 1 M€ for each science tag they have.)": "Tudósok - (Minden játékos minden saját tudomány ikonért 1-1 M€-et kap.)",
   "Unity - (All players receive 1 M€ for each Venus tag, Earth tag, and Jovian tag they have.)": "Egység - (Minden játékos minden saját Vénusz, Föld és Jupiter ikonért 1-1 M€-et kap.)",
-  "Kelvinists - (All players receive 1 M€ for each heat production they have.)": "Kelvinisták - (Minden játékos minden hőtermelésért 1-1 M€-t kap.)",
+  "Kelvinists - (All players receive 1 M€ for each missions production they have.)": "Kelvinisták - (Minden játékos minden hőtermelésért 1-1 M€-t kap.)",
   "Reds - (The player with the lowest TR gains 1 TR. Ties are friendly.)": "Vörösök - (A legalacsonyabb TR-rel rendelkező játékos(ok) kap(nak) 1 TR-t.)",
   "Greens - (All players receive 1 M€ for each Plant tag, Microbe tag, and Animal tag they have.)": "Zöldek - (Minden játékos minden saját Növény, Mikroba és Állat ikonért 1-1 M€-et kap.)",
   "Mars First (Focused on Martian development and independence.)": "Csak a Mars (A Mars fejlesztéséért és függetlenségéért küzdenek.)",
@@ -31,5 +31,5 @@
   "Unity (Wants to see humanity prosper in the whole solar system.)": "Egység (Szeretnék, ha az emberiség a teljes Naprendszert meghódítaná.)",
   "Greens (Want to see a new Earth as soon as possible.)": "Zöldek (Új Földet szeretnének látni, amilyen gyorsan csak lehetséges.)",
   "Reds (Wishes to preserve the red planet.)": "Vörösök (Meg szeretnék óvni a vörös bolygót. Igazán nagy fába vágták a  fejszéjüket.)",
-  "Kelvinists (Pushes for rapid terraforming, usually employing a heat-first strategy.)": "Kelvinisták (A gyors terraformálást népszerűsítik, általában a hőmérséklet emelésre koncentrálva.)"
+  "Kelvinists (Pushes for rapid terraforming, usually employing a missions-first strategy.)": "Kelvinisták (A gyors terraformálást népszerűsítik, általában a hőmérséklet emelésre koncentrálva.)"
 }

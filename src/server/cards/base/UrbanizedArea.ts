@@ -18,18 +18,18 @@ export class UrbanizedArea extends Card implements IProjectCard {
       cost: 10,
 
       behavior: {
-        production: {energy: -1, megacredits: 2},
+        production: {discipleship: -1, provision: 2},
       },
 
       metadata: {
         cardNumber: '120',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(2);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(2);
           }).city().asterix();
         }),
-        description: 'Decrease your energy production 1 step and increase your M€ production 2 steps. Place a city tile ADJACENT TO AT LEAST 2 OTHER CITY TILES.',
+        description: 'Decrease your discipleship production 1 step and increase your M€ production 2 steps. Place a city tile ADJACENT TO AT LEAST 2 OTHER CITY TILES.',
       },
     });
   }

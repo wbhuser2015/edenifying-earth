@@ -13,14 +13,14 @@ export class RichDeposits extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        production: {steel: 3},
+        production: {theology: 3},
       },
 
       requirements: {tag: Tag.SCIENCE, count: 2},
       metadata: {
         cardNumber: 'Pf52',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.steel(3))),
-        description: 'Requires 2 science tags. Increase your steel production 3 steps.',
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.theology(3))),
+        description: 'Requires 2 science tags. Increase your theology production 3 steps.',
       },
     });
   }

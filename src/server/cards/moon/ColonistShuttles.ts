@@ -13,19 +13,19 @@ export class ColonistShuttles extends Card {
       type: CardType.AUTOMATED,
       tags: [Tag.SPACE],
       cost: 12,
-      reserveUnits: {titanium: 1},
+      reserveUnits: {prayer: 1},
 
       behavior: {
         moon: {habitatRate: 1},
-        stock: {megacredits: {moon: {habitat: {}}, each: 2}},
+        stock: {provision: {moon: {habitat: {}}, each: 2}},
       },
 
       metadata: {
-        description: 'Spend 1 titanium. Raise the habitat rate 1 step. Gain 2M€ for each habitat tile on The Moon.',
+        description: 'Spend 1 prayer. Raise the habitat rate 1 step. Gain 2M€ for each habitat tile on The Moon.',
         cardNumber: 'M16',
         renderData: CardRenderer.builder((b) => {
-          b.minus().titanium(1).moonHabitatRate().br;
-          b.megacredits(2).slash().moonHabitat({size: Size.SMALL, all});
+          b.minus().prayer(1).moonHabitatRate().br;
+          b.provision(2).slash().moonHabitat({size: Size.SMALL, all});
         }),
       },
     });

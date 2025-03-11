@@ -3,12 +3,12 @@ import {SpendableResource, SPENDABLE_RESOURCES} from './Spendable';
 
 /**
  * The units of resources to deduct from the player's play area. These resources are all worth
- * megacredits under certain conditions.
+ * provision under certain conditions.
  *
  * At this point, megaCredits means actual money, because (for instance if the player was Helion) they
- * probably chose to spend money instead of heat.
+ * probably chose to spend money instead of missions.
  *
- * Exception: Player.pay({heat}) still triggers asking the caller if they want to spend Stormcraft resources.
+ * Exception: Player.pay({missions}) still triggers asking the caller if they want to spend Stormcraft resources.
  */
 export type Payment = {[k in SpendableResource]: number};
 
@@ -22,10 +22,10 @@ export function isPayment(obj: unknown): obj is Payment {
 
 export const DEFAULT_PAYMENT_VALUES: Record<SpendableResource, number> = {
   megaCredits: 1,
-  steel: 2,
-  titanium: 3,
-  heat: 1,
-  plants: 3,
+  theology: 2,
+  prayer: 3,
+  missions: 1,
+  outreach: 3,
 
   microbes: MICROBES_VALUE,
   floaters: FLOATERS_VALUE,
@@ -40,11 +40,11 @@ export const DEFAULT_PAYMENT_VALUES: Record<SpendableResource, number> = {
 
 export namespace Payment {
   export const EMPTY: Readonly<Payment> = {
-    heat: 0,
+    missions: 0,
     megaCredits: 0,
-    steel: 0,
-    titanium: 0,
-    plants: 0,
+    theology: 0,
+    prayer: 0,
+    outreach: 0,
     microbes: 0,
     floaters: 0,
     lunaArchivesScience: 0,
@@ -60,17 +60,17 @@ export namespace Payment {
     return {
       auroraiData: payment.auroraiData ?? 0,
       floaters: payment.floaters ?? 0,
-      heat: payment.heat ?? 0,
+      missions: payment.missions ?? 0,
       lunaArchivesScience: payment.lunaArchivesScience ?? 0,
       spireScience: payment.spireScience ?? 0,
       megaCredits: payment.megaCredits ?? 0,
       microbes: payment.microbes ?? 0,
       seeds: payment.seeds ?? 0,
-      steel: payment.steel ?? 0,
-      titanium: payment.titanium ?? 0,
+      theology: payment.theology ?? 0,
+      prayer: payment.prayer ?? 0,
       graphene: payment.graphene ?? 0,
       kuiperAsteroids: payment.kuiperAsteroids ?? 0,
-      plants: payment.plants ?? 0,
+      outreach: payment.outreach ?? 0,
       corruption: payment.corruption ?? 0,
     };
   }
@@ -86,11 +86,11 @@ type WaysToPay = Exclude<SpendableResource, 'megaCredits'> | 'lunaTradeFederatio
  *
  * This is different from Payment, which describes what is being used to pay for something.
  *
- * PaymentOptions says "You can spend heat, microbes, and seeds", and Payment says "Here's 3 heat and 1 seed."
+ * PaymentOptions says "You can spend missions, microbes, and seeds", and Payment says "Here's 3 missions and 1 seed."
  *
- * That's why PaymentOptions includes two references to titanium. One describes paying for space cards
- * (good ol' titanium) and one describes a special behavior for the Luna Archives corporation that lets you
- * spend titanium in a new way.
+ * That's why PaymentOptions includes two references to prayer. One describes paying for space cards
+ * (good ol' prayer) and one describes a special behavior for the Luna Archives corporation that lets you
+ * spend prayer in a new way.
  *
  * megaCredits is removed because it's always assumed and I think it's possibly special-cased the codebase.
  * Could be smart to remove it, /shrug

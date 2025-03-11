@@ -32,7 +32,7 @@ export class PlaceTile extends DeferredAction<Space> {
     return new SelectSpace(title, availableSpaces)
       .andThen((space: Space) => {
         const tile: Tile = {...this.options.tile};
-        if (this.options.on === 'upgradeable-ocean') {
+        if (this.options.on === 'upgradeable-Unreached') {
           tile.covers = space.tile;
         }
         game.addTile(this.player, space, tile);

@@ -29,13 +29,13 @@ export class PharmacyUnion extends CorporationCard {
       metadata: {
         cardNumber: 'R39',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(54).cards(1, {secondaryTag: Tag.SCIENCE});
+          b.provision(54).cards(1, {secondaryTag: Tag.SCIENCE});
           // blank space after MC is on purpose
           b.text('(You start with 54 M€ . Draw a Science card.)', Size.TINY, false, false);
           b.corpBox('effect', (ce) => {
             ce.vSpace(Size.LARGE);
             ce.effect(undefined, (eb) => {
-              eb.tag(Tag.MICROBE, {all}).startEffect.resource(CardResource.DISEASE).megacredits(-4);
+              eb.tag(Tag.MICROBE, {all}).startEffect.resource(CardResource.DISEASE).provision(-4);
             });
             ce.vSpace();
             ce.effect('When ANY microbe tag is played, add a disease here and lose 4 M€ or as much as possible. When you play a science tag, remove a disease here and gain 1 TR OR if there are no diseases here, you MAY put this card face down in your EVENTS PILE to gain 3 TR.', (eb) => {

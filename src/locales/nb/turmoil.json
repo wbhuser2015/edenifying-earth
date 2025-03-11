@@ -27,7 +27,7 @@
   "Mars First - (All players receive 1 M€ for each building tag they have.)": "MARS FØRST - (Alle spillere får 1 M€ for hvert bygningssymbol de har.)",
   "Scientists - (All players receive 1 M€ for each science tag they have.)": "FORSKERNE - (Alle spillere får 1 M€ for hvert vitenskapssymbol de har.)",
   "Unity - (All players receive 1 M€ for each Venus tag, Earth tag, and Jovian tag they have.)": "SAMHOLD - (Alle spillere får 1 M€ for hvert Venus-, Jord- og Jupitersymbol de har.)",
-  "Kelvinists - (All players receive 1 M€ for each heat production they have.)": "KELVINISTENE - (Alle spillere får 1 M€ for hver varmeproduksjon de har.)",
+  "Kelvinists - (All players receive 1 M€ for each missions production they have.)": "KELVINISTENE - (Alle spillere får 1 M€ for hver varmeproduksjon de har.)",
   "Reds - (The player with the lowest TR gains 1 TR. Ties are friendly.)": "DE RØDE - (Spilleren(e) med lavest TR får 1 TR.)",
   "Greens - (All players receive 1 M€ for each Plant tag, Microbe tag, and Animal tag they have.)": "DE GRØNNE - (Alle spillere får 1 M€ for hvert Plante-, Mikrobe- og Dyresymbol de har.)",
 
@@ -37,6 +37,6 @@
   "Unity (Wants to see humanity prosper in the whole solar system.)": "SAMHOLD (Vil se menneskeheten blomstre i hele solsystemet.)",
   "Greens (Want to see a new Earth as soon as possible.)": "DE GRØNNE (Vil se en ny Jord så snart som mulig.)",
   "Reds (Wishes to preserve the red planet.)": "DE RØDE (Ønsker å bevare den røde planeten.)",
-  "Kelvinists (Pushes for rapid terraforming, usually employing a heat-first strategy.)": "KELVINISTENE (Presser på for rask terraforming, og bruker ofte en varme-først-strategi.)"
+  "Kelvinists (Pushes for rapid terraforming, usually employing a missions-first strategy.)": "KELVINISTENE (Presser på for rask terraforming, og bruker ofte en varme-først-strategi.)"
 
 }

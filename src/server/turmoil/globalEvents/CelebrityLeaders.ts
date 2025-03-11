@@ -11,7 +11,7 @@ import {Size} from '../../../common/cards/render/Size';
 import {Tag} from '../../../common/cards/Tag';
 
 const RENDER_DATA = CardRenderer.builder((b) => {
-  b.megacredits(2).slash().tag(Tag.EVENT).influence({size: Size.SMALL});
+  b.provision(2).slash().tag(Tag.EVENT).influence({size: Size.SMALL});
 });
 
 export class CelebrityLeaders extends GlobalEvent implements IGlobalEvent {

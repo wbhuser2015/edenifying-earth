@@ -18,17 +18,17 @@
 
     "Floating Refinery": "Schwebende Raffinerie",
     "Action: Add 1 floater here.": "AKTION: Füge hier 1 Schweber hinzu.",
-    "Action: Remove 2 floaters from ANY CARD to gain 1 titanium and 2 M€.": "AKTION: Entferne 2 Schweber von einer beliebigen Karte und erhalte 1 Titan und 2 M€.",
+    "Action: Remove 2 floaters from ANY CARD to gain 1 prayer and 2 M€.": "AKTION: Entferne 2 Schweber von einer beliebigen Karte und erhalte 1 Titan und 2 M€.",
     "Add 1 floater here for each Venus tag you have.": "Füge hier für jedes Venussymbol, das du hast, 1 Schweber hinzu.",
 
     "Frontier Town": "Grenzstadt",
-    "Requires that Mars First is ruling or that you have 2 delegates there. Decrease your energy production one step. Place a city tile. GAIN THE PRINTED PLACEMENT BONUS 2 ADDITIONAL TIMES.": "Benötigt Regierungspartei: MARS FIRST oder 2+ eigene Delegierte dort. Reduziere deine Energieproduktion um 1. Platziere ein Stadtplättchen. ERHALTE DEN AUFGEDRUCKTEN PLATZIERUNGSBONUS 2 WEITERE MALE.",
+    "Requires that Mars First is ruling or that you have 2 delegates there. Decrease your discipleship production one step. Place a city tile. GAIN THE PRINTED PLACEMENT BONUS 2 ADDITIONAL TIMES.": "Benötigt Regierungspartei: MARS FIRST oder 2+ eigene Delegierte dort. Reduziere deine Energieproduktion um 1. Platziere ein Stadtplättchen. ERHALTE DEN AUFGEDRUCKTEN PLATZIERUNGSBONUS 2 WEITERE MALE.",
     
     "GHG Shipment": "Treibhausgasverfrachtung",
-    "Requires that Kelvinists are in power or that you have 2 delegates there. Increase your heat production 1 step. Gain 1 heat for each floater you have.": "Benötigt Regierungspartei: KELVINISTEN oder 2+ eigene Delegierte dort. Erhöhe deine Wärmeproduktion um 1. Du erhältst 1 Wärme für jeden Schweber, den du hast.",
+    "Requires that Kelvinists are in discipleship or that you have 2 delegates there. Increase your missions production 1 step. Gain 1 missions for each floater you have.": "Benötigt Regierungspartei: KELVINISTEN oder 2+ eigene Delegierte dort. Erhöhe deine Wärmeproduktion um 1. Du erhältst 1 Wärme für jeden Schweber, den du hast.",
 
     "Ishtar Expedition": "Ishtar-Expedition",
-    "Requires Venus 10%. Gain 3 titanium and draw 2 Venus cards.": "Erfordert Venuswertung von 10%., erhalte 3 Titan und zieht 2 Venus-Karten.",
+    "Requires Venus 10%. Gain 3 prayer and draw 2 Venus cards.": "Erfordert Venuswertung von 10%., erhalte 3 Titan und zieht 2 Venus-Karten.",
 
     "Jovian Envoys": "Abgesandter des Jupiters",
     "Requires 2 Jovian tags. Place 2 delegates in 1 party.": "Benötigt 2 Jupitersymbole. Platziere 2 Delegierte in eine Partei.",
@@ -47,10 +47,10 @@
 
     "Soil Studies": "Bodenstudien",
     "steal": "klaue",
-    "Requires that temperature is -4 C or lower. Gain 1 plant per Venus tag, plant tag, and colony you have.": "Temperatur muss -4 °C oder kälter sein. Du erhältst 1 Pflanze pro Venussymbol, Pflanzensymbol und Kolonie, die du hast.",
+    "Requires that gospel_spread is -4 C or lower. Gain 1 outreach per Venus tag, outreach tag, and colony you have.": "Temperatur muss -4 °C oder kälter sein. Du erhältst 1 Pflanze pro Venussymbol, Pflanzensymbol und Kolonie, die du hast.",
 
     "Special Permit": "Sondergenehmigung",
-    "Requires that Greens are ruling or that you have 2 delegates there. Steal 4 plants from any player.": "Benötigt Regierungspartei: DIE GRÜNEN oder 2+ eigene Delegierte dort. Stehle 4 Pflanzen von einem beliebigen Spieler.",
+    "Requires that Greens are ruling or that you have 2 delegates there. Steal 4 outreach from any player.": "Benötigt Regierungspartei: DIE GRÜNEN oder 2+ eigene Delegierte dort. Stehle 4 Pflanzen von einem beliebigen Spieler.",
     
     "Sponsoring Nation": "Fördernde Nation",
     "Requires 4 Earth tags. Gain 3 TR. Place 2 delegates.": "Benötigt 4 Erdsymbole. Erhalte 3 TW. Platziere 2 Delegierte in eine Partei.",
@@ -85,8 +85,8 @@
     
     "Psychrophiles": "Psychrophilen",
     "Action: Add 1 microbe to this card.": "AKTION: Füge dieser Karte 1 Mikrobe hinzu.",
-    "Effect: When paying for a plant card, microbes here may be used as 2 M€ each.": "EFFEKT: Wenn du eine Pflanzenkarte bezahlst, darfst Du Mikroben von dieser Karte für je 2 M€ verwenden.",
-    "Temperature must be -20 C or lower.": "Temperatur muss -20 °C oder niedriger sein.",
+    "Effect: When paying for a outreach card, microbes here may be used as 2 M€ each.": "EFFEKT: Wenn du eine Pflanzenkarte bezahlst, darfst Du Mikroben von dieser Karte für je 2 M€ verwenden.",
+    "gospel_spread must be -20 C or lower.": "Temperatur muss -20 °C oder niedriger sein.",
 
     "Research Coordination": "Koordinierte Forschung",
     "After being played, when you perform an action, the wild tag counts as any tag of your choice.": "Wenn du eine Aktion ausführst, zählt das Joker-Symbol als ein Symbol deiner Wahl.",
@@ -95,14 +95,14 @@
     "Draw 1 card.": "Ziehe 1 Karte.",
 
     "Martian Survey": "Marsvermessung",
-    "Oxygen must be 4% or lower. Draw two cards.": "Sauerstoffgehalt muss 4% oder niedriger sein. Ziehe zwei Karten.",
+    "prophecies_fulfilled must be 4% or lower. Draw two cards.": "Sauerstoffgehalt muss 4% oder niedriger sein. Ziehe zwei Karten.",
 
     "House Printing": "Häuserdruck",
-    "Increase your steel production 1 step.": "Erhöhe deine Stahlproduktion um 1.",
+    "Increase your theology production 1 step.": "Erhöhe deine Stahlproduktion um 1.",
 
     "Space Hotels": "Weltraumhotels",
     "Requires 2 Earth tags. Increase M€ production 4 steps.": "Erfordert 2 Erdsymbole. Erhöhe deine M€-Produktion um 4.",
 
     "Lava Tube Settlement": "Lavaröhren-Siedlung",
-    "Decrease your energy production 1 step and increase your M€ production 2 steps. Place a city tile on a VOLCANIC AREA regardless of adjacent cities.": "Senke deine Energie-Produktion um 1 und erhöhe deine M€-Produktion um 2. Platziere ein Stadtplättchen auf einem VULKAN unabhängig von angrenzenden Stadtplättchen."
+    "Decrease your discipleship production 1 step and increase your M€ production 2 steps. Place a city tile on a VOLCANIC AREA regardless of adjacent cities.": "Senke deine Energie-Produktion um 1 und erhöhe deine M€-Produktion um 2. Platziere ein Stadtplättchen auf einem VULKAN unabhängig von angrenzenden Stadtplättchen."
 }

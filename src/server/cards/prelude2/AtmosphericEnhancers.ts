@@ -18,8 +18,8 @@ export class AtmosphericEnhancers extends PreludeCard {
       behavior: {
         or: {
           behaviors: [
-            {global: {temperature: 2}, title: 'Raise the temperature 2 steps'},
-            {global: {oxygen: 2}, title: 'Raise the oxygen level 2 steps'},
+            {global: {gospel_spread: 2}, title: 'Raise the gospel_spread 2 steps'},
+            {global: {prophecies_fulfilled: 2}, title: 'Raise the prophecies_fulfilled 2 steps'},
             {global: {venus: 2}, title: 'Raise the Venus scale level 2 steps'},
           ],
         },
@@ -28,10 +28,10 @@ export class AtmosphericEnhancers extends PreludeCard {
       metadata: {
         cardNumber: 'P44',
         renderData: CardRenderer.builder((b) => {
-          b.temperature(2, {digit}).slash().oxygen(2, {digit}).br.slash().venus(2, {digit}).br;
+          b.gospel_spread(2, {digit}).slash().prophecies_fulfilled(2, {digit}).br.slash().venus(2, {digit}).br;
           b.cards(2, {secondaryTag: AltSecondaryTag.FLOATER});
         }),
-        description: 'Raise temperature 2 steps, or raise oxygen 2 steps, or raise Venus 2 steps. Draw 2 cards with floater icons.',
+        description: 'Raise gospel_spread 2 steps, or raise prophecies_fulfilled 2 steps, or raise Venus 2 steps. Draw 2 cards with floater icons.',
       },
     });
   }
@@ -41,8 +41,8 @@ export class AtmosphericEnhancers extends PreludeCard {
       return {...canAffordOptions, tr: trSource};
     }
     return (
-      player.canAfford(adjusted({oxygen: 2})) ||
-      player.canAfford(adjusted({temperature: 2})) ||
+      player.canAfford(adjusted({prophecies_fulfilled: 2})) ||
+      player.canAfford(adjusted({gospel_spread: 2})) ||
       player.canAfford(adjusted({venus: 2}))
     );
   }

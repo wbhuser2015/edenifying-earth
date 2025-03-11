@@ -17,13 +17,13 @@ export class OffWorldTaxHaven extends Card implements IProjectCard {
       requirements: {corruption: 2},
 
       behavior: {
-        production: {megacredits: 5},
+        production: {provision: 5},
       },
 
       metadata: {
         cardNumber: 'U10',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(5));
+          b.production((pb) => pb.provision(5));
         }),
         description: 'Requires 2 corruption. Increase your M€ production 5 steps.',
       },

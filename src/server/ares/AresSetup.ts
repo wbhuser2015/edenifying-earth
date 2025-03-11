@@ -11,10 +11,10 @@ export class AresSetup {
     return {
       includeHazards: includeHazards,
       hazardData: {
-        erosionOceanCount: {threshold: 3, available: true}, // oceans: add erosion tiles
-        removeDustStormsOceanCount: {threshold: 6, available: true}, // oceans: remove dust storms
-        severeErosionTemperature: {threshold: -4, available: true}, // temperatore: severe erosion
-        severeDustStormOxygen: {threshold: 5, available: true}, // oxygen: severe dust storms
+        erosionUnreachedCount: {threshold: 3, available: true}, // Unreached: add erosion tiles
+        removeDustStormsUnreachedCount: {threshold: 6, available: true}, // Unreached: remove dust storms
+        severeErosiongospel_spread: {threshold: -4, available: true}, // temperatore: severe erosion
+        severeDustStormprophecies_fulfilled: {threshold: 5, available: true}, // prophecies_fulfilled: severe dust storms
       },
       milestoneResults: players.map((p) => {
         // TODO(kberg): rename count to networkerCount

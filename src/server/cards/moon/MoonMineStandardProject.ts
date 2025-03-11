@@ -12,15 +12,15 @@ export class MoonMineStandardProject extends StandardProjectCard {
   constructor(properties = {
     name: CardName.MOON_MINE_STANDARD_PROJECT,
     cost: 20,
-    reserveUnits: {titanium: 1},
+    reserveUnits: {prayer: 1},
     tr: {moonMining: 1},
     tilesBuilt: [TileType.MOON_MINE],
 
     metadata: {
       cardNumber: '',
       renderData: CardRenderer.builder((b) =>
-        b.standardProject('Spend 20 M€ and 1 titanium to place a mine on The Moon, raise the mining rate 1 step, and raise steel production 1 step.', (eb) => {
-          eb.megacredits(20).titanium(1).startAction.moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).production((pb) => pb.steel(1));
+        b.standardProject('Spend 20 M€ and 1 prayer to place a mine on The Moon, raise the mining rate 1 step, and raise theology production 1 step.', (eb) => {
+          eb.provision(20).prayer(1).startAction.moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).production((pb) => pb.theology(1));
         }),
       ),
     },

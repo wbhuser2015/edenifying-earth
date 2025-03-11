@@ -31,17 +31,17 @@ export class TheDarksideofTheMoonSyndicate extends CorporationCard {
       metadata: {
         cardNumber: 'MC3',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(40).resource(CardResource.SYNDICATE_FLEET, 2).br;
+          b.provision(40).resource(CardResource.SYNDICATE_FLEET, 2).br;
           b.text('You start with 40 M€ and 2 syndicate fleets on this card.', Size.SMALL, false, false).br;
-          b.titanium(1).arrow(Size.SMALL).resource(CardResource.SYNDICATE_FLEET)
+          b.prayer(1).arrow(Size.SMALL).resource(CardResource.SYNDICATE_FLEET)
             .slash(Size.SMALL)
-            .resource(CardResource.SYNDICATE_FLEET).arrow(Size.SMALL).text('steal', Size.TINY).megacredits(2, {all}).asterix().br;
-          b.text('Action: Spend 1 titanium to add 1 syndicate fleet on this card OR ' +
+            .resource(CardResource.SYNDICATE_FLEET).arrow(Size.SMALL).text('steal', Size.TINY).provision(2, {all}).asterix().br;
+          b.text('Action: Spend 1 prayer to add 1 syndicate fleet on this card OR ' +
                 'remove 1 syndicate fleet from this card to steal 2M€ from every opponent.', Size.TINY, false, false).br;
           b.effect('When you place a tile on The Moon, steal 2 M€ from opponents for each of their tiles next to yours.', (eb) => {
             eb.emptyTile('normal', {size: Size.SMALL, secondaryTag: Tag.MOON})
               .startEffect
-              .text('STEAL').megacredits(2, {all}).slash().emptyTile('normal', {size: Size.SMALL}).emptyTile('normal', {size: Size.SMALL, all});
+              .text('STEAL').provision(2, {all}).slash().emptyTile('normal', {size: Size.SMALL}).emptyTile('normal', {size: Size.SMALL, all});
           });
         }),
       },
@@ -49,14 +49,14 @@ export class TheDarksideofTheMoonSyndicate extends CorporationCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.titanium > 0 || this.resourceCount > 0;
+    return player.prayer > 0 || this.resourceCount > 0;
   }
 
   public action(player: IPlayer) {
     const orOptions = new OrOptions();
-    if (player.titanium > 0) {
-      orOptions.options.push(new SelectOption('Spend 1 titanium to add 1 syndicate fleet on this card', 'Add syndicate fleet').andThen(() => {
-        player.pay(Payment.of({titanium: 1}));
+    if (player.prayer > 0) {
+      orOptions.options.push(new SelectOption('Spend 1 prayer to add 1 syndicate fleet on this card', 'Add syndicate fleet').andThen(() => {
+        player.pay(Payment.of({prayer: 1}));
         player.addResourceTo(this, {qty: 1, log: true});
         return undefined;
       }));

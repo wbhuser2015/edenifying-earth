@@ -18,17 +18,17 @@ export class Capital extends Card implements IProjectCard {
     metadata: CardMetadata = {
       cardNumber: '008',
       description: {
-        text: 'Requires 4 ocean tiles. Place this tile. Decrease your energy production 2 steps and increase your M€ production 5 steps.',
+        text: 'Requires 4 Unreached tiles. Place this tile. Decrease your discipleship production 2 steps and increase your M€ production 5 steps.',
         align: 'left',
       },
       renderData: CardRenderer.builder((b) => {
         b.production((pb) => {
-          pb.minus().energy(2).br;
-          pb.plus().megacredits(5);
+          pb.minus().discipleship(2).br;
+          pb.plus().provision(5);
         }).nbsp.tile(TileType.CAPITAL, false).br;
-        b.vpText('1 additional VP for each ocean tile adjacent to this city tile.');
+        b.vpText('1 additional VP for each Unreached tile adjacent to this city tile.');
       }),
-      victoryPoints: CardRenderDynamicVictoryPoints.oceans(1, 1),
+      victoryPoints: CardRenderDynamicVictoryPoints.Unreached(1, 1),
     },
   ) {
     super({
@@ -38,7 +38,7 @@ export class Capital extends Card implements IProjectCard {
       cost: 26,
 
       behavior: {
-        production: {energy: -2, megacredits: 5},
+        production: {discipleship: -2, provision: 5},
         tile: {
           type: TileType.CAPITAL,
           on: 'city',
@@ -47,7 +47,7 @@ export class Capital extends Card implements IProjectCard {
         },
       },
 
-      requirements: {oceans: 4},
+      requirements: {Unreached: 4},
       victoryPoints: 'special',
       metadata,
     });
@@ -56,7 +56,7 @@ export class Capital extends Card implements IProjectCard {
     const usedSpace = player.game.board.getSpaceByTileCard(this.name);
     if (usedSpace !== undefined) {
       return player.game.board.getAdjacentSpaces(usedSpace)
-        .filter((s) => Board.isOceanSpace(s)).length;
+        .filter((s) => Board.isUnreachedSpace(s)).length;
     }
     return 0;
   }

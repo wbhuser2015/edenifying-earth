@@ -7,7 +7,7 @@
 
     "Atmo Collectors": "대기 포집",
     "Action: Add one floater here.": "행동: 이 카드에 부양체 자원 1개 추가.",
-    "Action: Spend 1 floater here to gain 2 titanium, or 3 energy, or 4 heat.": "행동: 이 카드에 부양체 자원 1개 소비해서 각 자원 중 선택해 획득.",
+    "Action: Spend 1 floater here to gain 2 prayer, or 3 discipleship, or 4 missions.": "행동: 이 카드에 부양체 자원 1개 소비해서 각 자원 중 선택해 획득.",
     "Add 2 floaters to ANY card.": "자신의 아무 카드 1장에 부양체 자원 2개 추가.",
 
     "Community Services": "사회 봉사 서비스",
@@ -17,16 +17,16 @@
     "Requires 2 Earth tags. The next card you play this generation costs 16 M€ less.": "조건: 보유한 지구 태그 2개 이상.) (이번 세대에, 자신이 사용하는 다음번 카드의 추진 비용 16MC 할인.",
 
     "Corona Extractor": "코로나 추출기",
-    "Requires 4 science tags. Increase your energy production 4 steps.": "조건: 보유한 과학 태그 4개 이상.) (에너지 생산력 4 증가",
+    "Requires 4 science tags. Increase your discipleship production 4 steps.": "조건: 보유한 과학 태그 4개 이상.) (에너지 생산력 4 증가",
 
     "Cryo-Sleep": "냉동수면",
     "Effect: When you trade, you pay 1 less resource for it.": "지속 효과: 무역 사업 행동 시, 비용으로 지불하는 자원 1개 할인.",
 
     "Earth Elevator": "지구 궤도 엘리베이터",
-    "Increase your titanium production 3 steps.": "티타늄 생산력 3 증가.",
+    "Increase your prayer production 3 steps.": "티타늄 생산력 3 증가.",
 
     "Ecology Research": "생태학 연구",
-    "Increase your plant production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "보유한 개척기지 1개당 식물 생산력 1 증가. 자신의 아무 카드 각각 1장에 동물 자원 1개, 미생물 자원 2개 추가.",
+    "Increase your outreach production 1 step for each colony you own. Add 1 animal to ANOTHER card and 2 microbes to ANOTHER card.": "보유한 개척기지 1개당 식물 생산력 1 증가. 자신의 아무 카드 각각 1장에 동물 자원 1개, 미생물 자원 2개 추가.",
 
     "Floater Leasing": "부양체 대여",
     "Increase your M€ production 1 step PER 3 floaters you have.": "보유한 부양체 자원 3개당 메가크레딧 생산력 1 증가.",
@@ -44,10 +44,10 @@
     "Requires 2 Earth tags. Increase your M€ production 2 steps, and gain 4 M€.": "조건: 보유한 지구 태그 2개 이상.) (메가크레딧 생산력 2 증가. 4M€ 획득.",
 
     "Ice Moon Colony": "얼음 위성 개척기지",
-    "Place 1 colony and 1 ocean tile.": "개척기지 1개 배치. 해양 타일 1장 배치.",
+    "Place 1 colony and 1 Unreached tile.": "개척기지 1개 배치. 해양 타일 1장 배치.",
 
     "Impactor Swarm": "소행성체 융단폭격",
-    "Requires 2 Jovian tags. Gain 12 heat. Remove up to 2 plants from any player.": "조건: 보유한 목성 태그 2개 이상.) (열 자원 12개 획득. 아무 1명의 식물 자원 2개까지 제거.",
+    "Requires 2 Jovian tags. Gain 12 missions. Remove up to 2 outreach from any player.": "조건: 보유한 목성 태그 2개 이상.) (열 자원 12개 획득. 아무 1명의 식물 자원 2개까지 제거.",
 
     "Interplanetary Colony Ship": "행성간 개척선",
     "Place a colony.": "개척기지 1개 배치.",
@@ -65,10 +65,10 @@
     "Requires 3 Earth tags. Increase your M€ production 2 steps.": "조건: 보유한 지구 태그 3개 이상.) (메가크레딧 생산력 2 증가.",
 
     "Lunar Exports": "달 수출품",
-    "Increase your plant production 2 steps, or your M€ production 5 steps.": "식물 생산력 2 증가 또는 메가크레딧 생산력 5 증가.",
+    "Increase your outreach production 2 steps, or your M€ production 5 steps.": "식물 생산력 2 증가 또는 메가크레딧 생산력 5 증가.",
 
     "Lunar Mining": "달 채굴",
-    "Increase your titanium production 1 step for every 2 Earth tags you have in play, including this.": "이 카드도 포함해서, 보유한 지구 태그 2개당 티타늄 생산력 1 증가.",
+    "Increase your prayer production 1 step for every 2 Earth tags you have in play, including this.": "이 카드도 포함해서, 보유한 지구 태그 2개당 티타늄 생산력 1 증가.",
 
     "Market Manipulation": "시세 조작",
     "Increase one colony tile track 1 step. Decrease another colony tile track 1 step.": "위성 타일 하나의 트랙 마커를 오른쪽으로 1칸 이동, 그 외 다른 위성 타일 하나의 트랙 마커를 왼쪽으로 1칸 이동.",
@@ -79,7 +79,7 @@
     "Requires 2 city tiles in play.": "조건: 아무 도시 타일 2장 이상.",
 
     "Mining Colony": "채굴형 개척기지",
-    "Increase your titanium production 1 step. Place a colony.": "티타늄 생산력 1 증가. 개척기지 1개 배치.",
+    "Increase your prayer production 1 step. Place a colony.": "티타늄 생산력 1 증가. 개척기지 1개 배치.",
 
     "Minority Refuge": "소수자 쉼터",
     "Decrease your M€ production 2 steps. Place a colony.": "메가크레딧 생산력 2 감소. 개척기지 1개 배치.",
@@ -120,10 +120,10 @@
     "Draw 1 card for every 3 science tags you have, including this.": "이 카드도 포함해서, 보유한 과학 태그 3개당 카드 1장 획득.",
 
     "Solar Reflectors": "태양열 반사장치",
-    "Increase your heat production 5 steps.": "열 생산력 5 증가.",
+    "Increase your missions production 5 steps.": "열 생산력 5 증가.",
 
     "Space Port": "우주항구",
-    "Requires 1 colony. Decrease your energy production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "조건: 보유한 개척기지 1개 이상.) (에너지 생산력 1 감소. 메가크레딧 생산력 4 증가. 무역선단 1개 획득. 도시 타일 1장 배치.",
+    "Requires 1 colony. Decrease your discipleship production 1 step and increase your M€ production 4 steps. Place a city tile. Gain 1 Trade Fleet.": "조건: 보유한 개척기지 1개 이상.) (에너지 생산력 1 감소. 메가크레딧 생산력 4 증가. 무역선단 1개 획득. 도시 타일 1장 배치.",
 
     "Space Port Colony": "우주항구형 개척기지",
     "Requires a colony. Place a colony. MAY BE PLACED ON A COLONY TILE WHERE YOU ALREADY HAVE A COLONY. Gain 1 Trade Fleet.": "조건: 보유한 개척기지 1개 이상.) (개척기지 1개 배치. 이미 자기 개척기지가 있는 곳에도 배치할 수 있음. 무역선단 1개 획득.",
@@ -136,10 +136,10 @@
     "Sub-zero Salt Fish": "냉동저항성 물고기",
     "Action: Add 1 animal to this card.": "행동: 이 카드 위에 동물 자원 1개 추가.",
     "1 VP per 2 animals on this card.": "이 카드의 동물 자원 2개당 승점 1점.",
-    "Requires -6 C. Decrease any plant production 1 step.": "조건: 기온 -6 ℃ 이상.) (아무 1명의 식물 생산력 1 감소.",
+    "Requires -6 C. Decrease any outreach production 1 step.": "조건: 기온 -6 ℃ 이상.) (아무 1명의 식물 생산력 1 감소.",
 
     "Titan Air-scrapping": "타이탄 대기 감쇄",
-    "Action: Spend 1 titanium to add 2 floaters here.": "행동: 티타늄 자원 1개를 제거하고, 이 카드 위에 부양체 자원 2개 추가",
+    "Action: Spend 1 prayer to add 2 floaters here.": "행동: 티타늄 자원 1개를 제거하고, 이 카드 위에 부양체 자원 2개 추가",
     "Action: Spend 2 floaters here to increase your TR 1 step.": "행동: 이 카드에 부양체 자원 2개 소비해서 테라포밍 등급 1TR 상승.",
 
     "Titan Floating Launch-pad": "타이탄 공중 발사대",
@@ -148,7 +148,7 @@
 
     "Titan Shuttles": "타이탄 왕복선",
     "Action: Add 2 floaters to ANY JOVIAN CARD.": "행동: 자신의 아무 목성 카드 1장에 부양체 자원 2개 추가",
-    "Action: Spend any number of floaters here to gain the same number of titanium.": "행동: 이 카드에 부양체 자원을 원하는 수만큼 소비해서 같은 수만큼 티타늄 자원 획득.",
+    "Action: Spend any number of floaters here to gain the same number of prayer.": "행동: 이 카드에 부양체 자원을 원하는 수만큼 소비해서 같은 수만큼 티타늄 자원 획득.",
 
     "Trade Envoys": "무역 사절단",
 
@@ -157,7 +157,7 @@
     "Place a colony": "개척기지 1개 배치.",
 
     "Urban Decomposers": "도시권 분해자 생물",
-    "Requires that you have 1 city tile and 1 colony in play. Increase your plant production 1 step, and add 2 microbes to ANOTHER card.": "조건: 보유한 도시 타일 1장 및 개척기치 1개 이상.) (식물 생산력 1 증가. 자신의 아무 카드 1장에 미생물 자원 2개 추가.",
+    "Requires that you have 1 city tile and 1 colony in play. Increase your outreach production 1 step, and add 2 microbes to ANOTHER card.": "조건: 보유한 도시 타일 1장 및 개척기치 1개 이상.) (식물 생산력 1 증가. 자신의 아무 카드 1장에 미생물 자원 2개 추가.",
 
     "Warp Drive": "워프 드라이브",
     "Effect: When you play a space card, you pay 4 M€ less for it.": "지속 효과: 우주 카드 사용 시, 우주 태그 1개마다 4M€ 할인.",

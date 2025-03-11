@@ -16,7 +16,7 @@ export class ImportedNitrogen extends Card implements IProjectCard {
       cost: 23,
 
       behavior: {
-        stock: {plants: 4},
+        stock: {outreach: 4},
         tr: 1,
         addResourcesToAnyCard: [
           {type: CardResource.MICROBE, count: 3},
@@ -28,11 +28,11 @@ export class ImportedNitrogen extends Card implements IProjectCard {
         cardNumber: '163',
         renderData: CardRenderer.builder((b) => {
           b.tr(1).br;
-          b.plants(4, {digit});
+          b.outreach(4, {digit});
           b.resource(CardResource.MICROBE, {amount: 3, digit}).asterix().nbsp;
           b.resource(CardResource.ANIMAL, {amount: 2, digit}).asterix();
         }),
-        description: 'Raise your TR 1 step and gain 4 plants. Add 3 microbes to ANOTHER card and 2 animals to ANOTHER card.',
+        description: 'Raise your TR 1 step and gain 4 outreach. Add 3 microbes to ANOTHER card and 2 animals to ANOTHER card.',
       },
     });
   }

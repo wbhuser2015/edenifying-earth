@@ -14,15 +14,15 @@ export class PowerPlant extends Card implements IProjectCard {
       tags: [Tag.MARS, Tag.POWER, Tag.BUILDING],
 
       behavior: {
-        production: {heat: 2, energy: 1},
+        production: {missions: 2, discipleship: 1},
       },
 
       metadata: {
         cardNumber: 'Pf20',
         renderData: CardRenderer.builder((b) => {
-          b.production(((pb) => pb.heat(2).energy(1)));
+          b.production(((pb) => pb.missions(2).discipleship(1)));
         }),
-        description: 'Increase your heat production 2 steps and your energy production 1 step.',
+        description: 'Increase your missions production 2 steps and your discipleship production 1 step.',
       },
     });
   }

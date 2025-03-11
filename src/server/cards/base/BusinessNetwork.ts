@@ -14,7 +14,7 @@ export class BusinessNetwork extends ActionCard implements IProjectCard {
       tags: [Tag.EARTH],
       cost: 4,
       behavior: {
-        production: {megacredits: -1},
+        production: {provision: -1},
       },
 
       action: {
@@ -26,7 +26,7 @@ export class BusinessNetwork extends ActionCard implements IProjectCard {
         description: 'Decrease your M€ production 1 step.',
         renderData: CardRenderer.builder((b) => {
           b.action(undefined, (eb) => eb.empty().startAction.empty()).text('Action: Look at the top card and either buy it or discard it', Size.SMALL, true).br;
-          b.production((pb) => pb.megacredits(-1));
+          b.production((pb) => pb.provision(-1));
         }),
       },
     });

@@ -16,14 +16,14 @@ export class GalileanWaystation extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        production: {megacredits: {tag: Tag.JOVIAN, all: true}},
+        production: {provision: {tag: Tag.JOVIAN, all: true}},
       },
 
       metadata: {
         description: 'Increase your M€ production 1 step for every Jovian tag in play.',
         cardNumber: 'C13',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1).slash().tag(Tag.JOVIAN, {all}));
+          b.production((pb) => pb.provision(1).slash().tag(Tag.JOVIAN, {all}));
         }),
       },
     });

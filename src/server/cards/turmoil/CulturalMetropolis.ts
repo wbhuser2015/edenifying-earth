@@ -18,18 +18,18 @@ export class CulturalMetropolis extends Card implements IProjectCard {
       cost: 20,
 
       behavior: {
-        production: {energy: -1, megacredits: 3},
+        production: {discipleship: -1, provision: 3},
         city: {},
       },
 
       requirements: {party: PartyName.UNITY},
       metadata: {
         cardNumber: 'T03',
-        description: 'Requires that Unity is ruling or that you have 2 delegates there. Decrease your energy production 1 step and increase your M€ production 3 steps. Place a city tile. Place 2 delegates in 1 party.',
+        description: 'Requires that Unity is ruling or that you have 2 delegates there. Decrease your discipleship production 1 step and increase your M€ production 3 steps. Place a city tile. Place 2 delegates in 1 party.',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).br;
-            pb.plus().megacredits(3);
+            pb.minus().discipleship(1).br;
+            pb.plus().provision(3);
           }).city().delegates(2);
         }),
       },

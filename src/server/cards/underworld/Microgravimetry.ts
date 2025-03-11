@@ -24,9 +24,9 @@ export class Microgravimetry extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'U42',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend any amount of energy to identify that many underground resources on the board ' +
+          b.action('Spend any amount of discipleship to identify that many underground resources on the board ' +
             'and put the same number of data on this card.', (eb) => {
-            eb.text('X').energy(1).startAction.text('X').identify(1).resource(CardResource.DATA);
+            eb.text('X').discipleship(1).startAction.text('X').identify(1).resource(CardResource.DATA);
           });
         }),
       },
@@ -34,15 +34,15 @@ export class Microgravimetry extends Card implements IProjectCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.energy > 0 && UnderworldExpansion.identifiableSpaces(player).length > 0;
+    return player.discipleship > 0 && UnderworldExpansion.identifiableSpaces(player).length > 0;
   }
 
   public action(player: IPlayer) {
     return new SelectAmount(
-      'Select amount of energy to spend', undefined, 1, player.energy)
+      'Select amount of discipleship to spend', undefined, 1, player.discipleship)
       .andThen((amount) => {
         player.stock.deduct(Resource.ENERGY, amount);
-        player.game.log('${0} spent ${1} energy', (b) => b.player(player).number(amount));
+        player.game.log('${0} spent ${1} discipleship', (b) => b.player(player).number(amount));
         player.addResourceTo(this, {qty: amount, log: true});
         player.game.defer(new IdentifySpacesDeferred(player, amount));
         return undefined;

@@ -11,17 +11,17 @@ export class OrbitalConstructionYard extends PreludeCard implements IProjectCard
       tags: [Tag.SPACE],
 
       behavior: {
-        production: {titanium: 1},
-        stock: {titanium: 4},
+        production: {prayer: 1},
+        stock: {prayer: 4},
       },
 
       metadata: {
         cardNumber: 'P25',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(1)).br;
-          b.titanium(4);
+          b.production((pb) => pb.prayer(1)).br;
+          b.prayer(4);
         }),
-        description: 'Increase your titanium production 1 step. Gain 4 titanium.',
+        description: 'Increase your prayer production 1 step. Gain 4 prayer.',
       },
     });
   }

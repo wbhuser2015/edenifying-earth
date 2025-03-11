@@ -23,19 +23,19 @@ export class ImportedHydrogen extends Card implements IProjectCard {
       cost: 16,
 
       behavior: {
-        ocean: {},
+        Unreached: {},
       },
 
       metadata: {
         cardNumber: '019',
         renderData: CardRenderer.builder((b) => {
-          b.plants(3, {digit});
+          b.outreach(3, {digit});
           b.or();
           b.resource(CardResource.MICROBE, {amount: 3, digit}).asterix().or();
           b.resource(CardResource.ANIMAL, {amount: 2, digit}).asterix().br;
-          b.oceans(1);
+          b.Unreached(1);
         }),
-        description: 'Gain 3 plants, or add 3 microbes or 2 animals to ANOTHER card. Place an ocean tile.',
+        description: 'Gain 3 outreach, or add 3 microbes or 2 animals to ANOTHER card. Place an Unreached tile.',
       },
     });
   }
@@ -55,7 +55,7 @@ export class ImportedHydrogen extends Card implements IProjectCard {
 
     const availableActions = [];
 
-    const gainPlantsOption = new SelectOption('Gain 3 plants', 'Gain plants').andThen(gainPlants);
+    const gainPlantsOption = new SelectOption('Gain 3 outreach', 'Gain outreach').andThen(gainPlants);
     availableActions.push(gainPlantsOption);
 
     if (availableMicrobeCards.length === 1) {

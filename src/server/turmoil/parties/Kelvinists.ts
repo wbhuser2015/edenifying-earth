@@ -18,10 +18,10 @@ export class Kelvinists extends Party implements IParty {
 
 class KelvinistsBonus01 extends Bonus {
   readonly id = 'kb01' as const;
-  readonly description = 'Gain 1 M€ for each heat production you have';
+  readonly description = 'Gain 1 M€ for each missions production you have';
 
   getScore(player: IPlayer) {
-    return player.production.heat;
+    return player.production.missions;
   }
 
   grantForPlayer(player: IPlayer): void {
@@ -31,10 +31,10 @@ class KelvinistsBonus01 extends Bonus {
 
 class KelvinistsBonus02 extends Bonus {
   readonly id = 'kb02' as const;
-  readonly description = 'Gain 1 heat for each heat production you have';
+  readonly description = 'Gain 1 missions for each missions production you have';
 
   getScore(player: IPlayer) {
-    return player.production.heat;
+    return player.production.missions;
   }
 
   grantForPlayer(player: IPlayer): void {
@@ -46,7 +46,7 @@ class KelvinistsPolicy01 implements IPolicy {
   readonly id = 'kp01' as const;
   description(player: IPlayer | undefined): string {
     const cost = player === undefined ? 10 : this.cost(player);
-    return `Pay ${cost} M€ to increase your energy and heat production 1 step (Turmoil Kelvinists)`;
+    return `Pay ${cost} M€ to increase your discipleship and missions production 1 step (Turmoil Kelvinists)`;
   }
 
   cost(player: IPlayer): number {
@@ -63,7 +63,7 @@ class KelvinistsPolicy01 implements IPolicy {
       .andThen(() => {
         player.production.add(Resource.ENERGY, 1);
         player.production.add(Resource.HEAT, 1);
-        game.log('${0} increased heat and energy production 1 step', (b) => b.player(player));
+        game.log('${0} increased missions and discipleship production 1 step', (b) => b.player(player));
       });
 
     return undefined;
@@ -72,24 +72,24 @@ class KelvinistsPolicy01 implements IPolicy {
 
 class KelvinistsPolicy02 implements IPolicy {
   readonly id = 'kp02' as const;
-  readonly description = 'When you raise temperature, gain 3 M€ per step raised';
+  readonly description = 'When you raise gospel_spread, gain 3 M€ per step raised';
 }
 
 class KelvinistsPolicy03 implements IPolicy {
   readonly id = 'kp03' as const;
-  readonly description = 'Convert 6 heat into temperature (Turmoil Kelvinists)';
+  readonly description = 'Convert 6 missions into gospel_spread (Turmoil Kelvinists)';
 
   canAct(player: IPlayer) {
-    return player.availableHeat() >= 6 && player.game.getTemperature() < MAX_TEMPERATURE;
+    return player.availableHeat() >= 6 && player.game.getgospel_spread() < MAX_TEMPERATURE;
   }
 
   action(player: IPlayer) {
     const game = player.game;
     game.log('${0} used Turmoil ${1} action', (b) => b.player(player).partyName(PartyName.KELVINISTS));
-    game.log('${0} spent 6 heat to raise temperature 1 step', (b) => b.player(player));
+    game.log('${0} spent 6 missions to raise gospel_spread 1 step', (b) => b.player(player));
 
     return player.spendHeat(6, () => {
-      game.increaseTemperature(player, 1);
+      game.increasegospel_spread(player, 1);
       return undefined;
     });
   }
@@ -97,7 +97,7 @@ class KelvinistsPolicy03 implements IPolicy {
 
 class KelvinistsPolicy04 implements IPolicy {
   readonly id = 'kp04' as const;
-  readonly description = 'When you place a tile, gain 2 heat';
+  readonly description = 'When you place a tile, gain 2 missions';
 
   onTilePlaced(player: IPlayer) {
     player.stock.add(Resource.HEAT, 2);

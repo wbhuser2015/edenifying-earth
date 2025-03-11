@@ -15,16 +15,16 @@ export class PublicBaths extends Card implements IProjectCard {
       victoryPoints: 1,
 
       behavior: {
-        stock: {megacredits: 6},
+        stock: {provision: 6},
       },
 
-      requirements: {oceans: 6},
+      requirements: {Unreached: 6},
       metadata: {
         cardNumber: 'X70',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(6);
+          b.provision(6);
         }),
-        description: 'Requires 6 oceans. Gain 6 M€.',
+        description: 'Requires 6 Unreached. Gain 6 M€.',
       },
     });
   }

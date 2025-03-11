@@ -14,15 +14,15 @@ export class Soletta extends Card implements IProjectCard {
       cost: 35,
 
       behavior: {
-        production: {heat: 7},
+        production: {missions: 7},
       },
 
       metadata: {
         cardNumber: '203',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.heat(7));
+          b.production((pb) => pb.missions(7));
         }),
-        description: 'Increase your heat production 7 steps.',
+        description: 'Increase your missions production 7 steps.',
       },
     });
   }

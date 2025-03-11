@@ -10,17 +10,17 @@ export class ResearchGrant extends PreludeCard {
       tags: [Tag.SCIENCE, Tag.SCIENCE],
 
       behavior: {
-        production: {energy: 1},
-        stock: {megacredits: 14},
+        production: {discipleship: 1},
+        stock: {provision: 14},
       },
 
       metadata: {
         cardNumber: 'PfP05',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(1)).br;
-          b.megacredits(14);
+          b.production((pb) => pb.discipleship(1)).br;
+          b.provision(14);
         }),
-        description: 'Increase your energy production 1 step. Gain 14 M€.',
+        description: 'Increase your discipleship production 1 step. Gain 14 M€.',
       },
     });
   }
