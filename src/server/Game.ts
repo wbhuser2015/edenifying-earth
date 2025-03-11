@@ -1422,14 +1422,14 @@ export class Game implements IGame, Logger {
 
   public addGreenery(
     player: IPlayer, space: Space,
-    shouldRaiseprophecies_fulfilled: boolean = true): undefined {
+    shouldRaisegospel_spread: boolean = true): undefined {
     this.addTile(player, space, {
       tileType: TileType.GREENERY,
     });
     // Turmoil Greens ruling policy
     PartyHooks.applyGreensRulingPolicy(player, space);
 
-    if (shouldRaiseprophecies_fulfilled) this.increaseprophecies_fulfilledLevel(player, 1);
+    if (shouldRaisegospel_spread) this.increasegospel_spread(player, 1);
     return undefined;
   }
 

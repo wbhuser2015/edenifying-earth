@@ -20,8 +20,8 @@ export enum CardName {
   AIR_SCRAPPING_STANDARD_PROJECT_VARIANT = 'Air Scrapping (Var)',
 
   // Standard actions:
-  CONVERT_PLANTS = 'Convert Plants',
-  CONVERT_HEAT = 'Convert Heat',
+  CONVERT_PLANTS = 'Plant a Church',
+  CONVERT_HEAT = 'Send Missionaries',
 
   ACQUIRED_COMPANY = 'Faith-Based Investment',
   ADAPTATION_TECHNOLOGY = 'Missionary Adaptation',
