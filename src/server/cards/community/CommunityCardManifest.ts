@@ -5,7 +5,6 @@ import { MissionsSunday } from './MissionsSunday';
 import {DiscipleshipGroups} from './DiscipleshipGroups';
 import {GivingCampaign} from './GivingCampaign';
 import {AerospaceMission} from './AerospaceMission';
-import {AgricolaInc} from './AgricolaInc';
 import {Athena} from './Athena';
 import {ByElection} from './ByElection';
 import {CardName} from '../../../common/cards/CardName';
@@ -33,7 +32,6 @@ import {ValuableGases} from './ValuableGases';
 export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   module: 'community',
   corporationCards: {
-    [CardName.AGRICOLA_INC]: {Factory: AgricolaInc},
     [CardName.PROJECT_WORKSHOP]: {Factory: ProjectWorkshop},
     [CardName.INCITE]: {Factory: Incite, compatibility: 'turmoil'},
     [CardName.PLAYWRIGHTS]: {Factory: Playwrights},
