@@ -575,8 +575,6 @@ export enum CardName {
   // End of promo cards
 
   // Community corps
-  CURIOSITY_II = 'Curiosity II',
-  INCITE = 'Incite',
   MIDAS = 'Midas',
   PLAYWRIGHTS = 'Playwrights',
   PROJECT_WORKSHOP = 'Project Workshop',

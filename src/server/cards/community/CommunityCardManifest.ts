@@ -8,12 +8,10 @@ import {AerospaceMission} from './AerospaceMission';
 import {Athena} from './Athena';
 import {ByElection} from './ByElection';
 import {CardName} from '../../../common/cards/CardName';
-import {CuriosityII} from './CuriosityII';
 import {DTS} from './DTS';
 import {Eris} from './Eris';
 import {ExecutiveOrder} from './ExecutiveOrder';
 import {GlobalEventName} from '../../../common/turmoil/globalEvents/GlobalEventName';
-import {Incite} from './Incite';
 import {JunkVentures} from './JunkVentures';
 import {LeadershipSummit} from './LeadershipSummit';
 import {MEGACHURCHNETWORK} from './MEGACHURCHNETWORK';
@@ -33,9 +31,7 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   module: 'community',
   corporationCards: {
     [CardName.PROJECT_WORKSHOP]: {Factory: ProjectWorkshop},
-    [CardName.INCITE]: {Factory: Incite, compatibility: 'turmoil'},
     [CardName.PLAYWRIGHTS]: {Factory: Playwrights},
-    [CardName.CURIOSITY_II]: {Factory: CuriosityII},
     [CardName.MIDAS]: {Factory: Midas},
 	[CardName.MEGACHURCHNETWORK]: {Factory: MEGACHURCHNETWORK},
     [CardName.UNITED_NATIONS_MISSION_ONE]: {Factory: UnitedNationsMissionOne},

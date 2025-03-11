@@ -535,7 +535,7 @@ export class Turmoil {
       let sendDelegate;
       if (!this.usedFreeDelegateAction.has(player)) {
         sendDelegate = new SendDelegateToArea(player, 'Send a delegate in an area (from lobby)', {freeStandardAction: true});
-      } else if (player.isCorporation(CardName.INCITE) && player.canAfford(3)) {
+      } else if (player.isCorporation(CardName.MEGACHURCHNETWORK) && player.canAfford(3)) {
         sendDelegate = new SendDelegateToArea(player, 'Send a delegate in an area (3 M€)', {cost: 3});
       } else if (player.canAfford(5)) {
         sendDelegate = new SendDelegateToArea(player, 'Send a delegate in an area (5 M€)', {cost: 5});
