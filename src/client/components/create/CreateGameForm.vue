@@ -219,7 +219,7 @@ export default (Vue as WithRefs<Refs>).extend({
       fastModeOption: false,
       removeNegativeGlobalEventsOption: false,
       includeFanMA: false,
-      startingCorporations: 1,
+      startingCorporations: 2,
       soloTR: false,
       clonedGameId: undefined,
       allOfficialExpansions: false,
