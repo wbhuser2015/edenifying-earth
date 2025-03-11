@@ -3,23 +3,21 @@ import { TwoWitnesses } from './TwoWitnesses';
 import { CommunityNights } from './CommunityNights';
 import { MissionsSunday } from './MissionsSunday';
 import {DiscipleshipGroups} from './DiscipleshipGroups';
+import { PrayerMeeting } from './PrayerMeeting';
 import {GivingCampaign} from './GivingCampaign';
+import {DTS} from './DTS';
 import {AerospaceMission} from './AerospaceMission';
 import {Athena} from './Athena';
 import {ByElection} from './ByElection';
 import {CardName} from '../../../common/cards/CardName';
-import {DTS} from './DTS';
 import {Eris} from './Eris';
 import {ExecutiveOrder} from './ExecutiveOrder';
 import {GlobalEventName} from '../../../common/turmoil/globalEvents/GlobalEventName';
-import {JunkVentures} from './JunkVentures';
 import {LeadershipSummit} from './LeadershipSummit';
-import {MEGACHURCHNETWORK} from './MEGACHURCHNETWORK';
 import {Midas} from './Midas';
 import {ModuleManifest} from '../ModuleManifest';
 import {Playwrights} from './Playwrights';
 import {PoliticalUprising} from './PoliticalUprising';
-import { PrayerMeeting } from './PrayerMeeting';
 import {ProjectWorkshop} from './ProjectWorkshop';
 import {ResearchGrant} from './ResearchGrant';
 import {SpecialDesignProxy} from './SpecialDesignProxy';
@@ -33,9 +31,7 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.PROJECT_WORKSHOP]: {Factory: ProjectWorkshop},
     [CardName.PLAYWRIGHTS]: {Factory: Playwrights},
     [CardName.MIDAS]: {Factory: Midas},
-	[CardName.MEGACHURCHNETWORK]: {Factory: MEGACHURCHNETWORK},
     [CardName.UNITED_NATIONS_MISSION_ONE]: {Factory: UnitedNationsMissionOne},
-    [CardName.JUNK_VENTURES]: {Factory: JunkVentures},
     [CardName.ERIS]: {Factory: Eris, compatibility: 'ares'},
     [CardName.ATHENA]: {Factory: Athena, compatibility: 'ares'},
   },

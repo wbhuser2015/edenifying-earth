@@ -1,3 +1,4 @@
+import {MEGACHURCHNETWORK} from './corporation/MEGACHURCHNETWORK';
 import {CardName} from '../../common/cards/CardName';
 import {AcquiredCompany} from './base/AcquiredCompany';
 import {AdaptationTechnology} from './base/AdaptationTechnology';
@@ -362,6 +363,7 @@ export const BASE_CARD_MANIFEST = new ModuleManifest({
     [CardName.ZEPPELINS]: {Factory: Zeppelins},
   },
   corporationCards: {
+    [CardName.MEGACHURCHNETWORK]: {Factory: MEGACHURCHNETWORK},
     [CardName.BEGINNER_CORPORATION]: {Factory: BeginnerCorporation},
     [CardName.CREDICOR]: {Factory: CrediCor},
     [CardName.ECOLINE]: {Factory: EcoLine},

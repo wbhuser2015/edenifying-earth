@@ -579,7 +579,6 @@ export enum CardName {
   PLAYWRIGHTS = 'Playwrights',
   PROJECT_WORKSHOP = 'Project Workshop',
   UNITED_NATIONS_MISSION_ONE = 'United Nations Mission One',
-  JUNK_VENTURES = 'Junk Ventures',
   ERIS = 'Eris',
   ATHENA = 'Athena',
 
