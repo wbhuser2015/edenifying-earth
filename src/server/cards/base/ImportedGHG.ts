@@ -11,7 +11,7 @@ export class ImportedGHG extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.IMPORTED_GHG,
       tags: [Tag.EARTH, Tag.SPACE],
-      cost: 7,
+      cost: 10,
 
       behavior: {
         production: {missions: 1},

@@ -26,7 +26,7 @@ export class Helion extends CorporationCard {
     });
   }
   public override bespokePlay(player: IPlayer) {
-    player.canUseHeatAsMegaCredits = true;
+    player.canUseHeatAsMegaCredits = false;
     return undefined;
   }
 }
