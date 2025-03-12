@@ -576,10 +576,6 @@ export enum CardName {
   // End of promo cards
 
   // Community corps
-  MIDAS = 'Midas',
-  PLAYWRIGHTS = 'Playwrights',
-  PROJECT_WORKSHOP = 'Project Workshop',
-  UNITED_NATIONS_MISSION_ONE = 'United Nations Mission One',
   ERIS = 'Eris',
   ATHENA = 'Athena',
 

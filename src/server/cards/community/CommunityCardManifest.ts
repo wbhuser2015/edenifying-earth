@@ -18,24 +18,16 @@ import {Eris} from './Eris';
 import {ExecutiveOrder} from './ExecutiveOrder';
 import {GlobalEventName} from '../../../common/turmoil/globalEvents/GlobalEventName';
 import {LeadershipSummit} from './LeadershipSummit';
-import {Midas} from './Midas';
 import {ModuleManifest} from '../ModuleManifest';
-import {Playwrights} from './Playwrights';
 import {PoliticalUprising} from './PoliticalUprising';
-import {ProjectWorkshop} from './ProjectWorkshop';
 import {ResearchGrant} from './ResearchGrant';
 import {SpecialDesignProxy} from './SpecialDesignProxy';
 import {TradeAdvance} from './TradeAdvance';
-import {UnitedNationsMissionOne} from './UnitedNationsMissionOne';
 import {ValuableGases} from './ValuableGases';
 
 export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   module: 'community',
   corporationCards: {
-    [CardName.PROJECT_WORKSHOP]: {Factory: ProjectWorkshop},
-    [CardName.PLAYWRIGHTS]: {Factory: Playwrights},
-    [CardName.MIDAS]: {Factory: Midas},
-    [CardName.UNITED_NATIONS_MISSION_ONE]: {Factory: UnitedNationsMissionOne},
     [CardName.ERIS]: {Factory: Eris, compatibility: 'ares'},
     [CardName.ATHENA]: {Factory: Athena, compatibility: 'ares'},
   },

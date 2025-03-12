@@ -93,15 +93,6 @@
     <template v-else-if="title === CardName.PHARMACY_UNION">
       <div class="card-pharmacy-union-logo">Pharmacy<br/>Union</div>
     </template>
-    <template v-else-if="title === CardName.PLAYWRIGHTS">
-      <div class="card-playwrights-logo">Playwrights</div>
-    </template>
-    <template v-else-if="title === CardName.PROJECT_WORKSHOP">
-      <div class="card-project-workshop-logo">PROJECT<br/>WORKSHOP</div>
-    </template>
-    <template v-else-if="title === CardName.UNITED_NATIONS_MISSION_ONE">
-      <span class="card-unmo-logo">UNITED NATIONS<br/>MISSION ONE</span>
-    </template>
     <template v-else-if="title === CardName.MONS_INSURANCE">
       <div class="card-mons-logo">
       <div class="mons0">▲</div>
@@ -200,7 +191,6 @@ const imageLogosWithNames: Map<CardName, string> = new Map([
   [CardName.VIRON, 'card-viron-logo'],
   [CardName.ARIDOR, 'card-aridor-logo'],
   [CardName.TERACTOR, 'card-teractor-logo'],
-  [CardName.MIDAS, 'card-midas-logo'],
   [CardName.MARS_MATHS, 'card-mars-maths-logo'],
 ]);
 
