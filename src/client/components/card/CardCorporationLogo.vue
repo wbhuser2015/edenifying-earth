@@ -42,15 +42,13 @@
     <template v-else-if="title === CardName.MANUTECH">
       <span class="card-manutech-logo"><span style="color:white;background:#e63900;text-shadow:none;padding-left:2px;">MA</span>NUTECH</span>
     </template>
-    <template v-else-if="title === CardName.AGRICOLA_INC">
-      <span class="card-agricola-logo">Agricola Inc</span>
+    <template v-else-if="title === CardName.PHOBOLOG">
+      <span class="card-phobolog-logo"><span>Pentacostal</span><br><span>Movement</span></span>
     </template>
     <template v-else-if="title === CardName.ARCADIAN_COMMUNITIES">
       <span class="card-arcadian-logo"><span>Arcadian</span><br><span>Communities</span></span>
     </template>
-    <template v-else-if="title === CardName.INCITE">
-      <span class="card-incite-logo">Incite</span>
-    </template>
+
     <template v-else-if="title === CardName.LAKEFRONT_RESORTS">
       <div class="card-lakefront-logo">LAKEFRONT <br> &nbsp;&nbsp;RESORTS</div>
     </template>
@@ -124,9 +122,6 @@
       <div class="mons1">mons</div>
       <div class="mons2">INSURANCE</div>
       </div>
-    </template>
-    <template v-else-if="title ===  CardName.CURIOSITY_II">
-      <div class="card-curiosity-ii-logo">Curiosity II</div>
     </template>
     <template v-else-if="title === CardName.MARS_MATHS">
       <div class="card-mars-maths-logo" style="font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif">

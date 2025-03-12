@@ -343,10 +343,9 @@ export enum CardName {
   // Corps:
   BEGINNER_CORPORATION = 'Beginner Corporation',
   HELION = 'Intl. Mission Board',
-  INVENTRIX = 'Inventrix',
   MINING_GUILD = 'PCA',
   MEGACHURCHNETWORK = 'Megachurch Network',
-  PHOBOLOG = 'PhoboLog',
+  PHOBOLOG = 'Pentacostal Movement',
   SATURN_SYSTEMS = 'Saturn Systems',
   TERACTOR = 'Teractor',
   THARSIS_REPUBLIC = 'Tharsis Republic',
