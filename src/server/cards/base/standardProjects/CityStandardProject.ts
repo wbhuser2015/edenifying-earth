@@ -13,7 +13,7 @@ export class CityStandardProject extends StandardProjectCard {
       metadata: {
         cardNumber: 'SP4',
         renderData: CardRenderer.builder((b) =>
-          b.standardProject('Spend 25 M€ to place a city tile and increase your M€ production 1 step.', (eb) => {
+          b.standardProject('Spend 25 M€ to place a Church and increase your M€ production 1 step.', (eb) => {
             eb.provision(25).startAction.city().production((pb) => {
               pb.provision(1);
             });

@@ -31,15 +31,15 @@ export class SellPatentsStandardProject extends StandardProjectCard {
 
   public override action(player: IPlayer): SelectCard<IProjectCard> {
     return new SelectCard(
-      'Sell patents',
-      'Sell',
+      'Cancel Initiatives (Sell Cards)',
+      'Cancel',
       player.cardsInHand,
       {max: player.cardsInHand.length, played: false})
       .andThen((cards) => {
         player.megaCredits += cards.length;
         cards.forEach((card) => player.discardCardFromHand(card));
         this.projectPlayed(player);
-        player.game.log('${0} sold ${1} patents', (b) => b.player(player).number(cards.length));
+        player.game.log('${0} canceled ${1} initatives', (b) => b.player(player).number(cards.length));
         return undefined;
       });
   }

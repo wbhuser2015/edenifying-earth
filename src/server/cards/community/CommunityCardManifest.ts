@@ -47,17 +47,13 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   },
   projectCards: {
   [CardName.JOEL_OSTEEN_SUNDAY]: { Factory: JoelOsteensunday },
-
   [CardName.ABOMINATION_OF_DESOLATION]: { Factory: AbominationOfDesolation },
-
   [CardName.TWO_WITNESSES]: { Factory: TwoWitnesses },
-
   [CardName.COMMUNITY_NIGHTS]: { Factory: CommunityNights },
-
 	[CardName.MISSIONS_SUNDAY]: { Factory: MissionsSunday },
-    [CardName.DISCIPLESHIP_GROUPS]: { Factory: DiscipleshipGroups },
-    [CardName.PRAYER_MEETING]: { Factory: PrayerMeeting },
-    [CardName.SPECIAL_DESIGN_PROXY]: {Factory: SpecialDesignProxy, instantiate: false},
+  [CardName.DISCIPLESHIP_GROUPS]: { Factory: DiscipleshipGroups },
+  [CardName.PRAYER_MEETING]: { Factory: PrayerMeeting },
+  [CardName.SPECIAL_DESIGN_PROXY]: {Factory: SpecialDesignProxy, instantiate: false},
 	[CardName.DTS]: {Factory: DTS, instantiate: false},
 	[CardName.GIVING_CAMPAIGN]: { Factory: GivingCampaign }, 
 

@@ -36,8 +36,8 @@ export class PlaceCityTile extends DeferredAction<Space | undefined> {
 
   private getTitle(type: PlacementType) {
     switch (type) {
-    case 'city': return 'Select space for city tile';
-    case 'isolated': return 'Select place next to no other tile for city';
+    case 'city': return 'Select space for church tile';
+    case 'isolated': return 'Select place next to no other tile for church';
     // case '': return 'Select space reserved for Unreached to place greenery tile';
     default: throw new Error('unhandled type; ' + type);
     }

@@ -1,6 +1,5 @@
 export enum CardName {
   JOEL_OSTEEN_SUNDAY = 'Joel Osteen sunday',
-
   ABOMINATION_OF_DESOLATION = 'Abomination of Desolation',
   TWO_WITNESSES = 'Two Witnesses',
   COMMUNITY_NIGHTS = 'Community Nights',
@@ -9,8 +8,9 @@ export enum CardName {
   GIVING_CAMPAIGN = 'Giving Campaign',
   DTS = 'Dallas Theological Seminary',
   PRAYER_MEETING = 'Prayer Meeting',
+  ASTEROID_MINING = 'Renewed Focus on Prayer',
   // Standard projects:
-  SELL_PATENTS_STANDARD_PROJECT = 'Sell Patents',
+  SELL_PATENTS_STANDARD_PROJECT = 'Change Priorities (sell cards)',
   POWER_PLANT_STANDARD_PROJECT = 'Power Plant:SP',
   ASTEROID_STANDARD_PROJECT = 'Asteroid:SP',
   BUFFER_GAS_STANDARD_PROJECT = 'Buffer Gas',
@@ -44,7 +44,6 @@ export enum CardName {
   ARTIFICIAL_PHOTOSYNTHESIS = 'Sunlight of Righteousness',
   ARCTIC_ALGAE = 'Frozen Manna',
   ASTEROID = 'Fiery Judgment',
-  ASTEROID_MINING = 'Renewed Focus on Prayer',
   ASTEROID_MINING_CONSORTIUM = 'Joseph’s Storehouses',
   ATMO_COLLECTORS = 'Gathering the Harvest',
   BREATHING_FILTERS = 'Holy Breath of Life',
