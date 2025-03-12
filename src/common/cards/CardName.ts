@@ -1,4 +1,5 @@
 export enum CardName {
+  CHURCH_SPLIT = 'Church Split',
   THE_RAPTURE = 'The Rapture',
   RAISE_OF_THE_FALSE_PROPHET = 'Rise of the False Prophet',
   DR_MICHAEL_SVIGEL = 'Dr. Michael Svigel',
@@ -175,7 +176,8 @@ export enum CardName {
   MARKET_MANIPULATION = 'Market Manipulation',
   MARTIAN_INDUSTRIES = 'Martian Industries',
   MARTIAN_ZOO = 'Martian Zoo',
-  MANGROVE = 'Mangrove',MEDIA_ARCHIVES = 'Media Archives',
+  MANGROVE = 'Mangrove',
+  MEDIA_ARCHIVES = 'Media Archives',
   MEDIA_GROUP = 'Media Group',
   MEDICAL_LAB = 'Medical Lab',
   METHANE_FROM_TITAN = 'Methane From Titan',
