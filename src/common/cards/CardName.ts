@@ -350,8 +350,8 @@ export enum CardName {
   BEGINNER_CORPORATION = 'Beginner Corporation',
   SATURN_SYSTEMS = 'Saturn Systems',
   TERACTOR = 'Teractor',
-  THARSIS_REPUBLIC = 'Tharsis Republic',
   // Modified or Created Corps:
+  THARSIS_REPUBLIC = 'Church Builders Inc.',
   THORGATE = 'Southern Baptist Convention',
   HELION = 'Intl. Mission Board',
   MINING_GUILD = 'PCA',

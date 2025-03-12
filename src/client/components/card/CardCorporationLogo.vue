@@ -70,7 +70,7 @@
     <template v-else-if="title === CardName.THARSIS_REPUBLIC">
       <div class="card-tharsis-logo">
       <div class="card-tharsis-logo-image"></div>
-      <div class="card-tharsis-logo-text">Tharsis Republic</div>
+      <div class="card-tharsis-logo-text"><span>Church</span><br><span>Building Inc.</span></div>
       </div>
     </template>
     <template v-else-if="title === CardName.UTOPIA_INVEST">

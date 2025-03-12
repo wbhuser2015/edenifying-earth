@@ -21,13 +21,13 @@ export class TharsisRepublic extends CorporationCard {
       startingMegaCredits: 40,
 
       firstAction: {
-        text: 'Place a city tile',
+        text: 'Place a church tile',
         city: {},
       },
 
       metadata: {
         cardNumber: 'R31',
-        description: 'You start with 40 M€. As your first action in the game, place a city tile.',
+        description: 'You start with 40 M€. As your first action in the game, place a church tile.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
           b.provision(40).nbsp.city();
