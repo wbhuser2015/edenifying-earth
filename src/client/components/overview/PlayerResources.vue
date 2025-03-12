@@ -37,7 +37,6 @@
       :type="Resource.HEAT"
       :count="player.missions"
       :production="player.missionsProduction"
-      :value="canUseHeatAsMegaCredits ? 1 : 0"
       :resourceProtection="player.protectedResources.missions"
       :productionProtection="player.protectedProduction.missions"/>
   </div>
@@ -45,7 +44,6 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {CardName} from '@/common/cards/CardName';
 import {PublicPlayerModel} from '@/common/models/PlayerModel';
 import PlayerResource from '@/client/components/overview/PlayerResource.vue';
 import {Resource} from '@/common/Resource';
@@ -62,9 +60,6 @@ export default Vue.extend({
       return Resource;
     },
     // TODO LUNA TRADE FEDERATION
-    canUseHeatAsMegaCredits(): boolean {
-      return this.player.tableau.some((card) => card.name === CardName.HELION);
-    },
   },
   components: {
     'player-resource': PlayerResource,
