@@ -1,5 +1,5 @@
+import {TheRapture} from './TheRapture'
 import { RaiseoftheFalseProphet } from './RaiseoftheFalseProphet';
-import { TheRapture } from './TheRapture';
 import { DrMichaelSvigel } from './DrMichaelSvigel';
 import { JoelOsteensunday } from './JoelOsteensunday';
 import { AbominationOfDesolation } from './AbominationOfDesolation';
@@ -50,9 +50,7 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   },
   projectCards: {
   [CardName.RAISE_OF_THE_FALSE_PROPHET]: { Factory: RaiseoftheFalseProphet },
-
   [CardName.THE_RAPTURE]: { Factory: TheRapture },
-
   [CardName.DR_MICHAEL_SVIGEL]: { Factory: DrMichaelSvigel },
   [CardName.JOEL_OSTEEN_SUNDAY]: { Factory: JoelOsteensunday },
   [CardName.ABOMINATION_OF_DESOLATION]: { Factory: AbominationOfDesolation },
