@@ -1,4 +1,5 @@
 export enum CardName {
+  DR_MICHAEL_SVIGEL = 'Dr. Michael Svigel',
   JOEL_OSTEEN_SUNDAY = 'Joel Osteen sunday',
   ABOMINATION_OF_DESOLATION = 'Abomination of Desolation',
   TWO_WITNESSES = 'Two Witnesses',
@@ -11,13 +12,13 @@ export enum CardName {
   ASTEROID_MINING = 'Renewed Focus on Prayer',
   // Standard projects:
   SELL_PATENTS_STANDARD_PROJECT = 'Change Priorities (sell cards)',
-  POWER_PLANT_STANDARD_PROJECT = 'Power Plant:SP',
-  ASTEROID_STANDARD_PROJECT = 'Asteroid:SP',
+  POWER_PLANT_STANDARD_PROJECT = 'Bible Study:SP',
+  ASTEROID_STANDARD_PROJECT = 'Send Missions:SP',
   BUFFER_GAS_STANDARD_PROJECT = 'Buffer Gas',
   BUILD_COLONY_STANDARD_PROJECT = 'Colony',
-  AQUIFER_STANDARD_PROJECT = 'Aquifer',
-  GREENERY_STANDARD_PROJECT = 'Greenery',
-  CITY_STANDARD_PROJECT = 'City',
+  AQUIFER_STANDARD_PROJECT = 'Target Unreached Group',
+  GREENERY_STANDARD_PROJECT = 'Plant Church',
+  CITY_STANDARD_PROJECT = 'Build Church',
   AIR_SCRAPPING_STANDARD_PROJECT = 'Air Scrapping',
   AIR_SCRAPPING_STANDARD_PROJECT_VARIANT = 'Air Scrapping (Var)',
 

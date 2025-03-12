@@ -1463,7 +1463,7 @@ export class Player implements IPlayer {
     const standardProjects: Array<IStandardProjectCard> = this.getStandardProjects();
 
     return new SelectCard(
-      'Standard projects',
+      'Kingdom projects',
       'Confirm',
       standardProjects,
       {enabled: standardProjects.map((card) => card.canAct(this))})

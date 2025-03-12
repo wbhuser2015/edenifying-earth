@@ -99,7 +99,7 @@
       </section>
       <br>
       <section class="card-list-cards-list">
-        <h2 v-i18n>Standard Projects</h2>
+        <h2 v-i18n>Kingdom Projects</h2>
         <div class="cardbox" v-for="card in getAllStandardProjectCards()" :key="card">
             <Card v-if="showCard(card)" :card="{'name': card}" />
         </div>
