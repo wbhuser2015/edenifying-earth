@@ -348,14 +348,15 @@ export enum CardName {
 
   // Corps:
   BEGINNER_CORPORATION = 'Beginner Corporation',
+  SATURN_SYSTEMS = 'Saturn Systems',
+  TERACTOR = 'Teractor',
+  THARSIS_REPUBLIC = 'Tharsis Republic',
+  // Modified or Created Corps:
+  THORGATE = 'Southern Baptist Convention',
   HELION = 'Intl. Mission Board',
   MINING_GUILD = 'PCA',
   MEGACHURCHNETWORK = 'Megachurch Network',
   PHOBOLOG = 'Pentacostal Movement',
-  SATURN_SYSTEMS = 'Saturn Systems',
-  TERACTOR = 'Teractor',
-  THARSIS_REPUBLIC = 'Tharsis Republic',
-  THORGATE = 'Southern Baptist Convention',
   // Preludes:
   ALLIED_BANK = 'Allied Bank',
   BIOFUELS = 'Biofuels',
