@@ -1,4 +1,5 @@
-import { TheRapture } from './TheRapture';
+import { RaiseoftheFalseProphet } from './RaiseoftheFalseProphet';
+import { TheRapture } from './theRapture';
 import { DrMichaelSvigel } from './DrMichaelSvigel';
 import { JoelOsteensunday } from './JoelOsteensunday';
 import { AbominationOfDesolation } from './AbominationOfDesolation';
@@ -48,6 +49,8 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.RAISE_OF_THE_FALSE_PROPHET]: { Factory: RaiseoftheFalseProphet },
+
   [CardName.THE_RAPTURE]: { Factory: TheRapture },
 
   [CardName.DR_MICHAEL_SVIGEL]: { Factory: DrMichaelSvigel },

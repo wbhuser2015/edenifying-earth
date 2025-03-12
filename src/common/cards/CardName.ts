@@ -1,4 +1,5 @@
 export enum CardName {
+  RAISE_OF_THE_FALSE_PROPHET = 'Rise of the False Prophet',
   THE_RAPTURE = 'The Rapture',
   DR_MICHAEL_SVIGEL = 'Dr. Michael Svigel',
   JOEL_OSTEEN_SUNDAY = 'Joel Osteen sunday',
