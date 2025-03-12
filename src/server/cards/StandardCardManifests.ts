@@ -50,7 +50,6 @@ import {SaturnSystems} from './corporation/SaturnSystems';
 import {Teractor} from './corporation/Teractor';
 import {TharsisRepublic} from './corporation/TharsisRepublic';
 import {Thorgate} from './corporation/Thorgate';
-import {UnitedNationsMarsInitiative} from './corporation/UnitedNationsMarsInitiative';
 import {CupolaCity} from './base/CupolaCity';
 import {Decomposers} from './base/Decomposers';
 import {DeepWellHeating} from './base/DeepWellHeating';
@@ -366,7 +365,6 @@ export const BASE_CARD_MANIFEST = new ModuleManifest({
     [CardName.PHOBOLOG]: {Factory: PhoboLog},
     [CardName.THARSIS_REPUBLIC]: {Factory: TharsisRepublic},
     [CardName.THORGATE]: {Factory: Thorgate},
-    [CardName.UNITED_NATIONS_MARS_INITIATIVE]: {Factory: UnitedNationsMarsInitiative},
   },
   standardProjects: {
     [CardName.AQUIFER_STANDARD_PROJECT]: {Factory: AquiferStandardProject},

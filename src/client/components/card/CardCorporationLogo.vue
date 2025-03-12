@@ -19,16 +19,6 @@
       &nbsp;Cheung Shing <br><div style="margin-left:10px"> ■■MARS■■ </div>
       </div>
     </template>
-    <template v-else-if="title === CardName.INTERPLANETARY_CINEMATICS">
-      <div style="color: #020202;font-size:17px;margin-top:10px;margin-left:-87px;">INTERPLANETARY</div>
-      <div style="height:5px;margin-top:-2px;width:143px;background:linear-gradient(to right,yellow,black,yellow,black,yellow);border:5px solid #cc3333;box-shadow:3px 3px 6px grey;"></div>
-      <div style="color: #020202;font-size:24px;margin-left:-89px;margin-top:-5px; display:inline-block; -webkit-transform:scale(0.5,1); -moz-transform:scale(0.5,1); -ms-transform:scale(0.5,1); -o-transform:scale(0.5,1); transform:scale(1,0.5); margin-bottom:15px;">CINEMATICS</div>
-    </template>
-    <template v-else-if="title === CardName.INVENTRIX">
-      <span class="card-inventrix-logo">
-      <span style="color: #020202;background-color:#6bb5c7;padding-left:4px;padding-right:4px;font-size:26px;box-shadow: 6px 6px 10px grey;">X</span>
-      INVENTRIX</span>
-    </template>
     <template v-else-if="title === CardName.SEPTUM_TRIBUS">
       <span class="card-septem-tribus-logo">Septem Tribus</span>
     </template>
@@ -45,10 +35,9 @@
     <template v-else-if="title === CardName.PHOBOLOG">
       <span class="card-phobolog-logo"><span>Pentacostal</span><br><span>Movement</span></span>
     </template>
-    <template v-else-if="title === CardName.ARCADIAN_COMMUNITIES">
-      <span class="card-arcadian-logo"><span>Arcadian</span><br><span>Communities</span></span>
+    <template v-else-if="title === CardName.THORGATE">
+      <span class="card-thorgate-logo"><span>Southern Baptist</span><br><span> Convention</span></span>
     </template>
-
     <template v-else-if="title === CardName.LAKEFRONT_RESORTS">
       <div class="card-lakefront-logo">LAKEFRONT <br> &nbsp;&nbsp;RESORTS</div>
     </template>
@@ -83,9 +72,6 @@
       <div class="card-tharsis-logo-image"></div>
       <div class="card-tharsis-logo-text">Tharsis Republic</div>
       </div>
-    </template>
-    <template v-else-if="title === CardName.UNITED_NATIONS_MARS_INITIATIVE">
-      <span class="card-unmi-logo">UNITED<br/>NATIONS<br/>MARS<br/>INITIATIVE</span>
     </template>
     <template v-else-if="title === CardName.UTOPIA_INVEST">
       <div class="card-utopia-logo">

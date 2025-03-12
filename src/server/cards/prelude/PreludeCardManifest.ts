@@ -1,6 +1,5 @@
 import {CardName} from '../../../common/cards/CardName';
 import {ModuleManifest} from '../ModuleManifest';
-import {AcquiredSpaceAgency} from './AcquiredSpaceAgency';
 import {AlliedBanks} from './AlliedBanks';
 import {AquiferTurbines} from './AquiferTurbines';
 import {Biofuels} from './Biofuels';
@@ -99,7 +98,6 @@ export const PRELUDE_CARD_MANIFEST = new ModuleManifest({
     [CardName.MOHOLE]: {Factory: Mohole},
     [CardName.METAL_RICH_ASTEROID]: {Factory: MetalRichAsteroid},
     [CardName.ORBITAL_CONSTRUCTION_YARD]: {Factory: OrbitalConstructionYard},
-    [CardName.ACQUIRED_SPACE_AGENCY]: {Factory: AcquiredSpaceAgency},
     [CardName.RESEARCH_NETWORK]: {Factory: ResearchNetwork},
     [CardName.ECCENTRIC_SPONSOR]: {Factory: EccentricSponsor},
     [CardName.ECOLOGY_EXPERTS]: {Factory: EcologyExperts},

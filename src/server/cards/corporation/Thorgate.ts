@@ -22,7 +22,7 @@ export class Thorgate extends CorporationCard {
           b.br;
           b.production((pb) => pb.discipleship(1)).nbsp.provision(48);
           b.corpBox('effect', (ce) => {
-            ce.effect('When playing a discipleship card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M€ less for it.', (eb) => {
+            ce.effect('When playing a discipleship card or launching a Bible Study, you pay 3 M€ less for it.', (eb) => {
               eb.tag(Tag.POWER).asterix().startEffect.provision(-3);
             });
           });

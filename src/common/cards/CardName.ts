@@ -355,9 +355,7 @@ export enum CardName {
   SATURN_SYSTEMS = 'Saturn Systems',
   TERACTOR = 'Teractor',
   THARSIS_REPUBLIC = 'Tharsis Republic',
-  THORGATE = 'Thorgate',
-  UNITED_NATIONS_MARS_INITIATIVE = 'United Nations Mars Initiative',
-  ACQUIRED_SPACE_AGENCY = 'Acquired Space Agency',
+  THORGATE = 'Southern Baptist Convention',
   // Preludes:
   ALLIED_BANK = 'Allied Bank',
   BIOFUELS = 'Biofuels',
