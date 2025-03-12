@@ -1,4 +1,6 @@
 export enum CardName {
+  JOEL_OSTEEN_SUNDAY = 'Joel Osteen sunday',
+
   ABOMINATION_OF_DESOLATION = 'Abomination of Desolation',
   TWO_WITNESSES = 'Two Witnesses',
   COMMUNITY_NIGHTS = 'Community Nights',

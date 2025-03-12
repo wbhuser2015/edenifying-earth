@@ -1,3 +1,4 @@
+import { JoelOsteensunday } from './JoelOsteensunday';
 import { AbominationOfDesolation } from './AbominationOfDesolation';
 import { TwoWitnesses } from './TwoWitnesses';
 import { CommunityNights } from './CommunityNights';
@@ -45,6 +46,8 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.JOEL_OSTEEN_SUNDAY]: { Factory: JoelOsteensunday },
+
   [CardName.ABOMINATION_OF_DESOLATION]: { Factory: AbominationOfDesolation },
 
   [CardName.TWO_WITNESSES]: { Factory: TwoWitnesses },
