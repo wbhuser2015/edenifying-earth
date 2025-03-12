@@ -44,7 +44,6 @@ import {CommercialDistrict} from './base/CommercialDistrict';
 import {ConvoyFromEuropa} from './base/ConvoyFromEuropa';
 import {CorporateStronghold} from './base/CorporateStronghold';
 import {Helion} from './corporation/Helion';
-import {InterplanetaryCinematics} from './corporation/InterplanetaryCinematics';
 import {Inventrix} from './corporation/Inventrix';
 import {MiningGuild} from './corporation/MiningGuild';
 import {PhoboLog} from './corporation/PhoboLog';
@@ -364,7 +363,6 @@ export const BASE_CARD_MANIFEST = new ModuleManifest({
     [CardName.MEGACHURCHNETWORK]: {Factory: MEGACHURCHNETWORK},
     [CardName.BEGINNER_CORPORATION]: {Factory: BeginnerCorporation},
     [CardName.HELION]: {Factory: Helion},
-    [CardName.INTERPLANETARY_CINEMATICS]: {Factory: InterplanetaryCinematics},
     [CardName.INVENTRIX]: {Factory: Inventrix},
     [CardName.MINING_GUILD]: {Factory: MiningGuild},
     [CardName.PHOBOLOG]: {Factory: PhoboLog},
