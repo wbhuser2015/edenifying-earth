@@ -1,5 +1,5 @@
 import { RaiseoftheFalseProphet } from './RaiseoftheFalseProphet';
-import { TheRapture } from './theRapture';
+import { TheRapture } from './TheRapture';
 import { DrMichaelSvigel } from './DrMichaelSvigel';
 import { JoelOsteensunday } from './JoelOsteensunday';
 import { AbominationOfDesolation } from './AbominationOfDesolation';
