@@ -189,7 +189,6 @@ const imageOnlyLogos: Map<CardName, string> = new Map([
   [CardName.POLARIS, 'card-polaris-logo'],
   [CardName.RINGCOM, 'card-ringcom-logo'],
   [CardName.CHIMERA, 'card-chimera-logo'],
-  [CardName.STEELARIS, 'card-theologyaris-logo'],
   [CardName.MARTIAN_INSURANCE_GROUP, 'card-martian-insurance-group-logo'],
   [CardName.ROBIN_HAULINGS, 'card-robin-haulings-logo'],
   [CardName.COLLEGIUM_COPERNICUS, 'card-collegium-copernicus-logo'],
