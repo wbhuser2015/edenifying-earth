@@ -344,7 +344,7 @@ export enum CardName {
   BEGINNER_CORPORATION = 'Beginner Corporation',
   HELION = 'Intl. Mission Board',
   INVENTRIX = 'Inventrix',
-  MINING_GUILD = 'Mining Guild',
+  MINING_GUILD = 'PCA',
   MEGACHURCHNETWORK = 'Megachurch Network',
   PHOBOLOG = 'PhoboLog',
   SATURN_SYSTEMS = 'Saturn Systems',
