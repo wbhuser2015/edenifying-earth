@@ -193,7 +193,7 @@ export default (Vue as WithRefs<Refs>).extend({
       customPreludes: [],
       bannedCards: [],
       includedCards: [],
-      board: BoardName.THARSIS,
+      board: BoardName.VASTITAS_BOREALIS,
       boards: [
         BoardName.THARSIS,
         BoardName.HELLAS,
