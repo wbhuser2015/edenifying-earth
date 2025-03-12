@@ -43,8 +43,6 @@ import {Comet} from './base/Comet';
 import {CommercialDistrict} from './base/CommercialDistrict';
 import {ConvoyFromEuropa} from './base/ConvoyFromEuropa';
 import {CorporateStronghold} from './base/CorporateStronghold';
-import {CrediCor} from './corporation/CrediCor';
-import {EcoLine} from './corporation/EcoLine';
 import {Helion} from './corporation/Helion';
 import {InterplanetaryCinematics} from './corporation/InterplanetaryCinematics';
 import {Inventrix} from './corporation/Inventrix';
@@ -365,8 +363,6 @@ export const BASE_CARD_MANIFEST = new ModuleManifest({
   corporationCards: {
     [CardName.MEGACHURCHNETWORK]: {Factory: MEGACHURCHNETWORK},
     [CardName.BEGINNER_CORPORATION]: {Factory: BeginnerCorporation},
-    [CardName.CREDICOR]: {Factory: CrediCor},
-    [CardName.ECOLINE]: {Factory: EcoLine},
     [CardName.HELION]: {Factory: Helion},
     [CardName.INTERPLANETARY_CINEMATICS]: {Factory: InterplanetaryCinematics},
     [CardName.INVENTRIX]: {Factory: Inventrix},

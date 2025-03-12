@@ -21,11 +21,6 @@ export class Helion extends CorporationCard {
         renderData: CardRenderer.builder((b) => {
           b.br;
           b.production((pb) => pb.missions(3)).nbsp.provision(42);
-          b.corpBox('effect', (ce) => {
-            ce.effect('You may use missions as M€. You may not use M€ as missions.', (eb) => {
-              eb.startEffect.text('x').missions(1).equals().provision(1, {text: 'x'});
-            });
-          });
         }),
       },
     });

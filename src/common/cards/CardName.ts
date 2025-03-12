@@ -342,9 +342,7 @@ export enum CardName {
 
   // Corps:
   BEGINNER_CORPORATION = 'Beginner Corporation',
-  CREDICOR = 'CrediCor',
-  ECOLINE = 'EcoLine',
-  HELION = 'Helion',
+  HELION = 'International Mission Board',
   INTERPLANETARY_CINEMATICS = 'Interplanetary Cinematics',
   INVENTRIX = 'Inventrix',
   MINING_GUILD = 'Mining Guild',
