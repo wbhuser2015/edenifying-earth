@@ -2,7 +2,7 @@ export const milestoneNames = [
   // Tharsis
   'Terraformer',
   'Mayor',
-  'Gardener',
+  'Church Planter',
   'Planner',
   'Builder',
 

@@ -4,8 +4,8 @@ import {IPlayer} from '../IPlayer';
 export class Gardener extends BaseMilestone {
   constructor() {
     super(
-      'Gardener',
-      'Own 3 greenery tiles',
+      'Church Planter',
+      'Plant 3 Churches',
       3);
   }
   public getScore(player: IPlayer): number {
