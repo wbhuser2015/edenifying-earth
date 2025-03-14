@@ -18,6 +18,7 @@ export class TheRapture extends Card implements IProjectCard {
 
       },
 
+      requirements: {prophecies_fulfilled: 10},
       metadata: {
         cardNumber: 'X01', // Update manually if needed
         renderData: CardRenderer.builder((b) => {

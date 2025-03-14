@@ -16,7 +16,7 @@ export class RaiseoftheFalseProphet extends Card implements IProjectCard {
         global: { prophecies_fulfilled: 1 }, // Raise Prophecy Fulfilled by 1
         production: { discipleship: -1 }, // Decrease Discipleship production by 1
       },
-
+      requirements: {prophecies_fulfilled: 10},
       metadata: {
         cardNumber: 'X01', // Update manually if needed
         renderData: CardRenderer.builder((b) => {

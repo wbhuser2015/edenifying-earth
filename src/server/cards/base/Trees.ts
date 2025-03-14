@@ -19,7 +19,7 @@ export class Trees extends Card implements IProjectCard {
         stock: {outreach: 1},
       },
 
-      requirements: {gospel_spread: -4},
+      requirements: {prophecies_fulfilled: 4},
       metadata: {
         cardNumber: '060',
         renderData: CardRenderer.builder((b) => {

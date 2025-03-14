@@ -17,7 +17,8 @@ export class AbominationOfDesolation extends Card implements IProjectCard {
         production: { prayer: 1 }, // Increase prayer production by 1
         stock: { missions: 1 }, // Gain 1 missions resource
       },
-
+      
+      requirements: {prophecies_fulfilled: 6},
       metadata: {
         cardNumber: 'X02', // Adjust if needed
         renderData: CardRenderer.builder((b) => {

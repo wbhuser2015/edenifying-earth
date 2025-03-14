@@ -16,6 +16,7 @@ export class TwoWitnesses extends Card implements IProjectCard {
         global: { prophecies_fulfilled: 2 }, // Raise Prophecies Fulfilled by 2
       },
 
+      requirements: {prophecies_fulfilled: 10},
       metadata: {
         cardNumber: 'TW01',
         description: 'Raise Prophecies Fulfilled 2 steps and gain 2 Prayer.',
