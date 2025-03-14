@@ -53,7 +53,6 @@ import {TitanShuttles} from './TitanShuttles';
 import {TradeEnvoys} from './TradeEnvoys';
 import {TradingColony} from './TradingColony';
 import {UrbanDecomposers} from './UrbanDecomposers';
-import {WarpDrive} from './WarpDrive';
 import {BuildColonyStandardProject} from './BuildColonyStandardProject';
 
 export const COLONIES_CARD_MANIFEST = new ModuleManifest({
@@ -108,7 +107,6 @@ export const COLONIES_CARD_MANIFEST = new ModuleManifest({
     [CardName.TRADING_COLONY]: {Factory: TradingColony},
     [CardName.TRADE_ENVOYS]: {Factory: TradeEnvoys},
     [CardName.URBAN_DECOMPOSERS]: {Factory: UrbanDecomposers},
-    [CardName.WARP_DRIVE]: {Factory: WarpDrive},
   },
   standardProjects: {
     [CardName.BUILD_COLONY_STANDARD_PROJECT]: {Factory: BuildColonyStandardProject},

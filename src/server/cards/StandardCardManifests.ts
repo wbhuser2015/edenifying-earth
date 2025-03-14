@@ -202,12 +202,9 @@ import {UndergroundDetonations} from './base/UndergroundDetonations';
 import {UrbanizedArea} from './base/UrbanizedArea';
 import {VestaShipyard} from './base/VestaShipyard';
 import {ViralEnhancers} from './base/ViralEnhancers';
-import {Virus} from './base/Virus';
-import {WaterImportFromEuropa} from './base/WaterImportFromEuropa';
 import {WaterSplittingPlant} from './base/WaterSplittingPlant';
 import {WavePower} from './base/WavePower';
 import {Windmills} from './base/Windmills';
-import {Worms} from './base/Worms';
 import {Zeppelins} from './base/Zeppelins';
 import {AquiferStandardProject} from './base/standardProjects/AquiferStandardProject';
 import {CityStandardProject} from './base/standardProjects/CityStandardProject';
@@ -350,11 +347,9 @@ export const BASE_CARD_MANIFEST = new ModuleManifest({
     [CardName.UNDERGROUND_CITY]: {Factory: UndergroundCity},
     [CardName.UNDERGROUND_DETONATIONS]: {Factory: UndergroundDetonations},
     [CardName.URBANIZED_AREA]: {Factory: UrbanizedArea},
-    [CardName.WATER_IMPORT_FROM_EUROPA]: {Factory: WaterImportFromEuropa},
     [CardName.WATER_SPLITTING_PLANT]: {Factory: WaterSplittingPlant},
     [CardName.WAVE_POWER]: {Factory: WavePower},
     [CardName.WINDMILLS]: {Factory: Windmills},
-    [CardName.WORMS]: {Factory: Worms},
     [CardName.ZEPPELINS]: {Factory: Zeppelins},
   },
   corporationCards: {
@@ -450,7 +445,6 @@ export const CORP_ERA_CARD_MANIFEST = new ModuleManifest({
     [CardName.TROPICAL_RESORT]: {Factory: TropicalResort},
     [CardName.VESTA_SHIPYARD]: {Factory: VestaShipyard},
     [CardName.VIRAL_ENHANCERS]: {Factory: ViralEnhancers},
-    [CardName.VIRUS]: {Factory: Virus},
   },
 
   corporationCards: {

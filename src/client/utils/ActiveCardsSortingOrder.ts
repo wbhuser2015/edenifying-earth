@@ -16,7 +16,6 @@ export const ActiveCardsSortingOrder: Map<CardName, number> = new Map([
   CardName.RESEARCH_OUTPOST,
 
   // Space discount
-  CardName.WARP_DRIVE,
   CardName.QUANTUM_EXTRACTOR,
   CardName.SPACE_STATION,
   CardName.SHUTTLES,
@@ -101,9 +100,7 @@ export const ActiveCardsSortingOrder: Map<CardName, number> = new Map([
   // TR engine
   CardName.VENUS_MAGNETIZER,
   CardName.EQUATORIAL_MAGNETIZER,
-  CardName.AQUIFER_PUMPING,
-  CardName.WATER_IMPORT_FROM_EUROPA,
-  CardName.CARETAKER_CONTRACT,
+  CardName.AQUIFER_PUMPING,CardName.CARETAKER_CONTRACT,
 
   // Other useful actions
   CardName.SELF_REPLICATING_ROBOTS,

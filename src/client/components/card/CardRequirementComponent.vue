@@ -89,7 +89,7 @@ export default Vue.extend({
       case RequirementType.VENUS:
         return '%';
       case RequirementType.TEMPERATURE:
-        return '°C';
+        return '%';
       }
       return '';
     },
