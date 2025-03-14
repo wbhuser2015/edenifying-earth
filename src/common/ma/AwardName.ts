@@ -3,12 +3,12 @@ export const awardNames = [
   'Landlord',
   'Scientist',
   'Banker',
-  'Thermalist',
-  'Miner',
+  'Beautiful Feet',
+  'Prayer Warrior',
 
   // Elysium
   'Celebrity',
-  'Industrialist',
+  'Church Scholar',
   'Desert Settler',
   'Estate Dealer',
   'Benefactor',
