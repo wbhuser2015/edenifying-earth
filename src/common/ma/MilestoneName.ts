@@ -1,7 +1,7 @@
 export const milestoneNames = [
   // Tharsis
   'Terraformer',
-  'Mayor',
+  'Church Builder',
   'Church Planter',
   'Planner',
   'Builder',
@@ -17,7 +17,7 @@ export const milestoneNames = [
   'Diversifier',
   'Tactician',
   'Polar Explorer',
-  'Energizer',
+  'Discipler',
   'Rim Settler',
 
   // Venus
@@ -51,7 +51,7 @@ export const milestoneNames = [
 
   // Vastitas Borealis
   'V. Electrician',
-  'Smith',
+  'Theologian',
   'Tradesman',
   'Irrigator',
   'Capitalist',
@@ -77,7 +77,7 @@ export const milestoneNames = [
   // 'Farmer',
   'Forester',
   'Fundraiser',
-  'Hydrologist',
+  'All Nations',
   'Landshaper',
   // 'Legend', // But 4 events
   'Lobbyist',

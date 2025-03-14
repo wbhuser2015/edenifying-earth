@@ -4,7 +4,7 @@ import {IPlayer} from '../IPlayer';
 export class Energizer extends BaseMilestone {
   constructor() {
     super(
-      'Energizer',
+      'Discipler',
       'Have 6 discipleship production',
       6);
   }
