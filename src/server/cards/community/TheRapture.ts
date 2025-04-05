@@ -9,7 +9,7 @@ export class TheRapture extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.THE_RAPTURE,
-      cost: 25, // Adjust as needed
+      cost: 30, // Adjust as needed
       victoryPoints: 2, // Correct placement
 
       behavior: {

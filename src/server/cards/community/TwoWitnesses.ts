@@ -9,7 +9,7 @@ export class TwoWitnesses extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.TWO_WITNESSES,
-      cost: 30,
+      cost: 25,
 
       behavior: {
         stock: { prayer: 2 }, // Gain 2 prayer

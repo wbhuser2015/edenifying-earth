@@ -22,7 +22,7 @@ export class ChurchSplit extends Card implements IProjectCard {
           b.production((pb) => pb.minus().theology(1)).br;
           b.greenery();
         }),
-        description: 'Plant a church. Decrease your theology production by 2',
+        description: 'Plant a church. Decrease your theology production by 1',
       },
     });
   }

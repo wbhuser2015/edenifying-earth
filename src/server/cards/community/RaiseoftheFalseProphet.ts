@@ -10,7 +10,7 @@ export class RaiseoftheFalseProphet extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.RAISE_OF_THE_FALSE_PROPHET,
       cost: 10, // Adjust as needed
-      victoryPoints: -2, // Lose 2 Victory Points
+      victoryPoints: -1, // Lose 2 Victory Points
 
       behavior: {
         global: { prophecies_fulfilled: 1 }, // Raise Prophecy Fulfilled by 1
