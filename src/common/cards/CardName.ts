@@ -350,8 +350,6 @@ LIVESTOCK = 'Job’s Blessed Herds',
 
   // Corps:
   BEGINNER_CORPORATION = 'Beginner Corporation',
-  SATURN_SYSTEMS = 'Saturn Systems',
-  TERACTOR = 'Teractor',
   // Modified or Created Corps:
   THARSIS_REPUBLIC = 'Church Builders Inc.',
   THORGATE = 'Southern Baptist Convention',

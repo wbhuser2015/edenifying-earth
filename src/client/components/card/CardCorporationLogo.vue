@@ -1,11 +1,6 @@
 <template>
   <div class="card-corporation-logo">
-    <template v-if="title === CardName.SATURN_SYSTEMS">
-      <div class="card-saturn-logo">
-        SATURN <span style="font-size:20px;display:inline-block;">&#x25CF;</span> SYSTEMS
-      </div>
-    </template>
-    <template v-else-if="title === CardName.CELESTIC">
+    <template v-if="title === CardName.CELESTIC">
       <div class="card-celestic-logo">
         <span style="background: linear-gradient(to right, rgb(251,192,137),rgb(251,192,137),rgb(23,185,236));padding-left: 5px;">CEL</span>
         <span style="background:linear-gradient(to right,rgb(23,185,236),rgb(251,192,137))">ES</span>
@@ -65,12 +60,6 @@
       <div class="card-stormcraft-logo">
       <div class="stormcraft1">STORM</div><div class="stormcraft2">CRAFT</div>
       <div class="stormcraft3">INCOR</div><div class="stormcraft4">PORATED</div>
-      </div>
-    </template>
-    <template v-else-if="title === CardName.THARSIS_REPUBLIC">
-      <div class="card-tharsis-logo">
-      <div class="card-tharsis-logo-image"></div>
-      <div class="card-tharsis-logo-text"><span>Church</span><br><span>Building Inc.</span></div>
       </div>
     </template>
     <template v-else-if="title === CardName.UTOPIA_INVEST">
@@ -190,7 +179,6 @@ const imageLogosWithNames: Map<CardName, string> = new Map([
   [CardName.THORGATE, 'card-thorgate-logo'],
   [CardName.VIRON, 'card-viron-logo'],
   [CardName.ARIDOR, 'card-aridor-logo'],
-  [CardName.TERACTOR, 'card-teractor-logo'],
   [CardName.MARS_MATHS, 'card-mars-maths-logo'],
 ]);
 

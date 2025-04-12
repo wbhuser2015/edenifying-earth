@@ -46,8 +46,6 @@ import {CorporateStronghold} from './base/CorporateStronghold';
 import {Helion} from './corporation/Helion';
 import {MiningGuild} from './corporation/MiningGuild';
 import {PhoboLog} from './corporation/PhoboLog';
-import {SaturnSystems} from './corporation/SaturnSystems';
-import {Teractor} from './corporation/Teractor';
 import {TharsisRepublic} from './corporation/TharsisRepublic';
 import {Thorgate} from './corporation/Thorgate';
 import {CupolaCity} from './base/CupolaCity';
@@ -448,7 +446,5 @@ export const CORP_ERA_CARD_MANIFEST = new ModuleManifest({
   },
 
   corporationCards: {
-    [CardName.SATURN_SYSTEMS]: {Factory: SaturnSystems},
-    [CardName.TERACTOR]: {Factory: Teractor},
   },
 });
