@@ -2,12 +2,14 @@ import {CorporationCard} from './CorporationCard';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {digit} from '../Options';
+import {Tag} from '../../../common/cards/Tag';
 
 export class MEGACHURCHNETWORK extends CorporationCard {
   constructor() {
     super({
       name: CardName.MEGACHURCHNETWORK,
       startingMegaCredits: 36,
+      tags: [Tag.OUTREACH],
 
       behavior: {
         production: {outreach: 2},

@@ -7,7 +7,7 @@ export class Thorgate extends CorporationCard {
   constructor() {
     super({
       name: CardName.THORGATE,
-      tags: [Tag.POWER],
+      tags: [Tag.DISCIPLESHIP],
       startingMegaCredits: 48,
 
       behavior: {

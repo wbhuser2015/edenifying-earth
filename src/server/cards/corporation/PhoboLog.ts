@@ -9,7 +9,7 @@ export class PhoboLog extends CorporationCard {
   constructor() {
     super({
       name: CardName.PHOBOLOG,
-      tags: [Tag.SPACE],
+      tags: [Tag.PRAYER],
       startingMegaCredits: 23,
 
       behavior: {

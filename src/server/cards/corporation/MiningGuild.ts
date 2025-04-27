@@ -16,7 +16,7 @@ export class MiningGuild extends CorporationCard {
   constructor() {
     super({
       name: CardName.MINING_GUILD,
-      tags: [Tag.BUILDING, Tag.BUILDING],
+      tags: [Tag.THEOLOGY, Tag.THEOLOGY],
       startingMegaCredits: 30,
 
       behavior: {
