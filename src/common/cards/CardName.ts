@@ -31,6 +31,9 @@ export enum CardName {
   KELP_FARMING = 'Celebrity joins congregation',
   MINING_EXPEDITION = 'Preaching Hard Truths',
   ASTEROID_MINING = 'Renewed Focus on Prayer',
+
+  //cards i need to unban
+  INDUSTRIAL_MICROBES = 'Sunday School',
   // Standard projects:
   SELL_PATENTS_STANDARD_PROJECT = 'Change Priorities (sell cards)',
   POWER_PLANT_STANDARD_PROJECT = 'Bible Study:SP',
@@ -152,7 +155,6 @@ IMPORTED_HYDROGEN = 'Water from the Heavens',
 IMPORTED_NITROGEN = 'Fertilized Land of Canaan',
 IMPORT_OF_ADVANCED_GHG = 'Smoke of the Sacrifice',
 INDENTURED_WORKERS = 'Israelite Bondservants',
-INDUSTRIAL_MICROBES = 'Vineyard Workers',
 INSECTS = 'Locusts of the Apocalypse',
 INSULATION = 'Recall Missionaries',
 INTERPLANETARY_COLONY_SHIP = 'Missionary Fleet',
