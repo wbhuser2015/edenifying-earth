@@ -89,10 +89,3 @@ if (!cardNameContent.includes(cardNameInsert)) {
 fs.writeFileSync(cardNamePath, cardNameContent);
 console.log(`✅ Updated ${cardNamePath}`);
 
-// **5. Prompt before running build**
-console.log("🚀 Press ENTER to proceed with the TypeScript build...");
-process.stdin.once('data', () => {
-  console.log("🔧 Running TypeScript build...");
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log("🎉 Card successfully added! Edit the file at:", cardPath);
-});

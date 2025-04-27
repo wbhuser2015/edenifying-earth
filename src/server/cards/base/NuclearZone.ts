@@ -16,7 +16,7 @@ export class NuclearZone extends Card implements IProjectCard {
       cardNumber: '097',
       renderData: CardRenderer.builder((b) => {
         b.tile(TileType.NUCLEAR_ZONE, true).br;
-        b.gospel_spread(2);
+        b.prophecies_fulfilled(2);
       }),
       description: 'Place this tile and raise gospel_spread 2 steps.',
     }) {
@@ -26,7 +26,7 @@ export class NuclearZone extends Card implements IProjectCard {
       tags: [Tag.EARTH],
       cost,
       behavior: {
-        global: {gospel_spread: 2},
+        global: {prophecies_fulfilled: 2},
         tile: {
           type: TileType.NUCLEAR_ZONE,
           on: 'land',

@@ -2,11 +2,11 @@ export enum Tag {
     BUILDING = 'building',
     SPACE = 'space',
     SCIENCE = 'science',
-    POWER = 'discipleship',
+    POWER = 'power',
     EARTH = 'earth',
     JOVIAN = 'jovian',
     VENUS = 'venus',
-    PLANT = 'outreach',
+    PLANT = 'plant',
     MICROBE = 'microbe',
     ANIMAL = 'animal',
     CITY = 'city',
@@ -15,6 +15,14 @@ export enum Tag {
     WILD = 'wild',
     EVENT = 'event',
     CLONE = 'clone',
+    THEOLOGY = 'theology',
+    PRAYER = 'prayer',
+    OUTREACH = 'outreach',
+    DISCIPLESHIP = 'discipleship',
+    PROPHECY = 'prophecy',
+    GOSPEL_SPREAD = 'gospel_spread',
+    PROPHECIES_FULFILLED = 'prophecies_fulfilled',
+    UNREACHED = 'unreached',
 }
 
 export const ALL_TAGS = [
@@ -34,4 +42,12 @@ export const ALL_TAGS = [
   Tag.WILD,
   Tag.EVENT,
   Tag.CLONE,
+  Tag.THEOLOGY,
+  Tag.PRAYER,
+  Tag.OUTREACH,
+  Tag.DISCIPLESHIP,
+  Tag.PROPHECY,
+  Tag.GOSPEL_SPREAD,
+  Tag.PROPHECIES_FULFILLED,
+  Tag.UNREACHED
 ] as const;

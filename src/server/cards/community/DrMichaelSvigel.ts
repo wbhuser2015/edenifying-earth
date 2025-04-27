@@ -3,16 +3,19 @@ import { Card } from '../Card';
 import { CardType } from '../../../common/cards/CardType';
 import { CardName } from '../../../common/cards/CardName';
 import { CardRenderer } from '../render/CardRenderer';
+import { Tag } from '../../../common/cards/Tag';
 
 export class DrMichaelSvigel extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
       name: CardName.DR_MICHAEL_SVIGEL,
+      tags: [Tag.THEOLOGY],
       cost: 12, // Adjust as needed
 
       behavior: {
         production: {theology: 2},
+        
       },
 
       metadata: {
