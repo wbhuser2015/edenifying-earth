@@ -15,15 +15,15 @@ export class HarvestFestival extends Card implements IProjectCard {
 	  requirements: { prophecies_fulfilled: 6, max},
 
       behavior: {
-        production: { provision: 1 },
+        production: { provision: 3 },
       },
 
       metadata: {
         cardNumber: 'X01', // Update manually if needed
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.provision(1));
+          b.production((pb) => pb.provision(3));
         }),
-        description: 'Increase your Provision production 1 step.',
+        description: 'Increase your Provision production 3 steps.',
       },
     });
   }
