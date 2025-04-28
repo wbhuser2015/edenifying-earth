@@ -34,7 +34,7 @@ export class CardRenderDynamicVictoryPoints implements ICardRenderDynamicVictory
     return vps;
   }
   public static searchForLife(): CardRenderDynamicVictoryPoints {
-    const item = new CardRenderDynamicVictoryPoints(new CardRenderItem(CardRenderItemType.RESOURCE, 1, {resource: CardResource.SCIENCE}), 3, 3);
+    const item = new CardRenderDynamicVictoryPoints(new CardRenderItem(CardRenderItemType.RESOURCE, 1, {resource: CardResource.SCROLL}), 3, 3);
     item.targetOneOrMore = true;
     return item;
   }

@@ -90,7 +90,7 @@ export enum CardName {
   STRIP_MINE = 'The Prophet Elijah',
   NUCLEAR_ZONE = 'Divine Wrath',
   TOWING_A_COMET = 'The Prophet Jonah',
-  
+  SEARCH_FOR_LIFE = 'Search For Dead Sea Scrolls',
   //cards i need to unban
  
 
@@ -303,7 +303,6 @@ LIVESTOCK = 'Job’s Blessed Herds',
   RIM_FREIGHTERS = 'Rim Freighters',
   SABOTAGE = 'Sabotage',
   SATELLITES = 'Satellites',
-  SEARCH_FOR_LIFE = 'Search For Life',
   SECURITY_FLEET = 'Security Fleet',
   SELF_SUFFICIENT_SETTLEMENT = 'Self-Sufficient Settlement',
   SISTER_PLANET_SUPPORT = 'Sister Planet Support',

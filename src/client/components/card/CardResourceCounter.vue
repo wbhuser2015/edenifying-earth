@@ -38,6 +38,7 @@ const cssClass: Record<CardResource, string> = {
   [CardResource.JOURNALISM]: 'card-resource-journalism',
   [CardResource.SUPPLY_CHAIN]: 'card-resource-supply-chain',
   [CardResource.DIRECTOR]: 'card-resource-director',
+  [CardResource.SCROLL]: 'card-resource-scroll',
 };
 
 export default Vue.extend({

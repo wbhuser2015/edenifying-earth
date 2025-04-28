@@ -4,6 +4,7 @@ export enum CardResource {
   MICROBE = 'Microbe',
   FIGHTER = 'Fighter',
   SCIENCE = 'Science',
+  SCROLL = 'Scroll',
 
   // Venus
   FLOATER = 'Floater',

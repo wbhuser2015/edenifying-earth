@@ -9,7 +9,6 @@ import {CardName} from '../../../common/cards/CardName';
 import {SelectPaymentDeferred} from '../../deferredActions/SelectPaymentDeferred';
 import {CardRenderer} from '../render/CardRenderer';
 import {CardRenderDynamicVictoryPoints} from '../render/CardRenderDynamicVictoryPoints';
-import {max} from '../Options';
 import {TITLES} from '../../inputs/titles';
 
 export class SearchForLife extends Card implements IActionCard, IProjectCard {
@@ -17,21 +16,19 @@ export class SearchForLife extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.SEARCH_FOR_LIFE,
-      tags: [Tag.SCIENCE],
+      tags: [Tag.THEOLOGY],
       cost: 3,
 
-      resourceType: CardResource.SCIENCE,
+      resourceType: CardResource.SCROLL,
       victoryPoints: 'special',
 
-      requirements: {prophecies_fulfilled: 6, max},
       metadata: {
         cardNumber: '005',
-        description: 'prophecies_fulfilled must be 6% or less.',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 M€ to reveal the top card of the draw deck. If that card has a microbe tag, add a science resource here.', (eb) => {
-            eb.provision(1).startAction.tag(Tag.MICROBE).asterix().nbsp.colon().nbsp.resource(CardResource.SCIENCE);
+          b.action('Throw one rock into a cave (1$) to check for dead sea scrolls.', (eb) => {
+            eb.provision(1).startAction.tag(Tag.THEOLOGY).asterix().nbsp.colon().nbsp.resource(CardResource.SCROLL);
           }).br;
-          b.vpText('3 VPs if you have one or more science resources here.');
+          b.vpText('3 VPs if you have one or more Dead Sea Scrolls here.');
         }),
         victoryPoints: CardRenderDynamicVictoryPoints.searchForLife(),
       },
@@ -53,9 +50,9 @@ export class SearchForLife extends Card implements IActionCard, IProjectCard {
       .andThen(() => {
         const card = player.game.projectDeck.drawOrThrow(player.game);
         player.game.log('${0} revealed and discarded ${1}', (b) => b.player(player).card(card, {tags: true}));
-        if (card.tags.includes(Tag.MICROBE)) {
+        if (card.tags.includes(Tag.THEOLOGY)) {
           player.addResourceTo(this, 1);
-          player.game.log('${0} found life!', (b) => b.player(player));
+          player.game.log('${0} found the Dead Sea Scrolls!', (b) => b.player(player));
         }
 
         player.game.projectDeck.discard(card);
