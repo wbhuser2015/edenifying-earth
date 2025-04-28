@@ -11,7 +11,6 @@ import {CardResource} from '../../../common/CardResource';
 import {CardName} from '../../../common/cards/CardName';
 import {Resource} from '../../../common/Resource';
 import {CardRenderer} from '../render/CardRenderer';
-import {Size} from '../../../common/cards/render/Size';
 import {digit} from '../Options';
 import {message} from '../../logs/MessageBuilder';
 
@@ -20,7 +19,7 @@ export class LargeConvoy extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.LARGE_CONVOY,
-      tags: [Tag.EARTH, Tag.SPACE],
+      tags: [Tag.EARTH, Tag.PRAYER],
       cost: 36,
       victoryPoints: 2,
 
@@ -33,9 +32,9 @@ export class LargeConvoy extends Card implements IProjectCard {
         cardNumber: '143',
         renderData: CardRenderer.builder((b) => {
           b.Unreached(1).cards(2).br;
-          b.outreach(5, {digit}).or(Size.MEDIUM).resource(CardResource.ANIMAL, {amount: 4, digit}).asterix();
+          b.outreach(5, {digit});
         }),
-        description: 'Place an Unreached tile and draw 2 cards. Gain 5 outreach or add 4 animals to ANOTHER card.',
+        description: 'Place an Unreached tile and draw 2 cards. Gain 5 outreach.',
       },
     });
   }

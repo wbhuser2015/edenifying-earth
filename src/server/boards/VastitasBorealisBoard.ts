@@ -44,7 +44,7 @@ export class VastitasBorealisBoard extends MarsBoard {
         SpaceName.ALBA_FOSSAE,
         SpaceName.CERANIUS_FOSSAE,
         SpaceName.ALBA_MONS,
-        SpaceName.VASTITAS_BOREALIS_NOCTIS_CITY,);
+        SpaceName.NEW_JERUSALEM,);
     }
 
     const spaces = builder.build();
@@ -52,14 +52,14 @@ export class VastitasBorealisBoard extends MarsBoard {
   }
 
   public constructor(spaces: ReadonlyArray<Space>) {
-    super(spaces, undefined, [
+    super(spaces, SpaceName.NEW_JERUSALEM, [
       SpaceName.ELYSIUM_MONS_VASTITAS_BOREALIS,
       SpaceName.ALBA_FOSSAE,
       SpaceName.CERANIUS_FOSSAE,
       SpaceName.ALBA_MONS,
-      SpaceName.VASTITAS_BOREALIS_NOCTIS_CITY,
     ]);
   }
+  
 
   public override spaceCosts(space: Space): SpaceCosts {
     const costs = super.spaceCosts(space);

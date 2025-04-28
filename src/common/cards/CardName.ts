@@ -1,4 +1,5 @@
 export enum CardName {
+  NEW_JERUSALEM = 'Jerusalem',
   A_VOICE_IN_THE_WILDERNESS = 'A Voice in the Wilderness',
   WEEPING_IN_RAMAH = 'Weeping in Ramah',
   WITH_THE_RICH_IN_HIS_DEATH = 'With the Rich in His Death',

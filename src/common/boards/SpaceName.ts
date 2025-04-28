@@ -34,7 +34,7 @@ export const SpaceName = {
   ALBA_FOSSAE: '12',
   CERANIUS_FOSSAE: '21',
   ALBA_MONS: '22',
-  VASTITAS_BOREALIS_NOCTIS_CITY: '33',
+  NEW_JERUSALEM: '33',
 
   // Arabia Terra
   TIKHONAROV: '20',

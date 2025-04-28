@@ -1,3 +1,4 @@
+import { NewJerusalem } from './NewJerusalem';
 import { AVoiceintheWilderness } from './AVoiceintheWilderness';
 import { WeepinginRamah } from './WeepinginRamah';
 import { WiththeRichinHisDeath } from './WiththeRichinHisDeath';
@@ -61,6 +62,8 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.NEW_JERUSALEM]: { Factory: NewJerusalem },
+
   [CardName.A_VOICE_IN_THE_WILDERNESS]: { Factory: AVoiceintheWilderness },
   [CardName.WEEPING_IN_RAMAH]: { Factory: WeepinginRamah },
   [CardName.WITH_THE_RICH_IN_HIS_DEATH]: { Factory: WiththeRichinHisDeath },
