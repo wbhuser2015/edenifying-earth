@@ -1,3 +1,7 @@
+import { ChurchinEphesus } from './ChurchinEphesus';
+import { ChurchinCorinth } from './ChurchinCorinth';
+import { ChurchatAntioch } from './ChurchatAntioch';
+import { ChurchinJerusalem } from './ChurchinJerusalem';
 import { Synagogue } from './Synagogue';
 import { CityofRefuge } from './CityofRefuge';
 import { Bethel } from './Bethel';
@@ -82,6 +86,14 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.CHURCH_IN_EPHESUS]: { Factory: ChurchinEphesus },
+
+  [CardName.CHURCH_IN_CORINTH]: { Factory: ChurchinCorinth },
+
+  [CardName.CHURCH_AT_ANTIOCH]: { Factory: ChurchatAntioch },
+
+  [CardName.CHURCH_IN_JERUSALEM]: { Factory: ChurchinJerusalem },
+
   [CardName.SYNAGOGUE]: { Factory: Synagogue },
 
   [CardName.CITY_OF_REFUGE]: { Factory: CityofRefuge },

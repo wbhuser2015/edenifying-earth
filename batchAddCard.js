@@ -2,12 +2,10 @@ const { execSync } = require('child_process');
 
 // Your list of card names
 const cardNames = [
-  "Oaks of Mamre",
-  "Tent of Meeting",
-  "Tabernacle Setup",
-  "Bethel",
-  "City of Refuge",
-  "Synagogue"
+  "Church in Jerusalem",
+  "Church at Antioch",
+  "Church in Corinth",
+  "Church in Ephesus"
 ];
 
 

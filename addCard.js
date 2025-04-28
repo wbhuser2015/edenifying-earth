@@ -33,19 +33,19 @@ export class ${CLASS_NAME} extends Card implements IProjectCard {
       name: CardName.${CARD_CONSTANT},
       cost: 20, // Adjust as needed
 	  
-	  requirements: { prophecies_fulfilled: 6, max},
+	  requirements: { prophecies_fulfilled: 6},
 
       behavior: {
-        production: { provision: 1 },
+        production: { discipleship: 3 },
 		city: {},
       },
 
       metadata: {
         cardNumber: 'X01', // Update manually if needed
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.provision(1)).nbsp.city().br;;
+          b.production((pb) => pb.discipleship(3)).nbsp.city().br;;
         }),
-        description: 'Increase your Provision production 1 step.',
+        description: 'Increase your Provision production 3 steps and place a church tile.',
       },
     });
   }

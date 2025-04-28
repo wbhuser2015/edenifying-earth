@@ -1,4 +1,12 @@
 export enum CardName {
+  CHURCH_IN_EPHESUS = 'Church in Ephesus',
+
+  CHURCH_IN_CORINTH = 'Church in Corinth',
+
+  CHURCH_AT_ANTIOCH = 'Church at Antioch',
+
+  CHURCH_IN_JERUSALEM = 'Church in Jerusalem',
+
   SYNAGOGUE = 'Synagogue',
 
   CITY_OF_REFUGE = 'City of Refuge',
