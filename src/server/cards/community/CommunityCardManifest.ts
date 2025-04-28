@@ -1,3 +1,9 @@
+import { Synagogue } from './Synagogue';
+import { CityofRefuge } from './CityofRefuge';
+import { Bethel } from './Bethel';
+import { TabernacleSetup } from './TabernacleSetup';
+import { TentofMeeting } from './TentofMeeting';
+import { OaksofMamre } from './OaksofMamre';
 import { StewardshipofResources } from './StewardshipofResources';
 import { ProvisionThroughPersecution } from './ProvisionThroughPersecution';
 import { HospitalitytoStrangers } from './HospitalitytoStrangers';
@@ -76,6 +82,18 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.SYNAGOGUE]: { Factory: Synagogue },
+
+  [CardName.CITY_OF_REFUGE]: { Factory: CityofRefuge },
+
+  [CardName.BETHEL]: { Factory: Bethel },
+
+  [CardName.TABERNACLE_SETUP]: { Factory: TabernacleSetup },
+
+  [CardName.TENT_OF_MEETING]: { Factory: TentofMeeting },
+
+  [CardName.OAKS_OF_MAMRE]: { Factory: OaksofMamre },
+
   [CardName.STEWARDSHIP_OF_RESOURCES]: { Factory: StewardshipofResources },
   [CardName.PROVISION_THROUGH_PERSECUTION]: { Factory: ProvisionThroughPersecution },
   [CardName.HOSPITALITY_TO_STRANGERS]: { Factory: HospitalitytoStrangers },

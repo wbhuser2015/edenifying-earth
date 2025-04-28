@@ -31,18 +31,19 @@ export class ${CLASS_NAME} extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.${CARD_CONSTANT},
-      cost: 12, // Adjust as needed
+      cost: 20, // Adjust as needed
 	  
-	  requirements: { prophecies_fulfilled: 6},
+	  requirements: { prophecies_fulfilled: 6, max},
 
       behavior: {
         production: { provision: 1 },
+		city: {},
       },
 
       metadata: {
         cardNumber: 'X01', // Update manually if needed
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.provision(1));
+          b.production((pb) => pb.provision(1)).nbsp.city().br;;
         }),
         description: 'Increase your Provision production 1 step.',
       },

@@ -1,4 +1,16 @@
 export enum CardName {
+  SYNAGOGUE = 'Synagogue',
+
+  CITY_OF_REFUGE = 'City of Refuge',
+
+  BETHEL = 'Bethel',
+
+  TABERNACLE_SETUP = 'Tabernacle Setup',
+
+  TENT_OF_MEETING = 'Tent of Meeting',
+
+  OAKS_OF_MAMRE = 'Oaks of Mamre',
+
   STEWARDSHIP_OF_RESOURCES = 'Stewardship of Resources',
   PROVISION_THROUGH_PERSECUTION = 'Provision Through Persecution',
   HOSPITALITY_TO_STRANGERS = 'Hospitality to Strangers',
