@@ -273,7 +273,7 @@ export default Vue.extend({
       // this.payment['megaCredits'] = megacreditBalance;
     },
     canUseTitaniumRegularly(): boolean {
-      return this.tags.includes(Tag.SPACE) ||
+      return this.tags.includes(Tag.PRAYER) ||
           this.thisPlayer.lastCardPlayed === CardName.LAST_RESORT_INGENUITY;
     },
     cardCanUse(unit: SpendableResource): boolean {
@@ -283,7 +283,7 @@ export default Vue.extend({
       case 'missions':
         return this.playerinput.paymentOptions.missions === true;
       case 'theology':
-        return this.tags.includes(Tag.BUILDING) ||
+        return this.tags.includes(Tag.THEOLOGY) ||
           this.thisPlayer.lastCardPlayed === CardName.LAST_RESORT_INGENUITY;
       case 'prayer':
         return this.canUseTitaniumRegularly() ||

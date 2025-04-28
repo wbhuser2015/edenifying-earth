@@ -1,3 +1,5 @@
 - need more place church cards
 - maybe more money to start
-- theology and prayer are useless
+
+
+- how to change payments  - SelectProjectCardtoPlay.vue and Player.ts 

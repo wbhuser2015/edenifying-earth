@@ -743,9 +743,9 @@ export class Player implements IPlayer {
   private paymentOptionsForCard(card: IProjectCard): PaymentOptions {
     return {
       missions: this.canUseHeatAsMegaCredits,
-      theology: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.BUILDING),
+      theology: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.THEOLOGY),
       outreach: card.tags.includes(Tag.BUILDING) && this.cardIsInEffect(CardName.MARTIAN_LUMBER_CORP),
-      prayer: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.SPACE),
+      prayer: this.lastCardPlayed === CardName.LAST_RESORT_INGENUITY || card.tags.includes(Tag.PRAYER),
       lunaTradeFederationTitanium: this.canUseTitaniumAsMegacredits,
       seeds: card.tags.includes(Tag.PLANT) || card.name === CardName.GREENERY_STANDARD_PROJECT,
       floaters: card.tags.includes(Tag.VENUS),

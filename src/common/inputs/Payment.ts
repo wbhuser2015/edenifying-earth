@@ -23,7 +23,7 @@ export function isPayment(obj: unknown): obj is Payment {
 export const DEFAULT_PAYMENT_VALUES: Record<SpendableResource, number> = {
   megaCredits: 1,
   theology: 2,
-  prayer: 3,
+  prayer: 2,
   missions: 1,
   outreach: 3,
 
