@@ -1,3 +1,17 @@
+import { StewardshipofResources } from './StewardshipofResources';
+import { ProvisionThroughPersecution } from './ProvisionThroughPersecution';
+import { HospitalitytoStrangers } from './HospitalitytoStrangers';
+import { TithesandOfferings } from './TithesandOfferings';
+import { MissionarySupport } from './MissionarySupport';
+import { FellowshipofBelievers } from './FellowshipofBelievers';
+import { LoavesandFishes } from './LoavesandFishes';
+import { HarvestFestival } from './HarvestFestival';
+import { TheWidowsOil } from './TheWidowsOil';
+import { BlessingsofObedience } from './BlessingsofObedience';
+import { BuildingtheTabernacle } from './BuildingtheTabernacle';
+import { RuthsRedemption } from './RuthsRedemption';
+import { StorehousesofJoseph } from './StorehousesofJoseph';
+import { MannafromHeaven } from './MannafromHeaven';
 import { NewJerusalem } from './NewJerusalem';
 import { AVoiceintheWilderness } from './AVoiceintheWilderness';
 import { WeepinginRamah } from './WeepinginRamah';
@@ -62,8 +76,21 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.STEWARDSHIP_OF_RESOURCES]: { Factory: StewardshipofResources },
+  [CardName.PROVISION_THROUGH_PERSECUTION]: { Factory: ProvisionThroughPersecution },
+  [CardName.HOSPITALITY_TO_STRANGERS]: { Factory: HospitalitytoStrangers },
+  [CardName.TITHES_AND_OFFERINGS]: { Factory: TithesandOfferings },
+  [CardName.MISSIONARY_SUPPORT]: { Factory: MissionarySupport },
+  [CardName.FELLOWSHIP_OF_BELIEVERS]: { Factory: FellowshipofBelievers },
+  [CardName.LOAVES_AND_FISHES]: { Factory: LoavesandFishes },
+  [CardName.HARVEST_FESTIVAL]: { Factory: HarvestFestival },
+  [CardName.THE_WIDOWS_OIL]: { Factory: TheWidowsOil },
+  [CardName.BLESSINGS_OF_OBEDIENCE]: { Factory: BlessingsofObedience },
+  [CardName.BUILDING_THE_TABERNACLE]: { Factory: BuildingtheTabernacle },
+  [CardName.RUTHS_REDEMPTION]: { Factory: RuthsRedemption },
+  [CardName.STOREHOUSES_OF_JOSEPH]: { Factory: StorehousesofJoseph },
+  [CardName.MANNA_FROM_HEAVEN]: { Factory: MannafromHeaven },
   [CardName.NEW_JERUSALEM]: { Factory: NewJerusalem },
-
   [CardName.A_VOICE_IN_THE_WILDERNESS]: { Factory: AVoiceintheWilderness },
   [CardName.WEEPING_IN_RAMAH]: { Factory: WeepinginRamah },
   [CardName.WITH_THE_RICH_IN_HIS_DEATH]: { Factory: WiththeRichinHisDeath },
