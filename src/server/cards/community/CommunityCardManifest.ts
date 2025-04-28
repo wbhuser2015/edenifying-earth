@@ -87,25 +87,15 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   },
   projectCards: {
   [CardName.CHURCH_IN_EPHESUS]: { Factory: ChurchinEphesus },
-
   [CardName.CHURCH_IN_CORINTH]: { Factory: ChurchinCorinth },
-
   [CardName.CHURCH_AT_ANTIOCH]: { Factory: ChurchatAntioch },
-
   [CardName.CHURCH_IN_JERUSALEM]: { Factory: ChurchinJerusalem },
-
   [CardName.SYNAGOGUE]: { Factory: Synagogue },
-
   [CardName.CITY_OF_REFUGE]: { Factory: CityofRefuge },
-
   [CardName.BETHEL]: { Factory: Bethel },
-
   [CardName.TABERNACLE_SETUP]: { Factory: TabernacleSetup },
-
   [CardName.TENT_OF_MEETING]: { Factory: TentofMeeting },
-
   [CardName.OAKS_OF_MAMRE]: { Factory: OaksofMamre },
-
   [CardName.STEWARDSHIP_OF_RESOURCES]: { Factory: StewardshipofResources },
   [CardName.PROVISION_THROUGH_PERSECUTION]: { Factory: ProvisionThroughPersecution },
   [CardName.HOSPITALITY_TO_STRANGERS]: { Factory: HospitalitytoStrangers },
