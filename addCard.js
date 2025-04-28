@@ -31,19 +31,22 @@ export class ${CLASS_NAME} extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.${CARD_CONSTANT},
-      cost: 12, // Adjust as needed
+      cost: 20, // Adjust as needed
+	  victoryPoints: 1,
+
+      requirements: {prophecies_fulfilled: 4}, 
 
       behavior: {
-        production: {provision: 1},
-        stock: {provision: 3},
+        production: { discipleship: 1 },
+        global: { prophecies_fulfilled: 1 },
       },
 
       metadata: {
         cardNumber: 'X01', // Update manually if needed
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.provision(1)).provision(3);
+          b.production((pb) => pb.discipleship(1)).prophecies_fulfilled(1);
         }),
-        description: 'Increase your Provision production 1 step. Gain 3 Provision.',
+        description: 'Prophecies Fulfilled must be 4%. Increase your Discipleship production 1 step. Raise Prophecies Fulfilled 1 step.',
       },
     });
   }

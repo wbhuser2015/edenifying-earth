@@ -1,4 +1,23 @@
 export enum CardName {
+  A_VOICE_IN_THE_WILDERNESS = 'A Voice in the Wilderness',
+  WEEPING_IN_RAMAH = 'Weeping in Ramah',
+  WITH_THE_RICH_IN_HIS_DEATH = 'With the Rich in His Death',
+  PIERCED_FOR_OUR_TRANSGRESSIONS = 'Pierced for Our Transgressions',
+  SILENT_BEFORE_HIS_ACCUSERS = 'Silent Before His Accusers',
+  BETRAYED_FOR_THIRTY_PIECES_OF_SILVER = 'Betrayed for Thirty Pieces of Silver',
+  THE_KING_ON_A_COLT = 'The King on a Colt',
+  LIGHT_TO_THE_GENTILES = 'Light to the Gentiles',
+  SHOOT_FROM_THE_STUMP_OF_JESSE = 'Shoot from the Stump of Jesse',
+  A_SUFFERING_SERVANT = 'A Suffering Servant',
+  MESSIAH_BORN_IN_BETHLEHEM = 'Messiah Born in Bethlehem',
+  VIRGIN_BIRTH_FORETOLD = 'Virgin Birth Foretold',
+  BABYLONIAN_EXILE = 'Babylonian Exile',
+  ASSYRIAN_CONQUEST = 'Assyrian Conquest',
+  SOLOMOIC_TEMPLE = 'Solomoic Temple',
+  A_KING_IN_ISRAEL = 'A King in Israel',
+  CONQUEST_OF_CANAAN = 'Conquest of Canaan',
+  LIBERATION_FROM_EGYPT = 'Liberation from Egypt',
+  JACOBS_FAMILY_GOES_TO_EGYPT = 'Jacobs family goes to Egypt',
   CHURCH_SPLIT = 'Church Split',
   THE_RAPTURE = 'The Rapture',
   RAISE_OF_THE_FALSE_PROPHET = 'Rise of the False Prophet',
@@ -31,14 +50,15 @@ export enum CardName {
   KELP_FARMING = 'Celebrity joins congregation',
   MINING_EXPEDITION = 'Preaching Hard Truths',
   ASTEROID_MINING = 'Renewed Focus on Prayer',
-  
-  //cards i need to unban
   INDUSTRIAL_MICROBES = 'Sunday School',
   INSECTS = 'Multiplying', 
   STRIP_MINE = 'The Prophet Elijah',
   NUCLEAR_ZONE = 'Divine Wrath',
   TOWING_A_COMET = 'The Prophet Jonah',
   
+  //cards i need to unban
+ 
+
   // Standard projects:
   SELL_PATENTS_STANDARD_PROJECT = 'Change Priorities (sell cards)',
   POWER_PLANT_STANDARD_PROJECT = 'Bible Study:SP',

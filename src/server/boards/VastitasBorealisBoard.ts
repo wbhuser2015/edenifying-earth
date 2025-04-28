@@ -43,7 +43,8 @@ export class VastitasBorealisBoard extends MarsBoard {
         SpaceName.ELYSIUM_MONS_VASTITAS_BOREALIS,
         SpaceName.ALBA_FOSSAE,
         SpaceName.CERANIUS_FOSSAE,
-        SpaceName.ALBA_MONS);
+        SpaceName.ALBA_MONS,
+        SpaceName.VASTITAS_BOREALIS_NOCTIS_CITY,);
     }
 
     const spaces = builder.build();
@@ -56,6 +57,7 @@ export class VastitasBorealisBoard extends MarsBoard {
       SpaceName.ALBA_FOSSAE,
       SpaceName.CERANIUS_FOSSAE,
       SpaceName.ALBA_MONS,
+      SpaceName.VASTITAS_BOREALIS_NOCTIS_CITY,
     ]);
   }
 

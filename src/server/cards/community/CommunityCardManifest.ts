@@ -1,3 +1,22 @@
+import { AVoiceintheWilderness } from './AVoiceintheWilderness';
+import { WeepinginRamah } from './WeepinginRamah';
+import { WiththeRichinHisDeath } from './WiththeRichinHisDeath';
+import { PiercedforOurTransgressions } from './PiercedforOurTransgressions';
+import { SilentBeforeHisAccusers } from './SilentBeforeHisAccusers';
+import { BetrayedforThirtyPiecesofSilver } from './BetrayedforThirtyPiecesofSilver';
+import { TheKingonaColt } from './TheKingonaColt';
+import { LighttotheGentiles } from './LighttotheGentiles';
+import { ShootfromtheStumpofJesse } from './ShootfromtheStumpofJesse';
+import { ASufferingServant } from './ASufferingServant';
+import { MessiahBorninBethlehem } from './MessiahBorninBethlehem';
+import { VirginBirthForetold } from './VirginBirthForetold';
+import { BabylonianExile } from './BabylonianExile';
+import { AssyrianConquest } from './AssyrianConquest';
+import { SolomoicTemple } from './SolomoicTemple';
+import { AKinginIsrael } from './AKinginIsrael';
+import { ConquestofCanaan } from './ConquestofCanaan';
+import { LiberationfromEgypt } from './LiberationfromEgypt';
+import { JacobsfamilygoestoEgypt } from './JacobsfamilygoestoEgypt';
 import { ChurchSplit } from './ChurchSplit';
 import {TheRapture} from './TheRapture'
 import { RaiseoftheFalseProphet } from './RaiseoftheFalseProphet';
@@ -42,6 +61,25 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.A_VOICE_IN_THE_WILDERNESS]: { Factory: AVoiceintheWilderness },
+  [CardName.WEEPING_IN_RAMAH]: { Factory: WeepinginRamah },
+  [CardName.WITH_THE_RICH_IN_HIS_DEATH]: { Factory: WiththeRichinHisDeath },
+  [CardName.PIERCED_FOR_OUR_TRANSGRESSIONS]: { Factory: PiercedforOurTransgressions },
+  [CardName.SILENT_BEFORE_HIS_ACCUSERS]: { Factory: SilentBeforeHisAccusers },
+  [CardName.BETRAYED_FOR_THIRTY_PIECES_OF_SILVER]: { Factory: BetrayedforThirtyPiecesofSilver },
+  [CardName.THE_KING_ON_A_COLT]: { Factory: TheKingonaColt },
+  [CardName.LIGHT_TO_THE_GENTILES]: { Factory: LighttotheGentiles },
+  [CardName.SHOOT_FROM_THE_STUMP_OF_JESSE]: { Factory: ShootfromtheStumpofJesse },
+  [CardName.A_SUFFERING_SERVANT]: { Factory: ASufferingServant },
+  [CardName.MESSIAH_BORN_IN_BETHLEHEM]: { Factory: MessiahBorninBethlehem },
+  [CardName.VIRGIN_BIRTH_FORETOLD]: { Factory: VirginBirthForetold },
+  [CardName.BABYLONIAN_EXILE]: { Factory: BabylonianExile },
+  [CardName.ASSYRIAN_CONQUEST]: { Factory: AssyrianConquest },
+  [CardName.SOLOMOIC_TEMPLE]: { Factory: SolomoicTemple },
+  [CardName.A_KING_IN_ISRAEL]: { Factory: AKinginIsrael },
+  [CardName.CONQUEST_OF_CANAAN]: { Factory: ConquestofCanaan },
+  [CardName.LIBERATION_FROM_EGYPT]: { Factory: LiberationfromEgypt },
+  [CardName.JACOBS_FAMILY_GOES_TO_EGYPT]: { Factory: JacobsfamilygoestoEgypt },
   [CardName.CHURCH_SPLIT]: { Factory: ChurchSplit },
   [CardName.RAISE_OF_THE_FALSE_PROPHET]: { Factory: RaiseoftheFalseProphet },
   [CardName.THE_RAPTURE]: { Factory: TheRapture },

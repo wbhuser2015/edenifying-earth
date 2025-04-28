@@ -12,7 +12,7 @@ export class FoodFactory extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        production: {provision: 4, outreach: -1},
+        production: {provision: 2, outreach: -1},
       },
       victoryPoints: 1,
 
@@ -21,10 +21,10 @@ export class FoodFactory extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
             pb.minus().outreach(1).br;
-            pb.plus().provision(4);
+            pb.plus().provision(2);
           });
         }),
-        description: 'Decrease your outreach production 1 step and increase your M€ production 4 steps.',
+        description: 'Decrease your outreach production 1 step and increase your M€ production 2 steps.',
       },
     });
   }

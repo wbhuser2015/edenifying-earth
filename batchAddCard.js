@@ -2,12 +2,19 @@ const { execSync } = require('child_process');
 
 // Your list of card names
 const cardNames = [
-  "Super Cool Card",
-  "Mega Boost",
-  "Supply Drop",
-  "Resource Surge",
-  "Provision Expansion"
+  "Messiah Born in Bethlehem",
+  "A Suffering Servant",
+  "Shoot from the Stump of Jesse",
+  "Light to the Gentiles",
+  "The King on a Colt",
+  "Betrayed for Thirty Pieces of Silver",
+  "Silent Before His Accusers",
+  "Pierced for Our Transgressions",
+  "With the Rich in His Death",
+  "Weeping in Ramah",
+  "A Voice in the Wilderness"
 ];
+
 
 // Path to your addCard.js script
 const addCardScript = 'node addCard.js';
