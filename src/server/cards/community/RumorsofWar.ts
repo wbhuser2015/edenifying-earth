@@ -5,26 +5,26 @@ import { CardName } from '../../../common/cards/CardName';
 import { CardRenderer } from '../render/CardRenderer';
 import { Tag } from '../../../common/cards/Tag';
 
-export class ProvisionThroughPersecution extends Card implements IProjectCard {
+export class RumorsofWar extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.PROVISION_THROUGH_PERSECUTION,
-      tags: [Tag.PRAYER],
-      cost: 12, // Adjust as needed
+      name: CardName.RUMORS_OF_WAR,
+      tags: [Tag.THEOLOGY, Tag.PRAYER],
+      cost: 15, // Adjust as needed
 	  
-	  requirements: { prophecies_fulfilled: 6},
+	  requirements: { prophecies_fulfilled: 8},
 
-      behavior: {
-        production: { provision: 3 },
+       behavior: {
+        global: { prophecies_fulfilled: 1 }, // Raise Prophecy Fulfilled by 1
       },
-
+ 
       metadata: {
         cardNumber: 'X01', // Update manually if needed
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.provision(3));
+          b.prophecies_fulfilled(1);
         }),
-        description: 'Increase your Provision production 3 step.',
+        description: 'Raise Prophecies Fulfilled by 1.',
       },
     });
   }

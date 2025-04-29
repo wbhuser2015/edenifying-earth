@@ -176,7 +176,7 @@ export default (Vue as WithRefs<Refs>).extend({
       expansions: { 
       ...DEFAULT_EXPANSIONS,
       community: true },
-      draftVariant: true,
+      draftVariant: false,
       initialDraft: false,
       randomMA: RandomMAOptionType.NONE,
       modularMA: false,

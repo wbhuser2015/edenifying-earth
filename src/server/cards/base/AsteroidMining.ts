@@ -10,8 +10,8 @@ export class AsteroidMining extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.ASTEROID_MINING,
-      tags: [Tag.SPACE],
-      cost: 30,
+      tags: [Tag.PRAYER],
+      cost: 12,
       victoryPoints: 2,
 
       behavior: {

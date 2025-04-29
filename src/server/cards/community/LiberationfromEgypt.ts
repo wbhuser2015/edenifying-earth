@@ -4,12 +4,14 @@ import { CardType } from '../../../common/cards/CardType';
 import { CardName } from '../../../common/cards/CardName';
 import { CardRenderer } from '../render/CardRenderer';
 import {max} from '../Options';
+import { Tag } from '../../../common/cards/Tag';
 
 export class LiberationfromEgypt extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
       name: CardName.LIBERATION_FROM_EGYPT,
+      tags: [Tag.PRAYER],
       cost: 20, // Adjust as needed
 
       requirements: {prophecies_fulfilled: 6, max}, // Max 6% fulfilled to play

@@ -1,4 +1,5 @@
 export enum CardName {
+  RUMORS_OF_WAR = 'Rumors of War',
   CHURCH_IN_EPHESUS = 'Church in Ephesus',
   CHURCH_IN_CORINTH = 'Church in Corinth',
   CHURCH_AT_ANTIOCH = 'Church at Antioch',

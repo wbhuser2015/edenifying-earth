@@ -24,7 +24,7 @@ export class Greenhouses extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.outreach(1).slash().city({size: Size.SMALL, all});
         }),
-        description: 'Gain 1 outreach for each city tile in play.',
+        description: 'Gain 1 outreach for each church tile in play.',
       },
     });
   }

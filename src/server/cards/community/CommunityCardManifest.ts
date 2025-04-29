@@ -1,3 +1,4 @@
+import { RumorsofWar } from './RumorsofWar';
 import { ChurchinEphesus } from './ChurchinEphesus';
 import { ChurchinCorinth } from './ChurchinCorinth';
 import { ChurchatAntioch } from './ChurchatAntioch';
@@ -86,6 +87,8 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.EXECUTIVE_ORDER]: {Factory: ExecutiveOrder, compatibility: 'turmoil'},
   },
   projectCards: {
+  [CardName.RUMORS_OF_WAR]: { Factory: RumorsofWar },
+
   [CardName.CHURCH_IN_EPHESUS]: { Factory: ChurchinEphesus },
   [CardName.CHURCH_IN_CORINTH]: { Factory: ChurchinCorinth },
   [CardName.CHURCH_AT_ANTIOCH]: { Factory: ChurchatAntioch },

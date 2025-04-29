@@ -15,10 +15,11 @@ export const awardNames = [
 
   // Hellas
   'Contractor',
-  'Cultivator',
+  'Church Planter',
   'Excentric',
   'Magnate',
   'Space Baron',
+  
 
   // Venus
   'Venuphile',

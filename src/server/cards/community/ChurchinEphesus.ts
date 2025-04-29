@@ -3,12 +3,14 @@ import { Card } from '../Card';
 import { CardType } from '../../../common/cards/CardType';
 import { CardName } from '../../../common/cards/CardName';
 import { CardRenderer } from '../render/CardRenderer';
+import { Tag } from '../../../common/cards/Tag';
 
 export class ChurchinEphesus extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
       name: CardName.CHURCH_IN_EPHESUS,
+      tags: [Tag.THEOLOGY],
       cost: 20, // Adjust as needed
 	  
 	  requirements: { prophecies_fulfilled: 6},

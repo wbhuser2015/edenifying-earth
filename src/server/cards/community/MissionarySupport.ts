@@ -3,12 +3,14 @@ import { Card } from '../Card';
 import { CardType } from '../../../common/cards/CardType';
 import { CardName } from '../../../common/cards/CardName';
 import { CardRenderer } from '../render/CardRenderer';
+import { Tag } from '../../../common/cards/Tag';
 
 export class MissionarySupport extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
       name: CardName.MISSIONARY_SUPPORT,
+      tags: [Tag.PRAYER],
       cost: 12, // Adjust as needed
 	  
 	  requirements: { prophecies_fulfilled: 6},

@@ -32,7 +32,7 @@ export class TharsisRepublic extends CorporationCard {
           b.br.br;
           b.provision(40).nbsp.city();
           b.corpBox('effect', (ce) => {
-            ce.effect('When any city tile is placed ON MARS, increase your M€ production 1 step. When you place a city tile, gain 3 M€.', (eb) => {
+            ce.effect('When any church tile is placed on Earth, increase your M€ production 1 step. When you place a church tile, gain 3 M€.', (eb) => {
               eb.city({size: Size.SMALL, all}).asterix().colon();
               eb.production((pb) => pb.provision(1)).nbsp;
               eb.city({size: Size.SMALL}).startEffect.provision(3);

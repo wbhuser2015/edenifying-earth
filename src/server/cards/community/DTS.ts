@@ -14,16 +14,16 @@ export class DTS extends Card implements IProjectCard {
       cost: 15,
 
       behavior: {
-        production: {theology: 1},
+        production: {theology: 2},
         stock: {theology: 3},
       },
 
       metadata: {
         cardNumber: '501',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.theology(1)).theology(3);
+          b.production((pb) => pb.theology(2)).theology(3);
         }),
-        description: 'Increase your theology production 1 step. Gain 3 theology.',
+        description: 'Increase your theology production 2 step. Gain 3 theology.',
       },
     });
   }

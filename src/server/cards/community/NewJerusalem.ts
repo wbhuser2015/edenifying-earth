@@ -19,7 +19,7 @@ export class NewJerusalem extends Card implements IProjectCard {
 
       metadata: {
       
-        description: 'Place a City tile at the site of New Jerusalem.',
+        description: 'Place a Church tile at the site of Jerusalem.',
         cardNumber: 'X02', // Update manually
         renderData: CardRenderer.builder((b) => {
           b.city();
