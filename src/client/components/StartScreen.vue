@@ -7,7 +7,6 @@
     </div>
     <a class="start-screen-link start-screen-link--new-game" href="new-game" v-i18n>New game</a>
     <a class="start-screen-link start-screen-link--rules" href="https://docs.google.com/document/d/1RsPZkko9qVzEgsraHGs-LImGaq1Wyvor9kcFlqe9iQ4/edit?usp=sharing" v-i18n>Rules and Intro</a>
-    <a class="start-screen-link start-screen-link--cards-list" href="cards" target="_blank" v-i18n>Cards list</a>
     
     </div>
   </div>
